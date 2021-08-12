@@ -35,15 +35,16 @@ fun App() {
         val yStr = remember { mutableStateOf("") }
 
         Row() {
-            Joystick(
-                modifier = Modifier
-                    .padding(all = 100.dp)
-                    .weight(1f),
-                onUpdateStickPosition = { x, y ->
-                    xStr.value = "x = $x"
-                    yStr.value = "y = $y"
-                }
-            )
+//            Joystick(
+//                modifier = Modifier
+//                    .padding(all = 100.dp)
+//                    .weight(1f),
+//                onUpdateStickPosition = { x, y ->
+//                    xStr.value = "x = $x"
+//                    yStr.value = "y = $y"
+//                }
+//            )
+            Slider(modifier = Modifier.weight(1f))
             Column(
                 modifier = Modifier.weight(1f),
                 verticalArrangement = Arrangement.Center

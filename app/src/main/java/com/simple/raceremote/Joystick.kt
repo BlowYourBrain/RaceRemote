@@ -1,5 +1,6 @@
 package com.simple.raceremote
 
+import android.util.Log
 import android.view.MotionEvent.*
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Box
@@ -18,30 +19,68 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.input.pointer.pointerInteropFilter
 import androidx.compose.ui.layout.onGloballyPositioned
 import androidx.compose.ui.unit.IntOffset
+import kotlin.math.abs
+import kotlin.math.asin
+import kotlin.math.cos
 import kotlin.math.pow
 import kotlin.math.roundToInt
+import kotlin.math.sin
+import kotlin.math.sqrt
 
-data class Center(val x: Int, val y: Int)
-
-private fun Center.isAxesInCircle(axes: Float): Boolean {
-    return (axes - this.x).pow(2) < this.x * this.x
+data class Center(val x: Int, val y: Int) {
+    val radius = x
 }
 
-private fun Center.changeJoystickPosition(
+private fun Center.getAngle(
+    xTouch: Float,
+    yTouch: Float,
+    a: Float,
+    hypotenuse: Float
+): Float {
+    val triangleAngle = asin(a / hypotenuse)
+    return when {
+        xTouch >= x && yTouch <= y -> 90f.toRadian() - triangleAngle
+        xTouch < x && yTouch < y -> 90f.toRadian() + triangleAngle
+        xTouch < x && yTouch > y -> 270f.toRadian() - triangleAngle
+        else -> 270f.toRadian() + triangleAngle
+    }
+}
+
+private fun Float.toRadian() = (this / 180 * Math.PI).toFloat()
+
+/**
+ *
+ *
+ *      *\
+ *      * \
+ *    b *  \ hypotenuse
+ *      *   \
+ *      *____\
+ *         a
+ * */
+private fun Center.changeJoystickPosition2(
     offsetX: MutableState<Float>,
     offsetY: MutableState<Float>,
     xTouch: Float,
     yTouch: Float
 ) {
-    when {
-        isAxesInCircle(xTouch) -> offsetX.value = xTouch - this.x
-        else -> offsetX.value = this.x * if (xTouch > this.x) 1f else -1f
+    val a = abs(x - xTouch)
+    val b = abs(y - yTouch)
+    val hypotenuse = sqrt(a.pow(2) + b.pow(2))
+    val angle = getAngle(xTouch, yTouch, a, hypotenuse)
+
+    val (aX, aY) = if (hypotenuse > radius) {
+        val newX = radius * cos(angle)
+        val newY = radius * sin(angle)
+
+        newX to -newY
+    } else {
+        (xTouch - x) to (yTouch - y)
     }
 
-    when {
-        isAxesInCircle(yTouch) -> offsetY.value = yTouch - this.y
-        else -> offsetY.value = this.y * if (yTouch > this.y) 1f else -1f
-    }
+    Log.d("fuck", "offsetX = $aX, offsetY = $aY")
+    offsetX.value = aX
+    offsetY.value = aY
 }
 
 @OptIn(ExperimentalComposeUiApi::class)
@@ -66,10 +105,10 @@ fun Joystick(modifier: Modifier = Modifier) {
             .pointerInteropFilter() {
                 when (it.action) {
                     ACTION_DOWN -> {
-                        center.changeJoystickPosition(offsetX, offsetY, it.x, it.y)
+                        center.changeJoystickPosition2(offsetX, offsetY, it.x, it.y)
                     }
                     ACTION_MOVE -> {
-                        center.changeJoystickPosition(offsetX, offsetY, it.x, it.y)
+                        center.changeJoystickPosition2(offsetX, offsetY, it.x, it.y)
                     }
                     ACTION_UP, ACTION_POINTER_UP, ACTION_CANCEL -> {
                         offsetX.value = 0f

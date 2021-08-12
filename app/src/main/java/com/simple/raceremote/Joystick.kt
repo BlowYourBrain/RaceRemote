@@ -1,6 +1,5 @@
 package com.simple.raceremote
 
-import android.util.Log
 import android.view.MotionEvent.*
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Box

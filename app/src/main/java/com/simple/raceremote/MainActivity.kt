@@ -4,10 +4,14 @@ import android.content.pm.ActivityInfo
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
-import androidx.compose.foundation.layout.Box
+import androidx.compose.foundation.layout.Arrangement
+import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.padding
+import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.mutableStateOf
+import androidx.compose.runtime.remember
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
@@ -27,16 +31,25 @@ class MainActivity : ComponentActivity() {
 @Composable
 fun App() {
     RaceRemoteTheme {
+        val xStr = remember { mutableStateOf("") }
+        val yStr = remember { mutableStateOf("") }
+
         Row() {
             Joystick(
-                Modifier
+                modifier = Modifier
                     .padding(all = 100.dp)
-                    .weight(1f)
+                    .weight(1f),
+                onUpdateStickPosition = { x, y ->
+                    xStr.value = "x = $x"
+                    yStr.value = "y = $y"
+                }
             )
-            Box(
-                Modifier.weight(1f)
+            Column(
+                modifier = Modifier.weight(1f),
+                verticalArrangement = Arrangement.Center
             ) {
-
+                Text(xStr.value)
+                Text(yStr.value)
             }
         }
 

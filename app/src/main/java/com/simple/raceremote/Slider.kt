@@ -14,7 +14,6 @@ import androidx.compose.ui.ExperimentalComposeUiApi
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.geometry.Offset
 import androidx.compose.ui.geometry.Size
-import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.drawscope.Stroke.Companion.DefaultMiter
 import androidx.compose.ui.input.pointer.pointerInteropFilter
 
@@ -63,11 +62,12 @@ fun Slider(
     val x = remember { mutableStateOf(UNDEFINED) }
     val y = remember { mutableStateOf(UNDEFINED) }
     val onBackground = MaterialTheme.colors.onBackground
+    val separatorColor = MaterialTheme.colors.onBackground
 
     Canvas(
         modifier = modifier
             .fillMaxSize()
-            .background(colors.background)
+            .background(colors.surface)
             .pointerInteropFilter() {
                 when (it.action) {
                     MotionEvent.ACTION_DOWN, MotionEvent.ACTION_MOVE -> {
@@ -83,8 +83,6 @@ fun Slider(
                 true
             }
     ) {
-
-        val separatorColor = Color.White
         val separatorWidth = DefaultMiter
         val halfWidth = size.width / 2
         val halfHeight = size.height / 2

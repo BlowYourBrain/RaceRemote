@@ -5,6 +5,8 @@ import androidx.annotation.DrawableRes
 import androidx.compose.foundation.Canvas
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.material.MaterialTheme
+import androidx.compose.material.MaterialTheme.colors
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
@@ -60,11 +62,12 @@ fun Slider(
 ) {
     val x = remember { mutableStateOf(UNDEFINED) }
     val y = remember { mutableStateOf(UNDEFINED) }
+    val onBackground = MaterialTheme.colors.onBackground
 
     Canvas(
         modifier = modifier
             .fillMaxSize()
-            .background(Color.Cyan)
+            .background(colors.background)
             .pointerInteropFilter() {
                 when (it.action) {
                     MotionEvent.ACTION_DOWN, MotionEvent.ACTION_MOVE -> {
@@ -80,7 +83,7 @@ fun Slider(
                 true
             }
     ) {
-        val color = Color.Red
+
         val separatorColor = Color.White
         val separatorWidth = DefaultMiter
         val halfWidth = size.width / 2
@@ -92,7 +95,7 @@ fun Slider(
                     val pointerOffset = maxOf(halfWidth - x.value, NO_OFFSET)
 
                     drawRect(
-                        color = color,
+                        color = onBackground,
                         topLeft = Offset(x.value, NO_OFFSET),
                         size = Size(pointerOffset, size.height)
                     )
@@ -102,7 +105,7 @@ fun Slider(
                     val pointerOffset = minOf(x.value - halfWidth, halfWidth)
 
                     drawRect(
-                        color = color,
+                        color = onBackground,
                         topLeft = Offset(halfWidth, NO_OFFSET),
                         size = Size(pointerOffset, size.height)
                     )
@@ -130,7 +133,7 @@ fun Slider(
                     val pointerOffset = minOf(y.value - halfHeight, NO_OFFSET)
 
                     drawRect(
-                        color = color,
+                        color = onBackground,
                         topLeft = Offset(NO_OFFSET, halfHeight),
                         size = Size(
                             size.width,
@@ -143,7 +146,7 @@ fun Slider(
                     val pointerOffset = maxOf(y.value - halfHeight, MIN)
 
                     drawRect(
-                        color = color,
+                        color = onBackground,
                         topLeft = Offset(NO_OFFSET, halfHeight),
                         size = Size(
                             size.width,

@@ -7,6 +7,7 @@ import androidx.compose.foundation.layout.aspectRatio
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.offset
 import androidx.compose.foundation.shape.RoundedCornerShape
+import androidx.compose.material.MaterialTheme
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.MutableState
 import androidx.compose.runtime.mutableStateOf
@@ -55,7 +56,7 @@ fun Joystick(
         modifier = modifier
             .fillMaxSize()
             .aspectRatio(1f)
-            .background(Color.Blue, shape = circle)
+            .background(MaterialTheme.colors.background, shape = circle)
             .onGloballyPositioned {
                 val radius = it.size.height / 2
                 center = Center(radius, radius)

@@ -17,6 +17,9 @@ import androidx.compose.ui.graphics.drawscope.Stroke.Companion.DefaultMiter
 import androidx.compose.ui.input.pointer.pointerInteropFilter
 
 private const val UNDEFINED = -1f
+private const val NO_OFFSET = 0f
+private const val MIN = -1f
+private const val MAX = 1f
 
 sealed class Orientation() {
     object Horizontal : Orientation() {
@@ -36,15 +39,17 @@ sealed class Orientation() {
     }
 }
 
-
+//TODO отрисовать иконки
 @OptIn(ExperimentalComposeUiApi::class)
 @Composable
 fun Slider(
     modifier: Modifier,
-    orientation: Orientation = Orientation.Horizontal
+    orientation: Orientation = Orientation.Horizontal,
+    onPointerChange: ((Float) -> Unit)? = null
 ) {
     val x = remember { mutableStateOf(UNDEFINED) }
     val y = remember { mutableStateOf(UNDEFINED) }
+
     Canvas(
         modifier = modifier
             .fillMaxSize()
@@ -65,40 +70,91 @@ fun Slider(
             }
     ) {
         val color = Color.Red
-        if (orientation is Orientation.Horizontal && x.value != UNDEFINED) {
-            if (x.value < size.width / 2) {
-                drawRect(
-                    color = color,
-                    topLeft = Offset(x.value, 0f),
-                    size = Size(size.width / 2 - x.value, size.height)
-                )
+        val separatorColor = Color.White
+        val separatorWidth = DefaultMiter
+        val halfWidth = size.width / 2
+        val halfHeight = size.height / 2
+
+        if (orientation is Orientation.Horizontal) {
+            val update = if (x.value != UNDEFINED) {
+                if (x.value < halfWidth) {
+                    val pointerOffset = maxOf(halfWidth - x.value, NO_OFFSET)
+
+                    drawRect(
+                        color = color,
+                        topLeft = Offset(x.value, NO_OFFSET),
+                        size = Size(pointerOffset, size.height)
+                    )
+
+                    maxOf(-(pointerOffset / halfWidth), MIN)
+                } else {
+                    val pointerOffset = minOf(x.value - halfWidth, halfWidth)
+
+                    drawRect(
+                        color = color,
+                        topLeft = Offset(halfWidth, NO_OFFSET),
+                        size = Size(pointerOffset, size.height)
+                    )
+
+                    minOf(pointerOffset / halfWidth, MAX)
+                }
             } else {
-                drawRect(
-                    color = color,
-                    topLeft = Offset(size.width / 2, 0f),
-                    size = Size(minOf(x.value - size.width / 2, size.width / 2), size.height)
-                )
+                NO_OFFSET
             }
-//            drawImage(
-//                image = ImageBitmap.imageResource(
-//                    res = resources,
-//                    id = orientation.iconLeft
-//                )
-//            )
 
+            onPointerChange?.invoke(update)
 
+            //separator
+            drawLine(
+                separatorColor,
+                Offset(halfWidth, NO_OFFSET),
+                Offset(halfWidth, size.height),
+                strokeWidth = separatorWidth
+            )
         }
 
-        if (orientation == Orientation.Vertical && y.value != UNDEFINED) {
+        if (orientation == Orientation.Vertical) {
+            val update = if (y.value != UNDEFINED) {
+                if (y.value < halfHeight) {
+                    val pointerOffset = minOf(y.value - halfHeight, NO_OFFSET)
 
+                    drawRect(
+                        color = color,
+                        topLeft = Offset(NO_OFFSET, halfHeight),
+                        size = Size(
+                            size.width,
+                            pointerOffset
+                        )
+                    )
+
+                    minOf(-(pointerOffset / halfHeight), MAX)
+                } else {
+                    val pointerOffset = maxOf(y.value - halfHeight, MIN)
+
+                    drawRect(
+                        color = color,
+                        topLeft = Offset(NO_OFFSET, halfHeight),
+                        size = Size(
+                            size.width,
+                            pointerOffset
+                        )
+                    )
+
+                    maxOf(MIN, -(pointerOffset / halfHeight))
+                }
+            } else {
+                NO_OFFSET
+            }
+
+            onPointerChange?.invoke(update)
+
+            //separator
+            drawLine(
+                separatorColor,
+                Offset(NO_OFFSET, halfHeight),
+                Offset(size.width, halfHeight),
+                strokeWidth = separatorWidth
+            )
         }
-
-        //separator
-        drawLine(
-            Color.White,
-            Offset(size.width / 2, 0f),
-            Offset(size.width / 2, size.height),
-            strokeWidth = DefaultMiter
-        )
     }
 }

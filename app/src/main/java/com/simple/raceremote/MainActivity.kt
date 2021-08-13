@@ -2,6 +2,7 @@ package com.simple.raceremote
 
 import android.content.pm.ActivityInfo
 import android.os.Bundle
+import android.util.Log
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.compose.foundation.layout.Arrangement
@@ -44,13 +45,11 @@ fun App() {
 //                    yStr.value = "y = $y"
 //                }
 //            )
-            Slider(modifier = Modifier.weight(1f))
-            Column(
-                modifier = Modifier.weight(1f),
-                verticalArrangement = Arrangement.Center
-            ) {
-                Text(xStr.value)
-                Text(yStr.value)
+            Slider(modifier = Modifier.weight(1f)){
+                Log.d("fuck", "horizontal $it")
+            }
+            Slider(modifier = Modifier.weight(1f), Orientation.Vertical){
+                Log.d("fuck", "vertical $it")
             }
         }
 

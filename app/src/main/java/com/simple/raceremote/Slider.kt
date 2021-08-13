@@ -40,12 +40,23 @@ sealed class Orientation() {
 }
 
 //TODO отрисовать иконки
+/**
+ * Вертикальный/горизонтальный слайдер, позволяющий оттягивать пальцев по-горизонтали/по-вертикали
+ * ползунок. [onOffsetChange] - лямбда, срабатывающая при изменении положения пальца.
+ * При [Orientation.Horizontal] в крайнем левом положении лямбда вернет -1f, в крайнем правом 1f.
+ * При [Orientation.Vertical] в самом высоком положении лямбда вернёт 1f, в нижнем -1f.
+ * При отпускании пальца вне зависимости от [Orientation] лямбда вернёт 0f.
+ *
+ * @param modifier - модификатор
+ * @param orientation - ориентация экрана
+ * @param onOffsetChange - лямбда, срабатывающая при изменении положения пальца. Значения от -1f до 1f.
+ * */
 @OptIn(ExperimentalComposeUiApi::class)
 @Composable
 fun Slider(
     modifier: Modifier,
     orientation: Orientation = Orientation.Horizontal,
-    onPointerChange: ((Float) -> Unit)? = null
+    onOffsetChange: ((Float) -> Unit)? = null
 ) {
     val x = remember { mutableStateOf(UNDEFINED) }
     val y = remember { mutableStateOf(UNDEFINED) }
@@ -102,7 +113,7 @@ fun Slider(
                 NO_OFFSET
             }
 
-            onPointerChange?.invoke(update)
+            onOffsetChange?.invoke(update)
 
             //separator
             drawLine(
@@ -146,7 +157,7 @@ fun Slider(
                 NO_OFFSET
             }
 
-            onPointerChange?.invoke(update)
+            onOffsetChange?.invoke(update)
 
             //separator
             drawLine(

@@ -9,12 +9,15 @@ import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.Scaffold
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.mutableStateOf
+import androidx.compose.runtime.remember
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
-import androidx.core.view.WindowCompat
 import com.simple.raceremote.ui.theme.RaceRemoteTheme
+
+private const val UNDEFINED = -1
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -39,6 +42,7 @@ fun App() {
 @Composable
 fun Content(modifier: Modifier = Modifier) {
     val shape = RoundedCornerShape(16.dp)
+    val activePointer = remember { mutableStateOf(UNDEFINED) }
 
     Row(modifier = modifier) {
         Slider(
@@ -50,9 +54,9 @@ fun Content(modifier: Modifier = Modifier) {
                     end = 12.dp,
                     bottom = 12.dp
                 )
-                .clip(shape)
+                .clip(shape),
         ) {
-
+//            Log.d("fuck", "horizontal = $it")
         }
         Slider(
             modifier = Modifier
@@ -66,7 +70,7 @@ fun Content(modifier: Modifier = Modifier) {
                 .clip(shape),
             orientation = Orientation.Vertical
         ) {
-
+//            Log.d("fuck", "vertical = $it")
         }
     }
 }

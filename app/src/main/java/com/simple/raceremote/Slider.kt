@@ -1,23 +1,31 @@
 package com.simple.raceremote
 
+import android.os.Build
 import android.view.MotionEvent
 import androidx.annotation.DrawableRes
+import androidx.annotation.RequiresApi
 import androidx.compose.foundation.Canvas
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.material.MaterialTheme
 import androidx.compose.material.MaterialTheme.colors
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
+import androidx.compose.runtime.setValue
 import androidx.compose.ui.ExperimentalComposeUiApi
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.geometry.Offset
+import androidx.compose.ui.geometry.Rect
 import androidx.compose.ui.geometry.Size
 import androidx.compose.ui.graphics.drawscope.Stroke.Companion.DefaultMiter
 import androidx.compose.ui.input.pointer.pointerInteropFilter
+import androidx.compose.ui.layout.boundsInWindow
+import androidx.compose.ui.layout.onGloballyPositioned
 
 private const val UNDEFINED = -1f
+private const val UNDEFINED_INT = -1
 private const val NO_OFFSET = 0f
 private const val MIN = -1f
 private const val MAX = 1f
@@ -29,6 +37,8 @@ sealed class Orientation() {
 
         @DrawableRes
         val iconRight = R.drawable.ic_baseline_chevron_right_24
+
+        override fun toString(): String = "Horizontal"
     }
 
     object Vertical : Orientation() {
@@ -37,6 +47,8 @@ sealed class Orientation() {
 
         @DrawableRes
         val iconDown = R.drawable.ic_baseline_keyboard_arrow_down_24
+
+        override fun toString(): String = "Vertical"
     }
 }
 
@@ -57,26 +69,54 @@ sealed class Orientation() {
 fun Slider(
     modifier: Modifier,
     orientation: Orientation = Orientation.Horizontal,
-    onOffsetChange: ((Float) -> Unit)? = null
+    onOffsetChange: ((Float) -> Unit)? = null,
 ) {
     val x = remember { mutableStateOf(UNDEFINED) }
     val y = remember { mutableStateOf(UNDEFINED) }
     val onBackground = MaterialTheme.colors.onBackground
     val separatorColor = MaterialTheme.colors.onBackground
+    var sliderRect by remember { mutableStateOf(Rect(Offset.Zero, 0f)) }
+    var pointerId by remember { mutableStateOf(UNDEFINED_INT) }
 
     Canvas(
         modifier = modifier
             .fillMaxSize()
             .background(colors.surface)
+            .onGloballyPositioned { sliderRect = it.boundsInWindow() }
             .pointerInteropFilter() {
-                when (it.action) {
-                    MotionEvent.ACTION_DOWN, MotionEvent.ACTION_MOVE -> {
-                        x.value = it.x
-                        y.value = it.y
-                    }
-                    MotionEvent.ACTION_UP, MotionEvent.ACTION_POINTER_UP, MotionEvent.ACTION_CANCEL -> {
-                        x.value = UNDEFINED
-                        y.value = UNDEFINED
+                if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.Q) {
+                    when (it.actionMasked) {
+                        MotionEvent.ACTION_DOWN,
+                        MotionEvent.ACTION_MOVE,
+                        MotionEvent.ACTION_POINTER_DOWN -> {
+                            if (pointerId != UNDEFINED_INT) {
+                                val pointerIndex = it.findPointerIndex(pointerId)
+                                x.value = it.getX(pointerIndex)
+                                y.value = it.getY(pointerIndex)
+                            }
+
+                            if (pointerId == UNDEFINED_INT && sliderRect.contains(
+                                    Offset(
+                                        it.getRawX(
+                                            it.actionIndex
+                                        ), it.getRawY(it.actionIndex)
+                                    )
+                                )
+                            ) {
+                                pointerId = it.getPointerId(it.actionIndex)
+                                x.value = it.getX(it.actionIndex)
+                                y.value = it.getX(it.actionIndex)
+                            }
+                        }
+                        MotionEvent.ACTION_UP,
+                        MotionEvent.ACTION_POINTER_UP,
+                        MotionEvent.ACTION_CANCEL -> {
+                            if (pointerId == it.getPointerId(it.actionIndex)) {
+                                pointerId = UNDEFINED_INT
+                                x.value = UNDEFINED
+                                y.value = UNDEFINED
+                            }
+                        }
                     }
                 }
 
@@ -170,3 +210,7 @@ fun Slider(
         }
     }
 }
+
+@RequiresApi(Build.VERSION_CODES.Q)
+private fun Rect.isPointerInsideRect(event: MotionEvent): Boolean =
+    contains(Offset(event.rawX, event.rawY))

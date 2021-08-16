@@ -1,6 +1,7 @@
 package com.simple.raceremote
 
 import android.os.Build
+import android.util.Log
 import android.view.MotionEvent
 import androidx.annotation.DrawableRes
 import androidx.annotation.RequiresApi
@@ -21,8 +22,12 @@ import androidx.compose.ui.geometry.Rect
 import androidx.compose.ui.geometry.Size
 import androidx.compose.ui.graphics.drawscope.Stroke.Companion.DefaultMiter
 import androidx.compose.ui.input.pointer.pointerInteropFilter
+import androidx.compose.ui.layout.boundsInRoot
 import androidx.compose.ui.layout.boundsInWindow
 import androidx.compose.ui.layout.onGloballyPositioned
+import androidx.compose.ui.unit.dp
+import com.google.accompanist.insets.LocalWindowInsets
+import kotlin.math.roundToInt
 
 private const val UNDEFINED = -1f
 private const val UNDEFINED_INT = -1
@@ -67,7 +72,6 @@ sealed class Orientation() {
 @OptIn(ExperimentalComposeUiApi::class)
 @Composable
 fun Slider(
-    modifier: Modifier,
     orientation: Orientation = Orientation.Horizontal,
     onOffsetChange: ((Float) -> Unit)? = null,
 ) {
@@ -79,16 +83,22 @@ fun Slider(
     var pointerId by remember { mutableStateOf(UNDEFINED_INT) }
 
     Canvas(
-        modifier = modifier
+        modifier = Modifier
             .fillMaxSize()
             .background(colors.surface)
-            .onGloballyPositioned { sliderRect = it.boundsInWindow() }
+            .onGloballyPositioned { sliderRect = it.boundsInRoot() }
             .pointerInteropFilter() {
                 if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.Q) {
                     when (it.actionMasked) {
                         MotionEvent.ACTION_DOWN,
                         MotionEvent.ACTION_MOVE,
                         MotionEvent.ACTION_POINTER_DOWN -> {
+                            Log.d(
+                                "fuck",
+                                "type: $orientation \npointerId = $pointerId\nx = ${it.getRawX(it.actionIndex)}, \ny = ${
+                                    it.getRawY(it.actionIndex)
+                                }"
+                            )
                             if (pointerId != UNDEFINED_INT) {
                                 val pointerIndex = it.findPointerIndex(pointerId)
                                 x.value = it.getX(pointerIndex)
@@ -97,15 +107,15 @@ fun Slider(
 
                             if (pointerId == UNDEFINED_INT && sliderRect.contains(
                                     Offset(
-                                        it.getRawX(
-                                            it.actionIndex
-                                        ), it.getRawY(it.actionIndex)
+                                        it.getRawX(it.actionIndex),
+                                        it.getRawY(it.actionIndex)
                                     )
                                 )
                             ) {
                                 pointerId = it.getPointerId(it.actionIndex)
                                 x.value = it.getX(it.actionIndex)
-                                y.value = it.getX(it.actionIndex)
+                                y.value = it.getY(it.actionIndex)
+
                             }
                         }
                         MotionEvent.ACTION_UP,

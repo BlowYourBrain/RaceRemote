@@ -1,4 +1,4 @@
-package com.simple.raceremote
+package com.simple.raceremote.views
 
 import android.view.MotionEvent.*
 import androidx.compose.foundation.background

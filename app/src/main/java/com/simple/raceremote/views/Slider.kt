@@ -1,4 +1,4 @@
-package com.simple.raceremote
+package com.simple.raceremote.views
 
 import android.os.Build
 import android.util.Log
@@ -23,11 +23,8 @@ import androidx.compose.ui.geometry.Size
 import androidx.compose.ui.graphics.drawscope.Stroke.Companion.DefaultMiter
 import androidx.compose.ui.input.pointer.pointerInteropFilter
 import androidx.compose.ui.layout.boundsInRoot
-import androidx.compose.ui.layout.boundsInWindow
 import androidx.compose.ui.layout.onGloballyPositioned
-import androidx.compose.ui.unit.dp
-import com.google.accompanist.insets.LocalWindowInsets
-import kotlin.math.roundToInt
+import com.simple.raceremote.R
 
 private const val UNDEFINED = -1f
 private const val UNDEFINED_INT = -1

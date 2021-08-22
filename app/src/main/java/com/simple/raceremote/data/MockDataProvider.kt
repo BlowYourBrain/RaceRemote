@@ -23,7 +23,7 @@ object MockDataProvider : IBluetoothItemsProvider {
         }
     }
 
-    private fun createBluetoothItem(index: Int) = BluetoothItem("item #$index", "mac: $index")
+    private fun createBluetoothItem(index: Int) = BluetoothItem("item #$index", "mac: $index", index % 2 == 0)
 
     private suspend fun FlowCollector<List<BluetoothItem>>.emitListAndDelay(
         list: List<BluetoothItem>,

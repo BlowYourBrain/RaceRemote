@@ -20,16 +20,16 @@ import com.simple.raceremote.navigation.AppNavHost
 import com.simple.raceremote.navigation.Screens
 import com.simple.raceremote.screens.Actions
 import com.simple.raceremote.ui.theme.RaceRemoteTheme
+import com.simple.raceremote.utils.BluetoothHelper
 
 
 private const val PERMISSION_CODE = 42
 
 class MainActivity : ComponentActivity() {
 
-    private val bluetoothAdapter: BluetoothAdapter? = BluetoothAdapter.getDefaultAdapter()
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        BluetoothHelper.registerReceiver(this)
         window?.apply {
             decorView.systemUiVisibility =
                 SYSTEM_UI_FLAG_LAYOUT_HIDE_NAVIGATION or
@@ -38,6 +38,7 @@ class MainActivity : ComponentActivity() {
         }
 
         requestedOrientation = ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE
+
         setContent {
             App()
         }
@@ -48,11 +49,11 @@ class MainActivity : ComponentActivity() {
         window?.statusBarColor = Color.TRANSPARENT
 
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.Q) {
-            if (ContextCompat.checkSelfPermission(
+            if (
+                ContextCompat.checkSelfPermission(
                     baseContext,
                     Manifest.permission.ACCESS_BACKGROUND_LOCATION
-                )
-                != PackageManager.PERMISSION_GRANTED
+                ) != PackageManager.PERMISSION_GRANTED
             ) {
                 ActivityCompat.requestPermissions(
                     this,
@@ -61,7 +62,11 @@ class MainActivity : ComponentActivity() {
                 )
             }
         }
+    }
 
+    override fun onDestroy() {
+        super.onDestroy()
+        BluetoothHelper.unregisterReceiver(this)
     }
 
     override fun onRequestPermissionsResult(
@@ -95,10 +100,7 @@ fun AppPreview() {
 @Composable
 fun App() {
     RaceRemoteTheme(darkTheme = true) {
-        AppNavHost(
-            modifier = Modifier,
-            startScreen = Screens.RemoteControl
-        )
+        AppNavHost(startScreen = Screens.RemoteControl)
     }
 }
 

@@ -16,8 +16,12 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.core.app.ActivityCompat
 import androidx.core.content.ContextCompat
+import androidx.navigation.compose.rememberNavController
+import com.google.accompanist.insets.ProvideWindowInsets
+import com.simple.raceremote.navigation.AppNavHost
+import com.simple.raceremote.navigation.Screens
 import com.simple.raceremote.screens.Actions
-import com.simple.raceremote.screens.App
+import com.simple.raceremote.ui.theme.RaceRemoteTheme
 
 
 private const val PERMISSION_CODE = 42
@@ -88,6 +92,19 @@ private fun setupBluetooth() {
 @Composable
 fun AppPreview() {
     App()
+}
+
+@Composable
+fun App() {
+    RaceRemoteTheme(darkTheme = true) {
+        ProvideWindowInsets {
+            AppNavHost(
+                navController = rememberNavController(),
+                modifier = Modifier,
+                startScreen = Screens.RemoteControl
+            )
+        }
+    }
 }
 
 @Preview

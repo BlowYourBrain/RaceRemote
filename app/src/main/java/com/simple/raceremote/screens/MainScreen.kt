@@ -28,20 +28,7 @@ import com.simple.raceremote.views.Slider
 
 
 @Composable
-fun App() {
-    RaceRemoteTheme(darkTheme = true) {
-        ProvideWindowInsets() {
-            Scaffold(
-
-            ) {
-                Content(Modifier.padding(it))
-            }
-        }
-    }
-}
-
-@Composable
-fun Content(modifier: Modifier = Modifier) {
+fun RemoteControlScreen(modifier: Modifier = Modifier) {
     Column(modifier = modifier, horizontalAlignment = Alignment.CenterHorizontally) {
         Actions(Modifier)
         Controllers(

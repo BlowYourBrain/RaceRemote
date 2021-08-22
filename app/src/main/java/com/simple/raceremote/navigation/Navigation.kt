@@ -9,6 +9,7 @@ import androidx.navigation.compose.rememberNavController
 import com.simple.raceremote.data.MockDataProvider
 import com.simple.raceremote.screens.BluetoothDevicesScreen
 import com.simple.raceremote.screens.RemoteControlScreen
+import com.simple.raceremote.utils.map
 
 @Composable
 fun AppNavHost(
@@ -27,7 +28,9 @@ fun AppNavHost(
             }
 
             composable(Screens.BluetoothDevices.name) {
-                BluetoothDevicesScreen(data = MockDataProvider.getBluetoothDevices())
+                BluetoothDevicesScreen(
+                    data = MockDataProvider.getBluetoothDevices().map()
+                )
             }
         }
     }

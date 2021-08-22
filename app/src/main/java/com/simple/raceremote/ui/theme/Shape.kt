@@ -11,5 +11,6 @@ val Shapes = Shapes(
 )
 
 object CornerShapes {
-    val Card = RoundedCornerShape(16.dp)
+    val HugeItem = RoundedCornerShape(16.dp)
+    val SmallItem = RoundedCornerShape(8.dp)
 }

@@ -16,7 +16,6 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.res.painterResource
-import androidx.compose.ui.unit.dp
 import androidx.navigation.NavHostController
 import com.simple.raceremote.R
 import com.simple.raceremote.navigation.Screens
@@ -88,7 +87,7 @@ private fun ActionButton(
             MaterialTheme.colors.onSurface
         ),
 
-        shape = CornerShapes.Card,
+        shape = CornerShapes.HugeItem,
         onClick = { onClick?.invoke() }
     ) {
         Image(
@@ -103,7 +102,7 @@ private fun Controllers(
     horizontalSlider: ((Float) -> Unit)? = null,
     verticalSlider: ((Float) -> Unit)? = null
 ) {
-    val shape = CornerShapes.Card
+    val shape = CornerShapes.HugeItem
 
     Row {
         Box(

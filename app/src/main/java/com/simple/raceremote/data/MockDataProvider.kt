@@ -6,7 +6,7 @@ object MockDataProvider : BluetoothItemsProvider {
 
     override fun getBluetoothDevices(): List<BluetoothItem> {
         val list = mutableListOf<BluetoothItem>()
-        repeat(30) {
+        repeat(31) {
             list.add(BluetoothItem("item #$it", "mac: $it"))
         }
         return list

@@ -8,6 +8,7 @@ object Elevation {
 
 object Padding {
     val Content = 12.dp
+    val ListSpace = 4.dp
 }
 
 object Size{

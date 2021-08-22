@@ -1,60 +1,50 @@
 package com.simple.raceremote.screens
 
-import androidx.compose.foundation.layout.PaddingValues
-import androidx.compose.foundation.layout.Row
-import androidx.compose.foundation.layout.fillMaxSize
-import androidx.compose.foundation.layout.fillMaxWidth
+import androidx.compose.foundation.ExperimentalFoundationApi
 import androidx.compose.foundation.layout.padding
-import androidx.compose.foundation.lazy.LazyColumn
-import androidx.compose.foundation.lazy.LazyListState
-import androidx.compose.material.Text
-import androidx.compose.foundation.lazy.itemsIndexed
+import androidx.compose.foundation.lazy.GridCells
+import androidx.compose.foundation.lazy.LazyVerticalGrid
+import androidx.compose.foundation.lazy.items
 import androidx.compose.material.Card
 import androidx.compose.material.MaterialTheme
+import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.collectAsState
+import androidx.compose.runtime.getValue
 import androidx.compose.ui.Modifier
+import androidx.lifecycle.viewmodel.compose.viewModel
+import androidx.navigation.NavHostController
 import com.simple.raceremote.ui.theme.CornerShapes
 import com.simple.raceremote.ui.theme.Elevation
 import com.simple.raceremote.ui.theme.Padding
 
-data class TwoColumnRows(
-    val left: BluetoothItem,
-    val right: BluetoothItem? = null
-)
+private const val ROWS = 2
 
 data class BluetoothItem(
     val name: String,
     val macAddress: String
 )
 
-private const val HALF = 0.5f
-
 @Composable
-fun BluetoothDevicesScreen(data: List<TwoColumnRows>) {
-    LazyColumn(
-        state = LazyListState(),
-        modifier = Modifier.fillMaxSize(),
-        contentPadding = PaddingValues(Padding.Content)
-    ) {
-        itemsIndexed(data) { pos, item ->
-            Row(Modifier.fillMaxSize()) {
-                BluetoothItemCard(
-                    modifier = Modifier
-                        .fillMaxWidth(HALF)
-                        .padding(Padding.ListSpace),
-                    data = item.left
-                )
-                item.right?.let {
-                    BluetoothItemCard(
-                        modifier = Modifier
-                            .fillMaxWidth(HALF)
-                            .weight(1f)
-                            .padding(Padding.ListSpace),
-                        data = it
-                    )
-                }
-            }
+fun BluetoothDevicesScreen(navController: NavHostController) {
+    Content(viewModel())
+}
+
+@OptIn(ExperimentalFoundationApi::class)
+@Composable
+private fun Content(
+    viewModel: BluetoothDevicesViewModel
+) {
+    val bluetoothItems by viewModel.items.collectAsState(emptyList())
+
+    LazyVerticalGrid(cells = GridCells.Fixed(ROWS)) {
+        items(items = bluetoothItems) {
+            BluetoothItemCard(
+                modifier = Modifier.padding(Padding.ListSpace),
+                data = it
+            )
         }
+
     }
 }
 
@@ -71,5 +61,4 @@ private fun BluetoothItemCard(modifier: Modifier = Modifier, data: BluetoothItem
             style = MaterialTheme.typography.body1
         )
     }
-
 }

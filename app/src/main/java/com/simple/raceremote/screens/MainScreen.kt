@@ -11,7 +11,6 @@ import androidx.compose.foundation.layout.size
 import androidx.compose.material.Button
 import androidx.compose.material.ButtonDefaults
 import androidx.compose.material.MaterialTheme
-import androidx.compose.material.Scaffold
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
@@ -19,11 +18,11 @@ import androidx.compose.ui.draw.clip
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.unit.dp
 import androidx.navigation.NavHostController
-import com.google.accompanist.insets.ProvideWindowInsets
 import com.simple.raceremote.R
 import com.simple.raceremote.navigation.Screens
 import com.simple.raceremote.ui.theme.CornerShapes
-import com.simple.raceremote.ui.theme.RaceRemoteTheme
+import com.simple.raceremote.ui.theme.Padding
+import com.simple.raceremote.ui.theme.Size
 import com.simple.raceremote.utils.debug
 import com.simple.raceremote.views.Orientation
 import com.simple.raceremote.views.Slider
@@ -62,13 +61,13 @@ fun Actions(
     ) {
 
         ActionButton(
-            modifier = Modifier.padding(12.dp),
+            modifier = Modifier.padding(Padding.Content),
             icon = R.drawable.ic_baseline_bluetooth_searching_24,
             onClick = bluetoothOnClick
         )
 
         ActionButton(
-            modifier = Modifier.padding(12.dp),
+            modifier = Modifier.padding(Padding.Content),
             icon = R.drawable.ic_baseline_settings_24,
             onClick = settingsOnClick
         )
@@ -83,13 +82,13 @@ private fun ActionButton(
 ) {
     Button(
         modifier = modifier
-            .size(48.dp),
+            .size(Size.ButtonAsIcon),
         colors = ButtonDefaults.buttonColors(
             MaterialTheme.colors.surface,
             MaterialTheme.colors.onSurface
         ),
 
-        shape = CornerShapes._16dp,
+        shape = CornerShapes.Card,
         onClick = { onClick?.invoke() }
     ) {
         Image(
@@ -104,18 +103,13 @@ private fun Controllers(
     horizontalSlider: ((Float) -> Unit)? = null,
     verticalSlider: ((Float) -> Unit)? = null
 ) {
-    val shape = CornerShapes._16dp
+    val shape = CornerShapes.Card
 
     Row {
         Box(
             Modifier
                 .weight(1f)
-                .padding(
-                    top = 96.dp,
-                    start = 12.dp,
-                    end = 12.dp,
-                    bottom = 12.dp
-                )
+                .padding(Padding.Content)
                 .clip(shape)
         ) {
             Slider() {
@@ -125,12 +119,7 @@ private fun Controllers(
         Box(
             Modifier
                 .weight(1f)
-                .padding(
-                    top = 96.dp,
-                    start = 12.dp,
-                    end = 12.dp,
-                    bottom = 12.dp
-                )
+                .padding(Padding.Content)
                 .clip(shape)
         ) {
             Slider(orientation = Orientation.Vertical) {

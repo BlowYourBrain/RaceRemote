@@ -26,7 +26,9 @@ fun AppNavHost(
             }
 
             composable(Screens.BluetoothDevices.name) {
-                BluetoothDevicesScreen(navController = navController)
+                BluetoothDevicesScreen(navController = navController) {
+                    navController.popBackStack()
+                }
             }
         }
     }

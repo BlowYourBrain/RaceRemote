@@ -25,6 +25,7 @@ import com.simple.raceremote.R
 import com.simple.raceremote.ui.theme.CornerShapes
 import com.simple.raceremote.ui.theme.Elevation
 import com.simple.raceremote.ui.theme.Padding
+import com.simple.raceremote.views.NavigationPanel
 
 private const val ROWS = 2
 
@@ -35,25 +36,37 @@ data class BluetoothItem(
 )
 
 @Composable
-fun BluetoothDevicesScreen(navController: NavHostController) {
-    Content(viewModel())
+fun BluetoothDevicesScreen(
+    navController: NavHostController,
+    onBackClick: (() -> Unit)? = null
+) {
+    Content(viewModel(), onBackClick = onBackClick)
 }
 
 @OptIn(ExperimentalFoundationApi::class)
 @Composable
 private fun Content(
-    viewModel: BluetoothDevicesViewModel
+    viewModel: BluetoothDevicesViewModel,
+    onBackClick: (() -> Unit)?
 ) {
     val bluetoothItems by viewModel.items.collectAsState(emptyList())
+    Row() {
+        LazyVerticalGrid(
+            modifier = Modifier.weight(3f),
+            cells = GridCells.Fixed(ROWS)
+        ) {
+            items(items = bluetoothItems) {
+                BluetoothItemCard(
+                    modifier = Modifier.padding(Padding.ListSpace),
+                    entity = it
+                )
+            }
 
-    LazyVerticalGrid(cells = GridCells.Fixed(ROWS)) {
-        items(items = bluetoothItems) {
-            BluetoothItemCard(
-                modifier = Modifier.padding(Padding.ListSpace),
-                entity = it
-            )
         }
-
+        NavigationPanel(
+            modifier = Modifier.weight(1f),
+            onBackClick = { onBackClick?.invoke() }
+        )
     }
 }
 

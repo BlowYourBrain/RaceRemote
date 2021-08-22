@@ -97,13 +97,10 @@ fun AppPreview() {
 @Composable
 fun App() {
     RaceRemoteTheme(darkTheme = true) {
-        ProvideWindowInsets {
-            AppNavHost(
-                navController = rememberNavController(),
-                modifier = Modifier,
-                startScreen = Screens.RemoteControl
-            )
-        }
+        AppNavHost(
+            modifier = Modifier,
+            startScreen = Screens.RemoteControl
+        )
     }
 }
 

@@ -18,19 +18,30 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.unit.dp
+import androidx.navigation.NavHostController
 import com.google.accompanist.insets.ProvideWindowInsets
 import com.simple.raceremote.R
+import com.simple.raceremote.navigation.Screens
 import com.simple.raceremote.ui.theme.CornerShapes
 import com.simple.raceremote.ui.theme.RaceRemoteTheme
 import com.simple.raceremote.utils.debug
 import com.simple.raceremote.views.Orientation
 import com.simple.raceremote.views.Slider
 
-
 @Composable
-fun RemoteControlScreen(modifier: Modifier = Modifier) {
+fun RemoteControlScreen(
+    modifier: Modifier = Modifier,
+    navController: NavHostController
+) {
     Column(modifier = modifier, horizontalAlignment = Alignment.CenterHorizontally) {
-        Actions(Modifier)
+        Actions(
+            bluetoothOnClick = {
+                navController.navigate(Screens.BluetoothDevices.name)
+            },
+            settingsOnClick = {
+
+            }
+        )
         Controllers(
             { debug("horizontal: $it") },
             { debug("vertical: $it") },
@@ -41,7 +52,7 @@ fun RemoteControlScreen(modifier: Modifier = Modifier) {
 
 @Composable
 fun Actions(
-    modifier: Modifier,
+    modifier: Modifier = Modifier,
     bluetoothOnClick: (() -> Unit)? = null,
     settingsOnClick: (() -> Unit)? = null,
 ) {

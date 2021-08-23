@@ -1,13 +1,13 @@
 package com.simple.raceremote.permissions
 
-import androidx.compose.foundation.layout.Row
-import androidx.compose.material.Button
-import androidx.compose.material.Text
-import androidx.compose.runtime.Composable
-import androidx.compose.ui.window.Dialog
+import android.Manifest.permission.*
+import android.content.Context
+import android.content.pm.PackageManager
+import android.os.Build
+import androidx.core.content.ContextCompat
 
-object Permissions {
-    fun hasBluetoothPermissions(): Boolean {
-        return false
-    }
-}
+fun Context.hasPermission(permission: String): Boolean =
+    ContextCompat.checkSelfPermission(
+        this,
+        permission
+    ) == PackageManager.PERMISSION_GRANTED

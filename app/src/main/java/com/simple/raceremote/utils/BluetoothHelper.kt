@@ -7,25 +7,17 @@ import android.content.Context
 import android.content.Intent
 import android.content.IntentFilter
 import androidx.activity.ComponentActivity
-import androidx.lifecycle.Lifecycle
-import androidx.lifecycle.OnLifecycleEvent
 import com.simple.raceremote.data.IBluetoothItemsProvider
 import com.simple.raceremote.screens.BluetoothItem
-import com.simple.raceremote.utils.BluetoothHelper.toBluetoothItem
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.MutableStateFlow
-import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.asStateFlow
 
 //TODO после внедрения DI привести к обычному классу
 object BluetoothHelper : IBluetoothItemsProvider {
+    const val REQUEST_ENABLE_BT = 40
 
     private val bluetoothDevicesList = mutableListOf<BluetoothItem>()
-    override val bluetoothDevices: Flow<List<BluetoothItem>>
-        get() = _bluetoothDevice.asStateFlow()
-
-
-    private val _bluetoothDevice = MutableStateFlow<List<BluetoothItem>>(emptyList())
 
     private val bluetoothBroadcastReceiver = object : BroadcastReceiver() {
 
@@ -42,19 +34,23 @@ object BluetoothHelper : IBluetoothItemsProvider {
 
     }
 
+    private val _bluetoothDevices = MutableStateFlow<List<BluetoothItem>>(emptyList())
+
+    override val bluetoothDevices: Flow<List<BluetoothItem>>
+        get() = _bluetoothDevices.asStateFlow()
+
     private fun BluetoothDevice.toBluetoothItem(): BluetoothItem =
         BluetoothItem(
             name = name,
             macAddress = address,
-            isPaired = BluetoothAdapter
-                .getDefaultAdapter()
+            isPaired = getBluetoothAdapter()
                 .bondedDevices
                 .contains(this)
         )
 
     private fun emitBluetoothItem(item: BluetoothItem) {
         bluetoothDevicesList.add(item)
-        _bluetoothDevice.tryEmit(bluetoothDevicesList)
+        _bluetoothDevices.tryEmit(bluetoothDevicesList)
     }
 
     fun findBluetoothDevices() {
@@ -75,5 +71,4 @@ object BluetoothHelper : IBluetoothItemsProvider {
     fun unregisterReceiver(activity: ComponentActivity) {
         activity.unregisterReceiver(bluetoothBroadcastReceiver)
     }
-
 }

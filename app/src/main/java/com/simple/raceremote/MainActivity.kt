@@ -1,25 +1,23 @@
 package com.simple.raceremote
 
-import android.Manifest
 import android.content.pm.ActivityInfo
-import android.content.pm.PackageManager
 import android.graphics.Color
-import android.os.Build
 import android.os.Bundle
 import android.view.View.*
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.tooling.preview.Preview
-import androidx.core.app.ActivityCompat
-import androidx.core.content.ContextCompat
 import com.simple.raceremote.navigation.AppNavHost
 import com.simple.raceremote.navigation.Screens
-import com.simple.raceremote.permissions.Permissions
 import com.simple.raceremote.screens.Actions
 import com.simple.raceremote.ui.theme.RaceRemoteTheme
 import com.simple.raceremote.utils.BluetoothHelper
+import com.simple.raceremote.utils.enableBluetooth
+import com.simple.raceremote.utils.hasBluetoothPermissions
+import com.simple.raceremote.utils.isBluetoothEnabled
 
 
 private const val PERMISSION_CODE = 42
@@ -48,20 +46,24 @@ class MainActivity : ComponentActivity() {
         super.onResume()
         window?.statusBarColor = Color.TRANSPARENT
 
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.Q) {
-            if (
-                ContextCompat.checkSelfPermission(
-                    baseContext,
-                    Manifest.permission.ACCESS_BACKGROUND_LOCATION
-                ) != PackageManager.PERMISSION_GRANTED
-            ) {
-                ActivityCompat.requestPermissions(
-                    this,
-                    arrayOf(Manifest.permission.ACCESS_BACKGROUND_LOCATION),
-                    PERMISSION_CODE
-                )
-            }
+        if (!isBluetoothEnabled()) {
+            enableBluetooth(this)
         }
+
+//        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.Q) {
+//            if (
+//                ContextCompat.checkSelfPermission(
+//                    baseContext,
+//                    Manifest.permission.ACCESS_BACKGROUND_LOCATION
+//                ) != PackageManager.PERMISSION_GRANTED
+//            ) {
+//                ActivityCompat.requestPermissions(
+//                    this,
+//                    arrayOf(Manifest.permission.ACCESS_BACKGROUND_LOCATION),
+//                    PERMISSION_CODE
+//                )
+//            }
+//        }
     }
 
     override fun onDestroy() {
@@ -101,12 +103,13 @@ fun App() {
 }
 
 @Composable
-fun getStartScreen(): Screens =
-    if (Permissions.hasBluetoothPermissions()) {
+fun getStartScreen(): Screens = with(LocalContext.current) {
+    if (hasBluetoothPermissions()) {
         Screens.RemoteControl
     } else {
         Screens.BluetoothPermissionsRationale
     }
+}
 
 @Preview
 @Composable

@@ -3,10 +3,12 @@ package com.simple.raceremote.navigation
 import androidx.compose.material.Scaffold
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
+import androidx.navigation.NavOptions
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
 import com.simple.raceremote.screens.BluetoothDevicesScreen
+import com.simple.raceremote.screens.BluetoothPermissionRationale
 import com.simple.raceremote.screens.RemoteControlScreen
 
 @Composable
@@ -29,6 +31,19 @@ fun AppNavHost(
                 BluetoothDevicesScreen(navController = navController) {
                     navController.popBackStack()
                 }
+            }
+
+            composable(Screens.BluetoothPermissionsRationale.name) {
+                BluetoothPermissionRationale(
+                    onApply = {
+                        navController.navigate(
+                            route = Screens.RemoteControl.name,
+                            navOptions = NavOptions.Builder()
+                                .setLaunchSingleTop(true)
+                                .build()
+                        )
+                    }
+                )
             }
         }
     }

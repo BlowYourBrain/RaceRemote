@@ -1,14 +1,12 @@
 package com.simple.raceremote
 
 import android.Manifest
-import android.bluetooth.BluetoothAdapter
 import android.content.pm.ActivityInfo
 import android.content.pm.PackageManager
 import android.graphics.Color
 import android.os.Build
 import android.os.Bundle
 import android.view.View.*
-import android.widget.Toast
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.compose.runtime.Composable
@@ -18,6 +16,7 @@ import androidx.core.app.ActivityCompat
 import androidx.core.content.ContextCompat
 import com.simple.raceremote.navigation.AppNavHost
 import com.simple.raceremote.navigation.Screens
+import com.simple.raceremote.permissions.Permissions
 import com.simple.raceremote.screens.Actions
 import com.simple.raceremote.ui.theme.RaceRemoteTheme
 import com.simple.raceremote.utils.BluetoothHelper
@@ -31,6 +30,7 @@ class MainActivity : ComponentActivity() {
         super.onCreate(savedInstanceState)
         BluetoothHelper.registerReceiver(this)
         window?.apply {
+            //TODO сменить на актуальное API
             decorView.systemUiVisibility =
                 SYSTEM_UI_FLAG_LAYOUT_HIDE_NAVIGATION or
                         SYSTEM_UI_FLAG_LIGHT_STATUS_BAR or
@@ -69,25 +69,21 @@ class MainActivity : ComponentActivity() {
         BluetoothHelper.unregisterReceiver(this)
     }
 
-    override fun onRequestPermissionsResult(
-        requestCode: Int,
-        permissions: Array<out String>,
-        grantResults: IntArray
-    ) {
-
-        if (requestCode == PERMISSION_CODE && grantResults.isNotEmpty() &&
-            grantResults[0] == PackageManager.PERMISSION_GRANTED
-        ) {
-            setupBluetooth()
-        } else {
-            Toast.makeText(this, "permissions not granted", Toast.LENGTH_SHORT).show()
-        }
-        super.onRequestPermissionsResult(requestCode, permissions, grantResults)
-    }
-}
-
-private fun setupBluetooth() {
-
+//    override fun onRequestPermissionsResult(
+//        requestCode: Int,
+//        permissions: Array<out String>,
+//        grantResults: IntArray
+//    ) {
+//
+//        if (requestCode == PERMISSION_CODE && grantResults.isNotEmpty() &&
+//            grantResults[0] == PackageManager.PERMISSION_GRANTED
+//        ) {
+//            setupBluetooth()
+//        } else {
+//            Toast.makeText(this, "permissions not granted", Toast.LENGTH_SHORT).show()
+//        }
+//        super.onRequestPermissionsResult(requestCode, permissions, grantResults)
+//    }
 }
 
 
@@ -100,9 +96,17 @@ fun AppPreview() {
 @Composable
 fun App() {
     RaceRemoteTheme(darkTheme = true) {
-        AppNavHost(startScreen = Screens.RemoteControl)
+        AppNavHost(startScreen = getStartScreen())
     }
 }
+
+@Composable
+fun getStartScreen(): Screens =
+    if (Permissions.hasBluetoothPermissions()) {
+        Screens.RemoteControl
+    } else {
+        Screens.BluetoothPermissionsRationale
+    }
 
 @Preview
 @Composable

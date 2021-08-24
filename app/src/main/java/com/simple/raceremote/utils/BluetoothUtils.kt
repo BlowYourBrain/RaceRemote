@@ -1,22 +1,30 @@
 package com.simple.raceremote.utils
 
-import android.Manifest
+import android.Manifest.permission.*
 import android.app.Activity
 import android.bluetooth.BluetoothAdapter
 import android.content.Context
 import android.content.Intent
 import android.os.Build
 import androidx.core.app.ActivityCompat
-import com.simple.raceremote.permissions.hasPermission
 
-fun Context.hasBluetoothPermissions(): Boolean =
-    if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.S) {
-        hasPermission(Manifest.permission.BLUETOOTH_CONNECT) && hasPermission(Manifest.permission.BLUETOOTH_SCAN)
-    } else {
-        hasPermission(Manifest.permission.BLUETOOTH) && hasPermission(Manifest.permission.BLUETOOTH_ADMIN)
+fun Context.hasBluetoothPermissions(): Boolean {
+    var hasPermissions = true
+    val permissions = getBluetoothPermissions()
+
+    for (perm in permissions) {
+        if (!hasPermission(perm)) {
+            hasPermissions = false
+            break
+        }
     }
+    return hasPermissions
+}
 
-fun isBluetoothEnabled(): Boolean = getBluetoothAdapter()?.isEnabled == false
+fun getBluetoothPermissions() = arrayOf(BLUETOOTH, BLUETOOTH_ADMIN, ACCESS_FINE_LOCATION)
+
+
+fun isBluetoothEnabled(): Boolean = getBluetoothAdapter().isEnabled
 
 fun enableBluetooth(activity: Activity) {
     val enableBtIntent = Intent(BluetoothAdapter.ACTION_REQUEST_ENABLE)
@@ -28,4 +36,4 @@ fun enableBluetooth(activity: Activity) {
     )
 }
 
-fun getBluetoothAdapter() = BluetoothAdapter.getDefaultAdapter()
+fun getBluetoothAdapter(): BluetoothAdapter = BluetoothAdapter.getDefaultAdapter()

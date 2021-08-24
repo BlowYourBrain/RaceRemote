@@ -1,11 +1,10 @@
 package com.simple.raceremote.utils
 
-import android.bluetooth.BluetoothAdapter
 import android.bluetooth.BluetoothDevice
+import android.bluetooth.BluetoothDevice.ACTION_FOUND
 import android.content.BroadcastReceiver
 import android.content.Context
 import android.content.Intent
-import android.content.IntentFilter
 import androidx.activity.ComponentActivity
 import com.simple.raceremote.data.IBluetoothItemsProvider
 import com.simple.raceremote.screens.BluetoothItem
@@ -16,19 +15,20 @@ import kotlinx.coroutines.flow.asStateFlow
 //TODO после внедрения DI привести к обычному классу
 object BluetoothHelper : IBluetoothItemsProvider {
     const val REQUEST_ENABLE_BT = 40
+    private const val UNKNOWN_DEVICE = "UNKNOWN_DEVICE"
+    private const val UNKNOWN_ADDRESS = "UNKNOWN_ADDRESS"
 
     private val bluetoothDevicesList = mutableListOf<BluetoothItem>()
 
     private val bluetoothBroadcastReceiver = object : BroadcastReceiver() {
 
         override fun onReceive(context: Context, intent: Intent) {
-            when (intent.action) {
-                BluetoothDevice.ACTION_FOUND -> {
-                    val device: BluetoothDevice? =
-                        intent.getParcelableExtra(BluetoothDevice.EXTRA_DEVICE)
+            if (intent.action == ACTION_FOUND) {
+                val device: BluetoothDevice? =
+                    intent.getParcelableExtra(BluetoothDevice.EXTRA_DEVICE)
 
-                    device?.toBluetoothItem()?.let { emitBluetoothItem(it) }
-                }
+                device?.toBluetoothItem()?.let { emitBluetoothItem(it) }
+                debug("invokes bluetooth intent with $intent")
             }
         }
 
@@ -41,11 +41,11 @@ object BluetoothHelper : IBluetoothItemsProvider {
 
     private fun BluetoothDevice.toBluetoothItem(): BluetoothItem =
         BluetoothItem(
-            name = name,
-            macAddress = address,
+            name = name ?: UNKNOWN_DEVICE,
+            macAddress = address ?: UNKNOWN_ADDRESS,
             isPaired = getBluetoothAdapter()
                 .bondedDevices
-                .contains(this)
+                ?.contains(this) ?: false
         )
 
     private fun emitBluetoothItem(item: BluetoothItem) {
@@ -54,17 +54,18 @@ object BluetoothHelper : IBluetoothItemsProvider {
     }
 
     fun findBluetoothDevices() {
-        BluetoothAdapter.getDefaultAdapter().startDiscovery()
+        getBluetoothAdapter().startDiscovery()
     }
 
     fun stopFindingBluetoothDevices() {
-        BluetoothAdapter.getDefaultAdapter().cancelDiscovery()
+        bluetoothDevicesList.clear()
+        getBluetoothAdapter().cancelDiscovery()
     }
 
     fun registerReceiver(activity: ComponentActivity) {
         activity.registerReceiver(
             bluetoothBroadcastReceiver,
-            IntentFilter(BluetoothDevice.ACTION_FOUND)
+            intentFilterOf(ACTION_FOUND)
         )
     }
 

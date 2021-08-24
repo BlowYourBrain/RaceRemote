@@ -3,6 +3,7 @@ package com.simple.raceremote.screens
 import androidx.compose.foundation.ExperimentalFoundationApi
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.layout.Arrangement
+import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.lazy.GridCells
@@ -87,12 +88,19 @@ private fun BluetoothItemCard(modifier: Modifier = Modifier, entity: BluetoothIt
             verticalAlignment = Alignment.CenterVertically,
             horizontalArrangement = Arrangement.SpaceAround
         ) {
-            Text(
-                modifier = Modifier.padding(Padding.Content),
-                text = entity.name,
-                textAlign = TextAlign.Start,
-                style = MaterialTheme.typography.body1
-            )
+            Column(modifier = Modifier.padding(Padding.Content)) {
+                Text(
+                    text = entity.name,
+                    textAlign = TextAlign.Start,
+                    style = MaterialTheme.typography.body1
+                )
+                Text(
+                    text = entity.macAddress,
+                    textAlign = TextAlign.Start,
+                    style = MaterialTheme.typography.body1
+                )
+            }
+
             if (entity.isPaired) {
                 Image(
                     modifier = Modifier.padding(Padding.Content),

@@ -41,8 +41,8 @@ fun RemoteControlScreen(
             }
         )
         Controllers(
-            { debug("horizontal: $it") },
-            { debug("vertical: $it") },
+//            { debug("horizontal: $it") },
+//            { debug("vertical: $it") },
         )
     }
 

@@ -10,6 +10,7 @@ import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
+import androidx.compose.foundation.layout.fillMaxHeight
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
@@ -38,10 +39,9 @@ import com.simple.raceremote.ui.theme.Padding
 import com.simple.raceremote.views.NavigationPanel
 import com.simple.raceremote.views.RoundActionButton
 
-private const val ROWS = 2
-
 //todo вынести в strings
 private const val FIND_BLUETOOTH_DEVICES = "Поиск bluetooth устройств..."
+private const val ROWS = 2
 
 data class BluetoothItem(
     val name: String,
@@ -75,7 +75,11 @@ private fun Content(
     )
 
     Row {
-        Box(modifier = Modifier.weight(3f)) {
+        Box(
+            modifier = Modifier
+                .weight(3f)
+                .fillMaxHeight()
+        ) {
             LazyVerticalGrid(cells = GridCells.Fixed(ROWS)) {
                 items(items = bluetoothItems) {
                     BluetoothItemCard(
@@ -86,7 +90,12 @@ private fun Content(
             }
 
             if (bluetoothItems.isEmpty() && isRefreshing) {
-                Text(text = FIND_BLUETOOTH_DEVICES)
+                Box(
+                    modifier = Modifier.fillMaxSize(),
+                    contentAlignment = Alignment.Center
+                ) {
+                    Text(text = FIND_BLUETOOTH_DEVICES, textAlign = TextAlign.Center)
+                }
             }
         }
 

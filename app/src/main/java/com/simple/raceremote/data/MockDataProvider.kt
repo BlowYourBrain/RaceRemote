@@ -1,38 +1,77 @@
 package com.simple.raceremote.data
 
 import com.simple.raceremote.screens.BluetoothItem
-import com.simple.raceremote.utils.debug
+import com.simple.raceremote.utils.IBluetoothDevicesDiscoveryController
+import kotlinx.coroutines.GlobalScope
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.flow.Flow
-import kotlinx.coroutines.flow.FlowCollector
-import kotlinx.coroutines.flow.flow
+import kotlinx.coroutines.flow.MutableStateFlow
+import kotlinx.coroutines.flow.asStateFlow
+import kotlinx.coroutines.launch
 
 private const val ITEMS_COUNT = 21
 
-object MockDataProvider : IBluetoothItemsProvider {
+object MockDataProvider : IBluetoothItemsProvider, IBluetoothDevicesDiscoveryController {
 
     override val bluetoothDevices: Flow<List<BluetoothItem>>
-        get() = createBluetoothDevices()
+        get() = emitter.flow
 
-    private fun createBluetoothDevices(): Flow<List<BluetoothItem>> = flow {
-        if (ITEMS_COUNT - 1 > 0) {
-            var items = listOf(createBluetoothItem(0))
-            repeat(ITEMS_COUNT - 1) {
-                items = emitListAndDelay(items, it + 1)
+    private val emitter = Emitter<List<BluetoothItem>>(
+        initial = emptyList(),
+        ITEMS_COUNT
+    ) { emitterIndex ->
+        List(emitterIndex + 1) {
+            createBluetoothItem(it)
+        }
+    }
+
+    override fun findBluetoothDevices() {
+        emitter.start()
+    }
+
+    override fun stopFindingBluetoothDevices() {
+        emitter.stop()
+    }
+
+    private fun createBluetoothItem(index: Int) =
+        BluetoothItem("item #$index", "mac: $index", index % 2 == 0)
+}
+
+private class Emitter<T>(
+    private val initial: T,
+    private val itemCount: Int,
+    private val delay: Long = 1000,
+    emitAtCreation: Boolean = true,
+    private val source: (index: Int) -> T,
+) {
+    private val _flow: MutableStateFlow<T> = MutableStateFlow(initial)
+    private var index = 0
+
+    var isEmitting = emitAtCreation
+        private set
+
+    val flow: Flow<T>
+        get() = _flow.asStateFlow()
+
+    init {
+        GlobalScope.launch {
+            while (true) {
+                delay(delay)
+                if (index < itemCount && isEmitting) {
+                    _flow.emit(source.invoke(index))
+                    index++
+                }
             }
         }
     }
 
-    private fun createBluetoothItem(index: Int) = BluetoothItem("item #$index", "mac: $index", index % 2 == 0)
+    fun start() {
+        _flow.tryEmit(initial)
+        isEmitting = true
+    }
 
-    private suspend fun FlowCollector<List<BluetoothItem>>.emitListAndDelay(
-        list: List<BluetoothItem>,
-        index: Int
-    ): List<BluetoothItem> {
-        return (list + createBluetoothItem(index)).apply {
-            debug("list size = ${this.size}")
-            emit(this)
-            delay(1000)
-        }
+    fun stop() {
+        isEmitting = false
+        index = 0
     }
 }

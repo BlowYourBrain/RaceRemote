@@ -23,6 +23,7 @@ import com.simple.raceremote.ui.theme.CornerShapes
 import com.simple.raceremote.ui.theme.Padding
 import com.simple.raceremote.ui.theme.Size
 import com.simple.raceremote.utils.debug
+import com.simple.raceremote.views.ActionButton
 import com.simple.raceremote.views.Orientation
 import com.simple.raceremote.views.Slider
 
@@ -69,30 +70,6 @@ fun Actions(
             modifier = Modifier.padding(Padding.Content),
             icon = R.drawable.ic_baseline_settings_24,
             onClick = settingsOnClick
-        )
-    }
-}
-
-@Composable
-private fun ActionButton(
-    modifier: Modifier,
-    @DrawableRes icon: Int,
-    onClick: (() -> Unit)? = null
-) {
-    Button(
-        modifier = modifier
-            .size(Size.ButtonAsIcon),
-        colors = ButtonDefaults.buttonColors(
-            MaterialTheme.colors.surface,
-            MaterialTheme.colors.onSurface
-        ),
-
-        shape = CornerShapes.HugeItem,
-        onClick = { onClick?.invoke() }
-    ) {
-        Image(
-            painter = painterResource(icon),
-            contentDescription = null
         )
     }
 }

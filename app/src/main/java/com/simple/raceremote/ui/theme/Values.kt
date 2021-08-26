@@ -11,6 +11,7 @@ object Padding {
     val ListSpace = 4.dp
 }
 
-object Size{
+object Size {
     val ButtonAsIcon = 48.dp
+    val HugeButtonAsIcon = 64.dp
 }

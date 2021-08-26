@@ -10,15 +10,16 @@ import com.simple.raceremote.data.IBluetoothItemsProvider
 import com.simple.raceremote.screens.BluetoothItem
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.MutableStateFlow
+import kotlinx.coroutines.flow.asSharedFlow
 import kotlinx.coroutines.flow.asStateFlow
 
 //TODO после внедрения DI привести к обычному классу
-object BluetoothHelper : IBluetoothItemsProvider {
+object BluetoothHelper : IBluetoothItemsProvider, IBluetoothDevicesDiscoveryController {
     const val REQUEST_ENABLE_BT = 40
     private const val UNKNOWN_DEVICE = "UNKNOWN_DEVICE"
     private const val UNKNOWN_ADDRESS = "UNKNOWN_ADDRESS"
 
-    private val bluetoothDevicesList = mutableListOf<BluetoothItem>()
+    private val bluetoothDevicesSet = mutableSetOf<BluetoothItem>()
 
     private val bluetoothBroadcastReceiver = object : BroadcastReceiver() {
 
@@ -28,7 +29,6 @@ object BluetoothHelper : IBluetoothItemsProvider {
                     intent.getParcelableExtra(BluetoothDevice.EXTRA_DEVICE)
 
                 device?.toBluetoothItem()?.let { emitBluetoothItem(it) }
-                debug("invokes bluetooth intent with $intent")
             }
         }
 
@@ -37,28 +37,14 @@ object BluetoothHelper : IBluetoothItemsProvider {
     private val _bluetoothDevices = MutableStateFlow<List<BluetoothItem>>(emptyList())
 
     override val bluetoothDevices: Flow<List<BluetoothItem>>
-        get() = _bluetoothDevices.asStateFlow()
+        get() = _bluetoothDevices.asSharedFlow()
 
-    private fun BluetoothDevice.toBluetoothItem(): BluetoothItem =
-        BluetoothItem(
-            name = name ?: UNKNOWN_DEVICE,
-            macAddress = address ?: UNKNOWN_ADDRESS,
-            isPaired = getBluetoothAdapter()
-                .bondedDevices
-                ?.contains(this) ?: false
-        )
-
-    private fun emitBluetoothItem(item: BluetoothItem) {
-        bluetoothDevicesList.add(item)
-        _bluetoothDevices.tryEmit(bluetoothDevicesList)
-    }
-
-    fun findBluetoothDevices() {
+    override fun findBluetoothDevices() {
+        bluetoothDevicesSet.clear()
         getBluetoothAdapter().startDiscovery()
     }
 
-    fun stopFindingBluetoothDevices() {
-        bluetoothDevicesList.clear()
+    override fun stopFindingBluetoothDevices() {
         getBluetoothAdapter().cancelDiscovery()
     }
 
@@ -71,5 +57,19 @@ object BluetoothHelper : IBluetoothItemsProvider {
 
     fun unregisterReceiver(activity: ComponentActivity) {
         activity.unregisterReceiver(bluetoothBroadcastReceiver)
+    }
+
+    private fun BluetoothDevice.toBluetoothItem(): BluetoothItem =
+        BluetoothItem(
+            name = name ?: UNKNOWN_DEVICE,
+            macAddress = address ?: UNKNOWN_ADDRESS,
+            isPaired = getBluetoothAdapter()
+                .bondedDevices
+                ?.contains(this) ?: false
+        )
+
+    private fun emitBluetoothItem(item: BluetoothItem) {
+        bluetoothDevicesSet.add(item)
+        _bluetoothDevices.tryEmit(bluetoothDevicesSet.toList())
     }
 }

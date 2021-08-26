@@ -42,6 +42,8 @@ import com.simple.raceremote.views.RoundActionButton
 //todo вынести в strings
 private const val FIND_BLUETOOTH_DEVICES = "Поиск bluetooth устройств..."
 private const val ROTATION_DURATION = 2000
+private const val INITIAL_ROTATION = 0f
+private const val TARGET_ROTATION = 360f
 private const val ROWS = 2
 
 data class BluetoothItem(
@@ -68,8 +70,8 @@ private fun Content(
     val bluetoothItems by viewModel.items.collectAsState(emptyList())
     val transition = rememberInfiniteTransition()
     val rotation by transition.animateFloat(
-        initialValue = 0f,
-        targetValue = 360f,
+        initialValue = INITIAL_ROTATION,
+        targetValue = TARGET_ROTATION,
         animationSpec = infiniteRepeatable(
             animation = tween(ROTATION_DURATION)
         )
@@ -109,7 +111,7 @@ private fun Content(
                 contentAlignment = Alignment.Center
             ) {
                 RoundActionButton(
-                    modifier = Modifier.rotate(if (isRefreshing) rotation else 0f),
+                    modifier = Modifier.rotate(if (isRefreshing) rotation else INITIAL_ROTATION),
                     icon = R.drawable.ic_baseline_refresh_24
                 ) { viewModel.toggleRefreshing() }
             }

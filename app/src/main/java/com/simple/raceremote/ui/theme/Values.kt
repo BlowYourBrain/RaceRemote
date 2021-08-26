@@ -12,6 +12,7 @@ object Padding {
 }
 
 object Size {
+    val Icon = 24.dp
     val ButtonAsIcon = 48.dp
     val HugeButtonAsIcon = 64.dp
 }

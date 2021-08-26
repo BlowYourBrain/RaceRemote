@@ -29,18 +29,19 @@ import androidx.compose.ui.draw.rotate
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.tooling.preview.Preview
-import androidx.compose.ui.unit.dp
 import androidx.lifecycle.viewmodel.compose.viewModel
 import androidx.navigation.NavHostController
 import com.simple.raceremote.R
 import com.simple.raceremote.ui.theme.CornerShapes
 import com.simple.raceremote.ui.theme.Elevation
 import com.simple.raceremote.ui.theme.Padding
+import com.simple.raceremote.ui.theme.Size
 import com.simple.raceremote.views.NavigationPanel
 import com.simple.raceremote.views.RoundActionButton
 
 //todo вынести в strings
 private const val FIND_BLUETOOTH_DEVICES = "Поиск bluetooth устройств..."
+private const val ROTATION_DURATION = 2000
 private const val ROWS = 2
 
 data class BluetoothItem(
@@ -70,7 +71,7 @@ private fun Content(
         initialValue = 0f,
         targetValue = 360f,
         animationSpec = infiniteRepeatable(
-            animation = tween(2000)
+            animation = tween(ROTATION_DURATION)
         )
     )
 
@@ -148,7 +149,7 @@ private fun BluetoothItemCard(modifier: Modifier = Modifier, entity: BluetoothIt
             Box(
                 modifier = Modifier
                     .padding(Padding.Content)
-                    .size(24.dp)
+                    .size(Size.Icon)
             ) {
                 if (entity.isPaired) {
                     Image(

@@ -10,10 +10,8 @@ import androidx.compose.material.MaterialTheme
 import androidx.compose.material.MaterialTheme.colors
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.MutableState
-import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
-import androidx.compose.runtime.setValue
 import androidx.compose.ui.ExperimentalComposeUiApi
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.geometry.Offset
@@ -78,56 +76,22 @@ fun Slider(
     val y = remember { mutableStateOf(UNDEFINED) }
     val onBackgroundColor = MaterialTheme.colors.onBackground
     val separatorColor = MaterialTheme.colors.onBackground
-    var sliderRect by remember { mutableStateOf(Rect(Offset.Zero, 0f)) }
-    var pointerId by remember { mutableStateOf(UNDEFINED_INT) }
+    val sliderRect = remember { mutableStateOf(Rect(Offset.Zero, 0f)) }
+    val pointerId = remember { mutableStateOf(UNDEFINED_INT) }
 
     Canvas(
         modifier = Modifier
             .fillMaxSize()
             .background(colors.surface)
-            .onGloballyPositioned { sliderRect = it.boundsInRoot() }
+            .onGloballyPositioned { sliderRect.value = it.boundsInRoot() }
             .pointerInteropFilter() {
-                if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.Q) {
-                    when (it.actionMasked) {
-                        MotionEvent.ACTION_DOWN,
-                        MotionEvent.ACTION_MOVE,
-                        MotionEvent.ACTION_POINTER_DOWN -> {
-                            debug(
-                                "type: $orientation \npointerId = $pointerId\nx = ${it.getRawX(it.actionIndex)}, \ny = ${
-                                    it.getRawY(it.actionIndex)
-                                }"
-                            )
-
-                            if (pointerId != UNDEFINED_INT) {
-                                val pointerIndex = it.findPointerIndex(pointerId)
-                                x.value = it.getX(pointerIndex)
-                                y.value = it.getY(pointerIndex)
-                            }
-
-                            if (pointerId == UNDEFINED_INT && sliderRect.contains(
-                                    Offset(
-                                        it.getRawX(it.actionIndex),
-                                        it.getRawY(it.actionIndex)
-                                    )
-                                )
-                            ) {
-                                pointerId = it.getPointerId(it.actionIndex)
-                                x.value = it.getX(it.actionIndex)
-                                y.value = it.getY(it.actionIndex)
-
-                            }
-                        }
-                        MotionEvent.ACTION_UP,
-                        MotionEvent.ACTION_POINTER_UP,
-                        MotionEvent.ACTION_CANCEL -> {
-                            if (pointerId == it.getPointerId(it.actionIndex)) {
-                                pointerId = UNDEFINED_INT
-                                x.value = UNDEFINED
-                                y.value = UNDEFINED
-                            }
-                        }
-                    }
-                }
+                it.onPointerInteropFilter(
+                    x = x,
+                    y = y,
+                    pointerId = pointerId,
+                    sliderRect = sliderRect,
+                    orientation = orientation,
+                )
 
                 true
             }
@@ -146,6 +110,56 @@ fun Slider(
                 separatorColor = separatorColor,
                 onOffsetChange = onOffsetChange
             )
+        }
+    }
+}
+
+private fun MotionEvent.onPointerInteropFilter(
+    x: MutableState<Float>,
+    y: MutableState<Float>,
+    pointerId: MutableState<Int>,
+    sliderRect: MutableState<Rect>,
+    orientation: Orientation
+){
+    if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.Q) {
+        when (actionMasked) {
+            MotionEvent.ACTION_DOWN,
+            MotionEvent.ACTION_MOVE,
+            MotionEvent.ACTION_POINTER_DOWN -> {
+                debug(
+                    "type: $orientation \npointerId = ${pointerId.value}\nx = ${getRawX(actionIndex)}, \ny = ${
+                        getRawY(actionIndex)
+                    }"
+                )
+
+                if (pointerId.value != UNDEFINED_INT) {
+                    val pointerIndex = findPointerIndex(pointerId.value)
+                    x.value = getX(pointerIndex)
+                    y.value = getY(pointerIndex)
+                }
+
+                if (pointerId.value == UNDEFINED_INT && sliderRect.value.contains(
+                        Offset(
+                            getRawX(actionIndex),
+                            getRawY(actionIndex)
+                        )
+                    )
+                ) {
+                    pointerId.value = getPointerId(actionIndex)
+                    x.value = getX(actionIndex)
+                    y.value = getY(actionIndex)
+
+                }
+            }
+            MotionEvent.ACTION_UP,
+            MotionEvent.ACTION_POINTER_UP,
+            MotionEvent.ACTION_CANCEL -> {
+                if (pointerId.value == getPointerId(actionIndex)) {
+                    pointerId.value = UNDEFINED_INT
+                    x.value = UNDEFINED
+                    y.value = UNDEFINED
+                }
+            }
         }
     }
 }

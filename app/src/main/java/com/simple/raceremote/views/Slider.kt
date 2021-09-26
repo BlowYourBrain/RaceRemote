@@ -4,14 +4,20 @@ import android.os.Build
 import android.view.MotionEvent
 import androidx.annotation.DrawableRes
 import androidx.compose.foundation.Canvas
+import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
+import androidx.compose.foundation.layout.Arrangement
+import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.foundation.layout.size
 import androidx.compose.material.MaterialTheme
 import androidx.compose.material.MaterialTheme.colors
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.MutableState
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
+import androidx.compose.ui.Alignment
 import androidx.compose.ui.ExperimentalComposeUiApi
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.geometry.Offset
@@ -23,7 +29,10 @@ import androidx.compose.ui.graphics.drawscope.Stroke.Companion.DefaultMiter
 import androidx.compose.ui.input.pointer.pointerInteropFilter
 import androidx.compose.ui.layout.boundsInRoot
 import androidx.compose.ui.layout.onGloballyPositioned
+import androidx.compose.ui.res.painterResource
+import androidx.compose.ui.tooling.preview.Preview
 import com.simple.raceremote.R
+import com.simple.raceremote.ui.theme.Size.HugeIcon
 import com.simple.raceremote.utils.debug
 
 private const val UNDEFINED = -1f
@@ -112,6 +121,65 @@ fun Slider(
             )
         }
     }
+
+    orientation.paintIcons()
+}
+
+@Composable
+@Preview
+private fun previewPaintIcons() {
+    Orientation.Horizontal.paintIcons()
+}
+
+@Composable
+private fun Orientation.paintIcons() {
+    val containerModifier = Modifier.fillMaxSize()
+    val iconModifier = Modifier.size(HugeIcon)
+
+    when (this) {
+        is Orientation.Vertical -> {
+            Column(
+                modifier = containerModifier,
+                verticalArrangement = Arrangement.Center,
+                horizontalAlignment = Alignment.CenterHorizontally
+            ) {
+                paintContent(
+                    modifier = iconModifier.weight(1f),
+                    first = iconUp,
+                    second = iconDown
+                )
+            }
+        }
+
+        is Orientation.Horizontal -> {
+            Row(
+                modifier = containerModifier,
+                horizontalArrangement = Arrangement.Center,
+                verticalAlignment = Alignment.CenterVertically
+            ) {
+                paintContent(
+                    modifier = iconModifier.weight(1f),
+                    first = iconLeft,
+                    second = iconRight
+                )
+            }
+        }
+    }
+}
+
+@Composable
+private fun paintContent(modifier: Modifier, @DrawableRes first: Int, @DrawableRes second: Int) {
+    Image(
+        modifier = modifier,
+        painter = painterResource(id = first),
+        contentDescription = null
+    )
+
+    Image(
+        modifier = modifier,
+        painter = painterResource(id = second),
+        contentDescription = null
+    )
 }
 
 private fun MotionEvent.onPointerInteropFilter(
@@ -120,7 +188,7 @@ private fun MotionEvent.onPointerInteropFilter(
     pointerId: MutableState<Int>,
     sliderRect: MutableState<Rect>,
     orientation: Orientation
-){
+) {
     if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.Q) {
         when (actionMasked) {
             MotionEvent.ACTION_DOWN,

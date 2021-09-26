@@ -7,10 +7,17 @@ import android.view.View.*
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.activity.result.contract.ActivityResultContracts
+import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.Spacer
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.tooling.preview.Preview
+import androidx.core.view.WindowCompat
+import com.google.accompanist.insets.ProvideWindowInsets
+import com.google.accompanist.insets.statusBarsHeight
+import com.google.accompanist.insets.statusBarsPadding
+import com.google.accompanist.insets.systemBarsPadding
 import com.simple.raceremote.navigation.AppNavHost
 import com.simple.raceremote.navigation.Screens
 import com.simple.raceremote.screens.Actions
@@ -33,14 +40,8 @@ class MainActivity : ComponentActivity() {
         super.onCreate(savedInstanceState)
 
         BluetoothHelper.registerReceiver(this)
-        window?.apply {
-            //TODO сменить на актуальное API
-            decorView.systemUiVisibility =
-                SYSTEM_UI_FLAG_LAYOUT_HIDE_NAVIGATION or
-                        SYSTEM_UI_FLAG_LIGHT_STATUS_BAR or
-                        SYSTEM_UI_FLAG_FULLSCREEN
-        }
 
+        WindowCompat.setDecorFitsSystemWindows(window, false)
         requestedOrientation = ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE
 
         setContent {
@@ -48,17 +49,8 @@ class MainActivity : ComponentActivity() {
         }
     }
 
-    override fun onRequestPermissionsResult(
-        requestCode: Int,
-        permissions: Array<out String>,
-        grantResults: IntArray
-    ) {
-        super.onRequestPermissionsResult(requestCode, permissions, grantResults)
-    }
-
     override fun onResume() {
         super.onResume()
-        window?.statusBarColor = Color.TRANSPARENT
 
         if (isBluetoothEnabled()) {
             if (!hasBluetoothPermissions()) {
@@ -88,8 +80,10 @@ fun AppPreview() {
 
 @Composable
 fun App() {
-    RaceRemoteTheme(darkTheme = true) {
-        AppNavHost(startScreen = getStartScreen())
+    ProvideWindowInsets {
+        RaceRemoteTheme(darkTheme = true) {
+            AppNavHost(startScreen = getStartScreen())
+        }
     }
 }
 

@@ -16,17 +16,14 @@ import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
+import com.simple.raceremote.R
 import com.simple.raceremote.ui.theme.CornerShapes
 import com.simple.raceremote.ui.theme.Elevation
 import com.simple.raceremote.ui.theme.Padding
 
-//TODO вынести в string ресурсы
-private const val BLUETOOTH_PERMISSION_EXPLANATION_TEXT =
-    "Для корректной работы приложения требуются разрешения работы с Bluetooth."
-private const val APPLY_PERMISSION = "ОК"
-private const val DECLINE_PERMISSION = "ОТМЕНА"
 private val BUTTONS_RANGE = 64.dp
 
 @Composable
@@ -48,7 +45,7 @@ fun BluetoothPermissionRationale(
             ) {
                 Text(
                     modifier = Modifier.padding(Padding.Content),
-                    text = BLUETOOTH_PERMISSION_EXPLANATION_TEXT,
+                    text = stringResource(id = R.string.bluetooth_permissions_explanation),
                     style = MaterialTheme.typography.h5,
                     textAlign = TextAlign.Center
                 )
@@ -57,8 +54,8 @@ fun BluetoothPermissionRationale(
                 modifier = Modifier.padding(Padding.Content),
                 horizontalArrangement = Arrangement.spacedBy(BUTTONS_RANGE)
             ) {
-                TextButton(text = DECLINE_PERMISSION) { onDismiss?.invoke() }
-                TextButton(text = APPLY_PERMISSION) { onApply?.invoke() }
+                TextButton(text = stringResource(id = R.string.decline_permission)) { onDismiss?.invoke() }
+                TextButton(text = stringResource(id = R.string.apply_permission)) { onApply?.invoke() }
             }
         }
     }

@@ -27,6 +27,7 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.rotate
 import androidx.compose.ui.res.painterResource
+import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.lifecycle.viewmodel.compose.viewModel
@@ -39,8 +40,6 @@ import com.simple.raceremote.ui.theme.Size
 import com.simple.raceremote.views.NavigationPanel
 import com.simple.raceremote.views.RoundActionButton
 
-//todo вынести в strings
-private const val FIND_BLUETOOTH_DEVICES = "Поиск bluetooth устройств..."
 private const val ROTATION_DURATION = 2000
 private const val INITIAL_ROTATION = 0f
 private const val TARGET_ROTATION = 360f
@@ -97,7 +96,10 @@ private fun Content(
                     modifier = Modifier.fillMaxSize(),
                     contentAlignment = Alignment.Center
                 ) {
-                    Text(text = FIND_BLUETOOTH_DEVICES, textAlign = TextAlign.Center)
+                    Text(
+                        text = stringResource(id = R.string.find_bluetooth_devices),
+                        textAlign = TextAlign.Center
+                    )
                 }
             }
         }

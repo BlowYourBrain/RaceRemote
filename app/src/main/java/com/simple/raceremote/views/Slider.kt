@@ -1,7 +1,5 @@
 package com.simple.raceremote.views
 
-import android.os.Build
-import android.view.MotionEvent
 import androidx.annotation.DrawableRes
 import androidx.compose.foundation.Canvas
 import androidx.compose.foundation.Image
@@ -26,7 +24,10 @@ import androidx.compose.ui.geometry.Size
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.drawscope.DrawScope
 import androidx.compose.ui.graphics.drawscope.Stroke.Companion.DefaultMiter
-import androidx.compose.ui.input.pointer.pointerInteropFilter
+import androidx.compose.ui.input.pointer.PointerEvent
+import androidx.compose.ui.input.pointer.PointerEventPass
+import androidx.compose.ui.input.pointer.consumeDownChange
+import androidx.compose.ui.input.pointer.pointerInput
 import androidx.compose.ui.layout.boundsInRoot
 import androidx.compose.ui.layout.onGloballyPositioned
 import androidx.compose.ui.res.painterResource
@@ -34,6 +35,10 @@ import androidx.compose.ui.tooling.preview.Preview
 import com.simple.raceremote.R
 import com.simple.raceremote.ui.theme.Size.HugeIcon
 import com.simple.raceremote.utils.debug
+import com.simple.raceremote.views.Orientation.Horizontal.iconLeft
+import com.simple.raceremote.views.Orientation.Horizontal.iconRight
+import com.simple.raceremote.views.Orientation.Vertical.iconDown
+import com.simple.raceremote.views.Orientation.Vertical.iconUp
 
 private const val UNDEFINED = -1f
 private const val UNDEFINED_INT = -1
@@ -63,7 +68,6 @@ sealed class Orientation() {
     }
 }
 
-//TODO отрисовать иконки
 /**
  * Вертикальный/горизонтальный слайдер, позволяющий оттягивать пальцев по-горизонтали/по-вертикали
  * ползунок. [onOffsetChange] - лямбда, срабатывающая при изменении положения пальца.
@@ -93,16 +97,12 @@ fun Slider(
             .fillMaxSize()
             .background(colors.surface)
             .onGloballyPositioned { sliderRect.value = it.boundsInRoot() }
-            .pointerInteropFilter() {
-                it.onPointerInteropFilter(
-                    x = x,
-                    y = y,
-                    pointerId = pointerId,
-                    sliderRect = sliderRect,
-                    orientation = orientation,
-                )
-
-                true
+            .pointerInput(Unit) {
+                awaitPointerEventScope {
+                    while (true) {
+                        awaitPointerEvent(PointerEventPass.Initial).onPointerInput(x, y)
+                    }
+                }
             }
     ) {
         when (orientation) {
@@ -123,6 +123,25 @@ fun Slider(
     }
 
     orientation.paintIcons()
+}
+
+private fun PointerEvent.onPointerInput(
+    x: MutableState<Float>,
+    y: MutableState<Float>
+): PointerEvent = apply {
+    changes.firstOrNull()?.let {
+        debug(it.toString())
+
+        if (it.pressed) {
+            x.value = it.position.x
+            y.value = it.position.y
+        } else {
+            x.value = UNDEFINED
+            y.value = UNDEFINED
+        }
+
+        it.consumeDownChange()
+    }
 }
 
 @Composable
@@ -180,56 +199,6 @@ private fun paintContent(modifier: Modifier, @DrawableRes first: Int, @DrawableR
         painter = painterResource(id = second),
         contentDescription = null
     )
-}
-
-private fun MotionEvent.onPointerInteropFilter(
-    x: MutableState<Float>,
-    y: MutableState<Float>,
-    pointerId: MutableState<Int>,
-    sliderRect: MutableState<Rect>,
-    orientation: Orientation
-) {
-    if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.Q) {
-        when (actionMasked) {
-            MotionEvent.ACTION_DOWN,
-            MotionEvent.ACTION_MOVE,
-            MotionEvent.ACTION_POINTER_DOWN -> {
-                debug(
-                    "type: $orientation \npointerId = ${pointerId.value}\nx = ${getRawX(actionIndex)}, \ny = ${
-                        getRawY(actionIndex)
-                    }"
-                )
-
-                if (pointerId.value != UNDEFINED_INT) {
-                    val pointerIndex = findPointerIndex(pointerId.value)
-                    x.value = getX(pointerIndex)
-                    y.value = getY(pointerIndex)
-                }
-
-                if (pointerId.value == UNDEFINED_INT && sliderRect.value.contains(
-                        Offset(
-                            getRawX(actionIndex),
-                            getRawY(actionIndex)
-                        )
-                    )
-                ) {
-                    pointerId.value = getPointerId(actionIndex)
-                    x.value = getX(actionIndex)
-                    y.value = getY(actionIndex)
-
-                }
-            }
-            MotionEvent.ACTION_UP,
-            MotionEvent.ACTION_POINTER_UP,
-            MotionEvent.ACTION_CANCEL -> {
-                if (pointerId.value == getPointerId(actionIndex)) {
-                    pointerId.value = UNDEFINED_INT
-                    x.value = UNDEFINED
-                    y.value = UNDEFINED
-                }
-            }
-        }
-    }
 }
 
 private fun DrawScope.drawVertical(

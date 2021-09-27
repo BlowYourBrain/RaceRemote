@@ -89,14 +89,11 @@ fun Slider(
     val y = remember { mutableStateOf(UNDEFINED) }
     val onBackgroundColor = MaterialTheme.colors.onBackground
     val separatorColor = MaterialTheme.colors.onBackground
-    val sliderRect = remember { mutableStateOf(Rect(Offset.Zero, 0f)) }
-    val pointerId = remember { mutableStateOf(UNDEFINED_INT) }
 
     Canvas(
         modifier = Modifier
             .fillMaxSize()
             .background(colors.surface)
-            .onGloballyPositioned { sliderRect.value = it.boundsInRoot() }
             .pointerInput(Unit) {
                 awaitPointerEventScope {
                     while (true) {

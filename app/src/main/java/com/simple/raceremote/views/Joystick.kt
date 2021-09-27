@@ -27,6 +27,7 @@ import kotlin.math.roundToInt
 import kotlin.math.sin
 import kotlin.math.sqrt
 
+//TODO обработать TOUCH в pointerInput, а не через pointerInteropFilter
 /**
  * [onUpdateStickPosition] (Float, Float) - лямбда, вызываемая при изменении позиции стика.
  * Значения в первом и втором параметре меняются от -1f до 1f.

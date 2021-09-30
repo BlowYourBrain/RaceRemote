@@ -1,27 +1,15 @@
 package com.simple.raceremote.screens
 
-import androidx.annotation.DrawableRes
-import androidx.compose.foundation.Image
-import androidx.compose.foundation.layout.Arrangement
-import androidx.compose.foundation.layout.Box
-import androidx.compose.foundation.layout.Column
-import androidx.compose.foundation.layout.Row
-import androidx.compose.foundation.layout.padding
-import androidx.compose.foundation.layout.size
-import androidx.compose.material.Button
-import androidx.compose.material.ButtonDefaults
-import androidx.compose.material.MaterialTheme
+import androidx.compose.foundation.layout.*
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
-import androidx.compose.ui.res.painterResource
 import androidx.navigation.NavHostController
 import com.simple.raceremote.R
 import com.simple.raceremote.navigation.Screens
 import com.simple.raceremote.ui.theme.CornerShapes
 import com.simple.raceremote.ui.theme.Padding
-import com.simple.raceremote.ui.theme.Size
 import com.simple.raceremote.utils.debug
 import com.simple.raceremote.views.ActionButton
 import com.simple.raceremote.views.Orientation
@@ -42,8 +30,8 @@ fun RemoteControlScreen(
             }
         )
         Controllers(
-//            { debug("horizontal: $it") },
-//            { debug("vertical: $it") },
+            { debug("horizontal: $it") },
+            { debug("vertical: $it") },
         )
     }
 

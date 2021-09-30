@@ -8,6 +8,8 @@ import android.content.Intent
 import android.os.Build
 import androidx.core.app.ActivityCompat
 
+private const val REQUEST_ENABLE_BT = 40
+
 fun Context.hasBluetoothPermissions(): Boolean {
     var hasPermissions = true
     val permissions = getBluetoothPermissions()
@@ -31,7 +33,7 @@ fun enableBluetooth(activity: Activity) {
     ActivityCompat.startActivityForResult(
         activity,
         enableBtIntent,
-        BluetoothHelper.REQUEST_ENABLE_BT,
+        REQUEST_ENABLE_BT,
         null
     )
 }

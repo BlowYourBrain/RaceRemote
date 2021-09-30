@@ -6,16 +6,15 @@ import android.content.BroadcastReceiver
 import android.content.Context
 import android.content.Intent
 import androidx.activity.ComponentActivity
+import com.simple.raceremote.data.BluetoothItem
+import com.simple.raceremote.data.IBluetoothDevicesDiscoveryController
 import com.simple.raceremote.data.IBluetoothItemsProvider
-import com.simple.raceremote.screens.BluetoothItem
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.asSharedFlow
-import kotlinx.coroutines.flow.asStateFlow
 
 //TODO после внедрения DI привести к обычному классу
 object BluetoothHelper : IBluetoothItemsProvider, IBluetoothDevicesDiscoveryController {
-    const val REQUEST_ENABLE_BT = 40
     private const val UNKNOWN_DEVICE = "UNKNOWN_DEVICE"
     private const val UNKNOWN_ADDRESS = "UNKNOWN_ADDRESS"
 

@@ -1,4 +1,4 @@
-package com.simple.raceremote.screens
+package com.simple.raceremote.screens.bluetooth_devices.presentation
 
 import androidx.compose.animation.core.animateFloat
 import androidx.compose.animation.core.infiniteRepeatable
@@ -6,6 +6,7 @@ import androidx.compose.animation.core.rememberInfiniteTransition
 import androidx.compose.animation.core.tween
 import androidx.compose.foundation.ExperimentalFoundationApi
 import androidx.compose.foundation.Image
+import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
@@ -40,15 +41,16 @@ import com.simple.raceremote.ui.theme.Size
 import com.simple.raceremote.views.NavigationPanel
 import com.simple.raceremote.views.RoundActionButton
 
-private const val ROTATION_DURATION = 2000
+private const val ROTATION_DURATION_MS = 2000
 private const val INITIAL_ROTATION = 0f
 private const val TARGET_ROTATION = 360f
 private const val ROWS = 2
 
-data class BluetoothItem(
+data class BluetoothEntity(
     val name: String,
     val macAddress: String,
-    val isPaired: Boolean
+    val isPaired: Boolean,
+    val onClick: (() -> Unit)? = null
 )
 
 @Composable
@@ -72,7 +74,7 @@ private fun Content(
         initialValue = INITIAL_ROTATION,
         targetValue = TARGET_ROTATION,
         animationSpec = infiniteRepeatable(
-            animation = tween(ROTATION_DURATION)
+            animation = tween(ROTATION_DURATION_MS)
         )
     )
 
@@ -124,13 +126,13 @@ private fun Content(
 @Preview
 @Composable
 private fun BluetoothItemCardPreview() {
-    BluetoothItemCard(entity = BluetoothItem("hello", "world", true))
+    BluetoothItemCard(entity = BluetoothEntity("hello", "world", true))
 }
 
 @Composable
-private fun BluetoothItemCard(modifier: Modifier = Modifier, entity: BluetoothItem) {
+private fun BluetoothItemCard(modifier: Modifier = Modifier, entity: BluetoothEntity) {
     Card(
-        modifier = modifier,
+        modifier = modifier.clickable { entity.onClick?.invoke() },
         elevation = Elevation.onSurface,
         shape = CornerShapes.SmallItem,
     ) {

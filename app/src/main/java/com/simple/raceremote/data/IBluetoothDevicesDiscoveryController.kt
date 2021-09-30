@@ -1,4 +1,4 @@
-package com.simple.raceremote.utils
+package com.simple.raceremote.data
 
 interface IBluetoothDevicesDiscoveryController {
 

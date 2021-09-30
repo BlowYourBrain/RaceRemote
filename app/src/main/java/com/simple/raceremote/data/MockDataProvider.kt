@@ -1,7 +1,5 @@
 package com.simple.raceremote.data
 
-import com.simple.raceremote.screens.BluetoothItem
-import com.simple.raceremote.utils.IBluetoothDevicesDiscoveryController
 import kotlinx.coroutines.GlobalScope
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.flow.Flow

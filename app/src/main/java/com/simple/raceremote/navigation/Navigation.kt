@@ -14,7 +14,7 @@ import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
 import com.google.accompanist.insets.navigationBarsHeight
 import com.google.accompanist.insets.statusBarsHeight
-import com.simple.raceremote.screens.BluetoothDevicesScreen
+import com.simple.raceremote.screens.bluetooth_devices.presentation.BluetoothDevicesScreen
 import com.simple.raceremote.screens.BluetoothPermissionRationale
 import com.simple.raceremote.screens.RemoteControlScreen
 

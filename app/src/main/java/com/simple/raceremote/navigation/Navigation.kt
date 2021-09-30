@@ -16,7 +16,7 @@ import com.google.accompanist.insets.navigationBarsHeight
 import com.google.accompanist.insets.statusBarsHeight
 import com.simple.raceremote.screens.bluetooth_devices.presentation.BluetoothDevicesScreen
 import com.simple.raceremote.screens.BluetoothPermissionRationale
-import com.simple.raceremote.screens.RemoteControlScreen
+import com.simple.raceremote.screens.remote_control.presentation.RemoteControlScreen
 
 private const val CONTENT_TOP_PADDING = 12
 private const val CONTENT_BOTTOM_PADDING = 24

@@ -1,16 +1,16 @@
-package com.simple.raceremote.screens
+package com.simple.raceremote.screens.remote_control.presentation
 
 import androidx.compose.foundation.layout.*
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
+import androidx.lifecycle.viewmodel.compose.viewModel
 import androidx.navigation.NavHostController
 import com.simple.raceremote.R
 import com.simple.raceremote.navigation.Screens
 import com.simple.raceremote.ui.theme.CornerShapes
 import com.simple.raceremote.ui.theme.Padding
-import com.simple.raceremote.utils.debug
 import com.simple.raceremote.views.ActionButton
 import com.simple.raceremote.views.Orientation
 import com.simple.raceremote.views.Slider
@@ -20,6 +20,8 @@ fun RemoteControlScreen(
     modifier: Modifier = Modifier,
     navController: NavHostController
 ) {
+    val viewModel: RemoteControlViewModel = viewModel()
+
     Column(modifier = modifier, horizontalAlignment = Alignment.CenterHorizontally) {
         Actions(
             bluetoothOnClick = {
@@ -30,8 +32,8 @@ fun RemoteControlScreen(
             }
         )
         Controllers(
-            { debug("horizontal: $it") },
-            { debug("vertical: $it") },
+            { viewModel.updateSteeringWheel(it) },
+            { viewModel.updateMovement(it) },
         )
     }
 

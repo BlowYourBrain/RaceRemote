@@ -1,26 +1,19 @@
 package com.simple.raceremote
 
 import android.content.pm.ActivityInfo
-import android.graphics.Color
 import android.os.Bundle
-import android.view.View.*
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.activity.result.contract.ActivityResultContracts
-import androidx.compose.foundation.layout.Column
-import androidx.compose.foundation.layout.Spacer
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.core.view.WindowCompat
 import com.google.accompanist.insets.ProvideWindowInsets
-import com.google.accompanist.insets.statusBarsHeight
-import com.google.accompanist.insets.statusBarsPadding
-import com.google.accompanist.insets.systemBarsPadding
 import com.simple.raceremote.navigation.AppNavHost
 import com.simple.raceremote.navigation.Screens
-import com.simple.raceremote.screens.Actions
+import com.simple.raceremote.screens.remote_control.presentation.Actions
 import com.simple.raceremote.ui.theme.RaceRemoteTheme
 import com.simple.raceremote.utils.BluetoothHelper
 import com.simple.raceremote.utils.enableBluetooth

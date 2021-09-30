@@ -30,7 +30,6 @@ object BluetoothHelper : IBluetoothItemsProvider, IBluetoothDevicesDiscoveryCont
                 device?.toBluetoothItem()?.let { emitBluetoothItem(it) }
             }
         }
-
     }
 
     private val _bluetoothDevices = MutableStateFlow<List<BluetoothItem>>(emptyList())

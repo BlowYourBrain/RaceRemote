@@ -11,6 +11,7 @@ import com.simple.raceremote.data.IBluetoothItemsProvider
 import com.simple.raceremote.utils.BluetoothHelper
 import com.simple.raceremote.data.IBluetoothDevicesDiscoveryController
 import com.simple.raceremote.utils.debug
+import com.simple.raceremote.utils.toast
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.asStateFlow
@@ -59,11 +60,7 @@ class BluetoothDevicesViewModel(application: Application) : AndroidViewModel(app
     }
 
     private fun onItemClick(macAddress: String) {
-        Toast.makeText(
-            getApplication<Application>().baseContext,
-            "item with macAddress $macAddress",
-            Toast.LENGTH_SHORT
-        ).show()
+        getApplication<Application>().toast("item with macAddress $macAddress")
     }
 
     private fun startFinding() {

@@ -1,0 +1,59 @@
+package com.simple.raceremote.screens.no_bluetooth
+
+import androidx.activity.OnBackPressedCallback
+import androidx.activity.OnBackPressedDispatcher
+import androidx.compose.foundation.layout.*
+import androidx.compose.material.MaterialTheme
+import androidx.compose.material.Text
+import androidx.compose.runtime.Composable
+import androidx.compose.ui.Alignment
+import androidx.compose.ui.Modifier
+import androidx.compose.ui.res.stringResource
+import androidx.compose.ui.tooling.preview.Preview
+import androidx.compose.ui.unit.dp
+import androidx.navigation.NavHostController
+import com.simple.raceremote.R
+import com.simple.raceremote.utils.debug
+import com.simple.raceremote.views.TextButton
+
+//TODO закрывать экран при нажатии на кнопку Выйти
+@Composable
+fun NoBluetoothScreen(navController: NavHostController) {
+    NoBluetoothView()
+}
+
+@Preview
+@Composable
+private fun PreviewNoBluetoothView() {
+    NoBluetoothView()
+}
+
+@Composable
+private fun NoBluetoothView() {
+    Box(
+        Modifier.fillMaxSize(),
+        contentAlignment = Alignment.Center
+    ) {
+        Column(
+            modifier = Modifier.padding(64.dp),
+            horizontalAlignment = Alignment.CenterHorizontally
+        ) {
+            Text(
+                text = stringResource(id = R.string.bluetooth_not_found),
+                style = MaterialTheme.typography.h4
+            )
+
+            Spacer(modifier = Modifier.height(64.dp))
+
+            TextButton(
+                text = stringResource(id = R.string.exit),
+                onClick = { finishAppLog() }
+            )
+        }
+
+    }
+}
+
+private fun finishAppLog() {
+    debug("finish app")
+}

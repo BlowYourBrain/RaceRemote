@@ -36,7 +36,7 @@ object BluetoothConnection : IBluetoothConnection {
         macAddress: String,
         uuid: UUID
     ): Unit = context.run {
-        bluetoothDiscoveryController.stopFindingBluetoothDevices()
+        bluetoothDiscoveryController.stopFindingBluetoothDevices(context)
 
         val remoteDevice = getBluetoothAdapter()?.getRemoteDevice(macAddress)
 //        bluetoothSocket = remoteDevice.createInsecureRfcommSocketToServiceRecord(uuid)

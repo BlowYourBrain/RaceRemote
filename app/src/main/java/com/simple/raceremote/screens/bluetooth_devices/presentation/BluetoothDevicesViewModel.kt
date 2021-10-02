@@ -42,17 +42,17 @@ class BluetoothDevicesViewModel(application: Application) : AndroidViewModel(app
     }
 
     private fun onItemClick(macAddress: String) {
-        bluetoothConnection.connectWithDevice(GlobalScope, macAddress, uuid)
+        bluetoothConnection.connectWithDevice(GlobalScope, getApplication(), macAddress, uuid)
     }
 
     private fun startFinding() {
         _isRefreshing.tryEmit(true)
-        controller.findBluetoothDevices()
+        controller.findBluetoothDevices(getApplication())
     }
 
     private fun stopFinding() {
         _isRefreshing.tryEmit(false)
-        controller.stopFindingBluetoothDevices()
+        controller.stopFindingBluetoothDevices(getApplication())
     }
 
     private fun BluetoothItem.mapToBluetoothEntity(): BluetoothEntity =

@@ -1,5 +1,6 @@
 package com.simple.raceremote.data
 
+import android.content.Context
 import kotlinx.coroutines.GlobalScope
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.flow.Flow
@@ -23,11 +24,11 @@ object MockDataProvider : IBluetoothItemsProvider, IBluetoothDevicesDiscoveryCon
         }
     }
 
-    override fun findBluetoothDevices() {
+    override fun findBluetoothDevices(context: Context) {
         emitter.start()
     }
 
-    override fun stopFindingBluetoothDevices() {
+    override fun stopFindingBluetoothDevices(context: Context) {
         emitter.stop()
     }
 

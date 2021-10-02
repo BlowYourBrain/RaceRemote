@@ -27,7 +27,7 @@ object BluetoothHelper : IBluetoothItemsProvider, IBluetoothDevicesDiscoveryCont
                 val device: BluetoothDevice? =
                     intent.getParcelableExtra(BluetoothDevice.EXTRA_DEVICE)
 
-                device?.toBluetoothItem()?.let { emitBluetoothItem(it) }
+                device?.toBluetoothItem(context)?.let { emitBluetoothItem(it) }
             }
         }
     }
@@ -37,13 +37,13 @@ object BluetoothHelper : IBluetoothItemsProvider, IBluetoothDevicesDiscoveryCont
     override val bluetoothDevices: Flow<List<BluetoothItem>>
         get() = _bluetoothDevices.asSharedFlow()
 
-    override fun findBluetoothDevices() {
+    override fun findBluetoothDevices(context: Context): Unit = context.run {
         bluetoothDevicesSet.clear()
-        getBluetoothAdapter().startDiscovery()
+        getBluetoothAdapter()?.startDiscovery()
     }
 
-    override fun stopFindingBluetoothDevices() {
-        getBluetoothAdapter().cancelDiscovery()
+    override fun stopFindingBluetoothDevices(context: Context): Unit = context.run {
+        getBluetoothAdapter()?.cancelDiscovery()
     }
 
     fun registerReceiver(activity: ComponentActivity) {
@@ -57,12 +57,12 @@ object BluetoothHelper : IBluetoothItemsProvider, IBluetoothDevicesDiscoveryCont
         activity.unregisterReceiver(bluetoothBroadcastReceiver)
     }
 
-    private fun BluetoothDevice.toBluetoothItem(): BluetoothItem =
+    private fun BluetoothDevice.toBluetoothItem(context: Context): BluetoothItem =
         BluetoothItem(
             name = name ?: UNKNOWN_DEVICE,
             macAddress = address ?: UNKNOWN_ADDRESS,
-            isPaired = getBluetoothAdapter()
-                .bondedDevices
+            isPaired = context.getBluetoothAdapter()
+                ?.bondedDevices
                 ?.contains(this) ?: false
         )
 

@@ -1,9 +1,11 @@
 package com.simple.raceremote.data
 
+import android.content.Context
+
 interface IBluetoothDevicesDiscoveryController {
 
-    fun findBluetoothDevices()
+    fun findBluetoothDevices(context: Context)
 
-    fun stopFindingBluetoothDevices()
+    fun stopFindingBluetoothDevices(context: Context)
 
 }

@@ -5,4 +5,6 @@
     <string name="apply_permission">ОК</string>
     <string name="decline_permission">ОТМЕНА</string>
     <string name="back_button">Назад</string>
+    <string name="bluetooth_not_found">Не найден модуль bluetooth на устройстве.</string>
+    <string name="exit">Выйти</string>
 </resources>

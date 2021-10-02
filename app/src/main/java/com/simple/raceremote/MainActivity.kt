@@ -15,11 +15,7 @@ import com.simple.raceremote.navigation.AppNavHost
 import com.simple.raceremote.navigation.Screens
 import com.simple.raceremote.screens.remote_control.presentation.Actions
 import com.simple.raceremote.ui.theme.RaceRemoteTheme
-import com.simple.raceremote.utils.BluetoothHelper
-import com.simple.raceremote.utils.enableBluetooth
-import com.simple.raceremote.utils.getBluetoothPermissions
-import com.simple.raceremote.utils.hasBluetoothPermissions
-import com.simple.raceremote.utils.isBluetoothEnabled
+import com.simple.raceremote.utils.*
 
 class MainActivity : ComponentActivity() {
 
@@ -36,7 +32,7 @@ class MainActivity : ComponentActivity() {
 
         WindowCompat.setDecorFitsSystemWindows(window, false)
         requestedOrientation = ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE
-
+        
         setContent {
             App()
         }
@@ -82,10 +78,10 @@ fun App() {
 
 @Composable
 fun getStartScreen(): Screens = with(LocalContext.current) {
-    if (hasBluetoothPermissions()) {
-        Screens.RemoteControl
-    } else {
-        Screens.BluetoothPermissionsRationale
+    when {
+        !hasBluetooth() -> Screens.NoBluetooth
+        hasBluetoothPermissions() -> Screens.RemoteControl
+        else -> Screens.BluetoothPermissionsRationale
     }
 }
 

@@ -16,6 +16,7 @@ import com.google.accompanist.insets.navigationBarsHeight
 import com.google.accompanist.insets.statusBarsHeight
 import com.simple.raceremote.screens.bluetooth_devices.presentation.BluetoothDevicesScreen
 import com.simple.raceremote.screens.BluetoothPermissionRationale
+import com.simple.raceremote.screens.no_bluetooth.NoBluetoothScreen
 import com.simple.raceremote.screens.remote_control.presentation.RemoteControlScreen
 
 private const val CONTENT_TOP_PADDING = 12
@@ -42,9 +43,9 @@ fun AppNavHost(
                     navController = navController,
                     startDestination = startScreen.name
                 ) {
-                    composable(Screens.RemoteControl.name) {
-                        RemoteControlScreen(navController = navController)
-                    }
+                    composable(Screens.NoBluetooth.name) { NoBluetoothScreen(navController = navController) }
+
+                    composable(Screens.RemoteControl.name) { RemoteControlScreen(navController = navController) }
 
                     composable(Screens.BluetoothDevices.name) {
                         BluetoothDevicesScreen(navController = navController) {

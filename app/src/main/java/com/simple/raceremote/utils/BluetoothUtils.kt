@@ -41,3 +41,5 @@ fun Context.isBluetoothEnabled(): Boolean = getBluetoothAdapter()?.isEnabled ?: 
 
 fun Context.getBluetoothAdapter(): BluetoothAdapter? =
     (getSystemService(Context.BLUETOOTH_SERVICE) as? BluetoothManager)?.adapter
+
+fun Context.hasBluetooth(): Boolean = getBluetoothAdapter() != null

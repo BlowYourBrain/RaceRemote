@@ -25,6 +25,7 @@ class BluetoothDevicesViewModel(application: Application) : AndroidViewModel(app
 
     val items: Flow<List<BluetoothEntity>> = repository.bluetoothDevices.map { list ->
         list.map { it.mapToBluetoothEntity() }
+            .sortedBy { it.isPaired }
     }
 
     val isRefreshing: Flow<Boolean> = _isRefreshing.asStateFlow()

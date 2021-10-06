@@ -38,15 +38,18 @@ object BluetoothConnection : IBluetoothConnection {
     ): Unit = context.run {
         bluetoothDiscoveryController.stopFindingBluetoothDevices(context)
 
-        val remoteDevice = getBluetoothAdapter()?.getRemoteDevice(macAddress)
-//        bluetoothSocket = remoteDevice.createInsecureRfcommSocketToServiceRecord(uuid)
-        val socket = getBluetoothAdapter()?.listenUsingRfcommWithServiceRecord("RaceApp", uuid)
+        val remoteDevice = getBluetoothAdapter()?.getRemoteDevice(macAddress) ?: return
+
+        //******************************************************************************************
+        //https://www.it1228.com/74366.html
+        bluetoothSocket = remoteDevice.javaClass.getMethod("createRfcommSocket", *arrayOf<Class<*>?>(
+            Int::class.javaPrimitiveType
+        )).invoke(remoteDevice, 1) as BluetoothSocket
+        //******************************************************************************************
 
         scope.launch {
             kotlin.runCatching {
-//                bluetoothSocket?.connect()
-                bluetoothSocket = socket?.accept()
-                socket?.close()
+                bluetoothSocket?.connect()
                 debug("bluetooth connection established")
             }.onFailure {
                 debug(it.localizedMessage)

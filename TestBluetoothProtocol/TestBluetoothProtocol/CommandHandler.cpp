@@ -4,85 +4,85 @@
 
 #include "CommandHandler.h"
 
-unsigned __int8 END_COMMAND = 63;
-unsigned __int8 BEGIN_COMMAND = 192;
-unsigned __int8 START_BYTES_ZERO_ONE = 64;
-unsigned __int8 START_BYTES_ONE_ZERO = 128;
+unsigned int END_COMMAND = 63;
+unsigned int BEGIN_COMMAND = 192;
+unsigned int START_BYTES_ZERO_ONE = 64;
+unsigned int START_BYTES_ONE_ZERO = 128;
 
 unsigned int command = 0;
 unsigned int result = 0;
 
-void CommandHandler::addBytesInWord(unsigned __int8 byte) {
-    command = command | byte;
+void CommandHandler::addBytesInWord(unsigned int readByte) {
+    command = command | readByte;
 }
 
-unsigned __int8 removeFirstTwoBytes(unsigned __int8 byte) {
-    unsigned __int8 result = 0;
+unsigned int removeFirstTwoBytes(unsigned int readByte) {
+    unsigned int result = 0;
 
-    if (byte >= BEGIN_COMMAND) {
-        result = byte ^ BEGIN_COMMAND;
+    if (readByte >= BEGIN_COMMAND) {
+        result = readByte ^ BEGIN_COMMAND;
     }
-    else if (byte <= END_COMMAND) {
+    else if (readByte <= END_COMMAND) {
         //do nothing
     }
-    else if (byte < START_BYTES_ONE_ZERO) {
+    else if (readByte < START_BYTES_ONE_ZERO) {
         //01
-        result = byte ^ START_BYTES_ZERO_ONE;
+        result = readByte ^ START_BYTES_ZERO_ONE;
     }
     else {
         //10
-        result = byte ^ START_BYTES_ONE_ZERO;
+        result = readByte ^ START_BYTES_ONE_ZERO;
     }
-    
+
     return result;
 }
 
-void CommandHandler::shiftAndAddBytesInWord(unsigned __int8 byte) {
+void CommandHandler::shiftAndAddBytesInWord(unsigned int readByte) {
     command = command << 6;
-    CommandHandler::addBytesInWord(byte);
+    CommandHandler::addBytesInWord(readByte);
 }
 
 /*
-    Первые два бита указывают на составное слово.
+    РџРµСЂРІС‹Рµ РґРІР° Р±РёС‚Р° СѓРєР°Р·С‹РІР°СЋС‚ РЅР° СЃРѕСЃС‚Р°РІРЅРѕРµ СЃР»РѕРІРѕ.
 
-    11 ** ** ** ** - начало слова
-    10 ** ** ** ** или 01 ** ** ** ** - середина слова
-    00 ** ** ** ** - конец слова
+    11 ** ** ** ** - РЅР°С‡Р°Р»Рѕ СЃР»РѕРІР°
+    10 ** ** ** ** РёР»Рё 01 ** ** ** ** - СЃРµСЂРµРґРёРЅР° СЃР»РѕРІР°
+    00 ** ** ** ** - РєРѕРЅРµС† СЃР»РѕРІР°
 
-    Конечное слово должно выглядеть вот так:
+    РљРѕРЅРµС‡РЅРѕРµ СЃР»РѕРІРѕ РґРѕР»Р¶РЅРѕ РІС‹РіР»СЏРґРµС‚СЊ РІРѕС‚ С‚Р°Рє:
     11 ** ** ** ... 01 ** ** ** ... 00 ** ** **
 
-    Т.к. возвращаемое значение должно быть типа int, то самое длинное слово может состоять только из 4 слов:
+    Рў.Рє. РІРѕР·РІСЂР°С‰Р°РµРјРѕРµ Р·РЅР°С‡РµРЅРёРµ РґРѕР»Р¶РЅРѕ Р±С‹С‚СЊ С‚РёРїР° int, С‚Рѕ СЃР°РјРѕРµ РґР»РёРЅРЅРѕРµ СЃР»РѕРІРѕ РјРѕР¶РµС‚ СЃРѕСЃС‚РѕСЏС‚СЊ С‚РѕР»СЊРєРѕ РёР· 4 СЃР»РѕРІ:
     11 ** ** **      01 ** ** **     01 ** ** **     00 ** ** **
 
-    Минимальное составное слово состоит из двух слов:
+    РњРёРЅРёРјР°Р»СЊРЅРѕРµ СЃРѕСЃС‚Р°РІРЅРѕРµ СЃР»РѕРІРѕ СЃРѕСЃС‚РѕРёС‚ РёР· РґРІСѓС… СЃР»РѕРІ:
     11 ** ** **      00 ** ** **
 
-    Третий и четвертый бит в начале составного слова означают тип команды и отмечены # на схеме ниже:
+    РўСЂРµС‚РёР№ Рё С‡РµС‚РІРµСЂС‚С‹Р№ Р±РёС‚ РІ РЅР°С‡Р°Р»Рµ СЃРѕСЃС‚Р°РІРЅРѕРіРѕ СЃР»РѕРІР° РѕР·РЅР°С‡Р°СЋС‚ С‚РёРї РєРѕРјР°РЅРґС‹ Рё РѕС‚РјРµС‡РµРЅС‹ # РЅР° СЃС…РµРјРµ РЅРёР¶Рµ:
     11 ## ** **
 
-    Попытаться получить команду. В случае если команда не сформировалась, то возвращается -1
+    РџРѕРїС‹С‚Р°С‚СЊСЃСЏ РїРѕР»СѓС‡РёС‚СЊ РєРѕРјР°РЅРґСѓ. Р’ СЃР»СѓС‡Р°Рµ РµСЃР»Рё РєРѕРјР°РЅРґР° РЅРµ СЃС„РѕСЂРјРёСЂРѕРІР°Р»Р°СЃСЊ, С‚Рѕ РІРѕР·РІСЂР°С‰Р°РµС‚СЃСЏ -1
 */
-unsigned int CommandHandler::tryGetCommand(unsigned __int8 byte) {
-    
+unsigned int CommandHandler::tryGetCommand(unsigned int readByte) {
 
-    if (byte >= BEGIN_COMMAND) {
-        //первое слово в составном
+
+    if (readByte >= BEGIN_COMMAND) {
+        //РїРµСЂРІРѕРµ СЃР»РѕРІРѕ РІ СЃРѕСЃС‚Р°РІРЅРѕРј
         command = 0;
-        addBytesInWord(removeFirstTwoBytes(byte));
+        addBytesInWord(removeFirstTwoBytes(readByte));
     }
-    else if (byte <= END_COMMAND) {
-        //последнее слово в составном
+    else if (readByte <= END_COMMAND) {
+        //РїРѕСЃР»РµРґРЅРµРµ СЃР»РѕРІРѕ РІ СЃРѕСЃС‚Р°РІРЅРѕРј
 
-        shiftAndAddBytesInWord(byte);
+        shiftAndAddBytesInWord(readByte);
         result = command;
         command = 0;
 
         return result;
     }
     else {
-        //слово находится в середине составного
-        shiftAndAddBytesInWord(removeFirstTwoBytes(byte));
+        //СЃР»РѕРІРѕ РЅР°С…РѕРґРёС‚СЃСЏ РІ СЃРµСЂРµРґРёРЅРµ СЃРѕСЃС‚Р°РІРЅРѕРіРѕ
+        shiftAndAddBytesInWord(removeFirstTwoBytes(readByte));
     }
 
     return CommandHandler::NO_COMMAND_YET;

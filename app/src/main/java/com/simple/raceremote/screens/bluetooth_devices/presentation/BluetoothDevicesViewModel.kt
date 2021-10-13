@@ -1,6 +1,7 @@
 package com.simple.raceremote.screens.bluetooth_devices.presentation
 
 import android.app.Application
+import android.bluetooth.BluetoothAdapter
 import androidx.lifecycle.AndroidViewModel
 import com.simple.raceremote.data.*
 import com.simple.raceremote.utils.BluetoothHelper

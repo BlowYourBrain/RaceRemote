@@ -25,8 +25,8 @@ object BluetoothConnection : IBluetoothConnection {
     private val buffer = ByteArray(1024)
 
     private var bluetoothSocket: BluetoothSocket? = null
-    private val inStream = bluetoothSocket?.inputStream
-    private val outputStream = bluetoothSocket?.outputStream
+    private val inStream get() = bluetoothSocket?.inputStream
+    private val outputStream get() = bluetoothSocket?.outputStream
 
     private val bluetoothDiscoveryController: IBluetoothDevicesDiscoveryController = BluetoothHelper
 
@@ -42,9 +42,11 @@ object BluetoothConnection : IBluetoothConnection {
 
         //******************************************************************************************
         //https://www.it1228.com/74366.html
-        bluetoothSocket = remoteDevice.javaClass.getMethod("createRfcommSocket", *arrayOf<Class<*>?>(
-            Int::class.javaPrimitiveType
-        )).invoke(remoteDevice, 1) as BluetoothSocket
+        bluetoothSocket = remoteDevice.javaClass.getMethod(
+            "createRfcommSocket", *arrayOf<Class<*>?>(
+                Int::class.javaPrimitiveType
+            )
+        ).invoke(remoteDevice, 1) as BluetoothSocket
         //******************************************************************************************
 
         scope.launch {
@@ -60,6 +62,7 @@ object BluetoothConnection : IBluetoothConnection {
 
     override suspend fun sendMessage(bytes: ByteArray) {
         kotlin.runCatching {
+            debug("outputStream is ${if (outputStream == null) "" else "not"} null")
             outputStream?.write(bytes)
         }.onFailure {
             debug(it.toString())

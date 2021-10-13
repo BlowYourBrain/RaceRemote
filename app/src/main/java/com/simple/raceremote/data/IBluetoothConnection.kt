@@ -11,7 +11,7 @@ import java.util.*
 
 interface IBluetoothConnection {
 
-    suspend fun sendMessage(bytes: ByteArray)
+    suspend fun sendMessage(bytes: Int)
 
     fun connectWithDevice(scope: CoroutineScope, context: Context, macAddress: String, uuid: UUID)
 
@@ -21,8 +21,6 @@ interface IBluetoothConnection {
 
 //TODO вынести поля в конструктор и провайдить через DI
 object BluetoothConnection : IBluetoothConnection {
-
-    private val buffer = ByteArray(1024)
 
     private var bluetoothSocket: BluetoothSocket? = null
     private val inStream get() = bluetoothSocket?.inputStream
@@ -60,9 +58,10 @@ object BluetoothConnection : IBluetoothConnection {
         }
     }
 
-    override suspend fun sendMessage(bytes: ByteArray) {
+    override suspend fun sendMessage(bytes: Int) {
         kotlin.runCatching {
             debug("outputStream is ${if (outputStream == null) "" else "not"} null")
+            debug("send command: ${bytes.toString(2)}")
             outputStream?.write(bytes)
         }.onFailure {
             debug(it.toString())

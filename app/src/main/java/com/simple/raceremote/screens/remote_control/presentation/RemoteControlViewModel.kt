@@ -23,13 +23,7 @@ class RemoteControlViewModel : ViewModel() {
     init {
         viewModelScope.launch {
             bluetoothFlow.collect { value ->
-
-                val msg = (if (value > 0f) 1 else 0).toByte()
-
-                debug("send bytes = $msg")
-                bluetoothConnection.sendMessage(
-                    byteArrayOf(msg)
-                )
+                bluetoothConnection.sendMessage(value)
             }
         }
     }

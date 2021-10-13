@@ -10,7 +10,6 @@ import com.simple.raceremote.utils.debug
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.collect
 import kotlinx.coroutines.launch
-import java.nio.charset.Charset
 
 //TODO вынести зависимости и провайдить через конструктор.
 class RemoteControlViewModel : ViewModel() {
@@ -32,7 +31,7 @@ class RemoteControlViewModel : ViewModel() {
         debug("horizontal: $value")
         bluetoothFlow.tryEmit(
             compoundCommandCreator.createSteeringWheelCommand(
-                mapper.map(value)
+                mapper.mapToSteeringWheel(value)
             )
         )
     }

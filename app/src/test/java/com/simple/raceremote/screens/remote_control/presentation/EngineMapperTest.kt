@@ -34,9 +34,15 @@ class EngineMapperTest {
     }
 
     @Test
-    fun `value is 0`(){
+    fun `value is 0f`(){
         val given = 0f
         assertEquals(255, mapper.mapToEngineValue(given))
+    }
+
+    @Test
+    fun `value is 0,5f`(){
+        val given = 0.5f
+        assertEquals(383, mapper.mapToEngineValue(given))
     }
 
 }

@@ -63,8 +63,11 @@ object BluetoothConnection : IBluetoothConnection {
         kotlin.runCatching {
             debug("outputStream is ${if (outputStream == null) "" else "not"} null")
             debug("send command: ${bytes.toString(2)}")
-            outputStream?.write(bytes shr 8)
-            outputStream?.write(bytes and clearFirst8Bytes)
+
+            with(commandToByteSequence(bytes)) {
+                outputStream?.write(startCommand)
+                outputStream?.write(endCommand)
+            }
         }.onFailure {
             debug(it.toString())
             debug("bluetooth send message failed")
@@ -79,4 +82,14 @@ object BluetoothConnection : IBluetoothConnection {
             debug("close bluetooth connection failed")
         }
     }
+
+    private fun commandToByteSequence(command: Int) = CompoundCommand(
+        startCommand = command shr 8,
+        endCommand = command and clearFirst8Bytes
+    )
+
+    data class CompoundCommand(
+        val startCommand: Int,
+        val endCommand: Int
+    )
 }

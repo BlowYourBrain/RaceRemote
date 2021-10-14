@@ -7,7 +7,7 @@ import org.junit.Test
 class SteeringWheelMapperTest {
 
     private val mapper: ISteeringWheelMapper = SteeringWheelMapper()
-    private val MIN_VALUE = 0
+    private val MIN_VALUE: Int = 0
     private val MAX_VALUE = 180
     private val MIDDLE_VALUE = 90
 
@@ -18,7 +18,7 @@ class SteeringWheelMapperTest {
         //when
         val mappedValue = mapper.mapToSteeringWheel(given)
         //then
-        Assert.assertEquals(MIN_VALUE, mappedValue)
+        Assert.assertEquals(MAX_VALUE, mappedValue)
     }
 
     @Test
@@ -28,7 +28,7 @@ class SteeringWheelMapperTest {
         //when
         val mappedValue = mapper.mapToSteeringWheel(given)
         //then
-        Assert.assertEquals(MAX_VALUE, mappedValue)
+        Assert.assertEquals(MIN_VALUE, mappedValue)
     }
 
     @Test
@@ -48,7 +48,7 @@ class SteeringWheelMapperTest {
         //when
         val mappedValue = mapper.mapToSteeringWheel(given)
         //then
-        Assert.assertEquals(MIN_VALUE, mappedValue)
+        Assert.assertEquals(MAX_VALUE, mappedValue)
     }
 
     @Test
@@ -58,6 +58,6 @@ class SteeringWheelMapperTest {
         //when
         val mappedValue = mapper.mapToSteeringWheel(given)
         //then
-        Assert.assertEquals(MAX_VALUE, mappedValue)
+        Assert.assertEquals(MIN_VALUE, mappedValue)
     }
 }

@@ -6,7 +6,7 @@ interface ISteeringWheelMapper {
 
 class SteeringWheelMapper : ISteeringWheelMapper {
 
-    private var x = 0
+    private var y= 0
 
     /**
      * Значение для поворота колёс (руля).
@@ -18,13 +18,12 @@ class SteeringWheelMapper : ISteeringWheelMapper {
      * @return значение от 0 до 180
      * */
     override fun mapToSteeringWheel(value: Float): Int {
-        //y - значение value, x - вычисляемый параметр
-        // k = 1/90, m = -1
-        // y = x / 90 - 1
-        // x = (y + 1) * 90
-        x = ((value + 1) * 90).toInt()
+        //x - значение value, y - вычисляемый параметр
+        // k = -90, m = 90
+        // y = -90 * x + 90
+        y = (-(90 * value) + 90).toInt()
 
-        return minOf(maxOf(0, x), 180)
+        return minOf(maxOf(0, y), 180)
     }
 
 }

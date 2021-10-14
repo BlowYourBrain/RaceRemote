@@ -21,6 +21,7 @@ interface IBluetoothConnection {
 
 //TODO вынести поля в конструктор и провайдить через DI
 object BluetoothConnection : IBluetoothConnection {
+    private const val clearFirst8Bytes = 0b0000_0000_1111_1111
 
     private var bluetoothSocket: BluetoothSocket? = null
     private val inStream get() = bluetoothSocket?.inputStream
@@ -62,7 +63,8 @@ object BluetoothConnection : IBluetoothConnection {
         kotlin.runCatching {
             debug("outputStream is ${if (outputStream == null) "" else "not"} null")
             debug("send command: ${bytes.toString(2)}")
-            outputStream?.write(bytes)
+            outputStream?.write(bytes shr 8)
+            outputStream?.write(bytes and clearFirst8Bytes)
         }.onFailure {
             debug(it.toString())
             debug("bluetooth send message failed")

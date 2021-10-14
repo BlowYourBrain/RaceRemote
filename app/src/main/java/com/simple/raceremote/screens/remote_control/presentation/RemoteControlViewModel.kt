@@ -7,8 +7,10 @@ import com.simple.raceremote.data.IBluetoothConnection
 import com.simple.raceremote.screens.remote_control.CompoundCommandCreator
 import com.simple.raceremote.screens.remote_control.ICompoundCommandCreator
 import com.simple.raceremote.utils.debug
+import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.collect
+import kotlinx.coroutines.flow.debounce
 import kotlinx.coroutines.launch
 
 //TODO вынести зависимости и провайдить через конструктор.
@@ -20,7 +22,7 @@ class RemoteControlViewModel : ViewModel() {
     private val compoundCommandCreator: ICompoundCommandCreator = CompoundCommandCreator()
 
     init {
-        viewModelScope.launch {
+        viewModelScope.launch(Dispatchers.IO) {
             bluetoothFlow.collect { value ->
                 bluetoothConnection.sendMessage(value)
             }

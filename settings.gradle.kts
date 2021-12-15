@@ -7,4 +7,4 @@ dependencyResolutionManagement {
     }
 }
 rootProject.name = "RaceRemote"
-include ':app'
+include(":app")

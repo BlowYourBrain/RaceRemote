@@ -48,6 +48,7 @@ android {
 dependencies {
     implementation(AppDependencies.appLibraries)
     implementation(AppDependencies.jetpackCompose)
+
     testImplementation(AppDependencies.testLibraries)
     androidTestImplementation(AppDependencies.androidTestLibraries)
 }

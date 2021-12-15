@@ -53,7 +53,7 @@ object BluetoothConnection : IBluetoothConnection {
                 bluetoothSocket?.connect()
                 debug("bluetooth connection established")
             }.onFailure {
-                debug(it.localizedMessage)
+                debug(it.localizedMessage.orEmpty())
                 debug("bluetooth connection failed")
             }
         }

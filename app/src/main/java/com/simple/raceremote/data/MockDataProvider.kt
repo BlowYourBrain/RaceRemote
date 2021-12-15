@@ -53,6 +53,7 @@ private class Emitter<T>(
         get() = _flow.asStateFlow()
 
     init {
+        //TODO создать свой scope
         GlobalScope.launch {
             while (true) {
                 delay(delay)

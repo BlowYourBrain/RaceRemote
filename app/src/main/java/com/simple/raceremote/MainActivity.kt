@@ -21,8 +21,7 @@ class MainActivity : ComponentActivity() {
 
     private val permissionLauncher = registerForActivityResult(
         ActivityResultContracts.RequestMultiplePermissions()
-    ) { isGranted ->
-        isGranted
+    ) { isGranted -> //todo create implementation later
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {

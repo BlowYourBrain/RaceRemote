@@ -43,6 +43,7 @@ class BluetoothDevicesViewModel(application: Application) : AndroidViewModel(app
     }
 
     private fun onItemClick(macAddress: String) {
+        //todo change scope
         bluetoothConnection.connectWithDevice(GlobalScope, getApplication(), macAddress, uuid)
     }
 

@@ -4,12 +4,12 @@ plugins {
 }
 
 android {
-    compileSdkVersion(AppConfig.compileSdk)
 
     defaultConfig {
         applicationId = "com.simple.raceremote"
-        minSdkVersion(AppConfig.minSdk)
-        targetSdkVersion(AppConfig.targetSdk)
+        compileSdk = AppConfig.compileSdk
+        minSdk = AppConfig.minSdk
+        targetSdk = AppConfig.targetSdk
         versionCode = AppConfig.versionCode
         versionName = AppConfig.versionName
 
@@ -18,14 +18,14 @@ android {
     }
 
     buildTypes {
-        getByName("release"){
+        getByName("release") {
             isMinifyEnabled = false
             proguardFiles(
-                    getDefaultProguardFile("proguard-android-optimize.txt"),
-                    "proguard-rules.pro"
+                getDefaultProguardFile("proguard-android-optimize.txt"),
+                "proguard-rules.pro"
             )
         }
-        getByName("debug"){
+        getByName("debug") {
             isMinifyEnabled = false
         }
     }

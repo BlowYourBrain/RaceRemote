@@ -10,6 +10,7 @@ object AppDependencies {
     private val appcompat = "androidx.appcompat:appcompat:${Versions.appcompat}"
     private val material = "com.google.android.material:material:${Versions.material}"
     private val lifecycle = "androidx.lifecycle:lifecycle-runtime-ktx:${Versions.lifecycle}"
+    private val koin = "io.insert-koin:koin-core:${Versions.koin}"
 
     //compose
     private val compose = "androidx.compose.ui:ui:${Versions.compose}"
@@ -24,6 +25,7 @@ object AppDependencies {
     private val extJUnit = "androidx.test.ext:junit:${Versions.extJunit}"
     private val espressoCore = "androidx.test.espresso:espresso-core:${Versions.espresso}"
     private val composeJUnit = "androidx.compose.ui:ui-test-junit4:${Versions.compose}"
+    private val koinTest = "io.insert-koin:koin-test:${Versions.koin}"
 
     val appLibraries = arrayListOf(
         coreKtx,
@@ -31,6 +33,7 @@ object AppDependencies {
         appcompat,
         lifecycle,
         kotlinStdLib,
+        koin
     )
 
     val jetpackCompose = arrayListOf(
@@ -48,7 +51,10 @@ object AppDependencies {
         composeJUnit
     )
 
-    val testLibraries = arrayListOf(junit)
+    val testLibraries = arrayListOf(
+        junit,
+        koinTest
+    )
 }
 
 //util functions for adding the different type dependencies from build.gradle file

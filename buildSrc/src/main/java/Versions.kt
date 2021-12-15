@@ -10,6 +10,7 @@ object Versions {
     val appcompat = "1.4.0"
     val material = "1.4.0"
     val lifecycle = "2.4.0"
+    val koin = "3.1.4"
 
     //Compose
     const val compose = "1.1.0-beta04"

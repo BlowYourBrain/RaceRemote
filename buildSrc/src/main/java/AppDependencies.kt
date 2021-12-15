@@ -1,4 +1,3 @@
-
 import org.gradle.api.artifacts.dsl.DependencyHandler
 
 object AppDependencies {
@@ -10,14 +9,20 @@ object AppDependencies {
     private val appcompat = "androidx.appcompat:appcompat:${Versions.appcompat}"
     private val material = "com.google.android.material:material:${Versions.material}"
     private val lifecycle = "androidx.lifecycle:lifecycle-runtime-ktx:${Versions.lifecycle}"
+    
+    //koin
     private val koin = "io.insert-koin:koin-core:${Versions.koin}"
+    private val koinAndroid = "io.insert-koin:koin-android:${Versions.koin}"
+    private val koinCompose = "io.insert-koin:koin-androidx-compose:${Versions.koin}"
 
     //compose
     private val compose = "androidx.compose.ui:ui:${Versions.compose}"
     private val materialCompose = "androidx.compose.material:material:${Versions.compose}"
     private val activityCompose = "androidx.activity:activity-compose:${Versions.activityCompose}"
-    private val composeInsets = "com.google.accompanist:accompanist-insets:${Versions.composeInsets}"
-    private val navigationCompose = "androidx.navigation:navigation-compose:${Versions.navigationCompose}"
+    private val composeInsets =
+        "com.google.accompanist:accompanist-insets:${Versions.composeInsets}"
+    private val navigationCompose =
+        "androidx.navigation:navigation-compose:${Versions.navigationCompose}"
     private val composeUITooling = "androidx.compose.ui:ui-tooling:${Versions.compose}"
 
     //test libs
@@ -33,7 +38,12 @@ object AppDependencies {
         appcompat,
         lifecycle,
         kotlinStdLib,
-        koin
+    )
+
+    val koinLibraries = arrayListOf(
+        koin,
+        koinAndroid,
+        koinCompose
     )
 
     val jetpackCompose = arrayListOf(
@@ -48,12 +58,12 @@ object AppDependencies {
     val androidTestLibraries = arrayListOf(
         extJUnit,
         espressoCore,
-        composeJUnit
+        composeJUnit,
     )
 
     val testLibraries = arrayListOf(
         junit,
-        koinTest
+        koinTest,
     )
 }
 

@@ -14,13 +14,14 @@ import com.simple.raceremote.ui.theme.Padding
 import com.simple.raceremote.views.ActionButton
 import com.simple.raceremote.views.Orientation
 import com.simple.raceremote.views.Slider
+import org.koin.androidx.compose.getViewModel
 
 @Composable
 fun RemoteControlScreen(
     modifier: Modifier = Modifier,
     navController: NavHostController
 ) {
-    val viewModel: RemoteControlViewModel = viewModel()
+    val viewModel = getViewModel<RemoteControlViewModel>()
 
     Column(modifier = modifier, horizontalAlignment = Alignment.CenterHorizontally) {
         Actions(

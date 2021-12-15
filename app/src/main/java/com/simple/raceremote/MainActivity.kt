@@ -11,13 +11,17 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.LocalContext
 import androidx.core.view.WindowCompat
 import com.google.accompanist.insets.ProvideWindowInsets
+import com.simple.raceremote.data.IBluetoothBroadcastReceiver
 import com.simple.raceremote.navigation.AppNavHost
 import com.simple.raceremote.navigation.Screens
 import com.simple.raceremote.screens.remote_control.presentation.Actions
 import com.simple.raceremote.ui.theme.RaceRemoteTheme
 import com.simple.raceremote.utils.*
+import org.koin.android.ext.android.inject
 
 class MainActivity : ComponentActivity() {
+
+    private val bluetoothBroadcastReceiver: IBluetoothBroadcastReceiver by inject()
 
     private val permissionLauncher = registerForActivityResult(
         ActivityResultContracts.RequestMultiplePermissions()
@@ -27,7 +31,7 @@ class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
-        BluetoothHelper.registerReceiver(this)
+        bluetoothBroadcastReceiver.registerReceiver(this)
 
         WindowCompat.setDecorFitsSystemWindows(window, false)
         requestedOrientation = ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE
@@ -52,7 +56,7 @@ class MainActivity : ComponentActivity() {
 
     override fun onDestroy() {
         super.onDestroy()
-        BluetoothHelper.unregisterReceiver(this)
+        bluetoothBroadcastReceiver.unregisterReceiver(this)
     }
 
     private fun requestBluetoothPermissions() {

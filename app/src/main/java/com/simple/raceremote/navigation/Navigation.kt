@@ -44,15 +44,12 @@ fun AppNavHost(
                     startDestination = startScreen.name
                 ) {
                     composable(Screens.NoBluetooth.name) { NoBluetoothScreen(navController = navController) }
-
                     composable(Screens.RemoteControl.name) { RemoteControlScreen(navController = navController) }
-
                     composable(Screens.BluetoothDevices.name) {
                         BluetoothDevicesScreen(navController = navController) {
                             navController.popBackStack()
                         }
                     }
-
                     composable(Screens.BluetoothPermissionsRationale.name) {
                         BluetoothPermissionRationale(
                             onApply = {

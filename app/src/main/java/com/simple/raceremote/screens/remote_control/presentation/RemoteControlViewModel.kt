@@ -13,14 +13,14 @@ import kotlinx.coroutines.flow.collect
 import kotlinx.coroutines.launch
 
 //TODO вынести зависимости и провайдить через конструктор.
-class RemoteControlViewModel : ViewModel() {
+class RemoteControlViewModel(
+    private val engineMapper: IEngineMapper,
+    private val steeringWheelMapper: ISteeringWheelMapper,
+    private val bluetoothConnection: IBluetoothConnection,
+    private val compoundCommandCreator: ICompoundCommandCreator,
+) : ViewModel() {
 
-    private val engineMapper: IEngineMapper = EngineMapper()
-    private val steeringWheelMapper: ISteeringWheelMapper = SteeringWheelMapper()
-
-    private val bluetoothConnection: IBluetoothConnection = BluetoothConnection
     private val bluetoothFlow: MutableStateFlow<Int> = MutableStateFlow(0)
-    private val compoundCommandCreator: ICompoundCommandCreator = CompoundCommandCreator()
 
     init {
         viewModelScope.launch(Dispatchers.IO) {

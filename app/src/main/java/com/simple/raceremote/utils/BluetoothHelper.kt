@@ -7,19 +7,22 @@ import android.content.Context
 import android.content.Intent
 import androidx.activity.ComponentActivity
 import com.simple.raceremote.data.BluetoothItem
+import com.simple.raceremote.data.IBluetoothBroadcastReceiver
 import com.simple.raceremote.data.IBluetoothDevicesDiscoveryController
 import com.simple.raceremote.data.IBluetoothItemsProvider
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.asSharedFlow
 
-//TODO после внедрения DI привести к обычному классу
-object BluetoothHelper : IBluetoothItemsProvider, IBluetoothDevicesDiscoveryController {
-    private const val UNKNOWN_DEVICE = "UNKNOWN_DEVICE"
-    private const val UNKNOWN_ADDRESS = "UNKNOWN_ADDRESS"
+class BluetoothHelper : IBluetoothItemsProvider, IBluetoothBroadcastReceiver,
+    IBluetoothDevicesDiscoveryController {
+
+    private companion object {
+        const val UNKNOWN_DEVICE = "UNKNOWN_DEVICE"
+        const val UNKNOWN_ADDRESS = "UNKNOWN_ADDRESS"
+    }
 
     private val bluetoothDevicesSet = mutableSetOf<BluetoothItem>()
-
     private val bluetoothBroadcastReceiver = object : BroadcastReceiver() {
 
         override fun onReceive(context: Context, intent: Intent) {
@@ -46,14 +49,14 @@ object BluetoothHelper : IBluetoothItemsProvider, IBluetoothDevicesDiscoveryCont
         getBluetoothAdapter()?.cancelDiscovery()
     }
 
-    fun registerReceiver(activity: ComponentActivity) {
+    override fun registerReceiver(activity: ComponentActivity) {
         activity.registerReceiver(
             bluetoothBroadcastReceiver,
             intentFilterOf(ACTION_FOUND)
         )
     }
 
-    fun unregisterReceiver(activity: ComponentActivity) {
+    override fun unregisterReceiver(activity: ComponentActivity) {
         activity.unregisterReceiver(bluetoothBroadcastReceiver)
     }
 

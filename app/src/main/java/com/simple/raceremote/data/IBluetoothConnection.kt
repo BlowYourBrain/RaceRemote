@@ -6,6 +6,7 @@ import com.simple.raceremote.utils.BluetoothHelper
 import com.simple.raceremote.utils.debug
 import com.simple.raceremote.utils.getBluetoothAdapter
 import kotlinx.coroutines.CoroutineScope
+import kotlinx.coroutines.SupervisorJob
 import kotlinx.coroutines.launch
 import java.util.*
 
@@ -19,15 +20,18 @@ interface IBluetoothConnection {
 
 }
 
-//TODO вынести поля в конструктор и провайдить через DI
-object BluetoothConnection : IBluetoothConnection {
-    private const val clearFirst8Bytes = 0b0000_0000_1111_1111
+class BluetoothConnection(
+    private val bluetoothDiscoveryController: IBluetoothDevicesDiscoveryController
+) : IBluetoothConnection {
+    private companion object{
+        const val clearFirst8Bytes = 0b0000_0000_1111_1111
+    }
 
+    private val scope = CoroutineScope(SupervisorJob())
     private var bluetoothSocket: BluetoothSocket? = null
+
     private val inStream get() = bluetoothSocket?.inputStream
     private val outputStream get() = bluetoothSocket?.outputStream
-
-    private val bluetoothDiscoveryController: IBluetoothDevicesDiscoveryController = BluetoothHelper
 
     override fun connectWithDevice(
         scope: CoroutineScope,

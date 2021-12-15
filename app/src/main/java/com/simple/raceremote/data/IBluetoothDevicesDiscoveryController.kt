@@ -7,5 +7,4 @@ interface IBluetoothDevicesDiscoveryController {
     fun findBluetoothDevices(context: Context)
 
     fun stopFindingBluetoothDevices(context: Context)
-
 }

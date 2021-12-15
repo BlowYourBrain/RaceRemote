@@ -1,10 +1,11 @@
 package com.simple.raceremote.screens.bluetooth_devices.presentation
 
 import android.app.Application
-import android.bluetooth.BluetoothAdapter
 import androidx.lifecycle.AndroidViewModel
-import com.simple.raceremote.data.*
-import com.simple.raceremote.utils.BluetoothHelper
+import com.simple.raceremote.data.BluetoothItem
+import com.simple.raceremote.data.IBluetoothConnection
+import com.simple.raceremote.data.IBluetoothDevicesDiscoveryController
+import com.simple.raceremote.data.IBluetoothItemsProvider
 import kotlinx.coroutines.GlobalScope
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.MutableStateFlow
@@ -12,23 +13,21 @@ import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.flow.map
 import java.util.*
 
-private val source = BluetoothHelper
 private const val UUID_STR = "4ab19e4e-e6c1-43ba-b9cd-0b19777da670"
 
-class BluetoothDevicesViewModel(application: Application) : AndroidViewModel(application) {
+class BluetoothDevicesViewModel(
+    application: Application,
+    repository: IBluetoothItemsProvider,
+    private val bluetoothConnection: IBluetoothConnection,
+    private val controller: IBluetoothDevicesDiscoveryController
+) : AndroidViewModel(application) {
 
-    //TODO провайдить через DI
-    private val bluetoothConnection: IBluetoothConnection = BluetoothConnection
-    private val controller: IBluetoothDevicesDiscoveryController = source
-    private val repository: IBluetoothItemsProvider = source
-    private val _isRefreshing = MutableStateFlow(false)
     private val uuid = UUID.fromString(UUID_STR)
+    private val _isRefreshing = MutableStateFlow(false)
 
     val items: Flow<List<BluetoothEntity>> = repository.bluetoothDevices.map { list ->
         list.map { it.mapToBluetoothEntity() }
-            .sortedBy { it.isPaired }
     }
-
     val isRefreshing: Flow<Boolean> = _isRefreshing.asStateFlow()
 
     init {

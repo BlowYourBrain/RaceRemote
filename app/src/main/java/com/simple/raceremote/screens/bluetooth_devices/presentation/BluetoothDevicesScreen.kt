@@ -40,6 +40,7 @@ import com.simple.raceremote.ui.theme.Padding
 import com.simple.raceremote.ui.theme.Size
 import com.simple.raceremote.views.NavigationPanel
 import com.simple.raceremote.views.RoundActionButton
+import org.koin.androidx.compose.getViewModel
 
 private const val ROTATION_DURATION_MS = 2000
 private const val INITIAL_ROTATION = 0f
@@ -58,7 +59,8 @@ fun BluetoothDevicesScreen(
     navController: NavHostController,
     onBackClick: (() -> Unit)? = null
 ) {
-    Content(viewModel(), onBackClick = onBackClick)
+    val viewModel = getViewModel<BluetoothDevicesViewModel>()
+    Content(viewModel, onBackClick = onBackClick)
 }
 
 @OptIn(ExperimentalFoundationApi::class)

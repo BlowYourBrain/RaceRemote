@@ -5,12 +5,12 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
-import androidx.lifecycle.viewmodel.compose.viewModel
 import androidx.navigation.NavHostController
 import com.simple.raceremote.R
 import com.simple.raceremote.navigation.Screens
 import com.simple.raceremote.ui.theme.CornerShapes
 import com.simple.raceremote.ui.theme.Padding
+import com.simple.raceremote.ui.views.DotsLoadingWrapper
 import com.simple.raceremote.views.ActionButton
 import com.simple.raceremote.views.Orientation
 import com.simple.raceremote.views.Slider
@@ -50,18 +50,21 @@ fun Actions(
         modifier = modifier,
         horizontalArrangement = Arrangement.Center
     ) {
+        DotsLoadingWrapper(){
+            ActionButton(
+                modifier = Modifier.padding(Padding.Content),
+                icon = R.drawable.ic_baseline_bluetooth_searching_24,
+                onClick = bluetoothOnClick
+            )
+        }
 
-        ActionButton(
-            modifier = Modifier.padding(Padding.Content),
-            icon = R.drawable.ic_baseline_bluetooth_searching_24,
-            onClick = bluetoothOnClick
-        )
-
-        ActionButton(
-            modifier = Modifier.padding(Padding.Content),
-            icon = R.drawable.ic_baseline_settings_24,
-            onClick = settingsOnClick
-        )
+        DotsLoadingWrapper() {
+            ActionButton(
+                modifier = Modifier.padding(Padding.Content),
+                icon = R.drawable.ic_baseline_settings_24,
+                onClick = settingsOnClick
+            )
+        }
     }
 }
 

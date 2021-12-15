@@ -17,6 +17,7 @@ object AppDependencies {
     private val activityCompose = "androidx.activity:activity-compose:${Versions.activityCompose}"
     private val composeInsets = "com.google.accompanist:accompanist-insets:${Versions.composeInsets}"
     private val navigationCompose = "androidx.navigation:navigation-compose:${Versions.navigationCompose}"
+    private val composeUITooling = "androidx.compose.ui:ui-tooling:${Versions.compose}"
 
     //test libs
     private val junit = "junit:junit:${Versions.junit}"
@@ -38,6 +39,7 @@ object AppDependencies {
         materialCompose,
         activityCompose,
         navigationCompose,
+        composeUITooling,
     )
 
     val androidTestLibraries = arrayListOf(

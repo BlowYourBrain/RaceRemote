@@ -2,6 +2,8 @@ package com.simple.raceremote.screens.remote_control.presentation
 
 import androidx.compose.foundation.layout.*
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.mutableStateOf
+import androidx.compose.runtime.remember
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
@@ -11,6 +13,7 @@ import com.simple.raceremote.navigation.Screens
 import com.simple.raceremote.ui.theme.CornerShapes
 import com.simple.raceremote.ui.theme.Padding
 import com.simple.raceremote.ui.views.DotsLoadingWrapper
+import com.simple.raceremote.ui.views.DotsState
 import com.simple.raceremote.views.ActionButton
 import com.simple.raceremote.views.Orientation
 import com.simple.raceremote.views.Slider
@@ -46,23 +49,37 @@ fun Actions(
     bluetoothOnClick: (() -> Unit)? = null,
     settingsOnClick: (() -> Unit)? = null,
 ) {
+    val settingsState = remember { mutableStateOf<DotsState>(DotsState.ShowText("AAA")) }
+    val bluetoothState = remember { mutableStateOf(DotsState.Loading) }
+
+    val states = listOf(DotsState.ShowText("AAA"), DotsState.Loading, DotsState.Idle)
+    var count = remember { 0 }
+
     Row(
         modifier = modifier,
         horizontalArrangement = Arrangement.Center
     ) {
-        DotsLoadingWrapper(){
+        DotsLoadingWrapper(
+            modifier = Modifier.padding(Padding.Content),
+            state = bluetoothState
+        ) {
             ActionButton(
-                modifier = Modifier.padding(Padding.Content),
                 icon = R.drawable.ic_baseline_bluetooth_searching_24,
                 onClick = bluetoothOnClick
             )
         }
 
-        DotsLoadingWrapper() {
+        DotsLoadingWrapper(
+            modifier = Modifier.padding(Padding.Content),
+            state = settingsState
+        ) {
             ActionButton(
-                modifier = Modifier.padding(Padding.Content),
                 icon = R.drawable.ic_baseline_settings_24,
-                onClick = settingsOnClick
+                onClick = {
+                    settingsState.value = states[count % 3]
+                    count++
+                    settingsOnClick?.invoke()
+                }
             )
         }
     }

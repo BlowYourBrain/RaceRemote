@@ -2,15 +2,17 @@ package com.simple.raceremote.ui.views
 
 import androidx.compose.animation.Crossfade
 import androidx.compose.animation.ExperimentalAnimationApi
-import androidx.compose.animation.core.updateTransition
+import androidx.compose.animation.animateColor
+import androidx.compose.animation.core.*
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.Text
-import androidx.compose.runtime.Composable
-import androidx.compose.runtime.State
+import androidx.compose.runtime.*
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.draw.alpha
+import androidx.compose.ui.draw.scale
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.Dp
@@ -40,6 +42,9 @@ fun DotsLoadingWrapper(
     val transition = updateTransition(state)
 
     val calculatedHeight = dotsDividerSpace + dotsDiameter
+    val isLoading = remember {
+        mutableStateOf(state.value is DotsState.Loading)
+    }
 
     Column(
         modifier = modifier,
@@ -93,10 +98,33 @@ private fun addLoadingDots(
     dotsColor: Color,
     dotsDividerSpace: Dp
 ) {
+    val transition = rememberInfiniteTransition()
+    val animationDuration = 1000
+
     repeat(dotsCount) {
+        val alpha by transition.animateFloat(
+            initialValue = 0f,
+            targetValue = 1f,
+            animationSpec = infiniteRepeatable(
+                animation = tween(animationDuration, easing = LinearEasing),
+            )
+        )
+        val scale = transition.animateFloat(
+            initialValue = 0f,
+            targetValue = 1f,
+            animationSpec = InfiniteRepeatableSpec(
+                animation = tween(animationDuration),
+                repeatMode = RepeatMode.Reverse,
+                initialStartOffset = StartOffset(it * animationDuration)
+            )
+        )
+
+
         Box(
             Modifier
                 .size(dotsDiameter)
+//                .alpha(alpha = alpha)
+                .scale(scale.value)
                 .background(
                     color = dotsColor,
                     shape = RoundedCornerShape(dotsDiameter / 2)

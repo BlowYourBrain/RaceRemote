@@ -38,8 +38,8 @@ import com.simple.raceremote.ui.theme.CornerShapes
 import com.simple.raceremote.ui.theme.Elevation
 import com.simple.raceremote.ui.theme.Padding
 import com.simple.raceremote.ui.theme.Size
-import com.simple.raceremote.views.NavigationPanel
-import com.simple.raceremote.views.RoundActionButton
+import com.simple.raceremote.ui.views.NavigationPanel
+import com.simple.raceremote.ui.views.RoundActionButton
 import org.koin.androidx.compose.getViewModel
 
 private const val ROTATION_DURATION_MS = 2000

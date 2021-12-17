@@ -1,23 +1,18 @@
 package com.simple.raceremote.screens.remote_control.presentation
 
+import android.widget.Space
 import androidx.compose.foundation.layout.*
-import androidx.compose.runtime.Composable
-import androidx.compose.runtime.MutableState
-import androidx.compose.runtime.mutableStateOf
-import androidx.compose.runtime.remember
+import androidx.compose.runtime.*
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
+import androidx.compose.ui.unit.dp
 import androidx.navigation.NavHostController
 import com.simple.raceremote.R
 import com.simple.raceremote.navigation.Screens
 import com.simple.raceremote.ui.theme.CornerShapes
 import com.simple.raceremote.ui.theme.Padding
-import com.simple.raceremote.ui.views.DotsLoadingWrapper
-import com.simple.raceremote.ui.views.DotsState
-import com.simple.raceremote.views.ActionButton
-import com.simple.raceremote.views.Orientation
-import com.simple.raceremote.views.Slider
+import com.simple.raceremote.ui.views.*
 import org.koin.androidx.compose.getViewModel
 
 @Composable
@@ -50,18 +45,24 @@ fun Actions(
     bluetoothOnClick: (() -> Unit)? = null,
     settingsOnClick: (() -> Unit)? = null,
 ) {
-    val settingsState: MutableState<DotsState> =
-        remember { mutableStateOf<DotsState>(DotsState.ShowText("AAA")) }
-    val bluetoothState: MutableState<DotsState> = remember { mutableStateOf(DotsState.Loading) }
+    val height = 6.dp
+    val states = listOf(
+        DotsState.ShowText("AAA", height, height),
+        DotsState.Loading(),
+        DotsState.Idle(height)
+    )
 
-    val states = listOf(DotsState.ShowText("AAA"), DotsState.Loading, DotsState.Idle)
+    val settingsState: MutableState<DotsState> =
+        remember { mutableStateOf<DotsState>(states.first()) }
+    val bluetoothState: MutableState<DotsState> = remember { mutableStateOf(states[1]) }
+
     var count = remember { 0 }
 
     Row(
         modifier = modifier,
         horizontalArrangement = Arrangement.Center
     ) {
-        DotsLoadingWrapper(
+        ButtonWrapper(
             modifier = Modifier.padding(Padding.Content),
             state = bluetoothState
         ) {
@@ -71,7 +72,7 @@ fun Actions(
             )
         }
 
-        DotsLoadingWrapper(
+        ButtonWrapper(
             modifier = Modifier.padding(Padding.Content),
             state = settingsState
         ) {
@@ -84,6 +85,25 @@ fun Actions(
                 }
             )
         }
+    }
+}
+
+@Composable
+private fun ButtonWrapper(
+    modifier: Modifier,
+    state: State<DotsState>,
+    content: @Composable () -> Unit
+) {
+    Column(
+        modifier = modifier,
+        verticalArrangement = Arrangement.Bottom,
+        horizontalAlignment = Alignment.CenterHorizontally
+    ) {
+        FlatLoadingWithContent(state = state)
+
+        Spacer(modifier = Modifier.height(4.dp))
+
+        content()
     }
 }
 

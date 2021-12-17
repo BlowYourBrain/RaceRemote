@@ -14,7 +14,7 @@ import androidx.compose.ui.unit.dp
 import androidx.navigation.NavHostController
 import com.simple.raceremote.R
 import com.simple.raceremote.utils.debug
-import com.simple.raceremote.views.TextButton
+import com.simple.raceremote.ui.views.TextButton
 
 //TODO закрывать экран при нажатии на кнопку Выйти
 @Composable

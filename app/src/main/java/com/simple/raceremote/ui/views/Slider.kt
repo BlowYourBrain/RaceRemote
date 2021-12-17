@@ -1,4 +1,4 @@
-package com.simple.raceremote.views
+package com.simple.raceremote.ui.views
 
 import androidx.annotation.DrawableRes
 import androidx.compose.foundation.Canvas
@@ -28,10 +28,10 @@ import androidx.compose.ui.tooling.preview.Preview
 import com.simple.raceremote.R
 import com.simple.raceremote.ui.theme.Size.HugeIcon
 import com.simple.raceremote.utils.debug
-import com.simple.raceremote.views.Orientation.Horizontal.iconLeft
-import com.simple.raceremote.views.Orientation.Horizontal.iconRight
-import com.simple.raceremote.views.Orientation.Vertical.iconDown
-import com.simple.raceremote.views.Orientation.Vertical.iconUp
+import com.simple.raceremote.ui.views.Orientation.Horizontal.iconLeft
+import com.simple.raceremote.ui.views.Orientation.Horizontal.iconRight
+import com.simple.raceremote.ui.views.Orientation.Vertical.iconDown
+import com.simple.raceremote.ui.views.Orientation.Vertical.iconUp
 
 private const val UNDEFINED = -1f
 private const val UNDEFINED_INT = -1

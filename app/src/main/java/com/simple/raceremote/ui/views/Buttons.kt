@@ -1,4 +1,4 @@
-package com.simple.raceremote.views
+package com.simple.raceremote.ui.views
 
 import androidx.annotation.DrawableRes
 import androidx.compose.foundation.Image

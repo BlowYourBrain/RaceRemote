@@ -1,17 +1,20 @@
 package com.simple.raceremote.ui.views
 
-import androidx.compose.animation.core.*
+import androidx.compose.animation.Crossfade
+import androidx.compose.animation.ExperimentalAnimationApi
+import androidx.compose.animation.core.updateTransition
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.Text
-import androidx.compose.runtime.*
+import androidx.compose.runtime.Composable
+import androidx.compose.runtime.State
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.draw.alpha
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.style.TextAlign
-import androidx.compose.ui.unit.*
+import androidx.compose.ui.unit.Dp
+import androidx.compose.ui.unit.dp
 import com.simple.raceremote.utils.dpToSp
 
 sealed class DotsState() {
@@ -20,6 +23,7 @@ sealed class DotsState() {
     class ShowText(val text: String) : DotsState()
 }
 
+@OptIn(ExperimentalAnimationApi::class)
 @Composable
 fun DotsLoadingWrapper(
     modifier: Modifier = Modifier,
@@ -33,14 +37,8 @@ fun DotsLoadingWrapper(
     //todo calculate somehow
     val dotsDividerSpace = 4.dp
 
-    val infiniteTransition = rememberInfiniteTransition()
-    val visibility = infiniteTransition.animateFloat(
-        initialValue = 0f,
-        targetValue = 1f,
-        animationSpec = InfiniteRepeatableSpec(
-            animation = tween(durationMillis = dotsChangeDuration.toInt())
-        )
-    )
+    val transition = updateTransition(state)
+
     val calculatedHeight = dotsDividerSpace + dotsDiameter
 
     Column(
@@ -48,34 +46,38 @@ fun DotsLoadingWrapper(
         horizontalAlignment = Alignment.CenterHorizontally
     ) {
         Box(contentAlignment = Alignment.Center) {
-            Row(
-                modifier = Modifier.alpha(
-                    if (state.value is DotsState.Loading) 1f else 0f
-                ),
-                horizontalArrangement = Arrangement.SpaceAround
-            ) {
-                addLoadingDots(
-                    dotsCount = dotsCount,
-                    dotsColor = dotsColor,
-                    dotsDiameter = dotsDiameter,
-                    dotsDividerSpace = dotsDividerSpace
-                )
+            transition.Crossfade { targetState ->
+                val _state = targetState.value
+                when (_state) {
+                    is DotsState.Idle -> {
+                        Spacer(modifier = Modifier.height(calculatedHeight))
+                    }
+
+                    is DotsState.Loading -> {
+                        Row(
+                            modifier = Modifier.height(calculatedHeight),
+                            horizontalArrangement = Arrangement.SpaceAround,
+                            verticalAlignment = Alignment.Bottom
+                        ) {
+                            addLoadingDots(
+                                dotsCount = dotsCount,
+                                dotsColor = dotsColor,
+                                dotsDiameter = dotsDiameter,
+                                dotsDividerSpace = dotsDividerSpace
+                            )
+                        }
+                    }
+
+                    is DotsState.ShowText -> {
+                        Text(
+                            fontSize = dpToSp(dp = calculatedHeight),
+                            textAlign = TextAlign.Center,
+                            modifier = Modifier.height(calculatedHeight),
+                            text = _state.text
+                        )
+                    }
+                }
             }
-
-            Text(
-                fontSize = dpToSp(dp = calculatedHeight),
-                textAlign = TextAlign.Center,
-                modifier = Modifier
-                    .alpha(if (state.value is DotsState.ShowText) 1f else 0f)
-                    .height(calculatedHeight),
-                text = state.value.let { (it as? DotsState.ShowText)?.text ?: "" },
-            )
-
-            Spacer(
-                modifier = Modifier
-                    .height(calculatedHeight)
-                    .alpha(if (state.value is DotsState.Idle) 1f else 0f)
-            )
         }
 
         Spacer(modifier = Modifier.height(dotsDividerSpace))

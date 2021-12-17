@@ -2,6 +2,7 @@ package com.simple.raceremote.screens.remote_control.presentation
 
 import androidx.compose.foundation.layout.*
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.MutableState
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.ui.Alignment
@@ -49,8 +50,9 @@ fun Actions(
     bluetoothOnClick: (() -> Unit)? = null,
     settingsOnClick: (() -> Unit)? = null,
 ) {
-    val settingsState = remember { mutableStateOf<DotsState>(DotsState.ShowText("AAA")) }
-    val bluetoothState = remember { mutableStateOf(DotsState.Loading) }
+    val settingsState: MutableState<DotsState> =
+        remember { mutableStateOf<DotsState>(DotsState.ShowText("AAA")) }
+    val bluetoothState: MutableState<DotsState> = remember { mutableStateOf(DotsState.Loading) }
 
     val states = listOf(DotsState.ShowText("AAA"), DotsState.Loading, DotsState.Idle)
     var count = remember { 0 }

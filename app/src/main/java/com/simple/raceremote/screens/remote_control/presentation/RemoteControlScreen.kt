@@ -1,6 +1,5 @@
 package com.simple.raceremote.screens.remote_control.presentation
 
-import android.widget.Space
 import androidx.compose.foundation.layout.*
 import androidx.compose.runtime.*
 import androidx.compose.ui.Alignment
@@ -47,7 +46,7 @@ fun Actions(
 ) {
     val height = 6.dp
     val states = listOf(
-        DotsState.ShowText("AAA", height, height),
+        DotsState.ShowText(text = "AAA", textSize = height, height = height),
         DotsState.Loading(),
         DotsState.Idle(height)
     )

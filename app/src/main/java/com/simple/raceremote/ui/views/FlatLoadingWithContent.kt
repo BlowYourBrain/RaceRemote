@@ -10,7 +10,6 @@ import androidx.compose.material.Text
 import androidx.compose.runtime.*
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.draw.alpha
 import androidx.compose.ui.draw.scale
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.style.TextAlign
@@ -19,6 +18,8 @@ import androidx.compose.ui.unit.dp
 import com.simple.raceremote.utils.dpToSp
 
 private const val DEFAULT_ANIMATION_DURATION = 1500
+private const val TEXT_MAX_LINES = 1
+private const val TEXT_MAX_LENGTH = 32
 
 sealed class DotsState(val height: Dp) {
 
@@ -35,8 +36,12 @@ sealed class DotsState(val height: Dp) {
     class ShowText(
         val text: String,
         val textSize: Dp,
+        val textMaxLength: Int = TEXT_MAX_LENGTH,
         height: Dp
-    ) : DotsState(height)
+    ) : DotsState(height) {
+        val truncatedText: String
+            get() = if (text.length <= textMaxLength) text else "${text.take(textMaxLength)}..."
+    }
 }
 
 /**
@@ -67,35 +72,10 @@ fun FlatLoadingWithContent(
     ) {
         Box(contentAlignment = Alignment.Center) {
             transition.Crossfade { targetState ->
-                when (val _state = targetState.value) {
-                    is DotsState.Idle -> {
-                        Spacer(modifier = Modifier.height(_state.height))
-                    }
-
-                    is DotsState.Loading -> {
-                        Row(
-                            modifier = Modifier.height(_state.height),
-                            horizontalArrangement = Arrangement.SpaceAround,
-                            verticalAlignment = Alignment.Bottom
-                        ) {
-                            addLoadingDots(
-                                dotsCount = _state.dotsCount,
-                                dotsColor = _state.dotsColor ?: MaterialTheme.colors.primary,
-                                dotsDiameter = _state.dotsDiameter,
-                                dotsDividerSpace = _state.dotsDividerSpace,
-                                animationDuration = _state.dotsAnimationDuration
-                            )
-                        }
-                    }
-
-                    is DotsState.ShowText -> {
-                        Text(
-                            fontSize = dpToSp(dp = _state.textSize),
-                            textAlign = TextAlign.Center,
-                            modifier = Modifier.height(_state.height),
-                            text = _state.text
-                        )
-                    }
+                when (val stateValue = targetState.value) {
+                    is DotsState.Idle -> addEmptySpace(stateValue)
+                    is DotsState.Loading -> addLoadingDots(stateValue)
+                    is DotsState.ShowText -> addText(stateValue)
                 }
             }
         }
@@ -103,43 +83,63 @@ fun FlatLoadingWithContent(
 }
 
 @Composable
+private fun addEmptySpace(state: DotsState.Idle) {
+    Spacer(modifier = Modifier.height(state.height))
+}
+
+@Composable
 private fun addLoadingDots(
-    dotsCount: Int,
-    dotsDiameter: Dp,
-    dotsColor: Color,
-    dotsDividerSpace: Dp,
-    animationDuration: Int
-) {
+    state: DotsState.Loading
+) = state.run {
     val transition = rememberInfiniteTransition()
-    val totalAnimationDuration = animationDuration * dotsCount / 2
-
-    repeat(dotsCount) { position ->
-        val scale by transition.animateFloat(
-            initialValue = 0f,
-            targetValue = 1f,
-            animationSpec = infiniteRepeatable(
-                animation = keyframes {
-                    durationMillis = totalAnimationDuration
-                    0.0f at 0 with LinearEasing
-                    1.0f at (animationDuration / 2) with LinearEasing
-                    0.0f at animationDuration with LinearEasing
-                    0.0f at totalAnimationDuration
-                },
-                repeatMode = RepeatMode.Restart,
-                initialStartOffset = StartOffset(position * animationDuration / 2)
-            )
-        )
-
-        Box(
-            Modifier
-                .size(dotsDiameter)
-                .scale(scale)
-                .background(
-                    color = dotsColor,
-                    shape = RoundedCornerShape(dotsDiameter / 2)
+    val totalAnimationDuration = dotsAnimationDuration * dotsCount / 2
+    val color = dotsColor ?: MaterialTheme.colors.primary
+    Row(
+        modifier = Modifier.height(state.height),
+        horizontalArrangement = Arrangement.SpaceAround,
+        verticalAlignment = Alignment.Bottom
+    ) {
+        repeat(dotsCount) { position ->
+            val scale by transition.animateFloat(
+                initialValue = 0f,
+                targetValue = 1f,
+                animationSpec = infiniteRepeatable(
+                    animation = keyframes {
+                        durationMillis = totalAnimationDuration
+                        0.0f at 0 with LinearEasing
+                        1.0f at (dotsAnimationDuration / 2) with LinearEasing
+                        0.0f at dotsAnimationDuration with LinearEasing
+                        0.0f at totalAnimationDuration
+                    },
+                    repeatMode = RepeatMode.Restart,
+                    initialStartOffset = StartOffset(position * dotsAnimationDuration / 2)
                 )
-        ) {}
+            )
 
-        if (position < dotsCount - 1) Spacer(modifier = Modifier.width(dotsDividerSpace))
+            Box(
+                Modifier
+                    .size(dotsDiameter)
+                    .scale(scale)
+                    .background(
+                        color = color,
+                        shape = RoundedCornerShape(dotsDiameter / 2)
+                    )
+            ) {}
+
+            if (position < dotsCount - 1) Spacer(modifier = Modifier.width(dotsDividerSpace))
+        }
     }
+}
+
+@Composable
+private fun addText(state: DotsState.ShowText) {
+    Text(
+        modifier = Modifier
+            .height(state.height)
+            .wrapContentWidth(),
+        fontSize = dpToSp(dp = state.textSize),
+        textAlign = TextAlign.Center,
+        maxLines = TEXT_MAX_LINES,
+        text = state.truncatedText
+    )
 }

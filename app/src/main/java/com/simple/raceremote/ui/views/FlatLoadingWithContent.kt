@@ -14,8 +14,6 @@ import androidx.compose.ui.draw.clipToBounds
 import androidx.compose.ui.draw.scale
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.layout.onGloballyPositioned
-import androidx.compose.ui.platform.LocalConfiguration
-import androidx.compose.ui.platform.LocalDensity
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
@@ -25,6 +23,7 @@ import com.simple.raceremote.utils.pxToDp
 private const val DEFAULT_ANIMATION_DURATION = 1500
 private const val TEXT_MAX_LINES = 1
 private const val TEXT_MAX_LENGTH = 32
+private const val TEXT_SPEED = 200
 
 sealed class DotsState(val height: Dp) {
 
@@ -42,6 +41,7 @@ sealed class DotsState(val height: Dp) {
         val text: String,
         val textSize: Dp,
         val textMaxLength: Int = TEXT_MAX_LENGTH,
+        val textVelocity: Int = TEXT_SPEED,
         height: Dp
     ) : DotsState(height) {
         val truncatedText: String
@@ -144,9 +144,16 @@ private data class ViewOffset(
 private fun addText(state: DotsState.ShowText) {
 
     val transition = rememberInfiniteTransition()
-    val letterPerMs = 200
-    val animationDuration = letterPerMs * state.truncatedText.length
-    var offset = remember { mutableStateOf(ViewOffset()) }
+    val animationDuration = state.run { textVelocity * truncatedText.length }
+
+    val offset = remember {
+        mutableStateOf(
+            ViewOffset(
+                initialOffset = Int.MAX_VALUE,
+                targetOffset = Int.MAX_VALUE
+            )
+        )
+    }
 
     val animationOffset by transition.animateValue(
         initialValue = offset.value.initialOffset.pxToDp(),

@@ -15,8 +15,7 @@ import androidx.compose.ui.draw.scale
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.layout.onGloballyPositioned
 import androidx.compose.ui.text.style.TextAlign
-import androidx.compose.ui.unit.Dp
-import androidx.compose.ui.unit.dp
+import androidx.compose.ui.unit.*
 import com.simple.raceremote.utils.dpToSp
 import com.simple.raceremote.utils.pxToDp
 
@@ -140,6 +139,7 @@ private data class ViewOffset(
     val targetOffset: Int = 0
 )
 
+@OptIn(ExperimentalUnitApi::class)
 @Composable
 private fun addText(state: DotsState.ShowText) {
 
@@ -188,6 +188,7 @@ private fun addText(state: DotsState.ShowText) {
         fontSize = dpToSp(dp = state.textSize),
         textAlign = TextAlign.Center,
         maxLines = TEXT_MAX_LINES,
-        text = state.truncatedText
+        text = state.truncatedText,
+        lineHeight = TextUnit(value = state.textSize.value, type = TextUnitType.Unspecified)
     )
 }

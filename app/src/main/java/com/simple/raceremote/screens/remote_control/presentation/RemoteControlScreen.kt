@@ -48,9 +48,8 @@ fun Actions(
     val height = 6.dp
     val states = listOf(
         DotsState.ShowText(
-//            text = "ABCDEFGHIGKLMNOPQRSTUVWXYZ",
-            text = "ABC",
-            textSize = height,
+            text = "ABCDEFGHIGKLMNOPQRSTUVWXYZ",
+            textSize = height - 1.dp,
             height = height
         ),
         DotsState.Loading(),

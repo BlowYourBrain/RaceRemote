@@ -11,6 +11,7 @@ import com.simple.raceremote.R
 import com.simple.raceremote.navigation.Screens
 import com.simple.raceremote.ui.theme.CornerShapes
 import com.simple.raceremote.ui.theme.Padding
+import com.simple.raceremote.ui.theme.Size
 import com.simple.raceremote.ui.views.*
 import org.koin.androidx.compose.getViewModel
 
@@ -46,7 +47,11 @@ fun Actions(
 ) {
     val height = 6.dp
     val states = listOf(
-        DotsState.ShowText(text = "AAA", textSize = height, height = height),
+        DotsState.ShowText(
+            text = "ABCDEFGHIGKLMNOPQRSTUVWXYZ",
+            textSize = height,
+            height = height
+        ),
         DotsState.Loading(),
         DotsState.Idle(height)
     )
@@ -62,7 +67,9 @@ fun Actions(
         horizontalArrangement = Arrangement.Center
     ) {
         ButtonWrapper(
-            modifier = Modifier.padding(Padding.Content),
+            modifier = Modifier
+                .padding(Padding.Content)
+                .width(Size.ButtonAsIcon),
             state = bluetoothState
         ) {
             ActionButton(
@@ -72,7 +79,9 @@ fun Actions(
         }
 
         ButtonWrapper(
-            modifier = Modifier.padding(Padding.Content),
+            modifier = Modifier
+                .padding(Padding.Content)
+                .width(Size.ButtonAsIcon),
             state = settingsState
         ) {
             ActionButton(

@@ -10,12 +10,17 @@ import androidx.compose.material.Text
 import androidx.compose.runtime.*
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.draw.clipToBounds
 import androidx.compose.ui.draw.scale
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.layout.onGloballyPositioned
+import androidx.compose.ui.platform.LocalConfiguration
+import androidx.compose.ui.platform.LocalDensity
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
 import com.simple.raceremote.utils.dpToSp
+import com.simple.raceremote.utils.pxToDp
 
 private const val DEFAULT_ANIMATION_DURATION = 1500
 private const val TEXT_MAX_LINES = 1
@@ -66,17 +71,15 @@ fun FlatLoadingWithContent(
 ) {
     val transition = updateTransition(state)
 
-    Column(
-        modifier = modifier,
-        horizontalAlignment = Alignment.CenterHorizontally
+    Box(
+        modifier = modifier.clipToBounds(),
+        contentAlignment = Alignment.Center
     ) {
-        Box(contentAlignment = Alignment.Center) {
-            transition.Crossfade { targetState ->
-                when (val stateValue = targetState.value) {
-                    is DotsState.Idle -> addEmptySpace(stateValue)
-                    is DotsState.Loading -> addLoadingDots(stateValue)
-                    is DotsState.ShowText -> addText(stateValue)
-                }
+        transition.Crossfade { targetState ->
+            when (val stateValue = targetState.value) {
+                is DotsState.Idle -> addEmptySpace(stateValue)
+                is DotsState.Loading -> addLoadingDots(stateValue)
+                is DotsState.ShowText -> addText(stateValue)
             }
         }
     }
@@ -94,6 +97,7 @@ private fun addLoadingDots(
     val transition = rememberInfiniteTransition()
     val totalAnimationDuration = dotsAnimationDuration * dotsCount / 2
     val color = dotsColor ?: MaterialTheme.colors.primary
+
     Row(
         modifier = Modifier.height(state.height),
         horizontalArrangement = Arrangement.SpaceAround,
@@ -131,12 +135,49 @@ private fun addLoadingDots(
     }
 }
 
+private data class ViewOffset(
+    val initialOffset: Int = 0,
+    val targetOffset: Int = 0
+)
+
 @Composable
 private fun addText(state: DotsState.ShowText) {
+
+    val transition = rememberInfiniteTransition()
+    val letterPerMs = 200
+    val animationDuration = letterPerMs * state.truncatedText.length
+    var offset = remember { mutableStateOf(ViewOffset()) }
+
+    val animationOffset by transition.animateValue(
+        initialValue = offset.value.initialOffset.pxToDp(),
+        targetValue = offset.value.targetOffset.pxToDp(),
+        typeConverter = Dp.VectorConverter,
+        animationSpec = infiniteRepeatable(
+            animation = tween(
+                durationMillis = animationDuration,
+                easing = LinearEasing
+            )
+        )
+    )
+
     Text(
         modifier = Modifier
+            .offset(animationOffset)
             .height(state.height)
-            .wrapContentWidth(),
+            .wrapContentWidth(unbounded = true, align = Alignment.Start)
+            .onGloballyPositioned { layoutCoordinates ->
+                val viewWidth = layoutCoordinates.size.width
+                val parentWidth = layoutCoordinates.parentCoordinates?.size?.width ?: 0
+
+                offset.value = if (parentWidth > viewWidth) {
+                    ViewOffset()
+                } else {
+                    ViewOffset(
+                        initialOffset = parentWidth,
+                        targetOffset = -viewWidth
+                    )
+                }
+            },
         fontSize = dpToSp(dp = state.textSize),
         textAlign = TextAlign.Center,
         maxLines = TEXT_MAX_LINES,

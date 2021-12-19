@@ -176,7 +176,7 @@ private fun addText(state: DotsState.ShowText) {
                 val viewWidth = layoutCoordinates.size.width
                 val parentWidth = layoutCoordinates.parentCoordinates?.size?.width ?: 0
 
-                offset.value = if (parentWidth > viewWidth) {
+                offset.value = if (parentWidth >= viewWidth) {
                     ViewOffset()
                 } else {
                     ViewOffset(

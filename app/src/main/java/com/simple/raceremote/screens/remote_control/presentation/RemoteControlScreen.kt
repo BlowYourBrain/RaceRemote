@@ -1,6 +1,8 @@
 package com.simple.raceremote.screens.remote_control.presentation
 
 import androidx.compose.foundation.layout.*
+import androidx.compose.foundation.lazy.LazyColumn
+import androidx.compose.foundation.lazy.items
 import androidx.compose.runtime.*
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
@@ -8,7 +10,8 @@ import androidx.compose.ui.draw.clip
 import androidx.compose.ui.unit.dp
 import androidx.navigation.NavHostController
 import com.simple.raceremote.R
-import com.simple.raceremote.navigation.Screens
+import com.simple.raceremote.screens.bluetooth_devices.presentation.BluetoothDevicesViewModel
+import com.simple.raceremote.screens.bluetooth_devices.presentation.BluetoothEntity
 import com.simple.raceremote.ui.theme.CornerShapes
 import com.simple.raceremote.ui.theme.Padding
 import com.simple.raceremote.ui.theme.Size
@@ -18,25 +21,44 @@ import org.koin.androidx.compose.getViewModel
 @Composable
 fun RemoteControlScreen(
     modifier: Modifier = Modifier,
-    navController: NavHostController
+    navController: NavHostController,
+    isSidePanelOpen: MutableState<Boolean>,
+    sidePanelContent: MutableState<@Composable () -> Unit>
 ) {
-    val viewModel = getViewModel<RemoteControlViewModel>()
+    val remoteControlViewModel = getViewModel<RemoteControlViewModel>()
+    val bluetoothDevicesViewModel = getViewModel<BluetoothDevicesViewModel>()
+    val entities = bluetoothDevicesViewModel.items.collectAsState(initial = emptyList())
+    sidePanelContent.value = @Composable { BluetoothContentSidePanel(entities) }
 
     Column(modifier = modifier, horizontalAlignment = Alignment.CenterHorizontally) {
         Actions(
             bluetoothOnClick = {
-                navController.navigate(Screens.BluetoothDevices.name)
+                isSidePanelOpen.value = (!isSidePanelOpen.value).also {
+                    bluetoothDevicesViewModel.setFinding(it)
+                }
+//                    navController.navigate(Screens.BluetoothDevices.name)
             },
             settingsOnClick = {
 
             }
         )
         Controllers(
-            { viewModel.updateSteeringWheel(it) },
-            { viewModel.updateMovement(it) },
+            { remoteControlViewModel.updateSteeringWheel(it) },
+            { remoteControlViewModel.updateMovement(it) },
         )
     }
+}
 
+@Composable
+fun BluetoothContentSidePanel(entities: State<List<BluetoothEntity>>) {
+    LazyColumn() {
+        items(items = entities.value) {
+            BluetoothItemCard(
+                modifier = Modifier.padding(Padding.ListSpace),
+                entity = it
+            )
+        }
+    }
 }
 
 @Composable

@@ -34,6 +34,10 @@ class BluetoothDevicesViewModel(
         startFinding()
     }
 
+    fun setFinding(isFinding: Boolean) {
+        if (isFinding) startFinding() else stopFinding()
+    }
+
     fun toggleRefreshing() = if (_isRefreshing.value) stopFinding() else startFinding()
 
     override fun onCleared() {

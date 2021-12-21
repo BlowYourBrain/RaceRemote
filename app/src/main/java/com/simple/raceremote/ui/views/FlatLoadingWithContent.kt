@@ -134,11 +134,6 @@ private fun addLoadingDots(
     }
 }
 
-private data class ViewOffset(
-    val initialOffset: Int = 0,
-    val targetOffset: Int = 0
-)
-
 @OptIn(ExperimentalUnitApi::class)
 @Composable
 private fun addText(state: DotsState.ShowText) {

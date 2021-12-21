@@ -5,9 +5,10 @@ import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.padding
 import androidx.compose.material.Scaffold
-import androidx.compose.runtime.Composable
+import androidx.compose.runtime.*
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
+import androidx.lifecycle.viewmodel.compose.viewModel
 import androidx.navigation.NavOptions
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
@@ -18,6 +19,9 @@ import com.simple.raceremote.screens.bluetooth_devices.presentation.BluetoothDev
 import com.simple.raceremote.screens.BluetoothPermissionRationale
 import com.simple.raceremote.screens.no_bluetooth.NoBluetoothScreen
 import com.simple.raceremote.screens.remote_control.presentation.RemoteControlScreen
+import com.simple.raceremote.ui.views.SidePanel
+import kotlinx.coroutines.flow.asStateFlow
+import org.koin.androidx.compose.getViewModel
 
 private const val CONTENT_TOP_PADDING = 12
 private const val CONTENT_BOTTOM_PADDING = 24
@@ -28,6 +32,9 @@ fun AppNavHost(
     startScreen: Screens
 ) {
     val navController = rememberNavController()
+    val isSidePanelOpen = remember { mutableStateOf(false) }
+    val sidePanelContent: MutableState<@Composable () -> Unit> =
+        remember { mutableStateOf(value = {}) }
 
     Scaffold(modifier = modifier) {
         Column {
@@ -44,7 +51,13 @@ fun AppNavHost(
                     startDestination = startScreen.name
                 ) {
                     composable(Screens.NoBluetooth.name) { NoBluetoothScreen(navController = navController) }
-                    composable(Screens.RemoteControl.name) { RemoteControlScreen(navController = navController) }
+                    composable(Screens.RemoteControl.name) {
+                        RemoteControlScreen(
+                            navController = navController,
+                            isSidePanelOpen = isSidePanelOpen,
+                            sidePanelContent = sidePanelContent
+                        )
+                    }
                     composable(Screens.BluetoothDevices.name) {
                         BluetoothDevicesScreen(navController = navController) {
                             navController.popBackStack()
@@ -67,5 +80,10 @@ fun AppNavHost(
 
             Spacer(modifier = Modifier.navigationBarsHeight())
         }
+
+        SidePanel(
+            isOpened = isSidePanelOpen,
+            itemProvider = sidePanelContent
+        )
     }
 }

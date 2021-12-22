@@ -29,11 +29,14 @@ fun BluetoothItemCardPreview() {
 @Composable
 fun BluetoothItemCard(modifier: Modifier = Modifier, entity: BluetoothEntity) {
     Card(
-        modifier = modifier.clickable { entity.onClick?.invoke() },
+        modifier = modifier
+            .fillMaxWidth()
+            .clickable { entity.onClick?.invoke() },
         elevation = Elevation.onSurface,
         shape = CornerShapes.SmallItem,
     ) {
         Row(
+            modifier.fillMaxWidth(),
             verticalAlignment = Alignment.CenterVertically,
             horizontalArrangement = Arrangement.SpaceAround
         ) {

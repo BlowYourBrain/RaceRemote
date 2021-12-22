@@ -20,28 +20,31 @@ import com.simple.raceremote.utils.dpToSp
 import com.simple.raceremote.utils.pxToDp
 
 private const val DEFAULT_ANIMATION_DURATION = 1500
-private const val TEXT_MAX_LINES = 1
+private const val DEFAULT_DOTS_COUNT = 3
+private const val DEFAULT_HEIGHT = 6
+
 private const val TEXT_MAX_LENGTH = 32
+private const val TEXT_MAX_LINES = 1
 private const val TEXT_SPEED = 200
 
 sealed class DotsState(val height: Dp) {
 
-    class Idle(height: Dp) : DotsState(height)
+    class Idle(height: Dp = DEFAULT_HEIGHT.dp) : DotsState(height)
 
     class Loading(
-        val dotsCount: Int = 3,
+        height: Dp = DEFAULT_HEIGHT.dp,
+        val dotsCount: Int = DEFAULT_DOTS_COUNT,
         val dotsColor: Color? = null,
-        val dotsDiameter: Dp = 6.dp,
         val dotsDividerSpace: Dp = 4.dp,
         val dotsAnimationDuration: Int = DEFAULT_ANIMATION_DURATION
-    ) : DotsState(dotsDiameter)
+    ) : DotsState(height)
 
     class ShowText(
         val text: String,
         val textSize: Dp,
         val textMaxLength: Int = TEXT_MAX_LENGTH,
         val textVelocity: Int = TEXT_SPEED,
-        height: Dp
+        height: Dp = DEFAULT_HEIGHT.dp
     ) : DotsState(height) {
         val truncatedText: String
             get() = if (text.length <= textMaxLength) text else "${text.take(textMaxLength)}..."
@@ -121,11 +124,11 @@ private fun addLoadingDots(
 
             Box(
                 Modifier
-                    .size(dotsDiameter)
+                    .size(height)
                     .scale(scale)
                     .background(
                         color = color,
-                        shape = RoundedCornerShape(dotsDiameter / 2)
+                        shape = RoundedCornerShape(height / 2)
                     )
             ) {}
 

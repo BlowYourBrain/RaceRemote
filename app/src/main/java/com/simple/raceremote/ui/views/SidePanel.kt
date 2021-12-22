@@ -14,7 +14,7 @@ import com.google.accompanist.insets.statusBarsHeight
 import com.simple.raceremote.utils.pxToDp
 
 private const val ANIMATION_DURATION = 300
-private const val VIEW_WIDTH_RATIO = 0.33F
+private const val VIEW_WIDTH_RATIO = 0.4F
 private const val CORNER_RADIUS = 16
 private const val ELEVATION = 16
 

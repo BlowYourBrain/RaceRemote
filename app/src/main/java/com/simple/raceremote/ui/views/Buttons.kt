@@ -12,6 +12,7 @@ import androidx.compose.material.MaterialTheme
 import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.res.painterResource
 import com.simple.raceremote.ui.theme.CornerShapes
 import com.simple.raceremote.ui.theme.Padding
@@ -44,7 +45,8 @@ fun TextButton(
 fun ActionButton(
     modifier: Modifier = Modifier,
     @DrawableRes icon: Int,
-    onClick: (() -> Unit)? = null
+    onClick: (() -> Unit)? = null,
+    color: Color = MaterialTheme.colors.onBackground
 ) {
     Button(
         modifier = modifier.size(Size.ButtonAsIcon),

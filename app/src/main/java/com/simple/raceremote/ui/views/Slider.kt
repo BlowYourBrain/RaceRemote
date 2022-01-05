@@ -17,6 +17,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.geometry.Offset
 import androidx.compose.ui.geometry.Size
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.graphics.ColorFilter
 import androidx.compose.ui.graphics.drawscope.DrawScope
 import androidx.compose.ui.graphics.drawscope.Stroke.Companion.DefaultMiter
 import androidx.compose.ui.input.pointer.PointerEvent
@@ -34,7 +35,6 @@ import com.simple.raceremote.ui.views.Orientation.Vertical.iconDown
 import com.simple.raceremote.ui.views.Orientation.Vertical.iconUp
 
 private const val UNDEFINED = -1f
-private const val UNDEFINED_INT = -1
 private const val NO_OFFSET = 0f
 private const val MIN = -1f
 private const val MAX = 1f
@@ -112,7 +112,7 @@ fun Slider(
         }
     }
 
-    orientation.paintIcons()
+    orientation.paintIcons(onBackgroundColor)
 }
 
 private fun PointerEvent.onPointerInput(
@@ -137,11 +137,13 @@ private fun PointerEvent.onPointerInput(
 @Composable
 @Preview
 private fun previewPaintIcons() {
-    Orientation.Horizontal.paintIcons()
+    Orientation.Horizontal.paintIcons(MaterialTheme.colors.onBackground)
 }
 
 @Composable
-private fun Orientation.paintIcons() {
+private fun Orientation.paintIcons(
+    iconColor: Color
+) {
     val containerModifier = Modifier.fillMaxSize()
     val iconModifier = Modifier.size(HugeIcon)
 
@@ -155,7 +157,8 @@ private fun Orientation.paintIcons() {
                 paintContent(
                     modifier = iconModifier.weight(1f),
                     first = iconUp,
-                    second = iconDown
+                    second = iconDown,
+                    paintColor = iconColor
                 )
             }
         }
@@ -169,7 +172,8 @@ private fun Orientation.paintIcons() {
                 paintContent(
                     modifier = iconModifier.weight(1f),
                     first = iconLeft,
-                    second = iconRight
+                    second = iconRight,
+                    paintColor = iconColor
                 )
             }
         }
@@ -177,17 +181,26 @@ private fun Orientation.paintIcons() {
 }
 
 @Composable
-private fun paintContent(modifier: Modifier, @DrawableRes first: Int, @DrawableRes second: Int) {
+private fun paintContent(
+    modifier: Modifier,
+    @DrawableRes first: Int,
+    @DrawableRes second: Int,
+    paintColor: Color
+) {
+    val color = ColorFilter.tint(paintColor)
+
     Image(
         modifier = modifier,
         painter = painterResource(id = first),
-        contentDescription = null
+        contentDescription = null,
+        colorFilter = color
     )
 
     Image(
         modifier = modifier,
         painter = painterResource(id = second),
-        contentDescription = null
+        contentDescription = null,
+        colorFilter = color
     )
 }
 

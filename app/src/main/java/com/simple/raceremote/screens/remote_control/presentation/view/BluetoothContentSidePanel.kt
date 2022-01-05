@@ -20,6 +20,7 @@ import com.simple.raceremote.ui.views.BluetoothItemCard
 import com.simple.raceremote.ui.views.DotsState
 import com.simple.raceremote.ui.views.FlatLoadingWithContent
 
+//TODO extract side panel
 @Composable
 fun BluetoothContentSidePanel(
     isRefreshing: State<Boolean>,

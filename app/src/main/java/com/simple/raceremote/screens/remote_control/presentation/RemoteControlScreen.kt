@@ -1,21 +1,16 @@
 package com.simple.raceremote.screens.remote_control.presentation
 
 import androidx.compose.foundation.layout.*
-import androidx.compose.foundation.lazy.LazyColumn
-import androidx.compose.foundation.lazy.items
-import androidx.compose.material.ListItem
 import androidx.compose.material.MaterialTheme
-import androidx.compose.material.Text
 import androidx.compose.runtime.*
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
-import androidx.compose.ui.res.stringResource
+import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.unit.dp
 import androidx.navigation.NavHostController
 import com.simple.raceremote.R
 import com.simple.raceremote.screens.bluetooth_devices.presentation.BluetoothDevicesViewModel
-import com.simple.raceremote.screens.bluetooth_devices.presentation.BluetoothEntity
 import com.simple.raceremote.screens.remote_control.presentation.view.BluetoothContentSidePanel
 import com.simple.raceremote.ui.theme.CornerShapes
 import com.simple.raceremote.ui.theme.Padding
@@ -60,7 +55,7 @@ fun RemoteControlScreen(
 fun Actions(
     modifier: Modifier = Modifier,
     bluetoothOnClick: (() -> Unit)? = null,
-    settingsOnClick: (() -> Unit)? = null,
+    settingsOnClick: (() -> Unit)? = null
 ) {
     val height = 6.dp
     val states = listOf(

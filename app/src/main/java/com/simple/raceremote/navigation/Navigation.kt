@@ -37,53 +37,53 @@ fun AppNavHost(
         remember { mutableStateOf(value = {}) }
 
     Scaffold(modifier = modifier) {
-        Column {
-            Spacer(modifier = Modifier.statusBarsHeight())
-
-            Box(
-                Modifier.padding(
-                    top = CONTENT_TOP_PADDING.dp,
-                    bottom = CONTENT_BOTTOM_PADDING.dp
-                )
-            ) {
-                NavHost(
-                    navController = navController,
-                    startDestination = startScreen.name
-                ) {
-                    composable(Screens.NoBluetooth.name) { NoBluetoothScreen(navController = navController) }
-                    composable(Screens.RemoteControl.name) {
-                        RemoteControlScreen(
-                            navController = navController,
-                            isSidePanelOpen = isSidePanelOpen,
-                            sidePanelContent = sidePanelContent
-                        )
-                    }
-                    composable(Screens.BluetoothDevices.name) {
-                        BluetoothDevicesScreen(navController = navController) {
-                            navController.popBackStack()
-                        }
-                    }
-                    composable(Screens.BluetoothPermissionsRationale.name) {
-                        BluetoothPermissionRationale(
-                            onApply = {
-                                navController.navigate(
-                                    route = Screens.RemoteControl.name,
-                                    navOptions = NavOptions.Builder()
-                                        .setLaunchSingleTop(true)
-                                        .build()
-                                )
-                            }
-                        )
-                    }
-                }
-            }
-
-            Spacer(modifier = Modifier.navigationBarsHeight())
-        }
-
         SidePanel(
             isOpened = isSidePanelOpen,
             itemProvider = sidePanelContent
-        )
+        ){
+            Column {
+                Spacer(modifier = Modifier.statusBarsHeight())
+
+                Box(
+                    Modifier.padding(
+                        top = CONTENT_TOP_PADDING.dp,
+                        bottom = CONTENT_BOTTOM_PADDING.dp
+                    )
+                ) {
+                    NavHost(
+                        navController = navController,
+                        startDestination = startScreen.name
+                    ) {
+                        composable(Screens.NoBluetooth.name) { NoBluetoothScreen(navController = navController) }
+                        composable(Screens.RemoteControl.name) {
+                            RemoteControlScreen(
+                                navController = navController,
+                                isSidePanelOpen = isSidePanelOpen,
+                                sidePanelContent = sidePanelContent
+                            )
+                        }
+                        composable(Screens.BluetoothDevices.name) {
+                            BluetoothDevicesScreen(navController = navController) {
+                                navController.popBackStack()
+                            }
+                        }
+                        composable(Screens.BluetoothPermissionsRationale.name) {
+                            BluetoothPermissionRationale(
+                                onApply = {
+                                    navController.navigate(
+                                        route = Screens.RemoteControl.name,
+                                        navOptions = NavOptions.Builder()
+                                            .setLaunchSingleTop(true)
+                                            .build()
+                                    )
+                                }
+                            )
+                        }
+                    }
+                }
+
+                Spacer(modifier = Modifier.navigationBarsHeight())
+            }
+        }
     }
 }

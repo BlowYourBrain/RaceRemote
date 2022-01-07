@@ -33,6 +33,7 @@ import com.simple.raceremote.ui.views.Orientation.Horizontal.iconLeft
 import com.simple.raceremote.ui.views.Orientation.Horizontal.iconRight
 import com.simple.raceremote.ui.views.Orientation.Vertical.iconDown
 import com.simple.raceremote.ui.views.Orientation.Vertical.iconUp
+import com.simple.raceremote.utils.awaitPointerEventInfinitely
 
 private const val UNDEFINED = -1f
 private const val NO_OFFSET = 0f
@@ -89,8 +90,8 @@ fun Slider(
             .background(colors.surface)
             .pointerInput(Unit) {
                 awaitPointerEventScope {
-                    while (true) {
-                        awaitPointerEvent(PointerEventPass.Initial).onPointerInput(x, y)
+                    awaitPointerEventInfinitely(PointerEventPass.Final) {
+                        onPointerInput(x, y)
                     }
                 }
             }
@@ -115,22 +116,25 @@ fun Slider(
     orientation.paintIcons(onBackgroundColor)
 }
 
+@OptIn(ExperimentalComposeUiApi::class)
 private fun PointerEvent.onPointerInput(
     x: MutableState<Float>,
     y: MutableState<Float>
 ): PointerEvent = apply {
-    changes.firstOrNull()?.let {
-        debug(it.toString())
+    changes.firstOrNull()?.run {
+        debug(toString())
 
-        if (it.pressed) {
-            x.value = it.position.x
-            y.value = it.position.y
-        } else {
-            x.value = UNDEFINED
-            y.value = UNDEFINED
+        if (!isConsumed) {
+            if (pressed) {
+                x.value = position.x
+                y.value = position.y
+            } else {
+                x.value = UNDEFINED
+                y.value = UNDEFINED
+            }
+
+            consumeDownChange()
         }
-
-        it.consumeDownChange()
     }
 }
 

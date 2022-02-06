@@ -7,10 +7,7 @@ import com.simple.raceremote.data.IBluetoothConnection
 import com.simple.raceremote.data.IBluetoothDevicesDiscoveryController
 import com.simple.raceremote.data.IBluetoothItemsProvider
 import kotlinx.coroutines.GlobalScope
-import kotlinx.coroutines.flow.Flow
-import kotlinx.coroutines.flow.MutableStateFlow
-import kotlinx.coroutines.flow.asStateFlow
-import kotlinx.coroutines.flow.map
+import kotlinx.coroutines.flow.*
 import java.util.*
 
 private const val UUID_STR = "4ab19e4e-e6c1-43ba-b9cd-0b19777da670"
@@ -28,7 +25,7 @@ class BluetoothDevicesViewModel(
     val items: Flow<List<BluetoothEntity>> = repository.bluetoothDevices.map { list ->
         list.map { it.mapToBluetoothEntity() }
     }
-    val isRefreshing: Flow<Boolean> = _isRefreshing.asStateFlow()
+    val isRefreshing: StateFlow<Boolean> = _isRefreshing.asStateFlow()
 
     init {
         startFinding()

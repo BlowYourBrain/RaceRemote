@@ -57,7 +57,6 @@ fun AppNavHost(
                         composable(Screens.NoBluetooth.name) { NoBluetoothScreen(navController = navController) }
                         composable(Screens.RemoteControl.name) {
                             RemoteControlScreen(
-                                navController = navController,
                                 isSidePanelOpen = isSidePanelOpen,
                                 sidePanelContent = sidePanelContent
                             )

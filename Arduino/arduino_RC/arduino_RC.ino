@@ -7,7 +7,7 @@
 
 Servo servo;
 CommandHandler ch;
-GMotor motor(DRIVER2WIRE, 7, 6, HIGH);
+GMotor motor(DRIVER2WIRE, 6, 7, HIGH);
 
 unsigned int readByte = 0;
 unsigned int currentCommand = 0;

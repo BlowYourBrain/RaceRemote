@@ -6,34 +6,31 @@ import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
 import androidx.compose.material.MaterialTheme
 import androidx.compose.material.Text
-import androidx.compose.runtime.Composable
-import androidx.compose.runtime.State
-import androidx.compose.runtime.mutableStateOf
-import androidx.compose.runtime.remember
+import androidx.compose.runtime.*
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
 import com.simple.raceremote.R
+import com.simple.raceremote.screens.bluetooth_devices.presentation.BluetoothDevicesViewModel
 import com.simple.raceremote.screens.bluetooth_devices.presentation.BluetoothEntity
 import com.simple.raceremote.ui.theme.Padding
 import com.simple.raceremote.ui.views.BluetoothItemCard
 import com.simple.raceremote.ui.views.DotsState
 import com.simple.raceremote.ui.views.FlatLoadingWithContent
+import org.koin.androidx.compose.getViewModel
 
-//TODO extract side panel
+private const val DOTS_LOADING_HEIGHT = 14
+
 @Composable
 fun BluetoothContentSidePanel(
     isRefreshing: State<Boolean>,
     entities: State<List<BluetoothEntity>>
 ) {
-    val height = 14.dp
+    val height = DOTS_LOADING_HEIGHT.dp
     val idleState = remember { DotsState.Idle(height) }
-    val loadingState = remember {
-        DotsState.Loading(height = height)
-    }
-    val dotsState = remember {
-        mutableStateOf(if (isRefreshing.value) loadingState else idleState)
-    }
+    val loadingState = remember { DotsState.Loading(height = height) }
+
+    val dotsState = remember { mutableStateOf(if (isRefreshing.value) loadingState else idleState) }
 
     Column() {
         Header()

@@ -21,7 +21,6 @@ import org.koin.androidx.compose.getViewModel
 @Composable
 fun RemoteControlScreen(
     modifier: Modifier = Modifier,
-    navController: NavHostController,
     isSidePanelOpen: MutableState<Boolean>,
     sidePanelContent: MutableState<@Composable () -> Unit>
 ) {
@@ -38,7 +37,6 @@ fun RemoteControlScreen(
                 isSidePanelOpen.value = (!isSidePanelOpen.value).also {
                     bluetoothDevicesViewModel.setFinding(it)
                 }
-//                    navController.navigate(Screens.BluetoothDevices.name)
             },
             settingsOnClick = {
 

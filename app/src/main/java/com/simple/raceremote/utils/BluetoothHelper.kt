@@ -42,6 +42,7 @@ class BluetoothHelper : IBluetoothItemsProvider, IBluetoothBroadcastReceiver,
 
     override fun findBluetoothDevices(context: Context): Unit = context.run {
         bluetoothDevicesSet.clear()
+        _bluetoothDevices.tryEmit(emptyList())
         getBluetoothAdapter()?.startDiscovery()
     }
 

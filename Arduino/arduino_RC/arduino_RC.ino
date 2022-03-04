@@ -7,7 +7,7 @@
 
 Servo servo;
 CommandHandler ch;
-GMotor motor(DRIVER2WIRE, 6, 7, HIGH);
+GMotor motor(DRIVER2WIRE, 9, 8, HIGH);
 
 unsigned int readByte = 0;
 unsigned int currentCommand = 0;
@@ -48,7 +48,7 @@ void updateSteeringWheel(unsigned int value){
 
 void setup() {
   Serial.begin(9600);
-  servo.attach(3);
+  servo.attach(5);
   motor.setDirection(REVERSE);
   motor.setMode(FORWARD);
 }
@@ -65,8 +65,10 @@ void loop() {
         
         if (isSteeringWheelCommand(purifiedCommand)){
           updateSteeringWheel(purifiedValue);
+          digitalWrite(LED_BUILTIN, HIGH);
         } else if (isEngineCommand(purifiedCommand)){
           updateEnginge(purifiedValue);
+          digitalWrite(LED_BUILTIN, LOW);
         }
     }
   }

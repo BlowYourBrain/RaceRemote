@@ -190,3 +190,8 @@ private fun addText(state: DotsState.ShowText) {
         lineHeight = TextUnit(value = state.textSize.value, type = TextUnitType.Unspecified)
     )
 }
+
+private class ViewOffset(
+    val initialOffset: Int = 0,
+    val targetOffset: Int = 0
+)

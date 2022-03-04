@@ -9,8 +9,8 @@ import com.simple.raceremote.navigation.AppNavHost
 import com.simple.raceremote.navigation.Screens
 import com.simple.raceremote.screens.remote_control.presentation.Actions
 import com.simple.raceremote.ui.theme.RaceRemoteTheme
-import com.simple.raceremote.utils.hasBluetooth
-import com.simple.raceremote.utils.hasBluetoothPermissions
+import com.simple.raceremote.utils.bluetooth.hasBluetooth
+import com.simple.raceremote.utils.bluetooth.hasBluetoothPermissions
 
 
 @Preview

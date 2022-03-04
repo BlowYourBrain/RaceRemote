@@ -5,7 +5,7 @@ import com.simple.raceremote.screens.bluetooth_devices.presentation.BluetoothDev
 import com.simple.raceremote.screens.remote_control.CompoundCommandCreator
 import com.simple.raceremote.screens.remote_control.ICompoundCommandCreator
 import com.simple.raceremote.screens.remote_control.presentation.*
-import com.simple.raceremote.utils.BluetoothHelper
+import com.simple.raceremote.utils.bluetooth.BluetoothHelper
 import org.koin.androidx.viewmodel.dsl.viewModel
 import org.koin.dsl.binds
 import org.koin.dsl.module

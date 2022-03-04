@@ -2,11 +2,9 @@ package com.simple.raceremote.data
 
 import android.bluetooth.BluetoothSocket
 import android.content.Context
-import com.simple.raceremote.utils.BluetoothHelper
 import com.simple.raceremote.utils.debug
-import com.simple.raceremote.utils.getBluetoothAdapter
+import com.simple.raceremote.utils.bluetooth.getBluetoothAdapter
 import kotlinx.coroutines.CoroutineScope
-import kotlinx.coroutines.SupervisorJob
 import kotlinx.coroutines.launch
 import java.util.*
 

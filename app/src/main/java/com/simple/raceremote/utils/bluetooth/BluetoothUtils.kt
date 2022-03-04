@@ -1,4 +1,4 @@
-package com.simple.raceremote.utils
+package com.simple.raceremote.utils.bluetooth
 
 import android.Manifest.permission.*
 import android.app.Activity
@@ -6,9 +6,8 @@ import android.bluetooth.BluetoothAdapter
 import android.bluetooth.BluetoothManager
 import android.content.Context
 import android.content.Intent
-import android.os.Build
 import androidx.core.app.ActivityCompat
-import androidx.core.content.getSystemService
+import com.simple.raceremote.utils.hasPermission
 
 private const val REQUEST_ENABLE_BT = 40
 

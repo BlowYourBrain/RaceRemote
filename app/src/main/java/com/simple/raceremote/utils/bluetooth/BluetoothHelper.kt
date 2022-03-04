@@ -1,4 +1,4 @@
-package com.simple.raceremote.utils
+package com.simple.raceremote.utils.bluetooth
 
 import android.bluetooth.BluetoothDevice
 import android.bluetooth.BluetoothDevice.ACTION_FOUND
@@ -12,6 +12,7 @@ import androidx.lifecycle.LifecycleOwner
 import com.simple.raceremote.data.BluetoothItem
 import com.simple.raceremote.data.IBluetoothDevicesDiscoveryController
 import com.simple.raceremote.data.IBluetoothItemsProvider
+import com.simple.raceremote.utils.intentFilterOf
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.asSharedFlow

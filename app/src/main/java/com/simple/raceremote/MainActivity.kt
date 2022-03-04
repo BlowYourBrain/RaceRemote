@@ -55,33 +55,3 @@ class MainActivity : ComponentActivity() {
         permissionLauncher.launch(getBluetoothPermissions())
     }
 }
-
-@Preview
-@Composable
-fun AppPreview() {
-    App()
-}
-
-@Composable
-fun App() {
-    ProvideWindowInsets {
-        RaceRemoteTheme(darkTheme = true) {
-            AppNavHost(startScreen = getStartScreen())
-        }
-    }
-}
-
-@Composable
-fun getStartScreen(): Screens = with(LocalContext.current) {
-    when {
-        !hasBluetooth() -> Screens.NoBluetooth
-        hasBluetoothPermissions() -> Screens.RemoteControl
-        else -> Screens.BluetoothPermissionsRationale
-    }
-}
-
-@Preview
-@Composable
-private fun ActionsPreview() {
-    Actions(Modifier, null)
-}

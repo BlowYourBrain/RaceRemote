@@ -1,4 +1,4 @@
-package com.simple.raceremote.screens.remote_control.presentation.mapper
+package com.simple.raceremote.features.remote_control.presentation.mapper
 
 interface ISteeringWheelMapper {
     fun mapToSteeringWheel(value: Float): Int

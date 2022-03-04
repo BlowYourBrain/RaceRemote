@@ -1,7 +1,7 @@
-package com.simple.raceremote.screens.remote_control.presentation
+package com.simple.raceremote.features.remote_control.presentation
 
-import com.simple.raceremote.screens.remote_control.presentation.mapper.ISteeringWheelMapper
-import com.simple.raceremote.screens.remote_control.presentation.mapper.SteeringWheelMapper
+import com.simple.raceremote.features.remote_control.presentation.mapper.ISteeringWheelMapper
+import com.simple.raceremote.features.remote_control.presentation.mapper.SteeringWheelMapper
 import org.junit.Assert
 import org.junit.Test
 

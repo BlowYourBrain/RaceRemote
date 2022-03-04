@@ -1,4 +1,4 @@
-package com.simple.raceremote.screens.bluetooth_devices.presentation
+package com.simple.raceremote.features.bluetooth_devices.presentation
 
 import android.app.Application
 import androidx.lifecycle.AndroidViewModel

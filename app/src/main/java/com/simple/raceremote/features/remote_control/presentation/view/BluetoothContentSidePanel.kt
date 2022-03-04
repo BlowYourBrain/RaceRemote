@@ -1,4 +1,4 @@
-package com.simple.raceremote.screens.remote_control.presentation.view
+package com.simple.raceremote.features.remote_control.presentation.view
 
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.padding
@@ -11,13 +11,11 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
 import com.simple.raceremote.R
-import com.simple.raceremote.screens.bluetooth_devices.presentation.BluetoothDevicesViewModel
-import com.simple.raceremote.screens.bluetooth_devices.presentation.BluetoothEntity
+import com.simple.raceremote.features.bluetooth_devices.presentation.BluetoothEntity
 import com.simple.raceremote.ui.theme.Padding
 import com.simple.raceremote.ui.views.BluetoothItemCard
 import com.simple.raceremote.ui.views.DotsState
 import com.simple.raceremote.ui.views.FlatLoadingWithContent
-import org.koin.androidx.compose.getViewModel
 
 private const val DOTS_LOADING_HEIGHT = 14
 

@@ -7,7 +7,7 @@ import androidx.compose.ui.tooling.preview.Preview
 import com.google.accompanist.insets.ProvideWindowInsets
 import com.simple.raceremote.navigation.AppNavHost
 import com.simple.raceremote.navigation.Screens
-import com.simple.raceremote.screens.remote_control.presentation.view.Actions
+import com.simple.raceremote.features.remote_control.presentation.view.Actions
 import com.simple.raceremote.ui.theme.RaceRemoteTheme
 import com.simple.raceremote.utils.bluetooth.hasBluetooth
 import com.simple.raceremote.utils.bluetooth.hasBluetoothPermissions

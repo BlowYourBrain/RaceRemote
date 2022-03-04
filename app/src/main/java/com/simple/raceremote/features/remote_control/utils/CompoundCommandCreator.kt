@@ -1,4 +1,4 @@
-package com.simple.raceremote.screens.remote_control.utils
+package com.simple.raceremote.features.remote_control.utils
 
 private const val START_COMMAND = 0b1100_0000_0000_0000
 private const val END_COMMAND = 0b0011_1111

@@ -14,10 +14,10 @@ import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
 import com.google.accompanist.insets.navigationBarsHeight
 import com.google.accompanist.insets.statusBarsHeight
-import com.simple.raceremote.screens.bluetooth_devices.presentation.BluetoothDevicesScreen
-import com.simple.raceremote.screens.BluetoothPermissionRationale
-import com.simple.raceremote.screens.no_bluetooth.NoBluetoothScreen
-import com.simple.raceremote.screens.remote_control.presentation.view.RemoteControlScreen
+import com.simple.raceremote.features.bluetooth_devices.presentation.BluetoothDevicesScreen
+import com.simple.raceremote.features.BluetoothPermissionRationale
+import com.simple.raceremote.features.no_bluetooth.NoBluetoothScreen
+import com.simple.raceremote.features.remote_control.presentation.view.RemoteControlScreen
 import com.simple.raceremote.ui.views.SidePanel
 
 private const val CONTENT_TOP_PADDING = 12

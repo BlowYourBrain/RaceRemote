@@ -1,7 +1,5 @@
-package com.simple.raceremote.screens.no_bluetooth
+package com.simple.raceremote.features.no_bluetooth
 
-import androidx.activity.OnBackPressedCallback
-import androidx.activity.OnBackPressedDispatcher
 import androidx.compose.foundation.layout.*
 import androidx.compose.material.MaterialTheme
 import androidx.compose.material.Text

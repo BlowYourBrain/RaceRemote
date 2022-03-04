@@ -1,6 +1,6 @@
-package com.simple.raceremote.screens.remote_control
+package com.simple.raceremote.features.remote_control
 
-import com.simple.raceremote.screens.remote_control.utils.CompoundCommandCreator
+import com.simple.raceremote.features.remote_control.utils.CompoundCommandCreator
 import org.junit.Assert.*
 import org.junit.Test
 

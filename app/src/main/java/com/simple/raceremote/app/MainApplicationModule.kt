@@ -2,8 +2,8 @@ package com.simple.raceremote.app
 
 import android.app.Application
 import com.simple.raceremote.BuildConfig
-import com.simple.raceremote.screens.bluetooth_devices.di.bluetoothDevicesModule
-import com.simple.raceremote.screens.remote_control.di.remoteControlModule
+import com.simple.raceremote.features.bluetooth_devices.di.bluetoothDevicesModule
+import com.simple.raceremote.features.remote_control.di.remoteControlModule
 import org.koin.android.ext.koin.androidContext
 import org.koin.android.ext.koin.androidLogger
 import org.koin.core.context.GlobalContext.startKoin

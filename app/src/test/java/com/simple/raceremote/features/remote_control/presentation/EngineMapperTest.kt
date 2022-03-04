@@ -1,7 +1,7 @@
-package com.simple.raceremote.screens.remote_control.presentation
+package com.simple.raceremote.features.remote_control.presentation
 
-import com.simple.raceremote.screens.remote_control.presentation.mapper.EngineMapper
-import com.simple.raceremote.screens.remote_control.presentation.mapper.IEngineMapper
+import com.simple.raceremote.features.remote_control.presentation.mapper.EngineMapper
+import com.simple.raceremote.features.remote_control.presentation.mapper.IEngineMapper
 import org.junit.Assert.*
 import org.junit.Test
 

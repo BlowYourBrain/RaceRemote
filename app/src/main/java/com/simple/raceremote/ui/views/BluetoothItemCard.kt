@@ -13,7 +13,7 @@ import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.tooling.preview.Preview
 import com.simple.raceremote.R
-import com.simple.raceremote.screens.bluetooth_devices.presentation.BluetoothEntity
+import com.simple.raceremote.features.bluetooth_devices.presentation.BluetoothEntity
 import com.simple.raceremote.ui.theme.CornerShapes
 import com.simple.raceremote.ui.theme.Elevation
 import com.simple.raceremote.ui.theme.Padding

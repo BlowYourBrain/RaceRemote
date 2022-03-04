@@ -1,4 +1,4 @@
-package com.simple.raceremote.screens
+package com.simple.raceremote.features
 
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box

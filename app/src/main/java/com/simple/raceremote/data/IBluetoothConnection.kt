@@ -27,7 +27,6 @@ class BluetoothConnection(
         const val clearFirst8Bytes = 0b0000_0000_1111_1111
     }
 
-    private val scope = CoroutineScope(SupervisorJob())
     private var bluetoothSocket: BluetoothSocket? = null
 
     private val inStream get() = bluetoothSocket?.inputStream
@@ -44,7 +43,7 @@ class BluetoothConnection(
         val remoteDevice = getBluetoothAdapter()?.getRemoteDevice(macAddress) ?: return
 
         //******************************************************************************************
-        //https://www.it1228.com/74366.html
+        //bluetooth connection solution -> https://www.it1228.com/74366.html
         bluetoothSocket = remoteDevice.javaClass.getMethod(
             "createRfcommSocket", *arrayOf<Class<*>?>(
                 Int::class.javaPrimitiveType

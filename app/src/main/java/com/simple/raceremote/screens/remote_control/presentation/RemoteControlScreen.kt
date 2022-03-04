@@ -1,14 +1,11 @@
 package com.simple.raceremote.screens.remote_control.presentation
 
 import androidx.compose.foundation.layout.*
-import androidx.compose.material.MaterialTheme
 import androidx.compose.runtime.*
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
-import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.unit.dp
-import androidx.navigation.NavHostController
 import com.simple.raceremote.R
 import com.simple.raceremote.screens.bluetooth_devices.presentation.BluetoothDevicesViewModel
 import com.simple.raceremote.screens.remote_control.presentation.view.BluetoothContentSidePanel
@@ -28,7 +25,11 @@ fun RemoteControlScreen(
     val bluetoothDevicesViewModel = getViewModel<BluetoothDevicesViewModel>()
     val entities = bluetoothDevicesViewModel.items.collectAsState(initial = emptyList())
     val isRefreshing = bluetoothDevicesViewModel.isRefreshing.collectAsState(initial = false)
+    val bluetoothConnectionState = bluetoothDevicesViewModel.bluetoothConnectionState.collectAsState(initial = DotsState.Idle())
 
+    if (bluetoothConnectionState.value is DotsState.Loading) {
+         isSidePanelOpen.value = false
+    }
     sidePanelContent.value = @Composable { BluetoothContentSidePanel(isRefreshing, entities) }
 
     Column(modifier = modifier, horizontalAlignment = Alignment.CenterHorizontally) {

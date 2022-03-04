@@ -12,7 +12,6 @@ import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.collect
 import kotlinx.coroutines.launch
 
-//TODO вынести зависимости и провайдить через конструктор.
 class RemoteControlViewModel(
     private val engineMapper: IEngineMapper,
     private val steeringWheelMapper: ISteeringWheelMapper,

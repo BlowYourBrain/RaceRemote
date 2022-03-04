@@ -13,8 +13,8 @@ import org.koin.dsl.module
 val appModule = module {
     single { BluetoothHelper() } binds arrayOf(
         IBluetoothItemsProvider::class,
-        IBluetoothBroadcastReceiver::class,
         IBluetoothDevicesDiscoveryController::class,
+        BluetoothHelper::class
     )
     single<IBluetoothConnection> { BluetoothConnection(get()) }
 }

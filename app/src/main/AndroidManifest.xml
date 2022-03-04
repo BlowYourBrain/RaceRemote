@@ -19,12 +19,12 @@
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
-        android:name=".MainApplication"
+        android:name=".app.MainApplicationModule"
         android:roundIcon="@mipmap/ic_launcher"
         android:supportsRtl="true"
         android:theme="@style/Theme.RaceRemote">
         <activity
-            android:name=".MainActivity"
+            android:name=".app.MainActivity"
             android:exported="true"
             android:label="@string/app_name"
             android:theme="@style/Theme.RaceRemote.NoActionBar">

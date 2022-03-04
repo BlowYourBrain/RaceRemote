@@ -9,9 +9,6 @@ import androidx.activity.ComponentActivity
 import androidx.lifecycle.Lifecycle
 import androidx.lifecycle.LifecycleEventObserver
 import androidx.lifecycle.LifecycleOwner
-import com.simple.raceremote.data.BluetoothItem
-import com.simple.raceremote.data.IBluetoothDevicesDiscoveryController
-import com.simple.raceremote.data.IBluetoothItemsProvider
 import com.simple.raceremote.utils.intentFilterOf
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.MutableStateFlow

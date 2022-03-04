@@ -1,4 +1,4 @@
-package com.simple.raceremote.data.sidepanel
+package com.simple.raceremote.utils.sidepanel
 
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.MutableStateFlow

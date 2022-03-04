@@ -2,17 +2,14 @@ package com.simple.raceremote.screens.bluetooth_devices.presentation
 
 import android.app.Application
 import androidx.lifecycle.AndroidViewModel
-import com.simple.raceremote.data.BluetoothItem
-import com.simple.raceremote.data.IBluetoothConnection
-import com.simple.raceremote.data.IBluetoothDevicesDiscoveryController
-import com.simple.raceremote.data.IBluetoothItemsProvider
-import com.simple.raceremote.data.sidepanel.ISidePanelActionProducer
-import com.simple.raceremote.data.sidepanel.SidePanelActionProvider
+import com.simple.raceremote.utils.bluetooth.BluetoothItem
+import com.simple.raceremote.utils.bluetooth.IBluetoothConnection
+import com.simple.raceremote.utils.bluetooth.IBluetoothDevicesDiscoveryController
+import com.simple.raceremote.utils.bluetooth.IBluetoothItemsProvider
 import com.simple.raceremote.ui.views.DotsState
 import kotlinx.coroutines.GlobalScope
 import kotlinx.coroutines.flow.*
 import java.util.*
-import java.util.function.DoubleToIntFunction
 
 private const val UUID_STR = "4ab19e4e-e6c1-43ba-b9cd-0b19777da670"
 

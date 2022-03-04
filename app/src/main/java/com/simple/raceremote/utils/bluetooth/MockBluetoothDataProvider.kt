@@ -1,4 +1,4 @@
-package com.simple.raceremote.data
+package com.simple.raceremote.utils.bluetooth
 
 import android.content.Context
 import kotlinx.coroutines.GlobalScope
@@ -10,7 +10,7 @@ import kotlinx.coroutines.launch
 
 private const val ITEMS_COUNT = 21
 
-object MockDataProvider : IBluetoothItemsProvider, IBluetoothDevicesDiscoveryController {
+object MockBluetoothDataProvider : IBluetoothItemsProvider, IBluetoothDevicesDiscoveryController {
 
     override val bluetoothDevices: Flow<List<BluetoothItem>>
         get() = emitter.flow

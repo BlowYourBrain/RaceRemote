@@ -1,4 +1,4 @@
-package com.simple.raceremote
+package com.simple.raceremote.app
 
 import android.content.pm.ActivityInfo
 import android.os.Bundle

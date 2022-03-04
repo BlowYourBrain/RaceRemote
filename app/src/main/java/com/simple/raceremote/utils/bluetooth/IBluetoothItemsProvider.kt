@@ -1,4 +1,4 @@
-package com.simple.raceremote.data
+package com.simple.raceremote.utils.bluetooth
 
 import kotlinx.coroutines.flow.Flow
 

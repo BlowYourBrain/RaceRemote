@@ -1,4 +1,4 @@
-package com.simple.raceremote.screens.remote_control.presentation
+package com.simple.raceremote.screens.remote_control.presentation.mapper
 
 interface IEngineMapper {
     /**

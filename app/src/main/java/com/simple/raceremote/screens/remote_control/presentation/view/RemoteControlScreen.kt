@@ -1,4 +1,4 @@
-package com.simple.raceremote.screens.remote_control.presentation
+package com.simple.raceremote.screens.remote_control.presentation.view
 
 import androidx.compose.foundation.layout.*
 import androidx.compose.runtime.*
@@ -8,7 +8,7 @@ import androidx.compose.ui.draw.clip
 import androidx.compose.ui.unit.dp
 import com.simple.raceremote.R
 import com.simple.raceremote.screens.bluetooth_devices.presentation.BluetoothDevicesViewModel
-import com.simple.raceremote.screens.remote_control.presentation.view.BluetoothContentSidePanel
+import com.simple.raceremote.screens.remote_control.presentation.RemoteControlViewModel
 import com.simple.raceremote.ui.theme.CornerShapes
 import com.simple.raceremote.ui.theme.Padding
 import com.simple.raceremote.ui.theme.Size

@@ -8,7 +8,6 @@ import androidx.compose.material.Scaffold
 import androidx.compose.runtime.*
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
-import androidx.lifecycle.viewmodel.compose.viewModel
 import androidx.navigation.NavOptions
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
@@ -18,10 +17,8 @@ import com.google.accompanist.insets.statusBarsHeight
 import com.simple.raceremote.screens.bluetooth_devices.presentation.BluetoothDevicesScreen
 import com.simple.raceremote.screens.BluetoothPermissionRationale
 import com.simple.raceremote.screens.no_bluetooth.NoBluetoothScreen
-import com.simple.raceremote.screens.remote_control.presentation.RemoteControlScreen
+import com.simple.raceremote.screens.remote_control.presentation.view.RemoteControlScreen
 import com.simple.raceremote.ui.views.SidePanel
-import kotlinx.coroutines.flow.asStateFlow
-import org.koin.androidx.compose.getViewModel
 
 private const val CONTENT_TOP_PADDING = 12
 private const val CONTENT_BOTTOM_PADDING = 24

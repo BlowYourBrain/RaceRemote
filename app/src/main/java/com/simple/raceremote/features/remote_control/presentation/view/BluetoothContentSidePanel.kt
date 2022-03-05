@@ -27,12 +27,11 @@ fun BluetoothContentSidePanel(
     val height = DOTS_LOADING_HEIGHT.dp
     val idleState = remember { DotsState.Idle(height) }
     val loadingState = remember { DotsState.Loading(height = height) }
-
     val dotsState = remember { mutableStateOf(if (isRefreshing.value) loadingState else idleState) }
 
     Column() {
         Header()
-        FlatLoadingWithContent(state = dotsState)
+//        FlatLoadingWithContent(state = dotsState)
         LazyColumn() {
             items(items = entities.value) {
                 BluetoothItemCard(

@@ -1,13 +1,16 @@
 package com.simple.raceremote.features.remote_control.presentation.view
 
 import androidx.compose.foundation.layout.*
-import androidx.compose.runtime.*
+import androidx.compose.runtime.Composable
+import androidx.compose.runtime.MutableState
+import androidx.compose.runtime.collectAsState
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.unit.dp
-import com.simple.raceremote.R
 import com.simple.raceremote.features.bluetooth_devices.presentation.BluetoothDevicesViewModel
+import com.simple.raceremote.features.remote_control.presentation.Action
+import com.simple.raceremote.features.remote_control.presentation.ActionsViewModel
 import com.simple.raceremote.features.remote_control.presentation.RemoteControlViewModel
 import com.simple.raceremote.ui.theme.CornerShapes
 import com.simple.raceremote.ui.theme.Padding
@@ -21,28 +24,23 @@ fun RemoteControlScreen(
     isSidePanelOpen: MutableState<Boolean>,
     sidePanelContent: MutableState<@Composable () -> Unit>
 ) {
+    val actionsViewModel = getViewModel<ActionsViewModel>()
     val remoteControlViewModel = getViewModel<RemoteControlViewModel>()
     val bluetoothDevicesViewModel = getViewModel<BluetoothDevicesViewModel>()
+
     val entities = bluetoothDevicesViewModel.items.collectAsState(initial = emptyList())
     val isRefreshing = bluetoothDevicesViewModel.isRefreshing.collectAsState(initial = false)
-    val bluetoothConnectionState = bluetoothDevicesViewModel.bluetoothConnectionState.collectAsState(initial = DotsState.Idle())
+    val bluetoothConnectionState =
+        bluetoothDevicesViewModel.bluetoothConnectionState.collectAsState(initial = DotsState.Idle())
+    val actions = actionsViewModel.actions.collectAsState(initial = emptyList())
 
     if (bluetoothConnectionState.value is DotsState.Loading) {
-         isSidePanelOpen.value = false
+        isSidePanelOpen.value = false
     }
     sidePanelContent.value = @Composable { BluetoothContentSidePanel(isRefreshing, entities) }
 
     Column(modifier = modifier, horizontalAlignment = Alignment.CenterHorizontally) {
-        Actions(
-            bluetoothOnClick = {
-                isSidePanelOpen.value = (!isSidePanelOpen.value).also {
-                    bluetoothDevicesViewModel.setFinding(it)
-                }
-            },
-            settingsOnClick = {
-
-            }
-        )
+        Actions(actions = actions.value)
         Controllers(
             { remoteControlViewModel.updateSteeringWheel(it) },
             { remoteControlViewModel.updateMovement(it) },
@@ -53,56 +51,24 @@ fun RemoteControlScreen(
 @Composable
 fun Actions(
     modifier: Modifier = Modifier,
-    bluetoothOnClick: (() -> Unit)? = null,
-    settingsOnClick: (() -> Unit)? = null
+    actions: List<Action>,
 ) {
-    val height = 6.dp
-    val states = listOf(
-        DotsState.ShowText(
-            text = "ABCDEFGHIGKLMNOPQRSTUVWXYZ",
-            textSize = height - 1.dp,
-            height = height
-        ),
-        DotsState.Loading(),
-        DotsState.Idle(height)
-    )
-
-    val settingsState: MutableState<DotsState> =
-        remember { mutableStateOf<DotsState>(states.first()) }
-    val bluetoothState: MutableState<DotsState> = remember { mutableStateOf(states[1]) }
-
-    var count = remember { 0 }
-
     Row(
         modifier = modifier,
         horizontalArrangement = Arrangement.Center
     ) {
-        ButtonWrapper(
-            modifier = Modifier
-                .padding(Padding.Content)
-                .width(Size.ButtonAsIcon),
-            state = bluetoothState
-        ) {
-            ActionButton(
-                icon = R.drawable.ic_baseline_bluetooth_searching_24,
-                onClick = bluetoothOnClick
-            )
-        }
-
-        ButtonWrapper(
-            modifier = Modifier
-                .padding(Padding.Content)
-                .width(Size.ButtonAsIcon),
-            state = settingsState
-        ) {
-            ActionButton(
-                icon = R.drawable.ic_baseline_settings_24,
-                onClick = {
-                    settingsState.value = states[count % 3]
-                    count++
-                    settingsOnClick?.invoke()
-                }
-            )
+        actions.forEach { action ->
+            ButtonWrapper(
+                modifier = Modifier
+                    .padding(Padding.Content)
+                    .width(Size.ButtonAsIcon),
+                state = action.state
+            ) {
+                ActionButton(
+                    icon = action.icon,
+                    onClick = action.onClick
+                )
+            }
         }
     }
 }
@@ -110,7 +76,7 @@ fun Actions(
 @Composable
 private fun ButtonWrapper(
     modifier: Modifier,
-    state: State<DotsState>,
+    state: DotsState,
     content: @Composable () -> Unit
 ) {
     Column(
@@ -119,9 +85,7 @@ private fun ButtonWrapper(
         horizontalAlignment = Alignment.CenterHorizontally
     ) {
         FlatLoadingWithContent(state = state)
-
         Spacer(modifier = Modifier.height(4.dp))
-
         content()
     }
 }
@@ -154,6 +118,5 @@ private fun Controllers(
                 verticalSlider?.invoke(it)
             }
         }
-
     }
 }

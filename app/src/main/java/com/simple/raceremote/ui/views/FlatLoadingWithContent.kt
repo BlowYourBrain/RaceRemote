@@ -69,7 +69,7 @@ sealed class DotsState(val height: Dp) {
 @Composable
 fun FlatLoadingWithContent(
     modifier: Modifier = Modifier,
-    state: State<DotsState>,
+    state: DotsState,
 ) {
     val transition = updateTransition(state)
 
@@ -78,10 +78,10 @@ fun FlatLoadingWithContent(
         contentAlignment = Alignment.Center
     ) {
         transition.Crossfade { targetState ->
-            when (val stateValue = targetState.value) {
-                is DotsState.Idle -> addEmptySpace(stateValue)
-                is DotsState.Loading -> addLoadingDots(stateValue)
-                is DotsState.ShowText -> addText(stateValue)
+            when (targetState) {
+                is DotsState.Idle -> addEmptySpace(targetState)
+                is DotsState.Loading -> addLoadingDots(targetState)
+                is DotsState.ShowText -> addText(targetState)
             }
         }
     }

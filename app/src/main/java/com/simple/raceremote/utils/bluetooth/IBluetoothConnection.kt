@@ -1,5 +1,6 @@
 package com.simple.raceremote.utils.bluetooth
 
+import android.annotation.SuppressLint
 import android.bluetooth.BluetoothSocket
 import android.content.Context
 import com.simple.raceremote.utils.debug
@@ -11,7 +12,10 @@ interface IBluetoothConnection {
 
     suspend fun sendMessage(bytes: Int)
 
-    fun connectWithDevice(scope: CoroutineScope, context: Context, macAddress: String, uuid: UUID)
+    /**
+     * @return name of connected bluetooth device, null otherwise
+     * */
+    suspend fun connectWithDevice(context: Context, macAddress: String, uuid: UUID): String?
 
     fun closeConnection()
 
@@ -29,15 +33,14 @@ class BluetoothConnection(
     private val inStream get() = bluetoothSocket?.inputStream
     private val outputStream get() = bluetoothSocket?.outputStream
 
-    override fun connectWithDevice(
-        scope: CoroutineScope,
+    override suspend fun connectWithDevice(
         context: Context,
         macAddress: String,
         uuid: UUID
-    ): Unit = context.run {
+    ): String? {
         bluetoothDiscoveryController.stopFindingBluetoothDevices(context)
 
-        val remoteDevice = getBluetoothAdapter()?.getRemoteDevice(macAddress) ?: return
+        val remoteDevice = context.getBluetoothAdapter()?.getRemoteDevice(macAddress) ?: return null
 
         //******************************************************************************************
         //bluetooth connection solution -> https://www.it1228.com/74366.html
@@ -48,7 +51,6 @@ class BluetoothConnection(
         ).invoke(remoteDevice, 1) as BluetoothSocket
         //******************************************************************************************
 
-        scope.launch {
             kotlin.runCatching {
                 bluetoothSocket?.connect()
                 debug("bluetooth connection established")
@@ -56,7 +58,7 @@ class BluetoothConnection(
                 debug(it.localizedMessage.orEmpty())
                 debug("bluetooth connection failed")
             }
-        }
+        return remoteDevice.name
     }
 
     override suspend fun sendMessage(bytes: Int) {

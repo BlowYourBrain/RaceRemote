@@ -21,22 +21,16 @@ import org.koin.androidx.compose.getViewModel
 @Composable
 fun RemoteControlScreen(
     modifier: Modifier = Modifier,
-    isSidePanelOpen: MutableState<Boolean>,
     sidePanelContent: MutableState<@Composable () -> Unit>
 ) {
     val actionsViewModel = getViewModel<ActionsViewModel>()
     val remoteControlViewModel = getViewModel<RemoteControlViewModel>()
     val bluetoothDevicesViewModel = getViewModel<BluetoothDevicesViewModel>()
 
+    val actions = actionsViewModel.actions.collectAsState(initial = emptyList())
     val entities = bluetoothDevicesViewModel.items.collectAsState(initial = emptyList())
     val isRefreshing = bluetoothDevicesViewModel.isRefreshing.collectAsState(initial = false)
-    val bluetoothConnectionState =
-        bluetoothDevicesViewModel.bluetoothConnectionState.collectAsState(initial = DotsState.Idle())
-    val actions = actionsViewModel.actions.collectAsState(initial = emptyList())
 
-    if (bluetoothConnectionState.value is DotsState.Loading) {
-        isSidePanelOpen.value = false
-    }
     sidePanelContent.value = @Composable { BluetoothContentSidePanel(isRefreshing, entities) }
 
     Column(modifier = modifier, horizontalAlignment = Alignment.CenterHorizontally) {

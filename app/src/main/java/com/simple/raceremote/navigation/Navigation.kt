@@ -17,8 +17,11 @@ import com.google.accompanist.insets.statusBarsHeight
 import com.simple.raceremote.features.bluetooth_devices.presentation.BluetoothDevicesScreen
 import com.simple.raceremote.features.BluetoothPermissionRationale
 import com.simple.raceremote.features.no_bluetooth.NoBluetoothScreen
+import com.simple.raceremote.features.remote_control.presentation.ActionsViewModel
 import com.simple.raceremote.features.remote_control.presentation.view.RemoteControlScreen
 import com.simple.raceremote.ui.views.SidePanel
+import com.simple.raceremote.utils.sidepanel.SidePanelAction
+import org.koin.androidx.compose.getViewModel
 
 private const val CONTENT_TOP_PADDING = 12
 private const val CONTENT_BOTTOM_PADDING = 24
@@ -29,15 +32,19 @@ fun AppNavHost(
     startScreen: Screens
 ) {
     val navController = rememberNavController()
-    val isSidePanelOpen = remember { mutableStateOf(false) }
     val sidePanelContent: MutableState<@Composable () -> Unit> =
         remember { mutableStateOf(value = {}) }
+    val actionsViewModel = getViewModel<ActionsViewModel>()
+    val sidePanelAction =
+        actionsViewModel.sidePanelAction.collectAsState(initial = SidePanelAction.Close)
+    val isOpened: MutableState<Boolean> =
+        remember { mutableStateOf(sidePanelAction.value == SidePanelAction.Open) }
 
     Scaffold(modifier = modifier) {
         SidePanel(
-            isOpened = isSidePanelOpen,
+            isOpened = isOpened,
             itemProvider = sidePanelContent
-        ){
+        ) {
             Column {
                 Spacer(modifier = Modifier.statusBarsHeight())
 
@@ -54,7 +61,6 @@ fun AppNavHost(
                         composable(Screens.NoBluetooth.name) { NoBluetoothScreen(navController = navController) }
                         composable(Screens.RemoteControl.name) {
                             RemoteControlScreen(
-                                isSidePanelOpen = isSidePanelOpen,
                                 sidePanelContent = sidePanelContent
                             )
                         }

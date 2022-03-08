@@ -40,5 +40,5 @@ fun getStartScreen(): Screens = with(LocalContext.current) {
 @Preview
 @Composable
 private fun ActionsPreview() {
-    Actions(Modifier, null)
+    Actions(Modifier, emptyList())
 }

@@ -7,8 +7,7 @@ import com.simple.raceremote.ui.views.DotsState
 import com.simple.raceremote.utils.sidepanel.ISidePanelActionProducer
 import com.simple.raceremote.utils.sidepanel.ISidePanelActionProvider
 import com.simple.raceremote.utils.sidepanel.SidePanelAction
-import kotlinx.coroutines.flow.Flow
-import kotlinx.coroutines.flow.MutableSharedFlow
+import kotlinx.coroutines.flow.*
 
 class ActionsViewModel(
     private val sidePanelActionProvider: ISidePanelActionProvider,
@@ -27,14 +26,10 @@ class ActionsViewModel(
             state = DotsState.Idle()
         )
     )
-    private val _actions = MutableSharedFlow<List<Action>>()
+    private val _actions = MutableStateFlow<List<Action>>(defaultActions)
 
     val sidePanelAction: Flow<SidePanelAction> get() = sidePanelActionProvider.action
     val actions: Flow<List<Action>> = _actions
-
-    init {
-        _actions.tryEmit(defaultActions)
-    }
 
     fun produceAction(action: SidePanelAction) {
         sidePanelActionProducer.produceAction(action)

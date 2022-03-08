@@ -103,7 +103,9 @@ private fun Content(
                 RoundActionButton(
                     modifier = Modifier.rotate(if (isRefreshing) rotation else INITIAL_ROTATION),
                     icon = R.drawable.ic_baseline_refresh_24
-                ) { viewModel.toggleRefreshing() }
+                ) {
+//                    viewModel.toggleRefreshing()
+                }
             }
         }
     }

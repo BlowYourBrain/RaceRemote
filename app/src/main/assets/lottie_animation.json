@@ -1,0 +1,30 @@
+[
+    {
+        "Frame 1321314493": {
+            "x": [
+                {
+                    "time": 0,
+                    "value": 769.5,
+                    "easing": "linear",
+                    "bezierParams": [
+                        0,
+                        0,
+                        1,
+                        1
+                    ]
+                },
+                {
+                    "time": 10000,
+                    "value": -426.5,
+                    "easing": "linear",
+                    "bezierParams": [
+                        0,
+                        0,
+                        1,
+                        1
+                    ]
+                }
+            ]
+        }
+    }
+]

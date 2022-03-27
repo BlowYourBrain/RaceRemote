@@ -49,6 +49,12 @@ dependencies {
     implementation(AppDependencies.appLibraries)
     implementation(AppDependencies.jetpackCompose)
     implementation(AppDependencies.koinLibraries)
+    implementation("androidx.appcompat:appcompat:1.4.1")
+    implementation("com.google.android.material:material:1.5.0")
+    implementation("androidx.constraintlayout:constraintlayout:2.1.3")
+    implementation ("com.airbnb.android:lottie:3.4.0")
+
+
 
     testImplementation(AppDependencies.testLibraries)
     androidTestImplementation(AppDependencies.androidTestLibraries)

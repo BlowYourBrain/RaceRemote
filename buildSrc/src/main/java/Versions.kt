@@ -13,7 +13,7 @@ object Versions {
     val koin = "3.1.4"
 
     //Compose
-    const val compose = "1.1.0-beta04"
+    const val compose = "1.1.0"
     val composeInsets = "0.16.0"
     val activityCompose = "1.4.0"
     val navigationCompose = "2.4.0-beta02"

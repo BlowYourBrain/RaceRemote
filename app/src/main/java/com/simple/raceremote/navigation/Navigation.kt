@@ -14,13 +14,12 @@ import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
 import com.google.accompanist.insets.navigationBarsHeight
 import com.google.accompanist.insets.statusBarsHeight
-import com.simple.raceremote.features.bluetooth_devices.presentation.BluetoothDevicesScreen
 import com.simple.raceremote.features.BluetoothPermissionRationale
+import com.simple.raceremote.features.bluetooth_devices.presentation.BluetoothDevicesScreen
 import com.simple.raceremote.features.no_bluetooth.NoBluetoothScreen
 import com.simple.raceremote.features.remote_control.presentation.ActionsViewModel
 import com.simple.raceremote.features.remote_control.presentation.view.RemoteControlScreen
 import com.simple.raceremote.ui.views.SidePanel
-import com.simple.raceremote.utils.sidepanel.SidePanelAction
 import org.koin.androidx.compose.getViewModel
 
 private const val CONTENT_TOP_PADDING = 12
@@ -35,14 +34,12 @@ fun AppNavHost(
     val sidePanelContent: MutableState<@Composable () -> Unit> =
         remember { mutableStateOf(value = {}) }
     val actionsViewModel = getViewModel<ActionsViewModel>()
-    val sidePanelAction =
-        actionsViewModel.sidePanelAction.collectAsState(initial = SidePanelAction.Close)
-    val isOpened: MutableState<Boolean> =
-        remember { mutableStateOf(sidePanelAction.value == SidePanelAction.Open) }
+    val isOpened: State<Boolean> = actionsViewModel.isPanelOpen.collectAsState(initial = false)
 
     Scaffold(modifier = modifier) {
         SidePanel(
             isOpened = isOpened,
+            updateIsOpened = { actionsViewModel.isOpened(it) },
             itemProvider = sidePanelContent
         ) {
             Column {

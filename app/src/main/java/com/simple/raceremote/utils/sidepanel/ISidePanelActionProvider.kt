@@ -4,8 +4,12 @@ import kotlinx.coroutines.flow.Flow
 
 enum class SidePanelAction {
     Open,
-    Close
+    Close;
+
+    fun isOpenAction(): Boolean = this == Open
 }
+
+fun Boolean.toSidePanelAction() = if (this) SidePanelAction.Open else SidePanelAction.Close
 
 interface ISidePanelActionProvider {
     val action: Flow<SidePanelAction>

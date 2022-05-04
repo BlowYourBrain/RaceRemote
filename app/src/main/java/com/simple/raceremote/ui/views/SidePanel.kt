@@ -30,7 +30,8 @@ private const val ELEVATION = 16
 @OptIn(ExperimentalComposeUiApi::class)
 @Composable
 fun SidePanel(
-    isOpened: MutableState<Boolean>,
+    isOpened: State<Boolean>,
+    updateIsOpened: (Boolean) -> Unit,
     itemProvider: State<@Composable () -> Unit>,
     block: @Composable () -> Unit
 ) {
@@ -52,11 +53,11 @@ fun SidePanel(
             .pointerInput(Unit) {
                 awaitPointerEventScope {
                     awaitPointerEventInfinitely(PointerEventPass.Initial) {
-                        this.changes?.firstOrNull()?.id
                         consumePointer(
+                            isOpened = isOpened,
                             sliderWidth = sliderWidth.value,
+                            updateIsOpened = updateIsOpened,
                             containerWidth = containerWidth.value,
-                            isOpened = isOpened
                         )
                     }
                 }
@@ -104,7 +105,8 @@ private fun shouldCloseSlider(
 private fun PointerEvent.consumePointer(
     sliderWidth: Int,
     containerWidth: Int,
-    isOpened: MutableState<Boolean>
+    isOpened: State<Boolean>,
+    updateIsOpened: (Boolean) -> Unit,
 ) {
     changes.firstOrNull()?.let { pointerInputChange ->
         if (
@@ -117,7 +119,7 @@ private fun PointerEvent.consumePointer(
         ) {
             //do not provide down events
             if (pointerInputChange.changedToUpIgnoreConsumed()) {
-                isOpened.value = false
+                updateIsOpened.invoke(false)
             }
 
             pointerInputChange.consumeAllChanges()

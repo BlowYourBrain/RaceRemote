@@ -16,7 +16,6 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.input.pointer.*
 import androidx.compose.ui.layout.onGloballyPositioned
 import androidx.compose.ui.unit.dp
-import com.google.accompanist.insets.statusBarsHeight
 import com.simple.raceremote.utils.awaitPointerEventInfinitely
 import com.simple.raceremote.utils.pxToDp
 
@@ -89,7 +88,6 @@ fun SidePanel(
             )
         ) {
             Column(Modifier.fillMaxSize()) {
-                Spacer(modifier = Modifier.statusBarsHeight())
                 itemProvider.value.invoke()
             }
         }

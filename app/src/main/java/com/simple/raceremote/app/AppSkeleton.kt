@@ -3,7 +3,6 @@ package com.simple.raceremote.app
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
-import com.google.accompanist.insets.ProvideWindowInsets
 import com.simple.raceremote.navigation.AppScaffold
 import com.simple.raceremote.features.remote_control.presentation.view.Actions
 import com.simple.raceremote.ui.theme.RaceRemoteTheme

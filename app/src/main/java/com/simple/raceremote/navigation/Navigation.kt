@@ -13,8 +13,6 @@ import androidx.navigation.NavOptions
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
-import com.google.accompanist.insets.navigationBarsHeight
-import com.google.accompanist.insets.statusBarsHeight
 import com.simple.raceremote.features.BluetoothPermissionRationale
 import com.simple.raceremote.features.bluetooth_devices.presentation.BluetoothDevicesScreen
 import com.simple.raceremote.features.no_bluetooth.NoBluetoothScreen
@@ -43,8 +41,6 @@ fun AppScaffold() {
             itemProvider = sidePanelContent
         ) {
             Column {
-                Spacer(modifier = Modifier.statusBarsHeight())
-
                 Box(
                     Modifier.padding(
                         top = CONTENT_TOP_PADDING.dp,
@@ -56,8 +52,6 @@ fun AppScaffold() {
                         sidePanelContent = sidePanelContent
                     )
                 }
-
-                Spacer(modifier = Modifier.navigationBarsHeight())
             }
         }
     }

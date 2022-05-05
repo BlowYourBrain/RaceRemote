@@ -19,7 +19,7 @@ val remoteControlModule = module {
     factory<IEngineMapper> { EngineMapper() }
     factory<ISteeringWheelMapper> { SteeringWheelMapper() }
     factory<ICompoundCommandCreator> { CompoundCommandCreator() }
-    factory { SidePanelActionProvider() } binds arrayOf(
+    single { SidePanelActionProvider() } binds arrayOf(
         ISidePanelActionProducer::class,
         ISidePanelActionProvider::class
     )

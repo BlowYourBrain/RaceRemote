@@ -2,15 +2,11 @@ package com.simple.raceremote.app
 
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.tooling.preview.Preview
 import com.google.accompanist.insets.ProvideWindowInsets
-import com.simple.raceremote.navigation.AppNavHost
-import com.simple.raceremote.navigation.Screens
+import com.simple.raceremote.navigation.AppScaffold
 import com.simple.raceremote.features.remote_control.presentation.view.Actions
 import com.simple.raceremote.ui.theme.RaceRemoteTheme
-import com.simple.raceremote.utils.bluetooth.hasBluetooth
-import com.simple.raceremote.utils.bluetooth.hasBluetoothPermissions
 
 
 @Preview
@@ -23,19 +19,11 @@ fun AppPreview() {
 fun App() {
     ProvideWindowInsets {
         RaceRemoteTheme(darkTheme = true) {
-            AppNavHost(startScreen = getStartScreen())
+            AppScaffold()
         }
     }
 }
 
-@Composable
-fun getStartScreen(): Screens = with(LocalContext.current) {
-    when {
-        !hasBluetooth() -> Screens.NoBluetooth
-        hasBluetoothPermissions() -> Screens.RemoteControl
-        else -> Screens.BluetoothPermissionsRationale
-    }
-}
 
 @Preview
 @Composable

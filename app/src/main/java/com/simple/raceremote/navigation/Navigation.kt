@@ -7,6 +7,7 @@ import androidx.compose.foundation.layout.padding
 import androidx.compose.material.Scaffold
 import androidx.compose.runtime.*
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.unit.dp
 import androidx.navigation.NavOptions
 import androidx.navigation.compose.NavHost
@@ -20,23 +21,22 @@ import com.simple.raceremote.features.no_bluetooth.NoBluetoothScreen
 import com.simple.raceremote.features.remote_control.presentation.ActionsViewModel
 import com.simple.raceremote.features.remote_control.presentation.view.RemoteControlScreen
 import com.simple.raceremote.ui.views.SidePanel
+import com.simple.raceremote.utils.bluetooth.hasBluetooth
+import com.simple.raceremote.utils.bluetooth.hasBluetoothPermissions
 import org.koin.androidx.compose.getViewModel
 
 private const val CONTENT_TOP_PADDING = 12
 private const val CONTENT_BOTTOM_PADDING = 24
 
 @Composable
-fun AppNavHost(
-    modifier: Modifier = Modifier,
-    startScreen: Screens
-) {
-    val navController = rememberNavController()
-    val sidePanelContent: MutableState<@Composable () -> Unit> =
-        remember { mutableStateOf(value = {}) }
+fun AppScaffold() {
     val actionsViewModel = getViewModel<ActionsViewModel>()
+    val sidePanelContent: MutableState<@Composable () -> Unit> = remember {
+        mutableStateOf(value = {})
+    }
     val isOpened: State<Boolean> = actionsViewModel.isPanelOpen.collectAsState(initial = false)
 
-    Scaffold(modifier = modifier) {
+    Scaffold() {
         SidePanel(
             isOpened = isOpened,
             updateIsOpened = { actionsViewModel.isOpened(it) },
@@ -51,38 +51,61 @@ fun AppNavHost(
                         bottom = CONTENT_BOTTOM_PADDING.dp
                     )
                 ) {
-                    NavHost(
-                        navController = navController,
-                        startDestination = startScreen.name
-                    ) {
-                        composable(Screens.NoBluetooth.name) { NoBluetoothScreen(navController = navController) }
-                        composable(Screens.RemoteControl.name) {
-                            RemoteControlScreen(
-                                sidePanelContent = sidePanelContent
-                            )
-                        }
-                        composable(Screens.BluetoothDevices.name) {
-                            BluetoothDevicesScreen(navController = navController) {
-                                navController.popBackStack()
-                            }
-                        }
-                        composable(Screens.BluetoothPermissionsRationale.name) {
-                            BluetoothPermissionRationale(
-                                onApply = {
-                                    navController.navigate(
-                                        route = Screens.RemoteControl.name,
-                                        navOptions = NavOptions.Builder()
-                                            .setLaunchSingleTop(true)
-                                            .build()
-                                    )
-                                }
-                            )
-                        }
-                    }
+                    AppScaffold(
+                        startScreen = getStartScreen(),
+                        sidePanelContent = sidePanelContent
+                    )
                 }
 
                 Spacer(modifier = Modifier.navigationBarsHeight())
             }
         }
+    }
+}
+
+@Composable
+fun AppScaffold(
+    startScreen: Screens,
+    sidePanelContent: MutableState<@Composable () -> Unit>
+) {
+    val navController = rememberNavController()
+
+    NavHost(
+        navController = navController,
+        startDestination = startScreen.name
+    ) {
+        composable(Screens.NoBluetooth.name) { NoBluetoothScreen(navController = navController) }
+        composable(Screens.RemoteControl.name) {
+            RemoteControlScreen(
+                sidePanelContent = sidePanelContent
+            )
+        }
+        composable(Screens.BluetoothDevices.name) {
+            BluetoothDevicesScreen(navController = navController) {
+                navController.popBackStack()
+            }
+        }
+        composable(Screens.BluetoothPermissionsRationale.name) {
+            BluetoothPermissionRationale(
+                onApply = {
+                    navController.navigate(
+                        route = Screens.RemoteControl.name,
+                        navOptions = NavOptions.Builder()
+                            .setLaunchSingleTop(true)
+                            .build()
+                    )
+                }
+            )
+        }
+    }
+}
+
+
+@Composable
+fun getStartScreen(): Screens = with(LocalContext.current) {
+    when {
+        !hasBluetooth() -> Screens.NoBluetooth
+        hasBluetoothPermissions() -> Screens.RemoteControl
+        else -> Screens.BluetoothPermissionsRationale
     }
 }

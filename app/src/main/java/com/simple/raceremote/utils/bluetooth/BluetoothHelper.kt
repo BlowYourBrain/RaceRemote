@@ -1,5 +1,6 @@
 package com.simple.raceremote.utils.bluetooth
 
+import android.annotation.SuppressLint
 import android.bluetooth.BluetoothDevice
 import android.bluetooth.BluetoothDevice.ACTION_FOUND
 import android.content.BroadcastReceiver
@@ -97,7 +98,7 @@ class BluetoothHelper : IBluetoothItemsProvider,
 }
 
 private class UniqueBluetoothDevicesCollector(){
-    private var bluetoothDevicesSet = mutableSetOf<BluetoothItem>()
+    private var bluetoothDevicesMacAdresses = mutableSetOf<String>()
     private var bluetoothDevicesList = mutableListOf<BluetoothItem>()
 
     fun getCollection(): List<BluetoothItem> {
@@ -105,13 +106,14 @@ private class UniqueBluetoothDevicesCollector(){
         return bluetoothDevicesList.toList()
     }
     fun tryAdd(item: BluetoothItem){
-        if (!bluetoothDevicesSet.contains(item)){
+        if (!bluetoothDevicesMacAdresses.contains(item.macAddress)){
+            bluetoothDevicesMacAdresses.add(item.macAddress)
             bluetoothDevicesList.add(item)
         }
     }
 
     fun clear(){
-        bluetoothDevicesSet = mutableSetOf()
+        bluetoothDevicesMacAdresses = mutableSetOf()
         bluetoothDevicesList = mutableListOf()
     }
 }

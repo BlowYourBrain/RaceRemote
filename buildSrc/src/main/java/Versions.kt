@@ -14,7 +14,6 @@ object Versions {
 
     //Compose
     const val compose = "1.1.1"
-    val composeInsets = "0.16.0"
     val activityCompose = "1.4.0"
     val navigationCompose = "2.4.2"
 

@@ -17,10 +17,8 @@ fun AppPreview() {
 
 @Composable
 fun App() {
-    ProvideWindowInsets {
-        RaceRemoteTheme(darkTheme = true) {
-            AppScaffold()
-        }
+    RaceRemoteTheme(darkTheme = true) {
+        AppScaffold()
     }
 }
 

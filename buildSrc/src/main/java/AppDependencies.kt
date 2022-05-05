@@ -19,8 +19,6 @@ object AppDependencies {
     private val compose = "androidx.compose.ui:ui:${Versions.compose}"
     private val materialCompose = "androidx.compose.material:material:${Versions.compose}"
     private val activityCompose = "androidx.activity:activity-compose:${Versions.activityCompose}"
-    private val composeInsets =
-        "com.google.accompanist:accompanist-insets:${Versions.composeInsets}"
     private val navigationCompose =
         "androidx.navigation:navigation-compose:${Versions.navigationCompose}"
     private val composeUITooling = "androidx.compose.ui:ui-tooling:${Versions.compose}"
@@ -48,7 +46,6 @@ object AppDependencies {
 
     val jetpackCompose = arrayListOf(
         compose,
-        composeInsets,
         materialCompose,
         activityCompose,
         navigationCompose,

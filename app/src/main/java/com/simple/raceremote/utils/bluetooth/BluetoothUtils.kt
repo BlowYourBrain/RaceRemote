@@ -6,6 +6,7 @@ import android.bluetooth.BluetoothAdapter
 import android.bluetooth.BluetoothManager
 import android.content.Context
 import android.content.Intent
+import android.os.Build
 import androidx.core.app.ActivityCompat
 import com.simple.raceremote.utils.hasPermission
 
@@ -34,7 +35,11 @@ fun enableBluetooth(activity: Activity) {
     )
 }
 
-fun getBluetoothPermissions() = arrayOf(BLUETOOTH, BLUETOOTH_ADMIN, ACCESS_FINE_LOCATION)
+fun getBluetoothPermissions() = if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.S) {
+    arrayOf(BLUETOOTH, BLUETOOTH_CONNECT, BLUETOOTH_SCAN)
+} else {
+    arrayOf(BLUETOOTH, BLUETOOTH_ADMIN, ACCESS_FINE_LOCATION)
+}
 
 fun Context.isBluetoothEnabled(): Boolean = getBluetoothAdapter()?.isEnabled ?: false
 

@@ -4,7 +4,7 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.simple.raceremote.features.bluetooth_devices.domain.BluetoothDevicesInteractor
 import com.simple.raceremote.ui.views.DotsState
-import com.simple.raceremote.utils.bluetooth.BluetoothItem
+import com.simple.raceremote.utils.bluetooth.BluetoothDevice
 import com.simple.raceremote.utils.sidepanel.ISidePanelActionProducer
 import com.simple.raceremote.utils.sidepanel.SidePanelAction
 import kotlinx.coroutines.flow.Flow
@@ -38,7 +38,7 @@ class BluetoothDevicesViewModel(
         sidePanelActionProducer.produceAction(SidePanelAction.Close)
     }
 
-    private fun BluetoothItem.mapToBluetoothEntity(): BluetoothEntity =
+    private fun BluetoothDevice.mapToBluetoothEntity(): BluetoothEntity =
         BluetoothEntity(
             name = name,
             macAddress = macAddress,

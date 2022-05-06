@@ -10,12 +10,10 @@ import kotlinx.coroutines.launch
 
 private const val ITEMS_COUNT = 21
 
-object MockBluetoothDataProvider : IBluetoothItemsProvider, IBluetoothDevicesDiscoveryController {
+object MockBluetoothDataProvider : IBluetoothDevicesProvider, IBluetoothDevicesDiscoveryController {
 
-    override val bluetoothDevices: Flow<List<BluetoothItem>>
-        get() = emitter.flow
-
-    private val emitter = Emitter<List<BluetoothItem>>(
+    private val _bluetoothDevicesDiscovery = MutableStateFlow(false)
+    private val emitter = Emitter<List<BluetoothDevice>>(
         initial = emptyList(),
         ITEMS_COUNT
     ) { emitterIndex ->
@@ -24,16 +22,23 @@ object MockBluetoothDataProvider : IBluetoothItemsProvider, IBluetoothDevicesDis
         }
     }
 
+    override val bluetoothDevices: Flow<List<BluetoothDevice>>
+        get() = emitter.flow
+
+    override val bluetoothDevicesDiscovery: Flow<Boolean> = _bluetoothDevicesDiscovery.asStateFlow()
+
     override fun findBluetoothDevices(context: Context) {
         emitter.start()
+        _bluetoothDevicesDiscovery.tryEmit(true)
     }
 
     override fun stopFindingBluetoothDevices(context: Context) {
         emitter.stop()
+        _bluetoothDevicesDiscovery.tryEmit(false)
     }
 
     private fun createBluetoothItem(index: Int) =
-        BluetoothItem("item #$index", "mac: $index", index % 2 == 0)
+        BluetoothDevice("item #$index", "mac: $index", index % 2 == 0)
 }
 
 private class Emitter<T>(

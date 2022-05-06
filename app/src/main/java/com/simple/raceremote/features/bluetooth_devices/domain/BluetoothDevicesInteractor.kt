@@ -3,10 +3,10 @@ package com.simple.raceremote.features.bluetooth_devices.domain
 import android.app.Application
 import androidx.compose.ui.unit.dp
 import com.simple.raceremote.ui.views.DotsState
-import com.simple.raceremote.utils.bluetooth.BluetoothItem
+import com.simple.raceremote.utils.bluetooth.BluetoothDevice
 import com.simple.raceremote.utils.bluetooth.IBluetoothConnection
 import com.simple.raceremote.utils.bluetooth.IBluetoothDevicesDiscoveryController
-import com.simple.raceremote.utils.bluetooth.IBluetoothItemsProvider
+import com.simple.raceremote.utils.bluetooth.IBluetoothDevicesProvider
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.asStateFlow
@@ -17,7 +17,7 @@ private const val TEXT_SIZE = 5
 
 //todo use interface
 class BluetoothDevicesInteractor(
-    repository: IBluetoothItemsProvider,
+    repository: IBluetoothDevicesProvider,
     private val application: Application,
     private val bluetoothConnection: IBluetoothConnection,
     private val controller: IBluetoothDevicesDiscoveryController
@@ -28,7 +28,7 @@ class BluetoothDevicesInteractor(
     private val _bluetoothConnectionState: MutableStateFlow<DotsState> = MutableStateFlow(DotsState.Idle())
 
     val isRefreshing: Flow<Boolean> = _isRefreshing.asStateFlow()
-    val items: Flow<List<BluetoothItem>> = repository.bluetoothDevices
+    val items: Flow<List<BluetoothDevice>> = repository.bluetoothDevices
     val bluetoothConnectionState: Flow<DotsState> = _bluetoothConnectionState.asStateFlow()
 
 

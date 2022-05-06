@@ -1,13 +1,6 @@
 package com.simple.raceremote.features.remote_control.presentation.mapper
 
 interface ISteeringWheelMapper {
-    fun mapToSteeringWheel(value: Float): Int
-}
-
-class SteeringWheelMapper : ISteeringWheelMapper {
-
-    private var y= 0
-
     /**
      * Значение для поворота колёс (руля).
      * @param value - значение от -1f до 1f.
@@ -17,6 +10,13 @@ class SteeringWheelMapper : ISteeringWheelMapper {
      *
      * @return значение от 0 до 180
      * */
+    fun mapToSteeringWheel(value: Float): Int
+}
+
+class SteeringWheelMapper : ISteeringWheelMapper {
+
+    private var y = 0
+
     override fun mapToSteeringWheel(value: Float): Int {
         //x - значение value, y - вычисляемый параметр
         // k = -90, m = 90

@@ -7,6 +7,20 @@ import android.view.MotionEvent
 //todo extract interface
 class GameController {
 
+    /***
+     * 1f  максимальный поворот вправо
+     * 0f  состояние покоя
+     * -1f максимальный поворот влево
+     */
+    var steeringWheelUpdateCallback: ((Float) -> Unit)? = null
+
+    /**
+     * 1f  максимальная скорость вперед
+     * 0f  состояние покоя
+     * -1f максимальная скорость назад
+     * */
+    var movementUpdateCallback: ((Float) -> Unit)? = null
+
     fun dispatchGenericMotionEvent(ev: MotionEvent?): Boolean = ev?.let { motionEvent ->
         val isJoystickSource =
             motionEvent.source and InputDevice.SOURCE_JOYSTICK == InputDevice.SOURCE_JOYSTICK
@@ -21,8 +35,6 @@ class GameController {
 
             // Process the current movement sample in the batch (position -1)
             processJoystickInput(motionEvent, -1)
-            true
-
         }
 
         isJoystickSource

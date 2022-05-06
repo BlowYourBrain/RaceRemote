@@ -7,32 +7,33 @@ import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.core.view.ViewCompat
-import androidx.core.view.WindowCompat
 import androidx.core.view.WindowInsetsCompat
 import androidx.core.view.WindowInsetsControllerCompat
+import com.simple.raceremote.features.remote_control.presentation.RemoteControlViewModel
 import com.simple.raceremote.utils.bluetooth.*
 import org.koin.android.ext.android.inject
 
 class MainActivity : ComponentActivity() {
 
-    private val bluetoothHelper: BluetoothHelper by inject()
     private val permissionLauncher = registerForActivityResult(
         ActivityResultContracts.RequestMultiplePermissions()
     ) { isGranted -> //todo create implementation later
     }
-
-    private val gameController = GameController()
+    private val remoteControlViewModel: RemoteControlViewModel by inject()
+    private val bluetoothHelper: BluetoothHelper by inject()
+    private val gameController: GameController by inject()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setupWindow()
         hideSystemBars()
         bluetoothHelper.bind(this)
+        setupGameController()
         setContent { App() }
     }
 
     override fun dispatchGenericMotionEvent(ev: MotionEvent?): Boolean {
-        if (gameController.dispatchGenericMotionEvent(ev)){
+        if (gameController.dispatchGenericMotionEvent(ev)) {
             return true
         }
 
@@ -54,6 +55,11 @@ class MainActivity : ComponentActivity() {
 
     private fun setupWindow() {
         requestedOrientation = ActivityInfo.SCREEN_ORIENTATION_SENSOR_LANDSCAPE
+    }
+
+    private fun setupGameController() = gameController.run {
+        movementUpdateCallback = { remoteControlViewModel.updateMovement(it) }
+        steeringWheelUpdateCallback = { remoteControlViewModel.updateSteeringWheel(it) }
     }
 
     private fun hideSystemBars() {

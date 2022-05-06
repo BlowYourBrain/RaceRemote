@@ -11,4 +11,5 @@ val appModule = module {
         BluetoothHelper::class
     )
     single<IBluetoothConnection> { BluetoothConnection(get()) }
+    factory { GameController() }
 }

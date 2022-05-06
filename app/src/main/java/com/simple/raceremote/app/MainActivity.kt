@@ -2,6 +2,7 @@ package com.simple.raceremote.app
 
 import android.content.pm.ActivityInfo
 import android.os.Bundle
+import android.view.MotionEvent
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.activity.result.contract.ActivityResultContracts
@@ -20,12 +21,22 @@ class MainActivity : ComponentActivity() {
     ) { isGranted -> //todo create implementation later
     }
 
+    private val gameController = GameController()
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setupWindow()
         hideSystemBars()
         bluetoothHelper.bind(this)
         setContent { App() }
+    }
+
+    override fun dispatchGenericMotionEvent(ev: MotionEvent?): Boolean {
+        if (gameController.dispatchGenericMotionEvent(ev)){
+            return true
+        }
+
+        return super.dispatchGenericMotionEvent(ev)
     }
 
     override fun onResume() {

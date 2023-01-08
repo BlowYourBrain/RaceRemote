@@ -20,5 +20,4 @@ class MainApplicationModule : Application() {
             modules(appModule, remoteControlModule, bluetoothDevicesModule)
         }
     }
-
 }

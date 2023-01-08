@@ -3,13 +3,14 @@ object Versions {
     //app level
     const val gradle = "7.0.4"
     const val kotlin = "1.6.10"
+    const val ktlint = "11.0.0"
 
     //libs
+    const val koin = "3.1.6"
     const val coreKtx = "1.7.0"
+    const val lifecycle = "2.4.0"
     const val appcompat = "1.4.1"
     const val material = "1.6.0-rc01"
-    const val lifecycle = "2.4.0"
-    const val koin = "3.1.6"
 
     //Compose
     const val compose = "1.1.1"

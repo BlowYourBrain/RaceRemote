@@ -1,13 +1,16 @@
 package com.simple.raceremote.features.remote_control.presentation
 
 import androidx.annotation.DrawableRes
-import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import com.simple.raceremote.R
 import com.simple.raceremote.ui.views.DotsState
-import com.simple.raceremote.utils.sidepanel.*
-import kotlinx.coroutines.channels.BufferOverflow
-import kotlinx.coroutines.flow.*
+import com.simple.raceremote.utils.sidepanel.ISidePanelActionProducer
+import com.simple.raceremote.utils.sidepanel.ISidePanelActionProvider
+import com.simple.raceremote.utils.sidepanel.SidePanelAction
+import com.simple.raceremote.utils.sidepanel.toSidePanelAction
+import kotlinx.coroutines.flow.Flow
+import kotlinx.coroutines.flow.MutableStateFlow
+import kotlinx.coroutines.flow.map
 
 class ActionsViewModel(
     private val sidePanelActionProvider: ISidePanelActionProvider,
@@ -40,9 +43,7 @@ class ActionsViewModel(
     }
 
     private fun onSettingsClick() {
-
     }
-
 }
 
 class Action(

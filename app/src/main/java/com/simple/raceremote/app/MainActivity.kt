@@ -6,10 +6,13 @@ import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.core.view.ViewCompat
-import androidx.core.view.WindowCompat
 import androidx.core.view.WindowInsetsCompat
 import androidx.core.view.WindowInsetsControllerCompat
-import com.simple.raceremote.utils.bluetooth.*
+import com.simple.raceremote.utils.bluetooth.BluetoothHelper
+import com.simple.raceremote.utils.bluetooth.enableBluetooth
+import com.simple.raceremote.utils.bluetooth.getBluetoothPermissions
+import com.simple.raceremote.utils.bluetooth.hasBluetoothPermissions
+import com.simple.raceremote.utils.bluetooth.isBluetoothEnabled
 import org.koin.android.ext.android.inject
 
 class MainActivity : ComponentActivity() {
@@ -17,7 +20,7 @@ class MainActivity : ComponentActivity() {
     private val bluetoothHelper: BluetoothHelper by inject()
     private val permissionLauncher = registerForActivityResult(
         ActivityResultContracts.RequestMultiplePermissions()
-    ) { isGranted -> //todo create implementation later
+    ) { isGranted -> // todo create implementation later
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -36,7 +39,7 @@ class MainActivity : ComponentActivity() {
                 requestBluetoothPermissions()
             }
         } else {
-            //todo сделать пояснение для пользователя, а не открывать принудительно
+            // todo сделать пояснение для пользователя, а не открывать принудительно
             enableBluetooth(this)
         }
     }

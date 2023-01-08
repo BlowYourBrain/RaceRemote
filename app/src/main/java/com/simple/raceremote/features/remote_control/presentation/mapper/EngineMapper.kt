@@ -26,11 +26,10 @@ class EngineMapper : IEngineMapper {
      * @return значение от 0 до 511.
      * */
     override fun mapToEngineValue(value: Float): Int {
-        //y = kx + m
-        //k = m = 511 / 2
+        // y = kx + m
+        // k = m = 511 / 2
         y = (511 * (value + 1) / 2).toInt()
 
         return minOf(maxOf(0, y), 511)
     }
-
 }

@@ -1,6 +1,13 @@
 package com.simple.raceremote.features.remote_control.presentation.view
 
-import androidx.compose.foundation.layout.*
+import androidx.compose.foundation.layout.Arrangement
+import androidx.compose.foundation.layout.Box
+import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.Row
+import androidx.compose.foundation.layout.Spacer
+import androidx.compose.foundation.layout.height
+import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.layout.width
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.MutableState
 import androidx.compose.runtime.collectAsState
@@ -15,7 +22,11 @@ import com.simple.raceremote.features.remote_control.presentation.RemoteControlV
 import com.simple.raceremote.ui.theme.CornerShapes
 import com.simple.raceremote.ui.theme.Padding
 import com.simple.raceremote.ui.theme.Size
-import com.simple.raceremote.ui.views.*
+import com.simple.raceremote.ui.views.ActionButton
+import com.simple.raceremote.ui.views.DotsState
+import com.simple.raceremote.ui.views.FlatLoadingWithContent
+import com.simple.raceremote.ui.views.Orientation
+import com.simple.raceremote.ui.views.Slider
 import org.koin.androidx.compose.getViewModel
 
 @Composable

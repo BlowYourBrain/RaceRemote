@@ -6,7 +6,10 @@ import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
 import androidx.compose.material.MaterialTheme
 import androidx.compose.material.Text
-import androidx.compose.runtime.*
+import androidx.compose.runtime.Composable
+import androidx.compose.runtime.State
+import androidx.compose.runtime.mutableStateOf
+import androidx.compose.runtime.remember
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
@@ -15,7 +18,6 @@ import com.simple.raceremote.features.bluetooth_devices.presentation.BluetoothEn
 import com.simple.raceremote.ui.theme.Padding
 import com.simple.raceremote.ui.views.BluetoothItemCard
 import com.simple.raceremote.ui.views.DotsState
-import com.simple.raceremote.ui.views.FlatLoadingWithContent
 
 private const val DOTS_LOADING_HEIGHT = 14
 

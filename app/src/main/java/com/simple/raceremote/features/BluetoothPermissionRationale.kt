@@ -59,7 +59,6 @@ fun BluetoothPermissionRationale(
             }
         }
     }
-
 }
 
 @Composable

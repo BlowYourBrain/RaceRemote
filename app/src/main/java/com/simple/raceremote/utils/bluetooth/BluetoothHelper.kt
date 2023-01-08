@@ -1,6 +1,5 @@
 package com.simple.raceremote.utils.bluetooth
 
-import android.annotation.SuppressLint
 import android.bluetooth.BluetoothDevice
 import android.bluetooth.BluetoothDevice.ACTION_FOUND
 import android.content.BroadcastReceiver
@@ -18,7 +17,8 @@ import kotlinx.coroutines.flow.asSharedFlow
 /**
  * Must be registered in [ComponentActivity] lifecycle.
  * */
-class BluetoothHelper : IBluetoothItemsProvider,
+class BluetoothHelper :
+    IBluetoothItemsProvider,
     IBluetoothDevicesDiscoveryController,
     LifecycleEventObserver {
 
@@ -63,7 +63,7 @@ class BluetoothHelper : IBluetoothItemsProvider,
         }
     }
 
-    fun bind(activity: ComponentActivity){
+    fun bind(activity: ComponentActivity) {
         activity.lifecycle.addObserver(this)
     }
 
@@ -97,22 +97,22 @@ class BluetoothHelper : IBluetoothItemsProvider,
     }
 }
 
-private class UniqueBluetoothDevicesCollector(){
+private class UniqueBluetoothDevicesCollector() {
     private var bluetoothDevicesMacAdresses = mutableSetOf<String>()
     private var bluetoothDevicesList = mutableListOf<BluetoothItem>()
 
     fun getCollection(): List<BluetoothItem> {
-        //creates new collection to make internal state immutable from outer source
+        // creates new collection to make internal state immutable from outer source
         return bluetoothDevicesList.toList()
     }
-    fun tryAdd(item: BluetoothItem){
-        if (!bluetoothDevicesMacAdresses.contains(item.macAddress)){
+    fun tryAdd(item: BluetoothItem) {
+        if (!bluetoothDevicesMacAdresses.contains(item.macAddress)) {
             bluetoothDevicesMacAdresses.add(item.macAddress)
             bluetoothDevicesList.add(item)
         }
     }
 
-    fun clear(){
+    fun clear() {
         bluetoothDevicesMacAdresses = mutableSetOf()
         bluetoothDevicesList = mutableListOf()
     }

@@ -4,7 +4,11 @@ import androidx.annotation.DrawableRes
 import androidx.compose.foundation.Canvas
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
-import androidx.compose.foundation.layout.*
+import androidx.compose.foundation.layout.Arrangement
+import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.Row
+import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.foundation.layout.size
 import androidx.compose.material.MaterialTheme
 import androidx.compose.material.MaterialTheme.colors
 import androidx.compose.runtime.Composable
@@ -28,12 +32,12 @@ import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.tooling.preview.Preview
 import com.simple.raceremote.R
 import com.simple.raceremote.ui.theme.Size.HugeIcon
-import com.simple.raceremote.utils.debug
 import com.simple.raceremote.ui.views.Orientation.Horizontal.iconLeft
 import com.simple.raceremote.ui.views.Orientation.Horizontal.iconRight
 import com.simple.raceremote.ui.views.Orientation.Vertical.iconDown
 import com.simple.raceremote.ui.views.Orientation.Vertical.iconUp
 import com.simple.raceremote.utils.awaitPointerEventInfinitely
+import com.simple.raceremote.utils.debug
 
 private const val UNDEFINED = -1f
 private const val NO_OFFSET = 0f

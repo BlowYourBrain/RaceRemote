@@ -1,34 +1,32 @@
-import org.gradle.api.artifacts.dsl.DependencyHandler
-
 object AppDependencies {
     //std lib
-    val kotlinStdLib = "org.jetbrains.kotlin:kotlin-stdlib-jdk7:${Versions.kotlin}"
+    const val kotlinStdLib = "org.jetbrains.kotlin:kotlin-stdlib-jdk7:${Versions.kotlin}"
 
     //android
-    private val coreKtx = "androidx.core:core-ktx:${Versions.coreKtx}"
-    private val appcompat = "androidx.appcompat:appcompat:${Versions.appcompat}"
-    private val material = "com.google.android.material:material:${Versions.material}"
-    private val lifecycle = "androidx.lifecycle:lifecycle-runtime-ktx:${Versions.lifecycle}"
+    private const val coreKtx = "androidx.core:core-ktx:${Versions.coreKtx}"
+    private const val appcompat = "androidx.appcompat:appcompat:${Versions.appcompat}"
+    private const val material = "com.google.android.material:material:${Versions.material}"
+    private const val lifecycle = "androidx.lifecycle:lifecycle-runtime-ktx:${Versions.lifecycle}"
     
     //koin
-    private val koin = "io.insert-koin:koin-core:${Versions.koin}"
-    private val koinAndroid = "io.insert-koin:koin-android:${Versions.koin}"
-    private val koinCompose = "io.insert-koin:koin-androidx-compose:${Versions.koin}"
+    private const val koin = "io.insert-koin:koin-core:${Versions.koin}"
+    private const val koinAndroid = "io.insert-koin:koin-android:${Versions.koin}"
+    private const val koinCompose = "io.insert-koin:koin-androidx-compose:${Versions.koin}"
 
     //compose
-    private val compose = "androidx.compose.ui:ui:${Versions.compose}"
-    private val materialCompose = "androidx.compose.material:material:${Versions.compose}"
-    private val activityCompose = "androidx.activity:activity-compose:${Versions.activityCompose}"
-    private val navigationCompose =
+    private const val compose = "androidx.compose.ui:ui:${Versions.compose}"
+    private const val materialCompose = "androidx.compose.material:material:${Versions.compose}"
+    private const val activityCompose = "androidx.activity:activity-compose:${Versions.activityCompose}"
+    private const val navigationCompose =
         "androidx.navigation:navigation-compose:${Versions.navigationCompose}"
-    private val composeUITooling = "androidx.compose.ui:ui-tooling:${Versions.compose}"
+    private const val composeUITooling = "androidx.compose.ui:ui-tooling:${Versions.compose}"
 
     //test libs
-    private val junit = "junit:junit:${Versions.junit}"
-    private val extJUnit = "androidx.test.ext:junit:${Versions.extJunit}"
-    private val espressoCore = "androidx.test.espresso:espresso-core:${Versions.espresso}"
-    private val composeJUnit = "androidx.compose.ui:ui-test-junit4:${Versions.compose}"
-    private val koinTest = "io.insert-koin:koin-test:${Versions.koin}"
+    private const val junit = "junit:junit:${Versions.junit}"
+    private const val extJUnit = "androidx.test.ext:junit:${Versions.extJunit}"
+    private const val espressoCore = "androidx.test.espresso:espresso-core:${Versions.espresso}"
+    private const val composeJUnit = "androidx.compose.ui:ui-test-junit4:${Versions.compose}"
+    private const val koinTest = "io.insert-koin:koin-test:${Versions.koin}"
 
     val appLibraries = arrayListOf(
         coreKtx,
@@ -62,29 +60,4 @@ object AppDependencies {
         junit,
         koinTest,
     )
-}
-
-//util functions for adding the different type dependencies from build.gradle file
-fun DependencyHandler.kapt(list: List<String>) {
-    list.forEach { dependency ->
-        add("kapt", dependency)
-    }
-}
-
-fun DependencyHandler.implementation(list: List<String>) {
-    list.forEach { dependency ->
-        add("implementation", dependency)
-    }
-}
-
-fun DependencyHandler.androidTestImplementation(list: List<String>) {
-    list.forEach { dependency ->
-        add("androidTestImplementation", dependency)
-    }
-}
-
-fun DependencyHandler.testImplementation(list: List<String>) {
-    list.forEach { dependency ->
-        add("testImplementation", dependency)
-    }
 }

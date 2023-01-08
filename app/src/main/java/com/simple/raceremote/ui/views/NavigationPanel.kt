@@ -32,5 +32,4 @@ fun NavigationPanel(
 
         content?.invoke()
     }
-
 }

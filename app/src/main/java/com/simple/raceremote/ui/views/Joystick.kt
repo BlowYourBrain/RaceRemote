@@ -1,6 +1,10 @@
 package com.simple.raceremote.ui.views
 
-import android.view.MotionEvent.*
+import android.view.KeyEvent.ACTION_DOWN
+import android.view.KeyEvent.ACTION_UP
+import android.view.MotionEvent.ACTION_CANCEL
+import android.view.MotionEvent.ACTION_MOVE
+import android.view.MotionEvent.ACTION_POINTER_UP
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.aspectRatio
@@ -27,7 +31,7 @@ import kotlin.math.roundToInt
 import kotlin.math.sin
 import kotlin.math.sqrt
 
-//TODO обработать TOUCH в pointerInput, а не через pointerInteropFilter
+// TODO обработать TOUCH в pointerInput, а не через pointerInteropFilter
 /**
  * [onUpdateStickPosition] (Float, Float) - лямбда, вызываемая при изменении позиции стика.
  * Значения в первом и втором параметре меняются от -1f до 1f.

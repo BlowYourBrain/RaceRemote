@@ -4,8 +4,8 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.simple.raceremote.features.remote_control.presentation.mapper.IEngineMapper
 import com.simple.raceremote.features.remote_control.presentation.mapper.ISteeringWheelMapper
-import com.simple.raceremote.utils.bluetooth.IBluetoothConnection
 import com.simple.raceremote.features.remote_control.utils.ICompoundCommandCreator
+import com.simple.raceremote.utils.bluetooth.IBluetoothConnection
 import com.simple.raceremote.utils.debug
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.flow.MutableStateFlow
@@ -46,5 +46,4 @@ class RemoteControlViewModel(
             )
         )
     }
-
 }

@@ -1,12 +1,9 @@
 package com.simple.raceremote.utils.bluetooth
 
-import android.annotation.SuppressLint
 import android.bluetooth.BluetoothSocket
 import android.content.Context
 import com.simple.raceremote.utils.debug
-import kotlinx.coroutines.CoroutineScope
-import kotlinx.coroutines.launch
-import java.util.*
+import java.util.UUID
 
 interface IBluetoothConnection {
 
@@ -18,13 +15,12 @@ interface IBluetoothConnection {
     suspend fun connectWithDevice(context: Context, macAddress: String, uuid: UUID): String?
 
     fun closeConnection()
-
 }
 
 class BluetoothConnection(
     private val bluetoothDiscoveryController: IBluetoothDevicesDiscoveryController
 ) : IBluetoothConnection {
-    private companion object{
+    private companion object {
         const val clearFirst8Bytes = 0b0000_0000_1111_1111
     }
 
@@ -42,22 +38,23 @@ class BluetoothConnection(
 
         val remoteDevice = context.getBluetoothAdapter()?.getRemoteDevice(macAddress) ?: return null
 
-        //******************************************************************************************
-        //bluetooth connection solution -> https://www.it1228.com/74366.html
+        // ******************************************************************************************
+        // bluetooth connection solution -> https://www.it1228.com/74366.html
         bluetoothSocket = remoteDevice.javaClass.getMethod(
-            "createRfcommSocket", *arrayOf<Class<*>?>(
+            "createRfcommSocket",
+            *arrayOf<Class<*>?>(
                 Int::class.javaPrimitiveType
             )
         ).invoke(remoteDevice, 1) as BluetoothSocket
-        //******************************************************************************************
+        // ******************************************************************************************
 
-            kotlin.runCatching {
-                bluetoothSocket?.connect()
-                debug("bluetooth connection established")
-            }.onFailure {
-                debug(it.localizedMessage.orEmpty())
-                debug("bluetooth connection failed")
-            }
+        kotlin.runCatching {
+            bluetoothSocket?.connect()
+            debug("bluetooth connection established")
+        }.onFailure {
+            debug(it.localizedMessage.orEmpty())
+            debug("bluetooth connection failed")
+        }
         return remoteDevice.name
     }
 

@@ -5,7 +5,6 @@ import com.simple.raceremote.features.remote_control.presentation.mapper.Steerin
 import org.junit.Assert
 import org.junit.Test
 
-
 class SteeringWheelMapperTest {
 
     private val mapper: ISteeringWheelMapper = SteeringWheelMapper()
@@ -15,51 +14,51 @@ class SteeringWheelMapperTest {
 
     @Test
     fun `value lower than -1f`() {
-        //given
+        // given
         val given = -2f
-        //when
+        // when
         val mappedValue = mapper.mapToSteeringWheel(given)
-        //then
+        // then
         Assert.assertEquals(MAX_VALUE, mappedValue)
     }
 
     @Test
     fun `value higher than 1f`() {
-        //given
+        // given
         val given = 2f
-        //when
+        // when
         val mappedValue = mapper.mapToSteeringWheel(given)
-        //then
+        // then
         Assert.assertEquals(MIN_VALUE, mappedValue)
     }
 
     @Test
     fun `value is 0f`() {
-        //given
+        // given
         val given = 0f
-        //when
+        // when
         val mappedValue = mapper.mapToSteeringWheel(given)
-        //then
+        // then
         Assert.assertEquals(MIDDLE_VALUE, mappedValue)
     }
 
     @Test
     fun `value is -1f`() {
-        //given
+        // given
         val given = -1f
-        //when
+        // when
         val mappedValue = mapper.mapToSteeringWheel(given)
-        //then
+        // then
         Assert.assertEquals(MAX_VALUE, mappedValue)
     }
 
     @Test
     fun `value lower than 1f`() {
-        //given
+        // given
         val given = 1f
-        //when
+        // when
         val mappedValue = mapper.mapToSteeringWheel(given)
-        //then
+        // then
         Assert.assertEquals(MIN_VALUE, mappedValue)
     }
 }

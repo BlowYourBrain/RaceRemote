@@ -10,12 +10,12 @@ import com.simple.raceremote.utils.bluetooth.IBluetoothItemsProvider
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.asStateFlow
-import java.util.*
+import java.util.UUID
 
 private const val UUID_STR = "4ab19e4e-e6c1-43ba-b9cd-0b19777da670"
 private const val TEXT_SIZE = 5
 
-//todo use interface
+// todo use interface
 class BluetoothDevicesInteractor(
     repository: IBluetoothItemsProvider,
     private val application: Application,
@@ -30,7 +30,6 @@ class BluetoothDevicesInteractor(
     val isRefreshing: Flow<Boolean> = _isRefreshing.asStateFlow()
     val items: Flow<List<BluetoothItem>> = repository.bluetoothDevices
     val bluetoothConnectionState: Flow<DotsState> = _bluetoothConnectionState.asStateFlow()
-
 
     fun setFinding(isFinding: Boolean) {
         if (isFinding) startFinding() else stopFinding()

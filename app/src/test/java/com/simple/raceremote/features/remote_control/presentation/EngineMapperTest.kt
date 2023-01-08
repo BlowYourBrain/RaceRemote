@@ -2,7 +2,7 @@ package com.simple.raceremote.features.remote_control.presentation
 
 import com.simple.raceremote.features.remote_control.presentation.mapper.EngineMapper
 import com.simple.raceremote.features.remote_control.presentation.mapper.IEngineMapper
-import org.junit.Assert.*
+import junit.framework.Assert.assertEquals
 import org.junit.Test
 
 class EngineMapperTest {
@@ -36,15 +36,14 @@ class EngineMapperTest {
     }
 
     @Test
-    fun `value is 0f`(){
+    fun `value is 0f`() {
         val given = 0f
         assertEquals(255, mapper.mapToEngineValue(given))
     }
 
     @Test
-    fun `value is 0,5f`(){
+    fun `value is 0,5f`() {
         val given = 0.5f
         assertEquals(383, mapper.mapToEngineValue(given))
     }
-
 }

@@ -17,16 +17,12 @@ interface IBluetoothConnection {
     fun closeConnection()
 }
 
-class BluetoothConnection(
-    private val bluetoothDiscoveryController: IBluetoothDevicesDiscoveryController
-) : IBluetoothConnection {
+class BluetoothConnection() : IBluetoothConnection {
     private companion object {
         const val clearFirst8Bytes = 0b0000_0000_1111_1111
     }
 
     private var bluetoothSocket: BluetoothSocket? = null
-
-    private val inStream get() = bluetoothSocket?.inputStream
     private val outputStream get() = bluetoothSocket?.outputStream
 
     override suspend fun connectWithDevice(
@@ -34,8 +30,6 @@ class BluetoothConnection(
         macAddress: String,
         uuid: UUID
     ): String? {
-        bluetoothDiscoveryController.stopFindingBluetoothDevices(context)
-
         val remoteDevice = context.getBluetoothAdapter()?.getRemoteDevice(macAddress) ?: return null
 
         // ******************************************************************************************
@@ -60,9 +54,6 @@ class BluetoothConnection(
 
     override suspend fun sendMessage(bytes: Int) {
         kotlin.runCatching {
-            debug("outputStream is ${if (outputStream == null) "" else "not"} null")
-            debug("send command: ${bytes.toString(2)}")
-
             with(commandToByteSequence(bytes)) {
                 outputStream?.write(startCommand)
                 outputStream?.write(endCommand)

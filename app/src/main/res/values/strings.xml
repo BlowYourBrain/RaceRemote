@@ -1,10 +1,7 @@
 <resources>
     <string name="app_name">RaceRemote</string>
-    <string name="find_bluetooth_devices">Поиск bluetooth устройств</string>
     <string name="bluetooth_permissions_explanation">Для корректной работы приложения требуются разрешения работы с Bluetooth.</string>
     <string name="apply_permission">ОК</string>
     <string name="decline_permission">ОТМЕНА</string>
     <string name="back_button">Назад</string>
-    <string name="bluetooth_not_found">Не найден модуль bluetooth на устройстве.</string>
-    <string name="exit">Выйти</string>
 </resources>

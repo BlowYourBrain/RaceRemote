@@ -1,52 +1,63 @@
 package com.simple.raceremote.app
 
+import android.app.Activity
+import android.bluetooth.BluetoothDevice
+import android.companion.CompanionDeviceManager
+import android.content.Intent
 import android.content.pm.ActivityInfo
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
-import androidx.activity.result.contract.ActivityResultContracts
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import androidx.core.view.WindowInsetsControllerCompat
-import com.simple.raceremote.utils.bluetooth.BluetoothHelper
+import androidx.lifecycle.lifecycleScope
+import com.simple.raceremote.features.remote_control.presentation.ActionsViewModel
+import com.simple.raceremote.features.remote_control.presentation.IRemoteDeviceFinding
 import com.simple.raceremote.utils.bluetooth.enableBluetooth
-import com.simple.raceremote.utils.bluetooth.getBluetoothPermissions
-import com.simple.raceremote.utils.bluetooth.hasBluetoothPermissions
-import com.simple.raceremote.utils.bluetooth.isBluetoothEnabled
+import com.simple.raceremote.utils.debug
+import kotlinx.coroutines.flow.collect
+import kotlinx.coroutines.flow.filterNotNull
 import org.koin.android.ext.android.inject
+import org.koin.androidx.viewmodel.ext.android.viewModel
 
 class MainActivity : ComponentActivity() {
 
-    private val bluetoothHelper: BluetoothHelper by inject()
-    private val permissionLauncher = registerForActivityResult(
-        ActivityResultContracts.RequestMultiplePermissions()
-    ) { isGranted -> // todo create implementation later
+    companion object {
+        private const val REQUEST_ENABLE_BT = 40
+        private const val SELECT_DEVICE_REQUEST_CODE = 100500
     }
+
+    private val actionsViewModel: ActionsViewModel by viewModel()
+    private val remoteDeviceFinding: IRemoteDeviceFinding by inject<IRemoteDeviceFinding>()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setupWindow()
         hideSystemBars()
-        bluetoothHelper.bind(this)
-        setContent { App() }
-    }
+        setupViewModel()
 
-    override fun onResume() {
-        super.onResume()
-
-        if (isBluetoothEnabled()) {
-            if (!hasBluetoothPermissions()) {
-                requestBluetoothPermissions()
-            }
-        } else {
-            // todo сделать пояснение для пользователя, а не открывать принудительно
-            enableBluetooth(this)
+        setContent {
+            App(onEnableBluetoothAction = { enableBluetooth(REQUEST_ENABLE_BT, this) })
         }
     }
 
     private fun setupWindow() {
         requestedOrientation = ActivityInfo.SCREEN_ORIENTATION_SENSOR_LANDSCAPE
     }
+
+    private fun setupViewModel() {
+        lifecycleScope.launchWhenResumed {
+            actionsViewModel.onActionCLick.filterNotNull().collect { remoteDevice ->
+                remoteDeviceFinding.findBluetoothDevices(
+                    this@MainActivity,
+                    remoteDevice,
+                    SELECT_DEVICE_REQUEST_CODE
+                )
+            }
+        }
+    }
+
 
     private fun hideSystemBars() {
         val windowInsetsController =
@@ -56,7 +67,18 @@ class MainActivity : ComponentActivity() {
         windowInsetsController.hide(WindowInsetsCompat.Type.systemBars())
     }
 
-    private fun requestBluetoothPermissions() {
-        permissionLauncher.launch(getBluetoothPermissions())
+    override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
+        when (requestCode) {
+            SELECT_DEVICE_REQUEST_CODE -> when (resultCode) {
+                Activity.RESULT_OK -> {
+                    // The user chose to pair the app with a Bluetooth device.
+                    val deviceToPair: BluetoothDevice? =
+                        data?.getParcelableExtra(CompanionDeviceManager.EXTRA_DEVICE)
+
+                    debug("found device $deviceToPair", "fuck")
+                }
+            }
+            else -> super.onActivityResult(requestCode, resultCode, data)
+        }
     }
 }

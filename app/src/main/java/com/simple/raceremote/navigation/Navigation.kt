@@ -18,8 +18,6 @@ import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
 import com.simple.raceremote.features.BluetoothPermissionRationale
-import com.simple.raceremote.features.bluetooth_devices.presentation.BluetoothDevicesScreen
-import com.simple.raceremote.features.no_bluetooth.NoBluetoothScreen
 import com.simple.raceremote.features.remote_control.presentation.ActionsViewModel
 import com.simple.raceremote.features.remote_control.presentation.view.RemoteControlScreen
 import com.simple.raceremote.ui.views.SidePanel
@@ -31,7 +29,9 @@ private const val CONTENT_TOP_PADDING = 12
 private const val CONTENT_BOTTOM_PADDING = 24
 
 @Composable
-fun AppScaffold() {
+fun AppScaffold(
+    onEnableBluetoothAction: (() -> Unit)? = null,
+) {
     val actionsViewModel = getViewModel<ActionsViewModel>()
     val sidePanelContent: MutableState<@Composable () -> Unit> = remember {
         mutableStateOf(value = {})
@@ -53,7 +53,8 @@ fun AppScaffold() {
                 ) {
                     AppScaffold(
                         startScreen = getStartScreen(),
-                        sidePanelContent = sidePanelContent
+                        sidePanelContent = sidePanelContent,
+                        onEnableBluetoothAction = onEnableBluetoothAction
                     )
                 }
             }
@@ -64,7 +65,8 @@ fun AppScaffold() {
 @Composable
 fun AppScaffold(
     startScreen: Screens,
-    sidePanelContent: MutableState<@Composable () -> Unit>
+    sidePanelContent: MutableState<@Composable () -> Unit>,
+    onEnableBluetoothAction: (() -> Unit)? = null,
 ) {
     val navController = rememberNavController()
 
@@ -72,16 +74,11 @@ fun AppScaffold(
         navController = navController,
         startDestination = startScreen.name
     ) {
-        composable(Screens.NoBluetooth.name) { NoBluetoothScreen(navController = navController) }
         composable(Screens.RemoteControl.name) {
             RemoteControlScreen(
-                sidePanelContent = sidePanelContent
+                sidePanelContent = sidePanelContent,
+                onEnableBluetoothAction = onEnableBluetoothAction,
             )
-        }
-        composable(Screens.BluetoothDevices.name) {
-            BluetoothDevicesScreen(navController = navController) {
-                navController.popBackStack()
-            }
         }
         composable(Screens.BluetoothPermissionsRationale.name) {
             BluetoothPermissionRationale(
@@ -92,7 +89,8 @@ fun AppScaffold(
                             .setLaunchSingleTop(true)
                             .build()
                     )
-                }
+                },
+                onDismiss = { navController.popBackStack() }
             )
         }
     }
@@ -101,7 +99,6 @@ fun AppScaffold(
 @Composable
 fun getStartScreen(): Screens = with(LocalContext.current) {
     when {
-        !hasBluetooth() -> Screens.NoBluetooth
         hasBluetoothPermissions() -> Screens.RemoteControl
         else -> Screens.BluetoothPermissionsRationale
     }

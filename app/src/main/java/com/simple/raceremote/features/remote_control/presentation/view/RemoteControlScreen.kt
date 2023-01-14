@@ -15,7 +15,6 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.unit.dp
-import com.simple.raceremote.features.bluetooth_devices.presentation.BluetoothDevicesViewModel
 import com.simple.raceremote.features.remote_control.presentation.Action
 import com.simple.raceremote.features.remote_control.presentation.ActionsViewModel
 import com.simple.raceremote.features.remote_control.presentation.RemoteControlViewModel
@@ -31,20 +30,19 @@ import org.koin.androidx.compose.getViewModel
 
 @Composable
 fun RemoteControlScreen(
-    modifier: Modifier = Modifier,
-    sidePanelContent: MutableState<@Composable () -> Unit>
+    sidePanelContent: MutableState<@Composable () -> Unit>,
+    onEnableBluetoothAction: (() -> Unit)? = null,
 ) {
     val actionsViewModel = getViewModel<ActionsViewModel>()
     val remoteControlViewModel = getViewModel<RemoteControlViewModel>()
-    val bluetoothDevicesViewModel = getViewModel<BluetoothDevicesViewModel>()
 
     val actions = actionsViewModel.actions.collectAsState(initial = emptyList())
-    val entities = bluetoothDevicesViewModel.items.collectAsState(initial = emptyList())
-    val isRefreshing = bluetoothDevicesViewModel.isRefreshing.collectAsState(initial = false)
+    val enableBluetoothAction =
+        actionsViewModel.enableBluetoothAction.collectAsState(initial = null)
 
-    sidePanelContent.value = @Composable { BluetoothContentSidePanel(isRefreshing, entities) }
+    enableBluetoothAction.value?.let { onEnableBluetoothAction?.invoke() }
 
-    Column(modifier = modifier, horizontalAlignment = Alignment.CenterHorizontally) {
+    Column(modifier = Modifier, horizontalAlignment = Alignment.CenterHorizontally) {
         Actions(actions = actions.value)
         Controllers(
             { remoteControlViewModel.updateSteeringWheel(it) },
@@ -71,7 +69,7 @@ fun Actions(
             ) {
                 ActionButton(
                     icon = action.icon,
-                    onClick = action.onClick
+                    onClick = { action.onClick() }
                 )
             }
         }

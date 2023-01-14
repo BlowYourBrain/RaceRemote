@@ -3,10 +3,7 @@ package com.simple.raceremote.features.bluetooth_devices.domain
 import android.app.Application
 import androidx.compose.ui.unit.dp
 import com.simple.raceremote.ui.views.DotsState
-import com.simple.raceremote.utils.bluetooth.BluetoothItem
 import com.simple.raceremote.utils.bluetooth.IBluetoothConnection
-import com.simple.raceremote.utils.bluetooth.IBluetoothDevicesDiscoveryController
-import com.simple.raceremote.utils.bluetooth.IBluetoothItemsProvider
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.asStateFlow
@@ -17,10 +14,8 @@ private const val TEXT_SIZE = 5
 
 // todo use interface
 class BluetoothDevicesInteractor(
-    repository: IBluetoothItemsProvider,
     private val application: Application,
-    private val bluetoothConnection: IBluetoothConnection,
-    private val controller: IBluetoothDevicesDiscoveryController
+    private val bluetoothConnection: IBluetoothConnection
 ) {
 
     private val uuid = UUID.fromString(UUID_STR)
@@ -28,7 +23,6 @@ class BluetoothDevicesInteractor(
     private val _bluetoothConnectionState: MutableStateFlow<DotsState> = MutableStateFlow(DotsState.Idle())
 
     val isRefreshing: Flow<Boolean> = _isRefreshing.asStateFlow()
-    val items: Flow<List<BluetoothItem>> = repository.bluetoothDevices
     val bluetoothConnectionState: Flow<DotsState> = _bluetoothConnectionState.asStateFlow()
 
     fun setFinding(isFinding: Boolean) {
@@ -46,11 +40,9 @@ class BluetoothDevicesInteractor(
 
     private fun startFinding() {
         _isRefreshing.tryEmit(true)
-        controller.findBluetoothDevices(application)
     }
 
     private fun stopFinding() {
         _isRefreshing.tryEmit(false)
-        controller.stopFindingBluetoothDevices(application)
     }
 }

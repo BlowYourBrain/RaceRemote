@@ -1,7 +1,7 @@
 //version constants for the Kotlin DSL dependencies
 object Versions {
     //app level
-    const val gradle = "7.0.4"
+    const val gradle = "7.4.0"
     const val kotlin = "1.6.10"
     const val ktlint = "11.0.0"
 

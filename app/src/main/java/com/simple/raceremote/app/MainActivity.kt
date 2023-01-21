@@ -12,24 +12,25 @@ import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import androidx.core.view.WindowInsetsControllerCompat
 import androidx.lifecycle.lifecycleScope
+import com.simple.raceremote.features.bluetooth_devices.presentation.BluetoothDevicesViewModel
 import com.simple.raceremote.features.remote_control.presentation.ActionsViewModel
-import com.simple.raceremote.features.remote_control.presentation.IRemoteDeviceFinding
 import com.simple.raceremote.utils.bluetooth.enableBluetooth
+import com.simple.raceremote.utils.bluetooth.getBluetoothPermissions
 import com.simple.raceremote.utils.debug
 import kotlinx.coroutines.flow.collect
 import kotlinx.coroutines.flow.filterNotNull
-import org.koin.android.ext.android.inject
 import org.koin.androidx.viewmodel.ext.android.viewModel
 
 class MainActivity : ComponentActivity() {
 
     companion object {
         private const val REQUEST_ENABLE_BT = 40
+        private const val REQUEST_BLUETOOTH_PERMISSIONS = 50
         private const val SELECT_DEVICE_REQUEST_CODE = 100500
     }
 
     private val actionsViewModel: ActionsViewModel by viewModel()
-    private val remoteDeviceFinding: IRemoteDeviceFinding by inject<IRemoteDeviceFinding>()
+    private val bluetoothViewModel: BluetoothDevicesViewModel by viewModel()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -48,16 +49,22 @@ class MainActivity : ComponentActivity() {
 
     private fun setupViewModel() {
         lifecycleScope.launchWhenResumed {
-            actionsViewModel.onActionCLick.filterNotNull().collect { remoteDevice ->
-                remoteDeviceFinding.findBluetoothDevices(
-                    this@MainActivity,
-                    remoteDevice,
-                    SELECT_DEVICE_REQUEST_CODE
+            actionsViewModel.onActionCLick.collect { remoteDevice ->
+                bluetoothViewModel.findBluetoothDevices(
+                    this@MainActivity, remoteDevice, SELECT_DEVICE_REQUEST_CODE
+                )
+            }
+        }
+
+        lifecycleScope.launchWhenResumed {
+            bluetoothViewModel.requestBluetoothPermissions.collect {
+                requestPermissions(
+                    getBluetoothPermissions().toTypedArray(),
+                    REQUEST_BLUETOOTH_PERMISSIONS
                 )
             }
         }
     }
-
 
     private fun hideSystemBars() {
         val windowInsetsController =
@@ -71,14 +78,21 @@ class MainActivity : ComponentActivity() {
         when (requestCode) {
             SELECT_DEVICE_REQUEST_CODE -> when (resultCode) {
                 Activity.RESULT_OK -> {
-                    // The user chose to pair the app with a Bluetooth device.
-                    val deviceToPair: BluetoothDevice? =
-                        data?.getParcelableExtra(CompanionDeviceManager.EXTRA_DEVICE)
+                    val macAddress = retrieveBluetoothMacAddress(data) ?: kotlin.run {
+                        debug("device macAddress is null")
+                        return
+                    }
 
-                    debug("found device $deviceToPair", "fuck")
+                    debug("found device with address $macAddress")
+
+                    bluetoothViewModel.connect(this, REQUEST_ENABLE_BT, macAddress)
                 }
             }
             else -> super.onActivityResult(requestCode, resultCode, data)
         }
+    }
+
+    private fun retrieveBluetoothMacAddress(data: Intent?): String? {
+        return data?.getParcelableExtra<BluetoothDevice>(CompanionDeviceManager.EXTRA_DEVICE)?.address
     }
 }

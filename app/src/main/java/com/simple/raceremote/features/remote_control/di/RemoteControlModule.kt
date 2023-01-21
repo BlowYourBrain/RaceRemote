@@ -1,9 +1,7 @@
 package com.simple.raceremote.features.remote_control.di
 
 import com.simple.raceremote.features.remote_control.presentation.ActionsViewModel
-import com.simple.raceremote.features.remote_control.presentation.IRemoteDeviceFinding
 import com.simple.raceremote.features.remote_control.presentation.RemoteControlViewModel
-import com.simple.raceremote.features.remote_control.presentation.RemoteDeviceFinding
 import com.simple.raceremote.features.remote_control.presentation.mapper.EngineMapper
 import com.simple.raceremote.features.remote_control.presentation.mapper.IEngineMapper
 import com.simple.raceremote.features.remote_control.presentation.mapper.ISteeringWheelMapper

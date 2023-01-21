@@ -7,12 +7,17 @@ import java.util.UUID
 
 interface IBluetoothConnection {
 
+    sealed class Connection() {
+        class Success(val name: String) : Connection()
+        object Error : Connection()
+    }
+
     suspend fun sendMessage(bytes: Int)
 
     /**
      * @return name of connected bluetooth device, null otherwise
      * */
-    suspend fun connectWithDevice(context: Context, macAddress: String, uuid: UUID): String?
+    suspend fun connectWithDevice(context: Context, macAddress: String, uuid: UUID): Connection
 
     fun closeConnection()
 }
@@ -29,8 +34,9 @@ class BluetoothConnection() : IBluetoothConnection {
         context: Context,
         macAddress: String,
         uuid: UUID
-    ): String? {
-        val remoteDevice = context.getBluetoothAdapter()?.getRemoteDevice(macAddress) ?: return null
+    ): IBluetoothConnection.Connection {
+        val remoteDevice = context.getBluetoothAdapter()?.getRemoteDevice(macAddress)
+            ?: return IBluetoothConnection.Connection.Error
 
         // ******************************************************************************************
         // bluetooth connection solution -> https://www.it1228.com/74366.html
@@ -42,14 +48,15 @@ class BluetoothConnection() : IBluetoothConnection {
         ).invoke(remoteDevice, 1) as BluetoothSocket
         // ******************************************************************************************
 
-        kotlin.runCatching {
+        return kotlin.runCatching {
             bluetoothSocket?.connect()
             debug("bluetooth connection established")
+
+            return@runCatching IBluetoothConnection.Connection.Success(remoteDevice.name)
         }.onFailure {
             debug(it.localizedMessage.orEmpty())
             debug("bluetooth connection failed")
-        }
-        return remoteDevice.name
+        }.getOrElse { IBluetoothConnection.Connection.Error }
     }
 
     override suspend fun sendMessage(bytes: Int) {

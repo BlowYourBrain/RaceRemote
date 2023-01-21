@@ -9,6 +9,8 @@ import com.simple.raceremote.utils.sidepanel.ISidePanelActionProvider
 import com.simple.raceremote.utils.sidepanel.toSidePanelAction
 import com.simple.raceremote.utils.singleEventChannel
 import kotlinx.coroutines.flow.Flow
+import kotlinx.coroutines.flow.MutableStateFlow
+import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.flow.map
 import kotlinx.coroutines.flow.receiveAsFlow
 
@@ -39,17 +41,21 @@ class ActionsViewModel(
             state = DotsState.Idle()
         )
     )
-    private val _actions = singleEventChannel(defaultActions)
-    private val _enableBluetoothAction = singleEventChannel<Unit>()
+    private val _actions = MutableStateFlow(defaultActions)
     private val _onActionCLick = singleEventChannel<RemoteDevice>()
 
-    val actions: Flow<List<Action>> = _actions.receiveAsFlow()
+    val actions: Flow<List<Action>> = _actions.asStateFlow()
     val onActionCLick: Flow<RemoteDevice> = _onActionCLick.receiveAsFlow()
-    val enableBluetoothAction: Flow<Unit> = _enableBluetoothAction.receiveAsFlow()
     val isPanelOpen: Flow<Boolean> = sidePanelActionProvider.action.map { it.isOpenAction() }
 
     fun isOpened(value: Boolean) {
         sidePanelActionProducer.produceAction(value.toSidePanelAction())
+    }
+
+    fun updateState(device: RemoteDevice) {
+        when {
+
+        }
     }
 
     private fun onBluetoothClick() {

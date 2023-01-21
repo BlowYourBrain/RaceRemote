@@ -29,9 +29,7 @@ private const val CONTENT_TOP_PADDING = 12
 private const val CONTENT_BOTTOM_PADDING = 24
 
 @Composable
-fun AppScaffold(
-    onEnableBluetoothAction: (() -> Unit)? = null,
-) {
+fun AppScaffold() {
     val actionsViewModel = getViewModel<ActionsViewModel>()
     val sidePanelContent: MutableState<@Composable () -> Unit> = remember {
         mutableStateOf(value = {})
@@ -54,7 +52,6 @@ fun AppScaffold(
                     AppScaffold(
                         startScreen = getStartScreen(),
                         sidePanelContent = sidePanelContent,
-                        onEnableBluetoothAction = onEnableBluetoothAction
                     )
                 }
             }
@@ -66,7 +63,6 @@ fun AppScaffold(
 fun AppScaffold(
     startScreen: Screens,
     sidePanelContent: MutableState<@Composable () -> Unit>,
-    onEnableBluetoothAction: (() -> Unit)? = null,
 ) {
     val navController = rememberNavController()
 
@@ -76,8 +72,7 @@ fun AppScaffold(
     ) {
         composable(Screens.RemoteControl.name) {
             RemoteControlScreen(
-                sidePanelContent = sidePanelContent,
-                onEnableBluetoothAction = onEnableBluetoothAction,
+                sidePanelContent = sidePanelContent
             )
         }
         composable(Screens.BluetoothPermissionsRationale.name) {

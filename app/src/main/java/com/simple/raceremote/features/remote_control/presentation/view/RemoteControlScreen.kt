@@ -1,5 +1,6 @@
 package com.simple.raceremote.features.remote_control.presentation.view
 
+import android.annotation.SuppressLint
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
@@ -26,21 +27,19 @@ import com.simple.raceremote.ui.views.DotsState
 import com.simple.raceremote.ui.views.FlatLoadingWithContent
 import com.simple.raceremote.ui.views.Orientation
 import com.simple.raceremote.ui.views.Slider
+import com.simple.raceremote.utils.debug
+import kotlinx.coroutines.flow.onEach
 import org.koin.androidx.compose.getViewModel
 
+@SuppressLint("FlowOperatorInvokedInComposition")
 @Composable
 fun RemoteControlScreen(
     sidePanelContent: MutableState<@Composable () -> Unit>,
-    onEnableBluetoothAction: (() -> Unit)? = null,
 ) {
     val actionsViewModel = getViewModel<ActionsViewModel>()
     val remoteControlViewModel = getViewModel<RemoteControlViewModel>()
 
     val actions = actionsViewModel.actions.collectAsState(initial = emptyList())
-    val enableBluetoothAction =
-        actionsViewModel.enableBluetoothAction.collectAsState(initial = null)
-
-    enableBluetoothAction.value?.let { onEnableBluetoothAction?.invoke() }
 
     Column(modifier = Modifier, horizontalAlignment = Alignment.CenterHorizontally) {
         Actions(actions = actions.value)

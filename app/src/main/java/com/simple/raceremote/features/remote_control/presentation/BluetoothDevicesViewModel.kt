@@ -1,4 +1,4 @@
-package com.simple.raceremote.features.bluetooth_devices.presentation
+package com.simple.raceremote.features.remote_control.presentation
 
 import android.annotation.SuppressLint
 import android.app.Activity
@@ -13,7 +13,6 @@ import androidx.compose.ui.unit.dp
 import androidx.core.app.ActivityCompat
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.simple.raceremote.features.remote_control.presentation.ActionsViewModel
 import com.simple.raceremote.ui.views.DotsState
 import com.simple.raceremote.utils.bluetooth.IBluetoothConnection
 import com.simple.raceremote.utils.bluetooth.enableBluetooth
@@ -53,6 +52,8 @@ class BluetoothDevicesViewModel(
     private val _bluetoothPermissions = singleEventChannel<Unit>()
     private val _bluetoothConnectionState = singleEventChannel<DotsState>(DotsState.Idle())
 
+    private var connection: IBluetoothConnection.Connection? = null
+
     val requestBluetoothPermissions: Flow<Unit> = _bluetoothPermissions.receiveAsFlow()
     val bluetoothConnectionState: Flow<DotsState> = _bluetoothConnectionState.receiveAsFlow()
 
@@ -61,8 +62,74 @@ class BluetoothDevicesViewModel(
         remoteDevice: ActionsViewModel.RemoteDevice,
         requestCode: Int
     ) {
+        if (hasBluetoothConnection()) {
+            bluetoothConnection.closeConnection()
+            connection = null
+            _bluetoothConnectionState.trySend(DotsState.Idle())
+            return
+        }
+
         if (!checkBluetooth(activity, requestCode)) return
 
+        chooseRemoteDevice(activity, remoteDevice, requestCode)
+    }
+
+    /**
+     * @param activity - activity
+     * @param requestCode - respond to enable bluetooth event if bluetooth is disabled on device
+     * @param macAddress - bluetooth device macAddress
+     * */
+    fun connect(activity: Activity, requestCode: Int, macAddress: String) {
+        if (!activity.hasBluetoothPermissions()) return
+
+        viewModelScope.launch {
+            val connection = bluetoothConnection.connectWithDevice(context, macAddress, uuid)
+
+            when (connection) {
+                is IBluetoothConnection.Connection.Success -> {
+                    val deviceName = connection.name
+                    val state = deviceName.let { DotsState.ShowText(it, TEXT_SIZE.dp) }
+
+                    this@BluetoothDevicesViewModel.connection = connection
+                    _bluetoothConnectionState.send(state)
+                }
+                is IBluetoothConnection.Connection.Error -> {
+                    // TODO: notify user
+                    debug("connection failed")
+                }
+            }
+
+        }
+    }
+
+    /**
+     * @return false if has any problems with bluetooth
+     * */
+    private fun checkBluetooth(activity: Activity, requestCode: Int): Boolean = with(context) {
+        if (!hasBluetooth()) {
+            //todo notify device has not bluetooth
+            debug("device has no bluetooth")
+            return false
+        }
+
+        if (!hasBluetoothPermissions()) {
+            _bluetoothPermissions.trySend(Unit)
+            return false
+        }
+
+        if (!isBluetoothEnabled()) {
+            enableBluetooth(requestCode, activity)
+            return false
+        }
+
+        return true
+    }
+
+    private fun chooseRemoteDevice(
+        activity: Activity,
+        remoteDevice: ActionsViewModel.RemoteDevice,
+        requestCode: Int
+    ) {
         val deviceManager =
             activity.getSystemService(Context.COMPANION_DEVICE_SERVICE) as? CompanionDeviceManager
                 ?: return
@@ -116,54 +183,7 @@ class BluetoothDevicesViewModel(
         deviceManager.associate(pairingRequest, executor, callback)
     }
 
-    /**
-     * @param activity - activity
-     * @param requestCode - respond to enable bluetooth event if bluetooth is disabled on device
-     * @param macAddress - bluetooth device macAddress
-     * */
-    fun connect(activity: Activity, requestCode: Int, macAddress: String) {
-        if (!activity.hasBluetoothPermissions()) return
-
-        viewModelScope.launch {
-            val connection = bluetoothConnection.connectWithDevice(context, macAddress, uuid)
-
-            when (connection) {
-                is IBluetoothConnection.Connection.Success -> {
-                    val deviceName = connection.name
-                    val state =
-                        deviceName?.let { DotsState.ShowText(it, TEXT_SIZE.dp) } ?: DotsState.Idle()
-
-                    _bluetoothConnectionState.send(state)
-                }
-                is IBluetoothConnection.Connection.Error -> {
-                    // TODO: notify user
-                    debug("connection failed")
-                }
-            }
-
-        }
-    }
-
-    /**
-     * @return false if has any problems with bluetooth
-     * */
-    private fun checkBluetooth(activity: Activity, requestCode: Int): Boolean = with(context) {
-        if (!hasBluetooth()) {
-            //todo notify device has not bluetooth
-            debug("device has no bluetooth")
-            return false
-        }
-
-        if (!hasBluetoothPermissions()) {
-            _bluetoothPermissions.trySend(Unit)
-            return false
-        }
-
-        if (!isBluetoothEnabled()) {
-            enableBluetooth(requestCode, activity)
-            return false
-        }
-
-        return true
+    private fun hasBluetoothConnection(): Boolean {
+        return connection != null && connection is IBluetoothConnection.Connection.Success
     }
 }

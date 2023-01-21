@@ -14,13 +14,9 @@ fun AppPreview() {
 }
 
 @Composable
-fun App(
-    onEnableBluetoothAction: (() -> Unit)? = null,
-) {
+fun App() {
     RaceRemoteTheme(darkTheme = true) {
-        AppScaffold(
-            onEnableBluetoothAction = onEnableBluetoothAction
-        )
+        AppScaffold()
     }
 }
 

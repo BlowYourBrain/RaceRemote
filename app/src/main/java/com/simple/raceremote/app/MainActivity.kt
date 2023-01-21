@@ -12,13 +12,12 @@ import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import androidx.core.view.WindowInsetsControllerCompat
 import androidx.lifecycle.lifecycleScope
-import com.simple.raceremote.features.bluetooth_devices.presentation.BluetoothDevicesViewModel
+import com.simple.raceremote.features.remote_control.presentation.BluetoothDevicesViewModel
 import com.simple.raceremote.features.remote_control.presentation.ActionsViewModel
 import com.simple.raceremote.utils.bluetooth.enableBluetooth
 import com.simple.raceremote.utils.bluetooth.getBluetoothPermissions
 import com.simple.raceremote.utils.debug
 import kotlinx.coroutines.flow.collect
-import kotlinx.coroutines.flow.filterNotNull
 import org.koin.androidx.viewmodel.ext.android.viewModel
 
 class MainActivity : ComponentActivity() {
@@ -39,7 +38,7 @@ class MainActivity : ComponentActivity() {
         setupViewModel()
 
         setContent {
-            App(onEnableBluetoothAction = { enableBluetooth(REQUEST_ENABLE_BT, this) })
+            App()
         }
     }
 

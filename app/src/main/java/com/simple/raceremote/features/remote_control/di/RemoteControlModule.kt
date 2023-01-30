@@ -2,6 +2,7 @@ package com.simple.raceremote.features.remote_control.di
 
 import com.simple.raceremote.features.remote_control.presentation.ActionsViewModel
 import com.simple.raceremote.features.remote_control.presentation.RemoteControlViewModel
+import com.simple.raceremote.features.remote_control.presentation.RemoteDeviceConnection
 import com.simple.raceremote.features.remote_control.presentation.mapper.EngineMapper
 import com.simple.raceremote.features.remote_control.presentation.mapper.IEngineMapper
 import com.simple.raceremote.features.remote_control.presentation.mapper.ISteeringWheelMapper
@@ -19,10 +20,11 @@ val remoteControlModule = module {
     factory<IEngineMapper> { EngineMapper() }
     factory<ISteeringWheelMapper> { SteeringWheelMapper() }
     factory<ICompoundCommandCreator> { CompoundCommandCreator() }
+    factory { RemoteDeviceConnection() }
     single { SidePanelActionProvider() } binds arrayOf(
         ISidePanelActionProducer::class,
         ISidePanelActionProvider::class
     )
-    single { ActionsViewModel(get(), get()) }
+    single { ActionsViewModel(get(), get(), get(), get()) }
     viewModel { RemoteControlViewModel(get(), get(), get(), get()) }
 }

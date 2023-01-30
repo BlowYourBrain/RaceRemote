@@ -12,24 +12,22 @@ import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import androidx.core.view.WindowInsetsControllerCompat
 import androidx.lifecycle.lifecycleScope
-import com.simple.raceremote.features.remote_control.presentation.BluetoothDevicesViewModel
 import com.simple.raceremote.features.remote_control.presentation.ActionsViewModel
-import com.simple.raceremote.utils.bluetooth.enableBluetooth
+import com.simple.raceremote.features.remote_control.presentation.ActionsViewModel.Companion.REQUEST_BLUETOOTH_PERMISSIONS
+import com.simple.raceremote.features.remote_control.presentation.ActionsViewModel.Companion.REQUEST_ENABLE_BT
+import com.simple.raceremote.features.remote_control.presentation.ActionsViewModel.Companion.SELECT_DEVICE_REQUEST_CODE
+import com.simple.raceremote.features.remote_control.presentation.RemoteDeviceConnection
 import com.simple.raceremote.utils.bluetooth.getBluetoothPermissions
 import com.simple.raceremote.utils.debug
 import kotlinx.coroutines.flow.collect
+import org.koin.android.ext.android.inject
+import org.koin.androidx.compose.inject
 import org.koin.androidx.viewmodel.ext.android.viewModel
 
 class MainActivity : ComponentActivity() {
 
-    companion object {
-        private const val REQUEST_ENABLE_BT = 40
-        private const val REQUEST_BLUETOOTH_PERMISSIONS = 50
-        private const val SELECT_DEVICE_REQUEST_CODE = 100500
-    }
-
     private val actionsViewModel: ActionsViewModel by viewModel()
-    private val bluetoothViewModel: BluetoothDevicesViewModel by viewModel()
+    private val remoteDeviceConnection: RemoteDeviceConnection by inject()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -48,15 +46,16 @@ class MainActivity : ComponentActivity() {
 
     private fun setupViewModel() {
         lifecycleScope.launchWhenResumed {
-            actionsViewModel.onActionCLick.collect { remoteDevice ->
-                bluetoothViewModel.findBluetoothDevices(
-                    this@MainActivity, remoteDevice, SELECT_DEVICE_REQUEST_CODE
+            actionsViewModel.remoteDevice.collect { remoteDevice ->
+                remoteDeviceConnection.chooseRemoteDevice(
+                    this@MainActivity,
+                    remoteDevice,
+                    ActionsViewModel.SELECT_DEVICE_REQUEST_CODE,
                 )
             }
         }
-
         lifecycleScope.launchWhenResumed {
-            bluetoothViewModel.requestBluetoothPermissions.collect {
+            actionsViewModel.requestBluetoothPermissions.collect {
                 requestPermissions(
                     getBluetoothPermissions().toTypedArray(),
                     REQUEST_BLUETOOTH_PERMISSIONS
@@ -83,8 +82,7 @@ class MainActivity : ComponentActivity() {
                     }
 
                     debug("found device with address $macAddress")
-
-                    bluetoothViewModel.connect(this, REQUEST_ENABLE_BT, macAddress)
+                    actionsViewModel.connect(macAddress)
                 }
             }
             else -> super.onActivityResult(requestCode, resultCode, data)

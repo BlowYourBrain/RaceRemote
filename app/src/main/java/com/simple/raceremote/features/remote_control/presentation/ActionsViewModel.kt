@@ -33,8 +33,6 @@ class ActionsViewModel(
     companion object {
         const val REQUEST_ENABLE_BT = 40
         const val REQUEST_BLUETOOTH_PERMISSIONS = 50
-        const val SELECT_DEVICE_REQUEST_CODE = 100500
-
 
         private const val UUID_STR = "4ab19e4e-e6c1-43ba-b9cd-0b19777da670"
 
@@ -71,8 +69,6 @@ class ActionsViewModel(
     private val _remoteDevice = singleEventChannel<RemoteDevice>()
     private val _bluetoothPermissions = singleEventChannel<Unit>()
 
-    private var connection: IBluetoothConnection.Connection? = null
-
     val remoteDevice: Flow<RemoteDevice> = _remoteDevice.receiveAsFlow()
     val requestBluetoothPermissions: Flow<Unit> = _bluetoothPermissions.receiveAsFlow()
 
@@ -82,7 +78,7 @@ class ActionsViewModel(
     /**
      * @param macAddress - bluetooth device macAddress
      * */
-    fun connect(macAddress: String) {
+    fun connectBluetooth(macAddress: String) {
         if (!context.hasBluetoothPermissions()) return
 
         viewModelScope.launch {
@@ -92,7 +88,6 @@ class ActionsViewModel(
             when (connection) {
                 is IBluetoothConnection.Connection.Success -> {
                     val deviceName = connection.name
-                    this@ActionsViewModel.connection = connection
                     updateState(RemoteDevice.Bluetooth, createDotsTextState(deviceName))
                 }
                 is IBluetoothConnection.Connection.Error -> {
@@ -101,8 +96,15 @@ class ActionsViewModel(
                     updateState(RemoteDevice.Bluetooth, idleDotsState)
                 }
             }
-
         }
+    }
+
+    fun connectWifi(){
+
+    }
+
+    private fun connectToWIFI(){
+
     }
 
     private fun createDotsTextState(text: String): DotsState {
@@ -157,7 +159,6 @@ class ActionsViewModel(
     private fun onBluetoothClick() {
         if (hasBluetoothConnection()) {
             bluetoothConnection.closeConnection()
-            connection = null
             updateState(RemoteDevice.Bluetooth, idleDotsState)
             return
         }

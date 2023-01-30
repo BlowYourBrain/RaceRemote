@@ -14,14 +14,12 @@ import androidx.core.view.WindowInsetsControllerCompat
 import androidx.lifecycle.lifecycleScope
 import com.simple.raceremote.features.remote_control.presentation.ActionsViewModel
 import com.simple.raceremote.features.remote_control.presentation.ActionsViewModel.Companion.REQUEST_BLUETOOTH_PERMISSIONS
-import com.simple.raceremote.features.remote_control.presentation.ActionsViewModel.Companion.REQUEST_ENABLE_BT
-import com.simple.raceremote.features.remote_control.presentation.ActionsViewModel.Companion.SELECT_DEVICE_REQUEST_CODE
 import com.simple.raceremote.features.remote_control.presentation.RemoteDeviceConnection
+import com.simple.raceremote.features.remote_control.presentation.model.RemoteDevice
 import com.simple.raceremote.utils.bluetooth.getBluetoothPermissions
 import com.simple.raceremote.utils.debug
 import kotlinx.coroutines.flow.collect
 import org.koin.android.ext.android.inject
-import org.koin.androidx.compose.inject
 import org.koin.androidx.viewmodel.ext.android.viewModel
 
 class MainActivity : ComponentActivity() {
@@ -50,7 +48,6 @@ class MainActivity : ComponentActivity() {
                 remoteDeviceConnection.chooseRemoteDevice(
                     this@MainActivity,
                     remoteDevice,
-                    ActionsViewModel.SELECT_DEVICE_REQUEST_CODE,
                 )
             }
         }
@@ -74,7 +71,7 @@ class MainActivity : ComponentActivity() {
 
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
         when (requestCode) {
-            SELECT_DEVICE_REQUEST_CODE -> when (resultCode) {
+            RemoteDevice.Bluetooth.requestCode -> when (resultCode) {
                 Activity.RESULT_OK -> {
                     val macAddress = retrieveBluetoothMacAddress(data) ?: kotlin.run {
                         debug("device macAddress is null")
@@ -82,8 +79,13 @@ class MainActivity : ComponentActivity() {
                     }
 
                     debug("found device with address $macAddress")
-                    actionsViewModel.connect(macAddress)
+                    actionsViewModel.connectBluetooth(macAddress)
                 }
+            }
+
+            RemoteDevice.WIFI.requestCode -> {
+                debug("found wifi device")
+                actionsViewModel.connectWifi()
             }
             else -> super.onActivityResult(requestCode, resultCode, data)
         }

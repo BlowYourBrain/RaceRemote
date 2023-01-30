@@ -27,8 +27,7 @@ class RemoteDeviceConnection {
 
     fun chooseRemoteDevice(
         activity: Activity,
-        remoteDevice: RemoteDevice,
-        requestCode: Int
+        remoteDevice: RemoteDevice
     ) {
         val deviceManager =
             activity.getSystemService(Context.COMPANION_DEVICE_SERVICE) as? CompanionDeviceManager
@@ -59,7 +58,7 @@ class RemoteDeviceConnection {
                 ActivityCompat.startIntentSenderForResult(
                     activity,
                     intentSender,
-                    requestCode,
+                    remoteDevice.requestCode,
                     null,
                     0,
                     0,

@@ -79,6 +79,8 @@ class ActionsViewModel(
      * @param macAddress - bluetooth device macAddress
      * */
     fun connectBluetooth(macAddress: String) {
+        debug("found device with address $macAddress")
+
         if (!context.hasBluetoothPermissions()) return
 
         viewModelScope.launch {
@@ -99,12 +101,11 @@ class ActionsViewModel(
         }
     }
 
-    fun connectWifi(){
-
-    }
-
-    private fun connectToWIFI(){
-
+    fun connectWifi(networkName: String){
+        debug("successfully connect to network $networkName")
+        viewModelScope.launch {
+            updateState(RemoteDevice.WIFI, createDotsTextState(networkName))
+        }
     }
 
     private fun createDotsTextState(text: String): DotsState {
@@ -169,6 +170,7 @@ class ActionsViewModel(
     }
 
     private fun onWifiClick() {
+        //todo check if wifi is enabled
         _remoteDevice.trySend(RemoteDevice.WIFI)
     }
 

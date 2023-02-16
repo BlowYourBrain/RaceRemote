@@ -13,21 +13,11 @@ import android.content.Intent
 import android.content.pm.PackageManager
 import androidx.core.app.ActivityCompat
 import com.simple.raceremote.utils.hasPermission
+import com.simple.raceremote.utils.hasPermissions
 
 private val BLUETOOTH_PERMISSIONS = listOf(BLUETOOTH, BLUETOOTH_ADMIN, BLUETOOTH_CONNECT)
 
-fun Context.hasBluetoothPermissions(): Boolean {
-    var hasPermissions = true
-    val permissions = getBluetoothPermissions()
-
-    for (perm in permissions) {
-        if (!hasPermission(perm)) {
-            hasPermissions = false
-            break
-        }
-    }
-    return hasPermissions
-}
+fun Context.hasBluetoothPermissions(): Boolean = hasPermissions(getBluetoothPermissions())
 
 fun enableBluetooth(requestCode: Int, activity: Activity) {
     val enableBtIntent = Intent(BluetoothAdapter.ACTION_REQUEST_ENABLE)

@@ -3,15 +3,19 @@ package com.simple.raceremote.app
 import android.content.Intent
 import android.content.pm.ActivityInfo
 import android.os.Bundle
+import android.view.LayoutInflater
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
+import androidx.appcompat.app.AlertDialog
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import androidx.core.view.WindowInsetsControllerCompat
 import androidx.lifecycle.lifecycleScope
+import com.simple.raceremote.R
+import com.simple.raceremote.databinding.PasswordDialogBinding
 import com.simple.raceremote.features.remote_control.presentation.ActionsViewModel
-import com.simple.raceremote.features.remote_control.presentation.ActionsViewModel.Companion.REQUEST_BLUETOOTH_PERMISSIONS
 import com.simple.raceremote.features.remote_control.presentation.RemoteDeviceConnection
+import com.simple.raceremote.features.remote_control.presentation.model.RemoteDevice
 import com.simple.raceremote.features.remote_control.utils.activity_result_handler.BluetoothResultHandler
 import com.simple.raceremote.features.remote_control.utils.activity_result_handler.HandlerList
 import com.simple.raceremote.features.remote_control.utils.activity_result_handler.WiFiActivityResultHandler
@@ -54,7 +58,7 @@ class MainActivity : ComponentActivity() {
             actionsViewModel.requestBluetoothPermissions.collect {
                 requestPermissions(
                     getBluetoothPermissions().toTypedArray(),
-                    REQUEST_BLUETOOTH_PERMISSIONS
+                    RemoteDevice.Bluetooth.requestCode
                 )
             }
         }
@@ -72,7 +76,7 @@ class MainActivity : ComponentActivity() {
         addHandler(
             WiFiActivityResultHandler(
                 onSuccess = { scanResult ->
-                    actionsViewModel.connectWifi(scanResult.wifiSsid.toString())
+                    showPasswordInputDialog(scanResult.wifiSsid.toString().removeSurrounding("\""))
                 }
             )
         )
@@ -84,6 +88,25 @@ class MainActivity : ComponentActivity() {
         windowInsetsController.systemBarsBehavior =
             WindowInsetsControllerCompat.BEHAVIOR_SHOW_TRANSIENT_BARS_BY_SWIPE
         windowInsetsController.hide(WindowInsetsCompat.Type.systemBars())
+    }
+
+    private fun showPasswordInputDialog(ssid: String) {
+        val view = PasswordDialogBinding.inflate(LayoutInflater.from(this), null, false)
+        val input = view.input
+
+        AlertDialog.Builder(this)
+            .setTitle(resources.getString(R.string.network_password, ssid))
+            .setView(view.root)
+            .setPositiveButton(
+                android.R.string.ok
+            ) { dialog, _ ->
+                actionsViewModel.connectWifi(ssid, input.text.toString())
+                dialog.dismiss()
+            }
+            .setNegativeButton(android.R.string.cancel) { dialog, _ ->
+                dialog.cancel()
+            }
+            .show()
     }
 
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {

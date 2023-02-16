@@ -46,15 +46,11 @@ class RemoteDeviceConnection {
         val callback = object : CompanionDeviceManager.Callback() {
             override fun onDeviceFound(intentSender: IntentSender) = Unit
 
-            // Called when a device is found. Launch the IntentSender so the user
-            // can select the device they want to pair with.
             override fun onAssociationPending(intentSender: IntentSender) {
                 intentSender ?: return
 
-                debug(
-                    "send intent finding bluetooth",
-                    "fuck"
-                )
+                debug("send intent finding pairing device")
+
                 ActivityCompat.startIntentSenderForResult(
                     activity,
                     intentSender,
@@ -67,15 +63,9 @@ class RemoteDeviceConnection {
                 )
             }
 
-            override fun onAssociationCreated(associationInfo: AssociationInfo) {
-                debug("onAssociationCreated", "fuck")
-                // The association is created.
-            }
+            override fun onAssociationCreated(associationInfo: AssociationInfo) = Unit
 
-            override fun onFailure(errorMessage: CharSequence?) {
-                // Handle the failure.
-                debug("onFailure", "fuck")
-            }
+            override fun onFailure(errorMessage: CharSequence?) = Unit
         }
 
         val executor: Executor = Executor { it.run() }

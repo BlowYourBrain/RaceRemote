@@ -25,6 +25,6 @@ val remoteControlModule = module {
         ISidePanelActionProducer::class,
         ISidePanelActionProvider::class
     )
-    single { ActionsViewModel(get(), get(), get(), get()) }
+    single { ActionsViewModel(get(), get(), get(), get(), get()) }
     viewModel { RemoteControlViewModel(get(), get(), get(), get()) }
 }

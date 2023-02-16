@@ -16,7 +16,6 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.unit.dp
-import com.simple.raceremote.features.remote_control.presentation.Action
 import com.simple.raceremote.features.remote_control.presentation.ActionsViewModel
 import com.simple.raceremote.features.remote_control.presentation.RemoteControlViewModel
 import com.simple.raceremote.ui.theme.CornerShapes
@@ -27,9 +26,8 @@ import com.simple.raceremote.ui.views.DotsState
 import com.simple.raceremote.ui.views.FlatLoadingWithContent
 import com.simple.raceremote.ui.views.Orientation
 import com.simple.raceremote.ui.views.Slider
-import com.simple.raceremote.utils.debug
-import kotlinx.coroutines.flow.onEach
 import org.koin.androidx.compose.getViewModel
+import com.simple.raceremote.features.remote_control.presentation.model.Action
 
 @SuppressLint("FlowOperatorInvokedInComposition")
 @Composable

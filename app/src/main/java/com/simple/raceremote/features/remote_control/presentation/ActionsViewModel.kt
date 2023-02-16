@@ -1,11 +1,11 @@
 package com.simple.raceremote.features.remote_control.presentation
 
 import android.content.Context
-import androidx.annotation.DrawableRes
 import androidx.compose.ui.unit.dp
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.simple.raceremote.R
+import com.simple.raceremote.features.remote_control.presentation.model.Action
 import com.simple.raceremote.features.remote_control.presentation.model.RemoteDevice
 import com.simple.raceremote.ui.views.DotsState
 import com.simple.raceremote.utils.bluetooth.IBluetoothConnection
@@ -16,6 +16,7 @@ import com.simple.raceremote.utils.sidepanel.ISidePanelActionProducer
 import com.simple.raceremote.utils.sidepanel.ISidePanelActionProvider
 import com.simple.raceremote.utils.sidepanel.toSidePanelAction
 import com.simple.raceremote.utils.singleEventChannel
+import com.simple.raceremote.utils.wifi.isWifiEnabled
 import java.util.UUID
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.MutableStateFlow
@@ -27,13 +28,12 @@ import kotlinx.coroutines.launch
 class ActionsViewModel(
     private val context: Context,
     private val bluetoothConnection: IBluetoothConnection,
+    private val wifiConnection: IWiFiConnection,
     private val sidePanelActionProvider: ISidePanelActionProvider,
     private val sidePanelActionProducer: ISidePanelActionProducer,
 ) : ViewModel() {
     companion object {
-        const val REQUEST_ENABLE_BT = 40
-        const val REQUEST_BLUETOOTH_PERMISSIONS = 50
-
+        //todo should I generate new one for every app instance?
         private const val UUID_STR = "4ab19e4e-e6c1-43ba-b9cd-0b19777da670"
 
         private const val DOTS_HEIGHT = 14
@@ -67,10 +67,10 @@ class ActionsViewModel(
     private val uuid = UUID.fromString(UUID_STR)
     private val _actions = MutableStateFlow(defaultActions)
     private val _remoteDevice = singleEventChannel<RemoteDevice>()
-    private val _bluetoothPermissions = singleEventChannel<Unit>()
+    private val _requestBluetoothPermissions = singleEventChannel<Unit>()
 
     val remoteDevice: Flow<RemoteDevice> = _remoteDevice.receiveAsFlow()
-    val requestBluetoothPermissions: Flow<Unit> = _bluetoothPermissions.receiveAsFlow()
+    val requestBluetoothPermissions: Flow<Unit> = _requestBluetoothPermissions.receiveAsFlow()
 
     val actions: Flow<List<Action>> = _actions.asStateFlow()
     val isPanelOpen: Flow<Boolean> = sidePanelActionProvider.action.map { it.isOpenAction() }
@@ -101,10 +101,11 @@ class ActionsViewModel(
         }
     }
 
-    fun connectWifi(networkName: String){
-        debug("successfully connect to network $networkName")
+    fun connectWifi(ssid: String, password: String) {
+        debug("successfully connect to network $ssid")
         viewModelScope.launch {
-            updateState(RemoteDevice.WIFI, createDotsTextState(networkName))
+            wifiConnection.connect(ssid, password)
+            updateState(RemoteDevice.WIFI, createDotsTextState(ssid))
         }
     }
 
@@ -130,9 +131,26 @@ class ActionsViewModel(
     }
 
     /**
-     * @return false if has any problems with bluetooth
+     * return true if has permissions and wifi is turn on, false otherwise
      * */
-    private fun checkBluetooth(): Boolean = with(context) {
+    private fun checkWifiGranted(): Boolean = with(context) {
+        if (!isWifiEnabled()) {
+            //todo notify wifi is disabled
+            return false
+        }
+
+//        if (!hasWifiPermissions()) {
+//            _requestPermissions.trySend(RemoteDevice.WIFI)
+//            return false
+//        }
+
+        return true
+    }
+
+    /**
+     * @return true if device has bluetooth and has bluetooth permissions, false otherwise
+     * */
+    private fun checkBluetoothGranted(): Boolean = with(context) {
         if (!hasBluetooth()) {
             //todo notify device has not bluetooth
             debug("device has no bluetooth")
@@ -140,7 +158,7 @@ class ActionsViewModel(
         }
 
         if (!hasBluetoothPermissions()) {
-            _bluetoothPermissions.trySend(Unit)
+            _requestBluetoothPermissions.trySend(Unit)
             return false
         }
 
@@ -164,13 +182,14 @@ class ActionsViewModel(
             return
         }
 
-        if (!checkBluetooth()) return
+        if (!checkBluetoothGranted()) return
 
         _remoteDevice.trySend(RemoteDevice.Bluetooth)
     }
 
     private fun onWifiClick() {
-        //todo check if wifi is enabled
+        if (!checkWifiGranted()) return
+
         _remoteDevice.trySend(RemoteDevice.WIFI)
     }
 
@@ -182,9 +201,3 @@ class ActionsViewModel(
         return _actions.value[BLUETOOTH_POSITION].state is DotsState.ShowText
     }
 }
-
-data class Action(
-    @DrawableRes val icon: Int,
-    val onClick: () -> Unit,
-    val state: DotsState
-)

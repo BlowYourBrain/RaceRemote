@@ -4,4 +4,6 @@
     <string name="apply_permission">ОК</string>
     <string name="decline_permission">ОТМЕНА</string>
     <string name="back_button">Назад</string>
+    <string name="network_password">Пароль для %s</string>
+    <string name="password">Пароль</string>
 </resources>

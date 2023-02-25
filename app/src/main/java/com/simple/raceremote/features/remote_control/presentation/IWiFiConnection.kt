@@ -74,7 +74,7 @@ class WifiConnection(private val context: Context) : IWiFiConnection {
 
                     override fun onBlockedStatusChanged(network: Network, blocked: Boolean) {
                         super.onBlockedStatusChanged(network, blocked)
-                        debug("onBlockedStatusChanged", WIFI_CONNECTION_TAG)
+                        debug("onBlockedStatusChanged to $blocked", WIFI_CONNECTION_TAG)
                     }
                 })
 

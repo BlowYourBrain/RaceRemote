@@ -19,9 +19,10 @@ import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
 import com.simple.raceremote.features.BluetoothPermissionRationale
 import com.simple.raceremote.features.remote_control.presentation.ActionsViewModel
+import com.simple.raceremote.features.remote_control.presentation.model.WifiEnterPasswordDialog
+import com.simple.raceremote.features.remote_control.presentation.view.EnterPasswordDialog
 import com.simple.raceremote.features.remote_control.presentation.view.RemoteControlScreen
 import com.simple.raceremote.ui.views.SidePanel
-import com.simple.raceremote.utils.bluetooth.hasBluetooth
 import com.simple.raceremote.utils.bluetooth.hasBluetoothPermissions
 import org.koin.androidx.compose.getViewModel
 
@@ -34,11 +35,28 @@ fun AppScaffold() {
     val sidePanelContent: MutableState<@Composable () -> Unit> = remember {
         mutableStateOf(value = {})
     }
-    val isOpened: State<Boolean> = actionsViewModel.isPanelOpen.collectAsState(initial = false)
+    val isPanelOpen: State<Boolean> = actionsViewModel.isPanelOpen.collectAsState(initial = false)
+    val openDialog =
+        actionsViewModel.openEnterPasswordDialog.collectAsState(initial = WifiEnterPasswordDialog.Close)
 
     Scaffold() {
+        openDialog.value.let {
+            if (it is WifiEnterPasswordDialog.Open) {
+                EnterPasswordDialog(
+                    it.title,
+                    onConfirm = { password ->
+                        actionsViewModel.connectWifi(it.title, password)
+                        actionsViewModel.closeEnterPasswordDialog()
+                    },
+                    onDismiss = {
+                        actionsViewModel.closeEnterPasswordDialog()
+                    }
+                )
+            }
+        }
+
         SidePanel(
-            isOpened = isOpened,
+            isOpened = isPanelOpen,
             updateIsOpened = { actionsViewModel.isOpened(it) },
             itemProvider = sidePanelContent
         ) {

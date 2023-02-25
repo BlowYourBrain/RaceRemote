@@ -3,6 +3,8 @@
     <string name="bluetooth_permissions_explanation">Для корректной работы приложения требуются разрешения работы с Bluetooth.</string>
     <string name="apply_permission">ОК</string>
     <string name="decline_permission">ОТМЕНА</string>
+    <string name="apply_dialog">ОК</string>
+    <string name="dismiss_dialog">Отмена</string>
     <string name="back_button">Назад</string>
     <string name="network_password">Пароль для %s</string>
     <string name="password">Пароль</string>

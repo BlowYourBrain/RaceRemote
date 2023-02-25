@@ -7,6 +7,7 @@ import androidx.lifecycle.viewModelScope
 import com.simple.raceremote.R
 import com.simple.raceremote.features.remote_control.presentation.model.Action
 import com.simple.raceremote.features.remote_control.presentation.model.RemoteDevice
+import com.simple.raceremote.features.remote_control.presentation.model.WifiEnterPasswordDialog
 import com.simple.raceremote.ui.views.DotsState
 import com.simple.raceremote.utils.bluetooth.IBluetoothConnection
 import com.simple.raceremote.utils.bluetooth.hasBluetooth
@@ -67,6 +68,7 @@ class ActionsViewModel(
     private val uuid = UUID.fromString(UUID_STR)
     private val _actions = MutableStateFlow(defaultActions)
     private val _remoteDevice = singleEventChannel<RemoteDevice>()
+    private val _openEnterPasswordDialog = singleEventChannel<WifiEnterPasswordDialog>()
     private val _requestBluetoothPermissions = singleEventChannel<Unit>()
 
     val remoteDevice: Flow<RemoteDevice> = _remoteDevice.receiveAsFlow()
@@ -74,6 +76,8 @@ class ActionsViewModel(
 
     val actions: Flow<List<Action>> = _actions.asStateFlow()
     val isPanelOpen: Flow<Boolean> = sidePanelActionProvider.action.map { it.isOpenAction() }
+    val openEnterPasswordDialog: Flow<WifiEnterPasswordDialog> =
+        _openEnterPasswordDialog.receiveAsFlow()
 
     /**
      * @param macAddress - bluetooth device macAddress
@@ -99,6 +103,14 @@ class ActionsViewModel(
                 }
             }
         }
+    }
+
+    fun openEnterPasswordDialog(ssid: String) {
+        _openEnterPasswordDialog.trySend(WifiEnterPasswordDialog.Open(ssid))
+    }
+
+    fun closeEnterPasswordDialog() {
+        _openEnterPasswordDialog.trySend(WifiEnterPasswordDialog.Close)
     }
 
     fun connectWifi(ssid: String, password: String) {

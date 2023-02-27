@@ -7,7 +7,10 @@ object AppDependencies {
     private const val appcompat = "androidx.appcompat:appcompat:${Versions.appcompat}"
     private const val material = "com.google.android.material:material:${Versions.material}"
     private const val lifecycle = "androidx.lifecycle:lifecycle-runtime-ktx:${Versions.lifecycle}"
-    
+
+    //network
+    private const val retrofit = "com.squareup.retrofit2:retrofit:${Versions.retrofit}"
+
     //koin
     private const val koin = "io.insert-koin:koin-core:${Versions.koin}"
     private const val koinAndroid = "io.insert-koin:koin-android:${Versions.koin}"
@@ -16,7 +19,8 @@ object AppDependencies {
     //compose
     private const val compose = "androidx.compose.ui:ui:${Versions.compose}"
     private const val materialCompose = "androidx.compose.material:material:${Versions.compose}"
-    private const val activityCompose = "androidx.activity:activity-compose:${Versions.activityCompose}"
+    private const val activityCompose =
+        "androidx.activity:activity-compose:${Versions.activityCompose}"
     private const val navigationCompose =
         "androidx.navigation:navigation-compose:${Versions.navigationCompose}"
     private const val composeUITooling = "androidx.compose.ui:ui-tooling:${Versions.compose}"
@@ -34,6 +38,7 @@ object AppDependencies {
         appcompat,
         lifecycle,
         kotlinStdLib,
+        retrofit
     )
 
     val koinLibraries = arrayListOf(

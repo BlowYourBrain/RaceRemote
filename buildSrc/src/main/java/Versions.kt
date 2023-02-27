@@ -11,6 +11,7 @@ object Versions {
     const val lifecycle = "2.4.0"
     const val appcompat = "1.4.1"
     const val material = "1.6.0-rc01"
+    const val retrofit = "2.9.0"
 
     //Compose
     const val compose = "1.1.1"

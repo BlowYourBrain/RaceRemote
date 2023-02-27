@@ -196,12 +196,6 @@ class ActionsViewModel(
             return false
         }
 
-        //todo change bluetooth condition
-//        if (!isBluetoothEnabled()) {
-//            enableBluetooth(requestCode, activity)
-//            return false
-//        }
-
         return true
     }
 

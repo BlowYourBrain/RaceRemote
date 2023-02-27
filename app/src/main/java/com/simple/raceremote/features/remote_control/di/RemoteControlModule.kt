@@ -1,5 +1,7 @@
 package com.simple.raceremote.features.remote_control.di
 
+import com.simple.raceremote.features.remote_control.data.IRemoteDeviceRepository
+import com.simple.raceremote.features.remote_control.data.RemoteDeviceRepository
 import com.simple.raceremote.features.remote_control.presentation.ActionsViewModel
 import com.simple.raceremote.features.remote_control.presentation.RemoteControlViewModel
 import com.simple.raceremote.features.remote_control.presentation.RemoteDeviceConnection
@@ -17,14 +19,17 @@ import org.koin.dsl.binds
 import org.koin.dsl.module
 
 val remoteControlModule = module {
+    factory { RemoteDeviceConnection() }
     factory<IEngineMapper> { EngineMapper() }
     factory<ISteeringWheelMapper> { SteeringWheelMapper() }
     factory<ICompoundCommandCreator> { CompoundCommandCreator() }
-    factory { RemoteDeviceConnection() }
+    factory<IRemoteDeviceRepository> { RemoteDeviceRepository(get()) }
+
     single { SidePanelActionProvider() } binds arrayOf(
         ISidePanelActionProducer::class,
         ISidePanelActionProvider::class
     )
     single { ActionsViewModel(get(), get(), get(), get(), get()) }
+
     viewModel { RemoteControlViewModel(get(), get(), get(), get()) }
 }

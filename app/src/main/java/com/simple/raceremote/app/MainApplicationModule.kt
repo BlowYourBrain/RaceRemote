@@ -2,6 +2,7 @@ package com.simple.raceremote.app
 
 import android.app.Application
 import com.simple.raceremote.BuildConfig
+import com.simple.raceremote.features.remote_control.di.networkModule
 import com.simple.raceremote.features.remote_control.di.remoteControlModule
 import org.koin.android.ext.koin.androidContext
 import org.koin.android.ext.koin.androidLogger
@@ -16,7 +17,7 @@ class MainApplicationModule : Application() {
         startKoin {
             androidLogger(if (BuildConfig.DEBUG) Level.ERROR else Level.NONE)
             androidContext(this@MainApplicationModule)
-            modules(appModule, remoteControlModule)
+            modules(appModule, remoteControlModule, networkModule)
         }
     }
 }

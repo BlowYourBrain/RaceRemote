@@ -5,7 +5,7 @@ import android.net.ConnectivityManager
 import android.net.LinkProperties
 import android.net.Network
 import android.net.NetworkCapabilities
-import com.simple.raceremote.features.remote_control.data.RemoteDeviceApi
+import com.simple.raceremote.features.remote_control.data.IRemoteDeviceRepository
 import com.simple.raceremote.features.remote_control.presentation.IWifiNetwork.NetworkState
 import com.simple.raceremote.utils.debug
 import com.simple.raceremote.utils.wifi.getConnectivityManager
@@ -36,7 +36,7 @@ private const val WIFI_CONNECTION_TAG = "WIFI_CONNECTION_TAG"
 
 class WifiNetwork(
     private val context: Context,
-    private val remoteDeviceApi: RemoteDeviceApi
+    private val remoteDeviceRepository: IRemoteDeviceRepository
 ) : IWifiNetwork {
 
     private var currentJob: Job? = null
@@ -97,8 +97,8 @@ class WifiNetwork(
 
         currentJob = coroutineScope.launch {
             _networkState.emit(NetworkState.Loading)
-            val isRemoteDevice = remoteDeviceApi.isRemoteDevice()
-            val networkState = if (isRemoteDevice) NetworkState.Match else NetworkState.Mismatch
+            val isRemoteDeviceAvailable = remoteDeviceRepository.isRemoteDeviceAvailable()
+            val networkState = if (isRemoteDeviceAvailable) NetworkState.Match else NetworkState.Mismatch
 
             _networkState.emit(networkState)
         }

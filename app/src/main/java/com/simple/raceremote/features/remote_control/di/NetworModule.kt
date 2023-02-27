@@ -7,7 +7,7 @@ import org.koin.dsl.module
 import retrofit2.Retrofit
 import java.util.concurrent.TimeUnit
 
-private const val BASE_URL = "https://192.168.1.100:80/"
+private const val BASE_URL = "http://192.168.1.100:80/"
 
 val networkModule = module {
     single<Retrofit> {

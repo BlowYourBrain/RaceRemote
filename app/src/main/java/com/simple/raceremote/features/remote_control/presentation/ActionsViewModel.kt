@@ -71,8 +71,9 @@ class ActionsViewModel(
     private val uuid = UUID.fromString(UUID_STR)
     private val _actions = MutableStateFlow(defaultActions)
     private val _remoteDevice = singleEventChannel<RemoteDevice>()
-    private val _openEnterPasswordDialog = singleEventChannel<WifiEnterPasswordDialog>()
     private val _requestBluetoothPermissions = singleEventChannel<Unit>()
+    private val connected by lazy { context.resources.getString(R.string.connected) }
+    private val _openEnterPasswordDialog = singleEventChannel<WifiEnterPasswordDialog>()
 
     val remoteDevice: Flow<RemoteDevice> = _remoteDevice.receiveAsFlow()
     val requestBluetoothPermissions: Flow<Unit> = _requestBluetoothPermissions.receiveAsFlow()
@@ -84,16 +85,16 @@ class ActionsViewModel(
 
     init {
         viewModelScope.launch {
-            wifiNetwork.networkState.collect {state ->
-                when(state){
-                    is IWifiNetwork.NetworkState.Loading -> {
+            wifiNetwork.networkState.collect { state ->
+                when (state) {
+                    IWifiNetwork.NetworkState.Loading -> {
                         updateState(RemoteDevice.WIFI, loadingDotsState)
                     }
-                    is IWifiNetwork.NetworkState.Mismatch -> {
+                    IWifiNetwork.NetworkState.Mismatch -> {
                         updateState(RemoteDevice.WIFI, idleDotsState)
                     }
-                    is IWifiNetwork.NetworkState.Network -> {
-                        updateState(RemoteDevice.WIFI, createDotsTextState(state.ssid))
+                    IWifiNetwork.NetworkState.Match -> {
+                        updateState(RemoteDevice.WIFI, createDotsTextState(connected))
                     }
                 }
             }

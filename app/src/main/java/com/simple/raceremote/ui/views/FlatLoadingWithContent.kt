@@ -44,6 +44,7 @@ import androidx.compose.ui.unit.TextUnitType
 import androidx.compose.ui.unit.dp
 import com.simple.raceremote.utils.dpToSp
 import com.simple.raceremote.utils.pxToDp
+import kotlin.math.absoluteValue
 
 private const val DEFAULT_ANIMATION_DURATION = 1500
 private const val DEFAULT_DOTS_COUNT = 3
@@ -51,7 +52,7 @@ private const val DEFAULT_HEIGHT = 6
 
 private const val TEXT_MAX_LENGTH = 32
 private const val TEXT_MAX_LINES = 1
-private const val TEXT_SPEED = 200
+private const val TEXT_SPEED = 0.024f
 
 sealed class DotsState(val height: Dp) {
 
@@ -69,7 +70,8 @@ sealed class DotsState(val height: Dp) {
         val text: String,
         val textSize: Dp,
         val textMaxLength: Int = TEXT_MAX_LENGTH,
-        val textVelocity: Int = TEXT_SPEED,
+        /**Dp per ms*/
+        val textVelocity: Dp = TEXT_SPEED.dp,
         height: Dp = DEFAULT_HEIGHT.dp
     ) : DotsState(height) {
         val truncatedText: String
@@ -168,7 +170,6 @@ private fun addLoadingDots(
 private fun addText(state: DotsState.ShowText) {
 
     val transition = rememberInfiniteTransition()
-    val animationDuration = state.run { textVelocity * truncatedText.length }
 
     val offset = remember {
         mutableStateOf(
@@ -177,6 +178,12 @@ private fun addText(state: DotsState.ShowText) {
                 targetOffset = Int.MAX_VALUE
             )
         )
+    }
+
+    val animationDuration = if (offset.value.targetOffset == Int.MAX_VALUE) {
+        Int.MAX_VALUE
+    } else {
+        state.run { offset.value.targetOffset.absoluteValue.pxToDp() / textVelocity }.toInt()
     }
 
     val animationOffset by transition.animateValue(

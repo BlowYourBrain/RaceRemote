@@ -5,7 +5,6 @@ import android.net.ConnectivityManager
 import android.net.LinkProperties
 import android.net.Network
 import android.net.NetworkCapabilities
-import android.net.wifi.WifiInfo
 import com.simple.raceremote.features.remote_control.data.RemoteDeviceApi
 import com.simple.raceremote.features.remote_control.presentation.IWifiNetwork.NetworkState
 import com.simple.raceremote.utils.debug
@@ -20,21 +19,20 @@ import kotlinx.coroutines.launch
 
 interface IWifiNetwork {
     /**
-     * Emit [NetworkState.Network] if it's possible to connect remote device.
+     * Emit [NetworkState.Match] if it's possible to connect remote device.
      * If it's impossible emit [NetworkState.Mismatch].
      * Emit [NetworkState.Loading] when it's trying to connect remote device.
      * */
     val networkState: Flow<NetworkState?>
 
-    sealed class NetworkState {
-        object Loading : NetworkState()
-        object Mismatch : NetworkState()
-        class Network(val ssid: String) : NetworkState()
+    enum class NetworkState {
+        Loading,
+        Mismatch,
+        Match,
     }
 }
 
 private const val WIFI_CONNECTION_TAG = "WIFI_CONNECTION_TAG"
-private const val UNKNOWN = "UNKNOWN"
 
 class WifiNetwork(
     private val context: Context,
@@ -54,25 +52,7 @@ class WifiNetwork(
 
     private fun initial() {
         setDefaultCallback()
-
-        val connectivityManager = context.getConnectivityManager()
-        val activeNetwork = connectivityManager?.activeNetwork
-        val ssid = getNetworkSSID(connectivityManager, activeNetwork)
-        debug("ssid id = $ssid")
-
-        cancelJobAndCheckNetwork(ssid)
-    }
-
-    private fun getNetworkSSID(
-        connectivityManager: ConnectivityManager?,
-        activeNetwork: Network?
-    ): String {
-        debug("active network = $activeNetwork")
-        //todo provide correct network name
-        return connectivityManager?.getNetworkCapabilities(activeNetwork)
-            ?.transportInfo
-            ?.let { it as? WifiInfo }
-            ?.passpointProviderFriendlyName ?: UNKNOWN
+        cancelJobAndCheckNetwork()
     }
 
     private fun setDefaultCallback() {
@@ -83,8 +63,7 @@ class WifiNetwork(
             object : ConnectivityManager.NetworkCallback() {
                 override fun onAvailable(network: Network) {
                     super.onAvailable(network)
-                    val ssid = getNetworkSSID(connectivityManager, network)
-                    cancelJobAndCheckNetwork(ssid)
+                    cancelJobAndCheckNetwork()
                     debug("onAvailable", WIFI_CONNECTION_TAG)
                 }
 
@@ -113,15 +92,15 @@ class WifiNetwork(
         )
     }
 
-    private fun cancelJobAndCheckNetwork(ssid: String) {
+    private fun cancelJobAndCheckNetwork() {
         currentJob?.cancel()
 
         currentJob = coroutineScope.launch {
             _networkState.emit(NetworkState.Loading)
             val isRemoteDevice = remoteDeviceApi.isRemoteDevice()
-            val network = if (isRemoteDevice) NetworkState.Network(ssid) else NetworkState.Mismatch
+            val networkState = if (isRemoteDevice) NetworkState.Match else NetworkState.Mismatch
 
-            _networkState.emit(network)
+            _networkState.emit(networkState)
         }
     }
 

@@ -5,11 +5,18 @@
 
     <uses-feature android:name="android.software.companion_device_setup" />
 
+
     <uses-permission android:name="android.permission.BLUETOOTH" />
     <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
     <uses-permission android:name="android.permission.BLUETOOTH_CONNECT" />
 
     <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE" />
+
+    <!--open pick wifi-->
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+
+    <!--watch for wifi connection change-->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
 
     <application
@@ -29,7 +36,10 @@
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+
+
         </activity>
     </application>
+
 
 </manifest>

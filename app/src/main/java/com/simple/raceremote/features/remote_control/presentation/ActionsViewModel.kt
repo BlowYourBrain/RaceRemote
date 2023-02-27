@@ -18,21 +18,24 @@ import com.simple.raceremote.utils.sidepanel.ISidePanelActionProvider
 import com.simple.raceremote.utils.sidepanel.toSidePanelAction
 import com.simple.raceremote.utils.singleEventChannel
 import com.simple.raceremote.utils.wifi.isWifiEnabled
+import com.simple.raceremote.utils.wifi.pickWifiNetwork
 import java.util.UUID
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.asStateFlow
+import kotlinx.coroutines.flow.collect
 import kotlinx.coroutines.flow.map
 import kotlinx.coroutines.flow.receiveAsFlow
 import kotlinx.coroutines.launch
 
 class ActionsViewModel(
     private val context: Context,
+    private val wifiNetwork: IWifiNetwork,
     private val bluetoothConnection: IBluetoothConnection,
-    private val wifiConnection: IWiFiConnection,
     private val sidePanelActionProvider: ISidePanelActionProvider,
     private val sidePanelActionProducer: ISidePanelActionProducer,
 ) : ViewModel() {
+
     companion object {
         //todo should I generate new one for every app instance?
         private const val UUID_STR = "4ab19e4e-e6c1-43ba-b9cd-0b19777da670"
@@ -79,6 +82,24 @@ class ActionsViewModel(
     val openEnterPasswordDialog: Flow<WifiEnterPasswordDialog> =
         _openEnterPasswordDialog.receiveAsFlow()
 
+    init {
+        viewModelScope.launch {
+            wifiNetwork.networkState.collect {state ->
+                when(state){
+                    is IWifiNetwork.NetworkState.Loading -> {
+                        updateState(RemoteDevice.WIFI, loadingDotsState)
+                    }
+                    is IWifiNetwork.NetworkState.Mismatch -> {
+                        updateState(RemoteDevice.WIFI, idleDotsState)
+                    }
+                    is IWifiNetwork.NetworkState.Network -> {
+                        updateState(RemoteDevice.WIFI, createDotsTextState(state.ssid))
+                    }
+                }
+            }
+        }
+    }
+
     /**
      * @param macAddress - bluetooth device macAddress
      * */
@@ -116,7 +137,7 @@ class ActionsViewModel(
     fun connectWifi(ssid: String, password: String) {
         debug("successfully connect to network $ssid")
         viewModelScope.launch {
-            wifiConnection.connect(ssid, password)
+//            wifiConnection.connect(ssid, password)
             updateState(RemoteDevice.WIFI, createDotsTextState(ssid))
         }
     }
@@ -199,11 +220,7 @@ class ActionsViewModel(
         _remoteDevice.trySend(RemoteDevice.Bluetooth)
     }
 
-    private fun onWifiClick() {
-        if (!checkWifiGranted()) return
-
-        _remoteDevice.trySend(RemoteDevice.WIFI)
-    }
+    private fun onWifiClick() = with(context) { pickWifiNetwork() }
 
     private fun onSettingsClick() {
         //todo Do I really need it?

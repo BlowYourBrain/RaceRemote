@@ -28,7 +28,7 @@ interface IWifiNetworkFinder {
      * If it's impossible emit [NetworkState.Mismatch].
      * Emit [NetworkState.Loading] when it's trying to connect remote device.
      * */
-    val networkState: Flow<NetworkState?>
+    val networkState: Flow<NetworkState>
 
     enum class NetworkState {
         Loading,

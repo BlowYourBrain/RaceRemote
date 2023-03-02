@@ -3,17 +3,12 @@ package com.simple.raceremote.app
 import android.content.Intent
 import android.content.pm.ActivityInfo
 import android.os.Bundle
-import android.view.LayoutInflater
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
-import androidx.appcompat.app.AlertDialog
-import androidx.core.text.toSpannable
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import androidx.core.view.WindowInsetsControllerCompat
 import androidx.lifecycle.lifecycleScope
-import com.simple.raceremote.R
-import com.simple.raceremote.databinding.PasswordDialogBinding
 import com.simple.raceremote.features.remote_control.presentation.ActionsViewModel
 import com.simple.raceremote.features.remote_control.presentation.RemoteDeviceConnection
 import com.simple.raceremote.features.remote_control.presentation.model.RemoteDevice
@@ -21,8 +16,6 @@ import com.simple.raceremote.features.remote_control.utils.activity_result_handl
 import com.simple.raceremote.features.remote_control.utils.activity_result_handler.HandlerList
 import com.simple.raceremote.features.remote_control.utils.activity_result_handler.WiFiActivityResultHandler
 import com.simple.raceremote.utils.bluetooth.getBluetoothPermissions
-import com.simple.raceremote.utils.setColor
-import kotlinx.coroutines.flow.collect
 import org.koin.android.ext.android.inject
 import org.koin.androidx.viewmodel.ext.android.viewModel
 
@@ -94,29 +87,6 @@ class MainActivity : ComponentActivity() {
         windowInsetsController.systemBarsBehavior =
             WindowInsetsControllerCompat.BEHAVIOR_SHOW_TRANSIENT_BARS_BY_SWIPE
         windowInsetsController.hide(WindowInsetsCompat.Type.systemBars())
-    }
-
-    private fun showPasswordInputDialog(ssid: String) {
-        val view = PasswordDialogBinding.inflate(LayoutInflater.from(this), null, false)
-        val input = view.input
-        val textColor = resources.getColor(R.color.light_grey)
-        val positiveText = resources.getText(android.R.string.ok).toSpannable().setColor(textColor)
-        val negativeText =
-            resources.getText(android.R.string.cancel).toSpannable().setColor(textColor)
-        val title =
-            resources.getString(R.string.network_password, ssid).toSpannable().setColor(textColor)
-
-        AlertDialog.Builder(this)
-            .setTitle(title)
-            .setView(view.root)
-            .setPositiveButton(positiveText) { dialog, _ ->
-                actionsViewModel.connectWifi(ssid, input.text.toString())
-                dialog.dismiss()
-            }
-            .setNegativeButton(negativeText) { dialog, _ ->
-                dialog.cancel()
-            }
-            .show()
     }
 
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {

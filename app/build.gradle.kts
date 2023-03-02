@@ -40,10 +40,10 @@ android {
 
     buildFeatures {
         compose = true
-        viewBinding = true
     }
+
     composeOptions {
-        kotlinCompilerExtensionVersion = Versions.compose
+        kotlinCompilerExtensionVersion = Versions.composeCompiler
         kotlinCompilerVersion = Versions.kotlin
     }
 }

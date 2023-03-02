@@ -6,7 +6,7 @@ import android.net.LinkProperties
 import android.net.Network
 import android.net.NetworkCapabilities
 import com.simple.raceremote.features.remote_control.data.IRemoteDeviceRepository
-import com.simple.raceremote.features.remote_control.presentation.IWifiNetwork.NetworkState
+import com.simple.raceremote.features.remote_control.presentation.IWifiNetworkFinder.NetworkState
 import com.simple.raceremote.utils.debug
 import com.simple.raceremote.utils.wifi.getConnectivityManager
 import kotlinx.coroutines.CoroutineScope
@@ -17,7 +17,10 @@ import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.launch
 
-interface IWifiNetwork {
+/**
+ * Find RemoteDevice and notice user about it.
+ * */
+interface IWifiNetworkFinder {
     /**
      * Emit [NetworkState.Match] if it's possible to connect remote device.
      * If it's impossible emit [NetworkState.Mismatch].
@@ -34,10 +37,10 @@ interface IWifiNetwork {
 
 private const val WIFI_CONNECTION_TAG = "WIFI_CONNECTION_TAG"
 
-class WifiNetwork(
+class WifiNetworkFinder(
     private val context: Context,
     private val remoteDeviceRepository: IRemoteDeviceRepository
-) : IWifiNetwork {
+) : IWifiNetworkFinder {
 
     private var currentJob: Job? = null
     private val coroutineScope = CoroutineScope(Dispatchers.IO)

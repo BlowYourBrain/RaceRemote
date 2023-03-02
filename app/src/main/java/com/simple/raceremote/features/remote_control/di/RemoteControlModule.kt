@@ -10,7 +10,9 @@ import com.simple.raceremote.features.remote_control.presentation.mapper.IEngine
 import com.simple.raceremote.features.remote_control.presentation.mapper.ISteeringWheelMapper
 import com.simple.raceremote.features.remote_control.presentation.mapper.SteeringWheelMapper
 import com.simple.raceremote.features.remote_control.utils.CompoundCommandCreator
+import com.simple.raceremote.features.remote_control.utils.CompoundCommandExtractor
 import com.simple.raceremote.features.remote_control.utils.ICompoundCommandCreator
+import com.simple.raceremote.features.remote_control.utils.ICompoundCommandExtractor
 import com.simple.raceremote.utils.sidepanel.ISidePanelActionProducer
 import com.simple.raceremote.utils.sidepanel.ISidePanelActionProvider
 import com.simple.raceremote.utils.sidepanel.SidePanelActionProvider
@@ -23,13 +25,15 @@ val remoteControlModule = module {
     factory<IEngineMapper> { EngineMapper() }
     factory<ISteeringWheelMapper> { SteeringWheelMapper() }
     factory<ICompoundCommandCreator> { CompoundCommandCreator() }
-    factory<IRemoteDeviceRepository> { RemoteDeviceRepository(get()) }
+    factory<ICompoundCommandExtractor> { CompoundCommandExtractor() }
+
+    factory<IRemoteDeviceRepository> { RemoteDeviceRepository(get(), get(), get()) }
 
     single { SidePanelActionProvider() } binds arrayOf(
         ISidePanelActionProducer::class,
         ISidePanelActionProvider::class
     )
-    single { ActionsViewModel(get(), get(), get(), get(), get()) }
+    single { ActionsViewModel(get(), get(), get(), get(), get(), get()) }
 
-    viewModel { RemoteControlViewModel(get(), get(), get(), get()) }
+    viewModel { RemoteControlViewModel(get(), get(), get(), get(), get()) }
 }

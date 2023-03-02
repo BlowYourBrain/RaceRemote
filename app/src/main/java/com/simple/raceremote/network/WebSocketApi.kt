@@ -1,11 +1,13 @@
 package com.simple.raceremote.network
 
+import com.simple.raceremote.utils.debug
 import java.util.concurrent.TimeUnit
 import okhttp3.OkHttpClient
 import okhttp3.Request
 import okhttp3.Response
 import okhttp3.WebSocket
 import okhttp3.WebSocketListener
+import okio.ByteString
 
 
 class WebSocketApi : WebSocketListener() {
@@ -50,7 +52,19 @@ class WebSocketApi : WebSocketListener() {
     }
 
     fun sendMessage(message: String) {
-        webSocket?.send(message)
+        webSocket?.let { socket ->
+            debug("size: ${socket.queueSize()} \nmessage: $message")
+            val isSend = socket.send(message)
+            debug("isSend = $isSend\n")
+        }
+    }
+
+    fun sendMessage(message: ByteString) {
+        webSocket?.let { socket ->
+            debug("size: ${socket.queueSize()} \nmessage: $message")
+            val isSend = socket.send(message)
+            debug("isSend = $isSend\n")
+        }
     }
 
     override fun onOpen(webSocket: WebSocket, response: Response) {

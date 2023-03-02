@@ -2,6 +2,7 @@ package com.simple.raceremote.utils.bluetooth
 
 import android.bluetooth.BluetoothSocket
 import android.content.Context
+import com.simple.raceremote.features.remote_control.utils.CompoundCommandExtractor
 import com.simple.raceremote.utils.debug
 import java.util.UUID
 
@@ -22,10 +23,8 @@ interface IBluetoothConnection {
     fun closeConnection()
 }
 
-class BluetoothConnection() : IBluetoothConnection {
-    private companion object {
-        const val clearFirst8Bytes = 0b0000_0000_1111_1111
-    }
+class BluetoothConnection(private val compoundCommandExtractor: CompoundCommandExtractor) :
+    IBluetoothConnection {
 
     private var bluetoothSocket: BluetoothSocket? = null
     private val outputStream get() = bluetoothSocket?.outputStream
@@ -61,8 +60,8 @@ class BluetoothConnection() : IBluetoothConnection {
 
     override suspend fun sendMessage(bytes: Int) {
         kotlin.runCatching {
-            outputStream?.write(getStartCommand(bytes))
-            outputStream?.write(getEndCommand(bytes))
+            outputStream?.write(compoundCommandExtractor.extractStartCommand(bytes).toInt())
+            outputStream?.write(compoundCommandExtractor.extractEndCommand(bytes).toInt())
         }.onFailure {
             debug(it.toString())
             debug("bluetooth send message failed")
@@ -77,7 +76,4 @@ class BluetoothConnection() : IBluetoothConnection {
             debug("close bluetooth connection failed")
         }
     }
-
-    private fun getStartCommand(command: Int) = command shr 8
-    private fun getEndCommand(command: Int) = command and clearFirst8Bytes
 }

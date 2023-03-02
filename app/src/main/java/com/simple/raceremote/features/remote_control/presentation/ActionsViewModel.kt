@@ -21,8 +21,6 @@ import com.simple.raceremote.utils.singleEventChannel
 import com.simple.raceremote.utils.wifi.isWifiEnabled
 import com.simple.raceremote.utils.wifi.pickWifiNetwork
 import java.util.UUID
-import kotlinx.coroutines.GlobalScope
-import kotlinx.coroutines.delay
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.asStateFlow
@@ -33,7 +31,8 @@ import kotlinx.coroutines.launch
 
 class ActionsViewModel(
     private val context: Context,
-    private val wifiNetwork: IWifiNetwork,
+    private val wifiNetwork: IWifiNetworkFinder,
+    private val webSocketAPI: WebSocketApi,
     private val bluetoothConnection: IBluetoothConnection,
     private val sidePanelActionProvider: ISidePanelActionProvider,
     private val sidePanelActionProducer: ISidePanelActionProducer,
@@ -53,8 +52,6 @@ class ActionsViewModel(
     private val loadingDotsState = DotsState.Loading(DOTS_HEIGHT.dp)
     private val idleDotsState = DotsState.Idle(DOTS_HEIGHT.dp)
 
-    //todo inject it
-    private val webSocketAPI = WebSocketApi()
     private val defaultActions = listOf(
         Action(
             icon = R.drawable.ic_baseline_bluetooth_searching_24,
@@ -97,13 +94,13 @@ class ActionsViewModel(
         viewModelScope.launch {
             wifiNetwork.networkState.collect { state ->
                 when (state) {
-                    IWifiNetwork.NetworkState.Loading -> {
+                    IWifiNetworkFinder.NetworkState.Loading -> {
                         updateState(RemoteDevice.WIFI, loadingDotsState)
                     }
-                    IWifiNetwork.NetworkState.Mismatch -> {
+                    IWifiNetworkFinder.NetworkState.Mismatch -> {
                         updateState(RemoteDevice.WIFI, idleDotsState)
                     }
-                    IWifiNetwork.NetworkState.Match -> {
+                    IWifiNetworkFinder.NetworkState.Match -> {
                         updateState(RemoteDevice.WIFI, createDotsTextState(connected))
                         webSocketAPI.initWebSocket()
                     }

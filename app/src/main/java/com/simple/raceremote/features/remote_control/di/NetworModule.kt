@@ -2,6 +2,7 @@ package com.simple.raceremote.features.remote_control.di
 
 import com.simple.raceremote.network.RemoteApiProvider
 import com.simple.raceremote.network.RemoteDeviceApi
+import com.simple.raceremote.network.WebSocketApi
 import okhttp3.OkHttpClient
 import org.koin.dsl.module
 import retrofit2.Retrofit
@@ -22,4 +23,5 @@ val networkModule = module {
             .build()
     }
     single<RemoteDeviceApi> { RemoteApiProvider(get()).provideRemoteDeviceApi() }
+    single<WebSocketApi> { WebSocketApi() }
 }

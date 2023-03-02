@@ -8,6 +8,7 @@ import com.simple.raceremote.R
 import com.simple.raceremote.features.remote_control.presentation.model.Action
 import com.simple.raceremote.features.remote_control.presentation.model.RemoteDevice
 import com.simple.raceremote.features.remote_control.presentation.model.WifiEnterPasswordDialog
+import com.simple.raceremote.network.WebSocketApi
 import com.simple.raceremote.ui.views.DotsState
 import com.simple.raceremote.utils.bluetooth.IBluetoothConnection
 import com.simple.raceremote.utils.bluetooth.hasBluetooth
@@ -20,6 +21,8 @@ import com.simple.raceremote.utils.singleEventChannel
 import com.simple.raceremote.utils.wifi.isWifiEnabled
 import com.simple.raceremote.utils.wifi.pickWifiNetwork
 import java.util.UUID
+import kotlinx.coroutines.GlobalScope
+import kotlinx.coroutines.delay
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.asStateFlow
@@ -50,6 +53,8 @@ class ActionsViewModel(
     private val loadingDotsState = DotsState.Loading(DOTS_HEIGHT.dp)
     private val idleDotsState = DotsState.Idle(DOTS_HEIGHT.dp)
 
+    //todo inject it
+    private val webSocketAPI = WebSocketApi()
     private val defaultActions = listOf(
         Action(
             icon = R.drawable.ic_baseline_bluetooth_searching_24,
@@ -64,6 +69,11 @@ class ActionsViewModel(
         Action(
             icon = R.drawable.ic_baseline_settings_24,
             onClick = ::onSettingsClick,
+            state = idleDotsState
+        ),
+        Action(
+            icon = R.drawable.ic_baseline_arrow_back_ios_24,
+            onClick = ::sendMessage,
             state = idleDotsState
         )
     )
@@ -95,8 +105,16 @@ class ActionsViewModel(
                     }
                     IWifiNetwork.NetworkState.Match -> {
                         updateState(RemoteDevice.WIFI, createDotsTextState(connected))
+                        webSocketAPI.initWebSocket()
                     }
                 }
+            }
+        }
+
+        webSocketAPI.onUpdateSocketState = { webSocket, webSocketState ->
+            debug("socket state is ${webSocketState.name}")
+            if (webSocketState == WebSocketApi.WebSocketState.CLOSING) {
+                webSocket.cancel()
             }
         }
     }
@@ -218,10 +236,21 @@ class ActionsViewModel(
     private fun onWifiClick() = with(context) { pickWifiNetwork() }
 
     private fun onSettingsClick() {
+        webSocketAPI.cancelWebSocket()
+        webSocketAPI.initWebSocket()
         //todo Do I really need it?
     }
 
     private fun hasBluetoothConnection(): Boolean {
         return _actions.value[BLUETOOTH_POSITION].state is DotsState.ShowText
+    }
+
+    private fun sendMessage(){
+        webSocketAPI.sendMessage("hello world!")
+    }
+
+    override fun onCleared() {
+        super.onCleared()
+        webSocketAPI.cancelWebSocket()
     }
 }

@@ -77,7 +77,6 @@ sealed class Orientation() {
  * @param orientation - ориентация экрана
  * @param onOffsetChange - лямбда, срабатывающая при изменении положения пальца. Значения от -1f до 1f.
  * */
-@OptIn(ExperimentalComposeUiApi::class)
 @Composable
 fun Slider(
     orientation: Orientation = Orientation.Horizontal,

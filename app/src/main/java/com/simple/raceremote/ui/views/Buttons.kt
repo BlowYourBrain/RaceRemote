@@ -11,6 +11,7 @@ import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.graphics.ColorFilter
 import androidx.compose.ui.res.painterResource
 import com.simple.raceremote.ui.theme.CornerShapes
 import com.simple.raceremote.ui.theme.Padding
@@ -55,7 +56,11 @@ fun ActionButton(
         shape = CornerShapes.HugeItem,
         onClick = { onClick?.invoke() }
     ) {
-        Image(painter = painterResource(icon), contentDescription = null)
+        Image(
+            painter = painterResource(icon),
+            contentDescription = null,
+            colorFilter = ColorFilter.tint(color)
+        )
     }
 }
 

@@ -3,9 +3,10 @@ package com.simple.raceremote.app
 import android.content.Intent
 import android.content.pm.ActivityInfo
 import android.os.Bundle
+import android.view.WindowManager
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
-import androidx.core.view.ViewCompat
+import androidx.core.view.WindowCompat
 import androidx.core.view.WindowInsetsCompat
 import androidx.core.view.WindowInsetsControllerCompat
 import androidx.lifecycle.lifecycleScope
@@ -18,6 +19,7 @@ import com.simple.raceremote.features.remote_control.utils.activity_result_handl
 import com.simple.raceremote.utils.bluetooth.getBluetoothPermissions
 import org.koin.android.ext.android.inject
 import org.koin.androidx.viewmodel.ext.android.viewModel
+
 
 class MainActivity : ComponentActivity() {
 
@@ -68,11 +70,10 @@ class MainActivity : ComponentActivity() {
             )
         )
 
+        //todo remove it
         addHandler(
             WiFiActivityResultHandler(
                 onSuccess = { scanResult ->
-                    //todo replace with jetpack compose dialog
-//                    showPasswordInputDialog(scanResult.wifiSsid.toString().removeSurrounding("\""))
                     actionsViewModel.openEnterPasswordDialog(
                         scanResult.wifiSsid.toString().removeSurrounding("\"")
                     )
@@ -82,8 +83,13 @@ class MainActivity : ComponentActivity() {
     }
 
     private fun hideSystemBars() {
-        val windowInsetsController =
-            ViewCompat.getWindowInsetsController(window.decorView) ?: return
+        WindowCompat.setDecorFitsSystemWindows(window, false)
+
+        window.attributes.layoutInDisplayCutoutMode =
+            WindowManager.LayoutParams.LAYOUT_IN_DISPLAY_CUTOUT_MODE_SHORT_EDGES
+
+        val windowInsetsController = WindowCompat.getInsetsController(window, window.decorView)
+
         windowInsetsController.systemBarsBehavior =
             WindowInsetsControllerCompat.BEHAVIOR_SHOW_TRANSIENT_BARS_BY_SWIPE
         windowInsetsController.hide(WindowInsetsCompat.Type.systemBars())

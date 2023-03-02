@@ -2,8 +2,11 @@ package com.simple.raceremote.navigation
 
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.calculateEndPadding
+import androidx.compose.foundation.layout.calculateStartPadding
 import androidx.compose.foundation.layout.padding
 import androidx.compose.material.Scaffold
+import androidx.compose.material.Surface
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.MutableState
 import androidx.compose.runtime.State
@@ -12,6 +15,7 @@ import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.LocalContext
+import androidx.compose.ui.unit.LayoutDirection
 import androidx.compose.ui.unit.dp
 import androidx.navigation.NavOptions
 import androidx.navigation.compose.NavHost
@@ -39,7 +43,7 @@ fun AppScaffold() {
     val openDialog =
         actionsViewModel.openEnterPasswordDialog.collectAsState(initial = WifiEnterPasswordDialog.Close)
 
-    Scaffold() {
+    Scaffold() { padding ->
         openDialog.value.let {
             if (it is WifiEnterPasswordDialog.Open) {
                 EnterPasswordDialog(
@@ -55,22 +59,31 @@ fun AppScaffold() {
             }
         }
 
-        SidePanel(
-            isOpened = isPanelOpen,
-            updateIsOpened = { actionsViewModel.isOpened(it) },
-            itemProvider = sidePanelContent
+        Box(
+            Modifier.padding(
+                top = padding.calculateTopPadding(),
+                bottom = padding.calculateBottomPadding(),
+                end = padding.calculateEndPadding(LayoutDirection.Ltr),
+                start = padding.calculateStartPadding(LayoutDirection.Ltr),
+            )
         ) {
-            Column {
-                Box(
-                    Modifier.padding(
-                        top = CONTENT_TOP_PADDING.dp,
-                        bottom = CONTENT_BOTTOM_PADDING.dp
-                    )
-                ) {
-                    AppScaffold(
-                        startScreen = getStartScreen(),
-                        sidePanelContent = sidePanelContent,
-                    )
+            SidePanel(
+                isOpened = isPanelOpen,
+                updateIsOpened = { actionsViewModel.isOpened(it) },
+                itemProvider = sidePanelContent
+            ) {
+                Column {
+                    Box(
+                        Modifier.padding(
+                            top = CONTENT_TOP_PADDING.dp,
+                            bottom = CONTENT_BOTTOM_PADDING.dp
+                        )
+                    ) {
+                        AppScaffold(
+                            startScreen = getStartScreen(),
+                            sidePanelContent = sidePanelContent,
+                        )
+                    }
                 }
             }
         }

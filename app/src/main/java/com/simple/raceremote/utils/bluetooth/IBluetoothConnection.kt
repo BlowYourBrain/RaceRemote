@@ -61,10 +61,8 @@ class BluetoothConnection() : IBluetoothConnection {
 
     override suspend fun sendMessage(bytes: Int) {
         kotlin.runCatching {
-            with(commandToByteSequence(bytes)) {
-                outputStream?.write(startCommand)
-                outputStream?.write(endCommand)
-            }
+            outputStream?.write(getStartCommand(bytes))
+            outputStream?.write(getEndCommand(bytes))
         }.onFailure {
             debug(it.toString())
             debug("bluetooth send message failed")
@@ -80,13 +78,6 @@ class BluetoothConnection() : IBluetoothConnection {
         }
     }
 
-    private fun commandToByteSequence(command: Int) = CompoundCommand(
-        startCommand = command shr 8,
-        endCommand = command and clearFirst8Bytes
-    )
-
-    data class CompoundCommand(
-        val startCommand: Int,
-        val endCommand: Int
-    )
+    private fun getStartCommand(command: Int) = command shr 8
+    private fun getEndCommand(command: Int) = command and clearFirst8Bytes
 }

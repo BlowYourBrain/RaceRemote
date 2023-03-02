@@ -15,6 +15,8 @@ import kotlinx.coroutines.Job
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.asStateFlow
+import kotlinx.coroutines.flow.onEach
+import kotlinx.coroutines.flow.transform
 import kotlinx.coroutines.launch
 
 /**
@@ -101,7 +103,8 @@ class WifiNetworkFinder(
         currentJob = coroutineScope.launch {
             _networkState.emit(NetworkState.Loading)
             val isRemoteDeviceAvailable = remoteDeviceRepository.isRemoteDeviceAvailable()
-            val networkState = if (isRemoteDeviceAvailable) NetworkState.Match else NetworkState.Mismatch
+            val networkState =
+                if (isRemoteDeviceAvailable) NetworkState.Match else NetworkState.Mismatch
 
             _networkState.emit(networkState)
         }

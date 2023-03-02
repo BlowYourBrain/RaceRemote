@@ -2,7 +2,7 @@ package com.simple.raceremote.utils.bluetooth
 
 import android.bluetooth.BluetoothSocket
 import android.content.Context
-import com.simple.raceremote.features.remote_control.utils.CompoundCommandExtractor
+import com.simple.raceremote.features.remote_control.utils.ICompoundCommandExtractor
 import com.simple.raceremote.utils.debug
 import java.util.UUID
 
@@ -23,7 +23,7 @@ interface IBluetoothConnection {
     fun closeConnection()
 }
 
-class BluetoothConnection(private val compoundCommandExtractor: CompoundCommandExtractor) :
+class BluetoothConnection(private val compoundCommandExtractor: ICompoundCommandExtractor) :
     IBluetoothConnection {
 
     private var bluetoothSocket: BluetoothSocket? = null

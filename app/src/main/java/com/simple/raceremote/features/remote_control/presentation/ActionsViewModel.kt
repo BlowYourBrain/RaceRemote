@@ -32,7 +32,6 @@ import kotlinx.coroutines.launch
 class ActionsViewModel(
     private val context: Context,
     private val wifiNetwork: IWifiNetworkFinder,
-    private val webSocketAPI: WebSocketApi,
     private val bluetoothConnection: IBluetoothConnection,
     private val sidePanelActionProvider: ISidePanelActionProvider,
     private val sidePanelActionProducer: ISidePanelActionProducer,
@@ -68,11 +67,6 @@ class ActionsViewModel(
             onClick = ::onSettingsClick,
             state = idleDotsState
         ),
-        Action(
-            icon = R.drawable.ic_baseline_arrow_back_ios_24,
-            onClick = ::sendMessage,
-            state = idleDotsState
-        )
     )
 
     private val uuid = UUID.fromString(UUID_STR)
@@ -102,16 +96,8 @@ class ActionsViewModel(
                     }
                     IWifiNetworkFinder.NetworkState.Match -> {
                         updateState(RemoteDevice.WIFI, createDotsTextState(connected))
-                        webSocketAPI.initWebSocket()
                     }
                 }
-            }
-        }
-
-        webSocketAPI.onUpdateSocketState = { webSocket, webSocketState ->
-            debug("socket state is ${webSocketState.name}")
-            if (webSocketState == WebSocketApi.WebSocketState.CLOSING) {
-                webSocket.cancel()
             }
         }
     }
@@ -233,21 +219,10 @@ class ActionsViewModel(
     private fun onWifiClick() = with(context) { pickWifiNetwork() }
 
     private fun onSettingsClick() {
-        webSocketAPI.cancelWebSocket()
-        webSocketAPI.initWebSocket()
         //todo Do I really need it?
     }
 
     private fun hasBluetoothConnection(): Boolean {
         return _actions.value[BLUETOOTH_POSITION].state is DotsState.ShowText
-    }
-
-    private fun sendMessage(){
-        webSocketAPI.sendMessage("hello world!")
-    }
-
-    override fun onCleared() {
-        super.onCleared()
-        webSocketAPI.cancelWebSocket()
     }
 }

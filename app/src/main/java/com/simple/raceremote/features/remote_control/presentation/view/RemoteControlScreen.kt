@@ -33,7 +33,6 @@ import com.simple.raceremote.features.remote_control.presentation.model.Action
 @SuppressLint("FlowOperatorInvokedInComposition")
 @Composable
 fun RemoteControlScreen(
-    sidePanelContent: MutableState<@Composable () -> Unit>,
 ) {
     val actionsViewModel = getViewModel<ActionsViewModel>()
     val remoteControlViewModel = getViewModel<RemoteControlViewModel>()

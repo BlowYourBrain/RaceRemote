@@ -15,7 +15,6 @@ import com.simple.raceremote.features.remote_control.presentation.RemoteDeviceCo
 import com.simple.raceremote.features.remote_control.presentation.model.RemoteDevice
 import com.simple.raceremote.features.remote_control.utils.activity_result_handler.BluetoothResultHandler
 import com.simple.raceremote.features.remote_control.utils.activity_result_handler.HandlerList
-import com.simple.raceremote.features.remote_control.utils.activity_result_handler.WiFiActivityResultHandler
 import com.simple.raceremote.utils.bluetooth.getBluetoothPermissions
 import org.koin.android.ext.android.inject
 import org.koin.androidx.viewmodel.ext.android.viewModel
@@ -66,17 +65,6 @@ class MainActivity : ComponentActivity() {
             BluetoothResultHandler(
                 onSuccess = { bluetoothDevice ->
                     actionsViewModel.connectBluetooth(bluetoothDevice.address)
-                }
-            )
-        )
-
-        //todo remove it
-        addHandler(
-            WiFiActivityResultHandler(
-                onSuccess = { scanResult ->
-                    actionsViewModel.openEnterPasswordDialog(
-                        scanResult.wifiSsid.toString().removeSurrounding("\"")
-                    )
                 }
             )
         )

@@ -74,15 +74,12 @@ class ActionsViewModel(
     private val _remoteDevice = singleEventChannel<RemoteDevice>()
     private val _requestBluetoothPermissions = singleEventChannel<Unit>()
     private val connected by lazy { context.resources.getString(R.string.connected) }
-    private val _openEnterPasswordDialog = singleEventChannel<WifiEnterPasswordDialog>()
 
     val remoteDevice: Flow<RemoteDevice> = _remoteDevice.receiveAsFlow()
     val requestBluetoothPermissions: Flow<Unit> = _requestBluetoothPermissions.receiveAsFlow()
 
     val actions: Flow<List<Action>> = _actions.asStateFlow()
     val isPanelOpen: Flow<Boolean> = sidePanelActionProvider.action.map { it.isOpenAction() }
-    val openEnterPasswordDialog: Flow<WifiEnterPasswordDialog> =
-        _openEnterPasswordDialog.receiveAsFlow()
 
     init {
         viewModelScope.launch {
@@ -125,22 +122,6 @@ class ActionsViewModel(
                     updateState(RemoteDevice.Bluetooth, idleDotsState)
                 }
             }
-        }
-    }
-
-    fun openEnterPasswordDialog(ssid: String) {
-        _openEnterPasswordDialog.trySend(WifiEnterPasswordDialog.Open(ssid))
-    }
-
-    fun closeEnterPasswordDialog() {
-        _openEnterPasswordDialog.trySend(WifiEnterPasswordDialog.Close)
-    }
-
-    fun connectWifi(ssid: String, password: String) {
-        debug("successfully connect to network $ssid")
-        viewModelScope.launch {
-//            wifiConnection.connect(ssid, password)
-            updateState(RemoteDevice.WIFI, createDotsTextState(ssid))
         }
     }
 

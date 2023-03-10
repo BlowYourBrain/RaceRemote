@@ -2,6 +2,7 @@ package com.simple.raceremote.features.remote_control.utils.activity_result_hand
 
 import android.content.Intent
 
+//todo remove, reason: not used
 /**
  * Handle activity result
  *

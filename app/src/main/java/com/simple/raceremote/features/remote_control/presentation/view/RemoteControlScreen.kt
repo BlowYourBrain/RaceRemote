@@ -1,6 +1,8 @@
 package com.simple.raceremote.features.remote_control.presentation.view
 
 import android.annotation.SuppressLint
+import androidx.compose.foundation.BorderStroke
+import androidx.compose.foundation.border
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
@@ -9,37 +11,38 @@ import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.width
-import androidx.compose.material.MaterialTheme
 import androidx.compose.runtime.Composable
-import androidx.compose.runtime.MutableState
 import androidx.compose.runtime.collectAsState
+import androidx.compose.runtime.remember
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.unit.dp
 import com.simple.raceremote.features.remote_control.presentation.ActionsViewModel
 import com.simple.raceremote.features.remote_control.presentation.RemoteControlViewModel
+import com.simple.raceremote.features.remote_control.presentation.model.Action
 import com.simple.raceremote.ui.theme.CornerShapes
 import com.simple.raceremote.ui.theme.Padding
 import com.simple.raceremote.ui.theme.Size
+import com.simple.raceremote.ui.theme.getPalette
 import com.simple.raceremote.ui.views.ActionButton
 import com.simple.raceremote.ui.views.DotsState
 import com.simple.raceremote.ui.views.FlatLoadingWithContent
 import com.simple.raceremote.ui.views.Orientation
 import com.simple.raceremote.ui.views.Slider
 import org.koin.androidx.compose.getViewModel
-import com.simple.raceremote.features.remote_control.presentation.model.Action
 
 @SuppressLint("FlowOperatorInvokedInComposition")
 @Composable
 fun RemoteControlScreen(
+    modifier: Modifier = Modifier
 ) {
     val actionsViewModel = getViewModel<ActionsViewModel>()
     val remoteControlViewModel = getViewModel<RemoteControlViewModel>()
 
     val actions = actionsViewModel.actions.collectAsState(initial = emptyList())
 
-    Column(modifier = Modifier, horizontalAlignment = Alignment.CenterHorizontally) {
+    Column(modifier = modifier, horizontalAlignment = Alignment.CenterHorizontally) {
         Actions(actions = actions.value)
         Controllers(
             { remoteControlViewModel.updateSteeringWheel(it) },
@@ -95,28 +98,35 @@ private fun Controllers(
     horizontalSlider: ((Float) -> Unit)? = null,
     verticalSlider: ((Float) -> Unit)? = null
 ) {
-    val shape = CornerShapes.HugeItem
-
     Row {
-        Box(
-            Modifier
-                .weight(1f)
-                .padding(Padding.Content)
-                .clip(shape)
-        ) {
+        ControllerWrapper(modifier = Modifier.weight(1f)) {
             Slider() {
                 horizontalSlider?.invoke(it)
             }
         }
-        Box(
-            Modifier
-                .weight(1f)
-                .padding(Padding.Content)
-                .clip(shape)
-        ) {
+
+        ControllerWrapper(modifier = Modifier.weight(1f)) {
             Slider(orientation = Orientation.Vertical) {
                 verticalSlider?.invoke(it)
             }
         }
+    }
+}
+
+@Composable
+private fun ControllerWrapper(
+    modifier: Modifier,
+    content: @Composable () -> Unit
+) {
+    val shape = remember { CornerShapes.HugeItem }
+    val border = remember { BorderStroke(2.dp, getPalette(true).customColors.outline) }
+
+    Box(
+        modifier
+            .padding(Padding.Content)
+            .border(border, shape)
+            .clip(shape)
+    ) {
+        content.invoke()
     }
 }

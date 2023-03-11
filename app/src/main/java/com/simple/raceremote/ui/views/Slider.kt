@@ -10,13 +10,11 @@ import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.size
 import androidx.compose.material.MaterialTheme
-import androidx.compose.material.MaterialTheme.colors
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.MutableState
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.ui.Alignment
-import androidx.compose.ui.ExperimentalComposeUiApi
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.geometry.Offset
 import androidx.compose.ui.geometry.Size
@@ -32,6 +30,7 @@ import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.tooling.preview.Preview
 import com.simple.raceremote.R
 import com.simple.raceremote.ui.theme.Size.HugeIcon
+import com.simple.raceremote.ui.theme.getPalette
 import com.simple.raceremote.ui.views.Orientation.Horizontal.iconLeft
 import com.simple.raceremote.ui.views.Orientation.Horizontal.iconRight
 import com.simple.raceremote.ui.views.Orientation.Vertical.iconDown
@@ -84,13 +83,17 @@ fun Slider(
 ) {
     val x = remember { mutableStateOf(UNDEFINED) }
     val y = remember { mutableStateOf(UNDEFINED) }
-    val onBackgroundColor = MaterialTheme.colors.onBackground
-    val separatorColor = MaterialTheme.colors.onBackground
+    
+    val palette = remember { getPalette(true) }
+    val selectionColor = remember { palette.colors.surface }
+    val iconColor = remember { palette.colors.onSurface }
+    val separatorColor = remember { palette.colors.onSurface }
+    val surfaceColor = remember { palette.customColors.surfaceVariant }
 
     Canvas(
         modifier = Modifier
             .fillMaxSize()
-            .background(colors.surface)
+            .background(surfaceColor)
             .pointerInput(Unit) {
                 awaitPointerEventScope {
                     awaitPointerEventInfinitely(PointerEventPass.Final) {
@@ -102,24 +105,23 @@ fun Slider(
         when (orientation) {
             is Orientation.Horizontal -> drawHorizontal(
                 x = x,
-                onBackgroundColor = onBackgroundColor,
+                selectionColor = selectionColor,
                 separatorColor = separatorColor,
                 onOffsetChange = onOffsetChange,
             )
 
             is Orientation.Vertical -> drawVertical(
                 y = y,
-                onBackgroundColor = onBackgroundColor,
+                onBackgroundColor = selectionColor,
                 separatorColor = separatorColor,
                 onOffsetChange = onOffsetChange
             )
         }
     }
 
-    orientation.paintIcons(onBackgroundColor)
+    orientation.paintIcons(iconColor)
 }
 
-@OptIn(ExperimentalComposeUiApi::class)
 private fun PointerEvent.onPointerInput(
     x: MutableState<Float>,
     y: MutableState<Float>
@@ -261,7 +263,7 @@ private fun DrawScope.drawVertical(
 
 private fun DrawScope.drawHorizontal(
     x: MutableState<Float>,
-    onBackgroundColor: Color,
+    selectionColor: Color,
     separatorColor: Color,
     onOffsetChange: ((Float) -> Unit)? = null
 ) {
@@ -272,7 +274,7 @@ private fun DrawScope.drawHorizontal(
             val pointerOffset = maxOf(halfWidth - x.value, NO_OFFSET)
 
             drawRect(
-                color = onBackgroundColor,
+                color = selectionColor,
                 topLeft = Offset(x.value, NO_OFFSET),
                 size = Size(pointerOffset, size.height)
             )
@@ -282,7 +284,7 @@ private fun DrawScope.drawHorizontal(
             val pointerOffset = minOf(x.value - halfWidth, halfWidth)
 
             drawRect(
-                color = onBackgroundColor,
+                color = selectionColor,
                 topLeft = Offset(halfWidth, NO_OFFSET),
                 size = Size(pointerOffset, size.height)
             )

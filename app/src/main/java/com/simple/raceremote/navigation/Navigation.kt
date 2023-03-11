@@ -1,7 +1,5 @@
 package com.simple.raceremote.navigation
 
-import androidx.compose.foundation.layout.Box
-import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.WindowInsets
 import androidx.compose.foundation.layout.asPaddingValues
 import androidx.compose.foundation.layout.padding
@@ -29,7 +27,9 @@ fun AppScaffold(
 ) {
     val navController = rememberNavController()
 
-    Surface {
+    Surface(
+
+    ) {
         NavHost(
             navController = navController,
             startDestination = startScreen.name,

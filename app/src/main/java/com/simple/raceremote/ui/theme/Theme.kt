@@ -91,24 +91,33 @@ private val _CustomLightColorPalette = CustomColors(
     outlineVariant = LIGHT_OUTLINE_VARIANT
 )
 
-
-val DarkColorPalette = Palette(
+private val DarkColorPalette = Palette(
     colors = _DarkColorPalette,
     customColors = _CustomDarkColorPalette
 )
 
-val LightColorPalette = Palette(
+private val LightColorPalette = Palette(
     colors = _LightColorPalette,
     customColors = _CustomLightColorPalette
 )
 
+val palette: Palette
+    @Composable
+    get() =
+        if (isSystemInDarkTheme())
+            DarkColorPalette
+        else
+            LightColorPalette
+
+fun getPalette(isSystemInDarkTheme: Boolean): Palette =
+    if (isSystemInDarkTheme)
+        DarkColorPalette
+    else
+        LightColorPalette
+
 @Composable
 fun RaceRemoteTheme(darkTheme: Boolean = isSystemInDarkTheme(), content: @Composable() () -> Unit) {
-    val androidThemeColors = if (darkTheme) {
-        DarkColorPalette.colors
-    } else {
-        LightColorPalette.colors
-    }
+    val androidThemeColors = getPalette(darkTheme).colors
 
     MaterialTheme(
         colors = androidThemeColors,

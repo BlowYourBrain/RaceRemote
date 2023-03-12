@@ -84,7 +84,7 @@ fun Slider(
     val x = remember { mutableStateOf(UNDEFINED) }
     val y = remember { mutableStateOf(UNDEFINED) }
     
-    val palette = remember { getPalette(true) }
+    val palette = remember { getPalette() }
     val selectionColor = remember { palette.colors.surface }
     val iconColor = remember { palette.colors.onSurface }
     val separatorColor = remember { palette.colors.onSurface }

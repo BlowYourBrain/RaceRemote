@@ -79,7 +79,6 @@ class ActionsViewModel(
     val requestBluetoothPermissions: Flow<Unit> = _requestBluetoothPermissions.receiveAsFlow()
 
     val actions: Flow<List<Action>> = _actions.asStateFlow()
-    val isPanelOpen: Flow<Boolean> = sidePanelActionProvider.action.map { it.isOpenAction() }
 
     init {
         viewModelScope.launch {

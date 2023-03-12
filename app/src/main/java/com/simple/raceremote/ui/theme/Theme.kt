@@ -109,7 +109,7 @@ val palette: Palette
         else
             LightColorPalette
 
-fun getPalette(isSystemInDarkTheme: Boolean): Palette =
+fun getPalette(isSystemInDarkTheme: Boolean = true): Palette =
     if (isSystemInDarkTheme)
         DarkColorPalette
     else
@@ -117,7 +117,7 @@ fun getPalette(isSystemInDarkTheme: Boolean): Palette =
 
 @Composable
 fun RaceRemoteTheme(darkTheme: Boolean = isSystemInDarkTheme(), content: @Composable() () -> Unit) {
-    val androidThemeColors = getPalette(darkTheme).colors
+    val androidThemeColors = getPalette().colors
 
     MaterialTheme(
         colors = androidThemeColors,

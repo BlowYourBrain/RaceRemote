@@ -119,7 +119,7 @@ private fun ControllerWrapper(
     content: @Composable () -> Unit
 ) {
     val shape = remember { CornerShapes.HugeItem }
-    val border = remember { BorderStroke(2.dp, getPalette(true).customColors.outline) }
+    val border = remember { BorderStroke(2.dp, getPalette().customColors.outline) }
 
     Box(
         modifier

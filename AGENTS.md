@@ -6,6 +6,8 @@ Preferred purchasing sources: Ozon, Wildberries, AliExpress, and Chip and Dip (c
 
 Before working on this project, read `docs/project-brief.md` and `docs/contracts.md`. For chassis work, also read `docs/chassis-candidates.md`.
 
+AliExpress fallback verified on Windows: the user's ordinary Chrome product tab can expose its loaded text through UIAutomationClient AutomationElement (window handle) -> Document -> TextPattern.DocumentRange.GetText. This worked where curl and the separate MCP browser received CAPTCHA. Locate the current product window and document each time; scope reads to the product document and the actual address-bar control, since arbitrary Edit controls can contain unrelated drafts. The MCP browser is separate and list_pages can recreate it after the user closes it. See docs/aliexpress-shortlist.md for the observed SKU and conditional OV2640/OV3660 shipment.
+
 The user explicitly requires recording key points and contracts as work progresses:
 
 - Record accepted requirements, decisions, constraints, significant findings and unresolved questions in the project documents during the same task.

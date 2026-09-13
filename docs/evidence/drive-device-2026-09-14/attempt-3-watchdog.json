@@ -1,0 +1,162 @@
+{
+  "complete": true,
+  "scenario": "watchdog",
+  "host": "192.168.231.9",
+  "carId": "RaceRemote-a06da6",
+  "scope": "Native Android control client and separate raw timeout probe; shadow firmware outputs only",
+  "events": [
+    {
+      "elapsedMs": 34,
+      "kind": "status",
+      "data": {
+        "phase": "preflight",
+        "requestMs": 29,
+        "value": {
+          "protocol": 1,
+          "carId": "RaceRemote-a06da6",
+          "outputsEnabled": false,
+          "armed": false,
+          "throttle": 0,
+          "steering": 0,
+          "drivePlan": {
+            "mode": "off",
+            "sampledAtMs": 907948,
+            "fiPermille": 0,
+            "biPermille": 0,
+            "steeringNormalized": 0
+          }
+        }
+      }
+    },
+    {
+      "elapsedMs": 126,
+      "kind": "action",
+      "data": "raw DRIVE acknowledged; stop sending while socket stays open"
+    },
+    {
+      "elapsedMs": 165,
+      "kind": "status",
+      "data": {
+        "phase": "before_watchdog",
+        "requestMs": 39,
+        "value": {
+          "protocol": 1,
+          "carId": "RaceRemote-a06da6",
+          "outputsEnabled": false,
+          "armed": true,
+          "throttle": 600,
+          "steering": 0,
+          "drivePlan": {
+            "mode": "driving",
+            "sampledAtMs": 908074,
+            "fiPermille": 35,
+            "biPermille": 0,
+            "steeringNormalized": 0
+          }
+        }
+      }
+    },
+    {
+      "elapsedMs": 197,
+      "kind": "status",
+      "data": {
+        "phase": "watchdog_zero",
+        "requestMs": 30,
+        "value": {
+          "protocol": 1,
+          "carId": "RaceRemote-a06da6",
+          "outputsEnabled": false,
+          "armed": true,
+          "throttle": 600,
+          "steering": 0,
+          "drivePlan": {
+            "mode": "driving",
+            "sampledAtMs": 908104,
+            "fiPermille": 65,
+            "biPermille": 0,
+            "steeringNormalized": 0
+          }
+        }
+      }
+    },
+    {
+      "elapsedMs": 357,
+      "kind": "status",
+      "data": {
+        "phase": "watchdog_zero",
+        "requestMs": 119,
+        "value": {
+          "protocol": 1,
+          "carId": "RaceRemote-a06da6",
+          "outputsEnabled": false,
+          "armed": true,
+          "throttle": 600,
+          "steering": 0,
+          "drivePlan": {
+            "mode": "driving",
+            "sampledAtMs": 908264,
+            "fiPermille": 150,
+            "biPermille": 0,
+            "steeringNormalized": 0
+          }
+        }
+      }
+    },
+    {
+      "elapsedMs": 378,
+      "kind": "raw_closing",
+      "data": 1000
+    },
+    {
+      "elapsedMs": 442,
+      "kind": "status",
+      "data": {
+        "phase": "watchdog_zero",
+        "requestMs": 44,
+        "value": {
+          "protocol": 1,
+          "carId": "RaceRemote-a06da6",
+          "outputsEnabled": false,
+          "armed": false,
+          "throttle": 0,
+          "steering": 0,
+          "drivePlan": {
+            "mode": "off",
+            "sampledAtMs": 908353,
+            "fiPermille": 0,
+            "biPermille": 0,
+            "steeringNormalized": 0
+          }
+        }
+      }
+    },
+    {
+      "elapsedMs": 442,
+      "kind": "client",
+      "data": "Disconnect: Остановлено"
+    },
+    {
+      "elapsedMs": 475,
+      "kind": "status",
+      "data": {
+        "phase": "cleanup",
+        "requestMs": 30,
+        "value": {
+          "protocol": 1,
+          "carId": "RaceRemote-a06da6",
+          "outputsEnabled": false,
+          "armed": false,
+          "throttle": 0,
+          "steering": 0,
+          "drivePlan": {
+            "mode": "off",
+            "sampledAtMs": 908383,
+            "fiPermille": 0,
+            "biPermille": 0,
+            "steeringNormalized": 0
+          }
+        }
+      }
+    }
+  ]
+}

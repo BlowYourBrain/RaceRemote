@@ -1,0 +1,83 @@
+{
+  "date": "2026-09-14",
+  "scope": "Real ESP32 shadow planner, Android native transport, separate silent socket; no actuator GPIO",
+  "firmwareSourceCommit": "c9fabb86f3ba9ac8a77cd3d65277091613e09bbf",
+  "androidProductionSourceCommit": "ef3d400afe7bdf34cf5809e827b2d605c1a815ba",
+  "firmwareEnvironment": "esp32-bench-sta",
+  "flashVerification": {
+    "tool": "esptool.py 4.5.1",
+    "port": "COM4",
+    "offset": "0x10000",
+    "bytes": 801056,
+    "result": "verify OK (digest matched)",
+    "exitCode": 0
+  },
+  "artifacts": {
+    "RC_CAR_ESP32/.pio/build/esp32-bench-sta/firmware.bin": {
+      "sha256": "da15c20f0770e63d928d964dc0c60b2d24c470c61d4497ea0390422515918931",
+      "bytes": 801056
+    },
+    "app/build/outputs/apk/debug/app-debug.apk": {
+      "sha256": "9d7fd8ab0fba17ffbad1256e50f91264875195693229bb4cc4d38c1d8d233b26",
+      "bytes": 22561843
+    },
+    "app/build/outputs/apk/androidTest/debug/app-debug-androidTest.apk": {
+      "sha256": "9b7f211c9296f0e3f88942b94d6a0b1d24d3b7406a292be3c72dfdaa750ea356",
+      "bytes": 3928885
+    },
+    "app/src/androidTest/java/vea/raceremote/DriveDeviceBenchTest.kt": {
+      "sha256": "4c5c2e34e49bc7ebe675b858452f783ca08cc7edbcec457a5a96962aa36b1cce",
+      "bytes": 10525
+    }
+  },
+  "attempt2TestSourceSha256BeforeFormatting": "2b00db4fa079cc7629f35a5793ff25e00140343a2b51f8f463909f6c161f8a7c",
+  "attempt1TestSource": "Initial single sequential scenario; exact source not retained",
+  "results": {
+    "attempt1Native": "failed at neutral",
+    "attempt2Native": "failed at ARM",
+    "attempt2Watchdog": "passed",
+    "attempt3Native": "failed before explicit STOP: timeout and HTTP reset",
+    "attempt3Watchdog": "passed with firmware timeout Serial evidence",
+    "defaultNoOptIn": "2 assumption skips, no bench commands",
+    "finalApkAssembly": "passed",
+    "allObservedOutputsEnabled": false,
+    "physicalDrive": "not tested",
+    "stableSession": "not demonstrated"
+  },
+  "reports": {
+    "attempt-1.json": {
+      "sha256": "2f811b280f9337d31d0a63e159c416b52c4622b7c9719dc2fb0b1a3eaab8db54"
+    },
+    "attempt-2-native.json": {
+      "sha256": "1066cbbf968e5d17f2b21c9610c4094eb500b2ababfafdcc9a74b740ea52d36e"
+    },
+    "attempt-2-watchdog.json": {
+      "sha256": "9238509a0afc14180bae3dd7c7fd25bbe1be05135abe2b22ff06743fdced100e"
+    },
+    "attempt-3-native.json": {
+      "sha256": "396bcd6759406bfec12d0b85894b9136344c42a2731a825477d29e24717c75de"
+    },
+    "attempt-3-watchdog.json": {
+      "sha256": "bfe8363251d9b32272bafb7af3c1855f6db6d0d33c74df62f9813da290c886a5"
+    },
+    "attempt-3-serial.json": {
+      "sha256": "ca1318fceca28932dd5d7fab4936b14b13d1f0b9a1a50770c08b24ebd6132872"
+    },
+    "attempt-3-junit.txt": {
+      "sha256": "4a70172f2ae0fdefbe1c582ae164d03ad98ee59eee3f9de0bd908c6f1c6843fe"
+    },
+    "default-skip.txt": {
+      "sha256": "d36df7ba4839c8b68a0a8bb25c87ca5ad9e363faa11992efa1351b58ba759e37"
+    }
+  },
+  "postFlashVerificationStatus": {
+    "transport": "HTTP /status via adb shell -T toybox nc on Samsung",
+    "httpCode": 200,
+    "outputsEnabled": false,
+    "armed": false,
+    "mode": "off",
+    "sampledAtMs": 163315,
+    "fiPermille": 0,
+    "biPermille": 0
+  }
+}

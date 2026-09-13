@@ -1,0 +1,74 @@
+[
+  {
+    "hostElapsedMs": 1281,
+    "line": "TX ms=906580 kind=128 seq=0 sent=1"
+  },
+  {
+    "hostElapsedMs": 1281,
+    "line": "CONTROL active=1 armed=0 throttle=0 steering=0 seq=0 outputs=disabled"
+  },
+  {
+    "hostElapsedMs": 1297,
+    "line": "TX ms=906596 kind=129 seq=1 sent=1"
+  },
+  {
+    "hostElapsedMs": 1297,
+    "line": "CONTROL active=1 armed=1 throttle=0 steering=0 seq=1 outputs=disabled"
+  },
+  {
+    "hostElapsedMs": 1328,
+    "line": "TX ms=906629 kind=129 seq=2 sent=1"
+  },
+  {
+    "hostElapsedMs": 1328,
+    "line": "CONTROL active=1 armed=1 throttle=600 steering=250 seq=2 outputs=disabled"
+  },
+  {
+    "hostElapsedMs": 1703,
+    "line": "CONTROL active=1 armed=1 throttle=-600 steering=-250 seq=12 outputs=disabled"
+  },
+  {
+    "hostElapsedMs": 2125,
+    "line": "CONTROL active=1 armed=1 throttle=0 steering=0 seq=29 outputs=disabled"
+  },
+  {
+    "hostElapsedMs": 2156,
+    "line": "CONTROL active=1 armed=1 throttle=400 steering=0 seq=31 outputs=disabled"
+  },
+  {
+    "hostElapsedMs": 2484,
+    "line": "CONTROL active=0 armed=0 throttle=0 steering=0 seq=33 outputs=disabled"
+  },
+  {
+    "hostElapsedMs": 2703,
+    "line": "TX ms=908005 kind=128 seq=0 sent=1"
+  },
+  {
+    "hostElapsedMs": 2703,
+    "line": "CONTROL active=1 armed=0 throttle=0 steering=0 seq=0 outputs=disabled"
+  },
+  {
+    "hostElapsedMs": 2719,
+    "line": "TX ms=908029 kind=129 seq=1 sent=1"
+  },
+  {
+    "hostElapsedMs": 2734,
+    "line": "CONTROL active=1 armed=1 throttle=0 steering=0 seq=1 outputs=disabled"
+  },
+  {
+    "hostElapsedMs": 2734,
+    "line": "TX ms=908045 kind=129 seq=2 sent=1"
+  },
+  {
+    "hostElapsedMs": 2750,
+    "line": "CONTROL active=1 armed=1 throttle=600 steering=0 seq=2 outputs=disabled"
+  },
+  {
+    "hostElapsedMs": 2984,
+    "line": "FAILSAFE timeout: logical outputs=0"
+  },
+  {
+    "hostElapsedMs": 3000,
+    "line": "CONTROL active=0 armed=0 throttle=0 steering=0 seq=2 outputs=disabled"
+  }
+]

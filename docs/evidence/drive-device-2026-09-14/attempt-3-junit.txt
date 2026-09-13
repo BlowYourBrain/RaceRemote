@@ -1,0 +1,124 @@
+INSTRUMENTATION_STATUS: class=vea.raceremote.DriveDeviceBenchTest
+INSTRUMENTATION_STATUS: current=1
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=2
+INSTRUMENTATION_STATUS: stream=
+vea.raceremote.DriveDeviceBenchTest:
+INSTRUMENTATION_STATUS: test=nativeClientDrivePlan
+INSTRUMENTATION_STATUS_CODE: 1
+INSTRUMENTATION_STATUS: class=vea.raceremote.DriveDeviceBenchTest
+INSTRUMENTATION_STATUS: current=1
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=2
+INSTRUMENTATION_STATUS: stack=java.net.SocketException: Connection reset
+	at java.net.SocketInputStream.read(SocketInputStream.java:215)
+	at java.net.SocketInputStream.read(SocketInputStream.java:144)
+	at okio.Okio$2.read(Okio.java:140)
+	at okio.AsyncTimeout$2.read(AsyncTimeout.java:237)
+	at okio.RealBufferedSource.indexOf(RealBufferedSource.java:358)
+	at okio.RealBufferedSource.readUtf8LineStrict(RealBufferedSource.java:230)
+	at okhttp3.internal.http1.Http1ExchangeCodec.readHeaderLine(Http1ExchangeCodec.java:242)
+	at okhttp3.internal.http1.Http1ExchangeCodec.readResponseHeaders(Http1ExchangeCodec.java:213)
+	at okhttp3.internal.connection.Exchange.readResponseHeaders(Exchange.java:115)
+	at okhttp3.internal.http.CallServerInterceptor.intercept(CallServerInterceptor.java:94)
+	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.java:142)
+	at okhttp3.internal.connection.ConnectInterceptor.intercept(ConnectInterceptor.java:43)
+	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.java:142)
+	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.java:117)
+	at okhttp3.internal.cache.CacheInterceptor.intercept(CacheInterceptor.java:94)
+	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.java:142)
+	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.java:117)
+	at okhttp3.internal.http.BridgeInterceptor.intercept(BridgeInterceptor.java:93)
+	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.java:142)
+	at okhttp3.internal.http.RetryAndFollowUpInterceptor.intercept(RetryAndFollowUpInterceptor.java:88)
+	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.java:142)
+	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.java:117)
+	at okhttp3.RealCall.getResponseWithInterceptorChain(RealCall.java:229)
+	at okhttp3.RealCall.execute(RealCall.java:81)
+	at vea.raceremote.DriveDeviceBenchTest.runBench$status(DriveDeviceBenchTest.kt:68)
+	at vea.raceremote.DriveDeviceBenchTest.runBench$awaitStatus(DriveDeviceBenchTest.kt:86)
+	at vea.raceremote.DriveDeviceBenchTest.runBench(DriveDeviceBenchTest.kt:124)
+	at vea.raceremote.DriveDeviceBenchTest.nativeClientDrivePlan(DriveDeviceBenchTest.kt:31)
+INSTRUMENTATION_STATUS: stream=
+Error in nativeClientDrivePlan(vea.raceremote.DriveDeviceBenchTest):
+java.net.SocketException: Connection reset
+	at java.net.SocketInputStream.read(SocketInputStream.java:215)
+	at java.net.SocketInputStream.read(SocketInputStream.java:144)
+	at okio.Okio$2.read(Okio.java:140)
+	at okio.AsyncTimeout$2.read(AsyncTimeout.java:237)
+	at okio.RealBufferedSource.indexOf(RealBufferedSource.java:358)
+	at okio.RealBufferedSource.readUtf8LineStrict(RealBufferedSource.java:230)
+	at okhttp3.internal.http1.Http1ExchangeCodec.readHeaderLine(Http1ExchangeCodec.java:242)
+	at okhttp3.internal.http1.Http1ExchangeCodec.readResponseHeaders(Http1ExchangeCodec.java:213)
+	at okhttp3.internal.connection.Exchange.readResponseHeaders(Exchange.java:115)
+	at okhttp3.internal.http.CallServerInterceptor.intercept(CallServerInterceptor.java:94)
+	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.java:142)
+	at okhttp3.internal.connection.ConnectInterceptor.intercept(ConnectInterceptor.java:43)
+	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.java:142)
+	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.java:117)
+	at okhttp3.internal.cache.CacheInterceptor.intercept(CacheInterceptor.java:94)
+	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.java:142)
+	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.java:117)
+	at okhttp3.internal.http.BridgeInterceptor.intercept(BridgeInterceptor.java:93)
+	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.java:142)
+	at okhttp3.internal.http.RetryAndFollowUpInterceptor.intercept(RetryAndFollowUpInterceptor.java:88)
+	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.java:142)
+	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.java:117)
+	at okhttp3.RealCall.getResponseWithInterceptorChain(RealCall.java:229)
+	at okhttp3.RealCall.execute(RealCall.java:81)
+	at vea.raceremote.DriveDeviceBenchTest.runBench$status(DriveDeviceBenchTest.kt:68)
+	at vea.raceremote.DriveDeviceBenchTest.runBench$awaitStatus(DriveDeviceBenchTest.kt:86)
+	at vea.raceremote.DriveDeviceBenchTest.runBench(DriveDeviceBenchTest.kt:124)
+	at vea.raceremote.DriveDeviceBenchTest.nativeClientDrivePlan(DriveDeviceBenchTest.kt:31)
+INSTRUMENTATION_STATUS: test=nativeClientDrivePlan
+INSTRUMENTATION_STATUS_CODE: -2
+INSTRUMENTATION_STATUS: class=vea.raceremote.DriveDeviceBenchTest
+INSTRUMENTATION_STATUS: current=2
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=2
+INSTRUMENTATION_STATUS: stream=
+INSTRUMENTATION_STATUS: test=silentSocketTimesOut
+INSTRUMENTATION_STATUS_CODE: 1
+INSTRUMENTATION_STATUS: class=vea.raceremote.DriveDeviceBenchTest
+INSTRUMENTATION_STATUS: current=2
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=2
+INSTRUMENTATION_STATUS: stream=.
+INSTRUMENTATION_STATUS: test=silentSocketTimesOut
+INSTRUMENTATION_STATUS_CODE: 0
+INSTRUMENTATION_RESULT: stream=
+Time: 2,135
+There was 1 failure:
+1) nativeClientDrivePlan(vea.raceremote.DriveDeviceBenchTest)
+java.net.SocketException: Connection reset
+	at java.net.SocketInputStream.read(SocketInputStream.java:215)
+	at java.net.SocketInputStream.read(SocketInputStream.java:144)
+	at okio.Okio$2.read(Okio.java:140)
+	at okio.AsyncTimeout$2.read(AsyncTimeout.java:237)
+	at okio.RealBufferedSource.indexOf(RealBufferedSource.java:358)
+	at okio.RealBufferedSource.readUtf8LineStrict(RealBufferedSource.java:230)
+	at okhttp3.internal.http1.Http1ExchangeCodec.readHeaderLine(Http1ExchangeCodec.java:242)
+	at okhttp3.internal.http1.Http1ExchangeCodec.readResponseHeaders(Http1ExchangeCodec.java:213)
+	at okhttp3.internal.connection.Exchange.readResponseHeaders(Exchange.java:115)
+	at okhttp3.internal.http.CallServerInterceptor.intercept(CallServerInterceptor.java:94)
+	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.java:142)
+	at okhttp3.internal.connection.ConnectInterceptor.intercept(ConnectInterceptor.java:43)
+	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.java:142)
+	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.java:117)
+	at okhttp3.internal.cache.CacheInterceptor.intercept(CacheInterceptor.java:94)
+	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.java:142)
+	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.java:117)
+	at okhttp3.internal.http.BridgeInterceptor.intercept(BridgeInterceptor.java:93)
+	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.java:142)
+	at okhttp3.internal.http.RetryAndFollowUpInterceptor.intercept(RetryAndFollowUpInterceptor.java:88)
+	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.java:142)
+	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.java:117)
+	at okhttp3.RealCall.getResponseWithInterceptorChain(RealCall.java:229)
+	at okhttp3.RealCall.execute(RealCall.java:81)
+	at vea.raceremote.DriveDeviceBenchTest.runBench$status(DriveDeviceBenchTest.kt:68)
+	at vea.raceremote.DriveDeviceBenchTest.runBench$awaitStatus(DriveDeviceBenchTest.kt:86)
+	at vea.raceremote.DriveDeviceBenchTest.runBench(DriveDeviceBenchTest.kt:124)
+	at vea.raceremote.DriveDeviceBenchTest.nativeClientDrivePlan(DriveDeviceBenchTest.kt:31)
+FAILURES!!!
+Tests run: 2,  Failures: 1
+INSTRUMENTATION_CODE: -1

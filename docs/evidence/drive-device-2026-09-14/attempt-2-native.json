@@ -1,0 +1,105 @@
+{
+  "complete": false,
+  "scenario": "native",
+  "host": "192.168.231.9",
+  "carId": "RaceRemote-a06da6",
+  "scope": "Native Android control client and separate raw timeout probe; shadow firmware outputs only",
+  "events": [
+    {
+      "elapsedMs": 116,
+      "kind": "status",
+      "data": {
+        "phase": "preflight",
+        "requestMs": 74,
+        "value": {
+          "protocol": 1,
+          "carId": "RaceRemote-a06da6",
+          "outputsEnabled": false,
+          "armed": false,
+          "throttle": 0,
+          "steering": 0,
+          "drivePlan": {
+            "mode": "off",
+            "sampledAtMs": 547898,
+            "fiPermille": 0,
+            "biPermille": 0,
+            "steeringNormalized": 0
+          }
+        }
+      }
+    },
+    {
+      "elapsedMs": 116,
+      "kind": "action",
+      "data": "native client connect"
+    },
+    {
+      "elapsedMs": 116,
+      "kind": "client",
+      "data": "Disconnect: Остановлено"
+    },
+    {
+      "elapsedMs": 205,
+      "kind": "client",
+      "data": "WebSocket opened"
+    },
+    {
+      "elapsedMs": 218,
+      "kind": "client",
+      "data": "Received bytes=16 kind=128 sequence=0 rttMs=101"
+    },
+    {
+      "elapsedMs": 219,
+      "kind": "client",
+      "data": "Sending neutral ARM"
+    },
+    {
+      "elapsedMs": 219,
+      "kind": "client",
+      "data": "Send kind=1 sequence=1"
+    },
+    {
+      "elapsedMs": 420,
+      "kind": "client",
+      "data": "Disconnect: Нет свежего ответа — остановлено"
+    },
+    {
+      "elapsedMs": 424,
+      "kind": "client",
+      "data": "WebSocket failure: SocketException: Socket closed"
+    },
+    {
+      "elapsedMs": 4634,
+      "kind": "failure",
+      "data": "java.lang.AssertionError: Native client did not ARM: CarConnectionState(message=Нет свежего ответа — остановлено, connected=false, connecting=false, throttle=0, steering=0)"
+    },
+    {
+      "elapsedMs": 4635,
+      "kind": "client",
+      "data": "Disconnect: Остановлено"
+    },
+    {
+      "elapsedMs": 4777,
+      "kind": "status",
+      "data": {
+        "phase": "cleanup",
+        "requestMs": 140,
+        "value": {
+          "protocol": 1,
+          "carId": "RaceRemote-a06da6",
+          "outputsEnabled": false,
+          "armed": false,
+          "throttle": 0,
+          "steering": 0,
+          "drivePlan": {
+            "mode": "off",
+            "sampledAtMs": 552558,
+            "fiPermille": 0,
+            "biPermille": 0,
+            "steeringNormalized": 0
+          }
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,1677 @@
+(kicad_sch (version 20250901) (generator "raceremote")
+(uuid "c3551efd-fb3f-5092-85f3-8a45b4f3354f") (paper "A3")
+(title_block (title "RaceRemote - BQ25886 charger core PROPOSAL") (date "2026-09-14") (rev "0.1") (company "vea.raceremote"))
+(lib_symbols (symbol "RaceRemote_Charge:BQ25886RGE"
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(duplicate_pin_numbers_are_jumpers no)
+		(property "Reference" "U"
+			(at -6.604 21.844 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "BQ25886RGE"
+			(at 3.556 21.844 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Package_DFN_QFN:Texas_RGE0024H_VQFN-24-1EP_4x4mm_P0.5mm_EP2.7x2.7mm"
+			(at 0 -29.464 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" "http://www.ti.com/lit/ds/symlink/bq25886.pdf"
+			(at 0 -27.432 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Standalone 2-Cell (Li-Ion / Li-Polymer), 2A Boost-Mode Battery Charger With PowerPath, USB BC1.2 Detection, USB On-The-Go Boost (OTG), 4.3..6.2V VBUS, 8.2/8.4/8.7/8.8V charge voltage, 9.2V BATOVP, 1.5MHz, VQFN-24"
+			(at 0 -25.4 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "ki_keywords" "Power-Path-Management"
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "ki_fp_filters" "*VQFN*4x4mm*P0.5mm*EP2.7x2.7*"
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(symbol "BQ25886RGE_0_1"
+			(rectangle
+				(start -7.62 20.32)
+				(end 7.62 -20.32)
+				(stroke
+					(width 0.254)
+					(type default)
+				)
+				(fill
+					(type background)
+				)
+			)
+		)
+		(symbol "BQ25886RGE_1_1"
+			(pin bidirectional line
+				(at -10.16 10.16 0)
+				(length 2.54)
+				(name "D-"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "1"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin open_collector line
+				(at 10.16 17.78 180)
+				(length 2.54)
+				(name "STAT"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "2"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin input line
+				(at -10.16 -7.62 0)
+				(length 2.54)
+				(name "~{CE}"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "3"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin power_in line
+				(at 0 -22.86 90)
+				(length 2.54)
+				(name "GND"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "4"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin input line
+				(at -10.16 -5.08 0)
+				(length 2.54)
+				(name "OTG"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "5"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin passive line
+				(at -10.16 -15.24 0)
+				(length 2.54)
+				(name "VSET"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "6"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin input line
+				(at 10.16 -17.78 180)
+				(length 2.54)
+				(name "TS"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "7"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin passive line
+				(at -10.16 -17.78 0)
+				(length 2.54)
+				(name "ILIM"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "8"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin open_collector line
+				(at 10.16 15.24 180)
+				(length 2.54)
+				(name "~{PG}"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "9"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin passive line
+				(at -10.16 -12.7 0)
+				(length 2.54)
+				(name "ICHGSET"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "10"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin power_out line
+				(at 10.16 -12.7 180)
+				(length 2.54)
+				(name "REGN"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "11"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin passive line
+				(at 10.16 0 180)
+				(length 2.54)
+				(name "BTST"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "12"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin passive line
+				(at 10.16 -7.62 180)
+				(length 2.54)
+				(name "BAT"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "13"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin passive line
+				(at 10.16 -7.62 180)
+				(length 2.54)
+				(hide yes)
+				(name "BAT"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "14"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin power_out line
+				(at 10.16 -5.08 180)
+				(length 2.54)
+				(name "SYS"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "15"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin passive line
+				(at 10.16 -5.08 180)
+				(length 2.54)
+				(hide yes)
+				(name "SYS"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "16"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin power_in line
+				(at 10.16 5.08 180)
+				(length 2.54)
+				(name "SW"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "17"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin passive line
+				(at 10.16 5.08 180)
+				(length 2.54)
+				(hide yes)
+				(name "SW"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "18"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin passive line
+				(at 0 -22.86 90)
+				(length 2.54)
+				(hide yes)
+				(name "GND"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "19"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin passive line
+				(at 0 -22.86 90)
+				(length 2.54)
+				(hide yes)
+				(name "GND"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "20"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin power_out line
+				(at 10.16 10.16 180)
+				(length 2.54)
+				(name "PMID"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "21"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin passive line
+				(at 10.16 10.16 180)
+				(length 2.54)
+				(hide yes)
+				(name "PMID"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "22"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin power_in line
+				(at -10.16 17.78 0)
+				(length 2.54)
+				(name "VBUS"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "23"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin bidirectional line
+				(at -10.16 12.7 0)
+				(length 2.54)
+				(name "D+"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "24"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin passive line
+				(at 0 -22.86 90)
+				(length 2.54)
+				(hide yes)
+				(name "GND"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "25"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+		)
+		(embedded_fonts no)
+	)
+(symbol "RaceRemote_Charge:R"
+		(pin_numbers
+			(hide yes)
+		)
+		(pin_names
+			(offset 0)
+		)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(duplicate_pin_numbers_are_jumpers no)
+		(property "Reference" "R"
+			(at 2.032 0 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "R"
+			(at 0 0 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at -1.778 0 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Resistor"
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "ki_keywords" "R res resistor"
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "ki_fp_filters" "R_*"
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(symbol "R_0_1"
+			(rectangle
+				(start -1.016 -2.54)
+				(end 1.016 2.54)
+				(stroke
+					(width 0.254)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+		)
+		(symbol "R_1_1"
+			(pin passive line
+				(at 0 3.81 270)
+				(length 1.27)
+				(name ""
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "1"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin passive line
+				(at 0 -3.81 90)
+				(length 1.27)
+				(name ""
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "2"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+		)
+		(embedded_fonts no)
+	)
+(symbol "RaceRemote_Charge:C"
+		(pin_numbers
+			(hide yes)
+		)
+		(pin_names
+			(offset 0.254)
+		)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(duplicate_pin_numbers_are_jumpers no)
+		(property "Reference" "C"
+			(at 0.635 2.54 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "C"
+			(at 0.635 -2.54 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" ""
+			(at 0.9652 -3.81 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Unpolarized capacitor"
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "ki_keywords" "cap capacitor"
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "ki_fp_filters" "C_*"
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(symbol "C_0_1"
+			(polyline
+				(pts
+					(xy -2.032 0.762) (xy 2.032 0.762)
+				)
+				(stroke
+					(width 0.508)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(polyline
+				(pts
+					(xy -2.032 -0.762) (xy 2.032 -0.762)
+				)
+				(stroke
+					(width 0.508)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+		)
+		(symbol "C_1_1"
+			(pin passive line
+				(at 0 3.81 270)
+				(length 2.794)
+				(name ""
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "1"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin passive line
+				(at 0 -3.81 90)
+				(length 2.794)
+				(name ""
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "2"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+		)
+		(embedded_fonts no)
+	)
+(symbol "RaceRemote_Charge:L"
+		(pin_numbers
+			(hide yes)
+		)
+		(pin_names
+			(offset 1.016)
+			(hide yes)
+		)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(duplicate_pin_numbers_are_jumpers no)
+		(property "Reference" "L"
+			(at -1.27 0 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "L"
+			(at 1.905 0 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Inductor"
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "ki_keywords" "inductor choke coil reactor magnetic"
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "ki_fp_filters" "Choke_* *Coil* Inductor_* L_*"
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(symbol "L_0_1"
+			(arc
+				(start 0 2.54)
+				(mid 0.6323 1.905)
+				(end 0 1.27)
+				(stroke
+					(width 0)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(arc
+				(start 0 1.27)
+				(mid 0.6323 0.635)
+				(end 0 0)
+				(stroke
+					(width 0)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(arc
+				(start 0 0)
+				(mid 0.6323 -0.635)
+				(end 0 -1.27)
+				(stroke
+					(width 0)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(arc
+				(start 0 -1.27)
+				(mid 0.6323 -1.905)
+				(end 0 -2.54)
+				(stroke
+					(width 0)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+		)
+		(symbol "L_1_1"
+			(pin passive line
+				(at 0 3.81 270)
+				(length 1.27)
+				(name "1"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "1"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin passive line
+				(at 0 -3.81 90)
+				(length 1.27)
+				(name "2"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "2"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+		)
+		(embedded_fonts no)
+	)
+(symbol "RaceRemote_Charge:Conn_01x02"
+		(pin_names
+			(offset 1.016)
+			(hide yes)
+		)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(duplicate_pin_numbers_are_jumpers no)
+		(property "Reference" "J"
+			(at 0 2.54 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "Conn_01x02"
+			(at 0 -5.08 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Generic connector, single row, 01x02, script generated (kicad-library-utils/schlib/autogen/connector/)"
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "ki_keywords" "connector"
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "ki_fp_filters" "Connector*:*_1x??_*"
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(symbol "Conn_01x02_1_1"
+			(rectangle
+				(start -1.27 1.27)
+				(end 1.27 -3.81)
+				(stroke
+					(width 0.254)
+					(type default)
+				)
+				(fill
+					(type background)
+				)
+			)
+			(rectangle
+				(start -1.27 0.127)
+				(end 0 -0.127)
+				(stroke
+					(width 0.1524)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(rectangle
+				(start -1.27 -2.413)
+				(end 0 -2.667)
+				(stroke
+					(width 0.1524)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(pin passive line
+				(at -5.08 0 0)
+				(length 3.81)
+				(name "Pin_1"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "1"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin passive line
+				(at -5.08 -2.54 0)
+				(length 3.81)
+				(name "Pin_2"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "2"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+		)
+		(embedded_fonts no)
+	)
+(symbol "RaceRemote_Charge:Conn_01x04"
+		(pin_names
+			(offset 1.016)
+			(hide yes)
+		)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(duplicate_pin_numbers_are_jumpers no)
+		(property "Reference" "J"
+			(at 0 5.08 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "Conn_01x04"
+			(at 0 -7.62 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Generic connector, single row, 01x04, script generated (kicad-library-utils/schlib/autogen/connector/)"
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "ki_keywords" "connector"
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "ki_fp_filters" "Connector*:*_1x??_*"
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(symbol "Conn_01x04_1_1"
+			(rectangle
+				(start -1.27 3.81)
+				(end 1.27 -6.35)
+				(stroke
+					(width 0.254)
+					(type default)
+				)
+				(fill
+					(type background)
+				)
+			)
+			(rectangle
+				(start -1.27 2.667)
+				(end 0 2.413)
+				(stroke
+					(width 0.1524)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(rectangle
+				(start -1.27 0.127)
+				(end 0 -0.127)
+				(stroke
+					(width 0.1524)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(rectangle
+				(start -1.27 -2.413)
+				(end 0 -2.667)
+				(stroke
+					(width 0.1524)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(rectangle
+				(start -1.27 -4.953)
+				(end 0 -5.207)
+				(stroke
+					(width 0.1524)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(pin passive line
+				(at -5.08 2.54 0)
+				(length 3.81)
+				(name "Pin_1"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "1"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin passive line
+				(at -5.08 0 0)
+				(length 3.81)
+				(name "Pin_2"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "2"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin passive line
+				(at -5.08 -2.54 0)
+				(length 3.81)
+				(name "Pin_3"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "3"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin passive line
+				(at -5.08 -5.08 0)
+				(length 3.81)
+				(name "Pin_4"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "4"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+		)
+		(embedded_fonts no)
+	)
+(symbol "RaceRemote_Charge:PWR_FLAG"
+		(power global)
+		(pin_numbers
+			(hide yes)
+		)
+		(pin_names
+			(offset 0)
+			(hide yes)
+		)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(duplicate_pin_numbers_are_jumpers no)
+		(property "Reference" "#FLG"
+			(at 0 1.905 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "PWR_FLAG"
+			(at 0 3.81 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Special symbol for telling ERC where power comes from"
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "ki_keywords" "flag power"
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(symbol "PWR_FLAG_0_0"
+			(pin power_out line
+				(at 0 0 90)
+				(length 0)
+				(name ""
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "1"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+		)
+		(symbol "PWR_FLAG_0_1"
+			(polyline
+				(pts
+					(xy 0 0) (xy 0 1.27) (xy -1.016 1.905) (xy 0 2.54) (xy 1.016 1.905) (xy 0 1.27)
+				)
+				(stroke
+					(width 0)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+		)
+		(embedded_fonts no)
+	))
+(symbol (lib_id "RaceRemote_Charge:BQ25886RGE") (at 101.6 83.82 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid "4cfef70a-9103-58ba-8b2a-01d27a7a5bd3") (property "Reference" "U101" (at 101.6 58.42 0) (effects (font (size 1.27 1.27))))(property "Value" "BQ25886RGER" (at 101.6 55.88 0) (effects (font (size 1.27 1.27))))(property "Footprint" "Package_DFN_QFN:Texas_RGE0024H_VQFN-24-1EP_4x4mm_P0.5mm_EP2.7x2.7mm" (at 101.6 83.82 0) (hide yes) (effects (font (size 1.27 1.27))))(property "Datasheet" "https://www.ti.com/lit/gpn/bq25886" (at 101.6 83.82 0) (hide yes) (effects (font (size 1.27 1.27))))(pin "1" (uuid "8587ae60-057e-568f-9dbc-f337913812c3"))(pin "2" (uuid "9cfd6ba1-a67b-5d99-959e-3e4980ca156e"))(pin "3" (uuid "29ed47dc-6671-5b8a-8dbf-31fded0ddee1"))(pin "4" (uuid "8603d46d-c9ce-553a-82f1-670c72613729"))(pin "5" (uuid "ec338a2a-0909-5b20-b050-9a03de2b9421"))(pin "6" (uuid "ea93dab6-ea12-5d70-9981-b1cfd8140266"))(pin "7" (uuid "249a7fd4-a77a-5137-a5fc-322fc027d5c0"))(pin "8" (uuid "f534a4e3-a874-5e44-ad16-ed4a4e32df92"))(pin "9" (uuid "b4c40116-efb8-57f9-beff-d9deee0c82f3"))(pin "10" (uuid "d5d9bea1-1b17-5e72-8e96-0275210fb2a9"))(pin "11" (uuid "69dffd8d-8fde-52f9-8a4a-d07d9ab08966"))(pin "12" (uuid "46f04b5b-8c49-55de-b005-fdf2c65f91e3"))(pin "13" (uuid "55392d16-9d97-5501-8d90-e6859bf21679"))(pin "14" (uuid "4c5b0383-f673-51c0-aa16-d6556b1c391e"))(pin "15" (uuid "55178a3a-1aec-5b55-9df3-72e70b0f4f28"))(pin "16" (uuid "eaca177d-b4bd-5e3d-b61c-53c029126725"))(pin "17" (uuid "304fd6e2-554f-523b-85f5-93f03c2e7c93"))(pin "18" (uuid "326b9f50-2602-57d5-9d0c-c9922d6abd95"))(pin "19" (uuid "c2c6446b-09a0-58b8-b3b2-ea3bd9c5bfdf"))(pin "20" (uuid "b064c4fd-b895-5dc0-8d57-ac37ea67e47b"))(pin "21" (uuid "59d6f07b-62fe-5c13-8a06-8ef4f8153728"))(pin "22" (uuid "46eada7c-3b27-56bc-90fe-fb7f9eb1bd54"))(pin "23" (uuid "c2edc598-b4bb-5023-9bdf-b3f1314dc17d"))(pin "24" (uuid "59bd3f46-1316-56b5-8ed0-932471af4b3f"))(pin "25" (uuid "f756f90c-e933-5ff3-9b38-fd405fd807c2"))(instances (project "charge-core" (path "/c3551efd-fb3f-5092-85f3-8a45b4f3354f" (reference "U101") (unit 1)))))
+(wire (pts (xy 91.44 66.04) (xy 78.74 66.04)) (stroke (width 0) (type default)) (uuid "838ee44d-9521-5303-ba66-be4eb174b077"))
+(global_label "CHG_VBUS" (shape passive) (at 78.74 66.04 180) (effects (font (size 1.0 1.0)) (justify right)) (uuid "ffc0949e-833f-5b54-9736-d3999b09bd7f"))
+(wire (pts (xy 91.44 71.12) (xy 78.74 71.12)) (stroke (width 0) (type default)) (uuid "767eef5c-101c-5839-af15-2d34a5026993"))
+(global_label "DP" (shape passive) (at 78.74 71.12 180) (effects (font (size 1.0 1.0)) (justify right)) (uuid "0c8a7cb7-0dc6-5855-98bd-353e7e5c3dac"))
+(wire (pts (xy 91.44 73.66) (xy 78.74 73.66)) (stroke (width 0) (type default)) (uuid "fbe93667-b043-5c3c-898d-009c3da0e07e"))
+(global_label "DM" (shape passive) (at 78.74 73.66 180) (effects (font (size 1.0 1.0)) (justify right)) (uuid "32037e45-1340-54a4-9944-b6a173b765fd"))
+(wire (pts (xy 91.44 88.9) (xy 78.74 88.9)) (stroke (width 0) (type default)) (uuid "bd51c9b6-7c9c-5f4d-992c-476d4501aefe"))
+(global_label "CHG_GND" (shape passive) (at 78.74 88.9 180) (effects (font (size 1.0 1.0)) (justify right)) (uuid "51160776-813c-56d0-9c37-10e7155df3cd"))
+(wire (pts (xy 91.44 91.44) (xy 78.74 91.44)) (stroke (width 0) (type default)) (uuid "9aaa9bc5-8b82-5314-a104-70c7a2794ea7"))
+(global_label "CE_N" (shape passive) (at 78.74 91.44 180) (effects (font (size 1.0 1.0)) (justify right)) (uuid "28d39c09-30aa-5481-b109-6f83d6ecca3f"))
+(wire (pts (xy 91.44 96.52) (xy 78.74 96.52)) (stroke (width 0) (type default)) (uuid "ccd017f3-dbc6-5888-ba96-668f082917df"))
+(global_label "ICHGSET" (shape passive) (at 78.74 96.52 180) (effects (font (size 1.0 1.0)) (justify right)) (uuid "e355312c-5a96-5d43-995d-85a4b0749067"))
+(wire (pts (xy 91.44 101.6) (xy 78.74 101.6)) (stroke (width 0) (type default)) (uuid "41244c77-6d33-57ab-99ed-b0e15c00ee27"))
+(global_label "ILIM" (shape passive) (at 78.74 101.6 180) (effects (font (size 1.0 1.0)) (justify right)) (uuid "348f980c-56b7-50d9-b5ff-8d5d51c11115"))
+(wire (pts (xy 111.76 66.04) (xy 124.46 66.04)) (stroke (width 0) (type default)) (uuid "602b9613-c972-51a4-b9cc-50707ae75216"))
+(global_label "STAT_N" (shape passive) (at 124.46 66.04 0) (effects (font (size 1.0 1.0)) (justify left)) (uuid "1989ac03-ebf9-5630-a1fa-01c948d493b2"))
+(wire (pts (xy 111.76 68.58) (xy 124.46 68.58)) (stroke (width 0) (type default)) (uuid "af08c05c-a47f-5e8a-96f1-ae2ed192e81d"))
+(global_label "PG_N" (shape passive) (at 124.46 68.58 0) (effects (font (size 1.0 1.0)) (justify left)) (uuid "7fafff42-7d8f-55e8-bfe9-382f86749e15"))
+(wire (pts (xy 111.76 73.66) (xy 124.46 73.66)) (stroke (width 0) (type default)) (uuid "543eb00a-648d-59e3-bc28-c99f292973d1"))
+(global_label "PMID" (shape passive) (at 124.46 73.66 0) (effects (font (size 1.0 1.0)) (justify left)) (uuid "12f983e5-526f-5836-989f-e6755f999f83"))
+(wire (pts (xy 111.76 78.74) (xy 124.46 78.74)) (stroke (width 0) (type default)) (uuid "1fc7e25f-294e-5ec1-b796-7fd65ff39dd8"))
+(global_label "SW" (shape passive) (at 124.46 78.74 0) (effects (font (size 1.0 1.0)) (justify left)) (uuid "4ad246c0-1a15-5236-8b64-a415eca320fa"))
+(wire (pts (xy 111.76 83.82) (xy 124.46 83.82)) (stroke (width 0) (type default)) (uuid "1acf8c35-f2a4-5f3d-93bf-09122b7affa3"))
+(global_label "BTST" (shape passive) (at 124.46 83.82 0) (effects (font (size 1.0 1.0)) (justify left)) (uuid "344ca3aa-b867-53a3-9fb7-e47c4f94deac"))
+(wire (pts (xy 111.76 88.9) (xy 124.46 88.9)) (stroke (width 0) (type default)) (uuid "53025318-81d4-50d6-ae51-9e5192efd20d"))
+(global_label "SYS_INTERNAL" (shape passive) (at 124.46 88.9 0) (effects (font (size 1.0 1.0)) (justify left)) (uuid "36dc01a0-a4ec-5a27-8786-097512300fac"))
+(wire (pts (xy 111.76 91.44) (xy 124.46 91.44)) (stroke (width 0) (type default)) (uuid "8091e117-7fd5-582c-9445-2296f9c1fd40"))
+(global_label "CHG_BAT" (shape passive) (at 124.46 91.44 0) (effects (font (size 1.0 1.0)) (justify left)) (uuid "2057f3cc-d7eb-515a-9815-60cf9bce1657"))
+(wire (pts (xy 111.76 96.52) (xy 124.46 96.52)) (stroke (width 0) (type default)) (uuid "f90f4348-a4f7-52fa-8691-fc5e4218ec6a"))
+(global_label "REGN" (shape passive) (at 124.46 96.52 0) (effects (font (size 1.0 1.0)) (justify left)) (uuid "c5083363-6723-59f4-96e0-6abcd010cc4c"))
+(wire (pts (xy 111.76 101.6) (xy 124.46 101.6)) (stroke (width 0) (type default)) (uuid "397ea9e4-1a3e-541c-a7f0-408e6f3ed01f"))
+(global_label "TS" (shape passive) (at 124.46 101.6 0) (effects (font (size 1.0 1.0)) (justify left)) (uuid "5a4b8a6b-8f90-55ed-8bf4-7f23fdd6aeed"))
+(wire (pts (xy 101.6 106.68) (xy 101.6 114.3)) (stroke (width 0) (type default)) (uuid "4b8ce770-2c22-53d8-9fa3-da85a8fe3405"))
+(global_label "CHG_GND" (shape passive) (at 101.6 114.3 0) (effects (font (size 1.0 1.0)) (justify left)) (uuid "6a755b3f-d365-5d13-adf3-fbe728837a7e"))
+(no_connect (at 91.44 99.06) (uuid "cba11244-b0d9-584f-957b-68b1ee9c6a68"))
+(symbol (lib_id "RaceRemote_Charge:C") (at 177.8 66.04 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid "2e82a698-4295-5d6d-bf1a-4e4cf48c22e0") (property "Reference" "C101" (at 177.8 60.96 0) (effects (font (size 1.27 1.27))))(property "Value" "4.7u / 25V" (at 187.96 66.04 0) (effects (font (size 1.27 1.27))))(property "Footprint" "" (at 177.8 66.04 0) (hide yes) (effects (font (size 1.27 1.27))))(property "Datasheet" "" (at 177.8 66.04 0) (hide yes) (effects (font (size 1.27 1.27))))(pin "1" (uuid "c339f6d2-ac8c-565d-b475-fc3737230f49"))(pin "2" (uuid "932619f9-d748-557d-9a5b-c6712d9029b9"))(instances (project "charge-core" (path "/c3551efd-fb3f-5092-85f3-8a45b4f3354f" (reference "C101") (unit 1)))))
+(wire (pts (xy 177.8 62.23) (xy 177.8 54.61)) (stroke (width 0) (type default)) (uuid "479fd3d2-35ba-5ff8-9f9f-ea78cd955985"))
+(global_label "CHG_VBUS" (shape passive) (at 177.8 54.61 0) (effects (font (size 1.0 1.0)) (justify left)) (uuid "4e48685b-d5e3-5ff6-979b-af0aa8aa88ca"))
+(wire (pts (xy 177.8 69.85) (xy 177.8 77.47)) (stroke (width 0) (type default)) (uuid "c4c6b95a-ebb0-5bd7-bbad-ae59dc4af6f0"))
+(global_label "CHG_GND" (shape passive) (at 177.8 77.47 0) (effects (font (size 1.0 1.0)) (justify left)) (uuid "aa6b7294-3266-5b5c-bac8-5df837548784"))
+(symbol (lib_id "RaceRemote_Charge:C") (at 228.6 66.04 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid "5afe9ee0-bb24-57c7-9b88-208453402597") (property "Reference" "C102" (at 228.6 60.96 0) (effects (font (size 1.27 1.27))))(property "Value" "22u / 25V" (at 238.76 66.04 0) (effects (font (size 1.27 1.27))))(property "Footprint" "" (at 228.6 66.04 0) (hide yes) (effects (font (size 1.27 1.27))))(property "Datasheet" "" (at 228.6 66.04 0) (hide yes) (effects (font (size 1.27 1.27))))(pin "1" (uuid "004256ad-7650-524a-b0c7-72eb79eb9084"))(pin "2" (uuid "688a8415-3e63-5759-ad58-76815799635d"))(instances (project "charge-core" (path "/c3551efd-fb3f-5092-85f3-8a45b4f3354f" (reference "C102") (unit 1)))))
+(wire (pts (xy 228.6 62.23) (xy 228.6 54.61)) (stroke (width 0) (type default)) (uuid "a7072bef-b572-5931-b464-a0b9b46cb0e3"))
+(global_label "PMID" (shape passive) (at 228.6 54.61 0) (effects (font (size 1.0 1.0)) (justify left)) (uuid "feefcab0-ae74-51a4-be9e-dd56c5394908"))
+(wire (pts (xy 228.6 69.85) (xy 228.6 77.47)) (stroke (width 0) (type default)) (uuid "2d91317f-05c7-5773-b80d-c138d7689016"))
+(global_label "CHG_GND" (shape passive) (at 228.6 77.47 0) (effects (font (size 1.0 1.0)) (justify left)) (uuid "d955a9db-cd4d-5d58-bbf6-1e7d3c158904"))
+(symbol (lib_id "RaceRemote_Charge:C") (at 279.4 66.04 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid "c11910a2-240f-5efd-9310-5e508ab8ff56") (property "Reference" "C103" (at 279.4 60.96 0) (effects (font (size 1.27 1.27))))(property "Value" "22u / 25V" (at 289.56 66.04 0) (effects (font (size 1.27 1.27))))(property "Footprint" "" (at 279.4 66.04 0) (hide yes) (effects (font (size 1.27 1.27))))(property "Datasheet" "" (at 279.4 66.04 0) (hide yes) (effects (font (size 1.27 1.27))))(pin "1" (uuid "f30be0b5-50cc-57a3-a594-3203d6e06889"))(pin "2" (uuid "9339dc56-efef-5893-95e3-4d7f21fa30e2"))(instances (project "charge-core" (path "/c3551efd-fb3f-5092-85f3-8a45b4f3354f" (reference "C103") (unit 1)))))
+(wire (pts (xy 279.4 62.23) (xy 279.4 54.61)) (stroke (width 0) (type default)) (uuid "ba77a319-7f47-5669-bb0c-a34507858a82"))
+(global_label "PMID" (shape passive) (at 279.4 54.61 0) (effects (font (size 1.0 1.0)) (justify left)) (uuid "3b431f8e-54bd-5eaf-8afa-8d1c69989d37"))
+(wire (pts (xy 279.4 69.85) (xy 279.4 77.47)) (stroke (width 0) (type default)) (uuid "6b1248ec-661d-56ea-990a-64c2d5037b4f"))
+(global_label "CHG_GND" (shape passive) (at 279.4 77.47 0) (effects (font (size 1.0 1.0)) (justify left)) (uuid "6dfd647e-6dd6-5e93-8b6f-42844c4ddebb"))
+(symbol (lib_id "RaceRemote_Charge:L") (at 330.2 66.04 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid "7a162ebc-030d-538c-956a-bd8c44c509f1") (property "Reference" "L101" (at 330.2 60.96 0) (effects (font (size 1.27 1.27))))(property "Value" "1uH" (at 340.36 66.04 0) (effects (font (size 1.27 1.27))))(property "Footprint" "" (at 330.2 66.04 0) (hide yes) (effects (font (size 1.27 1.27))))(property "Datasheet" "" (at 330.2 66.04 0) (hide yes) (effects (font (size 1.27 1.27))))(pin "1" (uuid "5effd2f7-4b4d-581e-8599-67ff432e2782"))(pin "2" (uuid "227841ae-1f9a-5500-8d4d-d07fd05eaa7c"))(instances (project "charge-core" (path "/c3551efd-fb3f-5092-85f3-8a45b4f3354f" (reference "L101") (unit 1)))))
+(wire (pts (xy 330.2 62.23) (xy 330.2 54.61)) (stroke (width 0) (type default)) (uuid "d3a3e0d2-b1a4-5eca-829f-2dac63be98cf"))
+(global_label "PMID" (shape passive) (at 330.2 54.61 0) (effects (font (size 1.0 1.0)) (justify left)) (uuid "57907f79-7d4f-5ab3-a9b1-26b10a8c9e66"))
+(wire (pts (xy 330.2 69.85) (xy 330.2 77.47)) (stroke (width 0) (type default)) (uuid "45bbec64-6f46-5555-bfbc-117dac71999d"))
+(global_label "SW" (shape passive) (at 330.2 77.47 0) (effects (font (size 1.0 1.0)) (justify left)) (uuid "02d36e31-9dd9-5578-bc41-4a0f6495cf2e"))
+(symbol (lib_id "RaceRemote_Charge:C") (at 177.8 114.3 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid "48e1cbb8-e5b5-532a-9fd8-0e96470d3936") (property "Reference" "C104" (at 177.8 109.22 0) (effects (font (size 1.27 1.27))))(property "Value" "47u / 25V" (at 187.96 114.3 0) (effects (font (size 1.27 1.27))))(property "Footprint" "" (at 177.8 114.3 0) (hide yes) (effects (font (size 1.27 1.27))))(property "Datasheet" "" (at 177.8 114.3 0) (hide yes) (effects (font (size 1.27 1.27))))(pin "1" (uuid "0ae70cea-84d5-5423-ba55-fba3d61f2963"))(pin "2" (uuid "c9836f84-c459-50e7-beb4-427d4becc417"))(instances (project "charge-core" (path "/c3551efd-fb3f-5092-85f3-8a45b4f3354f" (reference "C104") (unit 1)))))
+(wire (pts (xy 177.8 110.49) (xy 177.8 102.87)) (stroke (width 0) (type default)) (uuid "0d58f111-1449-5908-bc10-42ed6448cdb3"))
+(global_label "SYS_INTERNAL" (shape passive) (at 177.8 102.87 0) (effects (font (size 1.0 1.0)) (justify left)) (uuid "7b65ce59-08b2-5c04-bc6a-2a4f1e28a222"))
+(wire (pts (xy 177.8 118.11) (xy 177.8 125.73)) (stroke (width 0) (type default)) (uuid "44820b25-ef37-58d8-9db5-0d260c4a97c1"))
+(global_label "CHG_GND" (shape passive) (at 177.8 125.73 0) (effects (font (size 1.0 1.0)) (justify left)) (uuid "a389bc1b-f362-5321-b038-a36b7eb0db58"))
+(symbol (lib_id "RaceRemote_Charge:C") (at 228.6 114.3 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid "1004d12f-c7ce-572c-8387-dbd084c766a2") (property "Reference" "C105" (at 228.6 109.22 0) (effects (font (size 1.27 1.27))))(property "Value" "47u / 25V" (at 238.76 114.3 0) (effects (font (size 1.27 1.27))))(property "Footprint" "" (at 228.6 114.3 0) (hide yes) (effects (font (size 1.27 1.27))))(property "Datasheet" "" (at 228.6 114.3 0) (hide yes) (effects (font (size 1.27 1.27))))(pin "1" (uuid "fc874046-e02f-5efe-8ca6-86a709b458d1"))(pin "2" (uuid "d6c7460e-8a57-5478-94f8-dcd0169c5b8b"))(instances (project "charge-core" (path "/c3551efd-fb3f-5092-85f3-8a45b4f3354f" (reference "C105") (unit 1)))))
+(wire (pts (xy 228.6 110.49) (xy 228.6 102.87)) (stroke (width 0) (type default)) (uuid "7cfd6ac9-6d58-58db-bcae-d26ab1564986"))
+(global_label "SYS_INTERNAL" (shape passive) (at 228.6 102.87 0) (effects (font (size 1.0 1.0)) (justify left)) (uuid "8f6b4b1c-8111-523f-b3b6-9f53449ae4ef"))
+(wire (pts (xy 228.6 118.11) (xy 228.6 125.73)) (stroke (width 0) (type default)) (uuid "d3b3652a-de48-5d40-9f1b-eebc068fb084"))
+(global_label "CHG_GND" (shape passive) (at 228.6 125.73 0) (effects (font (size 1.0 1.0)) (justify left)) (uuid "1bc0e833-dad3-53e4-a2b7-484449ca8998"))
+(symbol (lib_id "RaceRemote_Charge:C") (at 279.4 114.3 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid "57522a0e-36f5-5b8d-b5a7-94589a366354") (property "Reference" "C106" (at 279.4 109.22 0) (effects (font (size 1.27 1.27))))(property "Value" "22u / 25V" (at 289.56 114.3 0) (effects (font (size 1.27 1.27))))(property "Footprint" "" (at 279.4 114.3 0) (hide yes) (effects (font (size 1.27 1.27))))(property "Datasheet" "" (at 279.4 114.3 0) (hide yes) (effects (font (size 1.27 1.27))))(pin "1" (uuid "b577f614-775b-5842-a9c1-d95d6aadd761"))(pin "2" (uuid "ab8951d7-5835-5c60-b700-47e7c4fac301"))(instances (project "charge-core" (path "/c3551efd-fb3f-5092-85f3-8a45b4f3354f" (reference "C106") (unit 1)))))
+(wire (pts (xy 279.4 110.49) (xy 279.4 102.87)) (stroke (width 0) (type default)) (uuid "2e2b76cd-fb8a-5ca1-808e-3554acc35eb9"))
+(global_label "CHG_BAT" (shape passive) (at 279.4 102.87 0) (effects (font (size 1.0 1.0)) (justify left)) (uuid "0b12be19-242d-596c-aaf1-32135dc10baf"))
+(wire (pts (xy 279.4 118.11) (xy 279.4 125.73)) (stroke (width 0) (type default)) (uuid "4f775202-5e06-564f-85e3-762858ec1871"))
+(global_label "CHG_GND" (shape passive) (at 279.4 125.73 0) (effects (font (size 1.0 1.0)) (justify left)) (uuid "6a3595eb-a208-5c42-af89-609dd8956be8"))
+(symbol (lib_id "RaceRemote_Charge:C") (at 330.2 114.3 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid "8876ed6b-5676-5de1-bc74-a99f897126f3") (property "Reference" "C107" (at 330.2 109.22 0) (effects (font (size 1.27 1.27))))(property "Value" "10u / 16V" (at 340.36 114.3 0) (effects (font (size 1.27 1.27))))(property "Footprint" "" (at 330.2 114.3 0) (hide yes) (effects (font (size 1.27 1.27))))(property "Datasheet" "" (at 330.2 114.3 0) (hide yes) (effects (font (size 1.27 1.27))))(pin "1" (uuid "11befbe9-9d2f-545d-8542-ff918c51eeb4"))(pin "2" (uuid "0e3eed1e-e45a-5ba8-a4b5-6944549adf02"))(instances (project "charge-core" (path "/c3551efd-fb3f-5092-85f3-8a45b4f3354f" (reference "C107") (unit 1)))))
+(wire (pts (xy 330.2 110.49) (xy 330.2 102.87)) (stroke (width 0) (type default)) (uuid "d7ffcfe8-143f-5b47-a9ed-81f524713217"))
+(global_label "REGN" (shape passive) (at 330.2 102.87 0) (effects (font (size 1.0 1.0)) (justify left)) (uuid "aa3edb14-4a8e-59c5-87c3-50f7007ed5f7"))
+(wire (pts (xy 330.2 118.11) (xy 330.2 125.73)) (stroke (width 0) (type default)) (uuid "46b33424-118f-5743-ac94-27fee11e7925"))
+(global_label "CHG_GND" (shape passive) (at 330.2 125.73 0) (effects (font (size 1.0 1.0)) (justify left)) (uuid "02fc83ea-d7f0-59ea-bd0a-98574f869fbc"))
+(symbol (lib_id "RaceRemote_Charge:C") (at 101.6 149.86 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid "3caabea5-1577-59e7-bd49-9b04b0d177b2") (property "Reference" "C108" (at 101.6 144.78 0) (effects (font (size 1.27 1.27))))(property "Value" "47n / 25V" (at 111.76 149.86 0) (effects (font (size 1.27 1.27))))(property "Footprint" "" (at 101.6 149.86 0) (hide yes) (effects (font (size 1.27 1.27))))(property "Datasheet" "" (at 101.6 149.86 0) (hide yes) (effects (font (size 1.27 1.27))))(pin "1" (uuid "f4e8bd65-1841-522b-b11b-0ad3ce1b19a2"))(pin "2" (uuid "f17af7cf-ed3f-54d5-9635-c32eafbc006c"))(instances (project "charge-core" (path "/c3551efd-fb3f-5092-85f3-8a45b4f3354f" (reference "C108") (unit 1)))))
+(wire (pts (xy 101.6 146.05) (xy 101.6 138.43)) (stroke (width 0) (type default)) (uuid "041229b5-aee9-50af-8031-b1682440d55e"))
+(global_label "BTST" (shape passive) (at 101.6 138.43 0) (effects (font (size 1.0 1.0)) (justify left)) (uuid "c61a8c58-55ca-5a6e-ac38-2456da6b073a"))
+(wire (pts (xy 101.6 153.67) (xy 101.6 161.29)) (stroke (width 0) (type default)) (uuid "7cb84e00-9648-5ac4-a1c9-f1b1122544ee"))
+(global_label "SW" (shape passive) (at 101.6 161.29 0) (effects (font (size 1.0 1.0)) (justify left)) (uuid "964d3edd-d58c-5403-a04a-79dd315f1e8f"))
+(symbol (lib_id "RaceRemote_Charge:R") (at 50.8 167.64 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid "2a07860e-5121-5b0b-b41e-1ffb400fc8d9") (property "Reference" "R101" (at 50.8 162.56 0) (effects (font (size 1.27 1.27))))(property "Value" "953 / 1%" (at 60.96 167.64 0) (effects (font (size 1.27 1.27))))(property "Footprint" "" (at 50.8 167.64 0) (hide yes) (effects (font (size 1.27 1.27))))(property "Datasheet" "" (at 50.8 167.64 0) (hide yes) (effects (font (size 1.27 1.27))))(pin "1" (uuid "8cd9abde-8ea0-53f6-8b10-40b96f4b848d"))(pin "2" (uuid "87230abe-5049-501e-b3c0-94681fe4d5d8"))(instances (project "charge-core" (path "/c3551efd-fb3f-5092-85f3-8a45b4f3354f" (reference "R101") (unit 1)))))
+(wire (pts (xy 50.8 163.83) (xy 50.8 156.21)) (stroke (width 0) (type default)) (uuid "4331ce64-76df-549b-b851-d5416fc93356"))
+(global_label "ICHGSET" (shape passive) (at 50.8 156.21 0) (effects (font (size 1.0 1.0)) (justify left)) (uuid "c2b048ea-9ec5-56c3-9f22-23d528119a56"))
+(wire (pts (xy 50.8 171.45) (xy 50.8 179.07)) (stroke (width 0) (type default)) (uuid "27db1961-71af-591b-a904-c82ef0554d42"))
+(global_label "CHG_GND" (shape passive) (at 50.8 179.07 0) (effects (font (size 1.0 1.0)) (justify left)) (uuid "5ca5dfa8-39ae-554a-81c1-c4b59d35a2ab"))
+(symbol (lib_id "RaceRemote_Charge:R") (at 50.8 220.98 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid "ca2a2eba-2d15-5e91-a650-060ecfdc8493") (property "Reference" "R102" (at 50.8 215.9 0) (effects (font (size 1.27 1.27))))(property "Value" "1.37k / 1%" (at 60.96 220.98 0) (effects (font (size 1.27 1.27))))(property "Footprint" "" (at 50.8 220.98 0) (hide yes) (effects (font (size 1.27 1.27))))(property "Datasheet" "" (at 50.8 220.98 0) (hide yes) (effects (font (size 1.27 1.27))))(pin "1" (uuid "37aac152-08e4-55f6-a93d-33eb548d500b"))(pin "2" (uuid "e9dc9523-f322-57c4-94e7-9a984078ffe4"))(instances (project "charge-core" (path "/c3551efd-fb3f-5092-85f3-8a45b4f3354f" (reference "R102") (unit 1)))))
+(wire (pts (xy 50.8 217.17) (xy 50.8 209.55)) (stroke (width 0) (type default)) (uuid "0db0f9a1-a5b8-503f-8a1b-2440a9f202b1"))
+(global_label "ILIM" (shape passive) (at 50.8 209.55 0) (effects (font (size 1.0 1.0)) (justify left)) (uuid "a7f39ea5-8b67-500f-aa67-2725f15677f6"))
+(wire (pts (xy 50.8 224.79) (xy 50.8 232.41)) (stroke (width 0) (type default)) (uuid "f213eb38-0159-5fdf-a2a0-a646b11aa039"))
+(global_label "CHG_GND" (shape passive) (at 50.8 232.41 0) (effects (font (size 1.0 1.0)) (justify left)) (uuid "4a8ea494-7c29-5041-85e7-4f23f2463454"))
+(symbol (lib_id "RaceRemote_Charge:R") (at 177.8 167.64 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid "30bb78bf-d18d-5d12-b994-93f53100dabd") (property "Reference" "R103" (at 177.8 162.56 0) (effects (font (size 1.27 1.27))))(property "Value" "10k / 1%" (at 187.96 167.64 0) (effects (font (size 1.27 1.27))))(property "Footprint" "" (at 177.8 167.64 0) (hide yes) (effects (font (size 1.27 1.27))))(property "Datasheet" "" (at 177.8 167.64 0) (hide yes) (effects (font (size 1.27 1.27))))(pin "1" (uuid "a3580daf-8c85-555f-b62c-d88da059f05b"))(pin "2" (uuid "2144ce47-4822-5236-bdc3-32f7c27be267"))(instances (project "charge-core" (path "/c3551efd-fb3f-5092-85f3-8a45b4f3354f" (reference "R103") (unit 1)))))
+(wire (pts (xy 177.8 163.83) (xy 177.8 156.21)) (stroke (width 0) (type default)) (uuid "872fd016-6fbf-5ef2-8bcf-8a8ca322a047"))
+(global_label "CHG_VBUS" (shape passive) (at 177.8 156.21 0) (effects (font (size 1.0 1.0)) (justify left)) (uuid "58e8c152-5a15-5a71-ab43-745a3eda53d4"))
+(wire (pts (xy 177.8 171.45) (xy 177.8 179.07)) (stroke (width 0) (type default)) (uuid "7c1dfd9d-cdfa-58ea-b825-9780fa120791"))
+(global_label "CE_N" (shape passive) (at 177.8 179.07 0) (effects (font (size 1.0 1.0)) (justify left)) (uuid "87d9c29c-ac35-5d5f-8bde-ffd72412674a"))
+(symbol (lib_id "RaceRemote_Charge:R") (at 228.6 167.64 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid "413e06f1-4cd0-5c07-acf9-f094edf8a7e6") (property "Reference" "R104" (at 228.6 162.56 0) (effects (font (size 1.27 1.27))))(property "Value" "10k / 1%" (at 238.76 167.64 0) (effects (font (size 1.27 1.27))))(property "Footprint" "" (at 228.6 167.64 0) (hide yes) (effects (font (size 1.27 1.27))))(property "Datasheet" "" (at 228.6 167.64 0) (hide yes) (effects (font (size 1.27 1.27))))(pin "1" (uuid "5dba6e59-8465-54c1-a936-1cf3888435bd"))(pin "2" (uuid "cbc5b2ca-4040-5c95-b589-5fe782f12c1c"))(instances (project "charge-core" (path "/c3551efd-fb3f-5092-85f3-8a45b4f3354f" (reference "R104") (unit 1)))))
+(wire (pts (xy 228.6 163.83) (xy 228.6 156.21)) (stroke (width 0) (type default)) (uuid "05f68744-194c-5535-a942-1f182fbb32d1"))
+(global_label "CHG_VBUS" (shape passive) (at 228.6 156.21 0) (effects (font (size 1.0 1.0)) (justify left)) (uuid "a5d56664-28f5-5f04-ac5a-455e56ca70a1"))
+(wire (pts (xy 228.6 171.45) (xy 228.6 179.07)) (stroke (width 0) (type default)) (uuid "160cda57-151d-57a6-ae8e-bf31ce1a36f4"))
+(global_label "STAT_N" (shape passive) (at 228.6 179.07 0) (effects (font (size 1.0 1.0)) (justify left)) (uuid "0f3b8fee-2bc4-5c83-9e7b-a5e987310625"))
+(symbol (lib_id "RaceRemote_Charge:R") (at 279.4 167.64 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid "11627595-a765-52e7-beaa-11e39c53084a") (property "Reference" "R105" (at 279.4 162.56 0) (effects (font (size 1.27 1.27))))(property "Value" "10k / 1%" (at 289.56 167.64 0) (effects (font (size 1.27 1.27))))(property "Footprint" "" (at 279.4 167.64 0) (hide yes) (effects (font (size 1.27 1.27))))(property "Datasheet" "" (at 279.4 167.64 0) (hide yes) (effects (font (size 1.27 1.27))))(pin "1" (uuid "c557f0b7-b8d8-5666-9a1f-94597b41cb49"))(pin "2" (uuid "8a6fc7fb-c1bb-59ba-8b7e-7a60a22a2c11"))(instances (project "charge-core" (path "/c3551efd-fb3f-5092-85f3-8a45b4f3354f" (reference "R105") (unit 1)))))
+(wire (pts (xy 279.4 163.83) (xy 279.4 156.21)) (stroke (width 0) (type default)) (uuid "055fdd70-afa2-5209-9047-7b64136d1831"))
+(global_label "CHG_VBUS" (shape passive) (at 279.4 156.21 0) (effects (font (size 1.0 1.0)) (justify left)) (uuid "ac74ae6c-f68b-5409-a802-959a9b182676"))
+(wire (pts (xy 279.4 171.45) (xy 279.4 179.07)) (stroke (width 0) (type default)) (uuid "7bd062f3-f3bd-5502-a0bb-572e74a7dab5"))
+(global_label "PG_N" (shape passive) (at 279.4 179.07 0) (effects (font (size 1.0 1.0)) (justify left)) (uuid "a405e444-0952-50a2-b27a-bfd406e08c50"))
+(symbol (lib_id "RaceRemote_Charge:R") (at 330.2 167.64 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid "63817511-eb9c-527b-adba-480e975cd9c3") (property "Reference" "R106" (at 330.2 162.56 0) (effects (font (size 1.27 1.27))))(property "Value" "5.23k / 1%" (at 340.36 167.64 0) (effects (font (size 1.27 1.27))))(property "Footprint" "" (at 330.2 167.64 0) (hide yes) (effects (font (size 1.27 1.27))))(property "Datasheet" "" (at 330.2 167.64 0) (hide yes) (effects (font (size 1.27 1.27))))(pin "1" (uuid "9958953b-3c13-53f8-b0ff-227eb7e62824"))(pin "2" (uuid "10e45ced-6d4b-573b-94a2-5971e8efea55"))(instances (project "charge-core" (path "/c3551efd-fb3f-5092-85f3-8a45b4f3354f" (reference "R106") (unit 1)))))
+(wire (pts (xy 330.2 163.83) (xy 330.2 156.21)) (stroke (width 0) (type default)) (uuid "bdfed4fe-4e15-5663-a7aa-2976da56b05d"))
+(global_label "REGN" (shape passive) (at 330.2 156.21 0) (effects (font (size 1.0 1.0)) (justify left)) (uuid "68b55133-a8d3-5a34-906c-334fe5d4f437"))
+(wire (pts (xy 330.2 171.45) (xy 330.2 179.07)) (stroke (width 0) (type default)) (uuid "ff1f00a2-e05c-50eb-9bf9-76b6ab609326"))
+(global_label "TS" (shape passive) (at 330.2 179.07 0) (effects (font (size 1.0 1.0)) (justify left)) (uuid "aa1dd061-fbd7-5e6a-9d7e-277d44790c1f"))
+(symbol (lib_id "RaceRemote_Charge:R") (at 330.2 220.98 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid "18d5fc4b-bce5-5919-8643-45e74da7a63b") (property "Reference" "R107" (at 330.2 215.9 0) (effects (font (size 1.27 1.27))))(property "Value" "30.1k / 1%" (at 340.36 220.98 0) (effects (font (size 1.27 1.27))))(property "Footprint" "" (at 330.2 220.98 0) (hide yes) (effects (font (size 1.27 1.27))))(property "Datasheet" "" (at 330.2 220.98 0) (hide yes) (effects (font (size 1.27 1.27))))(pin "1" (uuid "666bea18-b569-54c3-9f66-6ff920ef2f95"))(pin "2" (uuid "b6430854-a4ac-5451-8eb6-2185e9211de6"))(instances (project "charge-core" (path "/c3551efd-fb3f-5092-85f3-8a45b4f3354f" (reference "R107") (unit 1)))))
+(wire (pts (xy 330.2 217.17) (xy 330.2 209.55)) (stroke (width 0) (type default)) (uuid "e9eb5e2c-9f5e-50ab-ae4b-0d9204720fba"))
+(global_label "TS" (shape passive) (at 330.2 209.55 0) (effects (font (size 1.0 1.0)) (justify left)) (uuid "49274857-eaf8-5e41-b662-bc9663b135dd"))
+(wire (pts (xy 330.2 224.79) (xy 330.2 232.41)) (stroke (width 0) (type default)) (uuid "c6d9bac1-c14d-562f-9d30-9a2e17669b07"))
+(global_label "CHG_GND" (shape passive) (at 330.2 232.41 0) (effects (font (size 1.0 1.0)) (justify left)) (uuid "71594ccf-fd4b-5c9c-9df1-590d3c9857a8"))
+(symbol (lib_id "RaceRemote_Charge:Conn_01x04") (at 177.8 226.06 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid "686c9389-e7cf-5523-8112-039fb639015a") (property "Reference" "J101" (at 177.8 220.98 0) (effects (font (size 1.27 1.27))))(property "Value" "QUALIFIED INPUT" (at 177.8 218.44 0) (effects (font (size 1.27 1.27))))(property "Footprint" "" (at 177.8 226.06 0) (hide yes) (effects (font (size 1.27 1.27))))(property "Datasheet" "" (at 177.8 226.06 0) (hide yes) (effects (font (size 1.27 1.27))))(pin "1" (uuid "a018a339-bdc6-5510-b80a-94e37860a5f7"))(pin "2" (uuid "5c41fe92-09ed-50ff-b6b6-bbd66e01c035"))(pin "3" (uuid "a039ea31-3d1b-5baa-a2cc-e7225b129752"))(pin "4" (uuid "76db22a2-9588-5c99-8188-ed9f36e9a0b8"))(instances (project "charge-core" (path "/c3551efd-fb3f-5092-85f3-8a45b4f3354f" (reference "J101") (unit 1)))))
+(wire (pts (xy 172.72 223.52) (xy 165.1 223.52)) (stroke (width 0) (type default)) (uuid "0433c15c-21c6-519d-a1f9-c3f4ead590b1"))
+(global_label "CHG_VBUS" (shape passive) (at 165.1 223.52 180) (effects (font (size 1.0 1.0)) (justify right)) (uuid "511aeb6d-2e3d-5adc-be16-b31c9cc05f0e"))
+(wire (pts (xy 172.72 226.06) (xy 165.1 226.06)) (stroke (width 0) (type default)) (uuid "7afc530d-c860-51a8-ae4e-a27e94e2cc59"))
+(global_label "CHG_GND" (shape passive) (at 165.1 226.06 180) (effects (font (size 1.0 1.0)) (justify right)) (uuid "6581b351-4b24-5744-9841-70a4a544694d"))
+(wire (pts (xy 172.72 228.6) (xy 165.1 228.6)) (stroke (width 0) (type default)) (uuid "ebc548e9-e1e3-587c-91fb-b318ab71a554"))
+(global_label "DP" (shape passive) (at 165.1 228.6 180) (effects (font (size 1.0 1.0)) (justify right)) (uuid "03566fc2-05b0-57aa-b6bf-35a817c11cee"))
+(wire (pts (xy 172.72 231.14) (xy 165.1 231.14)) (stroke (width 0) (type default)) (uuid "4b96b250-9bbe-58cd-b6ba-50ebe2d42eeb"))
+(global_label "DM" (shape passive) (at 165.1 231.14 180) (effects (font (size 1.0 1.0)) (justify right)) (uuid "39640e21-b09f-5502-bb5d-3ce3a5c37922"))
+(symbol (lib_id "RaceRemote_Charge:Conn_01x02") (at 254 220.98 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid "6ed2267f-7dd4-5317-bfa2-08c004fb5774") (property "Reference" "J102" (at 254 215.9 0) (effects (font (size 1.27 1.27))))(property "Value" "PROTECTED CHARGE PATH" (at 254 213.36 0) (effects (font (size 1.27 1.27))))(property "Footprint" "" (at 254 220.98 0) (hide yes) (effects (font (size 1.27 1.27))))(property "Datasheet" "" (at 254 220.98 0) (hide yes) (effects (font (size 1.27 1.27))))(pin "1" (uuid "37bc963b-88c0-5135-8740-5498611ca0dd"))(pin "2" (uuid "b31bb4de-8da7-5f5e-8931-c6032fd1ed95"))(instances (project "charge-core" (path "/c3551efd-fb3f-5092-85f3-8a45b4f3354f" (reference "J102") (unit 1)))))
+(wire (pts (xy 248.92 220.98) (xy 241.3 220.98)) (stroke (width 0) (type default)) (uuid "6cb70fec-0728-51c6-b273-d900a367eb1c"))
+(global_label "CHG_BAT" (shape passive) (at 241.3 220.98 180) (effects (font (size 1.0 1.0)) (justify right)) (uuid "1adddeb8-26d5-57ae-adcf-3788eeae456d"))
+(wire (pts (xy 248.92 223.52) (xy 241.3 223.52)) (stroke (width 0) (type default)) (uuid "e36d6f76-0dbc-5a0e-9db9-62e6d9f43f98"))
+(global_label "CHG_GND" (shape passive) (at 241.3 223.52 180) (effects (font (size 1.0 1.0)) (justify right)) (uuid "460ebc84-9e75-5c30-b159-fc01e0429596"))
+(symbol (lib_id "RaceRemote_Charge:Conn_01x04") (at 101.6 220.98 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid "6d084fdc-709e-5a62-87c4-10c7343b63be") (property "Reference" "J103" (at 101.6 215.9 0) (effects (font (size 1.27 1.27))))(property "Value" "EXTERNAL CHARGE GATE" (at 101.6 213.36 0) (effects (font (size 1.27 1.27))))(property "Footprint" "" (at 101.6 220.98 0) (hide yes) (effects (font (size 1.27 1.27))))(property "Datasheet" "" (at 101.6 220.98 0) (hide yes) (effects (font (size 1.27 1.27))))(pin "1" (uuid "874052a9-39d2-5d7e-ae09-39b96a0cdb22"))(pin "2" (uuid "5692d60b-639d-55e3-a227-58b60e798ad9"))(pin "3" (uuid "93cf4d9d-47ee-5440-a9eb-8ccd80cb2aac"))(pin "4" (uuid "521f4fa0-62e2-537b-a839-0fecf04369ea"))(instances (project "charge-core" (path "/c3551efd-fb3f-5092-85f3-8a45b4f3354f" (reference "J103") (unit 1)))))
+(wire (pts (xy 96.52 218.44) (xy 88.9 218.44)) (stroke (width 0) (type default)) (uuid "d308b081-7a28-52e8-a5d5-c412dc02bd5d"))
+(global_label "CE_N" (shape passive) (at 88.9 218.44 180) (effects (font (size 1.0 1.0)) (justify right)) (uuid "370a5afa-b1d0-56dc-8725-02e8e45ae449"))
+(wire (pts (xy 96.52 220.98) (xy 88.9 220.98)) (stroke (width 0) (type default)) (uuid "bf64c0a8-ea3b-5238-9319-21b2e7396978"))
+(global_label "PG_N" (shape passive) (at 88.9 220.98 180) (effects (font (size 1.0 1.0)) (justify right)) (uuid "01546fab-702a-5c85-aa71-fc4788f911bc"))
+(wire (pts (xy 96.52 223.52) (xy 88.9 223.52)) (stroke (width 0) (type default)) (uuid "0cefcb9f-2343-5bdc-866b-3f112607bfc5"))
+(global_label "STAT_N" (shape passive) (at 88.9 223.52 180) (effects (font (size 1.0 1.0)) (justify right)) (uuid "94510c29-d74d-50b5-814c-34ab339c41d3"))
+(wire (pts (xy 96.52 226.06) (xy 88.9 226.06)) (stroke (width 0) (type default)) (uuid "9cfd14b1-1358-5dde-8e29-df3f2520d48e"))
+(global_label "CHG_GND" (shape passive) (at 88.9 226.06 180) (effects (font (size 1.0 1.0)) (justify right)) (uuid "75543894-3b65-51ac-9ad7-abab7ec5ec3a"))
+(symbol (lib_id "RaceRemote_Charge:Conn_01x02") (at 203.2 264.16 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid "f1f3b5f3-5ada-573c-8cb2-54b802cb2c7f") (property "Reference" "J104" (at 203.2 259.08 0) (effects (font (size 1.27 1.27))))(property "Value" "EXTERNAL NTC 103AT-2" (at 203.2 256.54 0) (effects (font (size 1.27 1.27))))(property "Footprint" "" (at 203.2 264.16 0) (hide yes) (effects (font (size 1.27 1.27))))(property "Datasheet" "" (at 203.2 264.16 0) (hide yes) (effects (font (size 1.27 1.27))))(pin "1" (uuid "70e0b3de-fb35-5c86-afbe-04d5f0df8b3f"))(pin "2" (uuid "a39a5836-73a2-5440-9b8f-f20b67730f33"))(instances (project "charge-core" (path "/c3551efd-fb3f-5092-85f3-8a45b4f3354f" (reference "J104") (unit 1)))))
+(wire (pts (xy 198.12 264.16) (xy 190.5 264.16)) (stroke (width 0) (type default)) (uuid "84ceeb78-2f48-52a1-9ea8-97b426228796"))
+(global_label "TS" (shape passive) (at 190.5 264.16 180) (effects (font (size 1.0 1.0)) (justify right)) (uuid "4ae91f58-7811-53b5-922e-77cf28d929c2"))
+(wire (pts (xy 198.12 266.7) (xy 190.5 266.7)) (stroke (width 0) (type default)) (uuid "217eeba6-14ba-5933-b660-28f773df53ac"))
+(global_label "CHG_GND" (shape passive) (at 190.5 266.7 180) (effects (font (size 1.0 1.0)) (justify right)) (uuid "366071a1-437c-5db8-b747-4e12b46bc9f1"))
+(symbol (lib_id "RaceRemote_Charge:PWR_FLAG") (at 50.8 259.08 0) (unit 1) (in_bom no) (on_board no) (dnp no) (uuid "f6d2c3f2-630e-56a8-ae2d-59bda6ce732d") (property "Reference" "#FLG101" (at 50.8 254 0) (hide yes) (effects (font (size 1.27 1.27))))(property "Value" "PWR_FLAG" (at 50.8 251.46 0) (hide yes) (effects (font (size 1.27 1.27))))(property "Footprint" "" (at 50.8 259.08 0) (hide yes) (effects (font (size 1.27 1.27))))(property "Datasheet" "" (at 50.8 259.08 0) (hide yes) (effects (font (size 1.27 1.27))))(pin "1" (uuid "7b3f6acf-1f8e-5666-ac9c-009fc8ef2a5e"))(instances (project "charge-core" (path "/c3551efd-fb3f-5092-85f3-8a45b4f3354f" (reference "#FLG101") (unit 1)))))
+(wire (pts (xy 50.8 259.08) (xy 50.8 264.16)) (stroke (width 0) (type default)) (uuid "2cb961a7-7d29-5997-8c0d-3218dc79837b"))
+(global_label "CHG_VBUS" (shape passive) (at 50.8 264.16 0) (effects (font (size 1.0 1.0)) (justify left)) (uuid "05ed01d2-ba49-56a0-bfd0-a234add19f30"))
+(symbol (lib_id "RaceRemote_Charge:PWR_FLAG") (at 101.6 259.08 0) (unit 1) (in_bom no) (on_board no) (dnp no) (uuid "1f269d42-b5db-5659-9c6a-ceb56c9a454a") (property "Reference" "#FLG102" (at 101.6 254 0) (hide yes) (effects (font (size 1.27 1.27))))(property "Value" "PWR_FLAG" (at 101.6 251.46 0) (hide yes) (effects (font (size 1.27 1.27))))(property "Footprint" "" (at 101.6 259.08 0) (hide yes) (effects (font (size 1.27 1.27))))(property "Datasheet" "" (at 101.6 259.08 0) (hide yes) (effects (font (size 1.27 1.27))))(pin "1" (uuid "5ea5548c-017c-525a-9979-bd9155fd43d8"))(instances (project "charge-core" (path "/c3551efd-fb3f-5092-85f3-8a45b4f3354f" (reference "#FLG102") (unit 1)))))
+(wire (pts (xy 101.6 259.08) (xy 101.6 264.16)) (stroke (width 0) (type default)) (uuid "98e350b6-a113-5165-9496-996ce9ef68e9"))
+(global_label "CHG_GND" (shape passive) (at 101.6 264.16 0) (effects (font (size 1.0 1.0)) (justify left)) (uuid "23bd565c-86ba-5e91-89ba-66e1a1424999"))
+(symbol (lib_id "RaceRemote_Charge:PWR_FLAG") (at 152.4 259.08 0) (unit 1) (in_bom no) (on_board no) (dnp no) (uuid "fd897756-84a6-5706-8bd6-4fe42e6122e2") (property "Reference" "#FLG103" (at 152.4 254 0) (hide yes) (effects (font (size 1.27 1.27))))(property "Value" "PWR_FLAG" (at 152.4 251.46 0) (hide yes) (effects (font (size 1.27 1.27))))(property "Footprint" "" (at 152.4 259.08 0) (hide yes) (effects (font (size 1.27 1.27))))(property "Datasheet" "" (at 152.4 259.08 0) (hide yes) (effects (font (size 1.27 1.27))))(pin "1" (uuid "3d58d7e9-cfc1-5b8c-9997-18a8303eed79"))(instances (project "charge-core" (path "/c3551efd-fb3f-5092-85f3-8a45b4f3354f" (reference "#FLG103") (unit 1)))))
+(wire (pts (xy 152.4 259.08) (xy 152.4 264.16)) (stroke (width 0) (type default)) (uuid "4ae82f1e-0d2d-52b8-ab3b-ae8c75b8d555"))
+(global_label "SW" (shape passive) (at 152.4 264.16 0) (effects (font (size 1.0 1.0)) (justify left)) (uuid "d3b556bf-af17-5e58-a75d-6fe4594e81de"))
+(text "Converter core only - source qualification, cell monitor/balancer and protection are separate." (at 25.4 20.32 0) (effects (font (size 2 2)) (justify left top)) (uuid "60f5570a-a7c7-5ff5-bacd-9a2d4f5c2349"))
+(text "CE_N pulled high: default charge OFF. OTG tied low. VSET floating: nominal 8.4V.\n250mA is a proposed bench setting; LW charge limits and cell pinout remain unverified.\nNo traction load on SYS_INTERNAL. Do not connect raw LW battery to this unfinished assembly." (at 25.4 30.48 0) (effects (font (size 1.27 1.27)) (justify left top)) (uuid "68b7be3c-9690-5f20-9aa9-531a9767f4b9"))
+(text "C104/C105: >=44uF effective total at operating voltage. Nominal values are placeholders for MPN selection.\nGround: short analog returns and power-pad star per TI; high-current loops require PCB review.\nFlags describe power connectivity for ERC; they do not implement source checks or reverse protection." (at 25.4 279.4 0) (effects (font (size 1.0 1.0)) (justify left top)) (uuid "f549e7de-6f05-5fae-94b9-3a4c41884d35"))
+(sheet_instances (path "/" (page "1"))) (embedded_fonts no))

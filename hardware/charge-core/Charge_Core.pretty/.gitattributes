@@ -1,0 +1,2 @@
+# Keep upstream library bytes, including the Windows distribution's CRLF.
+*.kicad_mod -text whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol

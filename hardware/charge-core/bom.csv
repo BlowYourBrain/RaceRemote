@@ -1,0 +1,22 @@
+﻿reference,value,purpose,selection,footprint,price_rub,price_status
+U101,BQ25886RGER,Standalone boost charger; no cell balancing,Candidate; not purchased,Package_DFN_QFN:Texas_RGE0024H_VQFN-24-1EP_4x4mm_P0.5mm_EP2.7x2.7mm,,not checked for this core BOM
+C101,4.7u / 25V,VBUS; effective >=1uF,Candidate; not purchased,,,not checked for this core BOM
+C102,22u / 25V,PMID input capacitance,Candidate; not purchased,,,not checked for this core BOM
+C103,22u / 25V,PMID; input total effective >=10uF,Candidate; not purchased,,,not checked for this core BOM
+L101,1uH,Boost inductor; saturation/ripple/MPN pending,Candidate; not purchased,,,not checked for this core BOM
+C104,47u / 25V,SYS effective total C104+C105 >=44uF,Candidate; not purchased,,,not checked for this core BOM
+C105,47u / 25V,SYS effective total C104+C105 >=44uF,Candidate; not purchased,,,not checked for this core BOM
+C106,22u / 25V,BAT effective >=10uF at 8.4V,Candidate; not purchased,,,not checked for this core BOM
+C107,10u / 16V,REGN effective >=4.7uF,Candidate; not purchased,,,not checked for this core BOM
+C108,47n / 25V,"Bootstrap: BTST to SW, never GND",Candidate; not purchased,,,not checked for this core BOM
+R101,953 / 1%,Nominal 250mA study setting; not LW approval,Candidate; not purchased,,,not checked for this core BOM
+R102,1.37k / 1%,Nominal input limit 810mA; not source qualification,Candidate; not purchased,,,not checked for this core BOM
+R103,10k / 1%,Charge disabled unless external open drain sinks CE_N,Candidate; not purchased,,,not checked for this core BOM
+R104,10k / 1%,5V status pull-up; not directly 3.3V GPIO,Candidate; not purchased,,,not checked for this core BOM
+R105,10k / 1%,5V power-good pull-up; not charge permission,Candidate; not purchased,,,not checked for this core BOM
+R106,5.23k / 1%,Reference thermistor divider upper leg,Candidate; not purchased,,,not checked for this core BOM
+R107,30.1k / 1%,Lower leg in parallel with external 103AT-2 NTC,Candidate; not purchased,,,not checked for this core BOM
+J101,QUALIFIED INPUT,From source qualification/protection; not a raw USB or battery pinout,Logical interface; connector and footprint TBD,,,not checked for this core BOM
+J102,PROTECTED CHARGE PATH,To separately designed cell protection; no raw LW connection authorized,Logical interface; connector and footprint TBD,,,not checked for this core BOM
+J103,EXTERNAL CHARGE GATE,Open drain CE plus 5V status; gate/level conversion not implemented,Logical interface; connector and footprint TBD,,,not checked for this core BOM
+J104,EXTERNAL NTC 103AT-2,"10k thermistor at battery, not fixed resistor on controller",Logical interface; connector and footprint TBD,,,not checked for this core BOM

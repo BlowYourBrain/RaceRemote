@@ -1,0 +1,783 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<export version="E">
+  <design>
+    <source>C:\Users\Evgeny\orca\RaceRemote\hardware\charge-core\charge-core.kicad_sch</source>
+    <date>2026-09-14T01:45:28</date>
+    <tool>Eeschema 10.0.6</tool>
+    <sheet number="1" name="/" tstamps="/">
+      <title_block>
+        <title>RaceRemote - BQ25886 charger core PROPOSAL</title>
+        <company>vea.raceremote</company>
+        <rev>0.1</rev>
+        <date>2026-09-14</date>
+        <source>charge-core.kicad_sch</source>
+        <comment number="1" value=""/>
+        <comment number="2" value=""/>
+        <comment number="3" value=""/>
+        <comment number="4" value=""/>
+        <comment number="5" value=""/>
+        <comment number="6" value=""/>
+        <comment number="7" value=""/>
+        <comment number="8" value=""/>
+        <comment number="9" value=""/>
+      </title_block>
+    </sheet>
+  </design>
+  <components>
+    <comp ref="C101">
+      <value>4.7u / 25V</value>
+      <fields>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="RaceRemote_Charge" part="C" description="Unpolarized capacitor"/>
+      <property name="Sheetname" value="charge-core"/>
+      <property name="Sheetfile" value="charge-core.kicad_sch"/>
+      <property name="ki_keywords" value="cap capacitor"/>
+      <property name="ki_fp_filters" value="C_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>2e82a698-4295-5d6d-bf1a-4e4cf48c22e0</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="C102">
+      <value>22u / 25V</value>
+      <fields>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="RaceRemote_Charge" part="C" description="Unpolarized capacitor"/>
+      <property name="Sheetname" value="charge-core"/>
+      <property name="Sheetfile" value="charge-core.kicad_sch"/>
+      <property name="ki_keywords" value="cap capacitor"/>
+      <property name="ki_fp_filters" value="C_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>5afe9ee0-bb24-57c7-9b88-208453402597</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="C103">
+      <value>22u / 25V</value>
+      <fields>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="RaceRemote_Charge" part="C" description="Unpolarized capacitor"/>
+      <property name="Sheetname" value="charge-core"/>
+      <property name="Sheetfile" value="charge-core.kicad_sch"/>
+      <property name="ki_keywords" value="cap capacitor"/>
+      <property name="ki_fp_filters" value="C_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>c11910a2-240f-5efd-9310-5e508ab8ff56</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="C104">
+      <value>47u / 25V</value>
+      <fields>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="RaceRemote_Charge" part="C" description="Unpolarized capacitor"/>
+      <property name="Sheetname" value="charge-core"/>
+      <property name="Sheetfile" value="charge-core.kicad_sch"/>
+      <property name="ki_keywords" value="cap capacitor"/>
+      <property name="ki_fp_filters" value="C_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>48e1cbb8-e5b5-532a-9fd8-0e96470d3936</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="C105">
+      <value>47u / 25V</value>
+      <fields>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="RaceRemote_Charge" part="C" description="Unpolarized capacitor"/>
+      <property name="Sheetname" value="charge-core"/>
+      <property name="Sheetfile" value="charge-core.kicad_sch"/>
+      <property name="ki_keywords" value="cap capacitor"/>
+      <property name="ki_fp_filters" value="C_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>1004d12f-c7ce-572c-8387-dbd084c766a2</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="C106">
+      <value>22u / 25V</value>
+      <fields>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="RaceRemote_Charge" part="C" description="Unpolarized capacitor"/>
+      <property name="Sheetname" value="charge-core"/>
+      <property name="Sheetfile" value="charge-core.kicad_sch"/>
+      <property name="ki_keywords" value="cap capacitor"/>
+      <property name="ki_fp_filters" value="C_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>57522a0e-36f5-5b8d-b5a7-94589a366354</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="C107">
+      <value>10u / 16V</value>
+      <fields>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="RaceRemote_Charge" part="C" description="Unpolarized capacitor"/>
+      <property name="Sheetname" value="charge-core"/>
+      <property name="Sheetfile" value="charge-core.kicad_sch"/>
+      <property name="ki_keywords" value="cap capacitor"/>
+      <property name="ki_fp_filters" value="C_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>8876ed6b-5676-5de1-bc74-a99f897126f3</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="C108">
+      <value>47n / 25V</value>
+      <fields>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="RaceRemote_Charge" part="C" description="Unpolarized capacitor"/>
+      <property name="Sheetname" value="charge-core"/>
+      <property name="Sheetfile" value="charge-core.kicad_sch"/>
+      <property name="ki_keywords" value="cap capacitor"/>
+      <property name="ki_fp_filters" value="C_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>3caabea5-1577-59e7-bd49-9b04b0d177b2</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="J101">
+      <value>QUALIFIED INPUT</value>
+      <fields>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="RaceRemote_Charge" part="Conn_01x04" description="Generic connector, single row, 01x04, script generated (kicad-library-utils/schlib/autogen/connector/)"/>
+      <property name="Sheetname" value="charge-core"/>
+      <property name="Sheetfile" value="charge-core.kicad_sch"/>
+      <property name="ki_keywords" value="connector"/>
+      <property name="ki_fp_filters" value="Connector*:*_1x??_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>686c9389-e7cf-5523-8112-039fb639015a</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+            <pin num="3"/>
+            <pin num="4"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="J102">
+      <value>PROTECTED CHARGE PATH</value>
+      <fields>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="RaceRemote_Charge" part="Conn_01x02" description="Generic connector, single row, 01x02, script generated (kicad-library-utils/schlib/autogen/connector/)"/>
+      <property name="Sheetname" value="charge-core"/>
+      <property name="Sheetfile" value="charge-core.kicad_sch"/>
+      <property name="ki_keywords" value="connector"/>
+      <property name="ki_fp_filters" value="Connector*:*_1x??_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>6ed2267f-7dd4-5317-bfa2-08c004fb5774</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="J103">
+      <value>EXTERNAL CHARGE GATE</value>
+      <fields>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="RaceRemote_Charge" part="Conn_01x04" description="Generic connector, single row, 01x04, script generated (kicad-library-utils/schlib/autogen/connector/)"/>
+      <property name="Sheetname" value="charge-core"/>
+      <property name="Sheetfile" value="charge-core.kicad_sch"/>
+      <property name="ki_keywords" value="connector"/>
+      <property name="ki_fp_filters" value="Connector*:*_1x??_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>6d084fdc-709e-5a62-87c4-10c7343b63be</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+            <pin num="3"/>
+            <pin num="4"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="J104">
+      <value>EXTERNAL NTC 103AT-2</value>
+      <fields>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="RaceRemote_Charge" part="Conn_01x02" description="Generic connector, single row, 01x02, script generated (kicad-library-utils/schlib/autogen/connector/)"/>
+      <property name="Sheetname" value="charge-core"/>
+      <property name="Sheetfile" value="charge-core.kicad_sch"/>
+      <property name="ki_keywords" value="connector"/>
+      <property name="ki_fp_filters" value="Connector*:*_1x??_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>f1f3b5f3-5ada-573c-8cb2-54b802cb2c7f</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="L101">
+      <value>1uH</value>
+      <fields>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="RaceRemote_Charge" part="L" description="Inductor"/>
+      <property name="Sheetname" value="charge-core"/>
+      <property name="Sheetfile" value="charge-core.kicad_sch"/>
+      <property name="ki_keywords" value="inductor choke coil reactor magnetic"/>
+      <property name="ki_fp_filters" value="Choke_* *Coil* Inductor_* L_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>7a162ebc-030d-538c-956a-bd8c44c509f1</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="R101">
+      <value>953 / 1%</value>
+      <fields>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="RaceRemote_Charge" part="R" description="Resistor"/>
+      <property name="Sheetname" value="charge-core"/>
+      <property name="Sheetfile" value="charge-core.kicad_sch"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <property name="ki_fp_filters" value="R_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>2a07860e-5121-5b0b-b41e-1ffb400fc8d9</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="R102">
+      <value>1.37k / 1%</value>
+      <fields>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="RaceRemote_Charge" part="R" description="Resistor"/>
+      <property name="Sheetname" value="charge-core"/>
+      <property name="Sheetfile" value="charge-core.kicad_sch"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <property name="ki_fp_filters" value="R_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>ca2a2eba-2d15-5e91-a650-060ecfdc8493</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="R103">
+      <value>10k / 1%</value>
+      <fields>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="RaceRemote_Charge" part="R" description="Resistor"/>
+      <property name="Sheetname" value="charge-core"/>
+      <property name="Sheetfile" value="charge-core.kicad_sch"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <property name="ki_fp_filters" value="R_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>30bb78bf-d18d-5d12-b994-93f53100dabd</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="R104">
+      <value>10k / 1%</value>
+      <fields>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="RaceRemote_Charge" part="R" description="Resistor"/>
+      <property name="Sheetname" value="charge-core"/>
+      <property name="Sheetfile" value="charge-core.kicad_sch"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <property name="ki_fp_filters" value="R_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>413e06f1-4cd0-5c07-acf9-f094edf8a7e6</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="R105">
+      <value>10k / 1%</value>
+      <fields>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="RaceRemote_Charge" part="R" description="Resistor"/>
+      <property name="Sheetname" value="charge-core"/>
+      <property name="Sheetfile" value="charge-core.kicad_sch"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <property name="ki_fp_filters" value="R_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>11627595-a765-52e7-beaa-11e39c53084a</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="R106">
+      <value>5.23k / 1%</value>
+      <fields>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="RaceRemote_Charge" part="R" description="Resistor"/>
+      <property name="Sheetname" value="charge-core"/>
+      <property name="Sheetfile" value="charge-core.kicad_sch"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <property name="ki_fp_filters" value="R_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>63817511-eb9c-527b-adba-480e975cd9c3</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="R107">
+      <value>30.1k / 1%</value>
+      <fields>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="RaceRemote_Charge" part="R" description="Resistor"/>
+      <property name="Sheetname" value="charge-core"/>
+      <property name="Sheetfile" value="charge-core.kicad_sch"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <property name="ki_fp_filters" value="R_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>18d5fc4b-bce5-5919-8643-45e74da7a63b</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="U101">
+      <value>BQ25886RGER</value>
+      <footprint>Package_DFN_QFN:Texas_RGE0024H_VQFN-24-1EP_4x4mm_P0.5mm_EP2.7x2.7mm</footprint>
+      <datasheet>https://www.ti.com/lit/gpn/bq25886</datasheet>
+      <fields>
+        <field name="Footprint">Package_DFN_QFN:Texas_RGE0024H_VQFN-24-1EP_4x4mm_P0.5mm_EP2.7x2.7mm</field>
+        <field name="Datasheet">https://www.ti.com/lit/gpn/bq25886</field>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="RaceRemote_Charge" part="BQ25886RGE" description="Standalone 2-Cell (Li-Ion / Li-Polymer), 2A Boost-Mode Battery Charger With PowerPath, USB BC1.2 Detection, USB On-The-Go Boost (OTG), 4.3..6.2V VBUS, 8.2/8.4/8.7/8.8V charge voltage, 9.2V BATOVP, 1.5MHz, VQFN-24"/>
+      <property name="Sheetname" value="charge-core"/>
+      <property name="Sheetfile" value="charge-core.kicad_sch"/>
+      <property name="ki_keywords" value="Power-Path-Management"/>
+      <property name="ki_fp_filters" value="*VQFN*4x4mm*P0.5mm*EP2.7x2.7*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>4cfef70a-9103-58ba-8b2a-01d27a7a5bd3</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="23"/>
+            <pin num="24"/>
+            <pin num="1"/>
+            <pin num="5"/>
+            <pin num="3"/>
+            <pin num="10"/>
+            <pin num="6"/>
+            <pin num="8"/>
+            <pin num="4"/>
+            <pin num="19"/>
+            <pin num="20"/>
+            <pin num="25"/>
+            <pin num="2"/>
+            <pin num="9"/>
+            <pin num="21"/>
+            <pin num="22"/>
+            <pin num="17"/>
+            <pin num="18"/>
+            <pin num="12"/>
+            <pin num="15"/>
+            <pin num="16"/>
+            <pin num="13"/>
+            <pin num="14"/>
+            <pin num="11"/>
+            <pin num="7"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+  </components>
+  <libparts>
+    <libpart lib="RaceRemote_Charge" part="BQ25886RGE">
+      <description>Standalone 2-Cell (Li-Ion / Li-Polymer), 2A Boost-Mode Battery Charger With PowerPath, USB BC1.2 Detection, USB On-The-Go Boost (OTG), 4.3..6.2V VBUS, 8.2/8.4/8.7/8.8V charge voltage, 9.2V BATOVP, 1.5MHz, VQFN-24</description>
+      <docs>http://www.ti.com/lit/ds/symlink/bq25886.pdf</docs>
+      <footprints>
+        <fp>*VQFN*4x4mm*P0.5mm*EP2.7x2.7*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">U</field>
+        <field name="Value">BQ25886RGE</field>
+        <field name="Footprint">Package_DFN_QFN:Texas_RGE0024H_VQFN-24-1EP_4x4mm_P0.5mm_EP2.7x2.7mm</field>
+        <field name="Datasheet">http://www.ti.com/lit/ds/symlink/bq25886.pdf</field>
+        <field name="Description">Standalone 2-Cell (Li-Ion / Li-Polymer), 2A Boost-Mode Battery Charger With PowerPath, USB BC1.2 Detection, USB On-The-Go Boost (OTG), 4.3..6.2V VBUS, 8.2/8.4/8.7/8.8V charge voltage, 9.2V BATOVP, 1.5MHz, VQFN-24</field>
+      </fields>
+      <pins>
+        <pin num="1" name="D-" type="bidirectional"/>
+        <pin num="2" name="STAT" type="open_collector"/>
+        <pin num="3" name="~{CE}" type="input"/>
+        <pin num="4" name="GND" type="power_in"/>
+        <pin num="5" name="OTG" type="input"/>
+        <pin num="6" name="VSET" type="passive"/>
+        <pin num="7" name="TS" type="input"/>
+        <pin num="8" name="ILIM" type="passive"/>
+        <pin num="9" name="~{PG}" type="open_collector"/>
+        <pin num="10" name="ICHGSET" type="passive"/>
+        <pin num="11" name="REGN" type="power_out"/>
+        <pin num="12" name="BTST" type="passive"/>
+        <pin num="13" name="BAT" type="passive"/>
+        <pin num="14" name="BAT" type="passive"/>
+        <pin num="15" name="SYS" type="power_out"/>
+        <pin num="16" name="SYS" type="passive"/>
+        <pin num="17" name="SW" type="power_in"/>
+        <pin num="18" name="SW" type="passive"/>
+        <pin num="19" name="GND" type="passive"/>
+        <pin num="20" name="GND" type="passive"/>
+        <pin num="21" name="PMID" type="power_out"/>
+        <pin num="22" name="PMID" type="passive"/>
+        <pin num="23" name="VBUS" type="power_in"/>
+        <pin num="24" name="D+" type="bidirectional"/>
+        <pin num="25" name="GND" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="RaceRemote_Charge" part="C">
+      <description>Unpolarized capacitor</description>
+      <footprints>
+        <fp>C_*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">C</field>
+        <field name="Value">C</field>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description">Unpolarized capacitor</field>
+      </fields>
+      <pins>
+        <pin num="1" name="" type="passive"/>
+        <pin num="2" name="" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="RaceRemote_Charge" part="Conn_01x02">
+      <description>Generic connector, single row, 01x02, script generated (kicad-library-utils/schlib/autogen/connector/)</description>
+      <footprints>
+        <fp>Connector*:*_1x??_*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">J</field>
+        <field name="Value">Conn_01x02</field>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description">Generic connector, single row, 01x02, script generated (kicad-library-utils/schlib/autogen/connector/)</field>
+      </fields>
+      <pins>
+        <pin num="1" name="Pin_1" type="passive"/>
+        <pin num="2" name="Pin_2" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="RaceRemote_Charge" part="Conn_01x04">
+      <description>Generic connector, single row, 01x04, script generated (kicad-library-utils/schlib/autogen/connector/)</description>
+      <footprints>
+        <fp>Connector*:*_1x??_*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">J</field>
+        <field name="Value">Conn_01x04</field>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description">Generic connector, single row, 01x04, script generated (kicad-library-utils/schlib/autogen/connector/)</field>
+      </fields>
+      <pins>
+        <pin num="1" name="Pin_1" type="passive"/>
+        <pin num="2" name="Pin_2" type="passive"/>
+        <pin num="3" name="Pin_3" type="passive"/>
+        <pin num="4" name="Pin_4" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="RaceRemote_Charge" part="L">
+      <description>Inductor</description>
+      <footprints>
+        <fp>Choke_*</fp>
+        <fp>*Coil*</fp>
+        <fp>Inductor_*</fp>
+        <fp>L_*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">L</field>
+        <field name="Value">L</field>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description">Inductor</field>
+      </fields>
+      <pins>
+        <pin num="1" name="1" type="passive"/>
+        <pin num="2" name="2" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="RaceRemote_Charge" part="R">
+      <description>Resistor</description>
+      <footprints>
+        <fp>R_*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">R</field>
+        <field name="Value">R</field>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description">Resistor</field>
+      </fields>
+      <pins>
+        <pin num="1" name="" type="passive"/>
+        <pin num="2" name="" type="passive"/>
+      </pins>
+    </libpart>
+  </libparts>
+  <libraries>
+    <library logical="RaceRemote_Charge">
+      <uri>${KIPRJMOD}/RaceRemote_Charge.kicad_sym</uri>
+    </library>
+  </libraries>
+  <nets>
+    <net code="1" name="BTST" class="Default">
+      <node ref="C108" pin="1" pintype="passive"/>
+      <node ref="U101" pin="12" pinfunction="BTST_12" pintype="passive"/>
+    </net>
+    <net code="2" name="CE_N" class="Default">
+      <node ref="J103" pin="1" pinfunction="Pin_1_1" pintype="passive"/>
+      <node ref="R103" pin="2" pintype="passive"/>
+      <node ref="U101" pin="3" pinfunction="~{CE}_3" pintype="input"/>
+    </net>
+    <net code="3" name="CHG_BAT" class="Default">
+      <node ref="C106" pin="1" pintype="passive"/>
+      <node ref="J102" pin="1" pinfunction="Pin_1_1" pintype="passive"/>
+      <node ref="U101" pin="13" pinfunction="BAT_13" pintype="passive"/>
+      <node ref="U101" pin="14" pinfunction="BAT_14" pintype="passive"/>
+    </net>
+    <net code="4" name="CHG_GND" class="Default">
+      <node ref="C101" pin="2" pintype="passive"/>
+      <node ref="C102" pin="2" pintype="passive"/>
+      <node ref="C103" pin="2" pintype="passive"/>
+      <node ref="C104" pin="2" pintype="passive"/>
+      <node ref="C105" pin="2" pintype="passive"/>
+      <node ref="C106" pin="2" pintype="passive"/>
+      <node ref="C107" pin="2" pintype="passive"/>
+      <node ref="J101" pin="2" pinfunction="Pin_2_2" pintype="passive"/>
+      <node ref="J102" pin="2" pinfunction="Pin_2_2" pintype="passive"/>
+      <node ref="J103" pin="4" pinfunction="Pin_4_4" pintype="passive"/>
+      <node ref="J104" pin="2" pinfunction="Pin_2_2" pintype="passive"/>
+      <node ref="R101" pin="2" pintype="passive"/>
+      <node ref="R102" pin="2" pintype="passive"/>
+      <node ref="R107" pin="2" pintype="passive"/>
+      <node ref="U101" pin="19" pinfunction="GND_19" pintype="passive"/>
+      <node ref="U101" pin="20" pinfunction="GND_20" pintype="passive"/>
+      <node ref="U101" pin="25" pinfunction="GND_25" pintype="passive"/>
+      <node ref="U101" pin="4" pinfunction="GND_4" pintype="power_in"/>
+      <node ref="U101" pin="5" pinfunction="OTG_5" pintype="input"/>
+    </net>
+    <net code="5" name="CHG_VBUS" class="Default">
+      <node ref="C101" pin="1" pintype="passive"/>
+      <node ref="J101" pin="1" pinfunction="Pin_1_1" pintype="passive"/>
+      <node ref="R103" pin="1" pintype="passive"/>
+      <node ref="R104" pin="1" pintype="passive"/>
+      <node ref="R105" pin="1" pintype="passive"/>
+      <node ref="U101" pin="23" pinfunction="VBUS_23" pintype="power_in"/>
+    </net>
+    <net code="6" name="DM" class="Default">
+      <node ref="J101" pin="4" pinfunction="Pin_4_4" pintype="passive"/>
+      <node ref="U101" pin="1" pinfunction="D-_1" pintype="bidirectional"/>
+    </net>
+    <net code="7" name="DP" class="Default">
+      <node ref="J101" pin="3" pinfunction="Pin_3_3" pintype="passive"/>
+      <node ref="U101" pin="24" pinfunction="D+_24" pintype="bidirectional"/>
+    </net>
+    <net code="8" name="ICHGSET" class="Default">
+      <node ref="R101" pin="1" pintype="passive"/>
+      <node ref="U101" pin="10" pinfunction="ICHGSET_10" pintype="passive"/>
+    </net>
+    <net code="9" name="ILIM" class="Default">
+      <node ref="R102" pin="1" pintype="passive"/>
+      <node ref="U101" pin="8" pinfunction="ILIM_8" pintype="passive"/>
+    </net>
+    <net code="10" name="PG_N" class="Default">
+      <node ref="J103" pin="2" pinfunction="Pin_2_2" pintype="passive"/>
+      <node ref="R105" pin="2" pintype="passive"/>
+      <node ref="U101" pin="9" pinfunction="~{PG}_9" pintype="open_collector"/>
+    </net>
+    <net code="11" name="PMID" class="Default">
+      <node ref="C102" pin="1" pintype="passive"/>
+      <node ref="C103" pin="1" pintype="passive"/>
+      <node ref="L101" pin="1" pinfunction="1_1" pintype="passive"/>
+      <node ref="U101" pin="21" pinfunction="PMID_21" pintype="power_out"/>
+      <node ref="U101" pin="22" pinfunction="PMID_22" pintype="passive"/>
+    </net>
+    <net code="12" name="REGN" class="Default">
+      <node ref="C107" pin="1" pintype="passive"/>
+      <node ref="R106" pin="1" pintype="passive"/>
+      <node ref="U101" pin="11" pinfunction="REGN_11" pintype="power_out"/>
+    </net>
+    <net code="13" name="STAT_N" class="Default">
+      <node ref="J103" pin="3" pinfunction="Pin_3_3" pintype="passive"/>
+      <node ref="R104" pin="2" pintype="passive"/>
+      <node ref="U101" pin="2" pinfunction="STAT_2" pintype="open_collector"/>
+    </net>
+    <net code="14" name="SW" class="Default">
+      <node ref="C108" pin="2" pintype="passive"/>
+      <node ref="L101" pin="2" pinfunction="2_2" pintype="passive"/>
+      <node ref="U101" pin="17" pinfunction="SW_17" pintype="power_in"/>
+      <node ref="U101" pin="18" pinfunction="SW_18" pintype="passive"/>
+    </net>
+    <net code="15" name="SYS_INTERNAL" class="Default">
+      <node ref="C104" pin="1" pintype="passive"/>
+      <node ref="C105" pin="1" pintype="passive"/>
+      <node ref="U101" pin="15" pinfunction="SYS_15" pintype="power_out"/>
+      <node ref="U101" pin="16" pinfunction="SYS_16" pintype="passive"/>
+    </net>
+    <net code="16" name="TS" class="Default">
+      <node ref="J104" pin="1" pinfunction="Pin_1_1" pintype="passive"/>
+      <node ref="R106" pin="2" pintype="passive"/>
+      <node ref="R107" pin="1" pintype="passive"/>
+      <node ref="U101" pin="7" pinfunction="TS_7" pintype="input"/>
+    </net>
+    <net code="17" name="unconnected-(U101-VSET-Pad6)" class="Default">
+      <node ref="U101" pin="6" pinfunction="VSET_6" pintype="passive+no_connect"/>
+    </net>
+  </nets>
+</export>

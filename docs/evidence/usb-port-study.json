@@ -1,0 +1,469 @@
+{
+  "version": "0.1",
+  "units": "mm",
+  "design_sha256": "85dd263a30785fee16609af694971eec78742865e980a8251f71a15dda4830d1",
+  "connector_source": "https://gct.co/files/drawings/usb4105.pdf",
+  "connector_drawing_revision": "B4 2023-12-18",
+  "connector_drawing_sha256": "fb331fbabee8392ed2937ed757c1610cb0f174b84625147c0b580a18eea8c0e5",
+  "bounds_mm": {
+    "base": [
+      [
+        -5.25,
+        40.0,
+        20.25
+      ],
+      [
+        57.5,
+        88.0,
+        26.0
+      ]
+    ],
+    "pcb": [
+      [
+        50.9,
+        48.0,
+        22.15
+      ],
+      [
+        58.5,
+        70.0,
+        23.15
+      ]
+    ],
+    "connector": [
+      [
+        51.0,
+        54.455,
+        23.15
+      ],
+      [
+        58.5,
+        63.545,
+        26.61
+      ]
+    ],
+    "components": [
+      [
+        51.25,
+        57.0,
+        20.35
+      ],
+      [
+        54.25,
+        63.0,
+        21.85
+      ]
+    ],
+    "fasteners": [
+      [
+        52.94,
+        48.9995,
+        20.4
+      ],
+      [
+        57.56,
+        69.0005,
+        28.0
+      ]
+    ],
+    "body": [
+      [
+        -10.25,
+        -20.0,
+        0.0
+      ],
+      [
+        59.75,
+        135.01,
+        47.0
+      ]
+    ],
+    "cover": [
+      [
+        58.0,
+        49.0,
+        19.38
+      ],
+      [
+        61.75,
+        69.0,
+        30.38
+      ]
+    ],
+    "plug": [
+      [
+        58.5,
+        50.0,
+        20.38
+      ],
+      [
+        82.5,
+        68.0,
+        29.38
+      ]
+    ],
+    "fingers": [
+      [
+        62.0,
+        39.0,
+        14.88
+      ],
+      [
+        90.0,
+        79.0,
+        34.88
+      ]
+    ],
+    "cable": [
+      [
+        82.5,
+        56.0,
+        21.88
+      ],
+      [
+        102.5,
+        62.0,
+        27.88
+      ]
+    ]
+  },
+  "fixed_checks_mm3": {
+    "pcb": {
+      "tray": 0.0,
+      "camera_mount": 0.0,
+      "main_fasteners": 0.0,
+      "camera_fasteners": 0.0,
+      "battery": 0.0,
+      "support": 0.0,
+      "guards": 0.0,
+      "band": 0.0,
+      "driver": 0.0,
+      "charge": 0.0,
+      "motor": 0.0,
+      "servo": 0.0,
+      "power": 0.0,
+      "camera_envelope": 0.0,
+      "zcar_frame": 0.0,
+      "zcar_cover": 0.0
+    },
+    "connector": {
+      "tray": 0.0,
+      "camera_mount": 0.0,
+      "main_fasteners": 0.0,
+      "camera_fasteners": 0.0,
+      "battery": 0.0,
+      "support": 0.0,
+      "guards": 0.0,
+      "band": 0.0,
+      "driver": 0.0,
+      "charge": 0.0,
+      "motor": 0.0,
+      "servo": 0.0,
+      "power": 0.0,
+      "camera_envelope": 0.0,
+      "zcar_frame": 0.0,
+      "zcar_cover": 0.0
+    },
+    "components": {
+      "tray": 0.0,
+      "camera_mount": 0.0,
+      "main_fasteners": 0.0,
+      "camera_fasteners": 0.0,
+      "battery": 0.0,
+      "support": 0.0,
+      "guards": 0.0,
+      "band": 0.0,
+      "driver": 0.0,
+      "charge": 0.0,
+      "motor": 0.0,
+      "servo": 0.0,
+      "power": 0.0,
+      "camera_envelope": 0.0,
+      "zcar_frame": 0.0,
+      "zcar_cover": 0.0
+    },
+    "fasteners": {
+      "tray": 0.0,
+      "camera_mount": 0.0,
+      "main_fasteners": 0.0,
+      "camera_fasteners": 0.0,
+      "battery": 0.0,
+      "support": 0.0,
+      "guards": 0.0,
+      "band": 0.0,
+      "driver": 0.0,
+      "charge": 0.0,
+      "motor": 0.0,
+      "servo": 0.0,
+      "power": 0.0,
+      "camera_envelope": 0.0,
+      "zcar_frame": 0.0,
+      "zcar_cover": 0.0
+    },
+    "plug": {
+      "tray": 0.0,
+      "camera_mount": 0.0,
+      "main_fasteners": 0.0,
+      "camera_fasteners": 0.0,
+      "battery": 0.0,
+      "support": 0.0,
+      "guards": 0.0,
+      "band": 0.0,
+      "driver": 0.0,
+      "charge": 0.0,
+      "motor": 0.0,
+      "servo": 0.0,
+      "power": 0.0,
+      "camera_envelope": 0.0,
+      "zcar_frame": 0.0,
+      "zcar_cover": 0.0
+    },
+    "fingers": {
+      "tray": 0.0,
+      "camera_mount": 0.0,
+      "main_fasteners": 0.0,
+      "camera_fasteners": 0.0,
+      "battery": 0.0,
+      "support": 0.0,
+      "guards": 0.0,
+      "band": 0.0,
+      "driver": 0.0,
+      "charge": 0.0,
+      "motor": 0.0,
+      "servo": 0.0,
+      "power": 0.0,
+      "camera_envelope": 0.0,
+      "zcar_frame": 0.0,
+      "zcar_cover": 0.0
+    },
+    "cable": {
+      "tray": 0.0,
+      "camera_mount": 0.0,
+      "main_fasteners": 0.0,
+      "camera_fasteners": 0.0,
+      "battery": 0.0,
+      "support": 0.0,
+      "guards": 0.0,
+      "band": 0.0,
+      "driver": 0.0,
+      "charge": 0.0,
+      "motor": 0.0,
+      "servo": 0.0,
+      "power": 0.0,
+      "camera_envelope": 0.0,
+      "zcar_frame": 0.0,
+      "zcar_cover": 0.0
+    },
+    "base": {
+      "tray": 0.0,
+      "camera_mount": 0.0,
+      "main_fasteners": 0.0,
+      "camera_fasteners": 0.0,
+      "battery": 0.0,
+      "support": 0.0,
+      "guards": 0.0,
+      "band": 0.0,
+      "driver": 0.0,
+      "charge": 0.0,
+      "motor": 0.0,
+      "servo": 0.0,
+      "power": 0.0,
+      "camera_envelope": 0.0,
+      "zcar_frame": 0.0,
+      "zcar_cover": 0.0
+    }
+  },
+  "body_overlap_mm3": {
+    "base": 0.0,
+    "pcb": 0.0,
+    "connector": 0.0,
+    "components": 0.0,
+    "fasteners": 0.0,
+    "plug": 0.0,
+    "fingers": 0.0,
+    "cable": 0.0
+  },
+  "base_overlap_mm3": {
+    "pcb": 0.0,
+    "connector": 0.0,
+    "components": 0.0,
+    "fasteners": 0.0,
+    "plug": 0.0,
+    "fingers": 0.0,
+    "cable": 0.0
+  },
+  "outside_cavity_mm3": {
+    "base": 0.0,
+    "pcb": 0.0,
+    "connector": 8.688035213138543,
+    "components": 0.0,
+    "fasteners": 0.24985409005406942
+  },
+  "closed_cover_hardware_overlap_mm3": {
+    "base": 0.0,
+    "pcb": 0.0,
+    "connector": 0.0,
+    "components": 0.0,
+    "fasteners": 0.0
+  },
+  "battery_exit_sweep_mm3": {
+    "base": 0.0,
+    "pcb": 0.0,
+    "connector": 0.0,
+    "components": 0.0,
+    "fasteners": 0.0
+  },
+  "insertion_sweep_mm3": {
+    "base": 0.0,
+    "pcb": 0.0,
+    "connector": 0.0,
+    "components": 0.0,
+    "fasteners": 0.0,
+    "body": 0.0
+  },
+  "closed_cover_positive_control_mm3": 166.40356112012523,
+  "discrete_slide_checks_mm3": {
+    "-3": {
+      "tray": 0.0,
+      "main_fasteners": 0.0,
+      "camera_mount": 0.0,
+      "camera_fasteners": 0.0,
+      "driver": 0.0,
+      "charge": 0.0,
+      "camera_envelope": 0.0,
+      "power": 0.0
+    },
+    "-2": {
+      "tray": 0.0,
+      "main_fasteners": 0.0,
+      "camera_mount": 0.0,
+      "camera_fasteners": 0.0,
+      "driver": 0.0,
+      "charge": 0.0,
+      "camera_envelope": 0.0,
+      "power": 0.0
+    },
+    "-1": {
+      "tray": 0.0,
+      "main_fasteners": 0.0,
+      "camera_mount": 0.0,
+      "camera_fasteners": 0.0,
+      "driver": 0.0,
+      "charge": 0.0,
+      "camera_envelope": 0.0,
+      "power": 0.0
+    },
+    "0": {
+      "tray": 0.0,
+      "main_fasteners": 0.0,
+      "camera_mount": 0.0,
+      "camera_fasteners": 0.0,
+      "driver": 0.0,
+      "charge": 0.0,
+      "camera_envelope": 0.0,
+      "power": 0.0
+    },
+    "1": {
+      "tray": 0.0,
+      "main_fasteners": 0.0,
+      "camera_mount": 0.0,
+      "camera_fasteners": 0.0,
+      "driver": 0.0,
+      "charge": 0.0,
+      "camera_envelope": 0.0,
+      "power": 0.0
+    },
+    "2": {
+      "tray": 0.0,
+      "main_fasteners": 0.0,
+      "camera_mount": 0.0,
+      "camera_fasteners": 0.0,
+      "driver": 0.0,
+      "charge": 0.0,
+      "camera_envelope": 0.0,
+      "power": 0.0
+    },
+    "3": {
+      "tray": 0.0,
+      "main_fasteners": 0.0,
+      "camera_mount": 0.0,
+      "camera_fasteners": 0.0,
+      "driver": 0.0,
+      "charge": 0.0,
+      "camera_envelope": 0.0,
+      "power": 0.0
+    },
+    "4": {
+      "tray": 0.0,
+      "main_fasteners": 0.0,
+      "camera_mount": 0.0,
+      "camera_fasteners": 0.0,
+      "driver": 0.0,
+      "charge": 0.0,
+      "camera_envelope": 0.0,
+      "power": 0.0
+    },
+    "5": {
+      "tray": 0.0,
+      "main_fasteners": 0.0,
+      "camera_mount": 0.0,
+      "camera_fasteners": 0.0,
+      "driver": 0.0,
+      "charge": 0.0,
+      "camera_envelope": 0.0,
+      "power": 0.0
+    },
+    "6": {
+      "tray": 0.0,
+      "main_fasteners": 0.0,
+      "camera_mount": 0.0,
+      "camera_fasteners": 0.0,
+      "driver": 0.0,
+      "charge": 0.0,
+      "camera_envelope": 0.0,
+      "power": 0.0
+    },
+    "7": {
+      "tray": 0.0,
+      "main_fasteners": 0.0,
+      "camera_mount": 0.0,
+      "camera_fasteners": 0.0,
+      "driver": 0.0,
+      "charge": 0.0,
+      "camera_envelope": 0.0,
+      "power": 0.0
+    },
+    "8": {
+      "tray": 0.0,
+      "main_fasteners": 0.0,
+      "camera_mount": 0.0,
+      "camera_fasteners": 0.0,
+      "driver": 0.0,
+      "charge": 0.0,
+      "camera_envelope": 0.0,
+      "power": 0.0
+    }
+  },
+  "other_reference_box_hits": {
+    "pcb": {},
+    "connector": {},
+    "components": {},
+    "fasteners": {},
+    "plug": {},
+    "fingers": {},
+    "cable": {}
+  },
+  "limitations": [
+    "No physical cable/print/strain tests",
+    "No PCB routing or electrical assembly",
+    "Cosmetic cover has no retention mechanism",
+    "No wires or suspension travel",
+    "Old SG90 collision and OV3660 revision uncertainty remain open"
+  ],
+  "outputs_sha256": {
+    "usb-port-base.stl": "269ae73c5d12444f9e3b2a9fa72b803a0d592a6c437f8c114774abe5a3bdaf87",
+    "usb-port-pcb.stl": "8fde79f304cfc7452376c01a9597e1d3dc6b08ca30ffa20438efe2da421ebcd4",
+    "usb-port-study-viewer.html": "758208d2335102c516bfafd904a36c38e01e470aa047f2fd14023aec4f1bd5d0",
+    "usb-port-overview.png": "7be20abc40e99b14a8ee178b3ae67d452a476478629d516c397cad944dafc422"
+  }
+}

@@ -1,0 +1,222 @@
+[
+  {
+    "elapsed": 0.218,
+    "line": "TX ms=77720 kind=128 seq=0 sent=1"
+  },
+  {
+    "elapsed": 0.218,
+    "line": "CONTROL active=1 armed=0 throttle=0 steering=0 seq=0 outputs=disabled"
+  },
+  {
+    "elapsed": 0.218,
+    "line": "RX ms=77734 length=16"
+  },
+  {
+    "elapsed": 0.234,
+    "line": "CONTROL active=1 armed=1 throttle=0 steering=0 seq=1 outputs=disabled"
+  },
+  {
+    "elapsed": 0.234,
+    "line": "TX ms=77736 kind=129 seq=1 sent=1"
+  },
+  {
+    "elapsed": 0.25,
+    "line": "RX ms=77763 length=16"
+  },
+  {
+    "elapsed": 0.25,
+    "line": "TX ms=77766 kind=129 seq=2 sent=1"
+  },
+  {
+    "elapsed": 0.656,
+    "line": "CONTROL active=1 armed=1 throttle=62 steering=0 seq=8 outputs=disabled"
+  },
+  {
+    "elapsed": 0.687,
+    "line": "CONTROL active=1 armed=1 throttle=74 steering=0 seq=9 outputs=disabled"
+  },
+  {
+    "elapsed": 0.703,
+    "line": "CONTROL active=1 armed=1 throttle=101 steering=0 seq=10 outputs=disabled"
+  },
+  {
+    "elapsed": 0.718,
+    "line": "CONTROL active=1 armed=1 throttle=115 steering=0 seq=11 outputs=disabled"
+  },
+  {
+    "elapsed": 0.75,
+    "line": "CONTROL active=1 armed=1 throttle=129 steering=0 seq=12 outputs=disabled"
+  },
+  {
+    "elapsed": 0.765,
+    "line": "CONTROL active=1 armed=1 throttle=143 steering=0 seq=13 outputs=disabled"
+  },
+  {
+    "elapsed": 0.781,
+    "line": "CONTROL active=1 armed=1 throttle=157 steering=0 seq=14 outputs=disabled"
+  },
+  {
+    "elapsed": 0.797,
+    "line": "CONTROL active=1 armed=1 throttle=184 steering=0 seq=15 outputs=disabled"
+  },
+  {
+    "elapsed": 0.828,
+    "line": "CONTROL active=1 armed=1 throttle=199 steering=0 seq=16 outputs=disabled"
+  },
+  {
+    "elapsed": 0.843,
+    "line": "CONTROL active=1 armed=1 throttle=212 steering=0 seq=17 outputs=disabled"
+  },
+  {
+    "elapsed": 0.859,
+    "line": "CONTROL active=1 armed=1 throttle=226 steering=0 seq=18 outputs=disabled"
+  },
+  {
+    "elapsed": 0.875,
+    "line": "CONTROL active=1 armed=1 throttle=240 steering=0 seq=19 outputs=disabled"
+  },
+  {
+    "elapsed": 0.906,
+    "line": "CONTROL active=1 armed=1 throttle=253 steering=0 seq=20 outputs=disabled"
+  },
+  {
+    "elapsed": 0.922,
+    "line": "CONTROL active=1 armed=1 throttle=282 steering=0 seq=21 outputs=disabled"
+  },
+  {
+    "elapsed": 0.937,
+    "line": "CONTROL active=1 armed=1 throttle=296 steering=0 seq=22 outputs=disabled"
+  },
+  {
+    "elapsed": 0.968,
+    "line": "CONTROL active=1 armed=1 throttle=309 steering=0 seq=23 outputs=disabled"
+  },
+  {
+    "elapsed": 0.984,
+    "line": "CONTROL active=1 armed=1 throttle=323 steering=0 seq=24 outputs=disabled"
+  },
+  {
+    "elapsed": 1.125,
+    "line": "CONTROL active=1 armed=1 throttle=337 steering=0 seq=25 outputs=disabled"
+  },
+  {
+    "elapsed": 1.14,
+    "line": "CONTROL active=1 armed=1 throttle=0 steering=0 seq=26 outputs=disabled"
+  },
+  {
+    "elapsed": 1.515,
+    "line": "CONTROL active=1 armed=1 throttle=0 steering=16 seq=45 outputs=disabled"
+  },
+  {
+    "elapsed": 1.547,
+    "line": "CONTROL active=1 armed=1 throttle=0 steering=31 seq=46 outputs=disabled"
+  },
+  {
+    "elapsed": 1.562,
+    "line": "CONTROL active=1 armed=1 throttle=0 steering=49 seq=47 outputs=disabled"
+  },
+  {
+    "elapsed": 1.578,
+    "line": "CONTROL active=1 armed=1 throttle=0 steering=72 seq=48 outputs=disabled"
+  },
+  {
+    "elapsed": 1.593,
+    "line": "CONTROL active=1 armed=1 throttle=0 steering=83 seq=49 outputs=disabled"
+  },
+  {
+    "elapsed": 1.625,
+    "line": "CONTROL active=1 armed=1 throttle=0 steering=95 seq=50 outputs=disabled"
+  },
+  {
+    "elapsed": 1.781,
+    "line": "CONTROL active=1 armed=1 throttle=0 steering=106 seq=51 outputs=disabled"
+  },
+  {
+    "elapsed": 1.937,
+    "line": "CONTROL active=1 armed=1 throttle=0 steering=210 seq=52 outputs=disabled"
+  },
+  {
+    "elapsed": 1.968,
+    "line": "CONTROL active=1 armed=1 throttle=0 steering=313 seq=53 outputs=disabled"
+  },
+  {
+    "elapsed": 1.984,
+    "line": "CONTROL active=1 armed=1 throttle=0 steering=0 seq=54 outputs=disabled"
+  },
+  {
+    "elapsed": 4.406,
+    "line": "FAILSAFE timeout: outputs=0"
+  },
+  {
+    "elapsed": 4.422,
+    "line": "CONTROL active=0 armed=0 throttle=0 steering=0 seq=132 outputs=disabled"
+  },
+  {
+    "elapsed": 7.812,
+    "line": "TX ms=85316 kind=128 seq=0 sent=1"
+  },
+  {
+    "elapsed": 7.812,
+    "line": "CONTROL active=1 armed=0 throttle=0 steering=0 seq=0 outputs=disabled"
+  },
+  {
+    "elapsed": 7.828,
+    "line": "RX ms=85331 length=16"
+  },
+  {
+    "elapsed": 7.828,
+    "line": "CONTROL active=1 armed=1 throttle=0 steering=0 seq=1 outputs=disabled"
+  },
+  {
+    "elapsed": 7.828,
+    "line": "TX ms=85334 kind=129 seq=1 sent=1"
+  },
+  {
+    "elapsed": 7.828,
+    "line": "RX ms=85343 length=16"
+  },
+  {
+    "elapsed": 7.843,
+    "line": "TX ms=85347 kind=129 seq=2 sent=1"
+  },
+  {
+    "elapsed": 8.203,
+    "line": "CONTROL active=1 armed=1 throttle=1 steering=0 seq=12 outputs=disabled"
+  },
+  {
+    "elapsed": 8.406,
+    "line": "CONTROL active=0 armed=0 throttle=0 steering=0 seq=12 outputs=disabled"
+  },
+  {
+    "elapsed": 15.39,
+    "line": "TX ms=92906 kind=128 seq=0 sent=1"
+  },
+  {
+    "elapsed": 15.406,
+    "line": "CONTROL active=1 armed=0 throttle=0 steering=0 seq=0 outputs=disabled"
+  },
+  {
+    "elapsed": 15.406,
+    "line": "RX ms=92920 length=16"
+  },
+  {
+    "elapsed": 15.422,
+    "line": "CONTROL active=1 armed=1 throttle=0 steering=0 seq=1 outputs=disabled"
+  },
+  {
+    "elapsed": 15.422,
+    "line": "TX ms=92923 kind=129 seq=1 sent=1"
+  },
+  {
+    "elapsed": 15.437,
+    "line": "RX ms=92942 length=16"
+  },
+  {
+    "elapsed": 15.437,
+    "line": "TX ms=92945 kind=129 seq=2 sent=1"
+  },
+  {
+    "elapsed": 15.984,
+    "line": "CONTROL active=0 armed=0 throttle=0 steering=0 seq=14 outputs=disabled"
+  }
+]

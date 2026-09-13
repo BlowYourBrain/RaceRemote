@@ -1,0 +1,131 @@
+{
+  "source_url": "https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/res/seeed-studio-xiao-esp32s3-sense-3d_model.zip",
+  "source_archive_sha256": "773c16cb7518a3a18df926979f24c7e224f19309aad69962ec8a54454e288c59",
+  "source_step_sha256": "a37c6b41d5660cd3310fea05edde0238762fe00da4de623936b7ca66814cb698",
+  "step_date": "2023-05-27",
+  "native_bounds_mm": [
+    [
+      -8.97334098815918,
+      -0.2499999850988388,
+      -15.001399993896484
+    ],
+    [
+      15.389999389648438,
+      13.710000038146973,
+      2.778599977493286
+    ]
+  ],
+  "installed_bounds_mm": [
+    [
+      12.568329811096191,
+      79.0,
+      22.0
+    ],
+    [
+      36.93167018890381,
+      92.96000002324581,
+      39.77999997138977
+    ]
+  ],
+  "translation_mm": [
+    21.54167079925537,
+    79.24999998509884,
+    37.001399993896484
+  ],
+  "xiao_mesh_watertight": false,
+  "xiao_faces": 118501,
+  "motor_shaft_axis_yz_mm": [
+    18.064866482831153,
+    17.70000019136605
+  ],
+  "axis_fit_max_residual_mm": 1.6824564809114761e-06,
+  "camera_external_envelope_checks_mm3": {
+    "carrier_installed": 0.0,
+    "tray": 0.0,
+    "camera_mount": 0.0,
+    "main_fasteners": 0.0,
+    "camera_fasteners": 0.0,
+    "battery": 0.0,
+    "support": 0.0,
+    "guards": 0.0,
+    "band": 0.0,
+    "driver": 0.0,
+    "charge": 0.0,
+    "frame": 0.0,
+    "cover": 0.0,
+    "candidate_buck": 0.0,
+    "outside_hypothetical_body": 0.0
+  },
+  "camera_other_reference_box_checks_mm3": {},
+  "motor_frame_cover_overlap_mm3": {
+    "frame": 0.0,
+    "cover": 0.0
+  },
+  "servo_body_frame_cover_overlap_mm3": {
+    "frame": 43.814983425603714,
+    "cover": 0.0
+  },
+  "component_bounds_mm": {
+    "motor": [
+      [
+        1.6500000000000004,
+        7.864866482831154,
+        10.15000019136605
+      ],
+      [
+        37.95,
+        28.264866482831152,
+        25.250000191366052
+      ]
+    ],
+    "servo_body": [
+      [
+        18.35,
+        71.975,
+        2.0
+      ],
+      [
+        41.35,
+        100.975,
+        14.2
+      ]
+    ],
+    "buck": [
+      [
+        8.25,
+        60.0,
+        27.6
+      ],
+      [
+        41.25,
+        76.0,
+        33.300000000000004
+      ]
+    ]
+  },
+  "artifacts_sha256": {
+    "components/bearing.stl": "0dc50b9528fa954b9f73f74a92b268a1bf05bd22b3b61f8284e3ba7e618bd51a",
+    "components/buck-installed.stl": "c25188950b1f5fd16bc2eabb04327fd198083388c0a9e475932d2bcc1b7e8eda",
+    "components/buck.stl": "d13eed8a0b39b069bd4e45f12f868d69e58596940b23101b275fe5d33a5a68f3",
+    "components/candidates.scad": "5062fcaa8a4d5dae52498e988c7adcb3ae90dbdd3cf92b39f006983b61a3af89",
+    "components/motor-installed.stl": "08368cbf61c451de981b3aa44b8e624300c274c43da541815456cff0680208a6",
+    "components/motor.stl": "64204f42e1a33e0036c49fd4f3b4a6bc6c47bd3c5c61562cb213e57e4f0d6002",
+    "components/motor_upper_case.stl": "93e599be8f60388979bbc399bcad7484efa02830a8758d5e7109e529d3ef9fee",
+    "components/servo-case-installed.stl": "4afd65ab03defd8d99f1895c07806a2a204308ef85d3d834f55663454fedea8b",
+    "components/servo_case.stl": "75ebfea3605a1cb7c9504d602d9a81737af8c24f86161a6427008315b2b033b3",
+    "components/xiao-sense-2023-installed.stl": "b9af922531dc8b2253ced5e1db66cb7e6030d0f6df47c143e9ab906f5856cb59",
+    "components/xiao-sense-2023.step": "a37c6b41d5660cd3310fea05edde0238762fe00da4de623936b7ca66814cb698",
+    "components/zcar-without-reference-actuators.stl": "b6572fe41f5e3a3c3c49a1cc275c581b728cf98ab11ef1ca1288aaaeea6240c2"
+  },
+  "viewer_sha256": "ed56403e8463841d70e879dfdcff7d2b93e59c3c4fb4d309a1c81f961eaf3a68",
+  "preview_sha256": "46093cdba6f15ac3c59173b5afe2e7391e48c0312370dbb1bed75442e858efee",
+  "source_models_sha256": "5062fcaa8a4d5dae52498e988c7adcb3ae90dbdd3cf92b39f006983b61a3af89",
+  "limitations": [
+    "2023 XIAO reference not confirmed as current OV3660 hardware; antenna/heatsink absent",
+    "XIAO box checks prove external geometric clearance only; mount contact not established",
+    "Motor boss/terminals, servo ears/spline/lead and buck terminals unknown",
+    "Motor clamp and pinion bore/engagement not validated; original mounting parts retained",
+    "No new adjustment sweep for actual candidate parts; viewer shows nominal pose only",
+    "Hypothetical body only, no motion/wiring/load/thermal/physical evidence"
+  ]
+}

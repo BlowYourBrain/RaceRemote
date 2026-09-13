@@ -7,36 +7,49 @@
 <aside><h1>RaceRemote<br>3D-компоновка 0.1</h1>
 <p class="note">Габаритная проработка, не готовая машинка. Цветные блоки электроники — резерв места. Их крепления, провода, кузов и ход подвески ещё не проверены.</p>
 <div id="parts"></div>
+<div id="adjustment" hidden>
+<label>Силовые платы: <output id="electronics-value">0</output> мм<input id="electronics-slide" type="range" min="-3" max="8" step="1" value="0"></label>
+<label>Камера: <output id="camera-value">0</output> мм<input id="camera-slide" type="range" min="-3" max="8" step="1" value="0"></label>
+<p class="note" id="adjustment-status" role="status"></p>
+<small>Плюс — вперёд. Проверены отдельные положения макетов через 1 мм. Провода, допуски, реальный кузов и ход подвески не проверены.</small>
+</div>
 <label>Разнести по высоте: <output id="distance">0</output> мм<input id="explode" type="range" min="0" max="25" value="0"></label>
 <button id="iso">Общий вид</button><button id="top">Сверху</button><button id="side">Сбоку</button>
 <p><small>Перетаскивание — вращение; колесо — масштаб. Разнесение деталей служит только для просмотра.</small></p>
 <p><a href="assembly.scad">Редактировать в OpenSCAD</a> · <a href="assembly.md">Что уже проверено</a></p>
 <p><small>Серая механика: alexyu132/zcar, 4b714e6, GPL-3.0. <a href="reference/NOTICE.md">Источник и лицензия</a>. Это исходный привод, не подтверждённая посадка новых мотора/серво или передача 9:43.</small></p>
-</aside><main><canvas id="scene" aria-label="Трёхмерная компоновка машинки"></canvas><div class="help">Перед машинки: Y = 0 · Размеры в мм</div></main>
+</aside><main><canvas id="scene" aria-label="Трёхмерная компоновка машинки"></canvas><div class="help">Перед: +Y, рулевая ось Y = 111,125 · Сзади: ведущая ось Y = 21,125 · мм</div></main>
 <script>
 'use strict';
 const parts=__SCENE_DATA__;
+const adjustmentChecks=__ADJUSTMENT_DATA__;
 const canvas=document.querySelector('#scene'),gl=canvas.getContext('webgl',{antialias:true});
 if(!gl){document.querySelector('.help').textContent='WebGL недоступен. Откройте assembly.scad в OpenSCAD.';throw Error('WebGL unavailable');}
 function shader(kind,src){const s=gl.createShader(kind);gl.shaderSource(s,src);gl.compileShader(s);if(!gl.getShaderParameter(s,gl.COMPILE_STATUS))throw Error(gl.getShaderInfoLog(s));return s;}
 const program=gl.createProgram();
-gl.attachShader(program,shader(gl.VERTEX_SHADER,`attribute vec3 p;attribute vec3 n;uniform mat4 m;uniform float dz;varying float light;void main(){gl_Position=m*vec4(p+vec3(0.,0.,dz),1.);light=.42+.58*abs(dot(normalize(n),normalize(vec3(-.4,-.5,1.))));}`));
+gl.attachShader(program,shader(gl.VERTEX_SHADER,`attribute vec3 p;attribute vec3 n;uniform mat4 m;uniform float dz;uniform float dy;varying float light;void main(){gl_Position=m*vec4(p+vec3(0.,dy,dz),1.);light=.42+.58*abs(dot(normalize(n),normalize(vec3(-.4,-.5,1.))));}`));
 gl.attachShader(program,shader(gl.FRAGMENT_SHADER,`precision mediump float;uniform vec3 color;varying float light;void main(){gl_FragColor=vec4(color*light,1.);}`));
 gl.linkProgram(program);if(!gl.getProgramParameter(program,gl.LINK_STATUS))throw Error(gl.getProgramInfoLog(program));gl.useProgram(program);
 const pos=gl.getAttribLocation(program,'p'),normal=gl.getAttribLocation(program,'n'),matrix=gl.getUniformLocation(program,'m'),col=gl.getUniformLocation(program,'color'),dz=gl.getUniformLocation(program,'dz');
+const dy=gl.getUniformLocation(program,'dy'),slides={electronics:0,camera:0};
 function buffer(data){const b=gl.createBuffer();gl.bindBuffer(gl.ARRAY_BUFFER,b);gl.bufferData(gl.ARRAY_BUFFER,data,gl.STATIC_DRAW);return b;}
 for(const part of parts){const raw=Uint8Array.from(atob(part.data),c=>c.charCodeAt(0));part.buffer=buffer(new Float32Array(raw.buffer));part.visible=true;delete part.data;
  const label=document.createElement('label'),input=document.createElement('input');input.type='checkbox';input.checked=true;input.dataset.part=part.id;input.onchange=()=>{part.visible=input.checked;render();};const swatch=document.createElement('span');swatch.className='swatch';swatch.style.background=`rgb(${part.color.map(c=>Math.round(c*255)).join(',')})`;label.append(input,swatch,document.createTextNode(part.label));document.querySelector('#parts').append(label);
 }
-let az=-.8,el=.55,span=158,explosion=0;
+let az=.8,el=.55,span=178,explosion=0;
 function render(){const ratio=Math.min(devicePixelRatio,2),w=Math.round(canvas.clientWidth*ratio),h=Math.round(canvas.clientHeight*ratio);if(!w||!h)return;canvas.width=w;canvas.height=h;gl.viewport(0,0,w,h);gl.clearColor(.93,.95,.97,1);gl.clear(gl.COLOR_BUFFER_BIT|gl.DEPTH_BUFFER_BIT);gl.enable(gl.DEPTH_TEST);gl.disable(gl.CULL_FACE);
  const right=[-Math.sin(az),Math.cos(az),0],up=[-Math.sin(el)*Math.cos(az),-Math.sin(el)*Math.sin(az),Math.cos(el)],back=[Math.cos(el)*Math.cos(az),Math.cos(el)*Math.sin(az),Math.sin(el)],center=[24.75,58,20+explosion],sx=2/(span*w/h),sy=2/span,sz=-1/300;
  const dot=(a,b)=>a.reduce((s,v,i)=>s+v*b[i],0);
  const m=[right[0]*sx,up[0]*sy,back[0]*sz,0,right[1]*sx,up[1]*sy,back[1]*sz,0,right[2]*sx,up[2]*sy,back[2]*sz,0,-dot(right,center)*sx,-dot(up,center)*sy,-dot(back,center)*sz,1];gl.uniformMatrix4fv(matrix,false,new Float32Array(m));
- for(const part of parts){if(!part.visible)continue;gl.bindBuffer(gl.ARRAY_BUFFER,part.buffer);gl.vertexAttribPointer(pos,3,gl.FLOAT,false,24,0);gl.vertexAttribPointer(normal,3,gl.FLOAT,false,24,12);gl.enableVertexAttribArray(pos);gl.enableVertexAttribArray(normal);gl.uniform3fv(col,part.color);gl.uniform1f(dz,part.level*explosion);gl.drawArrays(gl.TRIANGLES,0,part.count);}
+ for(const part of parts){if(!part.visible)continue;gl.bindBuffer(gl.ARRAY_BUFFER,part.buffer);gl.vertexAttribPointer(pos,3,gl.FLOAT,false,24,0);gl.vertexAttribPointer(normal,3,gl.FLOAT,false,24,12);gl.enableVertexAttribArray(pos);gl.enableVertexAttribArray(normal);gl.uniform3fv(col,part.color);gl.uniform1f(dz,part.level*explosion);gl.uniform1f(dy,slides[part.slide]||0);gl.drawArrays(part.wire?gl.LINES:gl.TRIANGLES,0,part.count);}
  canvas.dataset.rendered='true';}
 let drag=null;canvas.onpointerdown=e=>{drag=[e.clientX,e.clientY];canvas.setPointerCapture(e.pointerId);};canvas.onpointermove=e=>{if(!drag)return;az-=(e.clientX-drag[0])*.008;el=Math.max(-1.4,Math.min(1.55,el+(e.clientY-drag[1])*.008));drag=[e.clientX,e.clientY];render();};canvas.onpointerup=canvas.onpointercancel=()=>drag=null;
+if(adjustmentChecks){
+ document.querySelector('#adjustment').hidden=false;
+ const update=()=>{const row=adjustmentChecks.poses.find(p=>p.electronics_mm===slides.electronics&&p.camera_mm===slides.camera);document.querySelector('#adjustment-status').textContent=!row?'Это положение не проверено.':!row.mechanical_clear?'Есть пересечение креплений или механики. Такое положение не подходит.':!row.hypothetical_body_clear?'Механика свободна, но детали выходят за условный кузов.':'В этом положении пересечений макетов не найдено; они внутри условного кузова.';render();};
+ for(const id of ['electronics','camera']) document.querySelector(`#${id}-slide`).oninput=e=>{slides[id]=Number(e.target.value);document.querySelector(`#${id}-value`).value=slides[id];update();};update();
+}
 canvas.addEventListener('wheel',e=>{e.preventDefault();span=Math.min(400,Math.max(55,span*Math.exp(e.deltaY*.001)));render();},{passive:false});
 document.querySelector('#explode').oninput=e=>{explosion=Number(e.target.value);document.querySelector('#distance').value=explosion;render();};
-document.querySelector('#iso').onclick=()=>{az=-.8;el=.55;span=158;render();};document.querySelector('#top').onclick=()=>{az=-Math.PI/2;el=Math.PI/2;render();};document.querySelector('#side').onclick=()=>{az=0;el=0;render();};new ResizeObserver(render).observe(canvas);render();
+document.querySelector('#iso').onclick=()=>{az=.8;el=.55;span=178;render();};document.querySelector('#top').onclick=()=>{az=-Math.PI/2;el=Math.PI/2;render();};document.querySelector('#side').onclick=()=>{az=0;el=0;render();};new ResizeObserver(render).observe(canvas);render();
 </script></html>

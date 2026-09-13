@@ -1,0 +1,2181 @@
+{
+  "revision": "4b714e63fa30ed2030a8a48ab15f1e4a5fa380c4",
+  "source_sha256": {
+    "stl/zcar.stl": "943f59bfecd42b7eed32457dfd166559b0aec8fc64f6cd9ba6ce526d3f7c0e5b",
+    "stl/tray1.stl": "5d9c1d6f2f740d71cea5a07317a2dbb2606f30c652ecb4ba899b85167724aa3f",
+    "stl/tray2.stl": "44561b48c19ec3cb11517ea24b86e9ed3d700931f4e6803e16f6beb4a275bb8e"
+  },
+  "design_sha256": "fe3ace7ec086cf8793ee8243be02e1aca99d0f59027855cc0e809f8f86894f5a",
+  "holder_sha256": "e7c8505f55fc38cb1c24fd015b88b3ac4bc1232aaa205772912c3249a2e5d4f7",
+  "assembly_helpers_sha256": "aa7d27502d14d22275f573ef5dcdd1793d384561b6cf88668b5124acf7850bd3",
+  "template_sha256": "f70aa04fd54fb88ff2aba390bccbf6f17a9c2d79b01286e9c0f0e76fb281129c",
+  "body_helpers_sha256": "dd90ba253182a70a318063bad3807b629da403212221a56a6832547844b527e8",
+  "adjustment_checks": {
+    "step_mm": 1,
+    "nominal_range_mm": [
+      -3,
+      8
+    ],
+    "poses": [
+      {
+        "electronics_mm": -3,
+        "camera_mm": -3,
+        "mechanical_clear": true,
+        "hypothetical_body_clear": true,
+        "mechanical_collisions_mm3": {},
+        "outside_hypothetical_body_mm3": {}
+      },
+      {
+        "electronics_mm": -3,
+        "camera_mm": -2,
+        "mechanical_clear": true,
+        "hypothetical_body_clear": true,
+        "mechanical_collisions_mm3": {},
+        "outside_hypothetical_body_mm3": {}
+      },
+      {
+        "electronics_mm": -3,
+        "camera_mm": -1,
+        "mechanical_clear": true,
+        "hypothetical_body_clear": true,
+        "mechanical_collisions_mm3": {},
+        "outside_hypothetical_body_mm3": {}
+      },
+      {
+        "electronics_mm": -3,
+        "camera_mm": 0,
+        "mechanical_clear": true,
+        "hypothetical_body_clear": true,
+        "mechanical_collisions_mm3": {},
+        "outside_hypothetical_body_mm3": {}
+      },
+      {
+        "electronics_mm": -3,
+        "camera_mm": 1,
+        "mechanical_clear": true,
+        "hypothetical_body_clear": true,
+        "mechanical_collisions_mm3": {},
+        "outside_hypothetical_body_mm3": {}
+      },
+      {
+        "electronics_mm": -3,
+        "camera_mm": 2,
+        "mechanical_clear": true,
+        "hypothetical_body_clear": true,
+        "mechanical_collisions_mm3": {},
+        "outside_hypothetical_body_mm3": {}
+      },
+      {
+        "electronics_mm": -3,
+        "camera_mm": 3,
+        "mechanical_clear": true,
+        "hypothetical_body_clear": true,
+        "mechanical_collisions_mm3": {},
+        "outside_hypothetical_body_mm3": {}
+      },
+      {
+        "electronics_mm": -3,
+        "camera_mm": 4,
+        "mechanical_clear": true,
+        "hypothetical_body_clear": false,
+        "mechanical_collisions_mm3": {},
+        "outside_hypothetical_body_mm3": {
+          "camera": 1.074607
+        }
+      },
+      {
+        "electronics_mm": -3,
+        "camera_mm": 5,
+        "mechanical_clear": true,
+        "hypothetical_body_clear": false,
+        "mechanical_collisions_mm3": {},
+        "outside_hypothetical_body_mm3": {
+          "camera": 21.263474
+        }
+      },
+      {
+        "electronics_mm": -3,
+        "camera_mm": 6,
+        "mechanical_clear": true,
+        "hypothetical_body_clear": false,
+        "mechanical_collisions_mm3": {},
+        "outside_hypothetical_body_mm3": {
+          "camera": 67.007886
+        }
+      },
+      {
+        "electronics_mm": -3,
+        "camera_mm": 7,
+        "mechanical_clear": true,
+        "hypothetical_body_clear": false,
+        "mechanical_collisions_mm3": {},
+        "outside_hypothetical_body_mm3": {
+          "camera": 138.307845
+        }
+      },
+      {
+        "electronics_mm": -3,
+        "camera_mm": 8,
+        "mechanical_clear": true,
+        "hypothetical_body_clear": false,
+        "mechanical_collisions_mm3": {},
+        "outside_hypothetical_body_mm3": {
+          "camera": 235.163349
+        }
+      },
+      {
+        "electronics_mm": -2,
+        "camera_mm": -3,
+        "mechanical_clear": true,
+        "hypothetical_body_clear": true,
+        "mechanical_collisions_mm3": {},
+        "outside_hypothetical_body_mm3": {}
+      },
+      {
+        "electronics_mm": -2,
+        "camera_mm": -2,
+        "mechanical_clear": true,
+        "hypothetical_body_clear": true,
+        "mechanical_collisions_mm3": {},
+        "outside_hypothetical_body_mm3": {}
+      },
+      {
+        "electronics_mm": -2,
+        "camera_mm": -1,
+        "mechanical_clear": true,
+        "hypothetical_body_clear": true,
+        "mechanical_collisions_mm3": {},
+        "outside_hypothetical_body_mm3": {}
+      },
+      {
+        "electronics_mm": -2,
+        "camera_mm": 0,
+        "mechanical_clear": true,
+        "hypothetical_body_clear": true,
+        "mechanical_collisions_mm3": {},
+        "outside_hypothetical_body_mm3": {}
+      },
+      {
+        "electronics_mm": -2,
+        "camera_mm": 1,
+        "mechanical_clear": true,
+        "hypothetical_body_clear": true,
+        "mechanical_collisions_mm3": {},
+        "outside_hypothetical_body_mm3": {}
+      },
+      {
+        "electronics_mm": -2,
+        "camera_mm": 2,
+        "mechanical_clear": true,
+        "hypothetical_body_clear": true,
+        "mechanical_collisions_mm3": {},
+        "outside_hypothetical_body_mm3": {}
+      },
+      {
+        "electronics_mm": -2,
+        "camera_mm": 3,
+        "mechanical_clear": true,
+        "hypothetical_body_clear": true,
+        "mechanical_collisions_mm3": {},
+        "outside_hypothetical_body_mm3": {}
+      },
+      {
+        "electronics_mm": -2,
+        "camera_mm": 4,
+        "mechanical_clear": true,
+        "hypothetical_body_clear": false,
+        "mechanical_collisions_mm3": {},
+        "outside_hypothetical_body_mm3": {
+          "camera": 1.074607
+        }
+      },
+      {
+        "electronics_mm": -2,
+        "camera_mm": 5,
+        "mechanical_clear": true,
+        "hypothetical_body_clear": false,
+        "mechanical_collisions_mm3": {},
+        "outside_hypothetical_body_mm3": {
+          "camera": 21.263474
+        }
+      },
+      {
+        "electronics_mm": -2,
+        "camera_mm": 6,
+        "mechanical_clear": true,
+        "hypothetical_body_clear": false,
+        "mechanical_collisions_mm3": {},
+        "outside_hypothetical_body_mm3": {
+          "camera": 67.007886
+        }
+      },
+      {
+        "electronics_mm": -2,
+        "camera_mm": 7,
+        "mechanical_clear": true,
+        "hypothetical_body_clear": false,
+        "mechanical_collisions_mm3": {},
+        "outside_hypothetical_body_mm3": {
+          "camera": 138.307845
+        }
+      },
+      {
+        "electronics_mm": -2,
+        "camera_mm": 8,
+        "mechanical_clear": true,
+        "hypothetical_body_clear": false,
+        "mechanical_collisions_mm3": {},
+        "outside_hypothetical_body_mm3": {
+          "camera": 235.163349
+        }
+      },
+      {
+        "electronics_mm": -1,
+        "camera_mm": -3,
+        "mechanical_clear": false,
+        "hypothetical_body_clear": true,
+        "mechanical_collisions_mm3": {
+          "camera_mount/charge": 102.099987,
+          "camera_mount/power": 69.799982,
+          "camera_mount/tray": 27.399761
+        },
+        "outside_hypothetical_body_mm3": {}
+      },
+      {
+        "electronics_mm": -1,
+        "camera_mm": -2,
+        "mechanical_clear": true,
+        "hypothetical_body_clear": true,
+        "mechanical_collisions_mm3": {},
+        "outside_hypothetical_body_mm3": {}
+      },
+      {
+        "electronics_mm": -1,
+        "camera_mm": -1,
+        "mechanical_clear": true,
+        "hypothetical_body_clear": true,
+        "mechanical_collisions_mm3": {},
+        "outside_hypothetical_body_mm3": {}
+      },
+      {
+        "electronics_mm": -1,
+        "camera_mm": 0,
+        "mechanical_clear": true,
+        "hypothetical_body_clear": true,
+        "mechanical_collisions_mm3": {},
+        "outside_hypothetical_body_mm3": {}
+      },
+      {
+        "electronics_mm": -1,
+        "camera_mm": 1,
+        "mechanical_clear": true,
+        "hypothetical_body_clear": true,
+        "mechanical_collisions_mm3": {},
+        "outside_hypothetical_body_mm3": {}
+      },
+      {
+        "electronics_mm": -1,
+        "camera_mm": 2,
+        "mechanical_clear": true,
+        "hypothetical_body_clear": true,
+        "mechanical_collisions_mm3": {},
+        "outside_hypothetical_body_mm3": {}
+      },
+      {
+        "electronics_mm": -1,
+        "camera_mm": 3,
+        "mechanical_clear": true,
+        "hypothetical_body_clear": true,
+        "mechanical_collisions_mm3": {},
+        "outside_hypothetical_body_mm3": {}
+      },
+      {
+        "electronics_mm": -1,
+        "camera_mm": 4,
+        "mechanical_clear": true,
+        "hypothetical_body_clear": false,
+        "mechanical_collisions_mm3": {},
+        "outside_hypothetical_body_mm3": {
+          "camera": 1.074607
+        }
+      },
+      {
+        "electronics_mm": -1,
+        "camera_mm": 5,
+        "mechanical_clear": true,
+        "hypothetical_body_clear": false,
+        "mechanical_collisions_mm3": {},
+        "outside_hypothetical_body_mm3": {
+          "camera": 21.263474
+        }
+      },
+      {
+        "electronics_mm": -1,
+        "camera_mm": 6,
+        "mechanical_clear": true,
+        "hypothetical_body_clear": false,
+        "mechanical_collisions_mm3": {},
+        "outside_hypothetical_body_mm3": {
+          "camera": 67.007886
+        }
+      },
+      {
+        "electronics_mm": -1,
+        "camera_mm": 7,
+        "mechanical_clear": true,
+        "hypothetical_body_clear": false,
+        "mechanical_collisions_mm3": {},
+        "outside_hypothetical_body_mm3": {
+          "camera": 138.307845
+        }
+      },
+      {
+        "electronics_mm": -1,
+        "camera_mm": 8,
+        "mechanical_clear": true,
+        "hypothetical_body_clear": false,
+        "mechanical_collisions_mm3": {},
+        "outside_hypothetical_body_mm3": {
+          "camera": 235.163349
+        }
+      },
+      {
+        "electronics_mm": 0,
+        "camera_mm": -3,
+        "mechanical_clear": false,
+        "hypothetical_body_clear": true,
+        "mechanical_collisions_mm3": {
+          "camera_mount/charge": 204.199974,
+          "camera_mount/power": 139.599964,
+          "camera_mount/tray": 54.799522
+        },
+        "outside_hypothetical_body_mm3": {}
+      },
+      {
+        "electronics_mm": 0,
+        "camera_mm": -2,
+        "mechanical_clear": false,
+        "hypothetical_body_clear": true,
+        "mechanical_collisions_mm3": {
+          "camera_mount/charge": 102.099987,
+          "camera_mount/power": 69.799982,
+          "camera_mount/tray": 27.399761
+        },
+        "outside_hypothetical_body_mm3": {}
+      },
+      {
+        "electronics_mm": 0,
+        "camera_mm": -1,
+        "mechanical_clear": true,
+        "hypothetical_body_clear": true,
+        "mechanical_collisions_mm3": {},
+        "outside_hypothetical_body_mm3": {}
+      },
+      {
+        "electronics_mm": 0,
+        "camera_mm": 0,
+        "mechanical_clear": true,
+        "hypothetical_body_clear": true,
+        "mechanical_collisions_mm3": {},
+        "outside_hypothetical_body_mm3": {}
+      },
+      {
+        "electronics_mm": 0,
+        "camera_mm": 1,
+        "mechanical_clear": true,
+        "hypothetical_body_clear": true,
+        "mechanical_collisions_mm3": {},
+        "outside_hypothetical_body_mm3": {}
+      },
+      {
+        "electronics_mm": 0,
+        "camera_mm": 2,
+        "mechanical_clear": true,
+        "hypothetical_body_clear": true,
+        "mechanical_collisions_mm3": {},
+        "outside_hypothetical_body_mm3": {}
+      },
+      {
+        "electronics_mm": 0,
+        "camera_mm": 3,
+        "mechanical_clear": true,
+        "hypothetical_body_clear": true,
+        "mechanical_collisions_mm3": {},
+        "outside_hypothetical_body_mm3": {}
+      },
+      {
+        "electronics_mm": 0,
+        "camera_mm": 4,
+        "mechanical_clear": true,
+        "hypothetical_body_clear": false,
+        "mechanical_collisions_mm3": {},
+        "outside_hypothetical_body_mm3": {
+          "camera": 1.074607
+        }
+      },
+      {
+        "electronics_mm": 0,
+        "camera_mm": 5,
+        "mechanical_clear": true,
+        "hypothetical_body_clear": false,
+        "mechanical_collisions_mm3": {},
+        "outside_hypothetical_body_mm3": {
+          "camera": 21.263474
+        }
+      },
+      {
+        "electronics_mm": 0,
+        "camera_mm": 6,
+        "mechanical_clear": true,
+        "hypothetical_body_clear": false,
+        "mechanical_collisions_mm3": {},
+        "outside_hypothetical_body_mm3": {
+          "camera": 67.007886
+        }
+      },
+      {
+        "electronics_mm": 0,
+        "camera_mm": 7,
+        "mechanical_clear": true,
+        "hypothetical_body_clear": false,
+        "mechanical_collisions_mm3": {},
+        "outside_hypothetical_body_mm3": {
+          "camera": 138.307845
+        }
+      },
+      {
+        "electronics_mm": 0,
+        "camera_mm": 8,
+        "mechanical_clear": true,
+        "hypothetical_body_clear": false,
+        "mechanical_collisions_mm3": {},
+        "outside_hypothetical_body_mm3": {
+          "camera": 235.163349
+        }
+      },
+      {
+        "electronics_mm": 1,
+        "camera_mm": -3,
+        "mechanical_clear": false,
+        "hypothetical_body_clear": true,
+        "mechanical_collisions_mm3": {
+          "camera/charge": 184.0,
+          "camera/power": 131.099974,
+          "camera/tray": 23.0,
+          "camera_mount/charge": 204.199974,
+          "camera_mount/power": 139.599964,
+          "camera_mount/tray": 54.799522
+        },
+        "outside_hypothetical_body_mm3": {}
+      },
+      {
+        "electronics_mm": 1,
+        "camera_mm": -2,
+        "mechanical_clear": false,
+        "hypothetical_body_clear": true,
+        "mechanical_collisions_mm3": {
+          "camera_mount/charge": 204.199974,
+          "camera_mount/power": 139.599964,
+          "camera_mount/tray": 54.799522
+        },
+        "outside_hypothetical_body_mm3": {}
+      },
+      {
+        "electronics_mm": 1,
+        "camera_mm": -1,
+        "mechanical_clear": false,
+        "hypothetical_body_clear": true,
+        "mechanical_collisions_mm3": {
+          "camera_mount/charge": 102.099987,
+          "camera_mount/power": 69.799982,
+          "camera_mount/tray": 27.399761
+        },
+        "outside_hypothetical_body_mm3": {}
+      },
+      {
+        "electronics_mm": 1,
+        "camera_mm": 0,
+        "mechanical_clear": true,
+        "hypothetical_body_clear": true,
+        "mechanical_collisions_mm3": {},
+        "outside_hypothetical_body_mm3": {}
+      },
+      {
+        "electronics_mm": 1,
+        "camera_mm": 1,
+        "mechanical_clear": true,
+        "hypothetical_body_clear": true,
+        "mechanical_collisions_mm3": {},
+        "outside_hypothetical_body_mm3": {}
+      },
+      {
+        "electronics_mm": 1,
+        "camera_mm": 2,
+        "mechanical_clear": true,
+        "hypothetical_body_clear": true,
+        "mechanical_collisions_mm3": {},
+        "outside_hypothetical_body_mm3": {}
+      },
+      {
+        "electronics_mm": 1,
+        "camera_mm": 3,
+        "mechanical_clear": true,
+        "hypothetical_body_clear": true,
+        "mechanical_collisions_mm3": {},
+        "outside_hypothetical_body_mm3": {}
+      },
+      {
+        "electronics_mm": 1,
+        "camera_mm": 4,
+        "mechanical_clear": true,
+        "hypothetical_body_clear": false,
+        "mechanical_collisions_mm3": {},
+        "outside_hypothetical_body_mm3": {
+          "camera": 1.074607
+        }
+      },
+      {
+        "electronics_mm": 1,
+        "camera_mm": 5,
+        "mechanical_clear": true,
+        "hypothetical_body_clear": false,
+        "mechanical_collisions_mm3": {},
+        "outside_hypothetical_body_mm3": {
+          "camera": 21.263474
+        }
+      },
+      {
+        "electronics_mm": 1,
+        "camera_mm": 6,
+        "mechanical_clear": true,
+        "hypothetical_body_clear": false,
+        "mechanical_collisions_mm3": {},
+        "outside_hypothetical_body_mm3": {
+          "camera": 67.007886
+        }
+      },
+      {
+        "electronics_mm": 1,
+        "camera_mm": 7,
+        "mechanical_clear": true,
+        "hypothetical_body_clear": false,
+        "mechanical_collisions_mm3": {},
+        "outside_hypothetical_body_mm3": {
+          "camera": 138.307845
+        }
+      },
+      {
+        "electronics_mm": 1,
+        "camera_mm": 8,
+        "mechanical_clear": true,
+        "hypothetical_body_clear": false,
+        "mechanical_collisions_mm3": {},
+        "outside_hypothetical_body_mm3": {
+          "camera": 235.163349
+        }
+      },
+      {
+        "electronics_mm": 2,
+        "camera_mm": -3,
+        "mechanical_clear": false,
+        "hypothetical_body_clear": true,
+        "mechanical_collisions_mm3": {
+          "camera/charge": 368.0,
+          "camera/power": 262.199947,
+          "camera/tray": 46.0,
+          "camera_mount/charge": 204.199974,
+          "camera_mount/power": 139.599964,
+          "camera_mount/tray": 54.799522
+        },
+        "outside_hypothetical_body_mm3": {}
+      },
+      {
+        "electronics_mm": 2,
+        "camera_mm": -2,
+        "mechanical_clear": false,
+        "hypothetical_body_clear": true,
+        "mechanical_collisions_mm3": {
+          "camera/charge": 184.0,
+          "camera/power": 131.099974,
+          "camera/tray": 23.0,
+          "camera_mount/charge": 204.199974,
+          "camera_mount/power": 139.599964,
+          "camera_mount/tray": 54.799522
+        },
+        "outside_hypothetical_body_mm3": {}
+      },
+      {
+        "electronics_mm": 2,
+        "camera_mm": -1,
+        "mechanical_clear": false,
+        "hypothetical_body_clear": true,
+        "mechanical_collisions_mm3": {
+          "camera_mount/charge": 204.199974,
+          "camera_mount/power": 139.599964,
+          "camera_mount/tray": 54.799522
+        },
+        "outside_hypothetical_body_mm3": {}
+      },
+      {
+        "electronics_mm": 2,
+        "camera_mm": 0,
+        "mechanical_clear": false,
+        "hypothetical_body_clear": true,
+        "mechanical_collisions_mm3": {
+          "camera_mount/charge": 102.099987,
+          "camera_mount/power": 69.799982,
+          "camera_mount/tray": 27.399761
+        },
+        "outside_hypothetical_body_mm3": {}
+      },
+      {
+        "electronics_mm": 2,
+        "camera_mm": 1,
+        "mechanical_clear": true,
+        "hypothetical_body_clear": true,
+        "mechanical_collisions_mm3": {},
+        "outside_hypothetical_body_mm3": {}
+      },
+      {
+        "electronics_mm": 2,
+        "camera_mm": 2,
+        "mechanical_clear": true,
+        "hypothetical_body_clear": true,
+        "mechanical_collisions_mm3": {},
+        "outside_hypothetical_body_mm3": {}
+      },
+      {
+        "electronics_mm": 2,
+        "camera_mm": 3,
+        "mechanical_clear": true,
+        "hypothetical_body_clear": true,
+        "mechanical_collisions_mm3": {},
+        "outside_hypothetical_body_mm3": {}
+      },
+      {
+        "electronics_mm": 2,
+        "camera_mm": 4,
+        "mechanical_clear": true,
+        "hypothetical_body_clear": false,
+        "mechanical_collisions_mm3": {},
+        "outside_hypothetical_body_mm3": {
+          "camera": 1.074607
+        }
+      },
+      {
+        "electronics_mm": 2,
+        "camera_mm": 5,
+        "mechanical_clear": true,
+        "hypothetical_body_clear": false,
+        "mechanical_collisions_mm3": {},
+        "outside_hypothetical_body_mm3": {
+          "camera": 21.263474
+        }
+      },
+      {
+        "electronics_mm": 2,
+        "camera_mm": 6,
+        "mechanical_clear": true,
+        "hypothetical_body_clear": false,
+        "mechanical_collisions_mm3": {},
+        "outside_hypothetical_body_mm3": {
+          "camera": 67.007886
+        }
+      },
+      {
+        "electronics_mm": 2,
+        "camera_mm": 7,
+        "mechanical_clear": true,
+        "hypothetical_body_clear": false,
+        "mechanical_collisions_mm3": {},
+        "outside_hypothetical_body_mm3": {
+          "camera": 138.307845
+        }
+      },
+      {
+        "electronics_mm": 2,
+        "camera_mm": 8,
+        "mechanical_clear": true,
+        "hypothetical_body_clear": false,
+        "mechanical_collisions_mm3": {},
+        "outside_hypothetical_body_mm3": {
+          "camera": 235.163349
+        }
+      },
+      {
+        "electronics_mm": 3,
+        "camera_mm": -3,
+        "mechanical_clear": false,
+        "hypothetical_body_clear": true,
+        "mechanical_collisions_mm3": {
+          "camera/charge": 552.0,
+          "camera/power": 393.299921,
+          "camera/tray": 69.0,
+          "camera_mount/charge": 204.199974,
+          "camera_mount/power": 139.599964,
+          "camera_mount/tray": 54.799522
+        },
+        "outside_hypothetical_body_mm3": {}
+      },
+      {
+        "electronics_mm": 3,
+        "camera_mm": -2,
+        "mechanical_clear": false,
+        "hypothetical_body_clear": true,
+        "mechanical_collisions_mm3": {
+          "camera/charge": 368.0,
+          "camera/power": 262.199947,
+          "camera/tray": 46.0,
+          "camera_mount/charge": 204.199974,
+          "camera_mount/power": 139.599964,
+          "camera_mount/tray": 54.799522
+        },
+        "outside_hypothetical_body_mm3": {}
+      },
+      {
+        "electronics_mm": 3,
+        "camera_mm": -1,
+        "mechanical_clear": false,
+        "hypothetical_body_clear": true,
+        "mechanical_collisions_mm3": {
+          "camera/charge": 184.0,
+          "camera/power": 131.099974,
+          "camera/tray": 23.0,
+          "camera_mount/charge": 204.199974,
+          "camera_mount/power": 139.599964,
+          "camera_mount/tray": 54.799522
+        },
+        "outside_hypothetical_body_mm3": {}
+      },
+      {
+        "electronics_mm": 3,
+        "camera_mm": 0,
+        "mechanical_clear": false,
+        "hypothetical_body_clear": true,
+        "mechanical_collisions_mm3": {
+          "camera_mount/charge": 204.199974,
+          "camera_mount/power": 139.599964,
+          "camera_mount/tray": 54.799522
+        },
+        "outside_hypothetical_body_mm3": {}
+      },
+      {
+        "electronics_mm": 3,
+        "camera_mm": 1,
+        "mechanical_clear": false,
+        "hypothetical_body_clear": true,
+        "mechanical_collisions_mm3": {
+          "camera_mount/charge": 102.099987,
+          "camera_mount/power": 69.799982,
+          "camera_mount/tray": 27.399761
+        },
+        "outside_hypothetical_body_mm3": {}
+      },
+      {
+        "electronics_mm": 3,
+        "camera_mm": 2,
+        "mechanical_clear": true,
+        "hypothetical_body_clear": true,
+        "mechanical_collisions_mm3": {},
+        "outside_hypothetical_body_mm3": {}
+      },
+      {
+        "electronics_mm": 3,
+        "camera_mm": 3,
+        "mechanical_clear": true,
+        "hypothetical_body_clear": true,
+        "mechanical_collisions_mm3": {},
+        "outside_hypothetical_body_mm3": {}
+      },
+      {
+        "electronics_mm": 3,
+        "camera_mm": 4,
+        "mechanical_clear": true,
+        "hypothetical_body_clear": false,
+        "mechanical_collisions_mm3": {},
+        "outside_hypothetical_body_mm3": {
+          "camera": 1.074607
+        }
+      },
+      {
+        "electronics_mm": 3,
+        "camera_mm": 5,
+        "mechanical_clear": true,
+        "hypothetical_body_clear": false,
+        "mechanical_collisions_mm3": {},
+        "outside_hypothetical_body_mm3": {
+          "camera": 21.263474
+        }
+      },
+      {
+        "electronics_mm": 3,
+        "camera_mm": 6,
+        "mechanical_clear": true,
+        "hypothetical_body_clear": false,
+        "mechanical_collisions_mm3": {},
+        "outside_hypothetical_body_mm3": {
+          "camera": 67.007886
+        }
+      },
+      {
+        "electronics_mm": 3,
+        "camera_mm": 7,
+        "mechanical_clear": true,
+        "hypothetical_body_clear": false,
+        "mechanical_collisions_mm3": {},
+        "outside_hypothetical_body_mm3": {
+          "camera": 138.307845
+        }
+      },
+      {
+        "electronics_mm": 3,
+        "camera_mm": 8,
+        "mechanical_clear": true,
+        "hypothetical_body_clear": false,
+        "mechanical_collisions_mm3": {},
+        "outside_hypothetical_body_mm3": {
+          "camera": 235.163349
+        }
+      },
+      {
+        "electronics_mm": 4,
+        "camera_mm": -3,
+        "mechanical_clear": false,
+        "hypothetical_body_clear": true,
+        "mechanical_collisions_mm3": {
+          "camera/charge": 736.0,
+          "camera/power": 524.399895,
+          "camera/tray": 92.0,
+          "camera_mount/charge": 204.199974,
+          "camera_mount/power": 139.599964,
+          "camera_mount/tray": 54.799522
+        },
+        "outside_hypothetical_body_mm3": {}
+      },
+      {
+        "electronics_mm": 4,
+        "camera_mm": -2,
+        "mechanical_clear": false,
+        "hypothetical_body_clear": true,
+        "mechanical_collisions_mm3": {
+          "camera/charge": 552.0,
+          "camera/power": 393.299921,
+          "camera/tray": 69.0,
+          "camera_mount/charge": 204.199974,
+          "camera_mount/power": 139.599964,
+          "camera_mount/tray": 54.799522
+        },
+        "outside_hypothetical_body_mm3": {}
+      },
+      {
+        "electronics_mm": 4,
+        "camera_mm": -1,
+        "mechanical_clear": false,
+        "hypothetical_body_clear": true,
+        "mechanical_collisions_mm3": {
+          "camera/charge": 368.0,
+          "camera/power": 262.199947,
+          "camera/tray": 46.0,
+          "camera_mount/charge": 204.199974,
+          "camera_mount/power": 139.599964,
+          "camera_mount/tray": 54.799522
+        },
+        "outside_hypothetical_body_mm3": {}
+      },
+      {
+        "electronics_mm": 4,
+        "camera_mm": 0,
+        "mechanical_clear": false,
+        "hypothetical_body_clear": true,
+        "mechanical_collisions_mm3": {
+          "camera/charge": 184.0,
+          "camera/power": 131.099974,
+          "camera/tray": 23.0,
+          "camera_mount/charge": 204.199974,
+          "camera_mount/power": 139.599964,
+          "camera_mount/tray": 54.799522
+        },
+        "outside_hypothetical_body_mm3": {}
+      },
+      {
+        "electronics_mm": 4,
+        "camera_mm": 1,
+        "mechanical_clear": false,
+        "hypothetical_body_clear": true,
+        "mechanical_collisions_mm3": {
+          "camera_mount/charge": 204.199974,
+          "camera_mount/power": 139.599964,
+          "camera_mount/tray": 54.799522
+        },
+        "outside_hypothetical_body_mm3": {}
+      },
+      {
+        "electronics_mm": 4,
+        "camera_mm": 2,
+        "mechanical_clear": false,
+        "hypothetical_body_clear": true,
+        "mechanical_collisions_mm3": {
+          "camera_mount/charge": 102.099987,
+          "camera_mount/power": 69.799982,
+          "camera_mount/tray": 27.399761
+        },
+        "outside_hypothetical_body_mm3": {}
+      },
+      {
+        "electronics_mm": 4,
+        "camera_mm": 3,
+        "mechanical_clear": true,
+        "hypothetical_body_clear": true,
+        "mechanical_collisions_mm3": {},
+        "outside_hypothetical_body_mm3": {}
+      },
+      {
+        "electronics_mm": 4,
+        "camera_mm": 4,
+        "mechanical_clear": true,
+        "hypothetical_body_clear": false,
+        "mechanical_collisions_mm3": {},
+        "outside_hypothetical_body_mm3": {
+          "camera": 1.074607
+        }
+      },
+      {
+        "electronics_mm": 4,
+        "camera_mm": 5,
+        "mechanical_clear": true,
+        "hypothetical_body_clear": false,
+        "mechanical_collisions_mm3": {},
+        "outside_hypothetical_body_mm3": {
+          "camera": 21.263474
+        }
+      },
+      {
+        "electronics_mm": 4,
+        "camera_mm": 6,
+        "mechanical_clear": true,
+        "hypothetical_body_clear": false,
+        "mechanical_collisions_mm3": {},
+        "outside_hypothetical_body_mm3": {
+          "camera": 67.007886
+        }
+      },
+      {
+        "electronics_mm": 4,
+        "camera_mm": 7,
+        "mechanical_clear": true,
+        "hypothetical_body_clear": false,
+        "mechanical_collisions_mm3": {},
+        "outside_hypothetical_body_mm3": {
+          "camera": 138.307845
+        }
+      },
+      {
+        "electronics_mm": 4,
+        "camera_mm": 8,
+        "mechanical_clear": true,
+        "hypothetical_body_clear": false,
+        "mechanical_collisions_mm3": {},
+        "outside_hypothetical_body_mm3": {
+          "camera": 235.163349
+        }
+      },
+      {
+        "electronics_mm": 5,
+        "camera_mm": -3,
+        "mechanical_clear": false,
+        "hypothetical_body_clear": true,
+        "mechanical_collisions_mm3": {
+          "camera/charge": 920.0,
+          "camera/power": 655.499868,
+          "camera/tray": 115.0,
+          "camera_fasteners/main_fasteners": 0.141511,
+          "camera_mount/charge": 204.199974,
+          "camera_mount/main_fasteners": 0.539711,
+          "camera_mount/power": 139.599964,
+          "camera_mount/tray": 54.799522
+        },
+        "outside_hypothetical_body_mm3": {}
+      },
+      {
+        "electronics_mm": 5,
+        "camera_mm": -2,
+        "mechanical_clear": false,
+        "hypothetical_body_clear": true,
+        "mechanical_collisions_mm3": {
+          "camera/charge": 736.0,
+          "camera/power": 524.399895,
+          "camera/tray": 92.0,
+          "camera_mount/charge": 204.199974,
+          "camera_mount/power": 139.599964,
+          "camera_mount/tray": 54.799522
+        },
+        "outside_hypothetical_body_mm3": {}
+      },
+      {
+        "electronics_mm": 5,
+        "camera_mm": -1,
+        "mechanical_clear": false,
+        "hypothetical_body_clear": true,
+        "mechanical_collisions_mm3": {
+          "camera/charge": 552.0,
+          "camera/power": 393.299921,
+          "camera/tray": 69.0,
+          "camera_mount/charge": 204.199974,
+          "camera_mount/power": 139.599964,
+          "camera_mount/tray": 54.799522
+        },
+        "outside_hypothetical_body_mm3": {}
+      },
+      {
+        "electronics_mm": 5,
+        "camera_mm": 0,
+        "mechanical_clear": false,
+        "hypothetical_body_clear": true,
+        "mechanical_collisions_mm3": {
+          "camera/charge": 368.0,
+          "camera/power": 262.199947,
+          "camera/tray": 46.0,
+          "camera_mount/charge": 204.199974,
+          "camera_mount/power": 139.599964,
+          "camera_mount/tray": 54.799522
+        },
+        "outside_hypothetical_body_mm3": {}
+      },
+      {
+        "electronics_mm": 5,
+        "camera_mm": 1,
+        "mechanical_clear": false,
+        "hypothetical_body_clear": true,
+        "mechanical_collisions_mm3": {
+          "camera/charge": 184.0,
+          "camera/power": 131.099974,
+          "camera/tray": 23.0,
+          "camera_mount/charge": 204.199974,
+          "camera_mount/power": 139.599964,
+          "camera_mount/tray": 54.799522
+        },
+        "outside_hypothetical_body_mm3": {}
+      },
+      {
+        "electronics_mm": 5,
+        "camera_mm": 2,
+        "mechanical_clear": false,
+        "hypothetical_body_clear": true,
+        "mechanical_collisions_mm3": {
+          "camera_mount/charge": 204.199974,
+          "camera_mount/power": 139.599964,
+          "camera_mount/tray": 54.799522
+        },
+        "outside_hypothetical_body_mm3": {}
+      },
+      {
+        "electronics_mm": 5,
+        "camera_mm": 3,
+        "mechanical_clear": false,
+        "hypothetical_body_clear": true,
+        "mechanical_collisions_mm3": {
+          "camera_mount/charge": 102.099987,
+          "camera_mount/power": 69.799982,
+          "camera_mount/tray": 27.399761
+        },
+        "outside_hypothetical_body_mm3": {}
+      },
+      {
+        "electronics_mm": 5,
+        "camera_mm": 4,
+        "mechanical_clear": true,
+        "hypothetical_body_clear": false,
+        "mechanical_collisions_mm3": {},
+        "outside_hypothetical_body_mm3": {
+          "camera": 1.074607
+        }
+      },
+      {
+        "electronics_mm": 5,
+        "camera_mm": 5,
+        "mechanical_clear": true,
+        "hypothetical_body_clear": false,
+        "mechanical_collisions_mm3": {},
+        "outside_hypothetical_body_mm3": {
+          "camera": 21.263474
+        }
+      },
+      {
+        "electronics_mm": 5,
+        "camera_mm": 6,
+        "mechanical_clear": true,
+        "hypothetical_body_clear": false,
+        "mechanical_collisions_mm3": {},
+        "outside_hypothetical_body_mm3": {
+          "camera": 67.007886
+        }
+      },
+      {
+        "electronics_mm": 5,
+        "camera_mm": 7,
+        "mechanical_clear": true,
+        "hypothetical_body_clear": false,
+        "mechanical_collisions_mm3": {},
+        "outside_hypothetical_body_mm3": {
+          "camera": 138.307845
+        }
+      },
+      {
+        "electronics_mm": 5,
+        "camera_mm": 8,
+        "mechanical_clear": true,
+        "hypothetical_body_clear": false,
+        "mechanical_collisions_mm3": {},
+        "outside_hypothetical_body_mm3": {
+          "camera": 235.163349
+        }
+      },
+      {
+        "electronics_mm": 6,
+        "camera_mm": -3,
+        "mechanical_clear": false,
+        "hypothetical_body_clear": true,
+        "mechanical_collisions_mm3": {
+          "camera/charge": 1104.0,
+          "camera/power": 786.599842,
+          "camera/tray": 138.0,
+          "camera_fasteners/main_fasteners": 1.065279,
+          "camera_mount/charge": 204.199974,
+          "camera_mount/main_fasteners": 1.214855,
+          "camera_mount/power": 139.599964,
+          "camera_mount/tray": 54.799522
+        },
+        "outside_hypothetical_body_mm3": {}
+      },
+      {
+        "electronics_mm": 6,
+        "camera_mm": -2,
+        "mechanical_clear": false,
+        "hypothetical_body_clear": true,
+        "mechanical_collisions_mm3": {
+          "camera/charge": 920.0,
+          "camera/power": 655.499868,
+          "camera/tray": 115.0,
+          "camera_fasteners/main_fasteners": 0.141511,
+          "camera_mount/charge": 204.199974,
+          "camera_mount/main_fasteners": 0.539711,
+          "camera_mount/power": 139.599964,
+          "camera_mount/tray": 54.799522
+        },
+        "outside_hypothetical_body_mm3": {}
+      },
+      {
+        "electronics_mm": 6,
+        "camera_mm": -1,
+        "mechanical_clear": false,
+        "hypothetical_body_clear": true,
+        "mechanical_collisions_mm3": {
+          "camera/charge": 736.0,
+          "camera/power": 524.399895,
+          "camera/tray": 92.0,
+          "camera_mount/charge": 204.199974,
+          "camera_mount/power": 139.599964,
+          "camera_mount/tray": 54.799522
+        },
+        "outside_hypothetical_body_mm3": {}
+      },
+      {
+        "electronics_mm": 6,
+        "camera_mm": 0,
+        "mechanical_clear": false,
+        "hypothetical_body_clear": true,
+        "mechanical_collisions_mm3": {
+          "camera/charge": 552.0,
+          "camera/power": 393.299921,
+          "camera/tray": 69.0,
+          "camera_mount/charge": 204.199974,
+          "camera_mount/power": 139.599964,
+          "camera_mount/tray": 54.799522
+        },
+        "outside_hypothetical_body_mm3": {}
+      },
+      {
+        "electronics_mm": 6,
+        "camera_mm": 1,
+        "mechanical_clear": false,
+        "hypothetical_body_clear": true,
+        "mechanical_collisions_mm3": {
+          "camera/charge": 368.0,
+          "camera/power": 262.199947,
+          "camera/tray": 46.0,
+          "camera_mount/charge": 204.199974,
+          "camera_mount/power": 139.599964,
+          "camera_mount/tray": 54.799522
+        },
+        "outside_hypothetical_body_mm3": {}
+      },
+      {
+        "electronics_mm": 6,
+        "camera_mm": 2,
+        "mechanical_clear": false,
+        "hypothetical_body_clear": true,
+        "mechanical_collisions_mm3": {
+          "camera/charge": 184.0,
+          "camera/power": 131.099974,
+          "camera/tray": 23.0,
+          "camera_mount/charge": 204.199974,
+          "camera_mount/power": 139.599964,
+          "camera_mount/tray": 54.799522
+        },
+        "outside_hypothetical_body_mm3": {}
+      },
+      {
+        "electronics_mm": 6,
+        "camera_mm": 3,
+        "mechanical_clear": false,
+        "hypothetical_body_clear": true,
+        "mechanical_collisions_mm3": {
+          "camera_mount/charge": 204.199974,
+          "camera_mount/power": 139.599964,
+          "camera_mount/tray": 54.799522
+        },
+        "outside_hypothetical_body_mm3": {}
+      },
+      {
+        "electronics_mm": 6,
+        "camera_mm": 4,
+        "mechanical_clear": false,
+        "hypothetical_body_clear": false,
+        "mechanical_collisions_mm3": {
+          "camera_mount/charge": 102.099987,
+          "camera_mount/power": 69.799982,
+          "camera_mount/tray": 27.399761
+        },
+        "outside_hypothetical_body_mm3": {
+          "camera": 1.074607
+        }
+      },
+      {
+        "electronics_mm": 6,
+        "camera_mm": 5,
+        "mechanical_clear": true,
+        "hypothetical_body_clear": false,
+        "mechanical_collisions_mm3": {},
+        "outside_hypothetical_body_mm3": {
+          "camera": 21.263474
+        }
+      },
+      {
+        "electronics_mm": 6,
+        "camera_mm": 6,
+        "mechanical_clear": true,
+        "hypothetical_body_clear": false,
+        "mechanical_collisions_mm3": {},
+        "outside_hypothetical_body_mm3": {
+          "camera": 67.007886
+        }
+      },
+      {
+        "electronics_mm": 6,
+        "camera_mm": 7,
+        "mechanical_clear": true,
+        "hypothetical_body_clear": false,
+        "mechanical_collisions_mm3": {},
+        "outside_hypothetical_body_mm3": {
+          "camera": 138.307845
+        }
+      },
+      {
+        "electronics_mm": 6,
+        "camera_mm": 8,
+        "mechanical_clear": true,
+        "hypothetical_body_clear": false,
+        "mechanical_collisions_mm3": {},
+        "outside_hypothetical_body_mm3": {
+          "camera": 235.163349
+        }
+      },
+      {
+        "electronics_mm": 7,
+        "camera_mm": -3,
+        "mechanical_clear": false,
+        "hypothetical_body_clear": true,
+        "mechanical_collisions_mm3": {
+          "camera/charge": 1288.0,
+          "camera/power": 917.699816,
+          "camera/tray": 161.0,
+          "camera_fasteners/main_fasteners": 0.141511,
+          "camera_mount/charge": 204.199974,
+          "camera_mount/main_fasteners": 0.539711,
+          "camera_mount/power": 139.599964,
+          "camera_mount/tray": 54.799522
+        },
+        "outside_hypothetical_body_mm3": {}
+      },
+      {
+        "electronics_mm": 7,
+        "camera_mm": -2,
+        "mechanical_clear": false,
+        "hypothetical_body_clear": true,
+        "mechanical_collisions_mm3": {
+          "camera/charge": 1104.0,
+          "camera/power": 786.599842,
+          "camera/tray": 138.0,
+          "camera_fasteners/main_fasteners": 1.065279,
+          "camera_mount/charge": 204.199974,
+          "camera_mount/main_fasteners": 1.214855,
+          "camera_mount/power": 139.599964,
+          "camera_mount/tray": 54.799522
+        },
+        "outside_hypothetical_body_mm3": {}
+      },
+      {
+        "electronics_mm": 7,
+        "camera_mm": -1,
+        "mechanical_clear": false,
+        "hypothetical_body_clear": true,
+        "mechanical_collisions_mm3": {
+          "camera/charge": 920.0,
+          "camera/power": 655.499868,
+          "camera/tray": 115.0,
+          "camera_fasteners/main_fasteners": 0.141511,
+          "camera_mount/charge": 204.199974,
+          "camera_mount/main_fasteners": 0.539711,
+          "camera_mount/power": 139.599964,
+          "camera_mount/tray": 54.799522
+        },
+        "outside_hypothetical_body_mm3": {}
+      },
+      {
+        "electronics_mm": 7,
+        "camera_mm": 0,
+        "mechanical_clear": false,
+        "hypothetical_body_clear": true,
+        "mechanical_collisions_mm3": {
+          "camera/charge": 736.0,
+          "camera/power": 524.399895,
+          "camera/tray": 92.0,
+          "camera_mount/charge": 204.199974,
+          "camera_mount/power": 139.599964,
+          "camera_mount/tray": 54.799522
+        },
+        "outside_hypothetical_body_mm3": {}
+      },
+      {
+        "electronics_mm": 7,
+        "camera_mm": 1,
+        "mechanical_clear": false,
+        "hypothetical_body_clear": true,
+        "mechanical_collisions_mm3": {
+          "camera/charge": 552.0,
+          "camera/power": 393.299921,
+          "camera/tray": 69.0,
+          "camera_mount/charge": 204.199974,
+          "camera_mount/power": 139.599964,
+          "camera_mount/tray": 54.799522
+        },
+        "outside_hypothetical_body_mm3": {}
+      },
+      {
+        "electronics_mm": 7,
+        "camera_mm": 2,
+        "mechanical_clear": false,
+        "hypothetical_body_clear": true,
+        "mechanical_collisions_mm3": {
+          "camera/charge": 368.0,
+          "camera/power": 262.199947,
+          "camera/tray": 46.0,
+          "camera_mount/charge": 204.199974,
+          "camera_mount/power": 139.599964,
+          "camera_mount/tray": 54.799522
+        },
+        "outside_hypothetical_body_mm3": {}
+      },
+      {
+        "electronics_mm": 7,
+        "camera_mm": 3,
+        "mechanical_clear": false,
+        "hypothetical_body_clear": true,
+        "mechanical_collisions_mm3": {
+          "camera/charge": 184.0,
+          "camera/power": 131.099974,
+          "camera/tray": 23.0,
+          "camera_mount/charge": 204.199974,
+          "camera_mount/power": 139.599964,
+          "camera_mount/tray": 54.799522
+        },
+        "outside_hypothetical_body_mm3": {}
+      },
+      {
+        "electronics_mm": 7,
+        "camera_mm": 4,
+        "mechanical_clear": false,
+        "hypothetical_body_clear": false,
+        "mechanical_collisions_mm3": {
+          "camera_mount/charge": 204.199974,
+          "camera_mount/power": 139.599964,
+          "camera_mount/tray": 54.799522
+        },
+        "outside_hypothetical_body_mm3": {
+          "camera": 1.074607
+        }
+      },
+      {
+        "electronics_mm": 7,
+        "camera_mm": 5,
+        "mechanical_clear": false,
+        "hypothetical_body_clear": false,
+        "mechanical_collisions_mm3": {
+          "camera_mount/charge": 102.099987,
+          "camera_mount/power": 69.799982,
+          "camera_mount/tray": 27.399761
+        },
+        "outside_hypothetical_body_mm3": {
+          "camera": 21.263474
+        }
+      },
+      {
+        "electronics_mm": 7,
+        "camera_mm": 6,
+        "mechanical_clear": true,
+        "hypothetical_body_clear": false,
+        "mechanical_collisions_mm3": {},
+        "outside_hypothetical_body_mm3": {
+          "camera": 67.007886
+        }
+      },
+      {
+        "electronics_mm": 7,
+        "camera_mm": 7,
+        "mechanical_clear": true,
+        "hypothetical_body_clear": false,
+        "mechanical_collisions_mm3": {},
+        "outside_hypothetical_body_mm3": {
+          "camera": 138.307845
+        }
+      },
+      {
+        "electronics_mm": 7,
+        "camera_mm": 8,
+        "mechanical_clear": true,
+        "hypothetical_body_clear": false,
+        "mechanical_collisions_mm3": {},
+        "outside_hypothetical_body_mm3": {
+          "camera": 235.163349
+        }
+      },
+      {
+        "electronics_mm": 8,
+        "camera_mm": -3,
+        "mechanical_clear": false,
+        "hypothetical_body_clear": true,
+        "mechanical_collisions_mm3": {
+          "camera/charge": 1472.0,
+          "camera/power": 1048.799789,
+          "camera/tray": 184.0,
+          "camera_mount/charge": 204.199974,
+          "camera_mount/power": 139.599964,
+          "camera_mount/tray": 54.799522
+        },
+        "outside_hypothetical_body_mm3": {}
+      },
+      {
+        "electronics_mm": 8,
+        "camera_mm": -2,
+        "mechanical_clear": false,
+        "hypothetical_body_clear": true,
+        "mechanical_collisions_mm3": {
+          "camera/charge": 1288.0,
+          "camera/power": 917.699816,
+          "camera/tray": 161.0,
+          "camera_fasteners/main_fasteners": 0.141511,
+          "camera_mount/charge": 204.199974,
+          "camera_mount/main_fasteners": 0.539711,
+          "camera_mount/power": 139.599964,
+          "camera_mount/tray": 54.799522
+        },
+        "outside_hypothetical_body_mm3": {}
+      },
+      {
+        "electronics_mm": 8,
+        "camera_mm": -1,
+        "mechanical_clear": false,
+        "hypothetical_body_clear": true,
+        "mechanical_collisions_mm3": {
+          "camera/charge": 1104.0,
+          "camera/power": 786.599842,
+          "camera/tray": 138.0,
+          "camera_fasteners/main_fasteners": 1.065279,
+          "camera_mount/charge": 204.199974,
+          "camera_mount/main_fasteners": 1.214855,
+          "camera_mount/power": 139.599964,
+          "camera_mount/tray": 54.799522
+        },
+        "outside_hypothetical_body_mm3": {}
+      },
+      {
+        "electronics_mm": 8,
+        "camera_mm": 0,
+        "mechanical_clear": false,
+        "hypothetical_body_clear": true,
+        "mechanical_collisions_mm3": {
+          "camera/charge": 920.0,
+          "camera/power": 655.499868,
+          "camera/tray": 115.0,
+          "camera_fasteners/main_fasteners": 0.141511,
+          "camera_mount/charge": 204.199974,
+          "camera_mount/main_fasteners": 0.539711,
+          "camera_mount/power": 139.599964,
+          "camera_mount/tray": 54.799522
+        },
+        "outside_hypothetical_body_mm3": {}
+      },
+      {
+        "electronics_mm": 8,
+        "camera_mm": 1,
+        "mechanical_clear": false,
+        "hypothetical_body_clear": true,
+        "mechanical_collisions_mm3": {
+          "camera/charge": 736.0,
+          "camera/power": 524.399895,
+          "camera/tray": 92.0,
+          "camera_mount/charge": 204.199974,
+          "camera_mount/power": 139.599964,
+          "camera_mount/tray": 54.799522
+        },
+        "outside_hypothetical_body_mm3": {}
+      },
+      {
+        "electronics_mm": 8,
+        "camera_mm": 2,
+        "mechanical_clear": false,
+        "hypothetical_body_clear": true,
+        "mechanical_collisions_mm3": {
+          "camera/charge": 552.0,
+          "camera/power": 393.299921,
+          "camera/tray": 69.0,
+          "camera_mount/charge": 204.199974,
+          "camera_mount/power": 139.599964,
+          "camera_mount/tray": 54.799522
+        },
+        "outside_hypothetical_body_mm3": {}
+      },
+      {
+        "electronics_mm": 8,
+        "camera_mm": 3,
+        "mechanical_clear": false,
+        "hypothetical_body_clear": true,
+        "mechanical_collisions_mm3": {
+          "camera/charge": 368.0,
+          "camera/power": 262.199947,
+          "camera/tray": 46.0,
+          "camera_mount/charge": 204.199974,
+          "camera_mount/power": 139.599964,
+          "camera_mount/tray": 54.799522
+        },
+        "outside_hypothetical_body_mm3": {}
+      },
+      {
+        "electronics_mm": 8,
+        "camera_mm": 4,
+        "mechanical_clear": false,
+        "hypothetical_body_clear": false,
+        "mechanical_collisions_mm3": {
+          "camera/charge": 184.0,
+          "camera/power": 131.099974,
+          "camera/tray": 23.0,
+          "camera_mount/charge": 204.199974,
+          "camera_mount/power": 139.599964,
+          "camera_mount/tray": 54.799522
+        },
+        "outside_hypothetical_body_mm3": {
+          "camera": 1.074607
+        }
+      },
+      {
+        "electronics_mm": 8,
+        "camera_mm": 5,
+        "mechanical_clear": false,
+        "hypothetical_body_clear": false,
+        "mechanical_collisions_mm3": {
+          "camera_mount/charge": 204.199974,
+          "camera_mount/power": 139.599964,
+          "camera_mount/tray": 54.799522
+        },
+        "outside_hypothetical_body_mm3": {
+          "camera": 21.263474
+        }
+      },
+      {
+        "electronics_mm": 8,
+        "camera_mm": 6,
+        "mechanical_clear": false,
+        "hypothetical_body_clear": false,
+        "mechanical_collisions_mm3": {
+          "camera_mount/charge": 102.099987,
+          "camera_mount/power": 69.799982,
+          "camera_mount/tray": 27.399761
+        },
+        "outside_hypothetical_body_mm3": {
+          "camera": 67.007886
+        }
+      },
+      {
+        "electronics_mm": 8,
+        "camera_mm": 7,
+        "mechanical_clear": true,
+        "hypothetical_body_clear": false,
+        "mechanical_collisions_mm3": {},
+        "outside_hypothetical_body_mm3": {
+          "camera": 138.307845
+        }
+      },
+      {
+        "electronics_mm": 8,
+        "camera_mm": 8,
+        "mechanical_clear": true,
+        "hypothetical_body_clear": false,
+        "mechanical_collisions_mm3": {},
+        "outside_hypothetical_body_mm3": {
+          "camera": 235.163349
+        }
+      },
+      {
+        "electronics_mm": -4,
+        "camera_mm": 0,
+        "mechanical_clear": false,
+        "hypothetical_body_clear": true,
+        "mechanical_collisions_mm3": {
+          "carrier_installed/main_fasteners": 11.822526,
+          "driver/reference_box_281": 17.108245,
+          "driver/reference_box_352": 0.794972,
+          "tray/reference_box_281": 40.29773,
+          "tray/reference_box_352": 5.264745
+        },
+        "outside_hypothetical_body_mm3": {}
+      },
+      {
+        "electronics_mm": 0,
+        "camera_mm": 9,
+        "mechanical_clear": false,
+        "hypothetical_body_clear": false,
+        "mechanical_collisions_mm3": {
+          "carrier_installed/camera_fasteners": 5.911254,
+          "camera/reference_box_182": 11.353975,
+          "camera_mount/reference_box_182": 5.535828
+        },
+        "outside_hypothetical_body_mm3": {
+          "camera": 357.574632
+        }
+      }
+    ],
+    "limitation": "Discrete rigid positions only; no continuous sweep, tolerances, wiring or real shell evidence"
+  },
+  "orientation": {
+    "front": "+Y",
+    "rear_axle_y_mm": 21.125,
+    "front_axle_y_mm": 111.125
+  },
+  "hypothetical_body_checks": {
+    "carrier_installed": {
+      "outside_hypothetical_cavity_mm3": 0.0,
+      "hypothetical_shell_overlap_mm3": 0.0
+    },
+    "adhesive": {
+      "outside_hypothetical_cavity_mm3": 0.0,
+      "hypothetical_shell_overlap_mm3": 0.0
+    },
+    "power": {
+      "outside_hypothetical_cavity_mm3": 0.0,
+      "hypothetical_shell_overlap_mm3": 0.0
+    },
+    "camera": {
+      "outside_hypothetical_cavity_mm3": 0.0,
+      "hypothetical_shell_overlap_mm3": 0.0
+    },
+    "driver": {
+      "outside_hypothetical_cavity_mm3": 0.0,
+      "hypothetical_shell_overlap_mm3": 0.0
+    },
+    "charge": {
+      "outside_hypothetical_cavity_mm3": 0.0,
+      "hypothetical_shell_overlap_mm3": 0.0
+    },
+    "tray": {
+      "outside_hypothetical_cavity_mm3": 0.0,
+      "hypothetical_shell_overlap_mm3": 0.0
+    },
+    "camera_mount": {
+      "outside_hypothetical_cavity_mm3": 0.0,
+      "hypothetical_shell_overlap_mm3": 0.0
+    },
+    "main_fasteners": {
+      "outside_hypothetical_cavity_mm3": 0.0,
+      "hypothetical_shell_overlap_mm3": 0.0
+    },
+    "camera_fasteners": {
+      "outside_hypothetical_cavity_mm3": 0.0,
+      "hypothetical_shell_overlap_mm3": 0.0
+    },
+    "battery": {
+      "outside_hypothetical_cavity_mm3": 0.0,
+      "hypothetical_shell_overlap_mm3": 0.0
+    },
+    "support": {
+      "outside_hypothetical_cavity_mm3": 0.0,
+      "hypothetical_shell_overlap_mm3": 0.0
+    },
+    "guards": {
+      "outside_hypothetical_cavity_mm3": 0.0,
+      "hypothetical_shell_overlap_mm3": 0.0
+    },
+    "band": {
+      "outside_hypothetical_cavity_mm3": 0.0,
+      "hypothetical_shell_overlap_mm3": 0.0
+    }
+  },
+  "raised_camera_body_positive_control_mm3": 276.0,
+  "checks": {
+    "carrier_installed": {
+      "frame_overlap_mm3": 0.0,
+      "cover_overlap_mm3": 0.0,
+      "other_reference_aabb_candidates": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        368,
+        369,
+        370,
+        371,
+        372,
+        373,
+        374,
+        375,
+        376
+      ],
+      "battery_extraction_sweep_overlap_mm3": 0.0,
+      "reference_candidate_box_overlap_mm3": {
+        "1": 0.0,
+        "2": 0.0,
+        "3": 0.0,
+        "4": 0.0,
+        "5": 0.0,
+        "6": 0.0,
+        "7": 0.0,
+        "8": 0.0,
+        "9": 0.0,
+        "368": 0.0,
+        "369": 0.0,
+        "370": 0.0,
+        "371": 0.0,
+        "372": 0.0,
+        "373": 0.0,
+        "374": 0.0,
+        "375": 0.0,
+        "376": 0.0
+      }
+    },
+    "adhesive": {
+      "frame_overlap_mm3": 0.0,
+      "cover_overlap_mm3": 0.0,
+      "other_reference_aabb_candidates": [],
+      "battery_extraction_sweep_overlap_mm3": 0.0,
+      "reference_candidate_box_overlap_mm3": {}
+    },
+    "power": {
+      "frame_overlap_mm3": 0.0,
+      "cover_overlap_mm3": 0.0,
+      "other_reference_aabb_candidates": [],
+      "battery_extraction_sweep_overlap_mm3": 0.0,
+      "reference_candidate_box_overlap_mm3": {}
+    },
+    "camera": {
+      "frame_overlap_mm3": 0.0,
+      "cover_overlap_mm3": 0.0,
+      "other_reference_aabb_candidates": [],
+      "battery_extraction_sweep_overlap_mm3": 0.0,
+      "reference_candidate_box_overlap_mm3": {}
+    },
+    "driver": {
+      "frame_overlap_mm3": 0.0,
+      "cover_overlap_mm3": 0.0,
+      "other_reference_aabb_candidates": [],
+      "battery_extraction_sweep_overlap_mm3": 0.0,
+      "reference_candidate_box_overlap_mm3": {}
+    },
+    "charge": {
+      "frame_overlap_mm3": 0.0,
+      "cover_overlap_mm3": 0.0,
+      "other_reference_aabb_candidates": [],
+      "battery_extraction_sweep_overlap_mm3": 0.0,
+      "reference_candidate_box_overlap_mm3": {}
+    },
+    "tray": {
+      "frame_overlap_mm3": 0.0,
+      "cover_overlap_mm3": 0.0,
+      "other_reference_aabb_candidates": [],
+      "battery_extraction_sweep_overlap_mm3": 0.0,
+      "reference_candidate_box_overlap_mm3": {}
+    },
+    "camera_mount": {
+      "frame_overlap_mm3": 0.0,
+      "cover_overlap_mm3": 0.0,
+      "other_reference_aabb_candidates": [],
+      "battery_extraction_sweep_overlap_mm3": 0.0,
+      "reference_candidate_box_overlap_mm3": {}
+    },
+    "main_fasteners": {
+      "frame_overlap_mm3": 0.0,
+      "cover_overlap_mm3": 0.0,
+      "other_reference_aabb_candidates": [],
+      "battery_extraction_sweep_overlap_mm3": 0.0,
+      "reference_candidate_box_overlap_mm3": {}
+    },
+    "camera_fasteners": {
+      "frame_overlap_mm3": 0.0,
+      "cover_overlap_mm3": 0.0,
+      "other_reference_aabb_candidates": [],
+      "battery_extraction_sweep_overlap_mm3": 0.0,
+      "reference_candidate_box_overlap_mm3": {}
+    }
+  },
+  "pair_overlaps_mm3": {
+    "carrier_installed/adhesive": 0.0,
+    "carrier_installed/power": 0.0,
+    "carrier_installed/camera": 0.0,
+    "carrier_installed/driver": 0.0,
+    "carrier_installed/charge": 0.0,
+    "carrier_installed/tray": 0.0,
+    "carrier_installed/camera_mount": 0.0,
+    "carrier_installed/main_fasteners": 0.0,
+    "carrier_installed/camera_fasteners": 0.0,
+    "carrier_installed/battery": 0.0,
+    "carrier_installed/support": 0.0,
+    "carrier_installed/guards": 0.0,
+    "carrier_installed/band": 0.0,
+    "adhesive/power": 0.0,
+    "adhesive/camera": 0.0,
+    "adhesive/driver": 0.0,
+    "adhesive/charge": 0.0,
+    "adhesive/tray": 0.0,
+    "adhesive/camera_mount": 0.0,
+    "adhesive/main_fasteners": 0.0,
+    "adhesive/camera_fasteners": 0.0,
+    "adhesive/battery": 0.0,
+    "adhesive/support": 0.0,
+    "adhesive/guards": 0.0,
+    "adhesive/band": 0.0,
+    "power/camera": 0.0,
+    "power/driver": 0.0,
+    "power/charge": 0.0,
+    "power/tray": 0.0,
+    "power/camera_mount": 0.0,
+    "power/main_fasteners": 0.0,
+    "power/camera_fasteners": 0.0,
+    "power/battery": 0.0,
+    "power/support": 0.0,
+    "power/guards": 0.0,
+    "power/band": 0.0,
+    "camera/driver": 0.0,
+    "camera/charge": 0.0,
+    "camera/tray": 0.0,
+    "camera/camera_mount": 0.0,
+    "camera/main_fasteners": 0.0,
+    "camera/camera_fasteners": 0.0,
+    "camera/battery": 0.0,
+    "camera/support": 0.0,
+    "camera/guards": 0.0,
+    "camera/band": 0.0,
+    "driver/charge": 0.0,
+    "driver/tray": 0.0,
+    "driver/camera_mount": 0.0,
+    "driver/main_fasteners": 0.0,
+    "driver/camera_fasteners": 0.0,
+    "driver/battery": 0.0,
+    "driver/support": 0.0,
+    "driver/guards": 0.0,
+    "driver/band": 0.0,
+    "charge/tray": 0.0,
+    "charge/camera_mount": 0.0,
+    "charge/main_fasteners": 0.0,
+    "charge/camera_fasteners": 0.0,
+    "charge/battery": 0.0,
+    "charge/support": 0.0,
+    "charge/guards": 0.0,
+    "charge/band": 0.0,
+    "tray/camera_mount": 0.0,
+    "tray/main_fasteners": 0.0,
+    "tray/camera_fasteners": 0.0,
+    "tray/battery": 0.0,
+    "tray/support": 0.0,
+    "tray/guards": 0.0,
+    "tray/band": 0.0,
+    "camera_mount/main_fasteners": 0.0,
+    "camera_mount/camera_fasteners": 0.0,
+    "camera_mount/battery": 0.0,
+    "camera_mount/support": 0.0,
+    "camera_mount/guards": 0.0,
+    "camera_mount/band": 0.0,
+    "main_fasteners/camera_fasteners": 0.0,
+    "main_fasteners/battery": 0.0,
+    "main_fasteners/support": 0.0,
+    "main_fasteners/guards": 0.0,
+    "main_fasteners/band": 0.0,
+    "camera_fasteners/battery": 0.0,
+    "camera_fasteners/support": 0.0,
+    "camera_fasteners/guards": 0.0,
+    "camera_fasteners/band": 0.0,
+    "battery/support": 0.0,
+    "battery/guards": 0.0,
+    "battery/band": 0.0,
+    "support/guards": 0.0,
+    "support/band": 0.0,
+    "guards/band": -7.579122514774402e-14
+  },
+  "foot_contact_areas_mm2": [
+    36.00013732910156,
+    36.00013732910156,
+    36.00013732910156,
+    36.00013732910156
+  ],
+  "lowered_carrier_positive_control_mm3": 1424.5521946701117,
+  "assembly_bounds_mm": [
+    [
+      -10.25,
+      -20.0,
+      -7.0
+    ],
+    [
+      59.75,
+      135.01,
+      47.0
+    ]
+  ],
+  "component_bounds_mm": {
+    "carrier_installed": [
+      [
+        -5.25,
+        40.0,
+        20.25
+      ],
+      [
+        54.75,
+        88.0,
+        26.0
+      ]
+    ],
+    "carrier_print": [
+      [
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        60.0,
+        48.0,
+        5.75
+      ]
+    ],
+    "adhesive": [
+      [
+        4.25,
+        45.0,
+        19.75
+      ],
+      [
+        45.25,
+        76.0,
+        20.25
+      ]
+    ],
+    "battery": [
+      [
+        0.25,
+        46.0,
+        2.75
+      ],
+      [
+        49.25,
+        64.0,
+        17.75
+      ]
+    ],
+    "power": [
+      [
+        8.25,
+        60.0,
+        27.6
+      ],
+      [
+        41.25,
+        76.0,
+        33.3
+      ]
+    ],
+    "camera": [
+      [
+        13.25,
+        79.0,
+        22.0
+      ],
+      [
+        36.25,
+        91.0,
+        43.0
+      ]
+    ],
+    "driver": [
+      [
+        9.75,
+        40.0,
+        27.6
+      ],
+      [
+        39.75,
+        58.0,
+        37.6
+      ]
+    ],
+    "charge": [
+      [
+        8.25,
+        60.0,
+        34.3
+      ],
+      [
+        41.25,
+        76.0,
+        42.3
+      ]
+    ],
+    "body": [
+      [
+        -10.25,
+        -20.0,
+        0.0
+      ],
+      [
+        59.75,
+        135.01,
+        47.0
+      ]
+    ],
+    "cavity": [
+      [
+        -9.25,
+        -19.0,
+        -4.0
+      ],
+      [
+        58.75,
+        134.01,
+        46.0
+      ]
+    ],
+    "tray": [
+      [
+        -1.25,
+        40.0,
+        26.3
+      ],
+      [
+        50.75,
+        76.0,
+        27.3
+      ]
+    ],
+    "camera_mount": [
+      [
+        -5.25,
+        75.5,
+        21.0
+      ],
+      [
+        54.75,
+        91.0,
+        44.0
+      ]
+    ],
+    "main_fasteners": [
+      [
+        -1.25,
+        46.5,
+        22.4
+      ],
+      [
+        50.75,
+        71.5,
+        29.3
+      ]
+    ],
+    "camera_fasteners": [
+      [
+        -5.25,
+        75.5,
+        22.4
+      ],
+      [
+        54.75,
+        80.5,
+        32.6
+      ]
+    ],
+    "support": [
+      [
+        2.25,
+        44.5,
+        1.2
+      ],
+      [
+        47.25,
+        65.5,
+        4.25
+      ]
+    ],
+    "guards": [
+      [
+        -1.35,
+        51.0,
+        -1.35
+      ],
+      [
+        50.85,
+        59.0,
+        21.1
+      ]
+    ],
+    "band": [
+      [
+        -1.95,
+        53.5,
+        -1.95
+      ],
+      [
+        51.45,
+        56.5,
+        21.7
+      ]
+    ]
+  },
+  "exports": {
+    "adjustable-layout-viewer.html": "8b2fdef298fd88b60cc3aae5ef0f2d2da33fcf30e52c2742377c0e0d987164a4",
+    "adjustable-layout-carrier.stl": "e0046a6520bd5de7bdd3911b410334aeaf8d982e1eac5fa41dbb43be6c0da0d9",
+    "reference/zcar-aligned.stl": "6b9a4472f9d0ec66c48a293097752f0d0cf454891e8a72d25eb32fcd27098b78",
+    "adjustable-tray.stl": "9d6dd503ef5624d3ac2873b4852694f9a2e3c658ec74c5d556adc2f6a244b82d",
+    "adjustable-camera_mount.stl": "e76f5e64b6aec1cc219aec89c2b47a22e075dcbeac7213cc8af4208e72395cf9"
+  },
+  "preview_sha256": "4bc25ff8d901ceb05ac80e1234325a1024b99de799291876fe2f284aefe9fcc8",
+  "limitations": [
+    "Electronics are reserved envelopes, not exact purchasable component models",
+    "Original motor/servo/gearing retained; candidate fit and 9:43 not established",
+    "No suspension/steering sweep, strap removal path, load or print tests",
+    "Hypothetical shell, not purchased Mini-Z geometry; static wheel arches only",
+    "Combined camera/control board and bare 5.7 mm buck are architecture proposals",
+    "Charger standoffs, camera fasteners, body windows and magnets not designed",
+    "Shell containment checked for added volumes only, not every upstream mechanism part",
+    "No wires, connectors, antenna or magnets; proposed shell only",
+    "Adjustment sampled on a 1 mm grid; no continuous motion or tolerance verification"
+  ],
+  "side_preview_sha256": "153ae872e892f23f159c6fb32fc62bee7af7bc0882d64c8898d18e82dd4b86f9"
+}

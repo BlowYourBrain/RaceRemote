@@ -7,5 +7,21 @@ cad/reference/zcar-aligned.stl binary
 cad/reference/zcar.skp binary
 # Retain the upstream README verbatim, including its existing whitespace.
 cad/reference/upstream-README.md -whitespace
+cad/body-study.scad text eol=lf
+cad/body-study-viewer.html text eol=lf
+cad/body-study-carrier.stl binary
+docs/evidence/body-study-layout.json text eol=lf
+cad/adjustable-layout.scad text eol=lf
+cad/adjustable-layout-viewer.html text eol=lf
+cad/adjustable-layout-carrier.stl binary
+cad/adjustable-tray.stl binary
+cad/adjustable-camera_mount.stl binary
+docs/evidence/adjustable-layout.json text eol=lf
+cad/candidate-fit.scad text eol=lf
+cad/candidate-fit-viewer.html text eol=lf
+cad/components/*.stl binary
+cad/components/*.step binary
+cad/components/*.scad text eol=lf
+docs/evidence/candidate-fit.json text eol=lf
 docs/evidence/assembly-layout.json text eol=lf
 tools/cad_viewer_template.html text eol=lf

@@ -15,7 +15,8 @@ module battery_box() { envelope([49,18,15],[0.25,46,2.75]); }
 // Proposed budgets. No exact board pinout, connector or fastening implied.
 module control_budget() { envelope([22,18,10],[13.75,43,27]); }
 module power_budget() { envelope([33,16,12],[8.25,67,27]); }
-module camera_budget() { envelope([23,12,21],[13.25,27,32]); }
+// Front is +Y (steered axle Y=111.125); rear driven axle is Y=21.125.
+module camera_budget() { envelope([23,12,21],[13.25,87,32]); }
 module driver_budget() { envelope([30,18,10],[9.75,43,40]); }
 module charge_budget() { envelope([33,16,8],[8.25,67,42]); }
 
@@ -27,13 +28,13 @@ module carrier() {
             for (x=[4.25,39.25], y=[45,70])
                 envelope([6,6,5.75],[x,y,20.25]);
             // Candidate upright, behind the forward-facing camera budget.
-            envelope([27,2,29],[11.25,40,26]);
+            envelope([27,2,29],[11.25,84,26]);
         }
         // Slots allow future straps. Strap hardware and load paths unverified.
         for (x=[6.75,40.25], y=[45,69])
             envelope([2.5,10,3],[x,y,23.5]);
-        envelope([17,3,15],[16.25,39.5,32]);
-        for (x=[12.75,34.25]) envelope([2,3,15],[x,39.5,32]);
+        envelope([17,3,15],[16.25,83.5,32]);
+        for (x=[12.75,34.25]) envelope([2,3,15],[x,83.5,32]);
     }
 }
 module adhesive_budget() {

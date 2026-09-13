@@ -1,0 +1,163 @@
+{
+  "revision": "4b714e63fa30ed2030a8a48ab15f1e4a5fa380c4",
+  "source_sha256": {
+    "stl/zcar.stl": "943f59bfecd42b7eed32457dfd166559b0aec8fc64f6cd9ba6ce526d3f7c0e5b",
+    "stl/tray1.stl": "5d9c1d6f2f740d71cea5a07317a2dbb2606f30c652ecb4ba899b85167724aa3f",
+    "stl/tray2.stl": "44561b48c19ec3cb11517ea24b86e9ed3d700931f4e6803e16f6beb4a275bb8e"
+  },
+  "design_sha256": "e7c8505f55fc38cb1c24fd015b88b3ac4bc1232aaa205772912c3249a2e5d4f7",
+  "battery_mm": [
+    49,
+    18,
+    15
+  ],
+  "battery_checks": {
+    "frame": {
+      "battery_overlap_mm3": 0.0,
+      "lateral_sweep_overlap_mm3": 0.0
+    },
+    "cover": {
+      "battery_overlap_mm3": 0.0,
+      "lateral_sweep_overlap_mm3": 0.0
+    },
+    "support_installed": {
+      "battery_overlap_mm3": 0.0,
+      "lateral_sweep_overlap_mm3": 0.0
+    },
+    "guards_installed": {
+      "battery_overlap_mm3": 0.0,
+      "lateral_sweep_overlap_mm3": 123.0000002682209
+    },
+    "band_corridor": {
+      "battery_overlap_mm3": 0.0,
+      "lateral_sweep_overlap_mm3": 45.000002682209015
+    }
+  },
+  "holder_checks": {
+    "support_installed": {
+      "frame_overlap_mm3": 0.0,
+      "cover_overlap_mm3": 0.0,
+      "other_assembly_aabb_overlaps": []
+    },
+    "guards_installed": {
+      "frame_overlap_mm3": 0.0,
+      "cover_overlap_mm3": 0.0,
+      "other_assembly_aabb_overlaps": []
+    },
+    "band_corridor": {
+      "frame_overlap_mm3": 0.0,
+      "cover_overlap_mm3": 0.0,
+      "other_assembly_aabb_overlaps": []
+    }
+  },
+  "guard_removal_6mm_sweep_overlap_mm3": {
+    "left": {
+      "frame": 0.0,
+      "cover": 0.0,
+      "battery": 0.0,
+      "support": 0.0
+    },
+    "right": {
+      "frame": 0.0,
+      "cover": 0.0,
+      "battery": 0.0,
+      "support": 0.0
+    }
+  },
+  "holder_internal_overlap_mm3": {
+    "support_installed/guards_installed": 0.0,
+    "support_installed/band_corridor": 0.0,
+    "guards_installed/band_corridor": -7.579122514774402e-14
+  },
+  "band_lowest_z_mm": -1.95,
+  "source_assembly_lowest_z_mm": -7.0,
+  "exports": {
+    "support_installed": {
+      "bounds_mm": [
+        [
+          2.25,
+          44.5,
+          1.2
+        ],
+        [
+          47.25,
+          65.5,
+          4.25
+        ]
+      ],
+      "volume_mm3": 1171.5401190204502,
+      "sha256": "5e28072f7c501c2cdaeb6982b8c8e9205ab1483018ee858405e81dc8c2a8ff43"
+    },
+    "guards_installed": {
+      "bounds_mm": [
+        [
+          -1.35,
+          51.0,
+          -1.35
+        ],
+        [
+          50.85,
+          59.0,
+          21.1
+        ]
+      ],
+      "volume_mm3": 483.42000000000115,
+      "sha256": "7f71f85b300debb097b2d56bafdc93ec577b2cb086a45a9b2abfee0b47e58bb7"
+    },
+    "band_corridor": {
+      "bounds_mm": [
+        [
+          -1.95,
+          53.5,
+          -1.95
+        ],
+        [
+          51.45,
+          56.5,
+          21.7
+        ]
+      ],
+      "volume_mm3": 450.30000000000024,
+      "sha256": "547ea93d8a7ea03ee550613afc114af2d4c04cf18e28b0a0164a4f08c32124d0"
+    },
+    "support_print": {
+      "bounds_mm": [
+        [
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          45.0,
+          21.0,
+          3.05
+        ]
+      ],
+      "volume_mm3": 1171.5401257572591,
+      "sha256": "ff81ecffadda9c551203e8b3d71e0a09fb6d68c6f03388b87168f6e0699f3a48"
+    },
+    "guard_print": {
+      "bounds_mm": [
+        [
+          5.72205e-07,
+          5.72205e-07,
+          0.0
+        ],
+        [
+          4.85,
+          22.45,
+          8.0
+        ]
+      ],
+      "volume_mm3": 241.70992970461717,
+      "sha256": "0164a0bb34fd0cf74360c5c6cad99338e9ca5c6d249fba090932a89e581c00dc"
+    }
+  },
+  "limits": [
+    "Seller dimensions; no physical battery measurement",
+    "No wires, connectors, custom body or new electronics",
+    "Band is a reserved corridor, not an elastic material or force model",
+    "Adhesive/liner/band products and compressed thickness unverified",
+    "No print, retention force, chassis clearance or crash validation"
+  ]
+}

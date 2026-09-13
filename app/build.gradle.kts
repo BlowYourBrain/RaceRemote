@@ -5,9 +5,10 @@ plugins {
 }
 
 android {
+    namespace = "vea.raceremote"
 
     defaultConfig {
-        applicationId = "com.simple.raceremote"
+        applicationId = "vea.raceremote"
         compileSdk = AppConfig.compileSdk
         minSdk = AppConfig.minSdk
         targetSdk = AppConfig.targetSdk
@@ -54,5 +55,6 @@ dependencies {
     implementation(AppDependencies.koinLibraries)
 
     testImplementation(AppDependencies.testLibraries)
+    testImplementation("com.squareup.okhttp3:mockwebserver:3.14.9")
     androidTestImplementation(AppDependencies.androidTestLibraries)
 }

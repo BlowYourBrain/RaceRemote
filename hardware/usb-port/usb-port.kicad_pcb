@@ -87,7 +87,7 @@
 			(outputdirectory "")
 		)
 	)
-	(footprint ""
+	(footprint "RaceRemote_USB:WirePad_D0.8mm"
 		(layer "F.Cu")
 		(uuid "0ae45f47-046e-46ba-9e0a-de4c1a881d97")
 		(at 88.4 97)
@@ -135,6 +135,7 @@
 				)
 			)
 		)
+		(path "/1d6d9625-5cfc-5cde-bb0f-ed398cac6ffe/356cc1d9-a5dd-54a0-817b-08ad38610cf7")
 		(duplicate_pad_numbers_are_jumpers no)
 		(pad "1" thru_hole circle
 			(at 0 0)
@@ -147,7 +148,7 @@
 		)
 		(embedded_fonts no)
 	)
-	(footprint "USB_C_Receptacle_GCT_USB4105-xx-A_16P_TopMnt_Horizontal"
+	(footprint "RaceRemote_USB:USB_C_Receptacle_GCT_USB4105-xx-A_16P_TopMnt_Horizontal"
 		(layer "F.Cu")
 		(uuid "29c79531-8983-4032-a1e1-3726802cba1f")
 		(at 100 100)
@@ -179,7 +180,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "https://gct.co/files/drawings/usb4105.pdf"
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -205,6 +206,7 @@
 				)
 			)
 		)
+		(path "/1d6d9625-5cfc-5cde-bb0f-ed398cac6ffe/412e9e2a-ddc0-5d7b-87e7-cc7cefe729dc")
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -342,6 +344,7 @@
 			(size 0.3 1.15)
 			(layers "F.Cu" "F.Mask" "F.Paste")
 			(roundrect_rratio 0.25)
+			(net "unconnected-(J1-SBU1-PadA8)")
 			(uuid "58d02c5a-b8c8-46e4-b95e-b0cecf5a7649")
 		)
 		(pad "A9" smd roundrect
@@ -405,6 +408,7 @@
 			(size 0.3 1.15)
 			(layers "F.Cu" "F.Mask" "F.Paste")
 			(roundrect_rratio 0.25)
+			(net "unconnected-(J1-SBU2-PadB8)")
 			(uuid "66ebdc6d-de52-4442-bf06-0bf50a2a2b12")
 		)
 		(pad "B9" smd roundrect
@@ -476,7 +480,7 @@
 			)
 		)
 	)
-	(footprint ""
+	(footprint "RaceRemote_USB:MountingHole_2.4mm"
 		(layer "F.Cu")
 		(uuid "4a7a7b84-5d7b-4b75-a8ab-291892791b65")
 		(at 92 99.825)
@@ -524,6 +528,8 @@
 				)
 			)
 		)
+		(path "/1d6d9625-5cfc-5cde-bb0f-ed398cac6ffe/232f0432-49f6-565e-bf20-0e887528587a")
+		(attr exclude_from_bom)
 		(duplicate_pad_numbers_are_jumpers no)
 		(pad "" np_thru_hole circle
 			(at 0 0)
@@ -534,7 +540,7 @@
 		)
 		(embedded_fonts no)
 	)
-	(footprint ""
+	(footprint "RaceRemote_USB:WirePad_D0.8mm"
 		(layer "F.Cu")
 		(uuid "a7089880-ee6b-469f-b105-be835b3b54d3")
 		(at 88.4 101.4)
@@ -582,6 +588,7 @@
 				)
 			)
 		)
+		(path "/1d6d9625-5cfc-5cde-bb0f-ed398cac6ffe/cfc3778b-6901-51bf-a259-85b07faae8d0")
 		(duplicate_pad_numbers_are_jumpers no)
 		(pad "1" thru_hole circle
 			(at 0 0)
@@ -594,7 +601,7 @@
 		)
 		(embedded_fonts no)
 	)
-	(footprint ""
+	(footprint "RaceRemote_USB:WirePad_D0.8mm"
 		(layer "F.Cu")
 		(uuid "a779ad91-01f4-4e10-b100-5e6df6229140")
 		(at 111.6 99.2)
@@ -642,6 +649,7 @@
 				)
 			)
 		)
+		(path "/1d6d9625-5cfc-5cde-bb0f-ed398cac6ffe/8751a16f-8c2c-5706-aac4-0771cd1047a5")
 		(duplicate_pad_numbers_are_jumpers no)
 		(pad "1" thru_hole circle
 			(at 0 0)
@@ -654,7 +662,7 @@
 		)
 		(embedded_fonts no)
 	)
-	(footprint ""
+	(footprint "RaceRemote_USB:MountingHole_2.4mm"
 		(layer "F.Cu")
 		(uuid "c0100b88-2026-4143-8a95-06c4d191b467")
 		(at 108 99.825)
@@ -702,6 +710,8 @@
 				)
 			)
 		)
+		(path "/1d6d9625-5cfc-5cde-bb0f-ed398cac6ffe/3370cf40-e8b3-5b77-9e45-e51192efc74a")
+		(attr exclude_from_bom)
 		(duplicate_pad_numbers_are_jumpers no)
 		(pad "" np_thru_hole circle
 			(at 0 0)
@@ -712,7 +722,7 @@
 		)
 		(embedded_fonts no)
 	)
-	(footprint ""
+	(footprint "RaceRemote_USB:WirePad_D0.8mm"
 		(layer "F.Cu")
 		(uuid "c4949f3e-b097-4d22-a488-7b56135e1b35")
 		(at 111.6 97)
@@ -760,6 +770,7 @@
 				)
 			)
 		)
+		(path "/1d6d9625-5cfc-5cde-bb0f-ed398cac6ffe/f6cb700f-0f98-56d5-bae3-85247ef15d27")
 		(duplicate_pad_numbers_are_jumpers no)
 		(pad "1" thru_hole circle
 			(at 0 0)
@@ -772,7 +783,7 @@
 		)
 		(embedded_fonts no)
 	)
-	(footprint ""
+	(footprint "RaceRemote_USB:WirePad_D0.8mm"
 		(layer "F.Cu")
 		(uuid "c7b7e985-142f-4050-9d45-12a3456776cf")
 		(at 111.6 101.4)
@@ -820,6 +831,7 @@
 				)
 			)
 		)
+		(path "/1d6d9625-5cfc-5cde-bb0f-ed398cac6ffe/25edf495-e63f-5e2c-8211-8e89d6ba5d3a")
 		(duplicate_pad_numbers_are_jumpers no)
 		(pad "1" thru_hole circle
 			(at 0 0)
@@ -832,7 +844,7 @@
 		)
 		(embedded_fonts no)
 	)
-	(footprint ""
+	(footprint "RaceRemote_USB:WirePad_D0.8mm"
 		(layer "F.Cu")
 		(uuid "eda026da-4328-4e88-afb4-b6c518fc1e8a")
 		(at 88.4 99.2)
@@ -880,6 +892,7 @@
 				)
 			)
 		)
+		(path "/1d6d9625-5cfc-5cde-bb0f-ed398cac6ffe/162f63ff-ec0e-520a-97ee-1f1f78469446")
 		(duplicate_pad_numbers_are_jumpers no)
 		(pad "1" thru_hole circle
 			(at 0 0)
@@ -892,7 +905,7 @@
 		)
 		(embedded_fonts no)
 	)
-	(footprint "R_0603_1608Metric"
+	(footprint "RaceRemote_USB:R_0603_1608Metric"
 		(layer "B.Cu")
 		(uuid "1f8709ee-56cc-437f-a2e0-62ca5b8805e3")
 		(at 98.5 100.4 180)
@@ -961,6 +974,7 @@
 				(justify mirror)
 			)
 		)
+		(path "/1d6d9625-5cfc-5cde-bb0f-ed398cac6ffe/181d4345-88c6-5d80-8bdc-72dc478a090b")
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -1046,7 +1060,7 @@
 			)
 		)
 	)
-	(footprint "R_0603_1608Metric"
+	(footprint "RaceRemote_USB:R_0603_1608Metric"
 		(layer "B.Cu")
 		(uuid "2e523256-294c-4769-aa2a-710d1b610537")
 		(at 101.5 100.4 180)
@@ -1115,6 +1129,7 @@
 				(justify mirror)
 			)
 		)
+		(path "/1d6d9625-5cfc-5cde-bb0f-ed398cac6ffe/8aa5c1b8-7155-5ac3-943f-594ff03d8012")
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line

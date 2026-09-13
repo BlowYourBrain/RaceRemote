@@ -1,0 +1,1 @@
+(sym_lib_table (version 7) (lib (name "RaceRemote_USB") (type "KiCad") (uri "${KIPRJMOD}/RaceRemote_USB.kicad_sym") (options "") (descr "KiCad symbols adapted for the GCT footprint and wire terminals")))

@@ -1,15 +1,49 @@
 {
   "kicad_version": "10.0.6",
   "checks": {
+    "erc_violations": 0,
     "drc_violations": 0,
     "unconnected_items": 0,
-    "separate_cc_resistors": true
+    "schematic_parity_issues": 0,
+    "logical_pins_compared": 27,
+    "separate_cc_resistors": true,
+    "cad_pad_drill_records_matched": 42
   },
   "actual_pad_nets": {
     "H1": [
       {
         "pad": "1",
         "net": "VBUS"
+      }
+    ],
+    "H2": [
+      {
+        "pad": "1",
+        "net": "DP"
+      }
+    ],
+    "H3": [
+      {
+        "pad": "1",
+        "net": "CC1"
+      }
+    ],
+    "H4": [
+      {
+        "pad": "1",
+        "net": "GND"
+      }
+    ],
+    "H5": [
+      {
+        "pad": "1",
+        "net": "DM"
+      }
+    ],
+    "H6": [
+      {
+        "pad": "1",
+        "net": "CC2"
       }
     ],
     "J1": [
@@ -23,6 +57,10 @@
       },
       {
         "pad": "A1",
+        "net": "GND"
+      },
+      {
+        "pad": "A12",
         "net": "GND"
       },
       {
@@ -43,18 +81,18 @@
       },
       {
         "pad": "A8",
-        "net": ""
+        "net": "unconnected-(J1-SBU1-PadA8)"
       },
       {
         "pad": "A9",
         "net": "VBUS"
       },
       {
-        "pad": "A12",
+        "pad": "B1",
         "net": "GND"
       },
       {
-        "pad": "B1",
+        "pad": "B12",
         "net": "GND"
       },
       {
@@ -75,15 +113,11 @@
       },
       {
         "pad": "B8",
-        "net": ""
+        "net": "unconnected-(J1-SBU2-PadB8)"
       },
       {
         "pad": "B9",
         "net": "VBUS"
-      },
-      {
-        "pad": "B12",
-        "net": "GND"
       },
       {
         "pad": "S1",
@@ -108,40 +142,10 @@
         "net": ""
       }
     ],
-    "H3": [
-      {
-        "pad": "1",
-        "net": "CC1"
-      }
-    ],
-    "H5": [
-      {
-        "pad": "1",
-        "net": "DM"
-      }
-    ],
     "M2": [
       {
         "pad": "",
         "net": ""
-      }
-    ],
-    "H4": [
-      {
-        "pad": "1",
-        "net": "GND"
-      }
-    ],
-    "H6": [
-      {
-        "pad": "1",
-        "net": "CC2"
-      }
-    ],
-    "H2": [
-      {
-        "pad": "1",
-        "net": "DP"
       }
     ],
     "R1": [
@@ -165,18 +169,48 @@
       }
     ]
   },
+  "negative_controls": [
+    {
+      "mutation": "swapped_cc_terminal",
+      "detected": true,
+      "parity_types": [
+        "net_conflict"
+      ],
+      "report_sha256": "e0cfce5cd8b3a2fd80ba228ab5a2a15dd0d75488f54386fef73c21f2d481cd8e"
+    },
+    {
+      "mutation": "missing_rd",
+      "detected": true,
+      "parity_types": [
+        "missing_footprint"
+      ],
+      "report_sha256": "f9b6b258b98a4b4ade830c47e8d30db83528a8c6ad197557ef9c3a2a328e4269"
+    }
+  ],
   "sha256": {
-    "hardware/usb-port/usb-port.kicad_pcb": "2a4c4cb2a4002315a3c51eb034430996a6b201ccd8ec8ad74ca204c36a48d2e8",
-    "hardware/usb-port/usb-port.kicad_pro": "f3174c48b49aaadef871168896c20458380c8fbdb6ae8ffed433021596974930",
+    "hardware/usb-port/usb-port.kicad_pcb": "81b93b75a2f8732600a63693dcd7b6cfdc98cf783a285313de8e0871e640c57e",
+    "hardware/usb-port/usb-port.kicad_pro": "2186ca72d806fc973a3b855896adb6ab840f7bd8534c364f9c4cfc136b8d54f5",
+    "hardware/usb-port/usb-port.kicad_sch": "ccb10fa7d971c03e9bc6869c1fcf57f1861af67ea4b06e5fb1f80daefe6609a2",
+    "hardware/usb-port/RaceRemote_USB.kicad_sym": "6dacd0dbacd2c60ad8d9d3f1716d44372bfb54cf5804193a79753a875744b900",
+    "hardware/usb-port/usb-port.net": "0762fdcc69b858b80a5c684e2b1541831198d0dc7065f843a55f4f97ad8366dc",
     "hardware/usb-port/geometry.json": "a55962dbc36f535d3f8617a8f7a08db69abf7e13c3d80c00947781571288a5fc",
-    "docs/evidence/usb-port-pcb-drc.json": "a4d136f457440d1a2217cb81733f132a75b2258b1fed01d42ad37c0b592d5353",
-    "cad/components/usb-port-pcb.scad": "173d1a220a61b3d6af4912505d4cef2d904b89ca5e496fd19e85b1b05466f24e"
+    "docs/evidence/usb-port-erc.json": "96a40ea8016b3f75d85096eeda56425b7877085e8e29a5164dc8a2f3379ace63",
+    "docs/evidence/usb-port-pcb-drc.json": "bcc793d498947fd3f38dc51645fa11c878fa335bea79888df7292fd8fc2a15e8",
+    "cad/components/usb-port-pcb.scad": "173d1a220a61b3d6af4912505d4cef2d904b89ca5e496fd19e85b1b05466f24e",
+    "tools/verify_usb_port.py": "75f03aa635777a583bb639872721911f06acf0bb9f40202fab6a4bc1fa4f371e",
+    "tools/usb_port_identity.py": "77a1dc7a7bf8e91c381dd360ca79538229aa0bc52d4285e9dcd6a7b35def4013",
+    "tools/build_usb_port_pcb.py": "caa674a5e28e882ac4763d7a2b0375b8a9f519a4c7db7f1b71c721d2907a731a",
+    "tools/build_usb_port_schematic.py": "96b38c6c6cac91787961c1f4be5152a5175b215b0812dd1e0153f1d6a89addfa",
+    "hardware/usb-port/RaceRemote_USB.pretty/MountingHole_2.4mm.kicad_mod": "9fcdb69af53241e17022a07dcf6301933995128c0b1538a8d9c54e7019adfbd5",
+    "hardware/usb-port/RaceRemote_USB.pretty/R_0603_1608Metric.kicad_mod": "03fc7902b2661df01b4d828fdb6eab9eddf974e7130ed2b98892607387a50c4b",
+    "hardware/usb-port/RaceRemote_USB.pretty/USB_C_Receptacle_GCT_USB4105-xx-A_16P_TopMnt_Horizontal.kicad_mod": "b48648d0fd08d0fded58487a7c36cd5881ef33451fb6e3f4295d4c6e54d31075",
+    "hardware/usb-port/RaceRemote_USB.pretty/WirePad_D0.8mm.kicad_mod": "19f4f78d0bf9acdd0f28b51f0dcce906ea06f4c48f319badedd62ca7f5638616"
   },
   "not_verified": [
-    "Schematic parity and ERC",
     "Actual soldered components",
     "USB source recognition by charger",
     "Current and temperature",
-    "ESD and harness strain relief"
+    "ESD and harness strain relief",
+    "Complete 2S charger circuit"
   ]
 }

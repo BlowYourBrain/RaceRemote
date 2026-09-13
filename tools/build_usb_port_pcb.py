@@ -10,6 +10,7 @@ from pathlib import Path
 import uuid
 
 import pcbnew as p
+from usb_port_identity import footprint, symbol_path
 
 ROOT = Path(__file__).resolve().parents[1]
 DEST = ROOT / 'hardware/usb-port'
@@ -43,7 +44,8 @@ def main():
     net = {}
     pad_layers = p.LSET.AllCuMask(2)
     pad_layers.AddLayer(p.F_Mask); pad_layers.AddLayer(p.B_Mask)
-    for name in ['GND', 'VBUS', 'CC1', 'CC2', 'DP', 'DM']:
+    for name in ['GND', 'VBUS', 'CC1', 'CC2', 'DP', 'DM',
+                 'unconnected-(J1-SBU1-PadA8)', 'unconnected-(J1-SBU2-PadB8)']:
         net[name] = p.NETINFO_ITEM(b, name)
         b.Add(net[name])
 
@@ -60,10 +62,12 @@ def main():
     connector.Reference().SetVisible(False); connector.Value().SetVisible(False)
     pin_nets = {'A1': 'GND', 'B12': 'GND', 'A12': 'GND', 'B1': 'GND', 'S1': 'GND',
                 'A4': 'VBUS', 'B9': 'VBUS', 'A9': 'VBUS', 'B4': 'VBUS',
-                'A5': 'CC1', 'B5': 'CC2', 'A6': 'DP', 'B6': 'DP', 'A7': 'DM', 'B7': 'DM'}
+                'A5': 'CC1', 'B5': 'CC2', 'A6': 'DP', 'B6': 'DP', 'A7': 'DM', 'B7': 'DM',
+                'A8': 'unconnected-(J1-SBU1-PadA8)', 'B8': 'unconnected-(J1-SBU2-PadB8)'}
     for pad in connector.Pads():
         if pad.GetNumber() in pin_nets: pad.SetNet(net[pin_nets[pad.GetNumber()]])
     b.Add(connector)
+    connector.GetField('Datasheet').SetText('https://gct.co/files/drawings/usb4105.pdf')
 
     # Independent Rd resistors on CC1 and CC2. Main-board sense inputs must
     # stay high impedance; adding another pair of Rd is not permitted.
@@ -93,6 +97,7 @@ def main():
     # Keep copper/tracks/vias away from the proposed metal nut/head envelopes.
     for i, x in enumerate([-8, 8]):
         f = p.FOOTPRINT(b); f.SetReference('M' + str(i+1)); f.SetValue('M2 clearance')
+        f.SetAttributes(f.GetAttributes() | p.FP_EXCLUDE_FROM_BOM)
         f.SetPosition(vec(x, -.175)); f.Reference().SetVisible(False); f.Value().SetVisible(False)
         pad = p.PAD(f); pad.SetAttribute(p.PAD_ATTRIB_NPTH); pad.SetShape(p.PAD_SHAPE_CIRCLE)
         pad.SetSize(size(2.4, 2.4)); pad.SetDrillSize(size(2.4, 2.4)); pad.SetPosition(vec(x, -.175))
@@ -148,6 +153,11 @@ def main():
         for x,y in outline:
             v=vec(x,y); poly.Append(v.x,v.y)
         b.Add(z)
+
+    for f in b.GetFootprints():
+        library, name = footprint(f.GetReference()).split(':', 1)
+        f.SetFPID(p.LIB_ID(library, name))
+        f.SetPath(p.KIID_PATH(symbol_path(f.GetReference())))
 
     path=DEST/'usb-port.kicad_pcb'
     p.SaveBoard(str(path),b)

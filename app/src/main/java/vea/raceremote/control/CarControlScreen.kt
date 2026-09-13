@@ -27,6 +27,7 @@ fun CarControlScreen() {
     val client = remember { CarControlClient(diagnostics = { android.util.Log.d("RaceRemoteControl", it) }) }
     val state by client.state.collectAsState()
     var host by rememberSaveable { mutableStateOf("192.168.4.1") }
+    var controlPort by rememberSaveable { mutableStateOf(1337) }
     var throttle by remember { mutableStateOf(0f) }
     var steering by remember { mutableStateOf(0f) }
     var showVideo by rememberSaveable { mutableStateOf(false) }
@@ -62,15 +63,16 @@ fun CarControlScreen() {
     LaunchedEffect(state.connected) { if (!state.connected) { throttle = 0f; steering = 0f } }
     Column(Modifier.fillMaxSize().padding(16.dp)) {
         Row(Modifier.fillMaxWidth(), horizontalArrangement = Arrangement.spacedBy(12.dp)) {
-            OutlinedTextField(host, { host = it }, label = { Text("Адрес машинки") }, singleLine = true,
+            OutlinedTextField(host, { host = it; controlPort = 1337 }, label = { Text("Адрес машинки") }, singleLine = true,
                 enabled = !state.connected && !state.connecting, modifier = Modifier.weight(1f).testTag("car_address"))
+            CarPicker(enabled = !state.connected && !state.connecting) { car -> host = car.host; controlPort = car.port }
             Button(onClick = {
                 throttle = 0f; steering = 0f
                 wifiLock.acquire()
                 val manager = context.getSystemService(ConnectivityManager::class.java)
                 val wifi = manager.allNetworks.firstOrNull { manager.getNetworkCapabilities(it)?.hasTransport(NetworkCapabilities.TRANSPORT_WIFI) == true }
                 val networkClient = if (wifi != null) http.newBuilder().socketFactory(wifi.socketFactory).build() else http
-                client.connect(host.trim(), networkClient)
+                client.connect(host.trim(), networkClient, controlPort)
             }, enabled = !state.connected && !state.connecting, modifier = Modifier.testTag("connect_car")) { Text("Подключить") }
             Button(onClick = { throttle = 0f; steering = 0f; client.disconnect() }, modifier = Modifier.testTag("stop_car"),
                 colors = ButtonDefaults.buttonColors(backgroundColor = MaterialTheme.colors.error)) { Text("СТОП") }
@@ -93,7 +95,7 @@ fun CarControlScreen() {
                 Slider(value = steering, onValueChange = { steering = it; client.setInput(throttle, steering) },
                     onValueChangeFinished = { steering = 0f; client.setInput(throttle, steering) },
                     valueRange = -1f..1f, enabled = state.connected, modifier = Modifier.fillMaxWidth().testTag("steering"))
-                if (!showVideo) Text("Первое подключение: выбери Wi-Fi RaceRemote в настройках телефона.")
+                if (!showVideo) Text("Подключи машинку и телефон к одной сети или используй точку доступа телефона. Нажми «Найти».")
             }
         }
     }

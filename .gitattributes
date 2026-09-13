@@ -25,3 +25,8 @@ cad/components/*.scad text eol=lf
 docs/evidence/candidate-fit.json text eol=lf
 docs/evidence/assembly-layout.json text eol=lf
 tools/cad_viewer_template.html text eol=lf
+cad/usb-port-study.scad text eol=lf
+cad/usb-port-study-viewer.html text eol=lf
+cad/usb-port-*.stl binary
+tools/build_usb_port_study.py text eol=lf
+docs/evidence/usb-port-study.json text eol=lf

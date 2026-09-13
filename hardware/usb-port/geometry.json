@@ -1,0 +1,873 @@
+{
+  "connector_face_x_mm": 59.1,
+  "pcb_bounds_mm": [
+    [
+      50.9,
+      46,
+      22.15
+    ],
+    [
+      58.5,
+      72,
+      23.15
+    ]
+  ],
+  "old_face_x_mm": 58.5,
+  "old_min_smd_edge_clearance_mm": -0.33,
+  "new_min_smd_edge_clearance_mm": 0.2700000000000031,
+  "holes": [
+    {
+      "reference": "H6",
+      "pad": "1",
+      "net": "CC2",
+      "center_mm": [
+        56.82499999999999,
+        70.6
+      ],
+      "size_mm": [
+        1.6,
+        1.6
+      ],
+      "drill_mm": [
+        0.8,
+        0.8
+      ],
+      "front": true,
+      "back": true
+    },
+    {
+      "reference": "H5",
+      "pad": "1",
+      "net": "DM",
+      "center_mm": [
+        54.625,
+        70.6
+      ],
+      "size_mm": [
+        1.6,
+        1.6
+      ],
+      "drill_mm": [
+        0.8,
+        0.8
+      ],
+      "front": true,
+      "back": true
+    },
+    {
+      "reference": "H4",
+      "pad": "1",
+      "net": "GND",
+      "center_mm": [
+        52.42500000000001,
+        70.6
+      ],
+      "size_mm": [
+        1.6,
+        1.6
+      ],
+      "drill_mm": [
+        0.8,
+        0.8
+      ],
+      "front": true,
+      "back": true
+    },
+    {
+      "reference": "H3",
+      "pad": "1",
+      "net": "CC1",
+      "center_mm": [
+        56.82499999999999,
+        47.400000000000006
+      ],
+      "size_mm": [
+        1.6,
+        1.6
+      ],
+      "drill_mm": [
+        0.8,
+        0.8
+      ],
+      "front": true,
+      "back": true
+    },
+    {
+      "reference": "H2",
+      "pad": "1",
+      "net": "DP",
+      "center_mm": [
+        54.625,
+        47.400000000000006
+      ],
+      "size_mm": [
+        1.6,
+        1.6
+      ],
+      "drill_mm": [
+        0.8,
+        0.8
+      ],
+      "front": true,
+      "back": true
+    },
+    {
+      "reference": "H1",
+      "pad": "1",
+      "net": "VBUS",
+      "center_mm": [
+        52.42500000000001,
+        47.400000000000006
+      ],
+      "size_mm": [
+        1.6,
+        1.6
+      ],
+      "drill_mm": [
+        0.8,
+        0.8
+      ],
+      "front": true,
+      "back": true
+    },
+    {
+      "reference": "J1",
+      "pad": "",
+      "net": "",
+      "center_mm": [
+        52.81999999999999,
+        56.110000000000014
+      ],
+      "size_mm": [
+        0.65,
+        0.65
+      ],
+      "drill_mm": [
+        0.65,
+        0.65
+      ]
+    },
+    {
+      "reference": "J1",
+      "pad": "",
+      "net": "",
+      "center_mm": [
+        52.81999999999999,
+        61.889999999999986
+      ],
+      "size_mm": [
+        0.65,
+        0.65
+      ],
+      "drill_mm": [
+        0.65,
+        0.65
+      ]
+    },
+    {
+      "reference": "J1",
+      "pad": "S1",
+      "net": "GND",
+      "center_mm": [
+        52.31999999999999,
+        54.68000000000001
+      ],
+      "size_mm": [
+        2.1,
+        1.0
+      ],
+      "drill_mm": [
+        1.7,
+        0.6
+      ],
+      "front": true,
+      "back": true
+    },
+    {
+      "reference": "J1",
+      "pad": "S1",
+      "net": "GND",
+      "center_mm": [
+        56.5,
+        54.68000000000001
+      ],
+      "size_mm": [
+        1.8,
+        1.0
+      ],
+      "drill_mm": [
+        1.4,
+        0.6
+      ],
+      "front": true,
+      "back": true
+    },
+    {
+      "reference": "J1",
+      "pad": "S1",
+      "net": "GND",
+      "center_mm": [
+        52.31999999999999,
+        63.31999999999999
+      ],
+      "size_mm": [
+        2.1,
+        1.0
+      ],
+      "drill_mm": [
+        1.7,
+        0.6
+      ],
+      "front": true,
+      "back": true
+    },
+    {
+      "reference": "J1",
+      "pad": "S1",
+      "net": "GND",
+      "center_mm": [
+        56.5,
+        63.31999999999999
+      ],
+      "size_mm": [
+        1.8,
+        1.0
+      ],
+      "drill_mm": [
+        1.4,
+        0.6
+      ],
+      "front": true,
+      "back": true
+    }
+  ],
+  "copper": [
+    {
+      "reference": "H6",
+      "pad": "1",
+      "net": "CC2",
+      "center_mm": [
+        56.82499999999999,
+        70.6
+      ],
+      "size_mm": [
+        1.6,
+        1.6
+      ],
+      "drill_mm": [
+        0.8,
+        0.8
+      ],
+      "front": true,
+      "back": true
+    },
+    {
+      "reference": "H5",
+      "pad": "1",
+      "net": "DM",
+      "center_mm": [
+        54.625,
+        70.6
+      ],
+      "size_mm": [
+        1.6,
+        1.6
+      ],
+      "drill_mm": [
+        0.8,
+        0.8
+      ],
+      "front": true,
+      "back": true
+    },
+    {
+      "reference": "H4",
+      "pad": "1",
+      "net": "GND",
+      "center_mm": [
+        52.42500000000001,
+        70.6
+      ],
+      "size_mm": [
+        1.6,
+        1.6
+      ],
+      "drill_mm": [
+        0.8,
+        0.8
+      ],
+      "front": true,
+      "back": true
+    },
+    {
+      "reference": "H3",
+      "pad": "1",
+      "net": "CC1",
+      "center_mm": [
+        56.82499999999999,
+        47.400000000000006
+      ],
+      "size_mm": [
+        1.6,
+        1.6
+      ],
+      "drill_mm": [
+        0.8,
+        0.8
+      ],
+      "front": true,
+      "back": true
+    },
+    {
+      "reference": "H2",
+      "pad": "1",
+      "net": "DP",
+      "center_mm": [
+        54.625,
+        47.400000000000006
+      ],
+      "size_mm": [
+        1.6,
+        1.6
+      ],
+      "drill_mm": [
+        0.8,
+        0.8
+      ],
+      "front": true,
+      "back": true
+    },
+    {
+      "reference": "H1",
+      "pad": "1",
+      "net": "VBUS",
+      "center_mm": [
+        52.42500000000001,
+        47.400000000000006
+      ],
+      "size_mm": [
+        1.6,
+        1.6
+      ],
+      "drill_mm": [
+        0.8,
+        0.8
+      ],
+      "front": true,
+      "back": true
+    },
+    {
+      "reference": "R2",
+      "pad": "1",
+      "net": "CC2",
+      "center_mm": [
+        55.82499999999999,
+        61.32499999999999
+      ],
+      "size_mm": [
+        0.95,
+        0.8
+      ],
+      "drill_mm": [
+        0.0,
+        0.0
+      ],
+      "front": false,
+      "back": true
+    },
+    {
+      "reference": "R2",
+      "pad": "2",
+      "net": "GND",
+      "center_mm": [
+        55.82499999999999,
+        59.67500000000001
+      ],
+      "size_mm": [
+        0.95,
+        0.8
+      ],
+      "drill_mm": [
+        0.0,
+        0.0
+      ],
+      "front": false,
+      "back": true
+    },
+    {
+      "reference": "R1",
+      "pad": "1",
+      "net": "GND",
+      "center_mm": [
+        55.82499999999999,
+        58.32499999999999
+      ],
+      "size_mm": [
+        0.95,
+        0.8
+      ],
+      "drill_mm": [
+        0.0,
+        0.0
+      ],
+      "front": false,
+      "back": true
+    },
+    {
+      "reference": "R1",
+      "pad": "2",
+      "net": "CC1",
+      "center_mm": [
+        55.82499999999999,
+        56.67500000000001
+      ],
+      "size_mm": [
+        0.95,
+        0.8
+      ],
+      "drill_mm": [
+        0.0,
+        0.0
+      ],
+      "front": false,
+      "back": true
+    },
+    {
+      "reference": "J1",
+      "pad": "A1",
+      "net": "GND",
+      "center_mm": [
+        51.745000000000005,
+        55.80000000000001
+      ],
+      "size_mm": [
+        1.15,
+        0.6
+      ],
+      "drill_mm": [
+        0.0,
+        0.0
+      ],
+      "front": true,
+      "back": false
+    },
+    {
+      "reference": "J1",
+      "pad": "A4",
+      "net": "VBUS",
+      "center_mm": [
+        51.745000000000005,
+        56.599999999999994
+      ],
+      "size_mm": [
+        1.15,
+        0.6
+      ],
+      "drill_mm": [
+        0.0,
+        0.0
+      ],
+      "front": true,
+      "back": false
+    },
+    {
+      "reference": "J1",
+      "pad": "A5",
+      "net": "CC1",
+      "center_mm": [
+        51.745000000000005,
+        57.75
+      ],
+      "size_mm": [
+        1.15,
+        0.3
+      ],
+      "drill_mm": [
+        0.0,
+        0.0
+      ],
+      "front": true,
+      "back": false
+    },
+    {
+      "reference": "J1",
+      "pad": "A6",
+      "net": "DP",
+      "center_mm": [
+        51.745000000000005,
+        58.75
+      ],
+      "size_mm": [
+        1.15,
+        0.3
+      ],
+      "drill_mm": [
+        0.0,
+        0.0
+      ],
+      "front": true,
+      "back": false
+    },
+    {
+      "reference": "J1",
+      "pad": "A7",
+      "net": "DM",
+      "center_mm": [
+        51.745000000000005,
+        59.25
+      ],
+      "size_mm": [
+        1.15,
+        0.3
+      ],
+      "drill_mm": [
+        0.0,
+        0.0
+      ],
+      "front": true,
+      "back": false
+    },
+    {
+      "reference": "J1",
+      "pad": "A8",
+      "net": "",
+      "center_mm": [
+        51.745000000000005,
+        60.25
+      ],
+      "size_mm": [
+        1.15,
+        0.3
+      ],
+      "drill_mm": [
+        0.0,
+        0.0
+      ],
+      "front": true,
+      "back": false
+    },
+    {
+      "reference": "J1",
+      "pad": "A9",
+      "net": "VBUS",
+      "center_mm": [
+        51.745000000000005,
+        61.400000000000006
+      ],
+      "size_mm": [
+        1.15,
+        0.6
+      ],
+      "drill_mm": [
+        0.0,
+        0.0
+      ],
+      "front": true,
+      "back": false
+    },
+    {
+      "reference": "J1",
+      "pad": "A12",
+      "net": "GND",
+      "center_mm": [
+        51.745000000000005,
+        62.19999999999999
+      ],
+      "size_mm": [
+        1.15,
+        0.6
+      ],
+      "drill_mm": [
+        0.0,
+        0.0
+      ],
+      "front": true,
+      "back": false
+    },
+    {
+      "reference": "J1",
+      "pad": "B1",
+      "net": "GND",
+      "center_mm": [
+        51.745000000000005,
+        62.19999999999999
+      ],
+      "size_mm": [
+        1.15,
+        0.6
+      ],
+      "drill_mm": [
+        0.0,
+        0.0
+      ],
+      "front": true,
+      "back": false
+    },
+    {
+      "reference": "J1",
+      "pad": "B4",
+      "net": "VBUS",
+      "center_mm": [
+        51.745000000000005,
+        61.400000000000006
+      ],
+      "size_mm": [
+        1.15,
+        0.6
+      ],
+      "drill_mm": [
+        0.0,
+        0.0
+      ],
+      "front": true,
+      "back": false
+    },
+    {
+      "reference": "J1",
+      "pad": "B5",
+      "net": "CC2",
+      "center_mm": [
+        51.745000000000005,
+        60.75
+      ],
+      "size_mm": [
+        1.15,
+        0.3
+      ],
+      "drill_mm": [
+        0.0,
+        0.0
+      ],
+      "front": true,
+      "back": false
+    },
+    {
+      "reference": "J1",
+      "pad": "B6",
+      "net": "DP",
+      "center_mm": [
+        51.745000000000005,
+        59.75
+      ],
+      "size_mm": [
+        1.15,
+        0.3
+      ],
+      "drill_mm": [
+        0.0,
+        0.0
+      ],
+      "front": true,
+      "back": false
+    },
+    {
+      "reference": "J1",
+      "pad": "B7",
+      "net": "DM",
+      "center_mm": [
+        51.745000000000005,
+        58.25
+      ],
+      "size_mm": [
+        1.15,
+        0.3
+      ],
+      "drill_mm": [
+        0.0,
+        0.0
+      ],
+      "front": true,
+      "back": false
+    },
+    {
+      "reference": "J1",
+      "pad": "B8",
+      "net": "",
+      "center_mm": [
+        51.745000000000005,
+        57.25
+      ],
+      "size_mm": [
+        1.15,
+        0.3
+      ],
+      "drill_mm": [
+        0.0,
+        0.0
+      ],
+      "front": true,
+      "back": false
+    },
+    {
+      "reference": "J1",
+      "pad": "B9",
+      "net": "VBUS",
+      "center_mm": [
+        51.745000000000005,
+        56.599999999999994
+      ],
+      "size_mm": [
+        1.15,
+        0.6
+      ],
+      "drill_mm": [
+        0.0,
+        0.0
+      ],
+      "front": true,
+      "back": false
+    },
+    {
+      "reference": "J1",
+      "pad": "B12",
+      "net": "GND",
+      "center_mm": [
+        51.745000000000005,
+        55.80000000000001
+      ],
+      "size_mm": [
+        1.15,
+        0.6
+      ],
+      "drill_mm": [
+        0.0,
+        0.0
+      ],
+      "front": true,
+      "back": false
+    },
+    {
+      "reference": "J1",
+      "pad": "S1",
+      "net": "GND",
+      "center_mm": [
+        52.31999999999999,
+        54.68000000000001
+      ],
+      "size_mm": [
+        2.1,
+        1.0
+      ],
+      "drill_mm": [
+        1.7,
+        0.6
+      ],
+      "front": true,
+      "back": true
+    },
+    {
+      "reference": "J1",
+      "pad": "S1",
+      "net": "GND",
+      "center_mm": [
+        56.5,
+        54.68000000000001
+      ],
+      "size_mm": [
+        1.8,
+        1.0
+      ],
+      "drill_mm": [
+        1.4,
+        0.6
+      ],
+      "front": true,
+      "back": true
+    },
+    {
+      "reference": "J1",
+      "pad": "S1",
+      "net": "GND",
+      "center_mm": [
+        52.31999999999999,
+        63.31999999999999
+      ],
+      "size_mm": [
+        2.1,
+        1.0
+      ],
+      "drill_mm": [
+        1.7,
+        0.6
+      ],
+      "front": true,
+      "back": true
+    },
+    {
+      "reference": "J1",
+      "pad": "S1",
+      "net": "GND",
+      "center_mm": [
+        56.5,
+        63.31999999999999
+      ],
+      "size_mm": [
+        1.8,
+        1.0
+      ],
+      "drill_mm": [
+        1.4,
+        0.6
+      ],
+      "front": true,
+      "back": true
+    }
+  ],
+  "terminal_order": [
+    [
+      "H1",
+      -11.6,
+      -3,
+      "VBUS"
+    ],
+    [
+      "H2",
+      -11.6,
+      -0.8,
+      "DP"
+    ],
+    [
+      "H3",
+      -11.6,
+      1.4,
+      "CC1"
+    ],
+    [
+      "H4",
+      11.6,
+      -3,
+      "GND"
+    ],
+    [
+      "H5",
+      11.6,
+      -0.8,
+      "DM"
+    ],
+    [
+      "H6",
+      11.6,
+      1.4,
+      "CC2"
+    ]
+  ],
+  "connector_pin_nets": {
+    "A1": "GND",
+    "B12": "GND",
+    "A12": "GND",
+    "B1": "GND",
+    "S1": "GND",
+    "A4": "VBUS",
+    "B9": "VBUS",
+    "A9": "VBUS",
+    "B4": "VBUS",
+    "A5": "CC1",
+    "B5": "CC2",
+    "A6": "DP",
+    "B6": "DP",
+    "A7": "DM",
+    "B7": "DM"
+  },
+  "library_sha256": "b48648d0fd08d0fded58487a7c36cd5881ef33451fb6e3f4295d4c6e54d31075",
+  "kicad_version": "10.0.6"
+}

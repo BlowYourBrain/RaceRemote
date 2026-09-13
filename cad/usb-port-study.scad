@@ -1,13 +1,14 @@
-// USB-MOUNT-01 proposal 0.2. mm, front +Y; side opening faces +X.
+// USB-MOUNT-01 proposal 0.3. mm, front +Y; side opening faces +X.
 // Connector: GCT USB4105-GF-A maximum envelope from drawing B4.
 // Daughterboard/fasteners/cable are design budgets, NOT purchased modules.
 use <adjustable-layout.scad>
 use <body-study.scad>
 use <assembly.scad>
 use <battery-holder.scad>
+use <components/usb-port-pcb.scad>
 part="assembly";
 $fn=48;
-face_x=58.5;
+face_x=59.1;
 port_y=59;
 pcb_top=23.15;
 port_z=pcb_top+3.46/2;
@@ -30,17 +31,19 @@ module port_base() {
 }
 module port_pcb() {
     difference() {
-        translate([50.9,48,22.15]) cube([7.6,22,1]);
+        translate([50.9,46,22.15]) cube([7.6,26,1]);
         fixing_holes(22,1.4);
+        usb_port_drills();
     }
 }
 module connector() {
     // Maximum external body; electrical contacts are not modelled.
     translate([face_x-7.5,port_y-9.09/2,pcb_top]) cube([7.5,9.09,3.46]);
+    usb_port_stakes();
 }
 module pcb_components() {
-    // Underside passive reserve; detailed pads/traces/stakes still to route.
-    translate([51.25,57,20.35]) cube([3,6,1.5]);
+    // Resistor body and soldered wire budgets at the routed pad positions.
+    usb_port_underside();
 }
 module fasteners() {
     for(y=[51,67]) translate([55.25,y,0]) {
@@ -70,6 +73,7 @@ if(part=="base") port_base();
 else if(part=="pcb") port_pcb();
 else if(part=="connector") connector();
 else if(part=="components") pcb_components();
+else if(part=="copper") usb_port_copper();
 else if(part=="fasteners") fasteners();
 else if(part=="body") port_body();
 else if(part=="cover") cosmetic_cover();
@@ -88,6 +92,7 @@ else if(part=="assembly") {
     color([.6,.45,.6]) { adjustable_driver(); adjustable_charge(); }
     color([.1,.5,.3]) { port_pcb(); pcb_components(); }
     color("silver") connector();
+    color([.9,.65,.1]) usb_port_copper();
     color([.25,.45,.7,.18]) port_body();
     color([.9,.15,.15,.25]) { plug_budget(); cable_budget(); }
 } else assert(false,"Unknown part");

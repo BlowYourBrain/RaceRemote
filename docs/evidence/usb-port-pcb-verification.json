@@ -1,0 +1,182 @@
+{
+  "kicad_version": "10.0.6",
+  "checks": {
+    "drc_violations": 0,
+    "unconnected_items": 0,
+    "separate_cc_resistors": true
+  },
+  "actual_pad_nets": {
+    "H1": [
+      {
+        "pad": "1",
+        "net": "VBUS"
+      }
+    ],
+    "J1": [
+      {
+        "pad": "",
+        "net": ""
+      },
+      {
+        "pad": "",
+        "net": ""
+      },
+      {
+        "pad": "A1",
+        "net": "GND"
+      },
+      {
+        "pad": "A4",
+        "net": "VBUS"
+      },
+      {
+        "pad": "A5",
+        "net": "CC1"
+      },
+      {
+        "pad": "A6",
+        "net": "DP"
+      },
+      {
+        "pad": "A7",
+        "net": "DM"
+      },
+      {
+        "pad": "A8",
+        "net": ""
+      },
+      {
+        "pad": "A9",
+        "net": "VBUS"
+      },
+      {
+        "pad": "A12",
+        "net": "GND"
+      },
+      {
+        "pad": "B1",
+        "net": "GND"
+      },
+      {
+        "pad": "B4",
+        "net": "VBUS"
+      },
+      {
+        "pad": "B5",
+        "net": "CC2"
+      },
+      {
+        "pad": "B6",
+        "net": "DP"
+      },
+      {
+        "pad": "B7",
+        "net": "DM"
+      },
+      {
+        "pad": "B8",
+        "net": ""
+      },
+      {
+        "pad": "B9",
+        "net": "VBUS"
+      },
+      {
+        "pad": "B12",
+        "net": "GND"
+      },
+      {
+        "pad": "S1",
+        "net": "GND"
+      },
+      {
+        "pad": "S1",
+        "net": "GND"
+      },
+      {
+        "pad": "S1",
+        "net": "GND"
+      },
+      {
+        "pad": "S1",
+        "net": "GND"
+      }
+    ],
+    "M1": [
+      {
+        "pad": "",
+        "net": ""
+      }
+    ],
+    "H3": [
+      {
+        "pad": "1",
+        "net": "CC1"
+      }
+    ],
+    "H5": [
+      {
+        "pad": "1",
+        "net": "DM"
+      }
+    ],
+    "M2": [
+      {
+        "pad": "",
+        "net": ""
+      }
+    ],
+    "H4": [
+      {
+        "pad": "1",
+        "net": "GND"
+      }
+    ],
+    "H6": [
+      {
+        "pad": "1",
+        "net": "CC2"
+      }
+    ],
+    "H2": [
+      {
+        "pad": "1",
+        "net": "DP"
+      }
+    ],
+    "R1": [
+      {
+        "pad": "1",
+        "net": "GND"
+      },
+      {
+        "pad": "2",
+        "net": "CC1"
+      }
+    ],
+    "R2": [
+      {
+        "pad": "1",
+        "net": "CC2"
+      },
+      {
+        "pad": "2",
+        "net": "GND"
+      }
+    ]
+  },
+  "sha256": {
+    "hardware/usb-port/usb-port.kicad_pcb": "2a4c4cb2a4002315a3c51eb034430996a6b201ccd8ec8ad74ca204c36a48d2e8",
+    "hardware/usb-port/usb-port.kicad_pro": "f3174c48b49aaadef871168896c20458380c8fbdb6ae8ffed433021596974930",
+    "hardware/usb-port/geometry.json": "a55962dbc36f535d3f8617a8f7a08db69abf7e13c3d80c00947781571288a5fc",
+    "docs/evidence/usb-port-pcb-drc.json": "a4d136f457440d1a2217cb81733f132a75b2258b1fed01d42ad37c0b592d5353",
+    "cad/components/usb-port-pcb.scad": "173d1a220a61b3d6af4912505d4cef2d904b89ca5e496fd19e85b1b05466f24e"
+  },
+  "not_verified": [
+    "Schematic parity and ERC",
+    "Actual soldered components",
+    "USB source recognition by charger",
+    "Current and temperature",
+    "ESD and harness strain relief"
+  ]
+}

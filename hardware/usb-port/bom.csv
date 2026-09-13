@@ -1,0 +1,6 @@
+Reference;Quantity_per_car;Description;Footprint;Purchase_status
+J1;1;GCT USB4105-GF-A;USB_C_Receptacle_GCT_USB4105-xx-A_16P_TopMnt_Horizontal;Offers in docs/charge-parts.md - not ordered
+R1 R2;2;5.1k ohm 1 percent 0603;R_0603_1608Metric;Exact manufacturer and offer unselected
+PCB;1;2 layers 26x7.6 mm thickness 1 mm copper 35um;;Fabricator and cost unselected
+H1 H2 H3 H4 H5 H6;0;Integrated solder pads - six wires required;;Wire specification and strain relief unselected
+M1 M2;0;Integrated 2.4 mm mounting holes - M2 hardware required;;Screw length and nut type not finalized

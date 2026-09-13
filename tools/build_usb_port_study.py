@@ -35,7 +35,7 @@ def main():
     assert drawing.read_bytes().startswith(b'%PDF') and sha(drawing) == DRAWING_SHA, 'Connector drawing changed; review dimensions'
     design = cad / 'usb-port-study.scad'
     meshes = {}
-    for name in ['base', 'pcb', 'connector', 'components', 'fasteners', 'body', 'cover', 'plug', 'fingers', 'cable']:
+    for name in ['base', 'pcb', 'connector', 'components', 'copper', 'fasteners', 'body', 'cover', 'plug', 'fingers', 'cable']:
         path = out / f'{name}.stl'
         result = subprocess.run([OPENSCAD, '-o', str(path), '-D', f'part="{name}"', str(design)],
                                 check=True, capture_output=True, text=True)
@@ -55,7 +55,7 @@ def main():
     for name in ['frame', 'cover']:
         fixed['zcar_' + name] = trimesh.load_mesh(ROOT / f'build/cad-layout/{name}.stl')
 
-    external = ['pcb', 'connector', 'components', 'fasteners', 'plug', 'fingers', 'cable']
+    external = ['pcb', 'connector', 'components', 'copper', 'fasteners', 'plug', 'fingers', 'cable']
     check_names = [n for n in fixed if n not in ['cavity', 'camera']]
     checks = {name: {other: overlap(meshes[name], fixed[other]) for other in check_names}
               for name in external}
@@ -80,7 +80,7 @@ def main():
     swap = {n: overlap(battery_sweep, meshes[n]) for n in ['base', 'pcb', 'connector', 'components', 'fasteners']}
     assert max(swap.values()) < 1e-3, swap
     # Cable insertion is straight outward; cover must be removed first.
-    insertion_sweep = box([44, 18, 9], [80.5, 59, 24.88])
+    insertion_sweep = box([44, 18, 9], [81.1, 59, 24.88])
     insertion = {n: overlap(insertion_sweep, meshes[n]) for n in ['base', 'pcb', 'connector', 'components', 'fasteners', 'body']}
     assert max(insertion.values()) < 1e-3, insertion
     cover_block = overlap(meshes['cover'], meshes['plug'])
@@ -88,7 +88,7 @@ def main():
 
     # Added fixed geometry versus all 12 discrete existing stage positions.
     slides = {}
-    obstacle = trimesh.util.concatenate([meshes[n] for n in ['pcb', 'connector', 'components', 'fasteners']])
+    obstacle = trimesh.util.concatenate([meshes[n] for n in ['pcb', 'connector', 'components', 'copper', 'fasteners']])
     # Base tabs included as the whole new base; original stage/base contacts are zero-volume.
     for mm in range(-3, 9):
         values = {}
@@ -114,8 +114,9 @@ def main():
         reference_hits[n] = hits
 
     rows = [('reference', 'Механика zcar: статическая модель', reference, [.57, .64, .69], False)]
-    labels = {'base': 'Основание с опорами USB', 'pcb': 'Плата порта: проектируемый контур, не готовая PCB',
-              'connector': 'USB4105-GF-A: максимальный габарит', 'components': 'Резерв пассивных деталей / пайки жгута',
+    labels = {'base': 'Основание с опорами USB', 'pcb': 'Плата 7,6×26×1: разведена, не изготовлена',
+              'connector': 'USB4105-GF-A: габарит и монтажные выводы', 'components': 'Резисторы и резерв пайки жгута',
+              'copper': 'Площадки из KiCad; дорожки показаны в редакторе PCB',
               'fasteners': 'Резерв двух винтов M2 с гайками', 'body': 'Условный кузов с окном',
               'cover': 'Накладка над портом: фиксация ещё не спроектирована',
               'plug': 'Штекер: условный корпус 18×9×24', 'fingers': 'Резерв для пальцев — проверить руками',
@@ -124,6 +125,7 @@ def main():
         shown = mesh.copy()
         color = [.9, .15, .15] if n in ['plug', 'fingers', 'cable'] else [.2, .6, .45]
         if n == 'connector': color = [.75, .75, .8]
+        if n == 'copper': color = [.9, .65, .1]
         if n in ['body', 'cover']: color = [.2, .35, .7]
         rows.append((n, labels[n], shown, color, n in ['body', 'fingers', 'plug', 'cable']))
     fixed_labels = {'tray': 'Подвижный поддон', 'camera_mount': 'Крепление камеры',
@@ -149,9 +151,9 @@ def main():
         scene.append(dict(id=name, label=label, color=color, level=0, wire=wire, slide=None,
                           count=len(pos), data=base64.b64encode(packed.tobytes()).decode()))
     template = (ROOT / 'tools/cad_viewer_template.html').read_text(encoding='utf-8')
-    template = template.replace('3D-компоновка 0.1', 'Зарядный порт 0.1').replace('assembly.scad', 'usb-port-study.scad').replace('assembly.md', 'usb-port-study.md')
+    template = template.replace('3D-компоновка 0.1', 'Зарядный порт 0.2').replace('assembly.scad', 'usb-port-study.scad').replace('assembly.md', 'usb-port-study.md')
     start = template.index('<p class="note">'); end = template.index('</p>', start)
-    template = template[:start] + '<p class="note">Боковой USB-C на шасси. Кузов, плата порта и кабель — проектные габариты. Переключайте закрытый порт и подключение. Фиксация и края накладки ещё не разработаны.' + template[end:]
+    template = template[:start] + '<p class="note">Боковой USB-C на шасси. Плата разведена в KiCad; кузов и кабель условные. Переключайте закрытый порт и подключение. Фиксация накладки и физическая примерка ещё впереди.' + template[end:]
     template = template.replace('<div id="parts">', '<button id="port-closed">Порт скрыт</button><button id="port-open">Подключение кабеля</button><div id="parts">')
     template = template.replace('__ADJUSTMENT_DATA__', 'null').replace('__SCENE_DATA__', json.dumps(scene, ensure_ascii=False))
     mode_js = """
@@ -176,7 +178,8 @@ portMode(true);
     preview = ROOT / 'docs/evidence/usb-port-overview.png'
     subprocess.run([OPENSCAD, '--preview', '--imgsize=1400,1000', '--autocenter', '--viewall',
                     '-o', str(preview), str(design)], check=True, capture_output=True)
-    report = dict(version='0.1', units='mm', design_sha256=sha(design),
+    report = dict(version='0.2', units='mm', design_sha256=sha(design),
+                  pad_geometry_sha256=sha(cad/'components/usb-port-pcb.scad'),
                   connector_source=DRAWING_URL,
                   connector_drawing_revision='B4 2023-12-18',
                   connector_drawing_sha256=sha(drawing),
@@ -185,7 +188,7 @@ portMode(true);
                   outside_cavity_mm3=inside, closed_cover_hardware_overlap_mm3=closed_cover, battery_exit_sweep_mm3=swap,
                   insertion_sweep_mm3=insertion, closed_cover_positive_control_mm3=cover_block,
                   discrete_slide_checks_mm3=slides, other_reference_box_hits=reference_hits,
-                  limitations=['No physical cable/print/strain tests', 'No PCB routing or electrical assembly',
+                  limitations=['No physical cable/print/strain tests', 'PCB routed, no assembly or thermal measurements',
                                'Cosmetic cover has no retention mechanism', 'No wires or suspension travel',
                                'Old SG90 collision and OV3660 revision uncertainty remain open'],
                   outputs_sha256={p.name: sha(p) for p in [cad / 'usb-port-base.stl', cad / 'usb-port-pcb.stl', cad / 'usb-port-study-viewer.html', preview]})

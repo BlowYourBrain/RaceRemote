@@ -1,0 +1,6 @@
+sample_id;date;vm_measured_V;logic_supply_measured_V;fi_command;bi_command;fi_measured_V;bi_measured_V;fo_measured_V;bo_measured_V;supply_current_mA;notes
+;;;;0;0;;;;;;
+;;;;1;0;;;;;;
+;;;;0;1;;;;;;
+;;;;1;1;;;;;;
+;;;;0;0;;;;;;

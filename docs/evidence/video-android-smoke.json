@@ -1,0 +1,125 @@
+{
+  "date": "2026-09-13",
+  "device": "Samsung SM-G973F, Android 12",
+  "transport": "USB adb reverse; NOT Wi-Fi",
+  "source": "tools/fpv_test_source.py --fps 60 --seconds 20; synthetic 640x480 JPEG",
+  "apk_sha256": "c4c3f7d50614dc201fc8196f08f7ca0f221c911bc1fe85c5a7d545c5a31dacda",
+  "samples": [
+    {
+      "received_fps": 57.84313725490196,
+      "decoded_fps": 54.90196078431372,
+      "drawn_fps": 40.19607843137255
+    },
+    {
+      "received_fps": 61.76470588235294,
+      "decoded_fps": 57.84313725490196,
+      "drawn_fps": 44.11764705882353
+    },
+    {
+      "received_fps": 59.92141453831041,
+      "decoded_fps": 60.90373280943025,
+      "drawn_fps": 46.16895874263261
+    },
+    {
+      "received_fps": 59.34718100890208,
+      "decoded_fps": 59.34718100890208,
+      "drawn_fps": 49.45598417408507
+    },
+    {
+      "received_fps": 60.5759682224429,
+      "decoded_fps": 58.58987090367429,
+      "drawn_fps": 44.68718967229395
+    },
+    {
+      "received_fps": 59.230009871668315,
+      "decoded_fps": 60.21717670286279,
+      "drawn_fps": 48.37117472852913
+    },
+    {
+      "received_fps": 61.325420375865484,
+      "decoded_fps": 59.34718100890208,
+      "drawn_fps": 47.47774480712167
+    },
+    {
+      "received_fps": 58.415841584158414,
+      "decoded_fps": 59.40594059405941,
+      "drawn_fps": 45.54455445544554
+    },
+    {
+      "received_fps": 61.26482213438735,
+      "decoded_fps": 60.276679841897234,
+      "drawn_fps": 47.43083003952569
+    },
+    {
+      "received_fps": 59.46481665014867,
+      "decoded_fps": 59.46481665014867,
+      "drawn_fps": 50.54509415262637
+    },
+    {
+      "received_fps": 60.455896927651146,
+      "decoded_fps": 60.455896927651146,
+      "drawn_fps": 48.56293359762141
+    },
+    {
+      "received_fps": 59.523809523809526,
+      "decoded_fps": 59.523809523809526,
+      "drawn_fps": 45.63492063492063
+    },
+    {
+      "received_fps": 60.51587301587301,
+      "decoded_fps": 59.523809523809526,
+      "drawn_fps": 47.61904761904762
+    },
+    {
+      "received_fps": 57.48265609514371,
+      "decoded_fps": 56.491575817641234,
+      "drawn_fps": 46.58077304261646
+    },
+    {
+      "received_fps": 61.26482213438735,
+      "decoded_fps": 61.26482213438735,
+      "drawn_fps": 43.47826086956522
+    },
+    {
+      "received_fps": 60.21717670286279,
+      "decoded_fps": 60.21717670286279,
+      "drawn_fps": 45.40967423494571
+    },
+    {
+      "received_fps": 61.08374384236454,
+      "decoded_fps": 60.098522167487694,
+      "drawn_fps": 49.26108374384237
+    },
+    {
+      "received_fps": 59.40594059405941,
+      "decoded_fps": 59.40594059405941,
+      "drawn_fps": 45.54455445544554
+    },
+    {
+      "received_fps": 60.455896927651146,
+      "decoded_fps": 61.44697720515362,
+      "drawn_fps": 48.56293359762141
+    },
+    {
+      "received_fps": 46.67328699106257,
+      "decoded_fps": 46.67328699106257,
+      "drawn_fps": 32.770605759682226
+    },
+    {
+      "received_fps": 0.0,
+      "decoded_fps": 0.0,
+      "drawn_fps": 0.0
+    }
+  ],
+  "complete_active_windows": 19,
+  "active_drawn_min": 40.19607843137255,
+  "active_drawn_median": 46.58077304261646,
+  "active_drawn_max": 50.54509415262637,
+  "end": "Video timeout after source stalled; image cleared",
+  "limitations": [
+    "onDraw submissions counted, not optical display/capture latency",
+    "No camera, radio, simultaneous physical controller or motor in this FPS run",
+    "Last partial active window and zero-FPS stall window retained in samples",
+    "Not a CAMERA-03 acceptance result"
+  ]
+}

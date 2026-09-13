@@ -57,4 +57,5 @@ dependencies {
     testImplementation(AppDependencies.testLibraries)
     testImplementation("com.squareup.okhttp3:mockwebserver:3.14.9")
     androidTestImplementation(AppDependencies.androidTestLibraries)
+    androidTestImplementation("com.squareup.okhttp3:mockwebserver:3.14.9")
 }

@@ -1,5 +1,7 @@
 # Project continuity
 
+Drive planning now exists in ../RC_CAR_ESP32/prototype/drive_plan.h, called by the independent watchdog task. Read docs/drive-output-plan.md. It is a shadow plan only: outputsEnabled stays false and actuator GPIOs are not configured. Proposed cap 250 permille, rise 1000 permille/s and reverse pause 200 ms are not measured motor limits. Preserve the STOP revision/session barrier and independent freshness check when adding a hardware backend. Steering is normalized, not calibrated microseconds. Host checks, three injected faults and four affected builds passed; no upload or physical motion was performed for this addition.
+
 Delivery city: Cheboksary, explicitly confirmed by the user. Do not ask for the city again; shipping method and a specific pickup point/address remain unselected.
 
 Preferred purchasing sources: Ozon, Wildberries, AliExpress, and Chip and Dip (chipdip.ru). Search these first. Other shops in older price tables are research references or fallback candidates, not accepted sellers. Verify the exact variant, seller, price conditions and shipping when available. AliExpress challenged the automation browser even when the user tried solving its CAPTCHA; avoid repeated challenges and do not claim the technical cause is known. Mark inaccessible offer details unverified and continue other research.

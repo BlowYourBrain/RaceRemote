@@ -1,5 +1,7 @@
 # Project continuity
 
+Preferred purchasing sources: Ozon, Wildberries, AliExpress, and Chip and Dip (chipdip.ru). Search these first. Other shops in older price tables are research references or fallback candidates, not accepted sellers. Verify the exact variant, seller, price conditions and shipping when available. AliExpress challenged the automation browser even when the user tried solving its CAPTCHA; avoid repeated challenges and do not claim the technical cause is known. Mark inaccessible offer details unverified and continue other research.
+
 Before working on this project, read `docs/project-brief.md` and `docs/contracts.md`. For chassis work, also read `docs/chassis-candidates.md`.
 
 The user explicitly requires recording key points and contracts as work progresses:

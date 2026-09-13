@@ -1,0 +1,93 @@
+{
+  "source": "https://github.com/alexyu132/zcar",
+  "revision": "4b714e63fa30ed2030a8a48ab15f1e4a5fa380c4",
+  "source_sha256": {
+    "stl/zcar.stl": "943f59bfecd42b7eed32457dfd166559b0aec8fc64f6cd9ba6ce526d3f7c0e5b",
+    "stl/tray1.stl": "5d9c1d6f2f740d71cea5a07317a2dbb2606f30c652ecb4ba899b85167724aa3f",
+    "stl/tray2.stl": "44561b48c19ec3cb11517ea24b86e9ed3d700931f4e6803e16f6beb4a275bb8e"
+  },
+  "units": "mm inferred from upstream dimensions; STL has no unit metadata",
+  "axes": "X across chassis, Y along chassis, Z up; origin at frame bounds minimum",
+  "alignment_vertex_to_assembly_surface": {
+    "frame": {
+      "max_distance_mm": 1.0352760253576283,
+      "p95_distance_mm": 5.401673542040774e-06,
+      "vertices_farther_than_0_001mm": 3
+    },
+    "cover": {
+      "max_distance_mm": 8.027361285013451e-06,
+      "p95_distance_mm": 4.646793666437613e-06,
+      "vertices_farther_than_0_001mm": 0
+    }
+  },
+  "battery_mm": [
+    49,
+    18,
+    15
+  ],
+  "battery_center_mm": [
+    24.75,
+    55,
+    10.25
+  ],
+  "dimensions_status": "Seller dimensions; user batteries not measured",
+  "checks": {
+    "installed": {
+      "bounds_mm": [
+        [
+          0.25,
+          46.0,
+          2.75
+        ],
+        [
+          49.25,
+          64.0,
+          17.75
+        ]
+      ],
+      "frame_intersection_mm3": 0.0,
+      "cover_intersection_mm3": 0.0,
+      "other_assembly_aabb_overlaps": []
+    },
+    "lateral_sweep": {
+      "bounds_mm": [
+        [
+          -49.75,
+          46.0,
+          2.75
+        ],
+        [
+          49.25,
+          64.0,
+          17.75
+        ]
+      ],
+      "frame_intersection_mm3": 0.0,
+      "cover_intersection_mm3": 0.0,
+      "other_assembly_aabb_overlaps": []
+    },
+    "lifted_1mm": {
+      "bounds_mm": [
+        [
+          0.25,
+          46.0,
+          3.75
+        ],
+        [
+          49.25,
+          64.0,
+          18.75
+        ]
+      ],
+      "frame_intersection_mm3": 0.0,
+      "cover_intersection_mm3": 428.0625,
+      "other_assembly_aabb_overlaps": []
+    }
+  },
+  "limits": [
+    "No wires, connectors, body shell or added electronics",
+    "No manufacturing tolerances, retention or physical validation",
+    "Zero overlap establishes geometry only; no distance tolerance test",
+    "Frame and cover use closed print meshes; other assembly parts use bounding boxes"
+  ]
+}

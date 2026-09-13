@@ -11,6 +11,8 @@
 *.class
 
 # Generated files
+__pycache__/
+*.pyc
 bin/
 gen/
 out/

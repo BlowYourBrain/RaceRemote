@@ -2,6 +2,7 @@
 
 Run with: uv run --with trimesh==5.1.0 --with numpy==2.4.6
     --with networkx==3.6.1 python tools/inspect_zcar.py build/upstream/zcar
+    --output docs/evidence/zcar-mesh-audit.json
 """
 
 import argparse

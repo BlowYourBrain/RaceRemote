@@ -1,0 +1,11 @@
+# Keep CAD provenance hashes stable across Windows checkouts.
+cad/assembly.scad text eol=lf
+cad/battery-holder.scad text eol=lf
+cad/assembly-viewer.html text eol=lf
+cad/electronics-carrier.stl binary
+cad/reference/zcar-aligned.stl binary
+cad/reference/zcar.skp binary
+# Retain the upstream README verbatim, including its existing whitespace.
+cad/reference/upstream-README.md -whitespace
+docs/evidence/assembly-layout.json text eol=lf
+tools/cad_viewer_template.html text eol=lf

@@ -1,0 +1,335 @@
+{
+  "revision": "4b714e63fa30ed2030a8a48ab15f1e4a5fa380c4",
+  "source_sha256": {
+    "stl/zcar.stl": "943f59bfecd42b7eed32457dfd166559b0aec8fc64f6cd9ba6ce526d3f7c0e5b",
+    "stl/tray1.stl": "5d9c1d6f2f740d71cea5a07317a2dbb2606f30c652ecb4ba899b85167724aa3f",
+    "stl/tray2.stl": "44561b48c19ec3cb11517ea24b86e9ed3d700931f4e6803e16f6beb4a275bb8e"
+  },
+  "design_sha256": "fa1158307d4c5189860d0f163559ea8598e0b19501a7a051ea8ba399a4f403a0",
+  "holder_sha256": "e7c8505f55fc38cb1c24fd015b88b3ac4bc1232aaa205772912c3249a2e5d4f7",
+  "checks": {
+    "carrier_installed": {
+      "frame_overlap_mm3": 0.0,
+      "cover_overlap_mm3": 0.0,
+      "other_reference_aabb_candidates": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        368,
+        369,
+        370,
+        371,
+        372,
+        373,
+        374,
+        375,
+        376
+      ],
+      "battery_extraction_sweep_overlap_mm3": 0.0,
+      "reference_candidate_box_overlap_mm3": {
+        "1": 0.0,
+        "2": 0.0,
+        "3": 0.0,
+        "4": 0.0,
+        "5": 0.0,
+        "6": 0.0,
+        "7": 0.0,
+        "8": 0.0,
+        "9": 0.0,
+        "368": 0.0,
+        "369": 0.0,
+        "370": 0.0,
+        "371": 0.0,
+        "372": 0.0,
+        "373": 0.0,
+        "374": 0.0,
+        "375": 0.0,
+        "376": 0.0
+      }
+    },
+    "adhesive": {
+      "frame_overlap_mm3": 0.0,
+      "cover_overlap_mm3": 0.0,
+      "other_reference_aabb_candidates": [],
+      "battery_extraction_sweep_overlap_mm3": 0.0,
+      "reference_candidate_box_overlap_mm3": {}
+    },
+    "control": {
+      "frame_overlap_mm3": 0.0,
+      "cover_overlap_mm3": 0.0,
+      "other_reference_aabb_candidates": [],
+      "battery_extraction_sweep_overlap_mm3": 0.0,
+      "reference_candidate_box_overlap_mm3": {}
+    },
+    "power": {
+      "frame_overlap_mm3": 0.0,
+      "cover_overlap_mm3": 0.0,
+      "other_reference_aabb_candidates": [],
+      "battery_extraction_sweep_overlap_mm3": 0.0,
+      "reference_candidate_box_overlap_mm3": {}
+    },
+    "camera": {
+      "frame_overlap_mm3": 0.0,
+      "cover_overlap_mm3": 0.0,
+      "other_reference_aabb_candidates": [],
+      "battery_extraction_sweep_overlap_mm3": 0.0,
+      "reference_candidate_box_overlap_mm3": {}
+    },
+    "driver": {
+      "frame_overlap_mm3": 0.0,
+      "cover_overlap_mm3": 0.0,
+      "other_reference_aabb_candidates": [],
+      "battery_extraction_sweep_overlap_mm3": 0.0,
+      "reference_candidate_box_overlap_mm3": {}
+    },
+    "charge": {
+      "frame_overlap_mm3": 0.0,
+      "cover_overlap_mm3": 0.0,
+      "other_reference_aabb_candidates": [],
+      "battery_extraction_sweep_overlap_mm3": 0.0,
+      "reference_candidate_box_overlap_mm3": {}
+    }
+  },
+  "pair_overlaps_mm3": {
+    "carrier_installed/adhesive": 0.0,
+    "carrier_installed/control": 0.0,
+    "carrier_installed/power": 0.0,
+    "carrier_installed/camera": 0.0,
+    "carrier_installed/driver": 0.0,
+    "carrier_installed/charge": 0.0,
+    "carrier_installed/battery": 0.0,
+    "carrier_installed/support": 0.0,
+    "carrier_installed/guards": 0.0,
+    "carrier_installed/band": 0.0,
+    "adhesive/control": 0.0,
+    "adhesive/power": 0.0,
+    "adhesive/camera": 0.0,
+    "adhesive/driver": 0.0,
+    "adhesive/charge": 0.0,
+    "adhesive/battery": 0.0,
+    "adhesive/support": 0.0,
+    "adhesive/guards": 0.0,
+    "adhesive/band": 0.0,
+    "control/power": 0.0,
+    "control/camera": 0.0,
+    "control/driver": 0.0,
+    "control/charge": 0.0,
+    "control/battery": 0.0,
+    "control/support": 0.0,
+    "control/guards": 0.0,
+    "control/band": 0.0,
+    "power/camera": 0.0,
+    "power/driver": 0.0,
+    "power/charge": 0.0,
+    "power/battery": 0.0,
+    "power/support": 0.0,
+    "power/guards": 0.0,
+    "power/band": 0.0,
+    "camera/driver": 0.0,
+    "camera/charge": 0.0,
+    "camera/battery": 0.0,
+    "camera/support": 0.0,
+    "camera/guards": 0.0,
+    "camera/band": 0.0,
+    "driver/charge": 0.0,
+    "driver/battery": 0.0,
+    "driver/support": 0.0,
+    "driver/guards": 0.0,
+    "driver/band": 0.0,
+    "charge/battery": 0.0,
+    "charge/support": 0.0,
+    "charge/guards": 0.0,
+    "charge/band": 0.0,
+    "battery/support": 0.0,
+    "battery/guards": 0.0,
+    "battery/band": 0.0,
+    "support/guards": 0.0,
+    "support/band": 0.0,
+    "guards/band": -7.579122514774402e-14
+  },
+  "foot_contact_areas_mm2": [
+    36.00013732910156,
+    36.00013732910156,
+    36.00013732910156,
+    36.00013732910156
+  ],
+  "lowered_carrier_positive_control_mm3": 1559.4030693323866,
+  "assembly_bounds_mm": [
+    [
+      -7.75,
+      0.0,
+      -7.0
+    ],
+    [
+      57.250003814697266,
+      123.62499809265137,
+      55.0
+    ]
+  ],
+  "component_bounds_mm": {
+    "carrier_installed": [
+      [
+        3.25,
+        40.0,
+        20.25
+      ],
+      [
+        46.25,
+        86.0,
+        55.0
+      ]
+    ],
+    "carrier_print": [
+      [
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        43.0,
+        46.0,
+        34.75
+      ]
+    ],
+    "adhesive": [
+      [
+        4.25,
+        45.0,
+        19.75
+      ],
+      [
+        45.25,
+        76.0,
+        20.25
+      ]
+    ],
+    "battery": [
+      [
+        0.25,
+        46.0,
+        2.75
+      ],
+      [
+        49.25,
+        64.0,
+        17.75
+      ]
+    ],
+    "control": [
+      [
+        13.75,
+        43.0,
+        27.0
+      ],
+      [
+        35.75,
+        61.0,
+        37.0
+      ]
+    ],
+    "power": [
+      [
+        8.25,
+        67.0,
+        27.0
+      ],
+      [
+        41.25,
+        83.0,
+        39.0
+      ]
+    ],
+    "camera": [
+      [
+        13.25,
+        27.0,
+        32.0
+      ],
+      [
+        36.25,
+        39.0,
+        53.0
+      ]
+    ],
+    "driver": [
+      [
+        9.75,
+        43.0,
+        40.0
+      ],
+      [
+        39.75,
+        61.0,
+        50.0
+      ]
+    ],
+    "charge": [
+      [
+        8.25,
+        67.0,
+        42.0
+      ],
+      [
+        41.25,
+        83.0,
+        50.0
+      ]
+    ],
+    "support": [
+      [
+        2.25,
+        44.5,
+        1.2
+      ],
+      [
+        47.25,
+        65.5,
+        4.25
+      ]
+    ],
+    "guards": [
+      [
+        -1.35,
+        51.0,
+        -1.35
+      ],
+      [
+        50.85,
+        59.0,
+        21.1
+      ]
+    ],
+    "band": [
+      [
+        -1.95,
+        53.5,
+        -1.95
+      ],
+      [
+        51.45,
+        56.5,
+        21.7
+      ]
+    ]
+  },
+  "exports": {
+    "assembly-viewer.html": "89f1c6e87a5cc2daccba5fb41e248f299cbd94ff8765d8ae17f75fbf2740bffd",
+    "electronics-carrier.stl": "34814e8c76a30211ddd15464dc7144e9f40b94d67b1866d744877dd7e32c551a",
+    "reference/zcar-aligned.stl": "6b9a4472f9d0ec66c48a293097752f0d0cf454891e8a72d25eb32fcd27098b78"
+  },
+  "preview_sha256": "6800f8ee075932012e773243c05bc6b0e2be6c09c80e38ce036937e370cbb38d",
+  "limitations": [
+    "Electronics are reserved envelopes, not exact purchasable component models",
+    "Original motor/servo/gearing retained; candidate fit and 9:43 not established",
+    "No wires, connectors, antenna, magnets or body shell",
+    "No suspension/steering sweep, strap removal path, load or print tests",
+    "Upper driver/charger blocks have no fastening yet; carrier requires print orientation/support design",
+    "Clearance checks cover static default geometry only"
+  ]
+}

@@ -18,7 +18,7 @@ import androidx.lifecycle.LifecycleEventObserver
 import okhttp3.OkHttpClient
 
 @Composable
-fun VideoPanel(modifier: Modifier = Modifier, onActiveChanged: (Boolean) -> Unit) {
+fun VideoPanel(modifier: Modifier = Modifier, showSettings: Boolean = true, onActiveChanged: (Boolean) -> Unit) {
     val context = LocalContext.current
     val lifecycle = LocalLifecycleOwner.current.lifecycle
     val activeCallback by rememberUpdatedState(onActiveChanged)
@@ -39,7 +39,7 @@ fun VideoPanel(modifier: Modifier = Modifier, onActiveChanged: (Boolean) -> Unit
         }
     }
     Column(modifier) {
-        Row(horizontalArrangement = Arrangement.spacedBy(8.dp)) {
+        if (showSettings) Row(horizontalArrangement = Arrangement.spacedBy(8.dp)) {
             OutlinedTextField(url, { url = it }, enabled = !active, singleLine = true,
                 label = { Text("Адрес видео") }, modifier = Modifier.weight(1f).testTag("video_address"))
             Button(onClick = {

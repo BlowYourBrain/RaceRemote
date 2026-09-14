@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="vea.raceremote.features.remote_control.CompoundCommandCreatorTest" tests="5" skipped="0" failures="0" errors="0" timestamp="2026-09-14T02:37:56" hostname="DESKTOP-LR64B4F" time="0.001">
+  <properties/>
+  <testcase name="create engine test" classname="vea.raceremote.features.remote_control.CompoundCommandCreatorTest" time="0.001"/>
+  <testcase name="start command test" classname="vea.raceremote.features.remote_control.CompoundCommandCreatorTest" time="0.0"/>
+  <testcase name="end command test" classname="vea.raceremote.features.remote_control.CompoundCommandCreatorTest" time="0.0"/>
+  <testcase name="create command test" classname="vea.raceremote.features.remote_control.CompoundCommandCreatorTest" time="0.0"/>
+  <testcase name="create steering wheel test" classname="vea.raceremote.features.remote_control.CompoundCommandCreatorTest" time="0.0"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

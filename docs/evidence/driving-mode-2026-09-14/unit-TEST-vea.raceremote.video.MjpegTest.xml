@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="vea.raceremote.video.MjpegTest" tests="4" skipped="0" failures="0" errors="0" timestamp="2026-09-14T02:37:56" hostname="DESKTOP-LR64B4F" time="0.04">
+  <properties/>
+  <testcase name="fragmentedReadsAndQuotedBoundaryPreserveEveryFrame" classname="vea.raceremote.video.MjpegTest" time="0.003"/>
+  <testcase name="htmlMissingBoundaryAndWrongDelimiterAreRejected" classname="vea.raceremote.video.MjpegTest" time="0.001"/>
+  <testcase name="videoEndingPreservesControlAndNewDriveAcknowledgements" classname="vea.raceremote.video.MjpegTest" time="0.033"/>
+  <testcase name="incompleteAndUnboundedFramesAreRejected" classname="vea.raceremote.video.MjpegTest" time="0.002"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[сент. 14, 2026 5:37:56 AM okhttp3.mockwebserver.MockWebServer$3 execute
+INFO: MockWebServer[64405] starting to accept connections
+сент. 14, 2026 5:37:56 AM okhttp3.mockwebserver.MockWebServer$3 execute
+INFO: MockWebServer[64406] starting to accept connections
+сент. 14, 2026 5:37:56 AM okhttp3.mockwebserver.MockWebServer$4 processOneRequest
+INFO: MockWebServer[64406] received request: GET /stream HTTP/1.1 and responded: HTTP/1.1 200 OK
+сент. 14, 2026 5:37:56 AM okhttp3.mockwebserver.MockWebServer$4 processOneRequest
+INFO: MockWebServer[64405] received request: GET /control HTTP/1.1 and responded: HTTP/1.1 101 Switching Protocols
+сент. 14, 2026 5:37:56 AM okhttp3.mockwebserver.MockWebServer$3 acceptConnections
+INFO: MockWebServer[64405] done accepting connections: Socket closed
+сент. 14, 2026 5:37:56 AM okhttp3.mockwebserver.MockWebServer$3 acceptConnections
+INFO: MockWebServer[64406] done accepting connections: Socket closed
+]]></system-err>
+</testsuite>

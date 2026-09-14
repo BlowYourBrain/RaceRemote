@@ -98,3 +98,12 @@ hardware/charge-permit/*.md text eol=lf
 docs/evidence/charge-permit-*.json text eol=crlf
 tools/build_charge_permit.py text eol=lf
 tools/verify_charge_permit.py text eol=lf
+
+# Stable source and device-evidence hashes for the driving UI.
+app/src/main/java/vea/raceremote/control/CarControlScreen.kt text eol=lf
+app/src/main/java/vea/raceremote/control/DrivingPad.kt text eol=lf
+app/src/main/java/vea/raceremote/video/VideoPanel.kt text eol=lf
+app/src/androidTest/java/vea/raceremote/DrivingModeTest.kt text eol=lf
+docs/evidence/driving-mode-2026-09-14/*.json text eol=lf
+docs/evidence/driving-mode-2026-09-14/*.xml text eol=lf
+docs/evidence/driving-mode-2026-09-14/*.png binary

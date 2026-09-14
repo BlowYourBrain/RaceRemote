@@ -1,0 +1,12 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<testsuite name="vea.raceremote.ExampleInstrumentedTest" tests="4" failures="0" errors="0" skipped="0" time="11.108" timestamp="2026-09-14T02:40:07" hostname="localhost">
+  <properties>
+    <property name="device" value="SM-G973F - 12" />
+    <property name="flavor" value="" />
+    <property name="project" value=":app" />
+  </properties>
+  <testcase name="useAppContext" classname="vea.raceremote.ExampleInstrumentedTest" time="0.013" />
+  <testcase name="unavailableVideoDoesNotStopControlAndBackgroundStopsBoth" classname="vea.raceremote.VideoControlIsolationTest" time="3.514" />
+  <testcase name="backgroundDuringDragDoesNotResumeControl" classname="vea.raceremote.DrivingModeTest" time="1.403" />
+  <testcase name="twoThumbsCancelAndVideoSurviveModeChanges" classname="vea.raceremote.DrivingModeTest" time="4.878" />
+</testsuite>

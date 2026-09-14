@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="vea.raceremote.control.CarDiscoveryTest" tests="3" skipped="0" failures="0" errors="0" timestamp="2026-09-14T02:37:52" hostname="DESKTOP-LR64B4F" time="3.209">
+  <properties/>
+  <testcase name="cancellationCannotPublishResultsFromPreviousSearch" classname="vea.raceremote.control.CarDiscoveryTest" time="0.174"/>
+  <testcase name="udpScanFindsTwoCarsAndRejectsOldNonceWithoutOpeningControl" classname="vea.raceremote.control.CarDiscoveryTest" time="3.033"/>
+  <testcase name="sharedFirmwareVectorAndInvalidPackets" classname="vea.raceremote.control.CarDiscoveryTest" time="0.001"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

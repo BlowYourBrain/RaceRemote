@@ -1,0 +1,53 @@
+{
+  "date": "2026-09-14",
+  "contract": "DRIVE-UI-01 v0.1",
+  "base_commit": "8afc4b4de4a1d01ed95158eb5f8c8d846cbfdb80",
+  "device": {
+    "model": "SM-G973F",
+    "android": "12",
+    "serial": "RF8M811X8FK",
+    "package": "vea.raceremote"
+  },
+  "tests": {
+    "JVM": 27,
+    "Android": 4,
+    "failures": 0,
+    "errors": 0,
+    "skipped_Android": 0
+  },
+  "scenario_names": [
+    "useAppContext",
+    "unavailableVideoDoesNotStopControlAndBackgroundStopsBoth",
+    "backgroundDuringDragDoesNotResumeControl",
+    "twoThumbsCancelAndVideoSurviveModeChanges"
+  ],
+  "apk_sha256": "91b8feecb56247074cf8d12fe59780052fbfb0f56652c11969c220c210f36d24",
+  "installed_apk_sha256": "91b8feecb56247074cf8d12fe59780052fbfb0f56652c11969c220c210f36d24",
+  "test_apk_sha256": "eba13e538d24bee8f9cba5a68afe5ed4a874d43ef3f4db293d68d2d32d094a8c",
+  "sha256": {
+    "docs/evidence/driving-mode-2026-09-14/android-tests.xml": "cbd9f9600098adb09a8df09cd7b0418fd2e76eff4d1896bec7fed5710be45cd0",
+    "docs/evidence/driving-mode-2026-09-14/unit-TEST-vea.raceremote.control.CarControlTest.xml": "43557a162298b7745c8d2960d34c049f9848cd13434c36f962d4cee47ef4c4ec",
+    "docs/evidence/driving-mode-2026-09-14/unit-TEST-vea.raceremote.control.CarDiscoveryTest.xml": "07c754aba6f8d315dc6ef83e06baca62797667428e52b0c20f1e6172e5bbf8f4",
+    "docs/evidence/driving-mode-2026-09-14/unit-TEST-vea.raceremote.features.remote_control.CompoundCommandCreatorTest.xml": "3698e2bd824d9c6212018756f66c8d97a112d0996bc21bf6580cdc81524ecefd",
+    "docs/evidence/driving-mode-2026-09-14/unit-TEST-vea.raceremote.features.remote_control.presentation.EngineMapperTest.xml": "98110029d75534aa4926786aaef70a2cb12e09333d36a8c96c7094ec7a2a7473",
+    "docs/evidence/driving-mode-2026-09-14/unit-TEST-vea.raceremote.features.remote_control.presentation.SteeringWheelMapperTest.xml": "e168b072914d986d2e5f86e7d2a85c96d3da6f0344f1546228e32e14275797b1",
+    "docs/evidence/driving-mode-2026-09-14/unit-TEST-vea.raceremote.video.MjpegTest.xml": "dabb64eb468bc3faddb84739c859b14d45c04ffaae7a79caf77178c977aeed55",
+    "app/src/main/java/vea/raceremote/control/CarControlScreen.kt": "f37f52b42ef0009b2af2fe3eefd5957b37ee8d61f5df0a3d3ef883860efa9c22",
+    "app/src/main/java/vea/raceremote/control/DrivingPad.kt": "a8c74d7002f5c153394f91495bc639ae954ac3628c9b07b1d19cd60f101985c5",
+    "app/src/main/java/vea/raceremote/video/VideoPanel.kt": "276aa5abad6b61049e865d449154fb697e2c76be02bf00646c1b44149e9c28c8",
+    "app/src/main/java/vea/raceremote/video/MjpegVideoView.kt": "6446a828a01028ab5240525c610f2b911f40a791c06dc3cc5d766cee18dd3fd7",
+    "app/src/main/java/vea/raceremote/control/CarControlClient.kt": "bf81b241479a8c4bb229ad48a1a7440256a55a6c8789e15b8198e2dc1400b634",
+    "app/src/androidTest/java/vea/raceremote/DrivingModeTest.kt": "08a5c4e7321d64e32e1ffff388e01c3cc95a9d67cc2ce5a25b4bdbaf444b1295",
+    "app/src/androidTest/java/vea/raceremote/VideoControlIsolationTest.kt": "adacf8f508b657dd3ef8d3bec787cbbe8e384ca050d4a33226a1688132aa4560",
+    "docs/evidence/driving-mode-2026-09-14/driving-fpv.png": "02e907dbdbe63020954ff1981fba0d367eac34bff9d1797a63dd581adb01ad06",
+    "docs/evidence/driving-mode-2026-09-14/driving-setup.png": "037574a3cc475ad2f598ccbd4d571816eed943a83cf822577cf6f2ad4c05f4fd"
+  },
+  "scope": "Real Samsung gestures, Compose and decoder; local MockWebServer control and repeated synthetic JPEG",
+  "not_verified": [
+    "Physical motor output or STOP delivery to ESP32",
+    "Wi-Fi reliability or antenna improvement",
+    "Camera fresh FPS or optical latency",
+    "Charger, battery, chassis assembly",
+    "Other phones, screen sizes and iOS"
+  ]
+}

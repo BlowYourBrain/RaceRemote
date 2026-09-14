@@ -1,0 +1,404 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<export version="E">
+  <design>
+    <source>C:\Users\Evgeny\orca\RaceRemote\hardware\usb-input-gate\usb-input-gate.kicad_sch</source>
+    <date>2026-09-14T03:40:27</date>
+    <tool>Eeschema 10.0.6</tool>
+    <sheet number="1" name="/" tstamps="/">
+      <title_block>
+        <title>RaceRemote - USB input gate PROPOSAL</title>
+        <company>vea.raceremote</company>
+        <rev>0.1</rev>
+        <date>2026-09-14</date>
+        <source>usb-input-gate.kicad_sch</source>
+        <comment number="1" value=""/>
+        <comment number="2" value=""/>
+        <comment number="3" value=""/>
+        <comment number="4" value=""/>
+        <comment number="5" value=""/>
+        <comment number="6" value=""/>
+        <comment number="7" value=""/>
+        <comment number="8" value=""/>
+        <comment number="9" value=""/>
+      </title_block>
+    </sheet>
+  </design>
+  <components>
+    <comp ref="C201">
+      <value>100n / 50V</value>
+      <fields>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="RaceRemote_Input" part="C" description="Unpolarized capacitor"/>
+      <property name="Sheetname" value="usb-input-gate"/>
+      <property name="Sheetfile" value="usb-input-gate.kicad_sch"/>
+      <property name="ki_keywords" value="cap capacitor"/>
+      <property name="ki_fp_filters" value="C_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>ed6d20d3-c37d-5e32-9c30-86e02dc728e2</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="C202">
+      <value>22u / 25V</value>
+      <fields>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="RaceRemote_Input" part="C" description="Unpolarized capacitor"/>
+      <property name="Sheetname" value="usb-input-gate"/>
+      <property name="Sheetfile" value="usb-input-gate.kicad_sch"/>
+      <property name="ki_keywords" value="cap capacitor"/>
+      <property name="ki_fp_filters" value="C_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>63793873-bb60-558f-ab1e-5110a025da84</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="J201">
+      <value>RAW USB POWER</value>
+      <fields>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="RaceRemote_Input" part="Conn_01x02" description="Generic connector, single row, 01x02, script generated (kicad-library-utils/schlib/autogen/connector/)"/>
+      <property name="Sheetname" value="usb-input-gate"/>
+      <property name="Sheetfile" value="usb-input-gate.kicad_sch"/>
+      <property name="ki_keywords" value="connector"/>
+      <property name="ki_fp_filters" value="Connector*:*_1x??_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>4e3fae95-1c48-5b27-b91c-967cc6225324</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="J202">
+      <value>TO INPUT INTEGRATION</value>
+      <fields>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="RaceRemote_Input" part="Conn_01x02" description="Generic connector, single row, 01x02, script generated (kicad-library-utils/schlib/autogen/connector/)"/>
+      <property name="Sheetname" value="usb-input-gate"/>
+      <property name="Sheetfile" value="usb-input-gate.kicad_sch"/>
+      <property name="ki_keywords" value="connector"/>
+      <property name="ki_fp_filters" value="Connector*:*_1x??_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>fea2e3cc-7f80-5971-b5be-1fc1ec66477f</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="J203">
+      <value>SOURCE LOGIC</value>
+      <fields>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="RaceRemote_Input" part="Conn_01x04" description="Generic connector, single row, 01x04, script generated (kicad-library-utils/schlib/autogen/connector/)"/>
+      <property name="Sheetname" value="usb-input-gate"/>
+      <property name="Sheetfile" value="usb-input-gate.kicad_sch"/>
+      <property name="ki_keywords" value="connector"/>
+      <property name="ki_fp_filters" value="Connector*:*_1x??_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>7cdce225-f2bd-5486-bce6-f227f5e3db52</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+            <pin num="3"/>
+            <pin num="4"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="R201">
+      <value>82.5k / 1%</value>
+      <fields>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="RaceRemote_Input" part="R" description="Resistor"/>
+      <property name="Sheetname" value="usb-input-gate"/>
+      <property name="Sheetfile" value="usb-input-gate.kicad_sch"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <property name="ki_fp_filters" value="R_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>e0dc3585-4469-5141-bc10-e33ae2d2ced3</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="R202">
+      <value>47k / 1%</value>
+      <fields>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="RaceRemote_Input" part="R" description="Resistor"/>
+      <property name="Sheetname" value="usb-input-gate"/>
+      <property name="Sheetfile" value="usb-input-gate.kicad_sch"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <property name="ki_fp_filters" value="R_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>ca8671f6-db55-5890-9c39-cec43cd08705</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="R203">
+      <value>4.7k / 1%</value>
+      <fields>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="RaceRemote_Input" part="R" description="Resistor"/>
+      <property name="Sheetname" value="usb-input-gate"/>
+      <property name="Sheetfile" value="usb-input-gate.kicad_sch"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <property name="ki_fp_filters" value="R_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>295a2478-715c-5421-b09b-41f148ba6c92</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="R204">
+      <value>10k / 1%</value>
+      <fields>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="RaceRemote_Input" part="R" description="Resistor"/>
+      <property name="Sheetname" value="usb-input-gate"/>
+      <property name="Sheetfile" value="usb-input-gate.kicad_sch"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <property name="ki_fp_filters" value="R_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>fde4953d-ab7a-5485-a27c-92b745917abc</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="U201">
+      <value>TPS25200DRVR</value>
+      <datasheet>https://www.ti.com/lit/gpn/tps25200</datasheet>
+      <fields>
+        <field name="Footprint"/>
+        <field name="Datasheet">https://www.ti.com/lit/gpn/tps25200</field>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="RaceRemote_Input" part="TPS25200DRV" description=""/>
+      <property name="Sheetname" value="usb-input-gate"/>
+      <property name="Sheetfile" value="usb-input-gate.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>7de0a6d9-5282-545e-90a9-7c0d2933813a</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="6"/>
+            <pin num="4"/>
+            <pin num="5"/>
+            <pin num="7"/>
+            <pin num="1"/>
+            <pin num="3"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+  </components>
+  <libparts>
+    <libpart lib="RaceRemote_Input" part="C">
+      <description>Unpolarized capacitor</description>
+      <footprints>
+        <fp>C_*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">C</field>
+        <field name="Value">C</field>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description">Unpolarized capacitor</field>
+      </fields>
+      <pins>
+        <pin num="1" name="" type="passive"/>
+        <pin num="2" name="" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="RaceRemote_Input" part="Conn_01x02">
+      <description>Generic connector, single row, 01x02, script generated (kicad-library-utils/schlib/autogen/connector/)</description>
+      <footprints>
+        <fp>Connector*:*_1x??_*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">J</field>
+        <field name="Value">Conn_01x02</field>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description">Generic connector, single row, 01x02, script generated (kicad-library-utils/schlib/autogen/connector/)</field>
+      </fields>
+      <pins>
+        <pin num="1" name="Pin_1" type="passive"/>
+        <pin num="2" name="Pin_2" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="RaceRemote_Input" part="Conn_01x04">
+      <description>Generic connector, single row, 01x04, script generated (kicad-library-utils/schlib/autogen/connector/)</description>
+      <footprints>
+        <fp>Connector*:*_1x??_*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">J</field>
+        <field name="Value">Conn_01x04</field>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description">Generic connector, single row, 01x04, script generated (kicad-library-utils/schlib/autogen/connector/)</field>
+      </fields>
+      <pins>
+        <pin num="1" name="Pin_1" type="passive"/>
+        <pin num="2" name="Pin_2" type="passive"/>
+        <pin num="3" name="Pin_3" type="passive"/>
+        <pin num="4" name="Pin_4" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="RaceRemote_Input" part="R">
+      <description>Resistor</description>
+      <footprints>
+        <fp>R_*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">R</field>
+        <field name="Value">R</field>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description">Resistor</field>
+      </fields>
+      <pins>
+        <pin num="1" name="" type="passive"/>
+        <pin num="2" name="" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="RaceRemote_Input" part="TPS25200DRV">
+      <fields>
+        <field name="Reference">U</field>
+        <field name="Value">TPS25200DRV</field>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <pins>
+        <pin num="1" name="OUT" type="power_out"/>
+        <pin num="2" name="ILIM" type="passive"/>
+        <pin num="3" name="~{FAULT}" type="open_collector"/>
+        <pin num="4" name="EN" type="input"/>
+        <pin num="5" name="GND" type="power_in"/>
+        <pin num="6" name="IN" type="power_in"/>
+        <pin num="7" name="EP" type="power_in"/>
+      </pins>
+    </libpart>
+  </libparts>
+  <libraries>
+    <library logical="RaceRemote_Input">
+      <uri>${KIPRJMOD}/RaceRemote_Input.kicad_sym</uri>
+    </library>
+  </libraries>
+  <nets>
+    <net code="1" name="AUX_3V3" class="Default">
+      <node ref="J203" pin="1" pinfunction="Pin_1_1" pintype="passive"/>
+      <node ref="R204" pin="1" pintype="passive"/>
+    </net>
+    <net code="2" name="GATED_VBUS" class="Default">
+      <node ref="C202" pin="1" pintype="passive"/>
+      <node ref="J202" pin="1" pinfunction="Pin_1_1" pintype="passive"/>
+      <node ref="U201" pin="1" pinfunction="OUT_1" pintype="power_out"/>
+    </net>
+    <net code="3" name="GATE_EN" class="Default">
+      <node ref="R202" pin="1" pintype="passive"/>
+      <node ref="R203" pin="2" pintype="passive"/>
+      <node ref="U201" pin="4" pinfunction="EN_4" pintype="input"/>
+    </net>
+    <net code="4" name="ILIM_SET" class="Default">
+      <node ref="R201" pin="1" pintype="passive"/>
+      <node ref="U201" pin="2" pinfunction="ILIM_2" pintype="passive"/>
+    </net>
+    <net code="5" name="INPUT_FAULT_N" class="Default">
+      <node ref="J203" pin="3" pinfunction="Pin_3_3" pintype="passive"/>
+      <node ref="R204" pin="2" pintype="passive"/>
+      <node ref="U201" pin="3" pinfunction="~{FAULT}_3" pintype="open_collector"/>
+    </net>
+    <net code="6" name="SOURCE_ALLOW" class="Default">
+      <node ref="J203" pin="2" pinfunction="Pin_2_2" pintype="passive"/>
+      <node ref="R203" pin="1" pintype="passive"/>
+    </net>
+    <net code="7" name="USB_GND" class="Default">
+      <node ref="C201" pin="2" pintype="passive"/>
+      <node ref="C202" pin="2" pintype="passive"/>
+      <node ref="J201" pin="2" pinfunction="Pin_2_2" pintype="passive"/>
+      <node ref="J202" pin="2" pinfunction="Pin_2_2" pintype="passive"/>
+      <node ref="J203" pin="4" pinfunction="Pin_4_4" pintype="passive"/>
+      <node ref="R201" pin="2" pintype="passive"/>
+      <node ref="R202" pin="2" pintype="passive"/>
+      <node ref="U201" pin="5" pinfunction="GND_5" pintype="power_in"/>
+      <node ref="U201" pin="7" pinfunction="EP_7" pintype="power_in"/>
+    </net>
+    <net code="8" name="USB_RAW_VBUS" class="Default">
+      <node ref="C201" pin="1" pintype="passive"/>
+      <node ref="J201" pin="1" pinfunction="Pin_1_1" pintype="passive"/>
+      <node ref="U201" pin="6" pinfunction="IN_6" pintype="power_in"/>
+    </net>
+  </nets>
+</export>

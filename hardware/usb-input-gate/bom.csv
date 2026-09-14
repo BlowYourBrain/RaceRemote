@@ -1,0 +1,11 @@
+﻿reference,value,purpose,footprint,selection
+U201,TPS25200DRVR,Gated USB power with current limit and OVP clamp,,TPS25200DRVR candidate; WSON-6 2x2mm plus EP; not purchased
+C201,100n / 50V,Local input bypass; effective >=100nF,,Proposal; MPN/PCB pending
+C202,22u / 25V,Output bypass proposal; DC bias/transient sizing pending,,Proposal; MPN/PCB pending
+R201,82.5k / 1%,Eq1 estimate 1.064..1.295A; nominal 1.176A,,Proposal; MPN/PCB pending
+R202,47k / 1%,Default OFF when external permit is absent/high impedance,,Proposal; MPN/PCB pending
+R203,4.7k / 1%,Series input to enable; external 3.3V logic,,Proposal; MPN/PCB pending
+R204,10k / 1%,Open-drain fault pull-up to external always-available logic rail,,Proposal; MPN/PCB pending
+J201,RAW USB POWER,"From passive port; logical interface, not a USB-C pinout",,Proposal; MPN/PCB pending
+J202,TO INPUT INTEGRATION,No battery/traction/service-USB backfeed; voltage compatibility still open,,Proposal; MPN/PCB pending
+J203,SOURCE LOGIC,External source detector/policy; no source recognition on this sheet,,Proposal; MPN/PCB pending

@@ -1,0 +1,1 @@
+(sym_lib_table (version 7) (lib (name "RaceRemote_Input") (type "KiCad") (uri "${KIPRJMOD}/RaceRemote_Input.kicad_sym") (options "") (descr "Own IC and attributed KiCad passives")))

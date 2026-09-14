@@ -39,3 +39,16 @@ cad/usb-port-study-viewer.html text eol=lf
 cad/usb-port-*.stl binary
 tools/build_usb_port_study.py text eol=lf
 docs/evidence/usb-port-study.json text eol=lf
+
+# Preserve the Windows KiCad input-gate evidence hashes on checkout.
+hardware/usb-input-gate/*.kicad_sch text eol=crlf
+hardware/usb-input-gate/*.kicad_sym text eol=crlf
+hardware/usb-input-gate/*.kicad_pro text eol=crlf
+hardware/usb-input-gate/*-lib-table text eol=crlf
+hardware/usb-input-gate/*.csv text eol=crlf
+hardware/usb-input-gate/*.net text eol=lf
+hardware/usb-input-gate/*.pdf binary
+hardware/usb-input-gate/*.md text eol=lf
+docs/evidence/usb-input-gate-*.json text eol=crlf
+tools/build_usb_input_gate.py text eol=lf
+tools/verify_usb_input_gate.py text eol=lf

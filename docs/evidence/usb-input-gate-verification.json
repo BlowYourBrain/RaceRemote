@@ -1,0 +1,65 @@
+{
+  "date": "2026-09-14",
+  "contract": "USB-INPUT-GATE-01 v0.1",
+  "kicad_version": "10.0.6",
+  "erc_violations": 0,
+  "ic_pins_including_EP_checked": 7,
+  "logical_components": 10,
+  "fault_injections": [
+    {
+      "mutation": "enable_pulldown_to_supply",
+      "detected": true,
+      "failed_contract": "('R202', 2, 'USB_GND')",
+      "netlist_sha256": "7c1e619f40be7e64cac6186d6941538ef5dcb2992deb45bcdb314fc5f170e3a2"
+    },
+    {
+      "mutation": "output_terminal_bypasses_gate",
+      "detected": true,
+      "failed_contract": "('J202', 1, 'GATED_VBUS')",
+      "netlist_sha256": "e821e67942e8de87b49c58be7442cd1ab3e28cb00d25f87fc517e05546c928c0"
+    },
+    {
+      "mutation": "ilim_return_to_output",
+      "detected": true,
+      "failed_contract": "('R201', 2, 'USB_GND')",
+      "netlist_sha256": "90b16475529fed2918915d5301ab569b38da329ef17d5caf79813aaf63905a0e"
+    }
+  ],
+  "arithmetic": {
+    "ilim_estimated_min_nom_max_mA": [
+      1063.87461957743,
+      1176.1085134619213,
+      1295.4970078510946
+    ],
+    "rilim_kohm": 82.5,
+    "resistor_tolerance_percent": 1,
+    "scope": "TI Eq1 approximation plus resistor tolerance; not measured or an absolute transient limit",
+    "en_open_max_V_leakage_only": 0.09494,
+    "en_low_max_V_for_source_low_0p3V": 0.309494,
+    "en_high_min_V_for_source_high_2p8V": 2.532173180568286,
+    "enable_scope": "Static resistor model; IEN +/-2uA table conditions. No timing, PCB leakage or brownout proof",
+    "proposed_min_source_budget_A": 1.5,
+    "proposed_other_input_budget_A": 0.05,
+    "estimated_headroom_A": 0.15450299214890545
+  },
+  "sha256": {
+    "hardware/usb-input-gate/usb-input-gate.kicad_sch": "ec5511c70f69a4d672d7f49d238f38cdfb7f6121d3123fd5575579ec8304683c",
+    "hardware/usb-input-gate/usb-input-gate.kicad_pro": "f1eb266de9d0ee2bfb21d4c09fdefcc0f3473b78899140b56207b13dadf64989",
+    "hardware/usb-input-gate/RaceRemote_Input.kicad_sym": "d4131afe683ce5f83d54a7593cb3f60c301fbd31cee9e3b58560021952f7728e",
+    "hardware/usb-input-gate/usb-input-gate.net": "9dc567b7ed98a4dd372251f1fb77a44e02825cc9be9f1264aa700849dfb71e22",
+    "hardware/usb-input-gate/bom.csv": "6d577bde11488f3110ee6f57a64fb6c0a788d5cc60125272b30d550278da37fb",
+    "hardware/usb-input-gate/usb-input-gate.pdf": "e9fe898feaec0ed230d17cf9dc975f5ea5460fc54e9156fdf81be52d0b85cd8d",
+    "docs/evidence/usb-input-gate-erc.json": "f481f56fce76bb1978bd11a80c221990b70c025b9c4c5f9dc1b4058ebc2c76b5",
+    "tools/build_usb_input_gate.py": "af5eecab610c9381a53e42edc3cf6f3b495adbae59fc4301a6cc7698f98a967d",
+    "tools/verify_usb_input_gate.py": "a5f622ac50283a205f3ecdd8aa7631a790dbb6053d107989095501e0cb23c485"
+  },
+  "not_verified": [
+    "PCB/thermal footprint and manufacture",
+    "Source classification and pre-gate auxiliary supply",
+    "USB total current/inrush and CC/BC1.2 integration",
+    "Core 5.5V vs clamp/transient compatibility",
+    "Output backfeed isolation and battery protection",
+    "Capacitor MPN and effective capacitance",
+    "Physical default-off, overcurrent, OVP and charge-cycle measurements"
+  ]
+}

@@ -1,0 +1,874 @@
+(kicad_sch (version 20250901) (generator "raceremote")
+(uuid "f3653c64-0916-5e2d-86c1-ba69a0a4a529") (paper "A3")
+(title_block (title "RaceRemote - USB input gate PROPOSAL") (date "2026-09-14") (rev "0.1") (company "vea.raceremote"))
+(lib_symbols (symbol "RaceRemote_Input:R"
+		(pin_numbers
+			(hide yes)
+		)
+		(pin_names
+			(offset 0)
+		)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(duplicate_pin_numbers_are_jumpers no)
+		(property "Reference" "R"
+			(at 2.032 0 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "R"
+			(at 0 0 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at -1.778 0 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Resistor"
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "ki_keywords" "R res resistor"
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "ki_fp_filters" "R_*"
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(symbol "R_0_1"
+			(rectangle
+				(start -1.016 -2.54)
+				(end 1.016 2.54)
+				(stroke
+					(width 0.254)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+		)
+		(symbol "R_1_1"
+			(pin passive line
+				(at 0 3.81 270)
+				(length 1.27)
+				(name ""
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "1"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin passive line
+				(at 0 -3.81 90)
+				(length 1.27)
+				(name ""
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "2"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+		)
+		(embedded_fonts no)
+	)
+(symbol "RaceRemote_Input:C"
+		(pin_numbers
+			(hide yes)
+		)
+		(pin_names
+			(offset 0.254)
+		)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(duplicate_pin_numbers_are_jumpers no)
+		(property "Reference" "C"
+			(at 0.635 2.54 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "C"
+			(at 0.635 -2.54 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" ""
+			(at 0.9652 -3.81 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Unpolarized capacitor"
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "ki_keywords" "cap capacitor"
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "ki_fp_filters" "C_*"
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(symbol "C_0_1"
+			(polyline
+				(pts
+					(xy -2.032 0.762) (xy 2.032 0.762)
+				)
+				(stroke
+					(width 0.508)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(polyline
+				(pts
+					(xy -2.032 -0.762) (xy 2.032 -0.762)
+				)
+				(stroke
+					(width 0.508)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+		)
+		(symbol "C_1_1"
+			(pin passive line
+				(at 0 3.81 270)
+				(length 2.794)
+				(name ""
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "1"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin passive line
+				(at 0 -3.81 90)
+				(length 2.794)
+				(name ""
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "2"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+		)
+		(embedded_fonts no)
+	)
+(symbol "RaceRemote_Input:Conn_01x02"
+		(pin_names
+			(offset 1.016)
+			(hide yes)
+		)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(duplicate_pin_numbers_are_jumpers no)
+		(property "Reference" "J"
+			(at 0 2.54 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "Conn_01x02"
+			(at 0 -5.08 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Generic connector, single row, 01x02, script generated (kicad-library-utils/schlib/autogen/connector/)"
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "ki_keywords" "connector"
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "ki_fp_filters" "Connector*:*_1x??_*"
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(symbol "Conn_01x02_1_1"
+			(rectangle
+				(start -1.27 1.27)
+				(end 1.27 -3.81)
+				(stroke
+					(width 0.254)
+					(type default)
+				)
+				(fill
+					(type background)
+				)
+			)
+			(rectangle
+				(start -1.27 0.127)
+				(end 0 -0.127)
+				(stroke
+					(width 0.1524)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(rectangle
+				(start -1.27 -2.413)
+				(end 0 -2.667)
+				(stroke
+					(width 0.1524)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(pin passive line
+				(at -5.08 0 0)
+				(length 3.81)
+				(name "Pin_1"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "1"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin passive line
+				(at -5.08 -2.54 0)
+				(length 3.81)
+				(name "Pin_2"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "2"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+		)
+		(embedded_fonts no)
+	)
+(symbol "RaceRemote_Input:Conn_01x04"
+		(pin_names
+			(offset 1.016)
+			(hide yes)
+		)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(duplicate_pin_numbers_are_jumpers no)
+		(property "Reference" "J"
+			(at 0 5.08 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "Conn_01x04"
+			(at 0 -7.62 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Generic connector, single row, 01x04, script generated (kicad-library-utils/schlib/autogen/connector/)"
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "ki_keywords" "connector"
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "ki_fp_filters" "Connector*:*_1x??_*"
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(symbol "Conn_01x04_1_1"
+			(rectangle
+				(start -1.27 3.81)
+				(end 1.27 -6.35)
+				(stroke
+					(width 0.254)
+					(type default)
+				)
+				(fill
+					(type background)
+				)
+			)
+			(rectangle
+				(start -1.27 2.667)
+				(end 0 2.413)
+				(stroke
+					(width 0.1524)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(rectangle
+				(start -1.27 0.127)
+				(end 0 -0.127)
+				(stroke
+					(width 0.1524)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(rectangle
+				(start -1.27 -2.413)
+				(end 0 -2.667)
+				(stroke
+					(width 0.1524)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(rectangle
+				(start -1.27 -4.953)
+				(end 0 -5.207)
+				(stroke
+					(width 0.1524)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(pin passive line
+				(at -5.08 2.54 0)
+				(length 3.81)
+				(name "Pin_1"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "1"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin passive line
+				(at -5.08 0 0)
+				(length 3.81)
+				(name "Pin_2"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "2"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin passive line
+				(at -5.08 -2.54 0)
+				(length 3.81)
+				(name "Pin_3"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "3"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin passive line
+				(at -5.08 -5.08 0)
+				(length 3.81)
+				(name "Pin_4"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "4"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+		)
+		(embedded_fonts no)
+	)
+(symbol "RaceRemote_Input:PWR_FLAG"
+		(power global)
+		(pin_numbers
+			(hide yes)
+		)
+		(pin_names
+			(offset 0)
+			(hide yes)
+		)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(duplicate_pin_numbers_are_jumpers no)
+		(property "Reference" "#FLG"
+			(at 0 1.905 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "PWR_FLAG"
+			(at 0 3.81 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Special symbol for telling ERC where power comes from"
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "ki_keywords" "flag power"
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(symbol "PWR_FLAG_0_0"
+			(pin power_out line
+				(at 0 0 90)
+				(length 0)
+				(name ""
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "1"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+		)
+		(symbol "PWR_FLAG_0_1"
+			(polyline
+				(pts
+					(xy 0 0) (xy 0 1.27) (xy -1.016 1.905) (xy 0 2.54) (xy 1.016 1.905) (xy 0 1.27)
+				)
+				(stroke
+					(width 0)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+		)
+		(embedded_fonts no)
+	)
+(symbol "RaceRemote_Input:TPS25200DRV" (pin_names (offset 1.016)) (in_bom yes) (on_board yes)
+(property "Reference" "U" (at 0 22.86 0) (effects (font (size 1.27 1.27))))
+(property "Value" "TPS25200DRV" (at 0 20.32 0) (effects (font (size 1.27 1.27))))
+(property "Footprint" "" (at 0 0 0) (effects (font (size 1.27 1.27)) hide))
+(symbol "TPS25200DRV_0_1" (rectangle (start -17.78 17.78) (end 17.78 -17.78) (stroke (width 0.254) (type default)) (fill (type background))))
+(symbol "TPS25200DRV_1_1"
+(pin power_in line (at -22.86 10.16 0) (length 5.08) (name "IN" (effects (font (size 1.27 1.27)))) (number "6" (effects (font (size 1.27 1.27)))))
+(pin input line (at -22.86 0 0) (length 5.08) (name "EN" (effects (font (size 1.27 1.27)))) (number "4" (effects (font (size 1.27 1.27)))))
+(pin power_out line (at 22.86 10.16 180) (length 5.08) (name "OUT" (effects (font (size 1.27 1.27)))) (number "1" (effects (font (size 1.27 1.27)))))
+(pin open_collector line (at 22.86 0 180) (length 5.08) (name "~{FAULT}" (effects (font (size 1.27 1.27)))) (number "3" (effects (font (size 1.27 1.27)))))
+(pin passive line (at 22.86 -10.16 180) (length 5.08) (name "ILIM" (effects (font (size 1.27 1.27)))) (number "2" (effects (font (size 1.27 1.27)))))
+(pin power_in line (at -5.08 -22.86 90) (length 5.08) (name "GND" (effects (font (size 1.27 1.27)))) (number "5" (effects (font (size 1.27 1.27)))))
+(pin power_in line (at 5.08 -22.86 90) (length 5.08) (name "EP" (effects (font (size 1.27 1.27)))) (number "7" (effects (font (size 1.27 1.27))))))))
+(symbol (lib_id "RaceRemote_Input:TPS25200DRV") (at 152.4 91.44 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid "7de0a6d9-5282-545e-90a9-7c0d2933813a") (property "Reference" "U201" (at 152.4 66.04 0) (effects (font (size 1.27 1.27))))(property "Value" "TPS25200DRVR" (at 152.4 63.5 0) (effects (font (size 1.27 1.27))))(property "Footprint" "" (at 152.4 91.44 0) (hide yes) (effects (font (size 1.27 1.27))))(property "Datasheet" "https://www.ti.com/lit/gpn/tps25200" (at 152.4 91.44 0) (hide yes) (effects (font (size 1.27 1.27))))(pin "6" (uuid "a26e8494-5699-5369-be10-bfa59c87aaa5"))(pin "4" (uuid "1d069430-320a-5da6-b4ef-beff0f7e6e02"))(pin "1" (uuid "5175dae9-6120-5357-b999-cc7d47c07996"))(pin "3" (uuid "aa1168ea-2da9-5e65-a488-cdf5c6f0d6a3"))(pin "2" (uuid "29eb7ef6-d6a1-5abd-b058-278c8227e332"))(pin "5" (uuid "339ef660-84a0-54fc-ac84-232411243723"))(pin "7" (uuid "402e2d7c-5d74-51f0-aa61-528d79018a04"))(instances (project "usb-input-gate" (path "/f3653c64-0916-5e2d-86c1-ba69a0a4a529" (reference "U201") (unit 1)))))
+(wire (pts (xy 129.54 81.28) (xy 116.84 81.28)) (stroke (width 0) (type default)) (uuid "df7c4f44-8c93-513d-8f0c-afda43d45d9a"))
+(global_label "USB_RAW_VBUS" (shape passive) (at 116.84 81.28 180) (effects (font (size 1 1)) (justify right)) (uuid "4d890295-4047-517b-8ebf-a5e017a8ee8c"))
+(wire (pts (xy 129.54 91.44) (xy 116.84 91.44)) (stroke (width 0) (type default)) (uuid "7dfa6eee-438e-5322-bf59-76be6cb99a77"))
+(global_label "GATE_EN" (shape passive) (at 116.84 91.44 180) (effects (font (size 1 1)) (justify right)) (uuid "b0c475a5-6d73-5664-8ee3-9b058cba76c5"))
+(wire (pts (xy 175.26 81.28) (xy 187.96 81.28)) (stroke (width 0) (type default)) (uuid "db5c48f8-a9e6-5821-bade-376a7dd68e1e"))
+(global_label "GATED_VBUS" (shape passive) (at 187.96 81.28 0) (effects (font (size 1 1)) (justify left)) (uuid "5034a5d6-40b9-58a7-86b1-6b3fe86a69dd"))
+(wire (pts (xy 175.26 91.44) (xy 187.96 91.44)) (stroke (width 0) (type default)) (uuid "4e713655-2214-5ee0-be83-009c50425623"))
+(global_label "INPUT_FAULT_N" (shape passive) (at 187.96 91.44 0) (effects (font (size 1 1)) (justify left)) (uuid "a6e1460b-21c5-5d5d-877f-851f4088cee2"))
+(wire (pts (xy 175.26 101.6) (xy 187.96 101.6)) (stroke (width 0) (type default)) (uuid "7af19edd-9ad8-5f70-b8ce-1c0ec15c0128"))
+(global_label "ILIM_SET" (shape passive) (at 187.96 101.6 0) (effects (font (size 1 1)) (justify left)) (uuid "eb42bfd2-afc3-52b2-bd7a-c29b8c0cc06d"))
+(wire (pts (xy 147.32 114.3) (xy 147.32 124.46)) (stroke (width 0) (type default)) (uuid "5ec6845b-b908-5042-a136-191ded53bc83"))
+(global_label "USB_GND" (shape passive) (at 147.32 124.46 0) (effects (font (size 1 1)) (justify left)) (uuid "4d768d37-ea06-5d49-8499-e947b857c06e"))
+(wire (pts (xy 157.48 114.3) (xy 157.48 124.46)) (stroke (width 0) (type default)) (uuid "e59320b4-6892-5559-b6e4-007e35189a64"))
+(global_label "USB_GND" (shape passive) (at 157.48 124.46 0) (effects (font (size 1 1)) (justify left)) (uuid "7c876c2a-f403-58b5-9dfa-1c4508eb7852"))
+(symbol (lib_id "RaceRemote_Input:C") (at 50.8 91.44 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid "ed6d20d3-c37d-5e32-9c30-86e02dc728e2") (property "Reference" "C201" (at 50.8 86.36 0) (effects (font (size 1.27 1.27))))(property "Value" "100n / 50V" (at 63.5 91.44 0) (effects (font (size 1.27 1.27))))(property "Footprint" "" (at 50.8 91.44 0) (hide yes) (effects (font (size 1.27 1.27))))(property "Datasheet" "" (at 50.8 91.44 0) (hide yes) (effects (font (size 1.27 1.27))))(pin "1" (uuid "e6fa5a60-f817-5746-b27b-2a220d7f84bd"))(pin "2" (uuid "856eb581-607b-5bb9-938f-ec45ca84342b"))(instances (project "usb-input-gate" (path "/f3653c64-0916-5e2d-86c1-ba69a0a4a529" (reference "C201") (unit 1)))))
+(wire (pts (xy 50.8 87.63) (xy 50.8 80.01)) (stroke (width 0) (type default)) (uuid "c46932eb-f614-5307-ad93-079d3aedf5d3"))
+(global_label "USB_RAW_VBUS" (shape passive) (at 50.8 80.01 0) (effects (font (size 1 1)) (justify left)) (uuid "d8e2c501-94a0-5cc4-873d-b608e976d143"))
+(wire (pts (xy 50.8 95.25) (xy 50.8 102.87)) (stroke (width 0) (type default)) (uuid "2080fe8d-d662-5563-b55d-a2e23b7cbf20"))
+(global_label "USB_GND" (shape passive) (at 50.8 102.87 0) (effects (font (size 1 1)) (justify left)) (uuid "1fc82a1c-9210-513c-9b30-cb90904ea303"))
+(symbol (lib_id "RaceRemote_Input:C") (at 279.4 91.44 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid "63793873-bb60-558f-ab1e-5110a025da84") (property "Reference" "C202" (at 279.4 86.36 0) (effects (font (size 1.27 1.27))))(property "Value" "22u / 25V" (at 292.1 91.44 0) (effects (font (size 1.27 1.27))))(property "Footprint" "" (at 279.4 91.44 0) (hide yes) (effects (font (size 1.27 1.27))))(property "Datasheet" "" (at 279.4 91.44 0) (hide yes) (effects (font (size 1.27 1.27))))(pin "1" (uuid "e8f6ee54-10b7-50b3-8820-cebbb598e7c0"))(pin "2" (uuid "e6234498-1acc-5446-8ded-dc576e07d808"))(instances (project "usb-input-gate" (path "/f3653c64-0916-5e2d-86c1-ba69a0a4a529" (reference "C202") (unit 1)))))
+(wire (pts (xy 279.4 87.63) (xy 279.4 80.01)) (stroke (width 0) (type default)) (uuid "f1f34b53-684f-5bf1-aae9-64dbb32f4bcb"))
+(global_label "GATED_VBUS" (shape passive) (at 279.4 80.01 0) (effects (font (size 1 1)) (justify left)) (uuid "faaa116a-0979-5335-9ff3-82df250e4540"))
+(wire (pts (xy 279.4 95.25) (xy 279.4 102.87)) (stroke (width 0) (type default)) (uuid "a9c7835d-da9f-5f95-9287-2e9aa699be9e"))
+(global_label "USB_GND" (shape passive) (at 279.4 102.87 0) (effects (font (size 1 1)) (justify left)) (uuid "c61da89b-3ba1-5af2-833f-dc6b97419895"))
+(symbol (lib_id "RaceRemote_Input:R") (at 330.2 91.44 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid "e0dc3585-4469-5141-bc10-e33ae2d2ced3") (property "Reference" "R201" (at 330.2 86.36 0) (effects (font (size 1.27 1.27))))(property "Value" "82.5k / 1%" (at 342.9 91.44 0) (effects (font (size 1.27 1.27))))(property "Footprint" "" (at 330.2 91.44 0) (hide yes) (effects (font (size 1.27 1.27))))(property "Datasheet" "" (at 330.2 91.44 0) (hide yes) (effects (font (size 1.27 1.27))))(pin "1" (uuid "935f2633-0cb4-5f3e-9437-392c144123c4"))(pin "2" (uuid "c219242b-c791-55e4-acf5-6f2366007c5a"))(instances (project "usb-input-gate" (path "/f3653c64-0916-5e2d-86c1-ba69a0a4a529" (reference "R201") (unit 1)))))
+(wire (pts (xy 330.2 87.63) (xy 330.2 80.01)) (stroke (width 0) (type default)) (uuid "90392118-cf3f-571e-aa19-798716076c3e"))
+(global_label "ILIM_SET" (shape passive) (at 330.2 80.01 0) (effects (font (size 1 1)) (justify left)) (uuid "a33ffd2a-cd5c-5b02-affb-8bdd1ce9d49b"))
+(wire (pts (xy 330.2 95.25) (xy 330.2 102.87)) (stroke (width 0) (type default)) (uuid "773eb884-d11c-50e2-96d8-975e95d9e2c3"))
+(global_label "USB_GND" (shape passive) (at 330.2 102.87 0) (effects (font (size 1 1)) (justify left)) (uuid "9568e82c-3037-5699-9f72-671a0afc7b29"))
+(symbol (lib_id "RaceRemote_Input:R") (at 50.8 157.48 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid "ca8671f6-db55-5890-9c39-cec43cd08705") (property "Reference" "R202" (at 50.8 152.4 0) (effects (font (size 1.27 1.27))))(property "Value" "47k / 1%" (at 63.5 157.48 0) (effects (font (size 1.27 1.27))))(property "Footprint" "" (at 50.8 157.48 0) (hide yes) (effects (font (size 1.27 1.27))))(property "Datasheet" "" (at 50.8 157.48 0) (hide yes) (effects (font (size 1.27 1.27))))(pin "1" (uuid "f1cfd91c-7e8c-5179-8f21-546a783f130e"))(pin "2" (uuid "e021d986-6ee1-56c8-917f-0a6e5dce5f8f"))(instances (project "usb-input-gate" (path "/f3653c64-0916-5e2d-86c1-ba69a0a4a529" (reference "R202") (unit 1)))))
+(wire (pts (xy 50.8 153.67) (xy 50.8 146.05)) (stroke (width 0) (type default)) (uuid "55ee4c4f-c658-5bcb-aa4d-d21963aa3b07"))
+(global_label "GATE_EN" (shape passive) (at 50.8 146.05 0) (effects (font (size 1 1)) (justify left)) (uuid "5d5e5564-6242-5ce8-b6cf-f63be16470ed"))
+(wire (pts (xy 50.8 161.29) (xy 50.8 168.91)) (stroke (width 0) (type default)) (uuid "af3286e9-1984-5f03-b515-9ff547ceaf67"))
+(global_label "USB_GND" (shape passive) (at 50.8 168.91 0) (effects (font (size 1 1)) (justify left)) (uuid "0943672e-f482-5808-9157-96d7466d5d00"))
+(symbol (lib_id "RaceRemote_Input:R") (at 152.4 157.48 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid "295a2478-715c-5421-b09b-41f148ba6c92") (property "Reference" "R203" (at 152.4 152.4 0) (effects (font (size 1.27 1.27))))(property "Value" "4.7k / 1%" (at 165.1 157.48 0) (effects (font (size 1.27 1.27))))(property "Footprint" "" (at 152.4 157.48 0) (hide yes) (effects (font (size 1.27 1.27))))(property "Datasheet" "" (at 152.4 157.48 0) (hide yes) (effects (font (size 1.27 1.27))))(pin "1" (uuid "be21a33c-dd2e-588a-9ec8-fc3fc233d5eb"))(pin "2" (uuid "b4796eb9-2bdb-5ee7-b9c0-3122787dcda8"))(instances (project "usb-input-gate" (path "/f3653c64-0916-5e2d-86c1-ba69a0a4a529" (reference "R203") (unit 1)))))
+(wire (pts (xy 152.4 153.67) (xy 152.4 146.05)) (stroke (width 0) (type default)) (uuid "bb6d08a5-2d14-5f42-ad54-c57334ee7011"))
+(global_label "SOURCE_ALLOW" (shape passive) (at 152.4 146.05 0) (effects (font (size 1 1)) (justify left)) (uuid "8c66f7c7-e387-5368-a159-077610ffb1cd"))
+(wire (pts (xy 152.4 161.29) (xy 152.4 168.91)) (stroke (width 0) (type default)) (uuid "c393e13e-66fc-5384-8f2d-fe5c8ad7e530"))
+(global_label "GATE_EN" (shape passive) (at 152.4 168.91 0) (effects (font (size 1 1)) (justify left)) (uuid "1e2573ac-ef67-5b9b-9537-ac8a104c2b3b"))
+(symbol (lib_id "RaceRemote_Input:R") (at 254 157.48 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid "fde4953d-ab7a-5485-a27c-92b745917abc") (property "Reference" "R204" (at 254 152.4 0) (effects (font (size 1.27 1.27))))(property "Value" "10k / 1%" (at 266.7 157.48 0) (effects (font (size 1.27 1.27))))(property "Footprint" "" (at 254 157.48 0) (hide yes) (effects (font (size 1.27 1.27))))(property "Datasheet" "" (at 254 157.48 0) (hide yes) (effects (font (size 1.27 1.27))))(pin "1" (uuid "2f9c4b0c-13c5-5803-949e-f82d99584475"))(pin "2" (uuid "859eb5ec-2043-5a97-bbde-858a6e34089a"))(instances (project "usb-input-gate" (path "/f3653c64-0916-5e2d-86c1-ba69a0a4a529" (reference "R204") (unit 1)))))
+(wire (pts (xy 254 153.67) (xy 254 146.05)) (stroke (width 0) (type default)) (uuid "64b8a865-d3c5-512c-9fbf-4bda7ca67059"))
+(global_label "AUX_3V3" (shape passive) (at 254 146.05 0) (effects (font (size 1 1)) (justify left)) (uuid "23a9fd67-dd8f-576a-a8eb-056051834f56"))
+(wire (pts (xy 254 161.29) (xy 254 168.91)) (stroke (width 0) (type default)) (uuid "ab663620-ac8f-55c4-88c0-35f10cf110a2"))
+(global_label "INPUT_FAULT_N" (shape passive) (at 254 168.91 0) (effects (font (size 1 1)) (justify left)) (uuid "29a682ae-4e10-5bf3-b5c1-1dee06c9626d"))
+(symbol (lib_id "RaceRemote_Input:Conn_01x02") (at 63.5 223.52 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid "4e3fae95-1c48-5b27-b91c-967cc6225324") (property "Reference" "J201" (at 63.5 218.44 0) (effects (font (size 1.27 1.27))))(property "Value" "RAW USB POWER" (at 63.5 215.9 0) (effects (font (size 1.27 1.27))))(property "Footprint" "" (at 63.5 223.52 0) (hide yes) (effects (font (size 1.27 1.27))))(property "Datasheet" "" (at 63.5 223.52 0) (hide yes) (effects (font (size 1.27 1.27))))(pin "1" (uuid "35153aed-796e-58e5-b59e-d635012c466e"))(pin "2" (uuid "a5ab0a3a-b74e-5055-b853-6581e6b81a77"))(instances (project "usb-input-gate" (path "/f3653c64-0916-5e2d-86c1-ba69a0a4a529" (reference "J201") (unit 1)))))
+(wire (pts (xy 58.42 223.52) (xy 50.8 223.52)) (stroke (width 0) (type default)) (uuid "2b6f5311-9fa9-52d7-abf1-354bc682eeed"))
+(global_label "USB_RAW_VBUS" (shape passive) (at 50.8 223.52 180) (effects (font (size 1 1)) (justify right)) (uuid "dd4a2b43-6ea4-51ba-9bfa-4410a8d408b3"))
+(wire (pts (xy 58.42 226.06) (xy 50.8 226.06)) (stroke (width 0) (type default)) (uuid "74ef50db-e4db-576f-942f-2ebeb78e6388"))
+(global_label "USB_GND" (shape passive) (at 50.8 226.06 180) (effects (font (size 1 1)) (justify right)) (uuid "c10ef49c-beaf-5586-a1b6-6977336e860c"))
+(symbol (lib_id "RaceRemote_Input:Conn_01x02") (at 182.88 223.52 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid "fea2e3cc-7f80-5971-b5be-1fc1ec66477f") (property "Reference" "J202" (at 182.88 218.44 0) (effects (font (size 1.27 1.27))))(property "Value" "TO INPUT INTEGRATION" (at 182.88 215.9 0) (effects (font (size 1.27 1.27))))(property "Footprint" "" (at 182.88 223.52 0) (hide yes) (effects (font (size 1.27 1.27))))(property "Datasheet" "" (at 182.88 223.52 0) (hide yes) (effects (font (size 1.27 1.27))))(pin "1" (uuid "5faa31f4-2634-5c1d-98ab-716d5a84eb9c"))(pin "2" (uuid "a03ebfa2-c8de-52aa-b76d-a43ed23e4dda"))(instances (project "usb-input-gate" (path "/f3653c64-0916-5e2d-86c1-ba69a0a4a529" (reference "J202") (unit 1)))))
+(wire (pts (xy 177.8 223.52) (xy 170.18 223.52)) (stroke (width 0) (type default)) (uuid "28942927-cd28-5c70-a192-b78b85e61212"))
+(global_label "GATED_VBUS" (shape passive) (at 170.18 223.52 180) (effects (font (size 1 1)) (justify right)) (uuid "7decd242-1d64-5858-9765-ec86d1c685bd"))
+(wire (pts (xy 177.8 226.06) (xy 170.18 226.06)) (stroke (width 0) (type default)) (uuid "522691f7-fae3-53fe-8095-86229f8dbbee"))
+(global_label "USB_GND" (shape passive) (at 170.18 226.06 180) (effects (font (size 1 1)) (justify right)) (uuid "c53c1385-7f22-5d5f-a9bc-638c83c7f49a"))
+(symbol (lib_id "RaceRemote_Input:Conn_01x04") (at 292.1 223.52 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid "7cdce225-f2bd-5486-bce6-f227f5e3db52") (property "Reference" "J203" (at 292.1 218.44 0) (effects (font (size 1.27 1.27))))(property "Value" "SOURCE LOGIC" (at 292.1 215.9 0) (effects (font (size 1.27 1.27))))(property "Footprint" "" (at 292.1 223.52 0) (hide yes) (effects (font (size 1.27 1.27))))(property "Datasheet" "" (at 292.1 223.52 0) (hide yes) (effects (font (size 1.27 1.27))))(pin "1" (uuid "68accd04-363a-53c6-aeb9-d1a563d06d40"))(pin "2" (uuid "3c1570d1-5eaf-5117-9d78-4cadc33c9024"))(pin "3" (uuid "fa6bf077-8668-58ac-99e9-95d0ee37c20b"))(pin "4" (uuid "8e3b27a0-17c6-5a5c-91e1-d64f3a090a7c"))(instances (project "usb-input-gate" (path "/f3653c64-0916-5e2d-86c1-ba69a0a4a529" (reference "J203") (unit 1)))))
+(wire (pts (xy 287.02 220.98) (xy 279.4 220.98)) (stroke (width 0) (type default)) (uuid "ec77edf3-dc0f-52e9-a044-352148ed2699"))
+(global_label "AUX_3V3" (shape passive) (at 279.4 220.98 180) (effects (font (size 1 1)) (justify right)) (uuid "ba5fda01-ec23-5ee6-9cf5-2c84556a9859"))
+(wire (pts (xy 287.02 223.52) (xy 279.4 223.52)) (stroke (width 0) (type default)) (uuid "66378392-e5a4-5e3c-b80b-cedf81f3eff3"))
+(global_label "SOURCE_ALLOW" (shape passive) (at 279.4 223.52 180) (effects (font (size 1 1)) (justify right)) (uuid "30f1dca6-e9fd-59fb-a55e-7e0ab874e2f3"))
+(wire (pts (xy 287.02 226.06) (xy 279.4 226.06)) (stroke (width 0) (type default)) (uuid "f9522135-4355-56d3-ba45-e0a28b02fdb6"))
+(global_label "INPUT_FAULT_N" (shape passive) (at 279.4 226.06 180) (effects (font (size 1 1)) (justify right)) (uuid "76ffc5a1-03f7-5c61-bd1c-37f537f0dc14"))
+(wire (pts (xy 287.02 228.6) (xy 279.4 228.6)) (stroke (width 0) (type default)) (uuid "ac563d66-2987-5529-a245-5ca8eb1351f8"))
+(global_label "USB_GND" (shape passive) (at 279.4 228.6 180) (effects (font (size 1 1)) (justify right)) (uuid "80dee565-9650-5662-b25a-e01d15a1ef5d"))
+(symbol (lib_id "RaceRemote_Input:PWR_FLAG") (at 50.8 259.08 0) (unit 1) (in_bom no) (on_board no) (dnp no) (uuid "d91672b8-0359-54c0-94d3-33183b0d543d") (property "Reference" "#FLG201" (at 50.8 254 0) (hide yes) (effects (font (size 1.27 1.27))))(property "Value" "PWR_FLAG" (at 50.8 251.46 0) (hide yes) (effects (font (size 1.27 1.27))))(property "Footprint" "" (at 50.8 259.08 0) (hide yes) (effects (font (size 1.27 1.27))))(property "Datasheet" "" (at 50.8 259.08 0) (hide yes) (effects (font (size 1.27 1.27))))(pin "1" (uuid "4ff00e53-0859-5701-994a-6b8524eb73c0"))(instances (project "usb-input-gate" (path "/f3653c64-0916-5e2d-86c1-ba69a0a4a529" (reference "#FLG201") (unit 1)))))
+(wire (pts (xy 50.8 259.08) (xy 50.8 264.16)) (stroke (width 0) (type default)) (uuid "68202a78-8805-597b-a80f-615721c92bd7"))
+(global_label "USB_RAW_VBUS" (shape passive) (at 50.8 264.16 0) (effects (font (size 1 1)) (justify left)) (uuid "4e9dda07-2c0d-51ab-b3c3-598e6abd7ddd"))
+(symbol (lib_id "RaceRemote_Input:PWR_FLAG") (at 152.4 259.08 0) (unit 1) (in_bom no) (on_board no) (dnp no) (uuid "bdd95708-4b2f-5cfc-bfd4-545b80afa508") (property "Reference" "#FLG202" (at 152.4 254 0) (hide yes) (effects (font (size 1.27 1.27))))(property "Value" "PWR_FLAG" (at 152.4 251.46 0) (hide yes) (effects (font (size 1.27 1.27))))(property "Footprint" "" (at 152.4 259.08 0) (hide yes) (effects (font (size 1.27 1.27))))(property "Datasheet" "" (at 152.4 259.08 0) (hide yes) (effects (font (size 1.27 1.27))))(pin "1" (uuid "f42272eb-c30f-5756-acd8-c3e64be8e113"))(instances (project "usb-input-gate" (path "/f3653c64-0916-5e2d-86c1-ba69a0a4a529" (reference "#FLG202") (unit 1)))))
+(wire (pts (xy 152.4 259.08) (xy 152.4 264.16)) (stroke (width 0) (type default)) (uuid "85b56dfc-1bff-5574-a555-92dfbe9ba2df"))
+(global_label "USB_GND" (shape passive) (at 152.4 264.16 0) (effects (font (size 1 1)) (justify left)) (uuid "e395276d-7e0b-5d51-97d9-2a360d04faad"))
+(text "USB-INPUT-GATE-01 v0.1 - source-qualified power switch only" (at 25.4 20.32 0) (effects (font (size 2 2)) (justify left top)) (uuid "3ee5f390-d677-541b-ab2c-31cfbc5a12d4"))
+(text "SOURCE_ALLOW must remain LOW until a >=1.5A source budget is verified. No SDP/unknown-source permission.\nAUX_3V3 and source policy are external and must start before this gate. Battery charge permission is separate.\nNo PCB or hardware validation. This is not a complete 2S charger." (at 25.4 30.48 0) (effects (font (size 1.27 1.27)) (justify left top)) (uuid "aa97b0cb-0615-5256-a930-d090172cf5d5"))
+(text "OFF discharges OUT internally; never backfeed from the 2S pack, traction or another USB supply.\n5.55V clamp is conditional, NOT a universal transient ceiling: existing core contract ends at 5.5V.\nEP shown as pin 7; connect to GND and verify thermal footprint before PCB layout." (at 25.4 275 0) (effects (font (size 1 1)) (justify left top)) (uuid "83f6b60e-59ed-5a07-b978-16622a244750"))
+(sheet_instances (path "/" (page "1"))) (embedded_fonts no))

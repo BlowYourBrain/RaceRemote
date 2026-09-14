@@ -1,7 +1,7 @@
 {
   "date": "2026-09-14",
   "scope": "Conditional priced subset, not full BOM or authorization to buy",
-  "source_sha256": "3e142e29386aa59845f7fe7f04b3e2c3bbe327a5eabf054b2702e8acd2c819c3",
+  "source_sha256": "3d40ef0320ae382dd37ed4e2345d6e1f615c60e5caefa9473581c99caea257fe",
   "scenarios": [
     {
       "cars": 1,
@@ -136,6 +136,19 @@
       "A_priced_subset_RUB": 2563,
       "B_priced_subset_RUB": 2160,
       "A_minus_B_RUB": 403,
+      "B_current_detector_candidate": {
+        "id": "CHG-OC-ONE",
+        "url": "https://www.chipdip.ru/product/ina300aidsqr-wson-10-2x2-current-sensing-texas-instruments-8017654261",
+        "needed": 1,
+        "purchase": 1,
+        "unit_RUB": 370,
+        "spend_RUB": 370,
+        "stock": 34,
+        "stock_sufficient": true,
+        "checked": "2026-09-14"
+      },
+      "B_subset_plus_detector_RUB": 2530,
+      "A_minus_B_with_detector_RUB": 33,
       "stock_shortages": [],
       "complete_purchase_ready": false
     },
@@ -272,6 +285,19 @@
       "A_priced_subset_RUB": 7673,
       "B_priced_subset_RUB": 6880,
       "A_minus_B_RUB": 793,
+      "B_current_detector_candidate": {
+        "id": "CHG-OC-LOT",
+        "url": "https://www.chipdip.ru/product/ina300aidsqr-texas-instruments-8060314732",
+        "needed": 4,
+        "purchase": 5,
+        "unit_RUB": 120,
+        "spend_RUB": 600,
+        "stock": 260,
+        "stock_sufficient": true,
+        "checked": "2026-09-14"
+      },
+      "B_subset_plus_detector_RUB": 7480,
+      "A_minus_B_with_detector_RUB": 193,
       "stock_shortages": [
         "WD-3431"
       ],
@@ -410,6 +436,19 @@
       "A_priced_subset_RUB": 10867,
       "B_priced_subset_RUB": 9114,
       "A_minus_B_RUB": 1753,
+      "B_current_detector_candidate": {
+        "id": "CHG-OC-LOT",
+        "url": "https://www.chipdip.ru/product/ina300aidsqr-texas-instruments-8060314732",
+        "needed": 6,
+        "purchase": 6,
+        "unit_RUB": 120,
+        "spend_RUB": 720,
+        "stock": 260,
+        "stock_sufficient": true,
+        "checked": "2026-09-14"
+      },
+      "B_subset_plus_detector_RUB": 9834,
+      "A_minus_B_with_detector_RUB": 1033,
       "stock_shortages": [
         "WD-3431"
       ],
@@ -420,7 +459,7 @@
     "PCB fabrication/assembly, footprints, shipping and spares",
     "Inductor, capacitors, resistors, thermistor, harness and power MOSFETs",
     "Supervisor, fault latch, voltage adaptation and source-policy circuit",
-    "A: complete per-cell charge control; B: independent reset/current protection",
+    "A: complete per-cell charge control; B: shunt and independent interruption/latch circuit",
     "Common programming tool and MCU board/debug access"
   ],
   "limitations": [

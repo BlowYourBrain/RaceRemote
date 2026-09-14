@@ -83,3 +83,5 @@ docs/charge-parts.csv text eol=crlf
 docs/charger-mcu-pins.csv text eol=lf
 docs/evidence/charger-cost-comparison.json text eol=crlf
 tools/compare_charger_cost.py text eol=lf
+tools/calculate_charge_guard.py text eol=lf
+docs/evidence/charge-current-guard.json text eol=crlf

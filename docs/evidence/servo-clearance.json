@@ -1,0 +1,152 @@
+{
+  "version": "0.1",
+  "date": "2026-09-14",
+  "upstreamCommit": "4b714e63fa30ed2030a8a48ab15f1e4a5fa380c4",
+  "sourceHashes": {
+    "build\\cad-layout\\frame.stl": "06b2c416d1aaa4d60804145899a786ddce3d83897b0949a6d6ca3620db8213c1",
+    "cad\\reference\\zcar-aligned.stl": "6b9a4472f9d0ec66c48a293097752f0d0cf454891e8a72d25eb32fcd27098b78",
+    "cad\\components\\servo-case-installed.stl": "4afd65ab03defd8d99f1895c07806a2a204308ef85d3d834f55663454fedea8b"
+  },
+  "candidateDimensionsXYZmm": [
+    22.999998092651367,
+    29.0,
+    12.199999809265137
+  ],
+  "candidateBoundsMm": [
+    [
+      18.350000381469727,
+      71.9749984741211,
+      2.0
+    ],
+    [
+      41.349998474121094,
+      100.9749984741211,
+      14.199999809265137
+    ]
+  ],
+  "upstreamRearFaceVerticesMm": [
+    [
+      41.04999923706055,
+      71.67500305175781,
+      2.0
+    ],
+    [
+      41.04999923706055,
+      71.67500305175781,
+      14.199999809265137
+    ],
+    [
+      18.650001525878906,
+      71.67500305175781,
+      2.0
+    ],
+    [
+      18.650001525878906,
+      71.67500305175781,
+      14.199999809265137
+    ]
+  ],
+  "upstreamRearFaceWidthMm": 22.39999771118164,
+  "frameSidePassageMm": 22.80000114440918,
+  "leftPassageXmm": 18.44999885559082,
+  "rightPassageXmm": 41.25,
+  "interferenceVolumeMm3": 43.814983425603714,
+  "sideInterferenceMm3": 6.999862671364099,
+  "frontLowerInterferenceMm3": 36.815120754239615,
+  "pieces": [
+    {
+      "boundsMm": [
+        [
+          18.350000381469727,
+          71.9749984741211,
+          2.0
+        ],
+        [
+          18.44999885559082,
+          73.17499542236328,
+          12.0
+        ]
+      ],
+      "volumeMm3": 1.1999786377418786
+    },
+    {
+      "boundsMm": [
+        [
+          18.350000381469727,
+          89.82500457763672,
+          2.0
+        ],
+        [
+          18.44999885559082,
+          92.12499237060547,
+          12.0
+        ]
+      ],
+      "volumeMm3": 2.2999526979401708
+    },
+    {
+      "boundsMm": [
+        [
+          18.350000381469727,
+          98.62499237060547,
+          2.0
+        ],
+        [
+          38.25,
+          100.9749984741211,
+          3.0
+        ]
+      ],
+      "volumeMm3": 36.815120754239615
+    },
+    {
+      "boundsMm": [
+        [
+          41.25,
+          71.9749984741211,
+          2.0
+        ],
+        [
+          41.349998474121094,
+          73.17499542236328,
+          12.0
+        ]
+      ],
+      "volumeMm3": 1.1999786377418786
+    },
+    {
+      "boundsMm": [
+        [
+          41.25,
+          89.82500457763672,
+          2.0
+        ],
+        [
+          41.349998474121094,
+          92.12499237060547,
+          12.0
+        ]
+      ],
+      "volumeMm3": 2.2999526979401708
+    }
+  ],
+  "upstreamReferenceWatertight": false,
+  "unchangedSourceGeometry": true,
+  "physicalFitVerified": false,
+  "limitations": [
+    "Nominal CAD dimensions, no manufacturing tolerances",
+    "Upstream servo is an open reference surface, not the selected supplier geometry",
+    "Front-lower interference may overstate actual shaped servo volume; exact sample unknown",
+    "Width 23 mm exceeds the current 22.8 mm passage; do not declare it a drop-in fit",
+    "No shaft/ear/lead calibration, frame relief, new servo choice or hardware test"
+  ],
+  "artifacts": {
+    "cad\\servo-clearance\\frame.stl": "f2bd8b0599841eeb2dc259257796c92a32e6d67031770bd79db22481c4ac8131",
+    "cad\\servo-clearance\\upstream-servo.stl": "9f1a09648c401f2135f90e27c9eb661e019e0ca553a2bb271ff3e63a857ce661",
+    "cad\\servo-clearance\\interference.stl": "c527e6bd1656cab899a0a40633ceef15c17d17b4a3162375a6335d28a1d7a016",
+    "cad\\servo-clearance\\viewer.html": "e6c3adc95b67b3a9dc6f9c6c9c27fc0d2e2c71e192f594369646c13786120404",
+    "cad\\servo-clearance\\study.scad": "b6031c0f6d0852d6c17b8ddc0d9d18c8c6869b48a3013ffb50d08af8a4119726",
+    "docs\\evidence\\servo-clearance.png": "17ea65aefd56ceb609f655e66ad9f622be05932ddacc0500afc591c281c08bc5"
+  },
+  "scriptSha256": "9878ef8e99916636a152e9542e7f68424cdd38b1b5f8573eed2310861006dc06"
+}

@@ -3,6 +3,11 @@ app/src/androidTest/java/vea/raceremote/DriveDeviceBenchTest.kt text eol=lf
 docs/evidence/drive-device-2026-09-14/* text eol=lf
 docs/evidence/link-comparison-2026-09-14/* text eol=lf
 # Keep CAD provenance hashes stable across Windows checkouts.
+cad/servo-clearance/*.stl binary
+cad/servo-clearance/*.scad text eol=lf
+cad/servo-clearance/*.html text eol=lf
+tools/build_servo_clearance.py text eol=lf
+docs/evidence/servo-clearance.json text eol=lf
 cad/assembly.scad text eol=lf
 cad/battery-holder.scad text eol=lf
 cad/assembly-viewer.html text eol=lf

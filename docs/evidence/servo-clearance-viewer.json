@@ -1,0 +1,23 @@
+{
+  "date": "2026-09-14",
+  "viewer": "cad/servo-clearance/viewer.html",
+  "viewerSha256": "e6c3adc95b67b3a9dc6f9c6c9c27fc0d2e2c71e192f594369646c13786120404",
+  "browser": {
+    "webglError": 0,
+    "parts": 4,
+    "topViewButton": "executed",
+    "upstreamCheckbox": "off and on; final all four visible",
+    "canvasPixels": [
+      2754,
+      1554
+    ],
+    "screenshot": "Optional screenshot call cancelled after it did not return; no screenshot-based visual claim"
+  },
+  "openscadPreview": {
+    "exitCode": 0,
+    "normalizedCsgElements": 4,
+    "warningsObserved": false
+  },
+  "sectionPlot": "visually inspected; two heights 8.1 and 2.5 mm",
+  "physicalFit": "not tested"
+}

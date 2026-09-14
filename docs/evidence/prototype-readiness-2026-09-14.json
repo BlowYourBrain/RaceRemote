@@ -1,0 +1,26 @@
+{
+  "recorded_at_utc": "2026-09-14 04:29:28 UTC",
+  "kind": "Read-only connected-device and repository snapshot",
+  "devices": {
+    "serial_adapter": {"name": "Silicon Labs CP210x USB to UART Bridge (COM4)", "status": "OK"},
+    "android": {"serial": "RF8M811X8FK", "model": "SM_G973F", "adb_state": "device", "package": "vea.raceremote", "version_code": 1, "version_name": "1.0.0", "device_reported_last_update_time": "2026-09-14 05:40:14"}
+  },
+  "firmware_checkout": {"head": "4e7e413", "working_tree_clean": true, "combined_environments_present": ["xiao-car-qvga", "xiao-car-vga"]},
+  "commands": [
+    "Get-CimInstance Win32_PnPEntity (filter CP210/Android)",
+    "adb devices -l",
+    "adb -s RF8M811X8FK shell dumpsys package vea.raceremote (version and lastUpdateTime fields only)",
+    "git -C ../RC_CAR_ESP32 status --short",
+    "git -C ../RC_CAR_ESP32 log -1",
+    "Read combined environment definitions in ../RC_CAR_ESP32/platformio.ini"
+  ],
+  "not_proven": [
+    "Physical antenna connection or reliable RF",
+    "XIAO/OV3660 arrival or fresh camera frames",
+    "Current flashed firmware revision or installed APK hash",
+    "Battery pinout, condition, charge limits or protection",
+    "Actuator wiring, powered output or physical car motion",
+    "Assembled charger, successful charging or CAD fit"
+  ],
+  "actions_not_performed": ["RF retest", "Device flashing", "Actuator GPIO enabling", "Charging", "Purchasing"]
+}

@@ -1,0 +1,8 @@
+﻿reference,value,purpose,footprint,selection
+U501,TPS3431SDRBR,"Always enabled, 170..230ms factory timeout; shared fault bus to permit latch",,Candidate; no PCB or physical watchdog qualification
+C501,100n / 16V,Local bypass at VDD,,Candidate; no PCB or physical watchdog qualification
+R501,10k / 1%,Factory 200ms selection; no capacitor on CWD,,Candidate; no PCB or physical watchdog qualification
+R502,47k / 1%,Default WDI LOW on MCU reset/disconnection,,Candidate; no PCB or physical watchdog qualification
+J501,FROM USB AUX,"Same AUX as MCU; not CHG_BIAS, XIAO or battery",,Candidate; no PCB or physical watchdog qualification
+J502,FROM MCU,Falling edges from completed health-check loop; no autonomous PWM,,Candidate; no PCB or physical watchdog qualification
+J503,TO PERMIT J402,Open-drain combined WDO/ENOUT; only existing R401 pulls up,,Candidate; no PCB or physical watchdog qualification

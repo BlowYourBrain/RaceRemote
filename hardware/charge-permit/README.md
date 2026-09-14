@@ -9,6 +9,11 @@
 [KiCad](charge-permit.kicad_pro) · [Схема PDF](charge-permit.pdf) ·
 [BOM](bom.csv) · [Отчёт проверок](../../docs/evidence/charge-permit-verification.json)
 
+Для J402 подготовлен отдельный [лист watchdog CHARGE-WD-01 v0.1](../charge-watchdog/README.md):
+WDO/ENOUT объединены на FAULT_BUS_N, подтяжка остаётся только R401 этого листа.
+Сопоставление экспортированных интерфейсов и цифровая модель проверены;
+общая PCB, уровни и переходные процессы ещё не проверены.
+
 ## Состав и основания
 
 - U401 **SN74LVC1G74DCTR**, SM8: D-триггер, D и активный LOW PRE на AUX.

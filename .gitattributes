@@ -99,6 +99,18 @@ docs/evidence/charge-permit-*.json text eol=crlf
 tools/build_charge_permit.py text eol=lf
 tools/verify_charge_permit.py text eol=lf
 
+hardware/charge-watchdog/*.kicad_sch text eol=crlf
+hardware/charge-watchdog/*.kicad_sym text eol=crlf
+hardware/charge-watchdog/*.kicad_pro text eol=crlf
+hardware/charge-watchdog/*-lib-table text eol=crlf
+hardware/charge-watchdog/*.csv text eol=crlf
+hardware/charge-watchdog/*.net text eol=lf
+hardware/charge-watchdog/*.pdf binary
+hardware/charge-watchdog/*.md text eol=lf
+docs/evidence/charge-watchdog-*.json text eol=crlf
+tools/build_charge_watchdog.py text eol=lf
+tools/verify_charge_watchdog.py text eol=lf
+
 # Stable source and device-evidence hashes for the driving UI.
 app/src/main/java/vea/raceremote/control/CarControlScreen.kt text eol=lf
 app/src/main/java/vea/raceremote/control/DrivingPad.kt text eol=lf

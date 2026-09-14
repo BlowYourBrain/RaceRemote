@@ -1,0 +1,645 @@
+(kicad_sch (version 20250901) (generator "raceremote")
+(uuid "3e329df5-b4c1-5d99-b78d-6e2ffe8d8683") (paper "A4")
+(title_block (title "RaceRemote - charger watchdog PROPOSAL") (date "2026-09-14") (rev "0.1") (company "vea.raceremote"))
+(lib_symbols (symbol "RaceRemote_Watchdog:R"
+		(pin_numbers
+			(hide yes)
+		)
+		(pin_names
+			(offset 0)
+		)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(duplicate_pin_numbers_are_jumpers no)
+		(property "Reference" "R"
+			(at 2.032 0 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "R"
+			(at 0 0 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at -1.778 0 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Resistor"
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "ki_keywords" "R res resistor"
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "ki_fp_filters" "R_*"
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(symbol "R_0_1"
+			(rectangle
+				(start -1.016 -2.54)
+				(end 1.016 2.54)
+				(stroke
+					(width 0.254)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+		)
+		(symbol "R_1_1"
+			(pin passive line
+				(at 0 3.81 270)
+				(length 1.27)
+				(name ""
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "1"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin passive line
+				(at 0 -3.81 90)
+				(length 1.27)
+				(name ""
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "2"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+		)
+		(embedded_fonts no)
+	)
+(symbol "RaceRemote_Watchdog:C"
+		(pin_numbers
+			(hide yes)
+		)
+		(pin_names
+			(offset 0.254)
+		)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(duplicate_pin_numbers_are_jumpers no)
+		(property "Reference" "C"
+			(at 0.635 2.54 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "C"
+			(at 0.635 -2.54 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" ""
+			(at 0.9652 -3.81 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Unpolarized capacitor"
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "ki_keywords" "cap capacitor"
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "ki_fp_filters" "C_*"
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(symbol "C_0_1"
+			(polyline
+				(pts
+					(xy -2.032 0.762) (xy 2.032 0.762)
+				)
+				(stroke
+					(width 0.508)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(polyline
+				(pts
+					(xy -2.032 -0.762) (xy 2.032 -0.762)
+				)
+				(stroke
+					(width 0.508)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+		)
+		(symbol "C_1_1"
+			(pin passive line
+				(at 0 3.81 270)
+				(length 2.794)
+				(name ""
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "1"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin passive line
+				(at 0 -3.81 90)
+				(length 2.794)
+				(name ""
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "2"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+		)
+		(embedded_fonts no)
+	)
+(symbol "RaceRemote_Watchdog:Conn_01x02"
+		(pin_names
+			(offset 1.016)
+			(hide yes)
+		)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(duplicate_pin_numbers_are_jumpers no)
+		(property "Reference" "J"
+			(at 0 2.54 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "Conn_01x02"
+			(at 0 -5.08 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Generic connector, single row, 01x02, script generated (kicad-library-utils/schlib/autogen/connector/)"
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "ki_keywords" "connector"
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "ki_fp_filters" "Connector*:*_1x??_*"
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(symbol "Conn_01x02_1_1"
+			(rectangle
+				(start -1.27 1.27)
+				(end 1.27 -3.81)
+				(stroke
+					(width 0.254)
+					(type default)
+				)
+				(fill
+					(type background)
+				)
+			)
+			(rectangle
+				(start -1.27 0.127)
+				(end 0 -0.127)
+				(stroke
+					(width 0.1524)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(rectangle
+				(start -1.27 -2.413)
+				(end 0 -2.667)
+				(stroke
+					(width 0.1524)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(pin passive line
+				(at -5.08 0 0)
+				(length 3.81)
+				(name "Pin_1"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "1"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin passive line
+				(at -5.08 -2.54 0)
+				(length 3.81)
+				(name "Pin_2"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "2"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+		)
+		(embedded_fonts no)
+	)
+(symbol "RaceRemote_Watchdog:PWR_FLAG"
+		(power global)
+		(pin_numbers
+			(hide yes)
+		)
+		(pin_names
+			(offset 0)
+			(hide yes)
+		)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(duplicate_pin_numbers_are_jumpers no)
+		(property "Reference" "#FLG"
+			(at 0 1.905 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "PWR_FLAG"
+			(at 0 3.81 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Special symbol for telling ERC where power comes from"
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "ki_keywords" "flag power"
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(symbol "PWR_FLAG_0_0"
+			(pin power_out line
+				(at 0 0 90)
+				(length 0)
+				(name ""
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "1"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+		)
+		(symbol "PWR_FLAG_0_1"
+			(polyline
+				(pts
+					(xy 0 0) (xy 0 1.27) (xy -1.016 1.905) (xy 0 2.54) (xy 1.016 1.905) (xy 0 1.27)
+				)
+				(stroke
+					(width 0)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+		)
+		(embedded_fonts no)
+	)
+(symbol "RaceRemote_Watchdog:TPS3431DRB" (pin_names (offset 1.016)) (in_bom yes) (on_board yes)
+(property "Reference" "U" (at 0 27.94 0) (effects (font (size 1.27 1.27))))
+(property "Value" "TPS3431DRB" (at 0 30.48 0) (effects (font (size 1.27 1.27))))
+(property "Footprint" "" (at 0 0 0) (effects (font (size 1.27 1.27)) hide))
+(symbol "TPS3431DRB_0_1" (rectangle (start -17.78 25.4) (end 17.78 -27.94) (stroke (width 0.254) (type default)) (fill (type background))))
+(symbol "TPS3431DRB_1_1"
+(pin power_in line (at -25.4 20.32 0) (length 7.62) (name "VDD" (effects (font (size 1.27 1.27)))) (number "1" (effects (font (size 1.27 1.27)))))
+(pin input line (at -25.4 10.16 0) (length 7.62) (name "EN" (effects (font (size 1.27 1.27)))) (number "3" (effects (font (size 1.27 1.27)))))
+(pin input line (at -25.4 0 0) (length 7.62) (name "SET1" (effects (font (size 1.27 1.27)))) (number "5" (effects (font (size 1.27 1.27)))))
+(pin input line (at -25.4 -10.16 0) (length 7.62) (name "WDI" (effects (font (size 1.27 1.27)))) (number "6" (effects (font (size 1.27 1.27)))))
+(pin power_in line (at -25.4 -20.32 0) (length 7.62) (name "GND" (effects (font (size 1.27 1.27)))) (number "4" (effects (font (size 1.27 1.27)))))
+(pin open_collector line (at 25.4 20.32 180) (length 7.62) (name "~{WDO}" (effects (font (size 1.27 1.27)))) (number "7" (effects (font (size 1.27 1.27)))))
+(pin open_collector line (at 25.4 10.16 180) (length 7.62) (name "ENOUT" (effects (font (size 1.27 1.27)))) (number "8" (effects (font (size 1.27 1.27)))))
+(pin input line (at 25.4 0 180) (length 7.62) (name "CWD" (effects (font (size 1.27 1.27)))) (number "2" (effects (font (size 1.27 1.27)))))
+(pin power_in line (at 25.4 -10.16 180) (length 7.62) (name "EP" (effects (font (size 1.27 1.27)))) (number "9" (effects (font (size 1.27 1.27))))))))
+(symbol (lib_id "RaceRemote_Watchdog:TPS3431DRB") (at 101.6 88.9 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid "f1e6ee47-92be-53a8-b2ab-ec7570eb1c55") (property "Reference" "U501" (at 101.6 58.42 0) (effects (font (size 1.27 1.27))))(property "Value" "TPS3431SDRBR" (at 101.6 55.88 0) (effects (font (size 1.27 1.27))))(property "Footprint" "" (at 101.6 88.9 0) (hide yes) (effects (font (size 1.27 1.27))))(property "Datasheet" "https://www.ti.com/lit/gpn/tps3431" (at 101.6 88.9 0) (hide yes) (effects (font (size 1.27 1.27))))(pin "1" (uuid "da79711a-fb7f-56e6-81f8-802bc4d119aa"))(pin "3" (uuid "4636be46-d7e3-58bd-bab2-a638dc5b6d1b"))(pin "5" (uuid "eb1d1a20-f5b9-5223-9f90-75bf78d05d0b"))(pin "6" (uuid "edc79eb4-a525-5d63-bab1-46c6f774d6b2"))(pin "4" (uuid "fe5a7e70-33cf-57b2-918c-4e26b72b63b5"))(pin "7" (uuid "0531579b-8573-52f0-80a4-1b207e396b3b"))(pin "8" (uuid "b89c328f-4487-562b-bf80-427828d8fa51"))(pin "2" (uuid "1207a4a7-f2a0-5f3b-8a74-023211978d54"))(pin "9" (uuid "511d8921-4433-5b05-8f19-33e5971b86eb"))(instances (project "charge-watchdog" (path "/3e329df5-b4c1-5d99-b78d-6e2ffe8d8683" (reference "U501") (unit 1)))))
+(wire (pts (xy 76.2 68.58) (xy 68.58 68.58)) (stroke (width 0) (type default)) (uuid "c9952757-df00-57a6-9986-fe85d6ea4a6f"))
+(global_label "AUX_3V3" (shape passive) (at 68.58 68.58 180) (effects (font (size 1 1)) (justify right)) (uuid "7705625b-0346-52ae-a394-1a809a8e7fa5"))
+(wire (pts (xy 76.2 78.74) (xy 68.58 78.74)) (stroke (width 0) (type default)) (uuid "3bd65c51-b1c0-5771-affd-466016a1e106"))
+(global_label "AUX_3V3" (shape passive) (at 68.58 78.74 180) (effects (font (size 1 1)) (justify right)) (uuid "5ed6b03b-1708-553b-b768-4d996e1f179f"))
+(wire (pts (xy 76.2 88.9) (xy 68.58 88.9)) (stroke (width 0) (type default)) (uuid "dbed5581-418a-5252-a728-c5082ff73045"))
+(global_label "AUX_3V3" (shape passive) (at 68.58 88.9 180) (effects (font (size 1 1)) (justify right)) (uuid "4b540167-6f6e-51e8-9a5b-2f48d12581a5"))
+(wire (pts (xy 76.2 99.06) (xy 68.58 99.06)) (stroke (width 0) (type default)) (uuid "291cd9d6-36d5-5fd5-9015-3fb14f64f836"))
+(global_label "WD_HEARTBEAT" (shape passive) (at 68.58 99.06 180) (effects (font (size 1 1)) (justify right)) (uuid "dcc5466f-3bae-5c46-9d5e-c588069920f1"))
+(wire (pts (xy 76.2 109.22) (xy 68.58 109.22)) (stroke (width 0) (type default)) (uuid "0a5cf51d-d539-5e63-9234-0c76ca02f971"))
+(global_label "USB_GND" (shape passive) (at 68.58 109.22 180) (effects (font (size 1 1)) (justify right)) (uuid "94a83964-53e7-5dce-a6e3-c61bbaee38a1"))
+(wire (pts (xy 127 68.58) (xy 134.62 68.58)) (stroke (width 0) (type default)) (uuid "c019da4d-261e-52ee-9460-5eefabbb5c45"))
+(global_label "FAULT_BUS_N" (shape passive) (at 134.62 68.58 0) (effects (font (size 1 1)) (justify left)) (uuid "283270e8-8a21-5873-a972-ab00a9d94fa1"))
+(wire (pts (xy 127 78.74) (xy 134.62 78.74)) (stroke (width 0) (type default)) (uuid "c4922282-c2aa-56ca-9f77-5cec458cf367"))
+(global_label "FAULT_BUS_N" (shape passive) (at 134.62 78.74 0) (effects (font (size 1 1)) (justify left)) (uuid "c0a2833e-59e7-5986-b13a-3a327b60f5c7"))
+(wire (pts (xy 127 88.9) (xy 134.62 88.9)) (stroke (width 0) (type default)) (uuid "6aecc768-161b-5184-8e89-b153d4bfc2ac"))
+(global_label "WD_TIMEOUT_SELECT" (shape passive) (at 134.62 88.9 0) (effects (font (size 1 1)) (justify left)) (uuid "ae3888c2-6d73-5567-8f3a-6ee76ab72404"))
+(wire (pts (xy 127 99.06) (xy 134.62 99.06)) (stroke (width 0) (type default)) (uuid "ce545c6d-0d33-5597-a859-6c7712653c20"))
+(global_label "USB_GND" (shape passive) (at 134.62 99.06 0) (effects (font (size 1 1)) (justify left)) (uuid "23fbf578-6ba1-502b-8b3f-c80d64963c61"))
+(symbol (lib_id "RaceRemote_Watchdog:C") (at 38.1 154.94 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid "7f445418-aaf7-5c17-b956-606a0deb049c") (property "Reference" "C501" (at 38.1 149.86 0) (effects (font (size 1.27 1.27))))(property "Value" "100n / 16V" (at 50.8 154.94 0) (effects (font (size 1.27 1.27))))(property "Footprint" "" (at 38.1 154.94 0) (hide yes) (effects (font (size 1.27 1.27))))(property "Datasheet" "" (at 38.1 154.94 0) (hide yes) (effects (font (size 1.27 1.27))))(pin "1" (uuid "950c2cd1-a97e-5330-a5bb-8ddc0f6212aa"))(pin "2" (uuid "3740dbd3-4e85-5b35-af5b-c1f5c25bd8c7"))(instances (project "charge-watchdog" (path "/3e329df5-b4c1-5d99-b78d-6e2ffe8d8683" (reference "C501") (unit 1)))))
+(wire (pts (xy 38.1 151.13) (xy 38.1 143.51)) (stroke (width 0) (type default)) (uuid "c7f5c4ba-067b-5d77-b243-02a194fd8b76"))
+(global_label "AUX_3V3" (shape passive) (at 38.1 143.51 0) (effects (font (size 1 1)) (justify left)) (uuid "c482b5bd-ee39-5690-b2b0-cf1c157f8e86"))
+(wire (pts (xy 38.1 158.75) (xy 38.1 166.37)) (stroke (width 0) (type default)) (uuid "959f5291-8cf1-567d-b984-9d4b98508631"))
+(global_label "USB_GND" (shape passive) (at 38.1 166.37 0) (effects (font (size 1 1)) (justify left)) (uuid "b75146aa-e4ad-56a1-932a-1ff5765287e4"))
+(symbol (lib_id "RaceRemote_Watchdog:R") (at 101.6 154.94 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid "eb8860d5-5b6f-51f2-a37a-74f3f1347abf") (property "Reference" "R501" (at 101.6 149.86 0) (effects (font (size 1.27 1.27))))(property "Value" "10k / 1%" (at 114.3 154.94 0) (effects (font (size 1.27 1.27))))(property "Footprint" "" (at 101.6 154.94 0) (hide yes) (effects (font (size 1.27 1.27))))(property "Datasheet" "" (at 101.6 154.94 0) (hide yes) (effects (font (size 1.27 1.27))))(pin "1" (uuid "e7fc2111-cc64-51c8-90a0-718b2244bf37"))(pin "2" (uuid "db30993a-7a6b-562b-93b9-811a7bd67723"))(instances (project "charge-watchdog" (path "/3e329df5-b4c1-5d99-b78d-6e2ffe8d8683" (reference "R501") (unit 1)))))
+(wire (pts (xy 101.6 151.13) (xy 101.6 143.51)) (stroke (width 0) (type default)) (uuid "636829c4-ba2b-58e6-a441-a2bcca78058e"))
+(global_label "AUX_3V3" (shape passive) (at 101.6 143.51 0) (effects (font (size 1 1)) (justify left)) (uuid "0f9f62bb-6d27-5cf7-93fc-a4971a320b5e"))
+(wire (pts (xy 101.6 158.75) (xy 101.6 166.37)) (stroke (width 0) (type default)) (uuid "6b78f272-0fb5-5bbf-9b09-7a2cf20a9e9e"))
+(global_label "WD_TIMEOUT_SELECT" (shape passive) (at 101.6 166.37 0) (effects (font (size 1 1)) (justify left)) (uuid "3bf772b9-6919-5596-8eed-43d5d9f38265"))
+(symbol (lib_id "RaceRemote_Watchdog:R") (at 165.1 154.94 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid "22657aff-357c-593e-b44d-5e89d9cc2f66") (property "Reference" "R502" (at 165.1 149.86 0) (effects (font (size 1.27 1.27))))(property "Value" "47k / 1%" (at 177.8 154.94 0) (effects (font (size 1.27 1.27))))(property "Footprint" "" (at 165.1 154.94 0) (hide yes) (effects (font (size 1.27 1.27))))(property "Datasheet" "" (at 165.1 154.94 0) (hide yes) (effects (font (size 1.27 1.27))))(pin "1" (uuid "91329264-f190-5bfa-9922-f4a483abd3d1"))(pin "2" (uuid "368e9293-2354-5b6d-ac19-5692669250f6"))(instances (project "charge-watchdog" (path "/3e329df5-b4c1-5d99-b78d-6e2ffe8d8683" (reference "R502") (unit 1)))))
+(wire (pts (xy 165.1 151.13) (xy 165.1 143.51)) (stroke (width 0) (type default)) (uuid "7ecd6beb-dc5e-542a-83be-474a1b37f258"))
+(global_label "WD_HEARTBEAT" (shape passive) (at 165.1 143.51 0) (effects (font (size 1 1)) (justify left)) (uuid "df68b814-1408-5e53-a741-8f883c7e52db"))
+(wire (pts (xy 165.1 158.75) (xy 165.1 166.37)) (stroke (width 0) (type default)) (uuid "f482c3b4-54ca-54a7-ba1b-7be485510426"))
+(global_label "USB_GND" (shape passive) (at 165.1 166.37 0) (effects (font (size 1 1)) (justify left)) (uuid "7b24514c-f4d6-56e1-b4d9-0dccc43aca31"))
+(symbol (lib_id "RaceRemote_Watchdog:Conn_01x02") (at 228.6 63.5 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid "18f30cf6-6734-58b0-aa47-87289f83ae05") (property "Reference" "J501" (at 228.6 58.42 0) (effects (font (size 1.27 1.27))))(property "Value" "FROM USB AUX" (at 228.6 55.88 0) (effects (font (size 1.27 1.27))))(property "Footprint" "" (at 228.6 63.5 0) (hide yes) (effects (font (size 1.27 1.27))))(property "Datasheet" "" (at 228.6 63.5 0) (hide yes) (effects (font (size 1.27 1.27))))(pin "1" (uuid "bd9c8ffd-094d-52e4-af3a-149f270fee76"))(pin "2" (uuid "f4db7903-de00-5981-88e7-9254b0164c3f"))(instances (project "charge-watchdog" (path "/3e329df5-b4c1-5d99-b78d-6e2ffe8d8683" (reference "J501") (unit 1)))))
+(wire (pts (xy 223.52 63.5) (xy 215.9 63.5)) (stroke (width 0) (type default)) (uuid "9ac511ae-eec4-5441-bd68-cf7ddc0fdb05"))
+(global_label "AUX_3V3" (shape passive) (at 215.9 63.5 180) (effects (font (size 1 1)) (justify right)) (uuid "36fef111-650b-5bdd-8ad8-a0ba6e9097e2"))
+(wire (pts (xy 223.52 66.04) (xy 215.9 66.04)) (stroke (width 0) (type default)) (uuid "a0e3f76c-398d-53b0-90b4-4cde25a170bc"))
+(global_label "USB_GND" (shape passive) (at 215.9 66.04 180) (effects (font (size 1 1)) (justify right)) (uuid "24da13c8-583c-51d1-baaf-ddf74a4a0cbe"))
+(symbol (lib_id "RaceRemote_Watchdog:Conn_01x02") (at 228.6 101.6 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid "0653c7d8-8b34-5258-9de3-2f42bdcaa904") (property "Reference" "J502" (at 228.6 96.52 0) (effects (font (size 1.27 1.27))))(property "Value" "FROM MCU" (at 228.6 93.98 0) (effects (font (size 1.27 1.27))))(property "Footprint" "" (at 228.6 101.6 0) (hide yes) (effects (font (size 1.27 1.27))))(property "Datasheet" "" (at 228.6 101.6 0) (hide yes) (effects (font (size 1.27 1.27))))(pin "1" (uuid "a2816a12-0112-5089-b422-d94153e38066"))(pin "2" (uuid "9057ed8a-1450-5bed-a907-4e1472dd9d32"))(instances (project "charge-watchdog" (path "/3e329df5-b4c1-5d99-b78d-6e2ffe8d8683" (reference "J502") (unit 1)))))
+(wire (pts (xy 223.52 101.6) (xy 215.9 101.6)) (stroke (width 0) (type default)) (uuid "42fe8afe-db2d-59e9-9de6-3126c32292a7"))
+(global_label "WD_HEARTBEAT" (shape passive) (at 215.9 101.6 180) (effects (font (size 1 1)) (justify right)) (uuid "d775b1a3-f935-59c4-a72b-180d503ded8b"))
+(wire (pts (xy 223.52 104.14) (xy 215.9 104.14)) (stroke (width 0) (type default)) (uuid "a1955cc5-a21d-5026-b715-6f8454c0a85d"))
+(global_label "USB_GND" (shape passive) (at 215.9 104.14 180) (effects (font (size 1 1)) (justify right)) (uuid "0cb07864-b559-55ae-9e23-977798cc7951"))
+(symbol (lib_id "RaceRemote_Watchdog:Conn_01x02") (at 228.6 139.7 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid "e791ef03-6da9-50f9-b32d-a8deed814961") (property "Reference" "J503" (at 228.6 134.62 0) (effects (font (size 1.27 1.27))))(property "Value" "TO PERMIT J402" (at 228.6 132.08 0) (effects (font (size 1.27 1.27))))(property "Footprint" "" (at 228.6 139.7 0) (hide yes) (effects (font (size 1.27 1.27))))(property "Datasheet" "" (at 228.6 139.7 0) (hide yes) (effects (font (size 1.27 1.27))))(pin "1" (uuid "b11c5e90-8492-5634-9545-a84d1971e056"))(pin "2" (uuid "20954197-6846-509d-a7b2-24b66b3c5fdc"))(instances (project "charge-watchdog" (path "/3e329df5-b4c1-5d99-b78d-6e2ffe8d8683" (reference "J503") (unit 1)))))
+(wire (pts (xy 223.52 139.7) (xy 215.9 139.7)) (stroke (width 0) (type default)) (uuid "352603aa-2e3b-515e-882b-e54c123101e3"))
+(global_label "FAULT_BUS_N" (shape passive) (at 215.9 139.7 180) (effects (font (size 1 1)) (justify right)) (uuid "2eff4686-bb91-5b09-85f9-65533f53e0c9"))
+(wire (pts (xy 223.52 142.24) (xy 215.9 142.24)) (stroke (width 0) (type default)) (uuid "dfd50d6d-58a6-5ebb-a305-bb966f3f015d"))
+(global_label "USB_GND" (shape passive) (at 215.9 142.24 180) (effects (font (size 1 1)) (justify right)) (uuid "c2df5e62-7578-5035-bb32-9e2e0b812f4f"))
+(symbol (lib_id "RaceRemote_Watchdog:PWR_FLAG") (at 165.1 38.1 0) (unit 1) (in_bom no) (on_board no) (dnp no) (uuid "d5bc3a14-b538-54bd-beb8-ac19cfdf44e3") (property "Reference" "#FLG501" (at 165.1 33.02 0) (hide yes) (effects (font (size 1.27 1.27))))(property "Value" "PWR_FLAG" (at 165.1 30.48 0) (hide yes) (effects (font (size 1.27 1.27))))(property "Footprint" "" (at 165.1 38.1 0) (hide yes) (effects (font (size 1.27 1.27))))(property "Datasheet" "" (at 165.1 38.1 0) (hide yes) (effects (font (size 1.27 1.27))))(pin "1" (uuid "7e8a7e6f-79f5-5065-ad13-9a5946526f7f"))(instances (project "charge-watchdog" (path "/3e329df5-b4c1-5d99-b78d-6e2ffe8d8683" (reference "#FLG501") (unit 1)))))
+(wire (pts (xy 165.1 38.1) (xy 165.1 43.18)) (stroke (width 0) (type default)) (uuid "8bf774b6-265e-5a2a-9f22-86b8ed3d78bf"))
+(global_label "AUX_3V3" (shape passive) (at 165.1 43.18 0) (effects (font (size 1 1)) (justify left)) (uuid "ffc6fb7c-f871-5957-8d29-75ddaefad5d0"))
+(symbol (lib_id "RaceRemote_Watchdog:PWR_FLAG") (at 254 38.1 0) (unit 1) (in_bom no) (on_board no) (dnp no) (uuid "6504af1e-e029-50b1-9b41-1a433705ae6b") (property "Reference" "#FLG502" (at 254 33.02 0) (hide yes) (effects (font (size 1.27 1.27))))(property "Value" "PWR_FLAG" (at 254 30.48 0) (hide yes) (effects (font (size 1.27 1.27))))(property "Footprint" "" (at 254 38.1 0) (hide yes) (effects (font (size 1.27 1.27))))(property "Datasheet" "" (at 254 38.1 0) (hide yes) (effects (font (size 1.27 1.27))))(pin "1" (uuid "1438ead3-8d36-5d9e-a1f6-183176b7282f"))(instances (project "charge-watchdog" (path "/3e329df5-b4c1-5d99-b78d-6e2ffe8d8683" (reference "#FLG502") (unit 1)))))
+(wire (pts (xy 254 38.1) (xy 254 43.18)) (stroke (width 0) (type default)) (uuid "f9733a9f-26e9-54d3-8592-b3aebb0599da"))
+(global_label "USB_GND" (shape passive) (at 254 43.18 0) (effects (font (size 1 1)) (justify left)) (uuid "caacbb51-c78a-5893-bc16-43cd21c3c861"))
+(text "CHARGE-WD-01 v0.1 - missing heartbeat must clear the external permit latch" (at 12.7 12.7 0) (effects (font (size 1.5 1.5)) (justify left top)) (uuid "b2850846-fb04-5230-9e73-9cdbc9b96fc3"))
+(text "WDO and ENOUT are open drain and tied together per TI. No local FAULT pull-up.\nEN/SET1 tied HIGH: MCU cannot disable this watchdog. EP is assigned logical pad 9." (at 12.7 22.86 0) (effects (font (size 1 1)) (justify left top)) (uuid "f0368847-8d2d-5d80-85ae-80ffb7fb204d"))
+(text "Timer: 170..230ms; fault pulse: 170..230ms.\nFault release MUST NOT automatically rearm charge.\nStartup/brownout, GPIO levels, real CD/current\nand persistent INA300 fault remain unverified." (at 12.7 180.34 0) (effects (font (size 1 1)) (justify left top)) (uuid "a2cac18c-ce9f-56a8-a0ae-59d96de1a601"))
+(sheet_instances (path "/" (page "1"))) (embedded_fonts no))

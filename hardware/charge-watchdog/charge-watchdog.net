@@ -1,0 +1,306 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<export version="E">
+  <design>
+    <source>C:\Users\Evgeny\orca\RaceRemote\hardware\charge-watchdog\charge-watchdog.kicad_sch</source>
+    <date>2026-09-14T06:17:57</date>
+    <tool>Eeschema 10.0.6</tool>
+    <sheet number="1" name="/" tstamps="/">
+      <title_block>
+        <title>RaceRemote - charger watchdog PROPOSAL</title>
+        <company>vea.raceremote</company>
+        <rev>0.1</rev>
+        <date>2026-09-14</date>
+        <source>charge-watchdog.kicad_sch</source>
+        <comment number="1" value=""/>
+        <comment number="2" value=""/>
+        <comment number="3" value=""/>
+        <comment number="4" value=""/>
+        <comment number="5" value=""/>
+        <comment number="6" value=""/>
+        <comment number="7" value=""/>
+        <comment number="8" value=""/>
+        <comment number="9" value=""/>
+      </title_block>
+    </sheet>
+  </design>
+  <components>
+    <comp ref="C501">
+      <value>100n / 16V</value>
+      <fields>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="RaceRemote_Watchdog" part="C" description="Unpolarized capacitor"/>
+      <property name="Sheetname" value="charge-watchdog"/>
+      <property name="Sheetfile" value="charge-watchdog.kicad_sch"/>
+      <property name="ki_keywords" value="cap capacitor"/>
+      <property name="ki_fp_filters" value="C_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>7f445418-aaf7-5c17-b956-606a0deb049c</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="J501">
+      <value>FROM USB AUX</value>
+      <fields>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="RaceRemote_Watchdog" part="Conn_01x02" description="Generic connector, single row, 01x02, script generated (kicad-library-utils/schlib/autogen/connector/)"/>
+      <property name="Sheetname" value="charge-watchdog"/>
+      <property name="Sheetfile" value="charge-watchdog.kicad_sch"/>
+      <property name="ki_keywords" value="connector"/>
+      <property name="ki_fp_filters" value="Connector*:*_1x??_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>18f30cf6-6734-58b0-aa47-87289f83ae05</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="J502">
+      <value>FROM MCU</value>
+      <fields>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="RaceRemote_Watchdog" part="Conn_01x02" description="Generic connector, single row, 01x02, script generated (kicad-library-utils/schlib/autogen/connector/)"/>
+      <property name="Sheetname" value="charge-watchdog"/>
+      <property name="Sheetfile" value="charge-watchdog.kicad_sch"/>
+      <property name="ki_keywords" value="connector"/>
+      <property name="ki_fp_filters" value="Connector*:*_1x??_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>0653c7d8-8b34-5258-9de3-2f42bdcaa904</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="J503">
+      <value>TO PERMIT J402</value>
+      <fields>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="RaceRemote_Watchdog" part="Conn_01x02" description="Generic connector, single row, 01x02, script generated (kicad-library-utils/schlib/autogen/connector/)"/>
+      <property name="Sheetname" value="charge-watchdog"/>
+      <property name="Sheetfile" value="charge-watchdog.kicad_sch"/>
+      <property name="ki_keywords" value="connector"/>
+      <property name="ki_fp_filters" value="Connector*:*_1x??_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>e791ef03-6da9-50f9-b32d-a8deed814961</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="R501">
+      <value>10k / 1%</value>
+      <fields>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="RaceRemote_Watchdog" part="R" description="Resistor"/>
+      <property name="Sheetname" value="charge-watchdog"/>
+      <property name="Sheetfile" value="charge-watchdog.kicad_sch"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <property name="ki_fp_filters" value="R_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>eb8860d5-5b6f-51f2-a37a-74f3f1347abf</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="R502">
+      <value>47k / 1%</value>
+      <fields>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="RaceRemote_Watchdog" part="R" description="Resistor"/>
+      <property name="Sheetname" value="charge-watchdog"/>
+      <property name="Sheetfile" value="charge-watchdog.kicad_sch"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <property name="ki_fp_filters" value="R_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>22657aff-357c-593e-b44d-5e89d9cc2f66</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="U501">
+      <value>TPS3431SDRBR</value>
+      <datasheet>https://www.ti.com/lit/gpn/tps3431</datasheet>
+      <fields>
+        <field name="Footprint"/>
+        <field name="Datasheet">https://www.ti.com/lit/gpn/tps3431</field>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="RaceRemote_Watchdog" part="TPS3431DRB" description=""/>
+      <property name="Sheetname" value="charge-watchdog"/>
+      <property name="Sheetfile" value="charge-watchdog.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>f1e6ee47-92be-53a8-b2ab-ec7570eb1c55</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="3"/>
+            <pin num="5"/>
+            <pin num="6"/>
+            <pin num="4"/>
+            <pin num="7"/>
+            <pin num="8"/>
+            <pin num="2"/>
+            <pin num="9"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+  </components>
+  <libparts>
+    <libpart lib="RaceRemote_Watchdog" part="C">
+      <description>Unpolarized capacitor</description>
+      <footprints>
+        <fp>C_*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">C</field>
+        <field name="Value">C</field>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description">Unpolarized capacitor</field>
+      </fields>
+      <pins>
+        <pin num="1" name="" type="passive"/>
+        <pin num="2" name="" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="RaceRemote_Watchdog" part="Conn_01x02">
+      <description>Generic connector, single row, 01x02, script generated (kicad-library-utils/schlib/autogen/connector/)</description>
+      <footprints>
+        <fp>Connector*:*_1x??_*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">J</field>
+        <field name="Value">Conn_01x02</field>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description">Generic connector, single row, 01x02, script generated (kicad-library-utils/schlib/autogen/connector/)</field>
+      </fields>
+      <pins>
+        <pin num="1" name="Pin_1" type="passive"/>
+        <pin num="2" name="Pin_2" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="RaceRemote_Watchdog" part="R">
+      <description>Resistor</description>
+      <footprints>
+        <fp>R_*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">R</field>
+        <field name="Value">R</field>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description">Resistor</field>
+      </fields>
+      <pins>
+        <pin num="1" name="" type="passive"/>
+        <pin num="2" name="" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="RaceRemote_Watchdog" part="TPS3431DRB">
+      <fields>
+        <field name="Reference">U</field>
+        <field name="Value">TPS3431DRB</field>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <pins>
+        <pin num="1" name="VDD" type="power_in"/>
+        <pin num="2" name="CWD" type="input"/>
+        <pin num="3" name="EN" type="input"/>
+        <pin num="4" name="GND" type="power_in"/>
+        <pin num="5" name="SET1" type="input"/>
+        <pin num="6" name="WDI" type="input"/>
+        <pin num="7" name="~{WDO}" type="open_collector"/>
+        <pin num="8" name="ENOUT" type="open_collector"/>
+        <pin num="9" name="EP" type="power_in"/>
+      </pins>
+    </libpart>
+  </libparts>
+  <libraries>
+    <library logical="RaceRemote_Watchdog">
+      <uri>${KIPRJMOD}/RaceRemote_Watchdog.kicad_sym</uri>
+    </library>
+  </libraries>
+  <nets>
+    <net code="1" name="AUX_3V3" class="Default">
+      <node ref="C501" pin="1" pintype="passive"/>
+      <node ref="J501" pin="1" pinfunction="Pin_1_1" pintype="passive"/>
+      <node ref="R501" pin="1" pintype="passive"/>
+      <node ref="U501" pin="1" pinfunction="VDD_1" pintype="power_in"/>
+      <node ref="U501" pin="3" pinfunction="EN_3" pintype="input"/>
+      <node ref="U501" pin="5" pinfunction="SET1_5" pintype="input"/>
+    </net>
+    <net code="2" name="FAULT_BUS_N" class="Default">
+      <node ref="J503" pin="1" pinfunction="Pin_1_1" pintype="passive"/>
+      <node ref="U501" pin="7" pinfunction="~{WDO}_7" pintype="open_collector"/>
+      <node ref="U501" pin="8" pinfunction="ENOUT_8" pintype="open_collector"/>
+    </net>
+    <net code="3" name="USB_GND" class="Default">
+      <node ref="C501" pin="2" pintype="passive"/>
+      <node ref="J501" pin="2" pinfunction="Pin_2_2" pintype="passive"/>
+      <node ref="J502" pin="2" pinfunction="Pin_2_2" pintype="passive"/>
+      <node ref="J503" pin="2" pinfunction="Pin_2_2" pintype="passive"/>
+      <node ref="R502" pin="2" pintype="passive"/>
+      <node ref="U501" pin="4" pinfunction="GND_4" pintype="power_in"/>
+      <node ref="U501" pin="9" pinfunction="EP_9" pintype="power_in"/>
+    </net>
+    <net code="4" name="WD_HEARTBEAT" class="Default">
+      <node ref="J502" pin="1" pinfunction="Pin_1_1" pintype="passive"/>
+      <node ref="R502" pin="1" pintype="passive"/>
+      <node ref="U501" pin="6" pinfunction="WDI_6" pintype="input"/>
+    </net>
+    <net code="5" name="WD_TIMEOUT_SELECT" class="Default">
+      <node ref="R501" pin="2" pintype="passive"/>
+      <node ref="U501" pin="2" pinfunction="CWD_2" pintype="input"/>
+    </net>
+  </nets>
+</export>

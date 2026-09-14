@@ -1,0 +1,792 @@
+{
+  "date": "2026-09-14",
+  "contract": "CHARGE-WD-01 v0.1",
+  "kicad_version": "10.0.6",
+  "erc_violations": 0,
+  "components": 7,
+  "pins_including_ep": 21,
+  "fault_injections": [
+    {
+      "mutation": "enable_disabled",
+      "detected": true,
+      "failed_contract": "Connectivity mismatch: {(('U501', '3'), 'AUX_3V3'), (('U501', '3'), 'USB_GND')}"
+    },
+    {
+      "mutation": "set1_disabled",
+      "detected": true,
+      "failed_contract": "Connectivity mismatch: {(('U501', '5'), 'USB_GND'), (('U501', '5'), 'AUX_3V3')}"
+    },
+    {
+      "mutation": "cwd_grounded",
+      "detected": true,
+      "failed_contract": "Connectivity mismatch: {(('U501', '2'), 'USB_GND'), (('U501', '2'), 'WD_TIMEOUT_SELECT')}"
+    },
+    {
+      "mutation": "fault_connector_wrong",
+      "detected": true,
+      "failed_contract": "Connectivity mismatch: {(('J503', '1'), 'WD_HEARTBEAT'), (('J503', '1'), 'FAULT_BUS_N')}"
+    },
+    {
+      "mutation": "enout_disconnected",
+      "detected": true,
+      "failed_contract": "Connectivity mismatch: {(('U501', '8'), 'FAULT_BUS_N'), (('U501', '8'), 'ISOLATED_ENOUT')}"
+    }
+  ],
+  "settled_rail_sequences": [
+    {
+      "timeout_ms": 170,
+      "fault_pulse_ms": 170,
+      "mode": "normal",
+      "frozen_arm": 0,
+      "first_fault_ms": null,
+      "fault_releases": 0
+    },
+    {
+      "timeout_ms": 170,
+      "fault_pulse_ms": 170,
+      "mode": "normal",
+      "frozen_arm": 1,
+      "first_fault_ms": null,
+      "fault_releases": 0
+    },
+    {
+      "timeout_ms": 170,
+      "fault_pulse_ms": 170,
+      "mode": "missing",
+      "frozen_arm": 0,
+      "first_fault_ms": 170,
+      "fault_releases": 2
+    },
+    {
+      "timeout_ms": 170,
+      "fault_pulse_ms": 170,
+      "mode": "missing",
+      "frozen_arm": 1,
+      "first_fault_ms": 170,
+      "fault_releases": 2
+    },
+    {
+      "timeout_ms": 170,
+      "fault_pulse_ms": 170,
+      "mode": "stuck_low",
+      "frozen_arm": 0,
+      "first_fault_ms": 281,
+      "fault_releases": 2
+    },
+    {
+      "timeout_ms": 170,
+      "fault_pulse_ms": 170,
+      "mode": "stuck_low",
+      "frozen_arm": 1,
+      "first_fault_ms": 281,
+      "fault_releases": 2
+    },
+    {
+      "timeout_ms": 170,
+      "fault_pulse_ms": 170,
+      "mode": "stuck_high",
+      "frozen_arm": 0,
+      "first_fault_ms": 281,
+      "fault_releases": 2
+    },
+    {
+      "timeout_ms": 170,
+      "fault_pulse_ms": 170,
+      "mode": "stuck_high",
+      "frozen_arm": 1,
+      "first_fault_ms": 281,
+      "fault_releases": 2
+    },
+    {
+      "timeout_ms": 170,
+      "fault_pulse_ms": 170,
+      "mode": "fast",
+      "frozen_arm": 0,
+      "first_fault_ms": null,
+      "fault_releases": 0
+    },
+    {
+      "timeout_ms": 170,
+      "fault_pulse_ms": 170,
+      "mode": "fast",
+      "frozen_arm": 1,
+      "first_fault_ms": null,
+      "fault_releases": 0
+    },
+    {
+      "timeout_ms": 170,
+      "fault_pulse_ms": 200,
+      "mode": "normal",
+      "frozen_arm": 0,
+      "first_fault_ms": null,
+      "fault_releases": 0
+    },
+    {
+      "timeout_ms": 170,
+      "fault_pulse_ms": 200,
+      "mode": "normal",
+      "frozen_arm": 1,
+      "first_fault_ms": null,
+      "fault_releases": 0
+    },
+    {
+      "timeout_ms": 170,
+      "fault_pulse_ms": 200,
+      "mode": "missing",
+      "frozen_arm": 0,
+      "first_fault_ms": 170,
+      "fault_releases": 2
+    },
+    {
+      "timeout_ms": 170,
+      "fault_pulse_ms": 200,
+      "mode": "missing",
+      "frozen_arm": 1,
+      "first_fault_ms": 170,
+      "fault_releases": 2
+    },
+    {
+      "timeout_ms": 170,
+      "fault_pulse_ms": 200,
+      "mode": "stuck_low",
+      "frozen_arm": 0,
+      "first_fault_ms": 281,
+      "fault_releases": 2
+    },
+    {
+      "timeout_ms": 170,
+      "fault_pulse_ms": 200,
+      "mode": "stuck_low",
+      "frozen_arm": 1,
+      "first_fault_ms": 281,
+      "fault_releases": 2
+    },
+    {
+      "timeout_ms": 170,
+      "fault_pulse_ms": 200,
+      "mode": "stuck_high",
+      "frozen_arm": 0,
+      "first_fault_ms": 281,
+      "fault_releases": 2
+    },
+    {
+      "timeout_ms": 170,
+      "fault_pulse_ms": 200,
+      "mode": "stuck_high",
+      "frozen_arm": 1,
+      "first_fault_ms": 281,
+      "fault_releases": 2
+    },
+    {
+      "timeout_ms": 170,
+      "fault_pulse_ms": 200,
+      "mode": "fast",
+      "frozen_arm": 0,
+      "first_fault_ms": null,
+      "fault_releases": 0
+    },
+    {
+      "timeout_ms": 170,
+      "fault_pulse_ms": 200,
+      "mode": "fast",
+      "frozen_arm": 1,
+      "first_fault_ms": null,
+      "fault_releases": 0
+    },
+    {
+      "timeout_ms": 170,
+      "fault_pulse_ms": 230,
+      "mode": "normal",
+      "frozen_arm": 0,
+      "first_fault_ms": null,
+      "fault_releases": 0
+    },
+    {
+      "timeout_ms": 170,
+      "fault_pulse_ms": 230,
+      "mode": "normal",
+      "frozen_arm": 1,
+      "first_fault_ms": null,
+      "fault_releases": 0
+    },
+    {
+      "timeout_ms": 170,
+      "fault_pulse_ms": 230,
+      "mode": "missing",
+      "frozen_arm": 0,
+      "first_fault_ms": 170,
+      "fault_releases": 2
+    },
+    {
+      "timeout_ms": 170,
+      "fault_pulse_ms": 230,
+      "mode": "missing",
+      "frozen_arm": 1,
+      "first_fault_ms": 170,
+      "fault_releases": 2
+    },
+    {
+      "timeout_ms": 170,
+      "fault_pulse_ms": 230,
+      "mode": "stuck_low",
+      "frozen_arm": 0,
+      "first_fault_ms": 281,
+      "fault_releases": 2
+    },
+    {
+      "timeout_ms": 170,
+      "fault_pulse_ms": 230,
+      "mode": "stuck_low",
+      "frozen_arm": 1,
+      "first_fault_ms": 281,
+      "fault_releases": 2
+    },
+    {
+      "timeout_ms": 170,
+      "fault_pulse_ms": 230,
+      "mode": "stuck_high",
+      "frozen_arm": 0,
+      "first_fault_ms": 281,
+      "fault_releases": 2
+    },
+    {
+      "timeout_ms": 170,
+      "fault_pulse_ms": 230,
+      "mode": "stuck_high",
+      "frozen_arm": 1,
+      "first_fault_ms": 281,
+      "fault_releases": 2
+    },
+    {
+      "timeout_ms": 170,
+      "fault_pulse_ms": 230,
+      "mode": "fast",
+      "frozen_arm": 0,
+      "first_fault_ms": null,
+      "fault_releases": 0
+    },
+    {
+      "timeout_ms": 170,
+      "fault_pulse_ms": 230,
+      "mode": "fast",
+      "frozen_arm": 1,
+      "first_fault_ms": null,
+      "fault_releases": 0
+    },
+    {
+      "timeout_ms": 200,
+      "fault_pulse_ms": 170,
+      "mode": "normal",
+      "frozen_arm": 0,
+      "first_fault_ms": null,
+      "fault_releases": 0
+    },
+    {
+      "timeout_ms": 200,
+      "fault_pulse_ms": 170,
+      "mode": "normal",
+      "frozen_arm": 1,
+      "first_fault_ms": null,
+      "fault_releases": 0
+    },
+    {
+      "timeout_ms": 200,
+      "fault_pulse_ms": 170,
+      "mode": "missing",
+      "frozen_arm": 0,
+      "first_fault_ms": 200,
+      "fault_releases": 2
+    },
+    {
+      "timeout_ms": 200,
+      "fault_pulse_ms": 170,
+      "mode": "missing",
+      "frozen_arm": 1,
+      "first_fault_ms": 200,
+      "fault_releases": 2
+    },
+    {
+      "timeout_ms": 200,
+      "fault_pulse_ms": 170,
+      "mode": "stuck_low",
+      "frozen_arm": 0,
+      "first_fault_ms": 311,
+      "fault_releases": 2
+    },
+    {
+      "timeout_ms": 200,
+      "fault_pulse_ms": 170,
+      "mode": "stuck_low",
+      "frozen_arm": 1,
+      "first_fault_ms": 311,
+      "fault_releases": 2
+    },
+    {
+      "timeout_ms": 200,
+      "fault_pulse_ms": 170,
+      "mode": "stuck_high",
+      "frozen_arm": 0,
+      "first_fault_ms": 311,
+      "fault_releases": 2
+    },
+    {
+      "timeout_ms": 200,
+      "fault_pulse_ms": 170,
+      "mode": "stuck_high",
+      "frozen_arm": 1,
+      "first_fault_ms": 311,
+      "fault_releases": 2
+    },
+    {
+      "timeout_ms": 200,
+      "fault_pulse_ms": 170,
+      "mode": "fast",
+      "frozen_arm": 0,
+      "first_fault_ms": null,
+      "fault_releases": 0
+    },
+    {
+      "timeout_ms": 200,
+      "fault_pulse_ms": 170,
+      "mode": "fast",
+      "frozen_arm": 1,
+      "first_fault_ms": null,
+      "fault_releases": 0
+    },
+    {
+      "timeout_ms": 200,
+      "fault_pulse_ms": 200,
+      "mode": "normal",
+      "frozen_arm": 0,
+      "first_fault_ms": null,
+      "fault_releases": 0
+    },
+    {
+      "timeout_ms": 200,
+      "fault_pulse_ms": 200,
+      "mode": "normal",
+      "frozen_arm": 1,
+      "first_fault_ms": null,
+      "fault_releases": 0
+    },
+    {
+      "timeout_ms": 200,
+      "fault_pulse_ms": 200,
+      "mode": "missing",
+      "frozen_arm": 0,
+      "first_fault_ms": 200,
+      "fault_releases": 2
+    },
+    {
+      "timeout_ms": 200,
+      "fault_pulse_ms": 200,
+      "mode": "missing",
+      "frozen_arm": 1,
+      "first_fault_ms": 200,
+      "fault_releases": 2
+    },
+    {
+      "timeout_ms": 200,
+      "fault_pulse_ms": 200,
+      "mode": "stuck_low",
+      "frozen_arm": 0,
+      "first_fault_ms": 311,
+      "fault_releases": 2
+    },
+    {
+      "timeout_ms": 200,
+      "fault_pulse_ms": 200,
+      "mode": "stuck_low",
+      "frozen_arm": 1,
+      "first_fault_ms": 311,
+      "fault_releases": 2
+    },
+    {
+      "timeout_ms": 200,
+      "fault_pulse_ms": 200,
+      "mode": "stuck_high",
+      "frozen_arm": 0,
+      "first_fault_ms": 311,
+      "fault_releases": 2
+    },
+    {
+      "timeout_ms": 200,
+      "fault_pulse_ms": 200,
+      "mode": "stuck_high",
+      "frozen_arm": 1,
+      "first_fault_ms": 311,
+      "fault_releases": 2
+    },
+    {
+      "timeout_ms": 200,
+      "fault_pulse_ms": 200,
+      "mode": "fast",
+      "frozen_arm": 0,
+      "first_fault_ms": null,
+      "fault_releases": 0
+    },
+    {
+      "timeout_ms": 200,
+      "fault_pulse_ms": 200,
+      "mode": "fast",
+      "frozen_arm": 1,
+      "first_fault_ms": null,
+      "fault_releases": 0
+    },
+    {
+      "timeout_ms": 200,
+      "fault_pulse_ms": 230,
+      "mode": "normal",
+      "frozen_arm": 0,
+      "first_fault_ms": null,
+      "fault_releases": 0
+    },
+    {
+      "timeout_ms": 200,
+      "fault_pulse_ms": 230,
+      "mode": "normal",
+      "frozen_arm": 1,
+      "first_fault_ms": null,
+      "fault_releases": 0
+    },
+    {
+      "timeout_ms": 200,
+      "fault_pulse_ms": 230,
+      "mode": "missing",
+      "frozen_arm": 0,
+      "first_fault_ms": 200,
+      "fault_releases": 2
+    },
+    {
+      "timeout_ms": 200,
+      "fault_pulse_ms": 230,
+      "mode": "missing",
+      "frozen_arm": 1,
+      "first_fault_ms": 200,
+      "fault_releases": 2
+    },
+    {
+      "timeout_ms": 200,
+      "fault_pulse_ms": 230,
+      "mode": "stuck_low",
+      "frozen_arm": 0,
+      "first_fault_ms": 311,
+      "fault_releases": 2
+    },
+    {
+      "timeout_ms": 200,
+      "fault_pulse_ms": 230,
+      "mode": "stuck_low",
+      "frozen_arm": 1,
+      "first_fault_ms": 311,
+      "fault_releases": 2
+    },
+    {
+      "timeout_ms": 200,
+      "fault_pulse_ms": 230,
+      "mode": "stuck_high",
+      "frozen_arm": 0,
+      "first_fault_ms": 311,
+      "fault_releases": 2
+    },
+    {
+      "timeout_ms": 200,
+      "fault_pulse_ms": 230,
+      "mode": "stuck_high",
+      "frozen_arm": 1,
+      "first_fault_ms": 311,
+      "fault_releases": 2
+    },
+    {
+      "timeout_ms": 200,
+      "fault_pulse_ms": 230,
+      "mode": "fast",
+      "frozen_arm": 0,
+      "first_fault_ms": null,
+      "fault_releases": 0
+    },
+    {
+      "timeout_ms": 200,
+      "fault_pulse_ms": 230,
+      "mode": "fast",
+      "frozen_arm": 1,
+      "first_fault_ms": null,
+      "fault_releases": 0
+    },
+    {
+      "timeout_ms": 230,
+      "fault_pulse_ms": 170,
+      "mode": "normal",
+      "frozen_arm": 0,
+      "first_fault_ms": null,
+      "fault_releases": 0
+    },
+    {
+      "timeout_ms": 230,
+      "fault_pulse_ms": 170,
+      "mode": "normal",
+      "frozen_arm": 1,
+      "first_fault_ms": null,
+      "fault_releases": 0
+    },
+    {
+      "timeout_ms": 230,
+      "fault_pulse_ms": 170,
+      "mode": "missing",
+      "frozen_arm": 0,
+      "first_fault_ms": 230,
+      "fault_releases": 2
+    },
+    {
+      "timeout_ms": 230,
+      "fault_pulse_ms": 170,
+      "mode": "missing",
+      "frozen_arm": 1,
+      "first_fault_ms": 230,
+      "fault_releases": 2
+    },
+    {
+      "timeout_ms": 230,
+      "fault_pulse_ms": 170,
+      "mode": "stuck_low",
+      "frozen_arm": 0,
+      "first_fault_ms": 341,
+      "fault_releases": 2
+    },
+    {
+      "timeout_ms": 230,
+      "fault_pulse_ms": 170,
+      "mode": "stuck_low",
+      "frozen_arm": 1,
+      "first_fault_ms": 341,
+      "fault_releases": 2
+    },
+    {
+      "timeout_ms": 230,
+      "fault_pulse_ms": 170,
+      "mode": "stuck_high",
+      "frozen_arm": 0,
+      "first_fault_ms": 341,
+      "fault_releases": 2
+    },
+    {
+      "timeout_ms": 230,
+      "fault_pulse_ms": 170,
+      "mode": "stuck_high",
+      "frozen_arm": 1,
+      "first_fault_ms": 341,
+      "fault_releases": 2
+    },
+    {
+      "timeout_ms": 230,
+      "fault_pulse_ms": 170,
+      "mode": "fast",
+      "frozen_arm": 0,
+      "first_fault_ms": null,
+      "fault_releases": 0
+    },
+    {
+      "timeout_ms": 230,
+      "fault_pulse_ms": 170,
+      "mode": "fast",
+      "frozen_arm": 1,
+      "first_fault_ms": null,
+      "fault_releases": 0
+    },
+    {
+      "timeout_ms": 230,
+      "fault_pulse_ms": 200,
+      "mode": "normal",
+      "frozen_arm": 0,
+      "first_fault_ms": null,
+      "fault_releases": 0
+    },
+    {
+      "timeout_ms": 230,
+      "fault_pulse_ms": 200,
+      "mode": "normal",
+      "frozen_arm": 1,
+      "first_fault_ms": null,
+      "fault_releases": 0
+    },
+    {
+      "timeout_ms": 230,
+      "fault_pulse_ms": 200,
+      "mode": "missing",
+      "frozen_arm": 0,
+      "first_fault_ms": 230,
+      "fault_releases": 2
+    },
+    {
+      "timeout_ms": 230,
+      "fault_pulse_ms": 200,
+      "mode": "missing",
+      "frozen_arm": 1,
+      "first_fault_ms": 230,
+      "fault_releases": 2
+    },
+    {
+      "timeout_ms": 230,
+      "fault_pulse_ms": 200,
+      "mode": "stuck_low",
+      "frozen_arm": 0,
+      "first_fault_ms": 341,
+      "fault_releases": 2
+    },
+    {
+      "timeout_ms": 230,
+      "fault_pulse_ms": 200,
+      "mode": "stuck_low",
+      "frozen_arm": 1,
+      "first_fault_ms": 341,
+      "fault_releases": 2
+    },
+    {
+      "timeout_ms": 230,
+      "fault_pulse_ms": 200,
+      "mode": "stuck_high",
+      "frozen_arm": 0,
+      "first_fault_ms": 341,
+      "fault_releases": 2
+    },
+    {
+      "timeout_ms": 230,
+      "fault_pulse_ms": 200,
+      "mode": "stuck_high",
+      "frozen_arm": 1,
+      "first_fault_ms": 341,
+      "fault_releases": 2
+    },
+    {
+      "timeout_ms": 230,
+      "fault_pulse_ms": 200,
+      "mode": "fast",
+      "frozen_arm": 0,
+      "first_fault_ms": null,
+      "fault_releases": 0
+    },
+    {
+      "timeout_ms": 230,
+      "fault_pulse_ms": 200,
+      "mode": "fast",
+      "frozen_arm": 1,
+      "first_fault_ms": null,
+      "fault_releases": 0
+    },
+    {
+      "timeout_ms": 230,
+      "fault_pulse_ms": 230,
+      "mode": "normal",
+      "frozen_arm": 0,
+      "first_fault_ms": null,
+      "fault_releases": 0
+    },
+    {
+      "timeout_ms": 230,
+      "fault_pulse_ms": 230,
+      "mode": "normal",
+      "frozen_arm": 1,
+      "first_fault_ms": null,
+      "fault_releases": 0
+    },
+    {
+      "timeout_ms": 230,
+      "fault_pulse_ms": 230,
+      "mode": "missing",
+      "frozen_arm": 0,
+      "first_fault_ms": 230,
+      "fault_releases": 2
+    },
+    {
+      "timeout_ms": 230,
+      "fault_pulse_ms": 230,
+      "mode": "missing",
+      "frozen_arm": 1,
+      "first_fault_ms": 230,
+      "fault_releases": 2
+    },
+    {
+      "timeout_ms": 230,
+      "fault_pulse_ms": 230,
+      "mode": "stuck_low",
+      "frozen_arm": 0,
+      "first_fault_ms": 341,
+      "fault_releases": 1
+    },
+    {
+      "timeout_ms": 230,
+      "fault_pulse_ms": 230,
+      "mode": "stuck_low",
+      "frozen_arm": 1,
+      "first_fault_ms": 341,
+      "fault_releases": 1
+    },
+    {
+      "timeout_ms": 230,
+      "fault_pulse_ms": 230,
+      "mode": "stuck_high",
+      "frozen_arm": 0,
+      "first_fault_ms": 341,
+      "fault_releases": 1
+    },
+    {
+      "timeout_ms": 230,
+      "fault_pulse_ms": 230,
+      "mode": "stuck_high",
+      "frozen_arm": 1,
+      "first_fault_ms": 341,
+      "fault_releases": 1
+    },
+    {
+      "timeout_ms": 230,
+      "fault_pulse_ms": 230,
+      "mode": "fast",
+      "frozen_arm": 0,
+      "first_fault_ms": null,
+      "fault_releases": 0
+    },
+    {
+      "timeout_ms": 230,
+      "fault_pulse_ms": 230,
+      "mode": "fast",
+      "frozen_arm": 1,
+      "first_fault_ms": null,
+      "fault_releases": 0
+    }
+  ],
+  "arithmetic": {
+    "existing_fault_pullup_max_A": 0.00036363636363636367,
+    "wdi_pulldown_high_load_max_A": 7.736943907156673e-05
+  },
+  "not_verified": [
+    "Physical timing, GPIO input/output margins and total AUX current",
+    "Startup/deep brownout, CD response and residual battery current",
+    "MCU firmware, source qualification and INA300 integration",
+    "PCB, assembly, complete charger and charge cycle"
+  ],
+  "limitations": [
+    "Model starts after explicit initialization on valid rails",
+    "Fast heartbeat does not prove correct firmware execution",
+    "A new erroneous ARM edge after fault release can rearm"
+  ],
+  "sha256": {
+    "hardware/charge-watchdog/charge-watchdog.kicad_sch": "4a39430f63997a2502a38ad72bb6c59fdc0561fe5d4a618b287f979d402d66bd",
+    "hardware/charge-watchdog/charge-watchdog.kicad_pro": "b8bd558aa82eadc5a0e592437faf9eeddb8af22341915c25afcf13d50c1c14c5",
+    "hardware/charge-watchdog/RaceRemote_Watchdog.kicad_sym": "cf264cbaaecbcbe4235071eb0c852ab4de71a6b3aaf688777072d56fe5cb4984",
+    "hardware/charge-watchdog/charge-watchdog.net": "c8f529d1d547aa66feb5386b1e3407aaac523b4d7e1ec37824b66b0c56c3ee08",
+    "hardware/charge-watchdog/charge-watchdog.pdf": "1e8fa821fa9ca10d5ad485df82a7b5bea79222b91e390e8aa5f4b781258180a7",
+    "hardware/charge-watchdog/bom.csv": "50403bb247f4673651d2fb596f4c085b9d3b9d27eae9748c6034e76c176f7563",
+    "hardware/charge-watchdog/sym-lib-table": "bba13a397c22d4c21ada5cd231e45e8ceed828d6277261bb6e3d79504b5eb206",
+    "hardware/charge-watchdog/fp-lib-table": "60ef99d0df04aed362dd0c7962ab4c36105ae3926bd3050612a8de0c3bfae4ca",
+    "docs/evidence/charge-watchdog-erc.json": "02c105034f8f621bfef6ef7c38b73eff1aa5803e65ed40d122e524a3c19b7c7d",
+    "hardware/charge-permit/charge-permit.kicad_sch": "e1ad952fa7e489ffc99e88fc384031d4d873c11441c4cce747094afab5d96f2b",
+    "hardware/charge-permit/RaceRemote_Permit.kicad_sym": "066da66e907caf471688b7f37547def8eeb55c0d8fe68d23fb743c6d5ec3972c",
+    "hardware/charge-core/RaceRemote_Charge.kicad_sym": "db052fcebd747ff27c908112797eef32c70e673b8c5ca08fdeb1f256d3b8e4c4",
+    "tools/build_charge_watchdog.py": "8b6a3b787f33f987c9f1986d732301ddd52cf4e1c2ece7a59543dee87c774aac",
+    "tools/verify_charge_watchdog.py": "93e3fc5a955435eb5505dcba3ec6398e5ac48f2ee1163735b8e1e7acb7eff793",
+    "tools/build_charge_permit.py": "863805111579d8f86993d730ed6829225604c3507109ecca2cad1f083bdcf46b",
+    "tools/build_usb_port_schematic.py": "96b38c6c6cac91787961c1f4be5152a5175b215b0812dd1e0153f1d6a89addfa",
+    "tools/verify_usb_detector.py": "68d2ebf584a14c0aa0192de131e2af41f19f1ccb08c81a478b64a3895b83996a",
+    "tools/verify_charge_permit.py": "f30b290820630a12d2f820381beeede5fca6f84375c3208a86c521a263c9d9d8"
+  }
+}

@@ -136,6 +136,17 @@ tools/build_charge_overcurrent.py text eol=lf
 tools/verify_charge_overcurrent.py text eol=lf
 tools/analyze_charge_sense_paths.py text eol=lf
 docs/evidence/charge-sense-paths.json text eol=lf
+hardware/pack-balancer/*.kicad_sch text eol=crlf
+hardware/pack-balancer/*.kicad_sym text eol=crlf
+hardware/pack-balancer/*.kicad_pro text eol=crlf
+hardware/pack-balancer/*-lib-table text eol=crlf
+hardware/pack-balancer/*.csv text eol=crlf
+hardware/pack-balancer/*.net text eol=lf
+hardware/pack-balancer/*.pdf binary
+hardware/pack-balancer/*.md text eol=lf
+docs/evidence/pack-balancer-*.json text eol=crlf
+tools/build_pack_balancer.py text eol=lf
+tools/verify_pack_balancer.py text eol=lf
 
 # Stable source and device-evidence hashes for the driving UI.
 app/src/main/java/vea/raceremote/control/CarControlScreen.kt text eol=lf

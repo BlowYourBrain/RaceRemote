@@ -1,0 +1,13 @@
+﻿reference,value,purpose,footprint,selection
+U801,BQ29209DRBR,4.30V secondary OVP and small balancing; NOT 4.2V charge regulation or primary BMS,,"Bench candidate, not ordered or physically qualified"
+R801,100 / 1%,"Supply filter RVD, also upper balance path",,"Bench candidate, not ordered or physically qualified"
+R802,100 / 1%,"Top sense filter, recommended 100..1000 ohm",,"Bench candidate, not ordered or physically qualified"
+R803,100 / 1%,"Bottom sense filter, not internal switch resistance",,"Bench candidate, not ordered or physically qualified"
+R804,120 / 1%,RCB: use datasheet 7.6 guidance; not 250mA bypass,,"Bench candidate, not ordered or physically qualified"
+R805,100k / 1%,Default balance OFF; external sink must reference BAT_RAW_N,,"Bench candidate, not ordered or physically qualified"
+C801,100n / 16V,Local supply filter,,"Bench candidate, not ordered or physically qualified"
+C802,100n / 16V,"Differential cell filter per Figure 9, NOT to ground",,"Bench candidate, not ordered or physically qualified"
+C803,100n / 16V,Bottom-cell filter,,"Bench candidate, not ordered or physically qualified"
+C804,100n / 16V / 10%,"Nominal0.9s OVP delay, not full shutdown latency",,"Bench candidate, not ordered or physically qualified"
+J801,CELL-SIDE BENCH NODES,Logical 2S emulator nodes only; not LW connector order; pin4 repeats raw negative,,"Bench candidate, not ordered or physically qualified"
+J802,BATTERY-DOMAIN IO ONLY,No direct MCU/USB/permit wiring; level and ground crossing not designed,,"Bench candidate, not ordered or physically qualified"

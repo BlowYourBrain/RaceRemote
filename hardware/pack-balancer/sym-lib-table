@@ -1,0 +1,1 @@
+(sym_lib_table (version 7) (lib (name "RaceRemote_Balancer") (type "KiCad") (uri "${KIPRJMOD}/RaceRemote_Balancer.kicad_sym") (options "") (descr "Own TI pin symbol and attributed passives")))

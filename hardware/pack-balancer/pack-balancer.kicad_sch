@@ -1,0 +1,736 @@
+(kicad_sch (version 20250901) (generator "raceremote")
+(uuid "92152f67-6870-50d9-bb54-e211c20bae5b") (paper "A3")
+(title_block (title "RaceRemote - battery-side balancer BENCH PROPOSAL") (date "2026-09-14") (rev "0.1") (company "vea.raceremote"))
+(lib_symbols (symbol "RaceRemote_Balancer:R"
+		(pin_numbers
+			(hide yes)
+		)
+		(pin_names
+			(offset 0)
+		)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(duplicate_pin_numbers_are_jumpers no)
+		(property "Reference" "R"
+			(at 2.032 0 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "R"
+			(at 0 0 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at -1.778 0 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Resistor"
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "ki_keywords" "R res resistor"
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "ki_fp_filters" "R_*"
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(symbol "R_0_1"
+			(rectangle
+				(start -1.016 -2.54)
+				(end 1.016 2.54)
+				(stroke
+					(width 0.254)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+		)
+		(symbol "R_1_1"
+			(pin passive line
+				(at 0 3.81 270)
+				(length 1.27)
+				(name ""
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "1"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin passive line
+				(at 0 -3.81 90)
+				(length 1.27)
+				(name ""
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "2"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+		)
+		(embedded_fonts no)
+	)
+(symbol "RaceRemote_Balancer:C"
+		(pin_numbers
+			(hide yes)
+		)
+		(pin_names
+			(offset 0.254)
+		)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(duplicate_pin_numbers_are_jumpers no)
+		(property "Reference" "C"
+			(at 0.635 2.54 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "C"
+			(at 0.635 -2.54 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" ""
+			(at 0.9652 -3.81 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Unpolarized capacitor"
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "ki_keywords" "cap capacitor"
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "ki_fp_filters" "C_*"
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(symbol "C_0_1"
+			(polyline
+				(pts
+					(xy -2.032 0.762) (xy 2.032 0.762)
+				)
+				(stroke
+					(width 0.508)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(polyline
+				(pts
+					(xy -2.032 -0.762) (xy 2.032 -0.762)
+				)
+				(stroke
+					(width 0.508)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+		)
+		(symbol "C_1_1"
+			(pin passive line
+				(at 0 3.81 270)
+				(length 2.794)
+				(name ""
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "1"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin passive line
+				(at 0 -3.81 90)
+				(length 2.794)
+				(name ""
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "2"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+		)
+		(embedded_fonts no)
+	)
+(symbol "RaceRemote_Balancer:Conn_01x04"
+		(pin_names
+			(offset 1.016)
+			(hide yes)
+		)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(duplicate_pin_numbers_are_jumpers no)
+		(property "Reference" "J"
+			(at 0 5.08 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "Conn_01x04"
+			(at 0 -7.62 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Generic connector, single row, 01x04, script generated (kicad-library-utils/schlib/autogen/connector/)"
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "ki_keywords" "connector"
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "ki_fp_filters" "Connector*:*_1x??_*"
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(symbol "Conn_01x04_1_1"
+			(rectangle
+				(start -1.27 3.81)
+				(end 1.27 -6.35)
+				(stroke
+					(width 0.254)
+					(type default)
+				)
+				(fill
+					(type background)
+				)
+			)
+			(rectangle
+				(start -1.27 2.667)
+				(end 0 2.413)
+				(stroke
+					(width 0.1524)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(rectangle
+				(start -1.27 0.127)
+				(end 0 -0.127)
+				(stroke
+					(width 0.1524)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(rectangle
+				(start -1.27 -2.413)
+				(end 0 -2.667)
+				(stroke
+					(width 0.1524)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(rectangle
+				(start -1.27 -4.953)
+				(end 0 -5.207)
+				(stroke
+					(width 0.1524)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(pin passive line
+				(at -5.08 2.54 0)
+				(length 3.81)
+				(name "Pin_1"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "1"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin passive line
+				(at -5.08 0 0)
+				(length 3.81)
+				(name "Pin_2"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "2"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin passive line
+				(at -5.08 -2.54 0)
+				(length 3.81)
+				(name "Pin_3"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "3"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin passive line
+				(at -5.08 -5.08 0)
+				(length 3.81)
+				(name "Pin_4"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "4"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+		)
+		(embedded_fonts no)
+	)
+(symbol "RaceRemote_Balancer:PWR_FLAG"
+		(power global)
+		(pin_numbers
+			(hide yes)
+		)
+		(pin_names
+			(offset 0)
+			(hide yes)
+		)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(duplicate_pin_numbers_are_jumpers no)
+		(property "Reference" "#FLG"
+			(at 0 1.905 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "PWR_FLAG"
+			(at 0 3.81 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Special symbol for telling ERC where power comes from"
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "ki_keywords" "flag power"
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(symbol "PWR_FLAG_0_0"
+			(pin power_out line
+				(at 0 0 90)
+				(length 0)
+				(name ""
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "1"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+		)
+		(symbol "PWR_FLAG_0_1"
+			(polyline
+				(pts
+					(xy 0 0) (xy 0 1.27) (xy -1.016 1.905) (xy 0 2.54) (xy 1.016 1.905) (xy 0 1.27)
+				)
+				(stroke
+					(width 0)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+		)
+		(embedded_fonts no)
+	)
+(symbol "RaceRemote_Balancer:BQ29209DRB" (pin_names (offset 1.016)) (in_bom yes) (on_board yes)
+(property "Reference" "U" (at 0 27.94 0) (effects (font (size 1.27 1.27))))
+(property "Value" "BQ29209DRB" (at 0 30.48 0) (effects (font (size 1.27 1.27))))
+(property "Footprint" "" (at 0 0 0) (effects (font (size 1.27 1.27)) hide))
+(symbol "BQ29209DRB_0_1" (rectangle (start -17.78 25.4) (end 17.78 -27.94) (stroke (width 0.254) (type default)) (fill (type background))))
+(symbol "BQ29209DRB_1_1"
+(pin input line (at -25.4 20.32 0) (length 7.62) (name "VC2" (effects (font (size 1.27 1.27)))) (number "1" (effects (font (size 1.27 1.27)))))
+(pin input line (at -25.4 10.16 0) (length 7.62) (name "VC1" (effects (font (size 1.27 1.27)))) (number "2" (effects (font (size 1.27 1.27)))))
+(pin passive line (at -25.4 0 0) (length 7.62) (name "VC1_CB" (effects (font (size 1.27 1.27)))) (number "3" (effects (font (size 1.27 1.27)))))
+(pin passive line (at -25.4 -10.16 0) (length 7.62) (name "CD" (effects (font (size 1.27 1.27)))) (number "4" (effects (font (size 1.27 1.27)))))
+(pin output line (at 25.4 20.32 180) (length 7.62) (name "OUT" (effects (font (size 1.27 1.27)))) (number "8" (effects (font (size 1.27 1.27)))))
+(pin power_in line (at 25.4 10.16 180) (length 7.62) (name "VDD" (effects (font (size 1.27 1.27)))) (number "7" (effects (font (size 1.27 1.27)))))
+(pin input line (at 25.4 0 180) (length 7.62) (name "~{CB_EN}" (effects (font (size 1.27 1.27)))) (number "6" (effects (font (size 1.27 1.27)))))
+(pin power_in line (at 25.4 -10.16 180) (length 7.62) (name "GND" (effects (font (size 1.27 1.27)))) (number "5" (effects (font (size 1.27 1.27)))))
+(pin power_in line (at 25.4 -20.32 180) (length 7.62) (name "EP" (effects (font (size 1.27 1.27)))) (number "9" (effects (font (size 1.27 1.27))))))))
+(symbol (lib_id "RaceRemote_Balancer:BQ29209DRB") (at 121.92 86.36 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid "61143639-1618-5ed4-b3eb-37f340362742") (property "Reference" "U801" (at 121.92 55.88 0) (effects (font (size 1.27 1.27))))(property "Value" "BQ29209DRBR" (at 121.92 53.34 0) (effects (font (size 1.27 1.27))))(property "Footprint" "" (at 121.92 86.36 0) (hide yes) (effects (font (size 1.27 1.27))))(property "Datasheet" "https://www.ti.com/lit/gpn/bq29209" (at 121.92 86.36 0) (hide yes) (effects (font (size 1.27 1.27))))(pin "1" (uuid "d12febdb-171b-536d-b6fd-5b89d893aa63"))(pin "2" (uuid "4b082b99-ecf8-52f0-94bc-ebb2d565d119"))(pin "3" (uuid "7ce78f5b-4721-58a0-b2fc-3a3481fc230f"))(pin "4" (uuid "07317eb6-ba39-5666-9278-70848de9e5e9"))(pin "8" (uuid "8e52bf17-91cf-5c76-8e6d-d7748b3898eb"))(pin "7" (uuid "25871ac4-8de0-540f-bbe9-2aa45b861591"))(pin "6" (uuid "378e7c99-1d35-53ac-a841-37b1d1106388"))(pin "5" (uuid "1ed3b52a-f0ad-5354-854b-6a338f71d8ac"))(pin "9" (uuid "8064f7ab-4a64-5a7b-95b5-6564457658e9"))(instances (project "pack-balancer" (path "/92152f67-6870-50d9-bb54-e211c20bae5b" (reference "U801") (unit 1)))))
+(wire (pts (xy 96.52 66.04) (xy 86.36 66.04)) (stroke (width 0) (type default)) (uuid "ccfa9798-7429-51ad-9d70-af8cdf0e5ceb"))
+(global_label "BAL_VC2" (shape passive) (at 86.36 66.04 180) (effects (font (size 1 1)) (justify right)) (uuid "29e00dac-e3af-515c-a5da-0d87a1ac2fd1"))
+(wire (pts (xy 96.52 76.2) (xy 86.36 76.2)) (stroke (width 0) (type default)) (uuid "3c1980db-7603-58da-9ed8-5db552daab76"))
+(global_label "BAL_VC1" (shape passive) (at 86.36 76.2 180) (effects (font (size 1 1)) (justify right)) (uuid "f7efab79-0292-5c98-a505-b10541c69694"))
+(wire (pts (xy 96.52 86.36) (xy 86.36 86.36)) (stroke (width 0) (type default)) (uuid "c405d8a1-feaa-521a-98fa-7b768e7be62d"))
+(global_label "BAL_VC1_CB" (shape passive) (at 86.36 86.36 180) (effects (font (size 1 1)) (justify right)) (uuid "416c4743-5e49-598b-affa-88dd3dd731a6"))
+(wire (pts (xy 96.52 96.52) (xy 86.36 96.52)) (stroke (width 0) (type default)) (uuid "291d03b2-6ef5-5558-b9b0-75bedd64284a"))
+(global_label "BAL_DELAY" (shape passive) (at 86.36 96.52 180) (effects (font (size 1 1)) (justify right)) (uuid "1f875d2a-f10d-5f82-a861-2b6b47d71be0"))
+(wire (pts (xy 147.32 66.04) (xy 157.48 66.04)) (stroke (width 0) (type default)) (uuid "ec8f7e5e-91a7-5bbf-9adf-1c29f34b4350"))
+(global_label "BAL_OVP_RAW" (shape passive) (at 157.48 66.04 0) (effects (font (size 1 1)) (justify left)) (uuid "b629ee81-974f-527f-9be2-0982daa01f95"))
+(wire (pts (xy 147.32 76.2) (xy 157.48 76.2)) (stroke (width 0) (type default)) (uuid "d6e80b45-b08d-536b-993a-63ea1e8a0497"))
+(global_label "BAL_VDD" (shape passive) (at 157.48 76.2 0) (effects (font (size 1 1)) (justify left)) (uuid "494f2d3c-77fd-579f-a4b6-73a318669dd9"))
+(wire (pts (xy 147.32 86.36) (xy 157.48 86.36)) (stroke (width 0) (type default)) (uuid "bc994cc4-12bc-57dc-b693-eb8d828015f4"))
+(global_label "BAL_EN_N" (shape passive) (at 157.48 86.36 0) (effects (font (size 1 1)) (justify left)) (uuid "025f9828-5bf6-5099-9710-d3660bb39b2e"))
+(wire (pts (xy 147.32 96.52) (xy 157.48 96.52)) (stroke (width 0) (type default)) (uuid "5783605f-ce2b-5a8b-847c-e90f3d2a4414"))
+(global_label "BAT_RAW_N" (shape passive) (at 157.48 96.52 0) (effects (font (size 1 1)) (justify left)) (uuid "28843d3a-da4e-52df-8902-2e0e59221f66"))
+(wire (pts (xy 147.32 106.68) (xy 157.48 106.68)) (stroke (width 0) (type default)) (uuid "d85967d6-82c3-52a1-bf88-fe6bbb042aeb"))
+(global_label "BAT_RAW_N" (shape passive) (at 157.48 106.68 0) (effects (font (size 1 1)) (justify left)) (uuid "bdc30d57-3007-56c8-9847-b06a146ba070"))
+(symbol (lib_id "RaceRemote_Balancer:R") (at 40.64 172.72 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid "42267d2d-c6f8-5660-a577-cf63742c5113") (property "Reference" "R801" (at 40.64 167.64 0) (effects (font (size 1.27 1.27))))(property "Value" "100 / 1%" (at 55.88 172.72 0) (effects (font (size 1.27 1.27))))(property "Footprint" "" (at 40.64 172.72 0) (hide yes) (effects (font (size 1.27 1.27))))(property "Datasheet" "" (at 40.64 172.72 0) (hide yes) (effects (font (size 1.27 1.27))))(pin "1" (uuid "7ab3d1c5-f8b2-5e09-8f8f-164fa1034bd5"))(pin "2" (uuid "66c65dc4-4d1f-5ed1-8f81-b8a157446da9"))(instances (project "pack-balancer" (path "/92152f67-6870-50d9-bb54-e211c20bae5b" (reference "R801") (unit 1)))))
+(wire (pts (xy 40.64 168.91) (xy 40.64 161.29)) (stroke (width 0) (type default)) (uuid "bfd2e233-840d-5812-8756-2ceb4cbdf47e"))
+(global_label "BAT_RAW_P" (shape passive) (at 40.64 161.29 0) (effects (font (size 1 1)) (justify left)) (uuid "58b4da95-76a9-536c-a341-1a566ebee61a"))
+(wire (pts (xy 40.64 176.53) (xy 40.64 184.15)) (stroke (width 0) (type default)) (uuid "fac9d2af-15bd-5af1-b02e-39aeffcc686f"))
+(global_label "BAL_VDD" (shape passive) (at 40.64 184.15 0) (effects (font (size 1 1)) (justify left)) (uuid "29353e40-0354-5334-82f7-8be24310113c"))
+(symbol (lib_id "RaceRemote_Balancer:R") (at 111.76 172.72 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid "23a3b4d8-97d1-5471-9ccc-d75613e65b46") (property "Reference" "R802" (at 111.76 167.64 0) (effects (font (size 1.27 1.27))))(property "Value" "100 / 1%" (at 127 172.72 0) (effects (font (size 1.27 1.27))))(property "Footprint" "" (at 111.76 172.72 0) (hide yes) (effects (font (size 1.27 1.27))))(property "Datasheet" "" (at 111.76 172.72 0) (hide yes) (effects (font (size 1.27 1.27))))(pin "1" (uuid "83187f46-34ba-5253-a352-477359bbb719"))(pin "2" (uuid "e931f946-6b08-5b1e-b1f8-48fc5d4e6b70"))(instances (project "pack-balancer" (path "/92152f67-6870-50d9-bb54-e211c20bae5b" (reference "R802") (unit 1)))))
+(wire (pts (xy 111.76 168.91) (xy 111.76 161.29)) (stroke (width 0) (type default)) (uuid "16762027-9ced-58b4-9cf4-e2e51db717c8"))
+(global_label "BAT_RAW_P" (shape passive) (at 111.76 161.29 0) (effects (font (size 1 1)) (justify left)) (uuid "4b13c1cd-a59e-5653-9cc2-742646c3ff68"))
+(wire (pts (xy 111.76 176.53) (xy 111.76 184.15)) (stroke (width 0) (type default)) (uuid "f0e92a81-ca37-5b28-889b-b27815f6f630"))
+(global_label "BAL_VC2" (shape passive) (at 111.76 184.15 0) (effects (font (size 1 1)) (justify left)) (uuid "cef90d3c-79fd-52e8-b2d8-2454b9d4c9f0"))
+(symbol (lib_id "RaceRemote_Balancer:R") (at 182.88 172.72 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid "01066e6c-6fc2-5ffd-9caa-7dfababc9641") (property "Reference" "R803" (at 182.88 167.64 0) (effects (font (size 1.27 1.27))))(property "Value" "100 / 1%" (at 198.12 172.72 0) (effects (font (size 1.27 1.27))))(property "Footprint" "" (at 182.88 172.72 0) (hide yes) (effects (font (size 1.27 1.27))))(property "Datasheet" "" (at 182.88 172.72 0) (hide yes) (effects (font (size 1.27 1.27))))(pin "1" (uuid "910cb41a-6757-5509-940c-31fb61028a23"))(pin "2" (uuid "456eea6b-5762-57fb-8f7f-5fa3bd58614d"))(instances (project "pack-balancer" (path "/92152f67-6870-50d9-bb54-e211c20bae5b" (reference "R803") (unit 1)))))
+(wire (pts (xy 182.88 168.91) (xy 182.88 161.29)) (stroke (width 0) (type default)) (uuid "3c501949-cbf1-57db-a8b6-5ac5f08bd5ec"))
+(global_label "BAT_MID" (shape passive) (at 182.88 161.29 0) (effects (font (size 1 1)) (justify left)) (uuid "6e60a208-f4d9-5311-a753-639f4eeeac87"))
+(wire (pts (xy 182.88 176.53) (xy 182.88 184.15)) (stroke (width 0) (type default)) (uuid "a05f749e-1209-515f-87b3-0c06be247ba1"))
+(global_label "BAL_VC1" (shape passive) (at 182.88 184.15 0) (effects (font (size 1 1)) (justify left)) (uuid "bc915074-5c14-509c-95ae-816d0dbeb3b6"))
+(symbol (lib_id "RaceRemote_Balancer:R") (at 254 172.72 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid "997efbb1-cb93-55c2-b3e9-d1e775098060") (property "Reference" "R804" (at 254 167.64 0) (effects (font (size 1.27 1.27))))(property "Value" "120 / 1%" (at 269.24 172.72 0) (effects (font (size 1.27 1.27))))(property "Footprint" "" (at 254 172.72 0) (hide yes) (effects (font (size 1.27 1.27))))(property "Datasheet" "" (at 254 172.72 0) (hide yes) (effects (font (size 1.27 1.27))))(pin "1" (uuid "77b165ba-bfc6-5841-a319-eb0d0ad3a790"))(pin "2" (uuid "ef89c460-5625-53ba-82c4-d097453e7618"))(instances (project "pack-balancer" (path "/92152f67-6870-50d9-bb54-e211c20bae5b" (reference "R804") (unit 1)))))
+(wire (pts (xy 254 168.91) (xy 254 161.29)) (stroke (width 0) (type default)) (uuid "8c4211f3-0ff4-5af0-b6c1-d2e5d390fb3e"))
+(global_label "BAT_MID" (shape passive) (at 254 161.29 0) (effects (font (size 1 1)) (justify left)) (uuid "b1351a59-b30a-5222-80c0-f73ff296ea3a"))
+(wire (pts (xy 254 176.53) (xy 254 184.15)) (stroke (width 0) (type default)) (uuid "4db09d96-008a-5750-b273-e3c193e64488"))
+(global_label "BAL_VC1_CB" (shape passive) (at 254 184.15 0) (effects (font (size 1 1)) (justify left)) (uuid "16cea193-6ea4-5bdb-8587-50c97e1cbf6b"))
+(symbol (lib_id "RaceRemote_Balancer:R") (at 325.12 172.72 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid "246085e5-b721-5b03-bbaa-ab49133123db") (property "Reference" "R805" (at 325.12 167.64 0) (effects (font (size 1.27 1.27))))(property "Value" "100k / 1%" (at 340.36 172.72 0) (effects (font (size 1.27 1.27))))(property "Footprint" "" (at 325.12 172.72 0) (hide yes) (effects (font (size 1.27 1.27))))(property "Datasheet" "" (at 325.12 172.72 0) (hide yes) (effects (font (size 1.27 1.27))))(pin "1" (uuid "c58f4aa7-7a95-5151-9339-68d8565f5cc3"))(pin "2" (uuid "83954408-ba8c-5144-947d-24d5a1ec011b"))(instances (project "pack-balancer" (path "/92152f67-6870-50d9-bb54-e211c20bae5b" (reference "R805") (unit 1)))))
+(wire (pts (xy 325.12 168.91) (xy 325.12 161.29)) (stroke (width 0) (type default)) (uuid "2d0e5d5e-efb5-5ea3-8b30-862cbb51a42a"))
+(global_label "BAL_VDD" (shape passive) (at 325.12 161.29 0) (effects (font (size 1 1)) (justify left)) (uuid "1fefc50b-294e-541d-9f32-ddc0ac0780e7"))
+(wire (pts (xy 325.12 176.53) (xy 325.12 184.15)) (stroke (width 0) (type default)) (uuid "40c382ef-9b3c-5023-b56e-7b2fc49be8e9"))
+(global_label "BAL_EN_N" (shape passive) (at 325.12 184.15 0) (effects (font (size 1 1)) (justify left)) (uuid "7337a261-a3d2-53ab-aea6-6853e383e4cb"))
+(symbol (lib_id "RaceRemote_Balancer:C") (at 40.64 233.68 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid "11e5fc1c-3bbb-5093-9d87-7c7a47caa896") (property "Reference" "C801" (at 40.64 228.6 0) (effects (font (size 1.27 1.27))))(property "Value" "100n / 16V" (at 55.88 233.68 0) (effects (font (size 1.27 1.27))))(property "Footprint" "" (at 40.64 233.68 0) (hide yes) (effects (font (size 1.27 1.27))))(property "Datasheet" "" (at 40.64 233.68 0) (hide yes) (effects (font (size 1.27 1.27))))(pin "1" (uuid "e71a6ebe-c204-5b60-9539-a43572b623c9"))(pin "2" (uuid "76bf7b6e-2e1f-5fbd-80f9-57ad605fee6b"))(instances (project "pack-balancer" (path "/92152f67-6870-50d9-bb54-e211c20bae5b" (reference "C801") (unit 1)))))
+(wire (pts (xy 40.64 229.87) (xy 40.64 222.25)) (stroke (width 0) (type default)) (uuid "2e18696c-5792-590a-917a-5f864d993b6a"))
+(global_label "BAL_VDD" (shape passive) (at 40.64 222.25 0) (effects (font (size 1 1)) (justify left)) (uuid "8728f327-ca12-514d-bc55-cdc3d4425440"))
+(wire (pts (xy 40.64 237.49) (xy 40.64 245.11)) (stroke (width 0) (type default)) (uuid "b2259694-8630-51fc-9bdb-656ac71fbb48"))
+(global_label "BAT_RAW_N" (shape passive) (at 40.64 245.11 0) (effects (font (size 1 1)) (justify left)) (uuid "aca3a70d-240b-590b-b1f9-b7d27194f78d"))
+(symbol (lib_id "RaceRemote_Balancer:C") (at 111.76 233.68 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid "808de36a-4293-578e-ac6a-c0ae39455b6e") (property "Reference" "C802" (at 111.76 228.6 0) (effects (font (size 1.27 1.27))))(property "Value" "100n / 16V" (at 127 233.68 0) (effects (font (size 1.27 1.27))))(property "Footprint" "" (at 111.76 233.68 0) (hide yes) (effects (font (size 1.27 1.27))))(property "Datasheet" "" (at 111.76 233.68 0) (hide yes) (effects (font (size 1.27 1.27))))(pin "1" (uuid "41e7e90e-aede-5e94-b527-1082943755a4"))(pin "2" (uuid "481d7d99-055f-5bc4-918a-fbf51c11e590"))(instances (project "pack-balancer" (path "/92152f67-6870-50d9-bb54-e211c20bae5b" (reference "C802") (unit 1)))))
+(wire (pts (xy 111.76 229.87) (xy 111.76 222.25)) (stroke (width 0) (type default)) (uuid "8f7f0749-198f-5173-af96-30cf380b972a"))
+(global_label "BAL_VC2" (shape passive) (at 111.76 222.25 0) (effects (font (size 1 1)) (justify left)) (uuid "da6a790b-54d7-5458-a9c3-9ab138b8bfa2"))
+(wire (pts (xy 111.76 237.49) (xy 111.76 245.11)) (stroke (width 0) (type default)) (uuid "05187a19-a715-53db-aa43-a5f5a3e8da47"))
+(global_label "BAL_VC1" (shape passive) (at 111.76 245.11 0) (effects (font (size 1 1)) (justify left)) (uuid "3f31b5f0-6d36-507a-9d58-cb4691e0ca1f"))
+(symbol (lib_id "RaceRemote_Balancer:C") (at 182.88 233.68 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid "90e879d7-8baa-5dcb-8096-adb6aa966474") (property "Reference" "C803" (at 182.88 228.6 0) (effects (font (size 1.27 1.27))))(property "Value" "100n / 16V" (at 198.12 233.68 0) (effects (font (size 1.27 1.27))))(property "Footprint" "" (at 182.88 233.68 0) (hide yes) (effects (font (size 1.27 1.27))))(property "Datasheet" "" (at 182.88 233.68 0) (hide yes) (effects (font (size 1.27 1.27))))(pin "1" (uuid "a60738bb-c604-5983-9e42-c57ce92e78f2"))(pin "2" (uuid "05c792a9-4eb3-5496-95bf-9b7875a6c6ad"))(instances (project "pack-balancer" (path "/92152f67-6870-50d9-bb54-e211c20bae5b" (reference "C803") (unit 1)))))
+(wire (pts (xy 182.88 229.87) (xy 182.88 222.25)) (stroke (width 0) (type default)) (uuid "356e3a2c-a85f-5518-8b23-899006ae9102"))
+(global_label "BAL_VC1" (shape passive) (at 182.88 222.25 0) (effects (font (size 1 1)) (justify left)) (uuid "ed8ca9e3-3efc-5fbb-b4b6-4ac710364f1e"))
+(wire (pts (xy 182.88 237.49) (xy 182.88 245.11)) (stroke (width 0) (type default)) (uuid "1fa2ff01-3d19-5bcb-921b-3a9f1fdb1a1d"))
+(global_label "BAT_RAW_N" (shape passive) (at 182.88 245.11 0) (effects (font (size 1 1)) (justify left)) (uuid "b95e0fb5-1b75-56e1-b89b-100206e20d05"))
+(symbol (lib_id "RaceRemote_Balancer:C") (at 254 233.68 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid "a4311b31-ea18-527c-9042-51f6eaad6665") (property "Reference" "C804" (at 254 228.6 0) (effects (font (size 1.27 1.27))))(property "Value" "100n / 16V / 10%" (at 269.24 233.68 0) (effects (font (size 1.27 1.27))))(property "Footprint" "" (at 254 233.68 0) (hide yes) (effects (font (size 1.27 1.27))))(property "Datasheet" "" (at 254 233.68 0) (hide yes) (effects (font (size 1.27 1.27))))(pin "1" (uuid "fe44dd3a-521e-53e1-9795-57b873c4957a"))(pin "2" (uuid "cfdd1f25-2c34-53c9-b16c-6cd685f9ced4"))(instances (project "pack-balancer" (path "/92152f67-6870-50d9-bb54-e211c20bae5b" (reference "C804") (unit 1)))))
+(wire (pts (xy 254 229.87) (xy 254 222.25)) (stroke (width 0) (type default)) (uuid "50704925-78a0-5c5f-9a17-0ab4431452ce"))
+(global_label "BAL_DELAY" (shape passive) (at 254 222.25 0) (effects (font (size 1 1)) (justify left)) (uuid "b389dfba-f8de-5310-b444-6bb0eafe9e93"))
+(wire (pts (xy 254 237.49) (xy 254 245.11)) (stroke (width 0) (type default)) (uuid "57a71b8d-5a02-5251-8101-fb6fc7d2a9b0"))
+(global_label "BAT_RAW_N" (shape passive) (at 254 245.11 0) (effects (font (size 1 1)) (justify left)) (uuid "dabd10a3-9693-5b7d-a566-9b1aa1f53b02"))
+(symbol (lib_id "RaceRemote_Balancer:Conn_01x04") (at 345.44 68.58 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid "64e62519-7273-5046-8308-2f57ccee3a66") (property "Reference" "J801" (at 345.44 63.5 0) (effects (font (size 1.27 1.27))))(property "Value" "CELL-SIDE BENCH NODES" (at 345.44 60.96 0) (effects (font (size 1.27 1.27))))(property "Footprint" "" (at 345.44 68.58 0) (hide yes) (effects (font (size 1.27 1.27))))(property "Datasheet" "" (at 345.44 68.58 0) (hide yes) (effects (font (size 1.27 1.27))))(pin "1" (uuid "dc1bfd43-db4e-50b1-8ffd-801223962f5e"))(pin "2" (uuid "449dfce8-18d6-5a49-a325-d5851b309f79"))(pin "3" (uuid "4c886f02-a93d-50a3-b5c3-9c2bed31f559"))(pin "4" (uuid "edb31d5e-d88a-5242-aa86-71c087ef6e7c"))(instances (project "pack-balancer" (path "/92152f67-6870-50d9-bb54-e211c20bae5b" (reference "J801") (unit 1)))))
+(wire (pts (xy 340.36 66.04) (xy 330.2 66.04)) (stroke (width 0) (type default)) (uuid "a519d612-d87e-558a-bf75-e7bb951741af"))
+(global_label "BAT_RAW_P" (shape passive) (at 330.2 66.04 180) (effects (font (size 1 1)) (justify right)) (uuid "28fffb94-653c-5770-806b-d8934120c5a1"))
+(wire (pts (xy 340.36 68.58) (xy 330.2 68.58)) (stroke (width 0) (type default)) (uuid "ec95b9a6-5823-5474-9fb9-4fc9f60fdb7c"))
+(global_label "BAT_MID" (shape passive) (at 330.2 68.58 180) (effects (font (size 1 1)) (justify right)) (uuid "bc117bed-3537-50bd-b1dd-7776125d87af"))
+(wire (pts (xy 340.36 71.12) (xy 330.2 71.12)) (stroke (width 0) (type default)) (uuid "89e22b67-72f9-593e-974a-b8bebf22be69"))
+(global_label "BAT_RAW_N" (shape passive) (at 330.2 71.12 180) (effects (font (size 1 1)) (justify right)) (uuid "a04ce355-fce7-5d10-b4a5-22419b1f119e"))
+(wire (pts (xy 340.36 73.66) (xy 330.2 73.66)) (stroke (width 0) (type default)) (uuid "ca906d6e-72a7-560f-95eb-2a1ab8ca439d"))
+(global_label "BAT_RAW_N" (shape passive) (at 330.2 73.66 180) (effects (font (size 1 1)) (justify right)) (uuid "012c453b-bb3a-5f3c-8e72-d1a1589fc77f"))
+(symbol (lib_id "RaceRemote_Balancer:Conn_01x04") (at 345.44 116.84 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid "47d444eb-e3d3-5a2f-b6a8-54297377193b") (property "Reference" "J802" (at 345.44 111.76 0) (effects (font (size 1.27 1.27))))(property "Value" "BATTERY-DOMAIN IO ONLY" (at 345.44 109.22 0) (effects (font (size 1.27 1.27))))(property "Footprint" "" (at 345.44 116.84 0) (hide yes) (effects (font (size 1.27 1.27))))(property "Datasheet" "" (at 345.44 116.84 0) (hide yes) (effects (font (size 1.27 1.27))))(pin "1" (uuid "e936ba26-c0d0-554d-adde-b6300fce12b6"))(pin "2" (uuid "49db27b2-804e-5b09-afb4-d3d98d9a5d15"))(pin "3" (uuid "5ef4efdd-2993-5f1c-b928-7db1492c1cf3"))(pin "4" (uuid "937d0cf7-684e-583c-9cbe-24fea7f567b4"))(instances (project "pack-balancer" (path "/92152f67-6870-50d9-bb54-e211c20bae5b" (reference "J802") (unit 1)))))
+(wire (pts (xy 340.36 114.3) (xy 330.2 114.3)) (stroke (width 0) (type default)) (uuid "5dc366e8-e3f8-5102-a778-317ae4af9066"))
+(global_label "BAL_EN_N" (shape passive) (at 330.2 114.3 180) (effects (font (size 1 1)) (justify right)) (uuid "1dc8c922-faa5-5e79-9761-47ef55976a12"))
+(wire (pts (xy 340.36 116.84) (xy 330.2 116.84)) (stroke (width 0) (type default)) (uuid "dc4e3882-6748-52ef-827d-1f5505bab59e"))
+(global_label "BAL_OVP_RAW" (shape passive) (at 330.2 116.84 180) (effects (font (size 1 1)) (justify right)) (uuid "deb6b5e3-6207-5573-8a27-9969150070ef"))
+(wire (pts (xy 340.36 119.38) (xy 330.2 119.38)) (stroke (width 0) (type default)) (uuid "1d2998f6-fc7a-5fa5-b832-0b9eed704b3c"))
+(global_label "BAL_VDD" (shape passive) (at 330.2 119.38 180) (effects (font (size 1 1)) (justify right)) (uuid "48738b3c-7072-50ed-9f28-74c1b66e742e"))
+(wire (pts (xy 340.36 121.92) (xy 330.2 121.92)) (stroke (width 0) (type default)) (uuid "be5afb54-90d7-5cbc-afab-686eeff2968f"))
+(global_label "BAT_RAW_N" (shape passive) (at 330.2 121.92 180) (effects (font (size 1 1)) (justify right)) (uuid "bc9f7874-b8f4-5864-b9f0-64b4406f0825"))
+(symbol (lib_id "RaceRemote_Balancer:PWR_FLAG") (at 233.68 48.26 0) (unit 1) (in_bom no) (on_board no) (dnp no) (uuid "8c13950d-cf0a-5073-82ae-480c0beebd02") (property "Reference" "#FLG801" (at 233.68 43.18 0) (hide yes) (effects (font (size 1.27 1.27))))(property "Value" "PWR_FLAG" (at 233.68 40.64 0) (hide yes) (effects (font (size 1.27 1.27))))(property "Footprint" "" (at 233.68 48.26 0) (hide yes) (effects (font (size 1.27 1.27))))(property "Datasheet" "" (at 233.68 48.26 0) (hide yes) (effects (font (size 1.27 1.27))))(pin "1" (uuid "6097321d-e78f-501c-979d-95aabf2e64ae"))(instances (project "pack-balancer" (path "/92152f67-6870-50d9-bb54-e211c20bae5b" (reference "#FLG801") (unit 1)))))
+(wire (pts (xy 233.68 48.26) (xy 233.68 53.34)) (stroke (width 0) (type default)) (uuid "8b00fae7-cbb7-54db-8642-bed9a4808697"))
+(global_label "BAL_VDD" (shape passive) (at 233.68 53.34 0) (effects (font (size 1 1)) (justify left)) (uuid "0493505c-5f13-5c38-b2cd-6fa0667822d1"))
+(symbol (lib_id "RaceRemote_Balancer:PWR_FLAG") (at 274.32 48.26 0) (unit 1) (in_bom no) (on_board no) (dnp no) (uuid "2f286a18-b444-5e48-978a-c52937a1b0f5") (property "Reference" "#FLG802" (at 274.32 43.18 0) (hide yes) (effects (font (size 1.27 1.27))))(property "Value" "PWR_FLAG" (at 274.32 40.64 0) (hide yes) (effects (font (size 1.27 1.27))))(property "Footprint" "" (at 274.32 48.26 0) (hide yes) (effects (font (size 1.27 1.27))))(property "Datasheet" "" (at 274.32 48.26 0) (hide yes) (effects (font (size 1.27 1.27))))(pin "1" (uuid "00bb2343-67b6-530e-ab03-f4623096287c"))(instances (project "pack-balancer" (path "/92152f67-6870-50d9-bb54-e211c20bae5b" (reference "#FLG802") (unit 1)))))
+(wire (pts (xy 274.32 48.26) (xy 274.32 53.34)) (stroke (width 0) (type default)) (uuid "1ab4c647-72ea-5134-b642-681839510329"))
+(global_label "BAT_RAW_N" (shape passive) (at 274.32 53.34 0) (effects (font (size 1 1)) (justify left)) (uuid "715b00d9-0021-5e69-9673-b87bb6feb0b6"))
+(text "PACK-BAL-01 v0.1 - stand-alone battery-side test block, NOT a complete charger" (at 12.7 12.7 0) (effects (font (size 1.6 1.6)) (justify left top)) (uuid "a3c294da-449d-5704-8005-76dea731e84d"))
+(text "BAT_RAW_N is cell negative BEFORE a low-side protection switch. Never equate it with USB_GND/PACK_MINUS.\nBAL_EN_N defaults OFF. External enable/OVP interfaces need battery-domain isolation/level translation." (at 12.7 24.13 0) (effects (font (size 1.2 1.2)) (justify left top)) (uuid "bad1c0c9-283b-502c-84ca-b33fbdd90813"))
+(text "OUT is active HIGH (up to9.5V in specified conditions), not open drain. No direct FAULT_BUS_N connection.\nOVP is secondary4.30V, not a4.20V cell regulator. BQ25886+A is still incomplete.\nNo fuse/FET actuator, low-voltage enable policy, PCB, physical balancing or LW charge performed." (at 12.7 264.16 0) (effects (font (size 1.1 1.1)) (justify left top)) (uuid "b7fad7cc-a435-51fe-b970-8b0a70398c62"))
+(sheet_instances (path "/" (page "1"))) (embedded_fonts no))

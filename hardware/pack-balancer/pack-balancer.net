@@ -1,0 +1,451 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<export version="E">
+  <design>
+    <source>C:\Users\Evgeny\orca\RaceRemote\hardware\pack-balancer\pack-balancer.kicad_sch</source>
+    <date>2026-09-14T07:24:02</date>
+    <tool>Eeschema 10.0.6</tool>
+    <sheet number="1" name="/" tstamps="/">
+      <title_block>
+        <title>RaceRemote - battery-side balancer BENCH PROPOSAL</title>
+        <company>vea.raceremote</company>
+        <rev>0.1</rev>
+        <date>2026-09-14</date>
+        <source>pack-balancer.kicad_sch</source>
+        <comment number="1" value=""/>
+        <comment number="2" value=""/>
+        <comment number="3" value=""/>
+        <comment number="4" value=""/>
+        <comment number="5" value=""/>
+        <comment number="6" value=""/>
+        <comment number="7" value=""/>
+        <comment number="8" value=""/>
+        <comment number="9" value=""/>
+      </title_block>
+    </sheet>
+  </design>
+  <components>
+    <comp ref="C801">
+      <value>100n / 16V</value>
+      <fields>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="RaceRemote_Balancer" part="C" description="Unpolarized capacitor"/>
+      <property name="Sheetname" value="pack-balancer"/>
+      <property name="Sheetfile" value="pack-balancer.kicad_sch"/>
+      <property name="ki_keywords" value="cap capacitor"/>
+      <property name="ki_fp_filters" value="C_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>11e5fc1c-3bbb-5093-9d87-7c7a47caa896</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="C802">
+      <value>100n / 16V</value>
+      <fields>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="RaceRemote_Balancer" part="C" description="Unpolarized capacitor"/>
+      <property name="Sheetname" value="pack-balancer"/>
+      <property name="Sheetfile" value="pack-balancer.kicad_sch"/>
+      <property name="ki_keywords" value="cap capacitor"/>
+      <property name="ki_fp_filters" value="C_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>808de36a-4293-578e-ac6a-c0ae39455b6e</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="C803">
+      <value>100n / 16V</value>
+      <fields>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="RaceRemote_Balancer" part="C" description="Unpolarized capacitor"/>
+      <property name="Sheetname" value="pack-balancer"/>
+      <property name="Sheetfile" value="pack-balancer.kicad_sch"/>
+      <property name="ki_keywords" value="cap capacitor"/>
+      <property name="ki_fp_filters" value="C_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>90e879d7-8baa-5dcb-8096-adb6aa966474</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="C804">
+      <value>100n / 16V / 10%</value>
+      <fields>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="RaceRemote_Balancer" part="C" description="Unpolarized capacitor"/>
+      <property name="Sheetname" value="pack-balancer"/>
+      <property name="Sheetfile" value="pack-balancer.kicad_sch"/>
+      <property name="ki_keywords" value="cap capacitor"/>
+      <property name="ki_fp_filters" value="C_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>a4311b31-ea18-527c-9042-51f6eaad6665</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="J801">
+      <value>CELL-SIDE BENCH NODES</value>
+      <fields>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="RaceRemote_Balancer" part="Conn_01x04" description="Generic connector, single row, 01x04, script generated (kicad-library-utils/schlib/autogen/connector/)"/>
+      <property name="Sheetname" value="pack-balancer"/>
+      <property name="Sheetfile" value="pack-balancer.kicad_sch"/>
+      <property name="ki_keywords" value="connector"/>
+      <property name="ki_fp_filters" value="Connector*:*_1x??_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>64e62519-7273-5046-8308-2f57ccee3a66</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+            <pin num="3"/>
+            <pin num="4"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="J802">
+      <value>BATTERY-DOMAIN IO ONLY</value>
+      <fields>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="RaceRemote_Balancer" part="Conn_01x04" description="Generic connector, single row, 01x04, script generated (kicad-library-utils/schlib/autogen/connector/)"/>
+      <property name="Sheetname" value="pack-balancer"/>
+      <property name="Sheetfile" value="pack-balancer.kicad_sch"/>
+      <property name="ki_keywords" value="connector"/>
+      <property name="ki_fp_filters" value="Connector*:*_1x??_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>47d444eb-e3d3-5a2f-b6a8-54297377193b</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+            <pin num="3"/>
+            <pin num="4"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="R801">
+      <value>100 / 1%</value>
+      <fields>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="RaceRemote_Balancer" part="R" description="Resistor"/>
+      <property name="Sheetname" value="pack-balancer"/>
+      <property name="Sheetfile" value="pack-balancer.kicad_sch"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <property name="ki_fp_filters" value="R_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>42267d2d-c6f8-5660-a577-cf63742c5113</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="R802">
+      <value>100 / 1%</value>
+      <fields>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="RaceRemote_Balancer" part="R" description="Resistor"/>
+      <property name="Sheetname" value="pack-balancer"/>
+      <property name="Sheetfile" value="pack-balancer.kicad_sch"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <property name="ki_fp_filters" value="R_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>23a3b4d8-97d1-5471-9ccc-d75613e65b46</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="R803">
+      <value>100 / 1%</value>
+      <fields>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="RaceRemote_Balancer" part="R" description="Resistor"/>
+      <property name="Sheetname" value="pack-balancer"/>
+      <property name="Sheetfile" value="pack-balancer.kicad_sch"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <property name="ki_fp_filters" value="R_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>01066e6c-6fc2-5ffd-9caa-7dfababc9641</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="R804">
+      <value>120 / 1%</value>
+      <fields>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="RaceRemote_Balancer" part="R" description="Resistor"/>
+      <property name="Sheetname" value="pack-balancer"/>
+      <property name="Sheetfile" value="pack-balancer.kicad_sch"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <property name="ki_fp_filters" value="R_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>997efbb1-cb93-55c2-b3e9-d1e775098060</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="R805">
+      <value>100k / 1%</value>
+      <fields>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="RaceRemote_Balancer" part="R" description="Resistor"/>
+      <property name="Sheetname" value="pack-balancer"/>
+      <property name="Sheetfile" value="pack-balancer.kicad_sch"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <property name="ki_fp_filters" value="R_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>246085e5-b721-5b03-bbaa-ab49133123db</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="U801">
+      <value>BQ29209DRBR</value>
+      <datasheet>https://www.ti.com/lit/gpn/bq29209</datasheet>
+      <fields>
+        <field name="Footprint"/>
+        <field name="Datasheet">https://www.ti.com/lit/gpn/bq29209</field>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="RaceRemote_Balancer" part="BQ29209DRB" description=""/>
+      <property name="Sheetname" value="pack-balancer"/>
+      <property name="Sheetfile" value="pack-balancer.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>61143639-1618-5ed4-b3eb-37f340362742</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+            <pin num="3"/>
+            <pin num="4"/>
+            <pin num="8"/>
+            <pin num="7"/>
+            <pin num="6"/>
+            <pin num="5"/>
+            <pin num="9"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+  </components>
+  <libparts>
+    <libpart lib="RaceRemote_Balancer" part="BQ29209DRB">
+      <fields>
+        <field name="Reference">U</field>
+        <field name="Value">BQ29209DRB</field>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <pins>
+        <pin num="1" name="VC2" type="input"/>
+        <pin num="2" name="VC1" type="input"/>
+        <pin num="3" name="VC1_CB" type="passive"/>
+        <pin num="4" name="CD" type="passive"/>
+        <pin num="5" name="GND" type="power_in"/>
+        <pin num="6" name="~{CB_EN}" type="input"/>
+        <pin num="7" name="VDD" type="power_in"/>
+        <pin num="8" name="OUT" type="output"/>
+        <pin num="9" name="EP" type="power_in"/>
+      </pins>
+    </libpart>
+    <libpart lib="RaceRemote_Balancer" part="C">
+      <description>Unpolarized capacitor</description>
+      <footprints>
+        <fp>C_*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">C</field>
+        <field name="Value">C</field>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description">Unpolarized capacitor</field>
+      </fields>
+      <pins>
+        <pin num="1" name="" type="passive"/>
+        <pin num="2" name="" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="RaceRemote_Balancer" part="Conn_01x04">
+      <description>Generic connector, single row, 01x04, script generated (kicad-library-utils/schlib/autogen/connector/)</description>
+      <footprints>
+        <fp>Connector*:*_1x??_*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">J</field>
+        <field name="Value">Conn_01x04</field>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description">Generic connector, single row, 01x04, script generated (kicad-library-utils/schlib/autogen/connector/)</field>
+      </fields>
+      <pins>
+        <pin num="1" name="Pin_1" type="passive"/>
+        <pin num="2" name="Pin_2" type="passive"/>
+        <pin num="3" name="Pin_3" type="passive"/>
+        <pin num="4" name="Pin_4" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="RaceRemote_Balancer" part="R">
+      <description>Resistor</description>
+      <footprints>
+        <fp>R_*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">R</field>
+        <field name="Value">R</field>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description">Resistor</field>
+      </fields>
+      <pins>
+        <pin num="1" name="" type="passive"/>
+        <pin num="2" name="" type="passive"/>
+      </pins>
+    </libpart>
+  </libparts>
+  <libraries>
+    <library logical="RaceRemote_Balancer">
+      <uri>${KIPRJMOD}/RaceRemote_Balancer.kicad_sym</uri>
+    </library>
+  </libraries>
+  <nets>
+    <net code="1" name="BAL_DELAY" class="Default">
+      <node ref="C804" pin="1" pintype="passive"/>
+      <node ref="U801" pin="4" pinfunction="CD_4" pintype="passive"/>
+    </net>
+    <net code="2" name="BAL_EN_N" class="Default">
+      <node ref="J802" pin="1" pinfunction="Pin_1_1" pintype="passive"/>
+      <node ref="R805" pin="2" pintype="passive"/>
+      <node ref="U801" pin="6" pinfunction="~{CB_EN}_6" pintype="input"/>
+    </net>
+    <net code="3" name="BAL_OVP_RAW" class="Default">
+      <node ref="J802" pin="2" pinfunction="Pin_2_2" pintype="passive"/>
+      <node ref="U801" pin="8" pinfunction="OUT_8" pintype="output"/>
+    </net>
+    <net code="4" name="BAL_VC1" class="Default">
+      <node ref="C802" pin="2" pintype="passive"/>
+      <node ref="C803" pin="1" pintype="passive"/>
+      <node ref="R803" pin="2" pintype="passive"/>
+      <node ref="U801" pin="2" pinfunction="VC1_2" pintype="input"/>
+    </net>
+    <net code="5" name="BAL_VC1_CB" class="Default">
+      <node ref="R804" pin="2" pintype="passive"/>
+      <node ref="U801" pin="3" pinfunction="VC1_CB_3" pintype="passive"/>
+    </net>
+    <net code="6" name="BAL_VC2" class="Default">
+      <node ref="C802" pin="1" pintype="passive"/>
+      <node ref="R802" pin="2" pintype="passive"/>
+      <node ref="U801" pin="1" pinfunction="VC2_1" pintype="input"/>
+    </net>
+    <net code="7" name="BAL_VDD" class="Default">
+      <node ref="C801" pin="1" pintype="passive"/>
+      <node ref="J802" pin="3" pinfunction="Pin_3_3" pintype="passive"/>
+      <node ref="R801" pin="2" pintype="passive"/>
+      <node ref="R805" pin="1" pintype="passive"/>
+      <node ref="U801" pin="7" pinfunction="VDD_7" pintype="power_in"/>
+    </net>
+    <net code="8" name="BAT_MID" class="Default">
+      <node ref="J801" pin="2" pinfunction="Pin_2_2" pintype="passive"/>
+      <node ref="R803" pin="1" pintype="passive"/>
+      <node ref="R804" pin="1" pintype="passive"/>
+    </net>
+    <net code="9" name="BAT_RAW_N" class="Default">
+      <node ref="C801" pin="2" pintype="passive"/>
+      <node ref="C803" pin="2" pintype="passive"/>
+      <node ref="C804" pin="2" pintype="passive"/>
+      <node ref="J801" pin="3" pinfunction="Pin_3_3" pintype="passive"/>
+      <node ref="J801" pin="4" pinfunction="Pin_4_4" pintype="passive"/>
+      <node ref="J802" pin="4" pinfunction="Pin_4_4" pintype="passive"/>
+      <node ref="U801" pin="5" pinfunction="GND_5" pintype="power_in"/>
+      <node ref="U801" pin="9" pinfunction="EP_9" pintype="power_in"/>
+    </net>
+    <net code="10" name="BAT_RAW_P" class="Default">
+      <node ref="J801" pin="1" pinfunction="Pin_1_1" pintype="passive"/>
+      <node ref="R801" pin="1" pintype="passive"/>
+      <node ref="R802" pin="1" pintype="passive"/>
+    </net>
+  </nets>
+</export>

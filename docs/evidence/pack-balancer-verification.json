@@ -1,0 +1,91 @@
+{
+  "date": "2026-09-14",
+  "contract": "PACK-BAL-01 v0.1",
+  "kicad_version": "10.0.6",
+  "erc_violations": 0,
+  "components": 12,
+  "pins_including_ep": 35,
+  "fault_injections": [
+    {
+      "mutation": "sense_cells_swapped",
+      "detected": true,
+      "reason": "Connectivity mismatch: {(('U801', '1'), 'BAL_VC1'), (('U801', '1'), 'BAL_VC2')}"
+    },
+    {
+      "mutation": "ground_after_cutoff",
+      "detected": true,
+      "reason": "Connectivity mismatch: {(('U801', '5'), 'USB_GND'), (('U801', '5'), 'BAT_RAW_N')}"
+    },
+    {
+      "mutation": "top_filter_to_ground",
+      "detected": true,
+      "reason": "Connectivity mismatch: {(('C802', '2'), 'BAT_RAW_N'), (('C802', '2'), 'BAL_VC1')}"
+    },
+    {
+      "mutation": "enable_pulldown",
+      "detected": true,
+      "reason": "Connectivity mismatch: {(('R805', '1'), 'BAL_VDD'), (('R805', '1'), 'BAT_RAW_N')}"
+    },
+    {
+      "mutation": "raw_ovp_into_permit",
+      "detected": true,
+      "reason": "Connectivity mismatch: {(('U801', '8'), 'BAL_OVP_RAW'), (('U801', '8'), 'FAULT_BUS_N')}"
+    }
+  ],
+  "source": {
+    "url": "https://www.ti.com/lit/gpn/bq29209",
+    "revision": "SLUSA52C March2016",
+    "inspected_pages": [
+      4,
+      6,
+      7,
+      10,
+      13
+    ],
+    "mirror_url": "https://static.chipdip.ru/lib/799/DOC059799688.pdf",
+    "mirror_sha256": "5d78b2ee2f7e9e8a1e3e1a45afaf8842c88b30fa5ff7b72a738fd8188a1fce7f"
+  },
+  "ovp_nominal_V_per_cell": 4.3,
+  "delay_estimate_s": {
+    "nominal": 0.9,
+    "min": 0.49500000000000005,
+    "max": 1.485
+  },
+  "delay_scope": "Datasheet scale -40..110C times assumed effective capacitance +/-10%; not full shutdown latency",
+  "ground_reference_example": {
+    "assumption": "Two ideal3.7V cells; open low-side protector; load pulls protected negative to pack positive",
+    "raw_negative_V": 0.0,
+    "midpoint_V": 3.7,
+    "raw_positive_V": 7.4,
+    "protected_negative_V": 7.4,
+    "midpoint_relative_to_raw_negative_V": 3.7,
+    "midpoint_relative_to_protected_negative_V": -3.7,
+    "input_absolute_minimum_V": -0.3,
+    "scope": "DC voltage reference counterexample, not a predicted transient or current"
+  },
+  "not_verified": [
+    "Primary cell voltage regulation and undervoltage/overcurrent protection",
+    "Actual balance current and correction time; datasheet resistor-name ambiguity",
+    "Effective capacitor tolerance under bias and temperature; exact purchased passives",
+    "Battery-referenced enable policy below6V and OUT level/domain translation",
+    "Ground topology, cell disconnect order, storage drain, full charger/BMS integration",
+    "LW charge limits, PCB, assembly or physical balancing/charge"
+  ],
+  "sha256": {
+    "hardware/pack-balancer/pack-balancer.kicad_sch": "fee861e2d813530dcf757c3ee1e7899ef99d6fc2c5db4685bd5be0a493162224",
+    "hardware/pack-balancer/pack-balancer.kicad_pro": "0dba872a1869500fa2682636e0ebd9179629fb6307b93f79f4a99421ca9197dc",
+    "hardware/pack-balancer/RaceRemote_Balancer.kicad_sym": "a6e55856b3eff1b4bd41118eba023506ca7222e36c3acf09f0f5bf3fb676756f",
+    "hardware/pack-balancer/pack-balancer.net": "2a58efd57d1007e1d9a590b8f29680ddbf72e28e3fa285b4d9be2127a601e780",
+    "hardware/pack-balancer/pack-balancer.pdf": "cb14675a476eec7c202fc88a41c2b287d5cad1a93a4f6014f23365411382d084",
+    "hardware/pack-balancer/bom.csv": "966cae6b21fd80de2fb91fee6c3aa530f13f91693f914eba74317fbb08e87904",
+    "hardware/pack-balancer/sym-lib-table": "3365507ca8d5e2093a4a444e07097c60318196857cf7398444b496698c0f2f52",
+    "hardware/pack-balancer/fp-lib-table": "60ef99d0df04aed362dd0c7962ab4c36105ae3926bd3050612a8de0c3bfae4ca",
+    "docs/evidence/pack-balancer-erc.json": "b732269227641bcd7aa5ad06ca2b37842ef923087760041ab06acaa9d826bdc3",
+    "hardware/charge-core/RaceRemote_Charge.kicad_sym": "db052fcebd747ff27c908112797eef32c70e673b8c5ca08fdeb1f256d3b8e4c4",
+    "tools/build_pack_balancer.py": "067460ed0ccc1b5a5d848739fc2a11905f04b90d5a404a1300ba9d4b5091940c",
+    "tools/verify_pack_balancer.py": "21b0237abb97ab60d69416dd804debe0177bc079585dca6b0bbe15c6a8de187a",
+    "tools/build_charge_permit.py": "5c860010fbd25fe639780fefc81b28164161fc1f5ddc781ce1144811def10d58",
+    "tools/build_usb_port_schematic.py": "96b38c6c6cac91787961c1f4be5152a5175b215b0812dd1e0153f1d6a89addfa",
+    "tools/verify_usb_detector.py": "68d2ebf584a14c0aa0192de131e2af41f19f1ccb08c81a478b64a3895b83996a"
+  }
+}

@@ -1,6 +1,6 @@
 {
   "date": "2026-09-14",
-  "contract": "CHARGE-PERMIT-01 v0.3",
+  "contract": "CHARGE-PERMIT-01 v0.4",
   "kicad_version": "10.0.6",
   "erc_violations": 0,
   "ic_pins_checked": 37,
@@ -10,17 +10,17 @@
     {
       "mutation": "clear_bypassed_to_aux",
       "detected": true,
-      "failed_contract": "Connectivity mismatch: {(('U401', '6'), 'CLR_N'), (('U401', '6'), 'AUX_3V3')}"
+      "failed_contract": "Connectivity mismatch: {(('U401', '6'), 'AUX_3V3'), (('U401', '6'), 'CLR_N')}"
     },
     {
       "mutation": "data_tied_low",
       "detected": true,
-      "failed_contract": "Connectivity mismatch: {(('U401', '2'), 'AUX_3V3'), (('U401', '2'), 'USB_GND')}"
+      "failed_contract": "Connectivity mismatch: {(('U401', '2'), 'USB_GND'), (('U401', '2'), 'AUX_3V3')}"
     },
     {
       "mutation": "supervisor_senses_ground",
       "detected": true,
-      "failed_contract": "Connectivity mismatch: {(('U403', '5'), 'AUX_3V3'), (('U403', '5'), 'USB_GND')}"
+      "failed_contract": "Connectivity mismatch: {(('U403', '5'), 'USB_GND'), (('U403', '5'), 'AUX_3V3')}"
     },
     {
       "mutation": "output_connector_uses_clock",
@@ -35,12 +35,12 @@
     {
       "mutation": "fault_mux_inhibit_branch_grounded",
       "detected": true,
-      "failed_contract": "Connectivity mismatch: {(('U405', '4'), 'CHG_BIAS_3V3'), (('U405', '4'), 'USB_GND')}"
+      "failed_contract": "Connectivity mismatch: {(('U405', '4'), 'USB_GND'), (('U405', '4'), 'CHG_BIAS_3V3')}"
     },
     {
       "mutation": "fault_mux_select_bypassed_by_q",
       "detected": true,
-      "failed_contract": "Connectivity mismatch: {(('U405', '1'), 'PERMIT_Q'), (('U405', '1'), 'FAULT_BUS_N')}"
+      "failed_contract": "Connectivity mismatch: {(('U405', '1'), 'FAULT_BUS_N'), (('U405', '1'), 'PERMIT_Q')}"
     },
     {
       "mutation": "bias_ldo_fed_from_monitored_aux",
@@ -55,7 +55,7 @@
     {
       "mutation": "bias_output_cap_on_input",
       "detected": true,
-      "failed_contract": "Connectivity mismatch: {(('C407', '1'), 'CHG_BIAS_3V3'), (('C407', '1'), 'CHG_SUPPLY_INPUT')}"
+      "failed_contract": "Connectivity mismatch: {(('C407', '1'), 'CHG_SUPPLY_INPUT'), (('C407', '1'), 'CHG_BIAS_3V3')}"
     }
   ],
   "ideal_logic_sequences": [
@@ -364,7 +364,9 @@
   ],
   "arithmetic": {
     "fault_pullup_max_A": 0.00036363636363636367,
-    "arm_pulldown_max_A": 0.00036363636363636367,
+    "arm_pulldown_max_A": 7.736943907156673e-05,
+    "arm_load_max_A_with_5uA_schmitt_input": 8.236943907156673e-05,
+    "arm_float_V_with_assumed_15uA_leakage": 0.7120500000000001,
     "q_load_max_A_with_proposed_20uA_external": 9.736943907156672e-05,
     "q_voltage_from_10uA_Ioff_at_VCC_zero_V": 0.4747,
     "supervisor_falling_threshold_full_temperature_min_V": 3.0239499999999997,
@@ -519,15 +521,15 @@
     "scope": "DC budget only at stated TI test conditions; no interpolation into supply ramps, switch charge-injection, BQ timing, residual current or all-state safety proof."
   },
   "sha256": {
-    "hardware/charge-permit/charge-permit.kicad_sch": "e1ad952fa7e489ffc99e88fc384031d4d873c11441c4cce747094afab5d96f2b",
+    "hardware/charge-permit/charge-permit.kicad_sch": "8fda19bbd1f1fcf1e2917cc35d52570cadd0abdf17fd13e9a5add2e12ed2ed3c",
     "hardware/charge-permit/charge-permit.kicad_pro": "1486176357f81a1e7c03fe66e5cb59d71759bed0f8557e6b8a776fe5035b3d85",
     "hardware/charge-permit/RaceRemote_Permit.kicad_sym": "066da66e907caf471688b7f37547def8eeb55c0d8fe68d23fb743c6d5ec3972c",
-    "hardware/charge-permit/charge-permit.net": "2b45303a81da6d1673edc261590102daf071fd1e9e8ea1cb8232dcd97cc65386",
-    "hardware/charge-permit/charge-permit.pdf": "f5950e3d433ae30d56148a3ef23544b563201f96d1aab311798899b09578b69d",
-    "hardware/charge-permit/bom.csv": "555c8dd4d541f52f22243736ab5a41f94e5e3d968b92416af6045ef430a4f532",
-    "docs/evidence/charge-permit-erc.json": "26a5bee7ca462f5f6dbc0ba0e7ee9e8998b73571e76bbe783fbebf254ed63166",
-    "tools/build_charge_permit.py": "863805111579d8f86993d730ed6829225604c3507109ecca2cad1f083bdcf46b",
-    "tools/verify_charge_permit.py": "f30b290820630a12d2f820381beeede5fca6f84375c3208a86c521a263c9d9d8",
+    "hardware/charge-permit/charge-permit.net": "b37969937c853897061e9872a21ed3e05a54caf49e75b381dded61248aa58052",
+    "hardware/charge-permit/charge-permit.pdf": "e9ba00a9f150abf6bc231b940b98de141d7a617cc3dfc01df2b365f00ca45046",
+    "hardware/charge-permit/bom.csv": "cc477f04e6644121a069bef5af6a5e3c8417e7ef936d0699908c8a040f8143e8",
+    "docs/evidence/charge-permit-erc.json": "4466566fbd52ae5ed01a9b6a3c02eb4fdbd494a488761924a68c343c1597684b",
+    "tools/build_charge_permit.py": "5c860010fbd25fe639780fefc81b28164161fc1f5ddc781ce1144811def10d58",
+    "tools/verify_charge_permit.py": "61bf650a46744f05c84a08080bb05babfd5a7999a569783388beb6d27969ca98",
     "tools/verify_usb_detector.py": "68d2ebf584a14c0aa0192de131e2af41f19f1ccb08c81a478b64a3895b83996a",
     "tools/build_usb_port_schematic.py": "96b38c6c6cac91787961c1f4be5152a5175b215b0812dd1e0153f1d6a89addfa"
   },

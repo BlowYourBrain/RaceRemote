@@ -1,7 +1,7 @@
 # Сигнальная цепь запрета зарядки
 
 14 сентября 2026. **CHARGE-CD-01 v0.2 — предложение**, включено в
-[CHARGE-PERMIT-01 v0.3](../hardware/charge-permit/README.md). Схема и
+[CHARGE-PERMIT-01 v0.4](../hardware/charge-permit/README.md). Схема и
 логические проверки есть; PCB, монтаж и измерения отсутствуют.
 
 ## Назначение и соединения

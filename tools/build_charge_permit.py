@@ -64,7 +64,7 @@ def main():
     out = ['(kicad_sch (version 20250901) (generator "raceremote")',
            f'(uuid "{uid("sheet")}") (paper "A2")',
            '(title_block (title "RaceRemote - permit latch and CD actuator PROPOSAL") '
-           '(date "2026-09-14") (rev "0.3") (company "vea.raceremote"))',
+           '(date "2026-09-14") (rev "0.4") (company "vea.raceremote"))',
            '(lib_symbols ' + '\n'.join(cache) + ')']
     positions, bom = {}, []
 
@@ -149,7 +149,7 @@ def main():
         pair('C', ref, '100n / 16V', x, 269.24, 'CHG_BIAS_3V3', 'USB_GND', 'Local TMUX bias bypass, not AUX')
     for ref, value, x, top, bottom, purpose in [
         ('R401', '10k / 1%', 76.2, 'AUX_3V3', 'FAULT_BUS_N', 'Only pull-up for shared open-drain error bus'),
-        ('R402', '10k / 1%', 203.2, 'ARM', 'USB_GND', 'Default ARM LOW when MCU input floats'),
+        ('R402', '47k / 1%', 203.2, 'ARM', 'USB_GND', 'ARM LOW with absent buffer; light load for MCU inverter'),
         ('R403', '47k / 1%', 330.2, 'PERMIT_Q', 'USB_GND', 'Pull-down at VCC=0 only; not brownout proof')]:
         pair('R', ref, value, x, 195.58, top, bottom, purpose)
     pair('R', 'R404', '47k / 1%', 431.8, 330.2, 'CHG_BIAS_3V3', 'CHARGER_CD', 'Pull-up during switch transition; dynamic CD timing open')
@@ -171,7 +171,7 @@ def main():
         ref = '#FLG' + str(401 + i)
         symbol('PWR_FLAG', ref, 'PWR_FLAG', x, 119.38)
         net(ref, 1, name, 0, 5.08)
-    note('CHARGE-PERMIT-01 v0.3 - latch + regulated CD bias; complete charger NOT qualified', 25.4, 17.78, 2)
+    note('CHARGE-PERMIT-01 v0.4 - ARM pull-down 47k for MCU inverter; complete charger NOT qualified', 25.4, 17.78, 2)
     note('FAULT_BUS_N LOW clears Q even with ARM HIGH. Releasing fault alone does not re-arm.\n'
          'D and PRE tied HIGH. Only a new ARM rising edge after reset recovery may set Q. Q-bar intentionally unused.\n'
          'External fault sources / MCU revoke must sink or release; never drive shared bus HIGH.', 25.4, 27.94)

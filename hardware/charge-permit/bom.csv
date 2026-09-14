@@ -11,7 +11,7 @@ C401,100n / 16V,Local IC bypass; place at corresponding IC,,"Candidate; footprin
 C404,100n / 16V,"Local TMUX bias bypass, not AUX",,"Candidate; footprints, qualified bias supply and physical qualification pending"
 C405,100n / 16V,"Local TMUX bias bypass, not AUX",,"Candidate; footprints, qualified bias supply and physical qualification pending"
 R401,10k / 1%,Only pull-up for shared open-drain error bus,,"Candidate; footprints, qualified bias supply and physical qualification pending"
-R402,10k / 1%,Default ARM LOW when MCU input floats,,"Candidate; footprints, qualified bias supply and physical qualification pending"
+R402,47k / 1%,ARM LOW with absent buffer; light load for MCU inverter,,"Candidate; footprints, qualified bias supply and physical qualification pending"
 R403,47k / 1%,Pull-down at VCC=0 only; not brownout proof,,"Candidate; footprints, qualified bias supply and physical qualification pending"
 R404,47k / 1%,Pull-up during switch transition; dynamic CD timing open,,"Candidate; footprints, qualified bias supply and physical qualification pending"
 R405,1M / 1%,Weak fault-bus pull-down; include in HIGH level budget,,"Candidate; footprints, qualified bias supply and physical qualification pending"

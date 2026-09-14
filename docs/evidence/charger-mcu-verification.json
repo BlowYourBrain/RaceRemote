@@ -1,0 +1,192 @@
+{
+  "date": "2026-09-14",
+  "contracts": [
+    "CHARGE-MCU-01 v0.2",
+    "CHARGE-IO-01 v0.1"
+  ],
+  "erc_violations": 0,
+  "kicad_version": "10.0.6",
+  "components": 17,
+  "pins": 70,
+  "fault_injections": [
+    {
+      "mutation": "arm_bypasses_inverter",
+      "detected": true,
+      "reason": "Connectivity mismatch: {(('U602', '7'), 'ARM'), (('U602', '7'), 'ARM_N')}"
+    },
+    {
+      "mutation": "watchdog_uses_source",
+      "detected": true,
+      "reason": "Connectivity mismatch: {(('U602', '5'), 'SOURCE_REQUEST'), (('U602', '5'), 'WD_HEARTBEAT')}"
+    },
+    {
+      "mutation": "default_arm_input_grounded",
+      "detected": true,
+      "reason": "Connectivity mismatch: {(('R601', '1'), 'AUX_3V3'), (('R601', '1'), 'USB_GND')}"
+    },
+    {
+      "mutation": "readback_is_arm",
+      "detected": true,
+      "reason": "Connectivity mismatch: {(('U601', '1'), 'PERMIT_Q'), (('U601', '1'), 'ARM')}"
+    },
+    {
+      "mutation": "fault_bus_driven_by_buffer",
+      "detected": true,
+      "reason": "Connectivity mismatch: {(('U602', '2'), 'FAULT_BUS_N'), (('U602', '2'), 'SOURCE_REQUEST')}"
+    },
+    {
+      "mutation": "swio_repurposed_as_i2c",
+      "detected": true,
+      "reason": "Connectivity mismatch: {(('U601', '18'), 'BC_SCL'), (('U601', '18'), 'SWIO')}"
+    },
+    {
+      "mutation": "fault_gpio_push_pull_mode",
+      "detected": true
+    }
+  ],
+  "truth_table": [
+    {
+      "gpio_released": [
+        0,
+        0,
+        0
+      ],
+      "outputs": {
+        "ARM": 1,
+        "WD_HEARTBEAT": 1,
+        "SOURCE_REQUEST": 1
+      }
+    },
+    {
+      "gpio_released": [
+        0,
+        0,
+        1
+      ],
+      "outputs": {
+        "ARM": 1,
+        "WD_HEARTBEAT": 1,
+        "SOURCE_REQUEST": 0
+      }
+    },
+    {
+      "gpio_released": [
+        0,
+        1,
+        0
+      ],
+      "outputs": {
+        "ARM": 1,
+        "WD_HEARTBEAT": 0,
+        "SOURCE_REQUEST": 1
+      }
+    },
+    {
+      "gpio_released": [
+        0,
+        1,
+        1
+      ],
+      "outputs": {
+        "ARM": 1,
+        "WD_HEARTBEAT": 0,
+        "SOURCE_REQUEST": 0
+      }
+    },
+    {
+      "gpio_released": [
+        1,
+        0,
+        0
+      ],
+      "outputs": {
+        "ARM": 0,
+        "WD_HEARTBEAT": 1,
+        "SOURCE_REQUEST": 1
+      }
+    },
+    {
+      "gpio_released": [
+        1,
+        0,
+        1
+      ],
+      "outputs": {
+        "ARM": 0,
+        "WD_HEARTBEAT": 1,
+        "SOURCE_REQUEST": 0
+      }
+    },
+    {
+      "gpio_released": [
+        1,
+        1,
+        0
+      ],
+      "outputs": {
+        "ARM": 0,
+        "WD_HEARTBEAT": 0,
+        "SOURCE_REQUEST": 1
+      }
+    },
+    {
+      "gpio_released": [
+        1,
+        1,
+        1
+      ],
+      "outputs": {
+        "ARM": 0,
+        "WD_HEARTBEAT": 0,
+        "SOURCE_REQUEST": 0
+      }
+    }
+  ],
+  "arithmetic": {
+    "scope": "Conditional DC arithmetic, not full GPIO/rail/edge qualification",
+    "direct_cmos_high_min_V": 2.3,
+    "watchdog_high_required_at_3V6_V": 2.8800000000000003,
+    "each_request_gpio_sink_upper_A": 0.0003686363636363637,
+    "inverter_input_released_min_at_3V_with_6uA_leak_V": 2.9394,
+    "inverter_input_high_margin_at_datasheet_3V_point_V": 0.7393999999999998,
+    "inverter_input_low_margin_at_datasheet_3V_point_V": 0.19999999999999996,
+    "arm_output_load_upper_A": 8.236943907156673e-05,
+    "wd_output_load_with_assumed_20uA_input_A": 9.736943907156672e-05,
+    "source_output_external_load_budget_A": 0.0001,
+    "buffer_output_high_at_3V_100uA_V": 2.9,
+    "buffer_output_low_100uA_V": 0.1,
+    "watchdog_high_min_margin_over_3V_to_3V6_V": 0.5000000000000001,
+    "source_high_margin_to_proposed_2V8_V": 0.10000000000000009
+  },
+  "not_verified": [
+    "MCU firmware, GPIO reset/configuration/locking and programming",
+    "Input Schmitt thresholds between tabulated VCC points, analog ramps and edges",
+    "Actual WDI/source loading, total AUX current and fault-bus leakage",
+    "Source permission policy, INA300 clear/latch, battery monitoring/protection",
+    "PCB, assembly, CD/current transient and physical charging"
+  ],
+  "sha256": {
+    "hardware/charger-mcu/bom.csv": "30eb13ce36eb597e65d5f6def14c9888169af9f3e6cc82e0c23118e675915f46",
+    "hardware/charger-mcu/charger-mcu.kicad_prl": "973733e53bb1a8ffba325b2c8aa3d90aa1417e44b1fcf1aa8df6019021760e3e",
+    "hardware/charger-mcu/charger-mcu.kicad_pro": "252313c431cf87ff382c06c877323d0ca6ac6299ead37b8fb4ee3137c9577a01",
+    "hardware/charger-mcu/charger-mcu.kicad_sch": "80ee48b003896acf2e23b9bc687ecb634ec75a55499a444e54924e47c7165f06",
+    "hardware/charger-mcu/charger-mcu.net": "41ae828807bb7e146cf729f92f9587f7ad132b3906be687d545d7a29fe25d0be",
+    "hardware/charger-mcu/charger-mcu.pdf": "7e1361c349fe1059cd314dcbd3971068c538a53d387d686493560a6a58abe264",
+    "hardware/charger-mcu/fp-lib-table": "60ef99d0df04aed362dd0c7962ab4c36105ae3926bd3050612a8de0c3bfae4ca",
+    "hardware/charger-mcu/RaceRemote_ChargerMCU.kicad_sym": "725ec84c4a74dc72b9f1bb9408371c184e3584de3e46511a0eac4153f622b073",
+    "hardware/charger-mcu/sym-lib-table": "408a8e342d78b0e9c82d50ca51ea3397d231894432e312be0b93bb576f14d1a2",
+    "docs/charger-mcu-pins.csv": "bb1076a60863edad3ee402b55642d746ccf763394e2ad7fd1c7e15bb6278b199",
+    "docs/evidence/charger-mcu-erc.json": "d3231fb1555893eff83681618cac62ad8933a0f89e1f3fef6c10eaf0154a8e76",
+    "hardware/charge-permit/charge-permit.kicad_sch": "8fda19bbd1f1fcf1e2917cc35d52570cadd0abdf17fd13e9a5add2e12ed2ed3c",
+    "hardware/charge-watchdog/charge-watchdog.kicad_sch": "4a39430f63997a2502a38ad72bb6c59fdc0561fe5d4a618b287f979d402d66bd",
+    "hardware/usb-detector/usb-detector.kicad_sch": "1f1108022b82e6cc781daba00149968333c565e2b0a0913163784ff7be52d62a",
+    "tools/build_charger_mcu.py": "5a791813e8722009740df93eb8b69111a654b7343b4bf0a574b05ef31079653d",
+    "tools/verify_charger_mcu.py": "c57568ffa5cb68337f561b2e193972b9bdce554b26ed366941f709e2d154951a",
+    "tools/build_charge_permit.py": "5c860010fbd25fe639780fefc81b28164161fc1f5ddc781ce1144811def10d58",
+    "tools/build_usb_port_schematic.py": "96b38c6c6cac91787961c1f4be5152a5175b215b0812dd1e0153f1d6a89addfa",
+    "tools/verify_charge_permit.py": "61bf650a46744f05c84a08080bb05babfd5a7999a569783388beb6d27969ca98",
+    "tools/verify_charge_watchdog.py": "93e3fc5a955435eb5505dcba3ec6398e5ac48f2ee1163735b8e1e7acb7eff793",
+    "tools/verify_usb_detector.py": "68d2ebf584a14c0aa0192de131e2af41f19f1ccb08c81a478b64a3895b83996a",
+    "hardware/charge-core/RaceRemote_Charge.kicad_sym": "db052fcebd747ff27c908112797eef32c70e673b8c5ca08fdeb1f256d3b8e4c4"
+  }
+}

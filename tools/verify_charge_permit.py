@@ -36,7 +36,7 @@ VALUES = {
     'C401': '100n / 16V', 'C402': '100n / 16V', 'C403': '100n / 16V',
     'C404': '100n / 16V', 'C405': '100n / 16V',
     'C406': '1u / 50V', 'C407': '4.7u / 16V X7R',
-    'R401': '10k / 1%', 'R402': '10k / 1%', 'R403': '47k / 1%',
+    'R401': '10k / 1%', 'R402': '47k / 1%', 'R403': '47k / 1%',
     'R404': '47k / 1%', 'R405': '1M / 1%',
     'R406': '3.3k / 1%',
     'J401': 'AUX AND CHARGER INPUT', 'J402': 'FAULT SOURCES', 'J403': 'MCU INTERFACE', 'J404': 'TO BQ25887 CD'}
@@ -190,7 +190,9 @@ def main():
     # Static bounds under individual TI test conditions, not a dynamic proof.
     arithmetic = {
         'fault_pullup_max_A': 3.6 / (10000 * .99),
-        'arm_pulldown_max_A': 3.6 / (10000 * .99),
+        'arm_pulldown_max_A': 3.6 / (47000 * .99),
+        'arm_load_max_A_with_5uA_schmitt_input': 3.6 / (47000 * .99) + 5e-6,
+        'arm_float_V_with_assumed_15uA_leakage': 15e-6 * 47000 * 1.01,
         'q_load_max_A_with_proposed_20uA_external': 3.6 / (47000 * .99) + 20e-6,
         'q_voltage_from_10uA_Ioff_at_VCC_zero_V': 10e-6 * 47000 * 1.01,
         'supervisor_falling_threshold_full_temperature_min_V': 3.07 * .985,
@@ -199,6 +201,8 @@ def main():
         'scope': 'Separate datasheet conditions and assumed resistor tolerance. No analog simulation, '
                  'whole AUX budget, output threshold acceptance, fast supply-fall or total turnoff proof.'}
     assert arithmetic['fault_pullup_max_A'] < .001
+    assert arithmetic['arm_load_max_A_with_5uA_schmitt_input'] < 100e-6
+    assert arithmetic['arm_float_V_with_assumed_15uA_leakage'] < .8
     assert arithmetic['q_load_max_A_with_proposed_20uA_external'] < 100e-6
     # Conditional DC model: specified table at bias 3.3V +/-10%. 100uA is a
     # proposed external load budget, not a measured or BQ-guaranteed maximum.
@@ -236,7 +240,7 @@ def main():
              'RaceRemote_Permit.kicad_sym', 'charge-permit.net', 'charge-permit.pdf', 'bom.csv']]
     files += [erc, ROOT / 'tools/build_charge_permit.py', Path(__file__),
               ROOT / 'tools/verify_usb_detector.py', ROOT / 'tools/build_usb_port_schematic.py']
-    report = {'date': '2026-09-14', 'contract': 'CHARGE-PERMIT-01 v0.3',
+    report = {'date': '2026-09-14', 'contract': 'CHARGE-PERMIT-01 v0.4',
               'kicad_version': erc_data['kicad_version'], 'erc_violations': 0,
               'ic_pins_checked': 37, 'all_pins_checked': len(pins), 'logical_components': len(values),
               'fault_injections': faults, 'ideal_logic_sequences': traces, 'arithmetic': arithmetic,

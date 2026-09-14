@@ -1,13 +1,13 @@
 pin,port,proposed_signal,mode,notes
-1,PD4,PACK_SENSE,ADC_IN7,Diagnostic reserve; divider/protection not designed
-2,PD5,CHARGE_REQUEST,output,Request to future hardware gate; not direct CE/CD
-3,PD6,WD_HEARTBEAT,output,Only after completed health checks; not autonomous PWM
+1,PD4,PERMIT_Q,input,Read actual permit latch Q; replaces optional PACK_SENSE
+2,PD5,ARM_N,open_drain,LOW through inverter creates ARM rising edge; release returns ARM LOW
+3,PD6,WD_HEARTBEAT_N,open_drain,LOW then release gives WDI falling edge through inverter; no autonomous PWM
 4,PD7,RESET_N,reserved,NRST option configuration and supervisor not implemented
-5,PA1,STATUS_LED,output,Series resistor and current budget pending
+5,PA1,FAULT_BUS_N,open_drain_readback,LOW revokes; release then read input; never push-pull HIGH; replaces LED
 6,PA2,CHARGER_FAULT,input,Voltage adaptation required for actual charger
 7,VSS,USB_GND,power,Do not bypass future battery protection via grounds
-8,PD0,SOURCE_REQUEST,output,Request to future hardware gate; not direct SOURCE_ALLOW
-9,VDD,AUX_3V3,power,Only pre-gate TPS709 supply; bypass not drawn
+8,PD0,SOURCE_REQUEST_N,open_drain,LOW through inverter requests source; not direct SOURCE_ALLOW
+9,VDD,AUX_3V3,power,Only pre-gate TPS709 supply; C601 and C602 bypass
 10,PC0,BC_INT_N,input,PI3USB9201 open drain at AUX
 11,PC1,BC_SDA,I2C_SDA,Default mapping; shared bus pullups already in detector
 12,PC2,BC_SCL,I2C_SCL,Default mapping; proposed 100kHz

@@ -111,6 +111,18 @@ docs/evidence/charge-watchdog-*.json text eol=crlf
 tools/build_charge_watchdog.py text eol=lf
 tools/verify_charge_watchdog.py text eol=lf
 
+hardware/charger-mcu/*.kicad_sch text eol=crlf
+hardware/charger-mcu/*.kicad_sym text eol=crlf
+hardware/charger-mcu/*.kicad_pro text eol=crlf
+hardware/charger-mcu/*-lib-table text eol=crlf
+hardware/charger-mcu/*.csv text eol=crlf
+hardware/charger-mcu/*.net text eol=lf
+hardware/charger-mcu/*.pdf binary
+hardware/charger-mcu/*.md text eol=lf
+docs/evidence/charger-mcu-*.json text eol=crlf
+tools/build_charger_mcu.py text eol=lf
+tools/verify_charger_mcu.py text eol=lf
+
 # Stable source and device-evidence hashes for the driving UI.
 app/src/main/java/vea/raceremote/control/CarControlScreen.kt text eol=lf
 app/src/main/java/vea/raceremote/control/DrivingPad.kt text eol=lf

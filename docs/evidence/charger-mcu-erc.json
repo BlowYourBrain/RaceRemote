@@ -1,7 +1,7 @@
 {
     "$schema": "https://schemas.kicad.org/erc.v1.json",
     "coordinate_units": "mm",
-    "date": "2026-09-14T06:34:59",
+    "date": "2026-09-14T06:35:03",
     "ignored_checks": [
         {
             "description": "Global label only appears once in the schematic",
@@ -29,9 +29,9 @@
     "sheets": [
         {
             "path": "/",
-            "uuid_path": "/3e329df5-b4c1-5d99-b78d-6e2ffe8d8683",
+            "uuid_path": "/ae976975-6e41-547a-9063-7e1c073be4ce",
             "violations": []
         }
     ],
-    "source": "charge-watchdog.kicad_sch"
+    "source": "charger-mcu.kicad_sch"
 }

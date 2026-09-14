@@ -1,7 +1,7 @@
 {
   "date": "2026-09-14",
   "scope": "Conditional priced subset, not full BOM or authorization to buy",
-  "source_sha256": "0e596dab18cda2988b12b5c1759165db960a7994842a98de219554cf477c1f08",
+  "source_sha256": "5940a534f47d5785e642a5544b23c4c888d90255536695459fd2851d46f88a1b",
   "scenarios": [
     {
       "cars": 1,
@@ -209,6 +209,18 @@
         "stock_sufficient": true,
         "checked": "2026-09-14"
       },
+      "MCU_IO_candidate": {
+        "id": "CHG-MCU-IO",
+        "url": "https://www.chipdip.ru/product/sn74lvc3g14dctr-texas-instruments-8062697920",
+        "needed": 1,
+        "purchase": 1,
+        "unit_RUB": 57,
+        "spend_RUB": 57,
+        "stock": 71,
+        "stock_sufficient": true,
+        "checked": "2026-09-14"
+      },
+      "B_subset_with_MCU_IO_candidate_RUB": 2973,
       "B_subset_with_regulated_CD_candidate_RUB": 2916,
       "A_subset_plus_one_permit_latch_RUB": 2709,
       "B_subset_plus_detector_and_one_permit_latch_RUB": 2676,
@@ -421,6 +433,18 @@
         "stock_sufficient": true,
         "checked": "2026-09-14"
       },
+      "MCU_IO_candidate": {
+        "id": "CHG-MCU-IO",
+        "url": "https://www.chipdip.ru/product/sn74lvc3g14dctr-texas-instruments-8062697920",
+        "needed": 4,
+        "purchase": 4,
+        "unit_RUB": 57,
+        "spend_RUB": 228,
+        "stock": 71,
+        "stock_sufficient": true,
+        "checked": "2026-09-14"
+      },
+      "B_subset_with_MCU_IO_candidate_RUB": 9002,
       "B_subset_with_regulated_CD_candidate_RUB": 8774,
       "A_subset_plus_one_permit_latch_RUB": 8257,
       "B_subset_plus_detector_and_one_permit_latch_RUB": 8064,
@@ -635,6 +659,18 @@
         "stock_sufficient": true,
         "checked": "2026-09-14"
       },
+      "MCU_IO_candidate": {
+        "id": "CHG-MCU-IO",
+        "url": "https://www.chipdip.ru/product/sn74lvc3g14dctr-texas-instruments-8062697920",
+        "needed": 6,
+        "purchase": 6,
+        "unit_RUB": 57,
+        "spend_RUB": 342,
+        "stock": 71,
+        "stock_sufficient": true,
+        "checked": "2026-09-14"
+      },
+      "B_subset_with_MCU_IO_candidate_RUB": 11952,
       "B_subset_with_regulated_CD_candidate_RUB": 11610,
       "A_subset_plus_one_permit_latch_RUB": 11743,
       "B_subset_plus_detector_and_one_permit_latch_RUB": 10710,
@@ -654,6 +690,7 @@
   ],
   "limitations": [
     "Current-limit and battery protection candidates are not approved complete circuits",
+    "Use B_subset_with_MCU_IO_candidate_RUB for current B; earlier fields omit the new IO inverter",
     "B_subset_with_CD_candidate_RUB retains the earlier subset without U406; use regulated_CD field for current candidate",
     "USB-AUX-LDO and CHG-BIAS-LDO are distinct placements of one SKU; aggregate them when ordering",
     "Permit supplement assumes one identical latch per A/B car; full integration/count is not qualified",

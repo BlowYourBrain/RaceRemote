@@ -1,28 +1,46 @@
 {
   "date": "2026-09-14",
-  "contract": "USB-INPUT-GATE-01 v0.1",
+  "contract": "USB-INPUT-GATE-01 v0.2 / USB-AUX-01 v0.1",
   "kicad_version": "10.0.6",
   "erc_violations": 0,
-  "ic_pins_including_EP_checked": 7,
-  "logical_components": 10,
+  "ic_pins_including_EP_checked": 12,
+  "logical_components": 13,
   "fault_injections": [
     {
       "mutation": "enable_pulldown_to_supply",
       "detected": true,
       "failed_contract": "('R202', 2, 'USB_GND')",
-      "netlist_sha256": "7c1e619f40be7e64cac6186d6941538ef5dcb2992deb45bcdb314fc5f170e3a2"
+      "netlist_sha256": "2aced589903d9ef813a8aad1b15034038c0cf069fb572e9081a409aeddc5f170"
     },
     {
       "mutation": "output_terminal_bypasses_gate",
       "detected": true,
       "failed_contract": "('J202', 1, 'GATED_VBUS')",
-      "netlist_sha256": "e821e67942e8de87b49c58be7442cd1ab3e28cb00d25f87fc517e05546c928c0"
+      "netlist_sha256": "564e6958129d3f5db3a0b644a43b93a3d4d0faf3859a3991b0387f6d0361c074"
     },
     {
       "mutation": "ilim_return_to_output",
       "detected": true,
       "failed_contract": "('R201', 2, 'USB_GND')",
-      "netlist_sha256": "90b16475529fed2918915d5301ab569b38da329ef17d5caf79813aaf63905a0e"
+      "netlist_sha256": "d4cc99ca6f3f721296d101a861f38395ad015d2b8748ab78d9585894662cbb65"
+    },
+    {
+      "mutation": "aux_depends_on_closed_gate",
+      "detected": true,
+      "failed_contract": "('U202', 1, 'USB_RAW_VBUS')",
+      "netlist_sha256": "aa32e0dc45cf55d8ef4ccabc23d39aa379604d3ec03bacdc78e78f7ef917818b"
+    },
+    {
+      "mutation": "aux_output_cap_on_raw_input",
+      "detected": true,
+      "failed_contract": "('C204', 1, 'AUX_3V3')",
+      "netlist_sha256": "dd060281a2adeb589c9416a2824706613fab727a025ea13e715fae9431096a2e"
+    },
+    {
+      "mutation": "ldo_enable_tied_to_raw",
+      "detected": true,
+      "failed_contract": "('U202', 3, 'unconnected-(U202-EN-Pad3)')",
+      "netlist_sha256": "d7ff8e0970f2819b3676f99b1115cb487add0f4a57ea7f1dba86afe05961a1b4"
     }
   ],
   "arithmetic": {
@@ -40,22 +58,35 @@
     "enable_scope": "Static resistor model; IEN +/-2uA table conditions. No timing, PCB leakage or brownout proof",
     "proposed_min_source_budget_A": 1.5,
     "proposed_other_input_budget_A": 0.05,
-    "estimated_headroom_A": 0.15450299214890545
+    "estimated_headroom_A": 0.15450299214890545,
+    "aux_proposed_load_budget_A": 0.01,
+    "aux_estimated_static_voltage_V": [
+      3.2070000000000003,
+      3.3929999999999993
+    ],
+    "aux_voltage_scope": "Conservative sum of SBVS186H DC/line/load rows at their test conditions; not a guaranteed cross-condition bound",
+    "aux_nominal_dissipation_5p25V_10mA_W": 0.019500000000000003,
+    "aux_nominal_dissipation_20V_10mA_W": 0.167,
+    "aux_illustrative_delta_T_at_20V_C": 35.420700000000004,
+    "aux_thermal_scope": "Pass-element estimate with TI JEDEC thetaJA; not enclosure/PCB thermal proof or 20V charging permission",
+    "aux_current_limit_scope": "10mA is a design load budget only; TPS709 internal limit is 200..500mA at TI test conditions",
+    "aux_raw_input_nominal_cap_uF": 1.1,
+    "aux_cap_scope": "C201+C203 nominal only; whole-port capacitance, charge and peak inrush not verified"
   },
   "sha256": {
-    "hardware/usb-input-gate/usb-input-gate.kicad_sch": "ec5511c70f69a4d672d7f49d238f38cdfb7f6121d3123fd5575579ec8304683c",
+    "hardware/usb-input-gate/usb-input-gate.kicad_sch": "dd618da448d15c34afaad58f6efc91f5ef794dd1a833563b1c598c66ecfce824",
     "hardware/usb-input-gate/usb-input-gate.kicad_pro": "f1eb266de9d0ee2bfb21d4c09fdefcc0f3473b78899140b56207b13dadf64989",
-    "hardware/usb-input-gate/RaceRemote_Input.kicad_sym": "d4131afe683ce5f83d54a7593cb3f60c301fbd31cee9e3b58560021952f7728e",
-    "hardware/usb-input-gate/usb-input-gate.net": "9dc567b7ed98a4dd372251f1fb77a44e02825cc9be9f1264aa700849dfb71e22",
-    "hardware/usb-input-gate/bom.csv": "6d577bde11488f3110ee6f57a64fb6c0a788d5cc60125272b30d550278da37fb",
-    "hardware/usb-input-gate/usb-input-gate.pdf": "e9fe898feaec0ed230d17cf9dc975f5ea5460fc54e9156fdf81be52d0b85cd8d",
-    "docs/evidence/usb-input-gate-erc.json": "f481f56fce76bb1978bd11a80c221990b70c025b9c4c5f9dc1b4058ebc2c76b5",
-    "tools/build_usb_input_gate.py": "af5eecab610c9381a53e42edc3cf6f3b495adbae59fc4301a6cc7698f98a967d",
-    "tools/verify_usb_input_gate.py": "a5f622ac50283a205f3ecdd8aa7631a790dbb6053d107989095501e0cb23c485"
+    "hardware/usb-input-gate/RaceRemote_Input.kicad_sym": "7068052d0c31e52d2f3c7585f1384bef362bd9081244bcda415163bea1b02c24",
+    "hardware/usb-input-gate/usb-input-gate.net": "0ac1856ccc1e0bd577f2a8261ebc4095391fb0e794479d5aa894a7c41e40de88",
+    "hardware/usb-input-gate/bom.csv": "aace480c79418b154b0515bdd7ea9a37d07ef028b19dc79eef4bd61fc4323390",
+    "hardware/usb-input-gate/usb-input-gate.pdf": "8fe56a44e8842312c5a54dee7e6ec9f4b6ba1c2a4b752b998a125f0d0667ac3d",
+    "docs/evidence/usb-input-gate-erc.json": "6891e79199232c0b29d7816f76e968a65654c286d874146f10d195a2a1122e67",
+    "tools/build_usb_input_gate.py": "1deca4dcf39dceb73a244f9983ff667481c3a93f8faa97746b535c6188fb273f",
+    "tools/verify_usb_input_gate.py": "9262adca1eef109f32b98c2b35b18ceb2c1816c3e26740866217be6ac53465db"
   },
   "not_verified": [
     "PCB/thermal footprint and manufacture",
-    "Source classification and pre-gate auxiliary supply",
+    "Source classification, brownout/permit policy and physical AUX operation",
     "USB total current/inrush and CC/BC1.2 integration",
     "Core 5.5V vs clamp/transient compatibility",
     "Output backfeed isolation and battery protection",

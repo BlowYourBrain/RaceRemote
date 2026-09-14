@@ -1,4 +1,4 @@
-"""Generate the TPS25200 input-gate proposal; source permission is external."""
+"""Generate USB input gate with independent AUX supply; source permission is external."""
 import csv
 import json
 from pathlib import Path
@@ -44,19 +44,39 @@ def make_ic():
     return '\n'.join(out) + '))'
 
 
+def make_ldo():
+    # TI SBVS186H Table 5-1: TPS709 DBV, NOT TPS709A or TPS709B pinout.
+    pins=[(1,'IN','power_in',-17.78,5.08,0), (5,'OUT','power_out',17.78,5.08,180),
+          (3,'EN','input',-17.78,-5.08,0), (4,'NC','no_connect',17.78,-5.08,180),
+          (2,'GND','power_in',0,-17.78,90)]
+    out=['(symbol "TPS70933DBV" (pin_names (offset 1.016)) (in_bom yes) (on_board yes)',
+         '(property "Reference" "U" (at 0 17.78 0) (effects (font (size 1.27 1.27))))',
+         '(property "Value" "TPS70933DBV" (at 0 15.24 0) (effects (font (size 1.27 1.27))))',
+         '(property "Footprint" "" (at 0 0 0) (effects (font (size 1.27 1.27)) hide))',
+         '(symbol "TPS70933DBV_0_1" (rectangle (start -12.7 12.7) (end 12.7 -12.7) '
+         '(stroke (width 0.254) (type default)) (fill (type background))))',
+         '(symbol "TPS70933DBV_1_1"']
+    for n,name,typ,x,y,angle in pins:
+        out.append(f'(pin {typ} line (at {x:g} {y:g} {angle}) (length 5.08) '
+                   f'(name {q(name)} (effects (font (size 1.27 1.27)))) '
+                   f'(number "{n}" (effects (font (size 1.27 1.27)))))')
+    return '\n'.join(out)+'))'
+
+
 def main():
     DEST.mkdir(parents=True, exist_ok=True)
     source = (ROOT/'hardware/charge-core/RaceRemote_Charge.kicad_sym').read_text(encoding='utf-8')
     names = ['R','C','Conn_01x02','Conn_01x04','PWR_FLAG']
     symbols = {n: block(source, source.index('(symbol "'+n+'"')) for n in names}
     symbols['TPS25200DRV'] = make_ic()
+    symbols['TPS70933DBV'] = make_ldo()
     (DEST/(LIB+'.kicad_sym')).write_text('(kicad_symbol_lib (version 20251024) '
         '(generator "raceremote")\n'+'\n'.join(symbols.values())+')\n',encoding='utf-8')
     cached = [s.replace('(symbol "'+n+'"','(symbol "'+LIB+':'+n+'"',1) for n,s in symbols.items()]
     out = ['(kicad_sch (version 20250901) (generator "raceremote")',
            f'(uuid "{uid("sheet")}") (paper "A3")',
            '(title_block (title "RaceRemote - USB input gate PROPOSAL") '
-           '(date "2026-09-14") (rev "0.1") (company "vea.raceremote"))',
+           '(date "2026-09-14") (rev "0.2") (company "vea.raceremote"))',
            '(lib_symbols '+'\n'.join(cached)+')']
     positions, bom = {}, []
 
@@ -75,18 +95,21 @@ def main():
         out.append(f'(symbol (lib_id "{LIB}:{name}") (at {x:g} {y:g} 0) (unit 1) '
                    f'(in_bom {"no" if flag else "yes"}) (on_board {"no" if flag else "yes"}) '
                    f'(dnp no) (uuid "{uid(ref)}") '
-                   + prop('Reference',ref,x,y-(25.4 if ref=='U201' else 5.08),flag)
+                   + prop('Reference',ref,x,y-(25.4 if ref=='U201' else 17.78 if ref=='U202' else 5.08),flag)
                    + prop('Value',value,x+(12.7 if passive else 0),
-                          y if passive else y-(27.94 if ref=='U201' else 7.62),flag)
+                          y if passive else y-(27.94 if ref=='U201' else 20.32 if ref=='U202' else 7.62),flag)
                    + prop('Footprint','',x,y,True)
-                   + prop('Datasheet','https://www.ti.com/lit/gpn/tps25200' if ref=='U201' else '',x,y,True)
+                   + prop('Datasheet',{'U201':'https://www.ti.com/lit/gpn/tps25200',
+                                       'U202':'https://www.ti.com/lit/gpn/tps709'}.get(ref,''),x,y,True)
                    + ''.join(f'(pin "{n}" (uuid "{uid(ref+"/"+n)}"))' for n in pins)
                    + f'(instances (project "usb-input-gate" (path "/{uid("sheet")}" '
                    f'(reference "{ref}") (unit 1)))))')
         if not flag:
             bom.append({'reference':ref,'value':value,'purpose':purpose,
-                        'footprint':'','selection':'Proposal; MPN/PCB pending' if ref!='U201'
-                        else 'TPS25200DRVR candidate; WSON-6 2x2mm plus EP; not purchased'})
+                        'footprint':'','selection':{
+                            'U201':'TPS25200DRVR candidate; WSON-6 2x2mm plus EP; not purchased',
+                            'U202':'TPS70933DBVR candidate; SOT-23-5; not A/B/TP substitute; not purchased'
+                        }.get(ref,'Proposal; MPN/PCB pending')})
 
     def net(ref,pin,name,dx=12.7,dy=0):
         a=positions[ref][str(pin)]; b=(round(a[0]+dx,4),round(a[1]+dy,4))
@@ -114,21 +137,32 @@ def main():
     pair('R','R202','47k / 1%',50.8,157.48,'GATE_EN','USB_GND','Default OFF when external permit is absent/high impedance')
     pair('R','R203','4.7k / 1%',152.4,157.48,'SOURCE_ALLOW','GATE_EN','Series input to enable; external 3.3V logic')
     pair('R','R204','10k / 1%',254,157.48,'AUX_3V3','INPUT_FAULT_N','Open-drain fault pull-up to external always-available logic rail')
+    symbol('TPS70933DBV','U202','TPS70933DBVR',152.4,208.28,'Independent pre-gate 3.3V supply for source detection only')
+    net('U202',1,'USB_RAW_VBUS',-12.7)
+    net('U202',5,'AUX_3V3')
+    net('U202',2,'USB_GND',0,5.08)
+    for pin in [3,4]:
+        x,y=positions['U202'][str(pin)]
+        out.append(f'(no_connect (at {x:g} {y:g}) (uuid "{uid("U202-NC-"+str(pin))}"))')
+    pair('C','C203','1u / 50V',50.8,208.28,'USB_RAW_VBUS','USB_GND','TPS709 local input bypass; before main gate')
+    pair('C','C204','4.7u / 16V',254,208.28,'AUX_3V3','USB_GND','X7R proposal: effective 2.2..47uF, ESR <=0.2 ohm including external load bypass')
     for ref,name,value,x,y,nets,purpose in [
-        ('J201','Conn_01x02','RAW USB POWER',63.5,223.52,['USB_RAW_VBUS','USB_GND'],'From passive port; logical interface, not a USB-C pinout'),
-        ('J202','Conn_01x02','TO INPUT INTEGRATION',182.88,223.52,['GATED_VBUS','USB_GND'],'No battery/traction/service-USB backfeed; voltage compatibility still open'),
-        ('J203','Conn_01x04','SOURCE LOGIC',292.1,223.52,['AUX_3V3','SOURCE_ALLOW','INPUT_FAULT_N','USB_GND'],'External source detector/policy; no source recognition on this sheet')]:
+        ('J201','Conn_01x02','RAW USB POWER',63.5,254,['USB_RAW_VBUS','USB_GND'],'From passive port; logical interface, not a USB-C pinout'),
+        ('J202','Conn_01x02','TO INPUT INTEGRATION',182.88,254,['GATED_VBUS','USB_GND'],'No battery/traction/service-USB backfeed; voltage compatibility still open'),
+        ('J203','Conn_01x04','SOURCE LOGIC',292.1,254,['AUX_3V3','SOURCE_ALLOW','INPUT_FAULT_N','USB_GND'],'Pin1 AUX now OUTPUT to detector; do not add another supply. Source recognition remains external')]:
         symbol(name,ref,value,x,y,purpose)
         for i,n in enumerate(nets):net(ref,i+1,n,-7.62)
-    for i,(name,x) in enumerate([('USB_RAW_VBUS',50.8),('USB_GND',152.4)]):
-        ref='#FLG'+str(201+i);symbol('PWR_FLAG',ref,'PWR_FLAG',x,259.08);net(ref,1,name,0,5.08)
-    note('USB-INPUT-GATE-01 v0.1 - source-qualified power switch only',25.4,20.32,2)
+    for i,(name,x) in enumerate([('USB_RAW_VBUS',345.44),('USB_GND',383.54)]):
+        ref='#FLG'+str(201+i);symbol('PWR_FLAG',ref,'PWR_FLAG',x,157.48);net(ref,1,name,0,5.08)
+    note('USB-INPUT-GATE-01 v0.2 - power switch and independent AUX supply',25.4,20.32,2)
     note('SOURCE_ALLOW must remain LOW until a >=1.5A source budget is verified. No SDP/unknown-source permission.\n'
-         'AUX_3V3 and source policy are external and must start before this gate. Battery charge permission is separate.\n'
+         'AUX_3V3 is now an OUTPUT from U202, independent of main gate. Source policy and battery charge permit are external.\n'
          'No PCB or hardware validation. This is not a complete 2S charger.',25.4,30.48)
     note('OFF discharges OUT internally; never backfeed from the 2S pack, traction or another USB supply.\n'
          '5.55V clamp is conditional, NOT a universal transient ceiling: existing core contract ends at 5.5V.\n'
          'EP shown as pin 7; connect to GND and verify thermal footprint before PCB layout.',25.4,275,1)
+    note('U202 EN intentionally floating for auto-start: TI SBVS186H 7.4. Never tie EN to raw VBUS.\n'
+         'AUX load target <=10mA; not a current limiter or source/brownout qualification. No XIAO/camera/servo load.',279.4,195.58,1)
     out.append('(sheet_instances (path "/" (page "1"))) (embedded_fonts no))')
     (DEST/'usb-input-gate.kicad_sch').write_text('\n'.join(out)+'\n',encoding='utf-8')
     (DEST/'usb-input-gate.kicad_pro').write_text(json.dumps({'meta':{'filename':'usb-input-gate.kicad_pro','version':3}},indent=2)+'\n')

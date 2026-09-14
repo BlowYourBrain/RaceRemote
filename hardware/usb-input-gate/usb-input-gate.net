@@ -2,13 +2,13 @@
 <export version="E">
   <design>
     <source>C:\Users\Evgeny\orca\RaceRemote\hardware\usb-input-gate\usb-input-gate.kicad_sch</source>
-    <date>2026-09-14T03:40:27</date>
+    <date>2026-09-14T03:52:04</date>
     <tool>Eeschema 10.0.6</tool>
     <sheet number="1" name="/" tstamps="/">
       <title_block>
         <title>RaceRemote - USB input gate PROPOSAL</title>
         <company>vea.raceremote</company>
-        <rev>0.1</rev>
+        <rev>0.2</rev>
         <date>2026-09-14</date>
         <source>usb-input-gate.kicad_sch</source>
         <comment number="1" value=""/>
@@ -61,6 +61,52 @@
       <property name="ki_fp_filters" value="C_*"/>
       <sheetpath names="/" tstamps="/"/>
       <tstamps>63793873-bb60-558f-ab1e-5110a025da84</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="C203">
+      <value>1u / 50V</value>
+      <fields>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="RaceRemote_Input" part="C" description="Unpolarized capacitor"/>
+      <property name="Sheetname" value="usb-input-gate"/>
+      <property name="Sheetfile" value="usb-input-gate.kicad_sch"/>
+      <property name="ki_keywords" value="cap capacitor"/>
+      <property name="ki_fp_filters" value="C_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>148a9050-e9c9-5e90-8a25-633a95112881</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="C204">
+      <value>4.7u / 16V</value>
+      <fields>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="RaceRemote_Input" part="C" description="Unpolarized capacitor"/>
+      <property name="Sheetname" value="usb-input-gate"/>
+      <property name="Sheetfile" value="usb-input-gate.kicad_sch"/>
+      <property name="ki_keywords" value="cap capacitor"/>
+      <property name="ki_fp_filters" value="C_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>a3fce2a5-cc3c-5162-8a34-b3136bb9925d</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -260,6 +306,31 @@
         </unit>
       </units>
     </comp>
+    <comp ref="U202">
+      <value>TPS70933DBVR</value>
+      <datasheet>https://www.ti.com/lit/gpn/tps709</datasheet>
+      <fields>
+        <field name="Footprint"/>
+        <field name="Datasheet">https://www.ti.com/lit/gpn/tps709</field>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="RaceRemote_Input" part="TPS70933DBV" description=""/>
+      <property name="Sheetname" value="usb-input-gate"/>
+      <property name="Sheetfile" value="usb-input-gate.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>6f2e25ce-6ecc-5c4f-83b3-6d34187f4e24</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="3"/>
+            <pin num="2"/>
+            <pin num="5"/>
+            <pin num="4"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
   </components>
   <libparts>
     <libpart lib="RaceRemote_Input" part="C">
@@ -350,6 +421,22 @@
         <pin num="7" name="EP" type="power_in"/>
       </pins>
     </libpart>
+    <libpart lib="RaceRemote_Input" part="TPS70933DBV">
+      <fields>
+        <field name="Reference">U</field>
+        <field name="Value">TPS70933DBV</field>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <pins>
+        <pin num="1" name="IN" type="power_in"/>
+        <pin num="2" name="GND" type="power_in"/>
+        <pin num="3" name="EN" type="input"/>
+        <pin num="4" name="NC" type="no_connect"/>
+        <pin num="5" name="OUT" type="power_out"/>
+      </pins>
+    </libpart>
   </libparts>
   <libraries>
     <library logical="RaceRemote_Input">
@@ -358,8 +445,10 @@
   </libraries>
   <nets>
     <net code="1" name="AUX_3V3" class="Default">
+      <node ref="C204" pin="1" pintype="passive"/>
       <node ref="J203" pin="1" pinfunction="Pin_1_1" pintype="passive"/>
       <node ref="R204" pin="1" pintype="passive"/>
+      <node ref="U202" pin="5" pinfunction="OUT_5" pintype="power_out"/>
     </net>
     <net code="2" name="GATED_VBUS" class="Default">
       <node ref="C202" pin="1" pintype="passive"/>
@@ -387,6 +476,8 @@
     <net code="7" name="USB_GND" class="Default">
       <node ref="C201" pin="2" pintype="passive"/>
       <node ref="C202" pin="2" pintype="passive"/>
+      <node ref="C203" pin="2" pintype="passive"/>
+      <node ref="C204" pin="2" pintype="passive"/>
       <node ref="J201" pin="2" pinfunction="Pin_2_2" pintype="passive"/>
       <node ref="J202" pin="2" pinfunction="Pin_2_2" pintype="passive"/>
       <node ref="J203" pin="4" pinfunction="Pin_4_4" pintype="passive"/>
@@ -394,11 +485,20 @@
       <node ref="R202" pin="2" pintype="passive"/>
       <node ref="U201" pin="5" pinfunction="GND_5" pintype="power_in"/>
       <node ref="U201" pin="7" pinfunction="EP_7" pintype="power_in"/>
+      <node ref="U202" pin="2" pinfunction="GND_2" pintype="power_in"/>
     </net>
     <net code="8" name="USB_RAW_VBUS" class="Default">
       <node ref="C201" pin="1" pintype="passive"/>
+      <node ref="C203" pin="1" pintype="passive"/>
       <node ref="J201" pin="1" pinfunction="Pin_1_1" pintype="passive"/>
       <node ref="U201" pin="6" pinfunction="IN_6" pintype="power_in"/>
+      <node ref="U202" pin="1" pinfunction="IN_1" pintype="power_in"/>
+    </net>
+    <net code="9" name="unconnected-(U202-EN-Pad3)" class="Default">
+      <node ref="U202" pin="3" pinfunction="EN_3" pintype="input+no_connect"/>
+    </net>
+    <net code="10" name="unconnected-(U202-NC-Pad4)" class="Default">
+      <node ref="U202" pin="4" pinfunction="NC_4" pintype="no_connect"/>
     </net>
   </nets>
 </export>

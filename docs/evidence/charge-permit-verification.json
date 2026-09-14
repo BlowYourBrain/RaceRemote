@@ -1,11 +1,11 @@
 {
   "date": "2026-09-14",
-  "contract": "CHARGE-PERMIT-01 v0.2",
+  "contract": "CHARGE-PERMIT-01 v0.3",
   "kicad_version": "10.0.6",
   "erc_violations": 0,
-  "ic_pins_checked": 32,
-  "all_pins_checked": 64,
-  "logical_components": 19,
+  "ic_pins_checked": 37,
+  "all_pins_checked": 75,
+  "logical_components": 23,
   "fault_injections": [
     {
       "mutation": "clear_bypassed_to_aux",
@@ -25,22 +25,37 @@
     {
       "mutation": "output_connector_uses_clock",
       "detected": true,
-      "failed_contract": "Connectivity mismatch: {(('J404', '1'), 'CLK'), (('J404', '1'), 'CHARGER_CD')}"
+      "failed_contract": "Connectivity mismatch: {(('J404', '1'), 'CHARGER_CD'), (('J404', '1'), 'CLK')}"
     },
     {
       "mutation": "supervisor_supply_back_on_aux",
       "detected": true,
-      "failed_contract": "Connectivity mismatch: {(('U403', '6'), 'AUX_3V3'), (('U403', '6'), 'CHG_BIAS')}"
+      "failed_contract": "Connectivity mismatch: {(('U403', '6'), 'AUX_3V3'), (('U403', '6'), 'CHG_BIAS_3V3')}"
     },
     {
       "mutation": "fault_mux_inhibit_branch_grounded",
       "detected": true,
-      "failed_contract": "Connectivity mismatch: {(('U405', '4'), 'USB_GND'), (('U405', '4'), 'CHG_BIAS')}"
+      "failed_contract": "Connectivity mismatch: {(('U405', '4'), 'CHG_BIAS_3V3'), (('U405', '4'), 'USB_GND')}"
     },
     {
       "mutation": "fault_mux_select_bypassed_by_q",
       "detected": true,
       "failed_contract": "Connectivity mismatch: {(('U405', '1'), 'PERMIT_Q'), (('U405', '1'), 'FAULT_BUS_N')}"
+    },
+    {
+      "mutation": "bias_ldo_fed_from_monitored_aux",
+      "detected": true,
+      "failed_contract": "Connectivity mismatch: {(('U406', '1'), 'AUX_3V3'), (('U406', '1'), 'CHG_SUPPLY_INPUT')}"
+    },
+    {
+      "mutation": "mux_supply_bypasses_bias_ldo",
+      "detected": true,
+      "failed_contract": "Connectivity mismatch: {(('U405', '2'), 'CHG_SUPPLY_INPUT'), (('U405', '2'), 'CHG_BIAS_3V3')}"
+    },
+    {
+      "mutation": "bias_output_cap_on_input",
+      "detected": true,
+      "failed_contract": "Connectivity mismatch: {(('C407', '1'), 'CHG_BIAS_3V3'), (('C407', '1'), 'CHG_SUPPLY_INPUT')}"
     }
   ],
   "ideal_logic_sequences": [
@@ -473,31 +488,46 @@
   ],
   "conditional_cd_model": {
     "bias_range_V": [
-      4.5,
-      5.5
+      3.0,
+      3.6
     ],
-    "ron_each_ohm": 6,
+    "ron_each_ohm": 12,
     "assumed_external_load_A": 0.0001,
-    "low_V": 0.0026184397163120567,
-    "high_V": 4.4988,
+    "low_V": 0.004256866537717601,
+    "high_V": 2.9976,
     "supervisor_LOW_V_max_at_specified_sink": 0.4,
-    "mux_VIL_max_V": 0.87,
-    "mux_VIH_min_V": 1.49,
+    "mux_VIL_max_V": 0.8,
+    "mux_VIH_min_V": 1.35,
     "fault_high_V_with_1M_and_assumed_10uA_leakage": 2.86972302769723,
     "input_gate_conditional_clamp_V_max": 5.55,
-    "input_gate_compatible": false,
+    "direct_mux_supply_from_input_allowed": false,
+    "bias_regulator_input_recommended_max_V": 30,
+    "input_gate_clamp_within_regulator_input_rating": true,
+    "complete_input_integration_qualified": false,
+    "ldo_dc_nominal_V": 3.3,
+    "ldo_dc_estimate_V_under_separate_table_conditions": [
+      3.2070000000000003,
+      3.3929999999999993
+    ],
+    "ldo_preload_A_range": [
+      0.0009000900090009,
+      0.0011019283746556475
+    ],
+    "bias_total_load_proposal_A": 0.002,
+    "ldo_series_loss_W_at_5_55V_2mA": 0.0050999999999999995,
+    "ldo_estimate_scope": "Sum of accuracy, line/load regulation under separate TI conditions; not a guaranteed combined envelope. Near-dropout, total load and capacitor behavior require qualification.",
     "scope": "DC budget only at stated TI test conditions; no interpolation into supply ramps, switch charge-injection, BQ timing, residual current or all-state safety proof."
   },
   "sha256": {
-    "hardware/charge-permit/charge-permit.kicad_sch": "24a61efb9bd8276162d3eefb69ac4de71bf5c1635582862bb92f63534aff3b23",
+    "hardware/charge-permit/charge-permit.kicad_sch": "e1ad952fa7e489ffc99e88fc384031d4d873c11441c4cce747094afab5d96f2b",
     "hardware/charge-permit/charge-permit.kicad_pro": "1486176357f81a1e7c03fe66e5cb59d71759bed0f8557e6b8a776fe5035b3d85",
-    "hardware/charge-permit/RaceRemote_Permit.kicad_sym": "0012985ce097888e9fc6716743435d4f329f24a36f288d9a077184f04d40aa78",
-    "hardware/charge-permit/charge-permit.net": "7dd4523d9b52e654b94e1bde084f10338be22ee68cb6811a0e25eb3a58d1050c",
-    "hardware/charge-permit/charge-permit.pdf": "7ee4023e241e9647e960b599865f813fb0b72be7af3ad716d861647bb14689bb",
-    "hardware/charge-permit/bom.csv": "ba3a8e6a93542e173a6e0a196d215c905918cf20ebb2f03bcdd51380480a648b",
-    "docs/evidence/charge-permit-erc.json": "b84031a2b3938dd07a4a74b2f0d7635d1b5ab3ac62ad45c987a7b38357f68407",
-    "tools/build_charge_permit.py": "1ec784e6280e418ea56e4bee761f2e203f37d8dca996879837d4d29a83b04a41",
-    "tools/verify_charge_permit.py": "716d92167e8a7c005907afd115a7e7c8ffeab4443c297e5dd4cdc7adf8dea592",
+    "hardware/charge-permit/RaceRemote_Permit.kicad_sym": "066da66e907caf471688b7f37547def8eeb55c0d8fe68d23fb743c6d5ec3972c",
+    "hardware/charge-permit/charge-permit.net": "2b45303a81da6d1673edc261590102daf071fd1e9e8ea1cb8232dcd97cc65386",
+    "hardware/charge-permit/charge-permit.pdf": "f5950e3d433ae30d56148a3ef23544b563201f96d1aab311798899b09578b69d",
+    "hardware/charge-permit/bom.csv": "555c8dd4d541f52f22243736ab5a41f94e5e3d968b92416af6045ef430a4f532",
+    "docs/evidence/charge-permit-erc.json": "26a5bee7ca462f5f6dbc0ba0e7ee9e8998b73571e76bbe783fbebf254ed63166",
+    "tools/build_charge_permit.py": "863805111579d8f86993d730ed6829225604c3507109ecca2cad1f083bdcf46b",
+    "tools/verify_charge_permit.py": "f30b290820630a12d2f820381beeede5fca6f84375c3208a86c521a263c9d9d8",
     "tools/verify_usb_detector.py": "68d2ebf584a14c0aa0192de131e2af41f19f1ccb08c81a478b64a3895b83996a",
     "tools/build_usb_port_schematic.py": "96b38c6c6cac91787961c1f4be5152a5175b215b0812dd1e0153f1d6a89addfa"
   },
@@ -505,7 +535,7 @@
     "Startup/deep brownout/metastability/pulse widths and real fault timing",
     "MCU firmware, independent watchdog and INA300 circuits",
     "Persistent error versus incorrectly repeated MCU ARM edges",
-    "CHG_BIAS compatibility with TPS25200 and charger VBUS across all states",
+    "CHG_BIAS_3V3 compatibility with TPS25200 and charger VBUS across all states",
     "CD physical switching, charge current interruption and residual energy",
     "Footprints, PCB, assembly, complete assembled cost and battery acceptance"
   ]

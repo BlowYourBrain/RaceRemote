@@ -2,13 +2,13 @@
 <export version="E">
   <design>
     <source>C:\Users\Evgeny\orca\RaceRemote\hardware\charge-permit\charge-permit.kicad_sch</source>
-    <date>2026-09-14T05:16:55</date>
+    <date>2026-09-14T05:52:18</date>
     <tool>Eeschema 10.0.6</tool>
     <sheet number="1" name="/" tstamps="/">
       <title_block>
         <title>RaceRemote - permit latch and CD actuator PROPOSAL</title>
         <company>vea.raceremote</company>
-        <rev>0.2</rev>
+        <rev>0.3</rev>
         <date>2026-09-14</date>
         <source>charge-permit.kicad_sch</source>
         <comment number="1" value=""/>
@@ -139,8 +139,54 @@
         </unit>
       </units>
     </comp>
+    <comp ref="C406">
+      <value>1u / 50V</value>
+      <fields>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="RaceRemote_Permit" part="C" description="Unpolarized capacitor"/>
+      <property name="Sheetname" value="charge-permit"/>
+      <property name="Sheetfile" value="charge-permit.kicad_sch"/>
+      <property name="ki_keywords" value="cap capacitor"/>
+      <property name="ki_fp_filters" value="C_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>a345dfd6-dcd9-5620-9467-67433759fe56</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="C407">
+      <value>4.7u / 16V X7R</value>
+      <fields>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="RaceRemote_Permit" part="C" description="Unpolarized capacitor"/>
+      <property name="Sheetname" value="charge-permit"/>
+      <property name="Sheetfile" value="charge-permit.kicad_sch"/>
+      <property name="ki_keywords" value="cap capacitor"/>
+      <property name="ki_fp_filters" value="C_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>057ed6d9-738f-51f3-8acd-941bf7a69f4e</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
     <comp ref="J401">
-      <value>AUX AND CHARGER BIAS</value>
+      <value>AUX AND CHARGER INPUT</value>
       <fields>
         <field name="Footprint"/>
         <field name="Datasheet"/>
@@ -350,6 +396,29 @@
         </unit>
       </units>
     </comp>
+    <comp ref="R406">
+      <value>3.3k / 1%</value>
+      <fields>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="RaceRemote_Permit" part="R" description="Resistor"/>
+      <property name="Sheetname" value="charge-permit"/>
+      <property name="Sheetfile" value="charge-permit.kicad_sch"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <property name="ki_fp_filters" value="R_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>3a4dfcd4-ff9e-5749-8927-a294a29e8d25</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
     <comp ref="U401">
       <value>SN74LVC1G74DCTR</value>
       <datasheet>https://www.ti.com/lit/gpn/sn74lvc1g74</datasheet>
@@ -478,6 +547,31 @@
             <pin num="4"/>
             <pin num="6"/>
             <pin num="5"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="U406">
+      <value>TPS70933DBVR</value>
+      <datasheet>https://www.ti.com/lit/gpn/tps709</datasheet>
+      <fields>
+        <field name="Footprint"/>
+        <field name="Datasheet">https://www.ti.com/lit/gpn/tps709</field>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="RaceRemote_Permit" part="TPS70933DBV" description=""/>
+      <property name="Sheetname" value="charge-permit"/>
+      <property name="Sheetfile" value="charge-permit.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>745d45a0-6a59-5f4b-98f2-2a54160e735e</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+            <pin num="5"/>
+            <pin num="3"/>
+            <pin num="4"/>
           </pins>
         </unit>
       </units>
@@ -624,6 +718,22 @@
         <pin num="6" name="VDD" type="power_in"/>
       </pins>
     </libpart>
+    <libpart lib="RaceRemote_Permit" part="TPS70933DBV">
+      <fields>
+        <field name="Reference">U</field>
+        <field name="Value">TPS70933DBV</field>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <pins>
+        <pin num="1" name="IN" type="power_in"/>
+        <pin num="2" name="GND" type="power_in"/>
+        <pin num="3" name="EN" type="input"/>
+        <pin num="4" name="NC" type="no_connect"/>
+        <pin num="5" name="OUT" type="power_out"/>
+      </pins>
+    </libpart>
   </libparts>
   <libraries>
     <library logical="RaceRemote_Permit">
@@ -656,28 +766,35 @@
       <node ref="R404" pin="2" pintype="passive"/>
       <node ref="U405" pin="5" pinfunction="D_5" pintype="passive"/>
     </net>
-    <net code="5" name="CHG_BIAS" class="Default">
+    <net code="5" name="CHG_BIAS_3V3" class="Default">
       <node ref="C403" pin="1" pintype="passive"/>
       <node ref="C404" pin="1" pintype="passive"/>
       <node ref="C405" pin="1" pintype="passive"/>
-      <node ref="J401" pin="3" pinfunction="Pin_3_3" pintype="passive"/>
+      <node ref="C407" pin="1" pintype="passive"/>
       <node ref="R404" pin="1" pintype="passive"/>
+      <node ref="R406" pin="1" pintype="passive"/>
       <node ref="U403" pin="3" pinfunction="~{MR}_3" pintype="input"/>
       <node ref="U403" pin="6" pinfunction="VDD_6" pintype="power_in"/>
       <node ref="U404" pin="2" pinfunction="VDD_2" pintype="power_in"/>
       <node ref="U404" pin="4" pinfunction="S1_(SEL=0)_4" pintype="passive"/>
       <node ref="U405" pin="2" pinfunction="VDD_2" pintype="power_in"/>
       <node ref="U405" pin="4" pinfunction="S1_(SEL=0)_4" pintype="passive"/>
+      <node ref="U406" pin="5" pinfunction="OUT_5" pintype="power_out"/>
     </net>
-    <net code="6" name="CLK" class="Default">
+    <net code="6" name="CHG_SUPPLY_INPUT" class="Default">
+      <node ref="C406" pin="1" pintype="passive"/>
+      <node ref="J401" pin="3" pinfunction="Pin_3_3" pintype="passive"/>
+      <node ref="U406" pin="1" pinfunction="IN_1" pintype="power_in"/>
+    </net>
+    <net code="7" name="CLK" class="Default">
       <node ref="U401" pin="1" pinfunction="CLK_1" pintype="input"/>
       <node ref="U402" pin="4" pinfunction="2Y_4" pintype="output"/>
     </net>
-    <net code="7" name="CLR_N" class="Default">
+    <net code="8" name="CLR_N" class="Default">
       <node ref="U401" pin="6" pinfunction="~{CLR}_6" pintype="input"/>
       <node ref="U402" pin="6" pinfunction="1Y_6" pintype="output"/>
     </net>
-    <net code="8" name="FAULT_BUS_N" class="Default">
+    <net code="9" name="FAULT_BUS_N" class="Default">
       <node ref="J402" pin="1" pinfunction="Pin_1_1" pintype="passive"/>
       <node ref="J403" pin="2" pinfunction="Pin_2_2" pintype="passive"/>
       <node ref="R401" pin="2" pintype="passive"/>
@@ -686,18 +803,20 @@
       <node ref="U403" pin="1" pinfunction="~{RESET}_1" pintype="open_collector"/>
       <node ref="U405" pin="1" pinfunction="SEL_1" pintype="input"/>
     </net>
-    <net code="9" name="PERMIT_Q" class="Default">
+    <net code="10" name="PERMIT_Q" class="Default">
       <node ref="J403" pin="3" pinfunction="Pin_3_3" pintype="passive"/>
       <node ref="R403" pin="1" pintype="passive"/>
       <node ref="U401" pin="5" pinfunction="Q_5" pintype="output"/>
       <node ref="U404" pin="1" pinfunction="SEL_1" pintype="input"/>
     </net>
-    <net code="10" name="USB_GND" class="Default">
+    <net code="11" name="USB_GND" class="Default">
       <node ref="C401" pin="2" pintype="passive"/>
       <node ref="C402" pin="2" pintype="passive"/>
       <node ref="C403" pin="2" pintype="passive"/>
       <node ref="C404" pin="2" pintype="passive"/>
       <node ref="C405" pin="2" pintype="passive"/>
+      <node ref="C406" pin="2" pintype="passive"/>
+      <node ref="C407" pin="2" pintype="passive"/>
       <node ref="J401" pin="2" pinfunction="Pin_2_2" pintype="passive"/>
       <node ref="J401" pin="4" pinfunction="Pin_4_4" pintype="passive"/>
       <node ref="J402" pin="2" pinfunction="Pin_2_2" pintype="passive"/>
@@ -706,18 +825,26 @@
       <node ref="R402" pin="2" pintype="passive"/>
       <node ref="R403" pin="2" pintype="passive"/>
       <node ref="R405" pin="2" pintype="passive"/>
+      <node ref="R406" pin="2" pintype="passive"/>
       <node ref="U401" pin="4" pinfunction="GND_4" pintype="power_in"/>
       <node ref="U402" pin="2" pinfunction="GND_2" pintype="power_in"/>
       <node ref="U403" pin="2" pinfunction="GND_2" pintype="power_in"/>
       <node ref="U404" pin="3" pinfunction="GND_3" pintype="power_in"/>
       <node ref="U404" pin="6" pinfunction="S2_(SEL=1)_6" pintype="passive"/>
       <node ref="U405" pin="3" pinfunction="GND_3" pintype="power_in"/>
+      <node ref="U406" pin="2" pinfunction="GND_2" pintype="power_in"/>
     </net>
-    <net code="11" name="unconnected-(U401-~{Q}-Pad3)" class="Default">
+    <net code="12" name="unconnected-(U401-~{Q}-Pad3)" class="Default">
       <node ref="U401" pin="3" pinfunction="~{Q}_3" pintype="output+no_connect"/>
     </net>
-    <net code="12" name="unconnected-(U403-CT-Pad4)" class="Default">
+    <net code="13" name="unconnected-(U403-CT-Pad4)" class="Default">
       <node ref="U403" pin="4" pinfunction="CT_4" pintype="input+no_connect"/>
+    </net>
+    <net code="14" name="unconnected-(U406-EN-Pad3)" class="Default">
+      <node ref="U406" pin="3" pinfunction="EN_3" pintype="input+no_connect"/>
+    </net>
+    <net code="15" name="unconnected-(U406-NC-Pad4)" class="Default">
+      <node ref="U406" pin="4" pinfunction="NC_4" pintype="no_connect"/>
     </net>
   </nets>
 </export>

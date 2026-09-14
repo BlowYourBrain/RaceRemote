@@ -52,3 +52,16 @@ hardware/usb-input-gate/*.md text eol=lf
 docs/evidence/usb-input-gate-*.json text eol=crlf
 tools/build_usb_input_gate.py text eol=lf
 tools/verify_usb_input_gate.py text eol=lf
+
+# Keep charger-core connectivity evidence reproducible on checkout.
+hardware/charge-core/*.kicad_sch text eol=crlf
+hardware/charge-core/*.kicad_sym text eol=crlf
+hardware/charge-core/*.kicad_pro text eol=lf
+hardware/charge-core/*.net text eol=lf
+hardware/charge-core/*.csv text eol=crlf
+hardware/charge-core/*.pdf binary
+hardware/charge-core/Charge_Core.pretty/*.kicad_mod text eol=crlf
+docs/evidence/charge-core-*.json text eol=crlf
+docs/evidence/charge-core-schematic.png binary
+tools/build_charge_core.py text eol=lf
+tools/verify_charge_core.py text eol=lf

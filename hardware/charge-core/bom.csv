@@ -16,7 +16,8 @@ R104,10k / 1%,5V status pull-up; not directly 3.3V GPIO,Candidate; not purchased
 R105,10k / 1%,5V power-good pull-up; not charge permission,Candidate; not purchased,,,not checked for this core BOM
 R106,5.23k / 1%,Reference thermistor divider upper leg,Candidate; not purchased,,,not checked for this core BOM
 R107,30.1k / 1%,Lower leg in parallel with external 103AT-2 NTC,Candidate; not purchased,,,not checked for this core BOM
-J101,QUALIFIED INPUT,From source qualification/protection; not a raw USB or battery pinout,Logical interface; connector and footprint TBD,,,not checked for this core BOM
+R108,0,Local DCP configuration only; never connected to physical USB D+/D-. External source gate still required,Candidate; not purchased,,,not checked for this core BOM
+J101,QUALIFIED POWER ONLY,v0.2 power-only input from external source qualification; USB D+/D- are NOT routed into this core,Logical interface; connector and footprint TBD,,,not checked for this core BOM
 J102,PROTECTED CHARGE PATH,To separately designed cell protection; no raw LW connection authorized,Logical interface; connector and footprint TBD,,,not checked for this core BOM
 J103,EXTERNAL CHARGE GATE,Open drain CE plus 5V status; gate/level conversion not implemented,Logical interface; connector and footprint TBD,,,not checked for this core BOM
 J104,EXTERNAL NTC 103AT-2,"10k thermistor at battery, not fixed resistor on controller",Logical interface; connector and footprint TBD,,,not checked for this core BOM

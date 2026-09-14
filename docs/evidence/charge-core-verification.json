@@ -1,28 +1,36 @@
 {
   "date": "2026-09-14",
+  "contract": "CHARGE-CORE-01 v0.2",
   "kicad_version": "10.0.6",
   "erc_violations": 0,
   "ic_pins_checked": 25,
-  "logical_components": 21,
+  "logical_components": 22,
   "interface_and_passive_pin_checks": true,
+  "local_detector_net_isolation_checked": true,
   "fault_injections": [
     {
       "mutation": "bootstrap_to_ground",
       "detected": true,
       "failed_contract": "('C108', 2, 'SW')",
-      "netlist_sha256": "8ed37a0fcc7795f235248af703dc70768df1ddad6e079a46e1112ff7a8c0af9d"
+      "netlist_sha256": "197accc101e3ffd3ef0cebaf5ad54b50e178219ad35c659ea52933c76ecef16d"
     },
     {
       "mutation": "lost_ce_pullup",
       "detected": true,
       "failed_contract": "('R103', 2, 'CE_N')",
-      "netlist_sha256": "a514067f3650b97236b20ac9146d2e59707738bbe93097db83894d15f2d1c12d"
+      "netlist_sha256": "69b7dcbd43eca5b2e5f287a33bc4cb3e4493a05c8ee3a9df79ff59d8f695aabf"
     },
     {
       "mutation": "battery_terminal_to_input",
       "detected": true,
       "failed_contract": "('J102', 1, 'CHG_BAT')",
-      "netlist_sha256": "44cb0c530094fc48f8fcbaf9b8b17f36170842c8821265915061946b42fd91ac"
+      "netlist_sha256": "a97c6401241048586d6845af7fa5ddbb66fa6cc403a6b68a4ab84fe151e0a705"
+    },
+    {
+      "mutation": "local_dcp_bridge_to_ground",
+      "detected": true,
+      "failed_contract": "('R108', 2, 'CORE_DM')",
+      "netlist_sha256": "2b773f821423b552430409303775c6aab44548e9cd1cd6024aa95dab08405135"
     }
   ],
   "arithmetic": {
@@ -44,20 +52,22 @@
     "ce_voltage_at_4p3V_typical_internal_pulldown": 4.252747252747253
   },
   "sha256": {
-    "hardware/charge-core/charge-core.kicad_sch": "add4e466e0f3ef4087806180e2a51060c580d71e66f7590c20a46dfceeb91820",
+    "hardware/charge-core/charge-core.kicad_sch": "508b0f4669114f13dc28ad37a118511cae71248cec3f0d7038f281f181b41425",
     "hardware/charge-core/charge-core.kicad_pro": "96c5d5a346de54c575301bea502af2d5af32419da8f23c1981ce9cff68a3ca07",
     "hardware/charge-core/RaceRemote_Charge.kicad_sym": "db052fcebd747ff27c908112797eef32c70e673b8c5ca08fdeb1f256d3b8e4c4",
-    "hardware/charge-core/charge-core.net": "1b6300c4a85002e5257a9cb4ecc397aac2d45cbb29696c5b623783f80288a4cb",
-    "hardware/charge-core/bom.csv": "956acfa9ab7abbc14634f26e4e3fdf597aef37a8907df600a33a2142354acd3a",
-    "docs/evidence/charge-core-erc.json": "a6fc9cc27d7fef85fce7684dd210af874d2e2128ebf253331b0e1bf361fdf691",
-    "tools/build_charge_core.py": "603f5aaf58ec6e879fc319d197a7bf52cc4c5beccc0b20ae1c1536007301f113",
-    "tools/verify_charge_core.py": "c53de48dc2086acce588582ad6e7357f9e7457c9d50bcf401c9a37cbe79a06cb",
+    "hardware/charge-core/charge-core.net": "a419ecf2af6142107df3900e6fa59cc48af38da8783479c32e24efed6f51a8b0",
+    "hardware/charge-core/bom.csv": "bddfc27f11e3a917d3a09e3d369751079853ebbbd5c0dbe7a376129fc8fc0199",
+    "hardware/charge-core/schematic.pdf": "da8d589ae6d38c11b8907da6f8b396fdce8011d36b673dc693d01f42fb8809c4",
+    "docs/evidence/charge-core-erc.json": "272ea169b4d7e6329115b5ca7162612363b51eae2e0f1d022575b23dd4eaceaf",
+    "tools/build_charge_core.py": "a97505f3b5543a83733e6797ec0bc0d81e46a68d8c0b7c79b6609875c8c9b411",
+    "tools/verify_charge_core.py": "70708185eac80f90bcbe48f59ea73b924373b733035baa1c8d4926d04152a2fa",
     "hardware/charge-core/Charge_Core.pretty/Texas_RGE0024H_VQFN-24-1EP_4x4mm_P0.5mm_EP2.7x2.7mm.kicad_mod": "08a136edd6068106307086b3704fc14c075a09ed81b46f87617bebbc813d7106"
   },
   "not_verified": [
     "PCB and placement",
     "Cell protection/balancing and charge permission generator",
     "USB input qualification/protection and 3.3V level interfaces",
+    "Actual local DCP detection/ICO behavior and external detector under physical USB sources",
     "Capacitor DC bias and inductor saturation",
     "LW pinout, charge ratings and full cycle",
     "JEITA warm/cool behavior discrepancies in TI Rev A",

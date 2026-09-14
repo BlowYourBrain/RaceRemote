@@ -34,7 +34,7 @@ def main():
     out = ['(kicad_sch (version 20250901) (generator "raceremote")',
            f'(uuid "{uid("sheet")}") (paper "A3")',
            '(title_block (title "RaceRemote - BQ25886 charger core PROPOSAL") '
-           '(date "2026-09-14") (rev "0.1") (company "vea.raceremote"))',
+           '(date "2026-09-14") (rev "0.2") (company "vea.raceremote"))',
            '(lib_symbols ' + '\n'.join(cached) + ')']
     bom = []
     pin_positions = {}
@@ -98,7 +98,7 @@ def main():
            purpose='Standalone boost charger; no cell balancing')
     # Explicit pin numbers verified against SLUSD88A pp.4-5. Stacked duplicates
     # attach to the same wire in the unmodified KiCad symbol.
-    for pin, net in [(23,'CHG_VBUS'), (24,'DP'), (1,'DM'), (5,'CHG_GND'),
+    for pin, net in [(23,'CHG_VBUS'), (24,'CORE_DP'), (1,'CORE_DM'), (5,'CHG_GND'),
                      (3,'CE_N'), (10,'ICHGSET'), (8,'ILIM')]:
         pin_net('U101', pin, net, dx=-12.7)
     for pin, net in [(2,'STAT_N'), (9,'PG_N'), (21,'PMID'), (17,'SW'), (12,'BTST'),
@@ -127,10 +127,12 @@ def main():
     pair('R','R105','10k / 1%', 279.4,167.64,'CHG_VBUS','PG_N','5V power-good pull-up; not charge permission')
     pair('R','R106','5.23k / 1%', 330.2,167.64,'REGN','TS','Reference thermistor divider upper leg')
     pair('R','R107','30.1k / 1%', 330.2,220.98,'TS','CHG_GND','Lower leg in parallel with external 103AT-2 NTC')
+    pair('R','R108','0',50.8,114.3,'CORE_DP','CORE_DM',
+         'Local DCP configuration only; never connected to physical USB D+/D-. External source gate still required')
 
     connectors = [
-        ('J101','Conn_01x04','QUALIFIED INPUT',177.8,226.06,['CHG_VBUS','CHG_GND','DP','DM'],
-         'From source qualification/protection; not a raw USB or battery pinout'),
+        ('J101','Conn_01x02','QUALIFIED POWER ONLY',177.8,226.06,['CHG_VBUS','CHG_GND'],
+         'v0.2 power-only input from external source qualification; USB D+/D- are NOT routed into this core'),
         ('J102','Conn_01x02','PROTECTED CHARGE PATH',254,220.98,['CHG_BAT','CHG_GND'],
          'To separately designed cell protection; no raw LW connection authorized'),
         ('J103','Conn_01x04','EXTERNAL CHARGE GATE',101.6,220.98,['CE_N','PG_N','STAT_N','CHG_GND'],
@@ -151,7 +153,8 @@ def main():
     note('Converter core only - source qualification, cell monitor/balancer and protection are separate.',25.4,20.32,2)
     note('CE_N pulled high: default charge OFF. OTG tied low. VSET floating: nominal 8.4V.\n'
          '250mA is a proposed bench setting; LW charge limits and cell pinout remain unverified.\n'
-         'No traction load on SYS_INTERNAL. Do not connect raw LW battery to this unfinished assembly.',25.4,30.48)
+         'No traction load on SYS_INTERNAL. Do not connect raw LW battery to this unfinished assembly.\n'
+         'R108 configures local DCP detection. J101 is POWER ONLY; source permission comes from the external gate.',25.4,30.48)
     note('C104/C105: >=44uF effective total at operating voltage. Nominal values are placeholders for MPN selection.\n'
          'Ground: short analog returns and power-pad star per TI; high-current loops require PCB review.\n'
          'Flags describe power connectivity for ERC; they do not implement source checks or reverse protection.',25.4,279.4,1.0)

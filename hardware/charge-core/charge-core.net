@@ -2,13 +2,13 @@
 <export version="E">
   <design>
     <source>C:\Users\Evgeny\orca\RaceRemote\hardware\charge-core\charge-core.kicad_sch</source>
-    <date>2026-09-14T01:45:28</date>
+    <date>2026-09-14T04:05:14</date>
     <tool>Eeschema 10.0.6</tool>
     <sheet number="1" name="/" tstamps="/">
       <title_block>
         <title>RaceRemote - BQ25886 charger core PROPOSAL</title>
         <company>vea.raceremote</company>
-        <rev>0.1</rev>
+        <rev>0.2</rev>
         <date>2026-09-14</date>
         <source>charge-core.kicad_sch</source>
         <comment number="1" value=""/>
@@ -209,13 +209,13 @@
       </units>
     </comp>
     <comp ref="J101">
-      <value>QUALIFIED INPUT</value>
+      <value>QUALIFIED POWER ONLY</value>
       <fields>
         <field name="Footprint"/>
         <field name="Datasheet"/>
         <field name="Description"/>
       </fields>
-      <libsource lib="RaceRemote_Charge" part="Conn_01x04" description="Generic connector, single row, 01x04, script generated (kicad-library-utils/schlib/autogen/connector/)"/>
+      <libsource lib="RaceRemote_Charge" part="Conn_01x02" description="Generic connector, single row, 01x02, script generated (kicad-library-utils/schlib/autogen/connector/)"/>
       <property name="Sheetname" value="charge-core"/>
       <property name="Sheetfile" value="charge-core.kicad_sch"/>
       <property name="ki_keywords" value="connector"/>
@@ -227,8 +227,6 @@
           <pins>
             <pin num="1"/>
             <pin num="2"/>
-            <pin num="3"/>
-            <pin num="4"/>
           </pins>
         </unit>
       </units>
@@ -488,6 +486,29 @@
         </unit>
       </units>
     </comp>
+    <comp ref="R108">
+      <value>0</value>
+      <fields>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="RaceRemote_Charge" part="R" description="Resistor"/>
+      <property name="Sheetname" value="charge-core"/>
+      <property name="Sheetfile" value="charge-core.kicad_sch"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <property name="ki_fp_filters" value="R_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>7586bf35-3b4a-5c8e-a607-a82a1fc0e397</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
     <comp ref="U101">
       <value>BQ25886RGER</value>
       <footprint>Package_DFN_QFN:Texas_RGE0024H_VQFN-24-1EP_4x4mm_P0.5mm_EP2.7x2.7mm</footprint>
@@ -720,12 +741,12 @@
       <node ref="R105" pin="1" pintype="passive"/>
       <node ref="U101" pin="23" pinfunction="VBUS_23" pintype="power_in"/>
     </net>
-    <net code="6" name="DM" class="Default">
-      <node ref="J101" pin="4" pinfunction="Pin_4_4" pintype="passive"/>
+    <net code="6" name="CORE_DM" class="Default">
+      <node ref="R108" pin="2" pintype="passive"/>
       <node ref="U101" pin="1" pinfunction="D-_1" pintype="bidirectional"/>
     </net>
-    <net code="7" name="DP" class="Default">
-      <node ref="J101" pin="3" pinfunction="Pin_3_3" pintype="passive"/>
+    <net code="7" name="CORE_DP" class="Default">
+      <node ref="R108" pin="1" pintype="passive"/>
       <node ref="U101" pin="24" pinfunction="D+_24" pintype="bidirectional"/>
     </net>
     <net code="8" name="ICHGSET" class="Default">

@@ -1,0 +1,433 @@
+{
+  "date": "2026-09-14",
+  "scope": "Conditional priced subset, not full BOM or authorization to buy",
+  "source_sha256": "3e142e29386aa59845f7fe7f04b3e2c3bbe327a5eabf054b2702e8acd2c819c3",
+  "scenarios": [
+    {
+      "cars": 1,
+      "common": [
+        {
+          "id": "USB-SRC-PI3",
+          "url": "https://www.chipdip.ru/product/pi3usb9201ztaex-2ghz-2-uqfn2020-12-analog-switches-diodes-8052983438",
+          "needed": 1,
+          "purchase": 1,
+          "unit_RUB": 380,
+          "spend_RUB": 380,
+          "stock": 14,
+          "stock_sufficient": true,
+          "checked": "2026-09-14"
+        },
+        {
+          "id": "USB-SRC-CC",
+          "url": "https://www.chipdip.ru/product/tusb320lairwbr-texas-instruments-8002948931",
+          "needed": 1,
+          "purchase": 1,
+          "unit_RUB": 300,
+          "spend_RUB": 300,
+          "stock": 275,
+          "stock_sufficient": true,
+          "checked": "2026-09-14"
+        },
+        {
+          "id": "USB-INPUT-GATE",
+          "url": "https://www.chipdip.ru/product/tps25200drvr-kontrollery-goryachey-zameny-texas-instruments-8035454964",
+          "needed": 1,
+          "purchase": 1,
+          "unit_RUB": 53,
+          "spend_RUB": 53,
+          "stock": 176,
+          "stock_sufficient": true,
+          "checked": "2026-09-14"
+        },
+        {
+          "id": "USB-AUX-LDO",
+          "url": "https://www.chipdip.ru/product/tps70933dbvr-stabilizator-napryazheniya-texas-instruments-9000996321",
+          "needed": 1,
+          "purchase": 1,
+          "unit_RUB": 40,
+          "spend_RUB": 40,
+          "stock": 13816,
+          "stock_sufficient": true,
+          "checked": "2026-09-14"
+        },
+        {
+          "id": "CHG-MCU",
+          "url": "https://www.chipdip.ru/product/ch32v003f4p6-mikrokontroller-32-bit-risc-v2a-48mgts-wch-9001161624",
+          "needed": 1,
+          "purchase": 1,
+          "unit_RUB": 90,
+          "spend_RUB": 90,
+          "stock": 715,
+          "stock_sufficient": true,
+          "checked": "2026-09-14"
+        },
+        {
+          "id": "WD-3431",
+          "url": "https://www.chipdip.ru/product/tps3431sdrbr-mikroshema-texas-instruments-8043827819",
+          "needed": 1,
+          "purchase": 1,
+          "unit_RUB": 330,
+          "spend_RUB": 330,
+          "stock": 2,
+          "stock_sufficient": true,
+          "checked": "2026-09-14"
+        },
+        {
+          "id": "PROT-HY-CB",
+          "url": "https://www.chipdip.ru/product/hy2120-cb-mikroshema-zaschity-li-ion-li-pol-hycon-9000709204",
+          "needed": 1,
+          "purchase": 1,
+          "unit_RUB": 17,
+          "spend_RUB": 17,
+          "stock": 619,
+          "stock_sufficient": true,
+          "checked": "2026-09-14"
+        },
+        {
+          "id": "USB-GCT-ONE",
+          "url": "https://www.chipdip.ru/product/usb4105-gf-a-razem-gct-9000729477",
+          "needed": 1,
+          "purchase": 1,
+          "unit_RUB": 320,
+          "spend_RUB": 320,
+          "stock": 1,
+          "stock_sufficient": true,
+          "checked": "2026-09-14"
+        }
+      ],
+      "A_only": [
+        {
+          "id": "CHG-886",
+          "url": "https://www.chipdip.ru/product/bq25886rger-vqfn-24-ep-4x4-battery-texas-instruments-8017656287",
+          "needed": 1,
+          "purchase": 1,
+          "unit_RUB": 480,
+          "spend_RUB": 480,
+          "stock": 6948,
+          "stock_sufficient": true,
+          "checked": "2026-09-14"
+        },
+        {
+          "id": "BAL-29209",
+          "url": "https://www.chipdip.ru/product/bq29209drbr-texas-instruments-8029430708",
+          "needed": 1,
+          "purchase": 7,
+          "unit_RUB": 79,
+          "spend_RUB": 553,
+          "stock": 391,
+          "stock_sufficient": true,
+          "checked": "2026-09-14"
+        }
+      ],
+      "B_only": [
+        {
+          "id": "CHG-887-ONE",
+          "url": "https://www.chipdip.ru/product/bq25887rge-texas-instruments-8002949833",
+          "needed": 1,
+          "purchase": 1,
+          "unit_RUB": 630,
+          "spend_RUB": 630,
+          "stock": 566,
+          "stock_sufficient": true,
+          "checked": "2026-09-14"
+        }
+      ],
+      "common_subtotal_RUB": 1530,
+      "A_priced_subset_RUB": 2563,
+      "B_priced_subset_RUB": 2160,
+      "A_minus_B_RUB": 403,
+      "stock_shortages": [],
+      "complete_purchase_ready": false
+    },
+    {
+      "cars": 4,
+      "common": [
+        {
+          "id": "USB-SRC-PI3",
+          "url": "https://www.chipdip.ru/product/pi3usb9201ztaex-2ghz-2-uqfn2020-12-analog-switches-diodes-8052983438",
+          "needed": 4,
+          "purchase": 4,
+          "unit_RUB": 380,
+          "spend_RUB": 1520,
+          "stock": 14,
+          "stock_sufficient": true,
+          "checked": "2026-09-14"
+        },
+        {
+          "id": "USB-SRC-CC",
+          "url": "https://www.chipdip.ru/product/tusb320lairwbr-texas-instruments-8002948931",
+          "needed": 4,
+          "purchase": 4,
+          "unit_RUB": 230,
+          "spend_RUB": 920,
+          "stock": 275,
+          "stock_sufficient": true,
+          "checked": "2026-09-14"
+        },
+        {
+          "id": "USB-INPUT-GATE",
+          "url": "https://www.chipdip.ru/product/tps25200drvr-kontrollery-goryachey-zameny-texas-instruments-8035454964",
+          "needed": 4,
+          "purchase": 4,
+          "unit_RUB": 53,
+          "spend_RUB": 212,
+          "stock": 176,
+          "stock_sufficient": true,
+          "checked": "2026-09-14"
+        },
+        {
+          "id": "USB-AUX-LDO",
+          "url": "https://www.chipdip.ru/product/tps70933dbvr-stabilizator-napryazheniya-texas-instruments-9000996321",
+          "needed": 4,
+          "purchase": 4,
+          "unit_RUB": 40,
+          "spend_RUB": 160,
+          "stock": 13816,
+          "stock_sufficient": true,
+          "checked": "2026-09-14"
+        },
+        {
+          "id": "CHG-MCU",
+          "url": "https://www.chipdip.ru/product/ch32v003f4p6-mikrokontroller-32-bit-risc-v2a-48mgts-wch-9001161624",
+          "needed": 4,
+          "purchase": 4,
+          "unit_RUB": 90,
+          "spend_RUB": 360,
+          "stock": 715,
+          "stock_sufficient": true,
+          "checked": "2026-09-14"
+        },
+        {
+          "id": "WD-3431",
+          "url": "https://www.chipdip.ru/product/tps3431sdrbr-mikroshema-texas-instruments-8043827819",
+          "needed": 4,
+          "purchase": 4,
+          "unit_RUB": 330,
+          "spend_RUB": 1320,
+          "stock": 2,
+          "stock_sufficient": false,
+          "checked": "2026-09-14"
+        },
+        {
+          "id": "PROT-HY-CB",
+          "url": "https://www.chipdip.ru/product/hy2120-cb-mikroshema-zaschity-li-ion-li-pol-hycon-9000709204",
+          "needed": 4,
+          "purchase": 4,
+          "unit_RUB": 17,
+          "spend_RUB": 68,
+          "stock": 619,
+          "stock_sufficient": true,
+          "checked": "2026-09-14"
+        },
+        {
+          "id": "USB-GCT-FOUR",
+          "url": "https://www.chipdip.ru/product/usb4105-gf-a-gct-8020330945",
+          "needed": 4,
+          "purchase": 4,
+          "unit_RUB": 160,
+          "spend_RUB": 640,
+          "stock": 928,
+          "stock_sufficient": true,
+          "checked": "2026-09-14"
+        }
+      ],
+      "A_only": [
+        {
+          "id": "CHG-886",
+          "url": "https://www.chipdip.ru/product/bq25886rger-vqfn-24-ep-4x4-battery-texas-instruments-8017656287",
+          "needed": 4,
+          "purchase": 4,
+          "unit_RUB": 480,
+          "spend_RUB": 1920,
+          "stock": 6948,
+          "stock_sufficient": true,
+          "checked": "2026-09-14"
+        },
+        {
+          "id": "BAL-29209",
+          "url": "https://www.chipdip.ru/product/bq29209drbr-texas-instruments-8029430708",
+          "needed": 4,
+          "purchase": 7,
+          "unit_RUB": 79,
+          "spend_RUB": 553,
+          "stock": 391,
+          "stock_sufficient": true,
+          "checked": "2026-09-14"
+        }
+      ],
+      "B_only": [
+        {
+          "id": "CHG-887-LOT",
+          "url": "https://www.chipdip.ru/product/bq25887rger-texas-instruments-8050011937",
+          "needed": 4,
+          "purchase": 6,
+          "unit_RUB": 280,
+          "spend_RUB": 1680,
+          "stock": 9,
+          "stock_sufficient": true,
+          "checked": "2026-09-14"
+        }
+      ],
+      "common_subtotal_RUB": 5200,
+      "A_priced_subset_RUB": 7673,
+      "B_priced_subset_RUB": 6880,
+      "A_minus_B_RUB": 793,
+      "stock_shortages": [
+        "WD-3431"
+      ],
+      "complete_purchase_ready": false
+    },
+    {
+      "cars": 6,
+      "common": [
+        {
+          "id": "USB-SRC-PI3",
+          "url": "https://www.chipdip.ru/product/pi3usb9201ztaex-2ghz-2-uqfn2020-12-analog-switches-diodes-8052983438",
+          "needed": 6,
+          "purchase": 6,
+          "unit_RUB": 380,
+          "spend_RUB": 2280,
+          "stock": 14,
+          "stock_sufficient": true,
+          "checked": "2026-09-14"
+        },
+        {
+          "id": "USB-SRC-CC",
+          "url": "https://www.chipdip.ru/product/tusb320lairwbr-texas-instruments-8002948931",
+          "needed": 6,
+          "purchase": 6,
+          "unit_RUB": 169,
+          "spend_RUB": 1014,
+          "stock": 275,
+          "stock_sufficient": true,
+          "checked": "2026-09-14"
+        },
+        {
+          "id": "USB-INPUT-GATE",
+          "url": "https://www.chipdip.ru/product/tps25200drvr-kontrollery-goryachey-zameny-texas-instruments-8035454964",
+          "needed": 6,
+          "purchase": 6,
+          "unit_RUB": 53,
+          "spend_RUB": 318,
+          "stock": 176,
+          "stock_sufficient": true,
+          "checked": "2026-09-14"
+        },
+        {
+          "id": "USB-AUX-LDO",
+          "url": "https://www.chipdip.ru/product/tps70933dbvr-stabilizator-napryazheniya-texas-instruments-9000996321",
+          "needed": 6,
+          "purchase": 6,
+          "unit_RUB": 40,
+          "spend_RUB": 240,
+          "stock": 13816,
+          "stock_sufficient": true,
+          "checked": "2026-09-14"
+        },
+        {
+          "id": "CHG-MCU",
+          "url": "https://www.chipdip.ru/product/ch32v003f4p6-mikrokontroller-32-bit-risc-v2a-48mgts-wch-9001161624",
+          "needed": 6,
+          "purchase": 6,
+          "unit_RUB": 90,
+          "spend_RUB": 540,
+          "stock": 715,
+          "stock_sufficient": true,
+          "checked": "2026-09-14"
+        },
+        {
+          "id": "WD-3431",
+          "url": "https://www.chipdip.ru/product/tps3431sdrbr-mikroshema-texas-instruments-8043827819",
+          "needed": 6,
+          "purchase": 6,
+          "unit_RUB": 330,
+          "spend_RUB": 1980,
+          "stock": 2,
+          "stock_sufficient": false,
+          "checked": "2026-09-14"
+        },
+        {
+          "id": "PROT-HY-CB",
+          "url": "https://www.chipdip.ru/product/hy2120-cb-mikroshema-zaschity-li-ion-li-pol-hycon-9000709204",
+          "needed": 6,
+          "purchase": 6,
+          "unit_RUB": 17,
+          "spend_RUB": 102,
+          "stock": 619,
+          "stock_sufficient": true,
+          "checked": "2026-09-14"
+        },
+        {
+          "id": "USB-GCT-FOUR",
+          "url": "https://www.chipdip.ru/product/usb4105-gf-a-gct-8020330945",
+          "needed": 6,
+          "purchase": 6,
+          "unit_RUB": 160,
+          "spend_RUB": 960,
+          "stock": 928,
+          "stock_sufficient": true,
+          "checked": "2026-09-14"
+        }
+      ],
+      "A_only": [
+        {
+          "id": "CHG-886",
+          "url": "https://www.chipdip.ru/product/bq25886rger-vqfn-24-ep-4x4-battery-texas-instruments-8017656287",
+          "needed": 6,
+          "purchase": 6,
+          "unit_RUB": 480,
+          "spend_RUB": 2880,
+          "stock": 6948,
+          "stock_sufficient": true,
+          "checked": "2026-09-14"
+        },
+        {
+          "id": "BAL-29209",
+          "url": "https://www.chipdip.ru/product/bq29209drbr-texas-instruments-8029430708",
+          "needed": 6,
+          "purchase": 7,
+          "unit_RUB": 79,
+          "spend_RUB": 553,
+          "stock": 391,
+          "stock_sufficient": true,
+          "checked": "2026-09-14"
+        }
+      ],
+      "B_only": [
+        {
+          "id": "CHG-887-LOT",
+          "url": "https://www.chipdip.ru/product/bq25887rger-texas-instruments-8050011937",
+          "needed": 6,
+          "purchase": 6,
+          "unit_RUB": 280,
+          "spend_RUB": 1680,
+          "stock": 9,
+          "stock_sufficient": true,
+          "checked": "2026-09-14"
+        }
+      ],
+      "common_subtotal_RUB": 7434,
+      "A_priced_subset_RUB": 10867,
+      "B_priced_subset_RUB": 9114,
+      "A_minus_B_RUB": 1753,
+      "stock_shortages": [
+        "WD-3431"
+      ],
+      "complete_purchase_ready": false
+    }
+  ],
+  "missing_costs": [
+    "PCB fabrication/assembly, footprints, shipping and spares",
+    "Inductor, capacitors, resistors, thermistor, harness and power MOSFETs",
+    "Supervisor, fault latch, voltage adaptation and source-policy circuit",
+    "A: complete per-cell charge control; B: independent reset/current protection",
+    "Common programming tool and MCU board/debug access"
+  ],
+  "limitations": [
+    "Current-limit and battery protection candidates are not approved complete circuits",
+    "TPS3431 stock is insufficient for 4/6; substituted watchdog pricing is unknown",
+    "BQ25887 single-unit offer lacks exact ordering suffix confirmation",
+    "Prices are recorded card snapshots; this script does not check live stock",
+    "No cost advantage or area/thermal fit of the completed board has been proven"
+  ]
+}

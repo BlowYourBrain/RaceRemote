@@ -1,0 +1,21 @@
+pin,port,proposed_signal,mode,notes
+1,PD4,PACK_SENSE,ADC_IN7,Diagnostic reserve; divider/protection not designed
+2,PD5,CHARGE_REQUEST,output,Request to future hardware gate; not direct CE/CD
+3,PD6,WD_HEARTBEAT,output,Only after completed health checks; not autonomous PWM
+4,PD7,RESET_N,reserved,NRST option configuration and supervisor not implemented
+5,PA1,STATUS_LED,output,Series resistor and current budget pending
+6,PA2,CHARGER_FAULT,input,Voltage adaptation required for actual charger
+7,VSS,USB_GND,power,Do not bypass future battery protection via grounds
+8,PD0,SOURCE_REQUEST,output,Request to future hardware gate; not direct SOURCE_ALLOW
+9,VDD,AUX_3V3,power,Only pre-gate TPS709 supply; bypass not drawn
+10,PC0,BC_INT_N,input,PI3USB9201 open drain at AUX
+11,PC1,BC_SDA,I2C_SDA,Default mapping; shared bus pullups already in detector
+12,PC2,BC_SCL,I2C_SCL,Default mapping; proposed 100kHz
+13,PC3,BC_EN_N,open_drain,High impedance disables PI3 via existing pullup
+14,PC4,AUX_DIAGNOSTIC,ADC_IN2,Reserve; not a brownout safety mechanism
+15,PC5,CC_OUT1,input,Reserved for candidate TUSB GPIO; CC circuit not drawn
+16,PC6,CC_OUT2,input,Reserved for candidate TUSB GPIO; no parallel Rd allowed
+17,PC7,INPUT_FAULT_N,input,Input gate open drain at AUX
+18,PD1,SWIO,debug,Reserve for programming; no I2C remap here
+19,PD2,VBUS_SENSE,ADC_IN3,Divider/protection required; never raw VBUS
+20,PD3,CELL1_SENSE,ADC_IN4,Diagnostic reserve; not cell protection

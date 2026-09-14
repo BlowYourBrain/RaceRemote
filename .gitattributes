@@ -78,3 +78,8 @@ hardware/usb-detector/*.md text eol=lf
 docs/evidence/usb-detector-*.json text eol=crlf
 tools/build_usb_detector.py text eol=lf
 tools/verify_usb_detector.py text eol=lf
+
+docs/charge-parts.csv text eol=crlf
+docs/charger-mcu-pins.csv text eol=lf
+docs/evidence/charger-cost-comparison.json text eol=crlf
+tools/compare_charger_cost.py text eol=lf

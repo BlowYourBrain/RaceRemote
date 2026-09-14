@@ -1,6 +1,7 @@
 # Preserve device evidence/source hashes across Windows checkouts.
 app/src/androidTest/java/vea/raceremote/DriveDeviceBenchTest.kt text eol=lf
 docs/evidence/drive-device-2026-09-14/* text eol=lf
+docs/evidence/link-comparison-2026-09-14/* text eol=lf
 # Keep CAD provenance hashes stable across Windows checkouts.
 cad/assembly.scad text eol=lf
 cad/battery-holder.scad text eol=lf

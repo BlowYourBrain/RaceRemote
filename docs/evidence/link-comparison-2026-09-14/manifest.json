@@ -1,0 +1,90 @@
+{
+  "date": "2026-09-14",
+  "productionAndroidCommit": "fc4a4e2",
+  "firmwareSourceCommit": "c9fabb8",
+  "firmwareEnvironment": "esp32-bench-sta",
+  "firmwareBinarySha256": "da15c20f0770e63d928d964dc0c60b2d24c470c61d4497ea0390422515918931",
+  "testSourceSha256": "3306b13a7bf37012df34db9a1f5731f16c1be1e3ae38efe5a43479760a719d9f",
+  "testApkSha256": "39a6075a4ae743001cf866573270dbc5ee113c75f9bdf8407de2c881cf437e98",
+  "build": "assembleDebugAndroidTest passed",
+  "withoutOptIn": "1 assumption skip before network access",
+  "explicitRun": "1 test, 1 failure; all six scheduled trials collected",
+  "allObservedOutputsEnabled": false,
+  "allObservedCommandsAndPlansZero": true,
+  "finalObservedArmed": false,
+  "trials": [
+    {
+      "trial": 1,
+      "httpPolling": false,
+      "armed": true,
+      "targetMs": 5000,
+      "observedActiveMs": 639,
+      "survived": false,
+      "pollCount": 0,
+      "pollErrors": 0,
+      "endState": "CarConnectionState(message=Соединение закрыто — остановлено, connected=false, connecting=false, throttle=0, steering=0)"
+    },
+    {
+      "trial": 2,
+      "httpPolling": true,
+      "armed": true,
+      "targetMs": 5000,
+      "observedActiveMs": 793,
+      "survived": false,
+      "pollCount": 6,
+      "pollErrors": 0,
+      "endState": "CarConnectionState(message=Нет свежего ответа — остановлено, connected=false, connecting=false, throttle=0, steering=0)"
+    },
+    {
+      "trial": 3,
+      "httpPolling": true,
+      "armed": true,
+      "targetMs": 5000,
+      "observedActiveMs": 765,
+      "survived": false,
+      "pollCount": 6,
+      "pollErrors": 0,
+      "endState": "CarConnectionState(message=Нет свежего ответа — остановлено, connected=false, connecting=false, throttle=0, steering=0)"
+    },
+    {
+      "trial": 4,
+      "httpPolling": false,
+      "armed": true,
+      "targetMs": 5000,
+      "observedActiveMs": 629,
+      "survived": false,
+      "pollCount": 0,
+      "pollErrors": 0,
+      "endState": "CarConnectionState(message=Нет свежего ответа — остановлено, connected=false, connecting=false, throttle=0, steering=0)"
+    },
+    {
+      "trial": 5,
+      "httpPolling": false,
+      "armed": true,
+      "targetMs": 5000,
+      "observedActiveMs": 649,
+      "survived": false,
+      "pollCount": 0,
+      "pollErrors": 0,
+      "endState": "CarConnectionState(message=Нет свежего ответа — остановлено, connected=false, connecting=false, throttle=0, steering=0)"
+    },
+    {
+      "trial": 6,
+      "httpPolling": true,
+      "armed": true,
+      "targetMs": 5000,
+      "observedActiveMs": 764,
+      "survived": false,
+      "pollCount": 6,
+      "pollErrors": 0,
+      "endState": "CarConnectionState(message=Ответ задержался — остановлено, connected=false, connecting=false, throttle=0, steering=0)"
+    }
+  ],
+  "conclusion": "Failures reproduced with and without periodic HTTP; polling is not the sole cause. Root cause and antenna comparison remain open.",
+  "reports": {
+    "report.json": "638bb452b1fa0e42fcc898a485cc8eae056f251dcda0a41cd69e4004fb40c764",
+    "serial.json": "9af0fb43299d59a433ad98503b69aba5db07b3e2f20ef5b3c91d476197aa0e77",
+    "junit.txt": "af69bb30b8e39478803f8543cbdf428dec7da1ab6488617a9a192dfa11c46c26",
+    "default-skip.txt": "d1a979c20505efde7af5029d1bc13b2f6c0c56bfccbff954b5b0c4d003a4f115"
+  }
+}

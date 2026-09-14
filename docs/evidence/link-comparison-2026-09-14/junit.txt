@@ -1,0 +1,38 @@
+INSTRUMENTATION_STATUS: class=vea.raceremote.DriveDeviceBenchTest
+INSTRUMENTATION_STATUS: current=1
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=1
+INSTRUMENTATION_STATUS: stream=
+vea.raceremote.DriveDeviceBenchTest:
+INSTRUMENTATION_STATUS: test=neutralLinkComparison
+INSTRUMENTATION_STATUS_CODE: 1
+INSTRUMENTATION_STATUS: class=vea.raceremote.DriveDeviceBenchTest
+INSTRUMENTATION_STATUS: current=1
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=1
+INSTRUMENTATION_STATUS: stack=java.lang.AssertionError: Some fixed-duration neutral sessions failed; inspect all six link_result records
+	at org.junit.Assert.fail(Assert.java:89)
+	at org.junit.Assert.assertTrue(Assert.java:42)
+	at vea.raceremote.DriveDeviceBenchTest.runBench(DriveDeviceBenchTest.kt:144)
+	at vea.raceremote.DriveDeviceBenchTest.neutralLinkComparison(DriveDeviceBenchTest.kt:33)
+INSTRUMENTATION_STATUS: stream=
+Error in neutralLinkComparison(vea.raceremote.DriveDeviceBenchTest):
+java.lang.AssertionError: Some fixed-duration neutral sessions failed; inspect all six link_result records
+	at org.junit.Assert.fail(Assert.java:89)
+	at org.junit.Assert.assertTrue(Assert.java:42)
+	at vea.raceremote.DriveDeviceBenchTest.runBench(DriveDeviceBenchTest.kt:144)
+	at vea.raceremote.DriveDeviceBenchTest.neutralLinkComparison(DriveDeviceBenchTest.kt:33)
+INSTRUMENTATION_STATUS: test=neutralLinkComparison
+INSTRUMENTATION_STATUS_CODE: -2
+INSTRUMENTATION_RESULT: stream=
+Time: 7,928
+There was 1 failure:
+1) neutralLinkComparison(vea.raceremote.DriveDeviceBenchTest)
+java.lang.AssertionError: Some fixed-duration neutral sessions failed; inspect all six link_result records
+	at org.junit.Assert.fail(Assert.java:89)
+	at org.junit.Assert.assertTrue(Assert.java:42)
+	at vea.raceremote.DriveDeviceBenchTest.runBench(DriveDeviceBenchTest.kt:144)
+	at vea.raceremote.DriveDeviceBenchTest.neutralLinkComparison(DriveDeviceBenchTest.kt:33)
+FAILURES!!!
+Tests run: 1,  Failures: 1
+INSTRUMENTATION_CODE: -1

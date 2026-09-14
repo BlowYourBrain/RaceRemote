@@ -30,6 +30,7 @@ import vea.raceremote.control.ControlSocketFactory
 class DriveDeviceBenchTest {
     @Test fun nativeClientDrivePlan() = runBench("native")
     @Test fun silentSocketTimesOut() = runBench("watchdog")
+    @Test fun neutralLinkComparison() = runBench("link")
 
     private fun runBench(scenario: String) {
         val args = InstrumentationRegistry.getArguments()
@@ -97,6 +98,51 @@ class DriveDeviceBenchTest {
             val initial = status("preflight")
             assertFalse("Device already armed", initial.getBoolean("armed"))
             assertTrue("Nonzero preflight plan", zero(initial))
+            if (scenario == "link") {
+                // Fixed order and duration; retain failures instead of retrying
+                // until a connection happens to pass. All commands are neutral.
+                var allSurvived = true
+                listOf(false, true, true, false, false, true).forEachIndexed { index, pollHttp ->
+                    val trial = index + 1
+                    record("action", "link trial=$trial httpPolling=$pollHttp connect; neutral only")
+                    client.connect(host, http)
+                    val armDeadline = SystemClock.elapsedRealtime() + 4500
+                    while (client.state.value.connecting && SystemClock.elapsedRealtime() < armDeadline) SystemClock.sleep(10)
+                    val armed = client.state.value.connected
+                    val activeStart = SystemClock.elapsedRealtime()
+                    val activeDeadline = activeStart + 5000
+                    var pollCount = 0
+                    var pollErrors = 0
+                    var nextPoll = activeStart
+                    while (client.state.value.connected && SystemClock.elapsedRealtime() < activeDeadline) {
+                        if (pollHttp && SystemClock.elapsedRealtime() >= nextPoll) {
+                            try {
+                                val value = status("link_poll_$trial")
+                                assertEquals("Neutral-only trial", 0, value.getInt("throttle"))
+                                assertEquals("Neutral-only trial", 0, value.getInt("steering"))
+                                assertTrue("Nonzero neutral plan", zero(value))
+                                pollCount++
+                            } catch (t: java.io.IOException) {
+                                pollErrors++
+                                record("poll_error", "trial=$trial $t")
+                            }
+                            nextPoll = SystemClock.elapsedRealtime() + 40
+                        }
+                        SystemClock.sleep(10)
+                    }
+                    val survived = armed && client.state.value.connected && SystemClock.elapsedRealtime() >= activeDeadline
+                    allSurvived = allSurvived && survived
+                    record("link_result", JSONObject().put("trial", trial).put("httpPolling", pollHttp)
+                        .put("armed", armed).put("targetMs", 5000)
+                        .put("observedActiveMs", SystemClock.elapsedRealtime() - activeStart)
+                        .put("survived", survived).put("pollCount", pollCount).put("pollErrors", pollErrors)
+                        .put("endState", client.state.value.toString()))
+                    client.disconnect()
+                    awaitStatus("link_cleanup_$trial") { !it.getBoolean("armed") && zero(it) }
+                    SystemClock.sleep(300)
+                }
+                assertTrue("Some fixed-duration neutral sessions failed; inspect all six link_result records", allSurvived)
+            }
             if (scenario == "native") {
                 record("action", "native client connect")
                 client.connect(host, http)

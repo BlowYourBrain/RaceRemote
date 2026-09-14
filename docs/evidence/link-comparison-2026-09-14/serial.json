@@ -1,0 +1,162 @@
+[
+  {
+    "hostElapsedMs": 1094,
+    "line": "TX ms=331721 kind=128 seq=0 sent=1"
+  },
+  {
+    "hostElapsedMs": 1094,
+    "line": "CONTROL active=1 armed=0 throttle=0 steering=0 seq=0 outputs=disabled"
+  },
+  {
+    "hostElapsedMs": 1109,
+    "line": "TX ms=331736 kind=129 seq=1 sent=1"
+  },
+  {
+    "hostElapsedMs": 1109,
+    "line": "CONTROL active=1 armed=1 throttle=0 steering=0 seq=1 outputs=disabled"
+  },
+  {
+    "hostElapsedMs": 1125,
+    "line": "TX ms=331755 kind=129 seq=2 sent=1"
+  },
+  {
+    "hostElapsedMs": 1750,
+    "line": "FAILSAFE timeout: logical outputs=0"
+  },
+  {
+    "hostElapsedMs": 1750,
+    "line": "CONTROL active=0 armed=0 throttle=0 steering=0 seq=20 outputs=disabled"
+  },
+  {
+    "hostElapsedMs": 2297,
+    "line": "TX ms=332923 kind=128 seq=0 sent=1"
+  },
+  {
+    "hostElapsedMs": 2297,
+    "line": "CONTROL active=1 armed=0 throttle=0 steering=0 seq=0 outputs=disabled"
+  },
+  {
+    "hostElapsedMs": 2313,
+    "line": "TX ms=332944 kind=129 seq=1 sent=1"
+  },
+  {
+    "hostElapsedMs": 2328,
+    "line": "CONTROL active=1 armed=1 throttle=0 steering=0 seq=1 outputs=disabled"
+  },
+  {
+    "hostElapsedMs": 2359,
+    "line": "TX ms=332978 kind=129 seq=2 sent=1"
+  },
+  {
+    "hostElapsedMs": 2984,
+    "line": "FAILSAFE timeout: logical outputs=0"
+  },
+  {
+    "hostElapsedMs": 2984,
+    "line": "CONTROL active=0 armed=0 throttle=0 steering=0 seq=19 outputs=disabled"
+  },
+  {
+    "hostElapsedMs": 3594,
+    "line": "TX ms=334217 kind=128 seq=0 sent=1"
+  },
+  {
+    "hostElapsedMs": 3594,
+    "line": "CONTROL active=1 armed=0 throttle=0 steering=0 seq=0 outputs=disabled"
+  },
+  {
+    "hostElapsedMs": 3609,
+    "line": "TX ms=334233 kind=129 seq=1 sent=1"
+  },
+  {
+    "hostElapsedMs": 3609,
+    "line": "CONTROL active=1 armed=1 throttle=0 steering=0 seq=1 outputs=disabled"
+  },
+  {
+    "hostElapsedMs": 3641,
+    "line": "TX ms=334266 kind=129 seq=2 sent=1"
+  },
+  {
+    "hostElapsedMs": 4281,
+    "line": "FAILSAFE timeout: logical outputs=0"
+  },
+  {
+    "hostElapsedMs": 4281,
+    "line": "CONTROL active=0 armed=0 throttle=0 steering=0 seq=19 outputs=disabled"
+  },
+  {
+    "hostElapsedMs": 4875,
+    "line": "TX ms=335507 kind=128 seq=0 sent=1"
+  },
+  {
+    "hostElapsedMs": 4891,
+    "line": "CONTROL active=1 armed=0 throttle=0 steering=0 seq=0 outputs=disabled"
+  },
+  {
+    "hostElapsedMs": 4891,
+    "line": "TX ms=335523 kind=129 seq=1 sent=1"
+  },
+  {
+    "hostElapsedMs": 4906,
+    "line": "CONTROL active=1 armed=1 throttle=0 steering=0 seq=1 outputs=disabled"
+  },
+  {
+    "hostElapsedMs": 4922,
+    "line": "TX ms=335556 kind=129 seq=2 sent=1"
+  },
+  {
+    "hostElapsedMs": 5563,
+    "line": "CONTROL active=0 armed=0 throttle=0 steering=0 seq=22 outputs=disabled"
+  },
+  {
+    "hostElapsedMs": 6141,
+    "line": "TX ms=336773 kind=128 seq=0 sent=1"
+  },
+  {
+    "hostElapsedMs": 6156,
+    "line": "CONTROL active=1 armed=0 throttle=0 steering=0 seq=0 outputs=disabled"
+  },
+  {
+    "hostElapsedMs": 6172,
+    "line": "TX ms=336791 kind=129 seq=1 sent=1"
+  },
+  {
+    "hostElapsedMs": 6172,
+    "line": "CONTROL active=1 armed=1 throttle=0 steering=0 seq=1 outputs=disabled"
+  },
+  {
+    "hostElapsedMs": 6188,
+    "line": "TX ms=336811 kind=129 seq=2 sent=1"
+  },
+  {
+    "hostElapsedMs": 6859,
+    "line": "FAILSAFE timeout: logical outputs=0"
+  },
+  {
+    "hostElapsedMs": 6859,
+    "line": "CONTROL active=0 armed=0 throttle=0 steering=0 seq=23 outputs=disabled"
+  },
+  {
+    "hostElapsedMs": 7438,
+    "line": "TX ms=338059 kind=128 seq=0 sent=1"
+  },
+  {
+    "hostElapsedMs": 7438,
+    "line": "CONTROL active=1 armed=0 throttle=0 steering=0 seq=0 outputs=disabled"
+  },
+  {
+    "hostElapsedMs": 7453,
+    "line": "TX ms=338077 kind=129 seq=1 sent=1"
+  },
+  {
+    "hostElapsedMs": 7453,
+    "line": "CONTROL active=1 armed=1 throttle=0 steering=0 seq=1 outputs=disabled"
+  },
+  {
+    "hostElapsedMs": 7469,
+    "line": "TX ms=338096 kind=129 seq=2 sent=1"
+  },
+  {
+    "hostElapsedMs": 8219,
+    "line": "CONTROL active=0 armed=0 throttle=0 steering=0 seq=23 outputs=disabled"
+  }
+]

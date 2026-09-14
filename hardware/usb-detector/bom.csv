@@ -1,0 +1,10 @@
+﻿reference,value,purpose,footprint,selection
+U301,PI3USB9201ZTAEX,"BC1.2/legacy detector; charge-only sink, not a power source",,"Candidate; MCU, footprints and physical integration pending"
+C301,100n / 16V,Local bypass; included in total AUX load capacitance,,"Candidate; MCU, footprints and physical integration pending"
+R301,47k / 1%,Default detector disabled; MCU open drain sinks to enable,,"Candidate; MCU, footprints and physical integration pending"
+R302,4.7k / 1%,Single 3.3V I2C pull-up; 100kHz proposal,,"Candidate; MCU, footprints and physical integration pending"
+R303,4.7k / 1%,Single 3.3V I2C pull-up; no 5V MCU pull-ups,,"Candidate; MCU, footprints and physical integration pending"
+R304,10k / 1%,Active-low interrupt; not source permission,,"Candidate; MCU, footprints and physical integration pending"
+J301,FROM USB AUX,3.3V from TPS709 upstream of main gate; not battery or raw USB,,"Candidate; MCU, footprints and physical integration pending"
+J302,USB PORT DATA,External connector D+/D- only; no CORE_DP/CORE_DM path,,"Candidate; MCU, footprints and physical integration pending"
+J303,TO SOURCE MCU,Controller must also share J301 ground; no MCU or SOURCE_ALLOW generator implemented,,"Candidate; MCU, footprints and physical integration pending"

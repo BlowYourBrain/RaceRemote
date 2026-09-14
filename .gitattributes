@@ -65,3 +65,16 @@ docs/evidence/charge-core-*.json text eol=crlf
 docs/evidence/charge-core-schematic.png binary
 tools/build_charge_core.py text eol=lf
 tools/verify_charge_core.py text eol=lf
+
+# Preserve detector schematic/evidence hashes on checkout.
+hardware/usb-detector/*.kicad_sch text eol=crlf
+hardware/usb-detector/*.kicad_sym text eol=crlf
+hardware/usb-detector/*.kicad_pro text eol=crlf
+hardware/usb-detector/*-lib-table text eol=crlf
+hardware/usb-detector/*.csv text eol=crlf
+hardware/usb-detector/*.net text eol=lf
+hardware/usb-detector/*.pdf binary
+hardware/usb-detector/*.md text eol=lf
+docs/evidence/usb-detector-*.json text eol=crlf
+tools/build_usb_detector.py text eol=lf
+tools/verify_usb_detector.py text eol=lf

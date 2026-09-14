@@ -1,0 +1,1 @@
+(sym_lib_table (version 7) (lib (name "RaceRemote_Detector") (type "KiCad") (uri "${KIPRJMOD}/RaceRemote_Detector.kicad_sym") (options "") (descr "Own PI3USB symbol and attributed passives")))

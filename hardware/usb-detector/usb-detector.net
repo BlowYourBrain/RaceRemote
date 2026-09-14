@@ -1,0 +1,400 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<export version="E">
+  <design>
+    <source>C:\Users\Evgeny\orca\RaceRemote\hardware\usb-detector\usb-detector.kicad_sch</source>
+    <date>2026-09-14T04:21:29</date>
+    <tool>Eeschema 10.0.6</tool>
+    <sheet number="1" name="/" tstamps="/">
+      <title_block>
+        <title>RaceRemote - PI3USB9201 detector PROPOSAL</title>
+        <company>vea.raceremote</company>
+        <rev>0.1</rev>
+        <date>2026-09-14</date>
+        <source>usb-detector.kicad_sch</source>
+        <comment number="1" value=""/>
+        <comment number="2" value=""/>
+        <comment number="3" value=""/>
+        <comment number="4" value=""/>
+        <comment number="5" value=""/>
+        <comment number="6" value=""/>
+        <comment number="7" value=""/>
+        <comment number="8" value=""/>
+        <comment number="9" value=""/>
+      </title_block>
+    </sheet>
+  </design>
+  <components>
+    <comp ref="C301">
+      <value>100n / 16V</value>
+      <fields>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="RaceRemote_Detector" part="C" description="Unpolarized capacitor"/>
+      <property name="Sheetname" value="usb-detector"/>
+      <property name="Sheetfile" value="usb-detector.kicad_sch"/>
+      <property name="ki_keywords" value="cap capacitor"/>
+      <property name="ki_fp_filters" value="C_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>1afa7991-ac62-5433-9d58-6e48ad112b92</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="J301">
+      <value>FROM USB AUX</value>
+      <fields>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="RaceRemote_Detector" part="Conn_01x02" description="Generic connector, single row, 01x02, script generated (kicad-library-utils/schlib/autogen/connector/)"/>
+      <property name="Sheetname" value="usb-detector"/>
+      <property name="Sheetfile" value="usb-detector.kicad_sch"/>
+      <property name="ki_keywords" value="connector"/>
+      <property name="ki_fp_filters" value="Connector*:*_1x??_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>c5e9b77c-7793-5f2c-aeed-5d5e52e94020</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="J302">
+      <value>USB PORT DATA</value>
+      <fields>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="RaceRemote_Detector" part="Conn_01x02" description="Generic connector, single row, 01x02, script generated (kicad-library-utils/schlib/autogen/connector/)"/>
+      <property name="Sheetname" value="usb-detector"/>
+      <property name="Sheetfile" value="usb-detector.kicad_sch"/>
+      <property name="ki_keywords" value="connector"/>
+      <property name="ki_fp_filters" value="Connector*:*_1x??_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>005525fb-1d58-5029-be9f-2af7c6a881ec</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="J303">
+      <value>TO SOURCE MCU</value>
+      <fields>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="RaceRemote_Detector" part="Conn_01x04" description="Generic connector, single row, 01x04, script generated (kicad-library-utils/schlib/autogen/connector/)"/>
+      <property name="Sheetname" value="usb-detector"/>
+      <property name="Sheetfile" value="usb-detector.kicad_sch"/>
+      <property name="ki_keywords" value="connector"/>
+      <property name="ki_fp_filters" value="Connector*:*_1x??_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>397d9761-6b3f-5ced-96cd-10274c625d58</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+            <pin num="3"/>
+            <pin num="4"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="R301">
+      <value>47k / 1%</value>
+      <fields>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="RaceRemote_Detector" part="R" description="Resistor"/>
+      <property name="Sheetname" value="usb-detector"/>
+      <property name="Sheetfile" value="usb-detector.kicad_sch"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <property name="ki_fp_filters" value="R_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>4b9b2d78-2925-5711-9f99-8be9bd0b756f</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="R302">
+      <value>4.7k / 1%</value>
+      <fields>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="RaceRemote_Detector" part="R" description="Resistor"/>
+      <property name="Sheetname" value="usb-detector"/>
+      <property name="Sheetfile" value="usb-detector.kicad_sch"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <property name="ki_fp_filters" value="R_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>5b95b227-df8a-5f64-b693-352f960a6db5</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="R303">
+      <value>4.7k / 1%</value>
+      <fields>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="RaceRemote_Detector" part="R" description="Resistor"/>
+      <property name="Sheetname" value="usb-detector"/>
+      <property name="Sheetfile" value="usb-detector.kicad_sch"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <property name="ki_fp_filters" value="R_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>464f1332-cf72-5528-b1a2-379d91b38359</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="R304">
+      <value>10k / 1%</value>
+      <fields>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="RaceRemote_Detector" part="R" description="Resistor"/>
+      <property name="Sheetname" value="usb-detector"/>
+      <property name="Sheetfile" value="usb-detector.kicad_sch"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <property name="ki_fp_filters" value="R_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>294532ec-b08b-586f-b141-08a1c94e50e0</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="U301">
+      <value>PI3USB9201ZTAEX</value>
+      <datasheet>https://www.diodes.com/datasheet/download/PI3USB9201.pdf</datasheet>
+      <fields>
+        <field name="Footprint"/>
+        <field name="Datasheet">https://www.diodes.com/datasheet/download/PI3USB9201.pdf</field>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="RaceRemote_Detector" part="PI3USB9201ZTA" description=""/>
+      <property name="Sheetname" value="usb-detector"/>
+      <property name="Sheetfile" value="usb-detector.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>35cea6e4-d59e-5635-8ac0-51035d2e9ae5</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="12"/>
+            <pin num="3"/>
+            <pin num="4"/>
+            <pin num="5"/>
+            <pin num="11"/>
+            <pin num="9"/>
+            <pin num="10"/>
+            <pin num="8"/>
+            <pin num="7"/>
+            <pin num="1"/>
+            <pin num="2"/>
+            <pin num="6"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+  </components>
+  <libparts>
+    <libpart lib="RaceRemote_Detector" part="C">
+      <description>Unpolarized capacitor</description>
+      <footprints>
+        <fp>C_*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">C</field>
+        <field name="Value">C</field>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description">Unpolarized capacitor</field>
+      </fields>
+      <pins>
+        <pin num="1" name="" type="passive"/>
+        <pin num="2" name="" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="RaceRemote_Detector" part="Conn_01x02">
+      <description>Generic connector, single row, 01x02, script generated (kicad-library-utils/schlib/autogen/connector/)</description>
+      <footprints>
+        <fp>Connector*:*_1x??_*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">J</field>
+        <field name="Value">Conn_01x02</field>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description">Generic connector, single row, 01x02, script generated (kicad-library-utils/schlib/autogen/connector/)</field>
+      </fields>
+      <pins>
+        <pin num="1" name="Pin_1" type="passive"/>
+        <pin num="2" name="Pin_2" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="RaceRemote_Detector" part="Conn_01x04">
+      <description>Generic connector, single row, 01x04, script generated (kicad-library-utils/schlib/autogen/connector/)</description>
+      <footprints>
+        <fp>Connector*:*_1x??_*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">J</field>
+        <field name="Value">Conn_01x04</field>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description">Generic connector, single row, 01x04, script generated (kicad-library-utils/schlib/autogen/connector/)</field>
+      </fields>
+      <pins>
+        <pin num="1" name="Pin_1" type="passive"/>
+        <pin num="2" name="Pin_2" type="passive"/>
+        <pin num="3" name="Pin_3" type="passive"/>
+        <pin num="4" name="Pin_4" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="RaceRemote_Detector" part="PI3USB9201ZTA">
+      <fields>
+        <field name="Reference">U</field>
+        <field name="Value">PI3USB9201ZTA</field>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <pins>
+        <pin num="1" name="USB+" type="bidirectional"/>
+        <pin num="2" name="USB-" type="bidirectional"/>
+        <pin num="3" name="SCL" type="input"/>
+        <pin num="4" name="SDA" type="bidirectional"/>
+        <pin num="5" name="~{INTB}" type="open_collector"/>
+        <pin num="6" name="NC" type="no_connect"/>
+        <pin num="7" name="D-" type="bidirectional"/>
+        <pin num="8" name="D+" type="bidirectional"/>
+        <pin num="9" name="GND" type="power_in"/>
+        <pin num="10" name="ADDR" type="input"/>
+        <pin num="11" name="~{ENB}" type="input"/>
+        <pin num="12" name="VDD" type="power_in"/>
+      </pins>
+    </libpart>
+    <libpart lib="RaceRemote_Detector" part="R">
+      <description>Resistor</description>
+      <footprints>
+        <fp>R_*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">R</field>
+        <field name="Value">R</field>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description">Resistor</field>
+      </fields>
+      <pins>
+        <pin num="1" name="" type="passive"/>
+        <pin num="2" name="" type="passive"/>
+      </pins>
+    </libpart>
+  </libparts>
+  <libraries>
+    <library logical="RaceRemote_Detector">
+      <uri>${KIPRJMOD}/RaceRemote_Detector.kicad_sym</uri>
+    </library>
+  </libraries>
+  <nets>
+    <net code="1" name="AUX_3V3" class="Default">
+      <node ref="C301" pin="1" pintype="passive"/>
+      <node ref="J301" pin="1" pinfunction="Pin_1_1" pintype="passive"/>
+      <node ref="R301" pin="1" pintype="passive"/>
+      <node ref="R302" pin="1" pintype="passive"/>
+      <node ref="R303" pin="1" pintype="passive"/>
+      <node ref="R304" pin="1" pintype="passive"/>
+      <node ref="U301" pin="12" pinfunction="VDD_12" pintype="power_in"/>
+    </net>
+    <net code="2" name="BC_EN_N" class="Default">
+      <node ref="J303" pin="4" pinfunction="Pin_4_4" pintype="passive"/>
+      <node ref="R301" pin="2" pintype="passive"/>
+      <node ref="U301" pin="11" pinfunction="~{ENB}_11" pintype="input"/>
+    </net>
+    <net code="3" name="BC_INT_N" class="Default">
+      <node ref="J303" pin="3" pinfunction="Pin_3_3" pintype="passive"/>
+      <node ref="R304" pin="2" pintype="passive"/>
+      <node ref="U301" pin="5" pinfunction="~{INTB}_5" pintype="open_collector"/>
+    </net>
+    <net code="4" name="BC_SCL" class="Default">
+      <node ref="J303" pin="1" pinfunction="Pin_1_1" pintype="passive"/>
+      <node ref="R302" pin="2" pintype="passive"/>
+      <node ref="U301" pin="3" pinfunction="SCL_3" pintype="input"/>
+    </net>
+    <net code="5" name="BC_SDA" class="Default">
+      <node ref="J303" pin="2" pinfunction="Pin_2_2" pintype="passive"/>
+      <node ref="R303" pin="2" pintype="passive"/>
+      <node ref="U301" pin="4" pinfunction="SDA_4" pintype="bidirectional"/>
+    </net>
+    <net code="6" name="PORT_DM" class="Default">
+      <node ref="J302" pin="2" pinfunction="Pin_2_2" pintype="passive"/>
+      <node ref="U301" pin="7" pinfunction="D-_7" pintype="bidirectional"/>
+    </net>
+    <net code="7" name="PORT_DP" class="Default">
+      <node ref="J302" pin="1" pinfunction="Pin_1_1" pintype="passive"/>
+      <node ref="U301" pin="8" pinfunction="D+_8" pintype="bidirectional"/>
+    </net>
+    <net code="8" name="USB_GND" class="Default">
+      <node ref="C301" pin="2" pintype="passive"/>
+      <node ref="J301" pin="2" pinfunction="Pin_2_2" pintype="passive"/>
+      <node ref="U301" pin="10" pinfunction="ADDR_10" pintype="input"/>
+      <node ref="U301" pin="9" pinfunction="GND_9" pintype="power_in"/>
+    </net>
+    <net code="9" name="unconnected-(U301-NC-Pad6)" class="Default">
+      <node ref="U301" pin="6" pinfunction="NC_6" pintype="no_connect"/>
+    </net>
+    <net code="10" name="unconnected-(U301-USB+-Pad1)" class="Default">
+      <node ref="U301" pin="1" pinfunction="USB+_1" pintype="bidirectional+no_connect"/>
+    </net>
+    <net code="11" name="unconnected-(U301-USB--Pad2)" class="Default">
+      <node ref="U301" pin="2" pinfunction="USB-_2" pintype="bidirectional+no_connect"/>
+    </net>
+  </nets>
+</export>

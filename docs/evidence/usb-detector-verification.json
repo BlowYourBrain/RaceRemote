@@ -1,0 +1,49 @@
+{
+  "date": "2026-09-14",
+  "contract": "USB-BC-01 v0.1",
+  "kicad_version": "10.0.6",
+  "erc_violations": 0,
+  "ic_pins_checked": 12,
+  "logical_components": 9,
+  "fault_injections": [
+    {
+      "mutation": "connector_dp_swapped_to_dm",
+      "detected": true,
+      "failed_contract": "Connectivity mismatch: {(('J302', '1'), 'PORT_DM'), (('J302', '1'), 'PORT_DP')}"
+    },
+    {
+      "mutation": "enable_pullup_to_ground",
+      "detected": true,
+      "failed_contract": "Connectivity mismatch: {(('R301', '1'), 'USB_GND'), (('R301', '1'), 'AUX_3V3')}"
+    },
+    {
+      "mutation": "supply_connector_raw_vbus",
+      "detected": true,
+      "failed_contract": "Connectivity mismatch: {(('J301', '1'), 'USB_RAW_VBUS'), (('J301', '1'), 'AUX_3V3')}"
+    }
+  ],
+  "arithmetic": {
+    "en_high_min_V": 2.76265,
+    "int_pullup_max_A": 0.00036363636363636367,
+    "each_i2c_pullup_max_A": 0.0007736943907156673,
+    "illustrative_rise_time_100pF_ns": 402.21331000000004,
+    "scope": "Static 3.0..3.6V, 1% resistor model at datasheet leakage conditions; 100pF is assumed, not measured; no brownout/timing or total AUX budget proof"
+  },
+  "sha256": {
+    "hardware/usb-detector/usb-detector.kicad_sch": "1f1108022b82e6cc781daba00149968333c565e2b0a0913163784ff7be52d62a",
+    "hardware/usb-detector/usb-detector.kicad_pro": "d9fe2a730b3c70c5165c40f389af1959fd2af7e8d1f4f9f6be64936872dd6653",
+    "hardware/usb-detector/RaceRemote_Detector.kicad_sym": "24677dc72c3ea92be82ec961235ec5b81ea08801f2d764f6b9f9e52a5e9b01a9",
+    "hardware/usb-detector/usb-detector.net": "426d90057f4e330fcb533fb7d39a9f8509905a12ddaaf2c170d9be669ae44af9",
+    "hardware/usb-detector/usb-detector.pdf": "2dc5b4b60a1c5e848e1216584066401efcc62ecffbf23d1d51ae29245210283d",
+    "hardware/usb-detector/bom.csv": "09e64da9625a03be94bf44356e0b0ca21f10a93eae57e7f717dd21fea60be979",
+    "docs/evidence/usb-detector-erc.json": "533bc7a311fade203fcf15877a5e2ee690707998647251803054ea61911c7d59",
+    "tools/build_usb_detector.py": "3ecbe4f0715e73729c3d5dd7aa8b75b1652163d801db3eac5c471c907d7721e2",
+    "tools/verify_usb_detector.py": "68d2ebf584a14c0aa0192de131e2af41f19f1ccb08c81a478b64a3895b83996a"
+  },
+  "not_verified": [
+    "MCU selection/firmware and autonomous charge permission",
+    "CC attachment, VBUS qualification and detach/reset/brownout handling",
+    "Real source classification, timeout and total AUX consumption",
+    "ESD, footprints, PCB, assembly and full charger integration"
+  ]
+}

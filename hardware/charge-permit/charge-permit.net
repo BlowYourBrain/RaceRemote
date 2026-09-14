@@ -1,0 +1,532 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<export version="E">
+  <design>
+    <source>C:\Users\Evgeny\orca\RaceRemote\hardware\charge-permit\charge-permit.kicad_sch</source>
+    <date>2026-09-14T05:03:46</date>
+    <tool>Eeschema 10.0.6</tool>
+    <sheet number="1" name="/" tstamps="/">
+      <title_block>
+        <title>RaceRemote - hardware permit latch PROPOSAL</title>
+        <company>vea.raceremote</company>
+        <rev>0.1</rev>
+        <date>2026-09-14</date>
+        <source>charge-permit.kicad_sch</source>
+        <comment number="1" value=""/>
+        <comment number="2" value=""/>
+        <comment number="3" value=""/>
+        <comment number="4" value=""/>
+        <comment number="5" value=""/>
+        <comment number="6" value=""/>
+        <comment number="7" value=""/>
+        <comment number="8" value=""/>
+        <comment number="9" value=""/>
+      </title_block>
+    </sheet>
+  </design>
+  <components>
+    <comp ref="C401">
+      <value>100n / 16V</value>
+      <fields>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="RaceRemote_Permit" part="C" description="Unpolarized capacitor"/>
+      <property name="Sheetname" value="charge-permit"/>
+      <property name="Sheetfile" value="charge-permit.kicad_sch"/>
+      <property name="ki_keywords" value="cap capacitor"/>
+      <property name="ki_fp_filters" value="C_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>23ba86b7-58c8-5f2e-9679-977da961dcd8</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="C402">
+      <value>100n / 16V</value>
+      <fields>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="RaceRemote_Permit" part="C" description="Unpolarized capacitor"/>
+      <property name="Sheetname" value="charge-permit"/>
+      <property name="Sheetfile" value="charge-permit.kicad_sch"/>
+      <property name="ki_keywords" value="cap capacitor"/>
+      <property name="ki_fp_filters" value="C_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>95531e73-6608-5b28-ab95-1e714598a02f</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="C403">
+      <value>100n / 16V</value>
+      <fields>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="RaceRemote_Permit" part="C" description="Unpolarized capacitor"/>
+      <property name="Sheetname" value="charge-permit"/>
+      <property name="Sheetfile" value="charge-permit.kicad_sch"/>
+      <property name="ki_keywords" value="cap capacitor"/>
+      <property name="ki_fp_filters" value="C_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>b933c850-abc7-5746-aa29-6ce58c305d0a</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="J401">
+      <value>FROM AUX</value>
+      <fields>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="RaceRemote_Permit" part="Conn_01x02" description="Generic connector, single row, 01x02, script generated (kicad-library-utils/schlib/autogen/connector/)"/>
+      <property name="Sheetname" value="charge-permit"/>
+      <property name="Sheetfile" value="charge-permit.kicad_sch"/>
+      <property name="ki_keywords" value="connector"/>
+      <property name="ki_fp_filters" value="Connector*:*_1x??_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>50127a2a-c1e2-5734-b1bf-7334309fc122</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="J402">
+      <value>FAULT SOURCES</value>
+      <fields>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="RaceRemote_Permit" part="Conn_01x02" description="Generic connector, single row, 01x02, script generated (kicad-library-utils/schlib/autogen/connector/)"/>
+      <property name="Sheetname" value="charge-permit"/>
+      <property name="Sheetfile" value="charge-permit.kicad_sch"/>
+      <property name="ki_keywords" value="connector"/>
+      <property name="ki_fp_filters" value="Connector*:*_1x??_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>1330ae25-e5f7-50fe-bb95-b8b0454e1097</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="J403">
+      <value>MCU INTERFACE</value>
+      <fields>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="RaceRemote_Permit" part="Conn_01x04" description="Generic connector, single row, 01x04, script generated (kicad-library-utils/schlib/autogen/connector/)"/>
+      <property name="Sheetname" value="charge-permit"/>
+      <property name="Sheetfile" value="charge-permit.kicad_sch"/>
+      <property name="ki_keywords" value="connector"/>
+      <property name="ki_fp_filters" value="Connector*:*_1x??_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>4bff565f-a4d2-50fe-b277-680ff24713a9</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+            <pin num="3"/>
+            <pin num="4"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="J404">
+      <value>TO FUTURE GATE</value>
+      <fields>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="RaceRemote_Permit" part="Conn_01x02" description="Generic connector, single row, 01x02, script generated (kicad-library-utils/schlib/autogen/connector/)"/>
+      <property name="Sheetname" value="charge-permit"/>
+      <property name="Sheetfile" value="charge-permit.kicad_sch"/>
+      <property name="ki_keywords" value="connector"/>
+      <property name="ki_fp_filters" value="Connector*:*_1x??_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>d1aec571-f4c7-5702-b9b2-874ec0456202</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="R401">
+      <value>10k / 1%</value>
+      <fields>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="RaceRemote_Permit" part="R" description="Resistor"/>
+      <property name="Sheetname" value="charge-permit"/>
+      <property name="Sheetfile" value="charge-permit.kicad_sch"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <property name="ki_fp_filters" value="R_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>38f33f01-3aca-52ed-a87c-ae34485825bc</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="R402">
+      <value>10k / 1%</value>
+      <fields>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="RaceRemote_Permit" part="R" description="Resistor"/>
+      <property name="Sheetname" value="charge-permit"/>
+      <property name="Sheetfile" value="charge-permit.kicad_sch"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <property name="ki_fp_filters" value="R_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>b912138c-bc0d-5a6f-b005-46c7356bc03b</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="R403">
+      <value>47k / 1%</value>
+      <fields>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="RaceRemote_Permit" part="R" description="Resistor"/>
+      <property name="Sheetname" value="charge-permit"/>
+      <property name="Sheetfile" value="charge-permit.kicad_sch"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <property name="ki_fp_filters" value="R_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>be214956-9314-5da4-9823-e2b37e938a73</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="U401">
+      <value>SN74LVC1G74DCTR</value>
+      <datasheet>https://www.ti.com/lit/gpn/sn74lvc1g74</datasheet>
+      <fields>
+        <field name="Footprint"/>
+        <field name="Datasheet">https://www.ti.com/lit/gpn/sn74lvc1g74</field>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="RaceRemote_Permit" part="SN74LVC1G74DCT" description=""/>
+      <property name="Sheetname" value="charge-permit"/>
+      <property name="Sheetfile" value="charge-permit.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>05309c09-73a7-5a04-9c0d-e0b5e8374304</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+            <pin num="6"/>
+            <pin num="7"/>
+            <pin num="5"/>
+            <pin num="3"/>
+            <pin num="8"/>
+            <pin num="4"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="U402">
+      <value>SN74LVC2G17DCKR</value>
+      <datasheet>https://www.ti.com/lit/gpn/sn74lvc2g17</datasheet>
+      <fields>
+        <field name="Footprint"/>
+        <field name="Datasheet">https://www.ti.com/lit/gpn/sn74lvc2g17</field>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="RaceRemote_Permit" part="SN74LVC2G17DCK" description=""/>
+      <property name="Sheetname" value="charge-permit"/>
+      <property name="Sheetfile" value="charge-permit.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>8fd8ca9a-9514-5adf-9ba7-4fb3a5a4cc50</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="3"/>
+            <pin num="2"/>
+            <pin num="6"/>
+            <pin num="4"/>
+            <pin num="5"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="U403">
+      <value>TPS3808G33DBVR</value>
+      <datasheet>https://www.ti.com/lit/ds/symlink/tps3808.pdf</datasheet>
+      <fields>
+        <field name="Footprint"/>
+        <field name="Datasheet">https://www.ti.com/lit/ds/symlink/tps3808.pdf</field>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="RaceRemote_Permit" part="TPS3808G33DBV" description=""/>
+      <property name="Sheetname" value="charge-permit"/>
+      <property name="Sheetfile" value="charge-permit.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>96e31754-0555-5299-b063-c6cae9d9020e</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="5"/>
+            <pin num="3"/>
+            <pin num="2"/>
+            <pin num="1"/>
+            <pin num="4"/>
+            <pin num="6"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+  </components>
+  <libparts>
+    <libpart lib="RaceRemote_Permit" part="C">
+      <description>Unpolarized capacitor</description>
+      <footprints>
+        <fp>C_*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">C</field>
+        <field name="Value">C</field>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description">Unpolarized capacitor</field>
+      </fields>
+      <pins>
+        <pin num="1" name="" type="passive"/>
+        <pin num="2" name="" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="RaceRemote_Permit" part="Conn_01x02">
+      <description>Generic connector, single row, 01x02, script generated (kicad-library-utils/schlib/autogen/connector/)</description>
+      <footprints>
+        <fp>Connector*:*_1x??_*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">J</field>
+        <field name="Value">Conn_01x02</field>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description">Generic connector, single row, 01x02, script generated (kicad-library-utils/schlib/autogen/connector/)</field>
+      </fields>
+      <pins>
+        <pin num="1" name="Pin_1" type="passive"/>
+        <pin num="2" name="Pin_2" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="RaceRemote_Permit" part="Conn_01x04">
+      <description>Generic connector, single row, 01x04, script generated (kicad-library-utils/schlib/autogen/connector/)</description>
+      <footprints>
+        <fp>Connector*:*_1x??_*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">J</field>
+        <field name="Value">Conn_01x04</field>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description">Generic connector, single row, 01x04, script generated (kicad-library-utils/schlib/autogen/connector/)</field>
+      </fields>
+      <pins>
+        <pin num="1" name="Pin_1" type="passive"/>
+        <pin num="2" name="Pin_2" type="passive"/>
+        <pin num="3" name="Pin_3" type="passive"/>
+        <pin num="4" name="Pin_4" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="RaceRemote_Permit" part="R">
+      <description>Resistor</description>
+      <footprints>
+        <fp>R_*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">R</field>
+        <field name="Value">R</field>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description">Resistor</field>
+      </fields>
+      <pins>
+        <pin num="1" name="" type="passive"/>
+        <pin num="2" name="" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="RaceRemote_Permit" part="SN74LVC1G74DCT">
+      <fields>
+        <field name="Reference">U</field>
+        <field name="Value">SN74LVC1G74DCT</field>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <pins>
+        <pin num="1" name="CLK" type="input"/>
+        <pin num="2" name="D" type="input"/>
+        <pin num="3" name="~{Q}" type="output"/>
+        <pin num="4" name="GND" type="power_in"/>
+        <pin num="5" name="Q" type="output"/>
+        <pin num="6" name="~{CLR}" type="input"/>
+        <pin num="7" name="~{PRE}" type="input"/>
+        <pin num="8" name="VCC" type="power_in"/>
+      </pins>
+    </libpart>
+    <libpart lib="RaceRemote_Permit" part="SN74LVC2G17DCK">
+      <fields>
+        <field name="Reference">U</field>
+        <field name="Value">SN74LVC2G17DCK</field>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <pins>
+        <pin num="1" name="1A" type="input"/>
+        <pin num="2" name="GND" type="power_in"/>
+        <pin num="3" name="2A" type="input"/>
+        <pin num="4" name="2Y" type="output"/>
+        <pin num="5" name="VCC" type="power_in"/>
+        <pin num="6" name="1Y" type="output"/>
+      </pins>
+    </libpart>
+    <libpart lib="RaceRemote_Permit" part="TPS3808G33DBV">
+      <fields>
+        <field name="Reference">U</field>
+        <field name="Value">TPS3808G33DBV</field>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <pins>
+        <pin num="1" name="~{RESET}" type="open_collector"/>
+        <pin num="2" name="GND" type="power_in"/>
+        <pin num="3" name="~{MR}" type="input"/>
+        <pin num="4" name="CT" type="input"/>
+        <pin num="5" name="SENSE" type="input"/>
+        <pin num="6" name="VDD" type="power_in"/>
+      </pins>
+    </libpart>
+  </libparts>
+  <libraries>
+    <library logical="RaceRemote_Permit">
+      <uri>${KIPRJMOD}/RaceRemote_Permit.kicad_sym</uri>
+    </library>
+  </libraries>
+  <nets>
+    <net code="1" name="ARM" class="Default">
+      <node ref="J403" pin="1" pinfunction="Pin_1_1" pintype="passive"/>
+      <node ref="R402" pin="1" pintype="passive"/>
+      <node ref="U402" pin="3" pinfunction="2A_3" pintype="input"/>
+    </net>
+    <net code="2" name="AUX_3V3" class="Default">
+      <node ref="C401" pin="1" pintype="passive"/>
+      <node ref="C402" pin="1" pintype="passive"/>
+      <node ref="C403" pin="1" pintype="passive"/>
+      <node ref="J401" pin="1" pinfunction="Pin_1_1" pintype="passive"/>
+      <node ref="R401" pin="1" pintype="passive"/>
+      <node ref="U401" pin="2" pinfunction="D_2" pintype="input"/>
+      <node ref="U401" pin="7" pinfunction="~{PRE}_7" pintype="input"/>
+      <node ref="U401" pin="8" pinfunction="VCC_8" pintype="power_in"/>
+      <node ref="U402" pin="5" pinfunction="VCC_5" pintype="power_in"/>
+      <node ref="U403" pin="3" pinfunction="~{MR}_3" pintype="input"/>
+      <node ref="U403" pin="5" pinfunction="SENSE_5" pintype="input"/>
+      <node ref="U403" pin="6" pinfunction="VDD_6" pintype="power_in"/>
+    </net>
+    <net code="3" name="CLK" class="Default">
+      <node ref="U401" pin="1" pinfunction="CLK_1" pintype="input"/>
+      <node ref="U402" pin="4" pinfunction="2Y_4" pintype="output"/>
+    </net>
+    <net code="4" name="CLR_N" class="Default">
+      <node ref="U401" pin="6" pinfunction="~{CLR}_6" pintype="input"/>
+      <node ref="U402" pin="6" pinfunction="1Y_6" pintype="output"/>
+    </net>
+    <net code="5" name="FAULT_BUS_N" class="Default">
+      <node ref="J402" pin="1" pinfunction="Pin_1_1" pintype="passive"/>
+      <node ref="J403" pin="2" pinfunction="Pin_2_2" pintype="passive"/>
+      <node ref="R401" pin="2" pintype="passive"/>
+      <node ref="U402" pin="1" pinfunction="1A_1" pintype="input"/>
+      <node ref="U403" pin="1" pinfunction="~{RESET}_1" pintype="open_collector"/>
+    </net>
+    <net code="6" name="PERMIT_Q" class="Default">
+      <node ref="J403" pin="3" pinfunction="Pin_3_3" pintype="passive"/>
+      <node ref="J404" pin="1" pinfunction="Pin_1_1" pintype="passive"/>
+      <node ref="R403" pin="1" pintype="passive"/>
+      <node ref="U401" pin="5" pinfunction="Q_5" pintype="output"/>
+    </net>
+    <net code="7" name="USB_GND" class="Default">
+      <node ref="C401" pin="2" pintype="passive"/>
+      <node ref="C402" pin="2" pintype="passive"/>
+      <node ref="C403" pin="2" pintype="passive"/>
+      <node ref="J401" pin="2" pinfunction="Pin_2_2" pintype="passive"/>
+      <node ref="J402" pin="2" pinfunction="Pin_2_2" pintype="passive"/>
+      <node ref="J403" pin="4" pinfunction="Pin_4_4" pintype="passive"/>
+      <node ref="J404" pin="2" pinfunction="Pin_2_2" pintype="passive"/>
+      <node ref="R402" pin="2" pintype="passive"/>
+      <node ref="R403" pin="2" pintype="passive"/>
+      <node ref="U401" pin="4" pinfunction="GND_4" pintype="power_in"/>
+      <node ref="U402" pin="2" pinfunction="GND_2" pintype="power_in"/>
+      <node ref="U403" pin="2" pinfunction="GND_2" pintype="power_in"/>
+    </net>
+    <net code="8" name="unconnected-(U401-~{Q}-Pad3)" class="Default">
+      <node ref="U401" pin="3" pinfunction="~{Q}_3" pintype="output+no_connect"/>
+    </net>
+    <net code="9" name="unconnected-(U403-CT-Pad4)" class="Default">
+      <node ref="U403" pin="4" pinfunction="CT_4" pintype="input+no_connect"/>
+    </net>
+  </nets>
+</export>

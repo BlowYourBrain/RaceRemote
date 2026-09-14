@@ -1,0 +1,369 @@
+{
+  "date": "2026-09-14",
+  "contract": "CHARGE-PERMIT-01 v0.1",
+  "kicad_version": "10.0.6",
+  "erc_violations": 0,
+  "ic_pins_checked": 20,
+  "all_pins_checked": 42,
+  "logical_components": 13,
+  "fault_injections": [
+    {
+      "mutation": "clear_bypassed_to_aux",
+      "detected": true,
+      "failed_contract": "Connectivity mismatch: {(('U401', '6'), 'AUX_3V3'), (('U401', '6'), 'CLR_N')}"
+    },
+    {
+      "mutation": "data_tied_low",
+      "detected": true,
+      "failed_contract": "Connectivity mismatch: {(('U401', '2'), 'AUX_3V3'), (('U401', '2'), 'USB_GND')}"
+    },
+    {
+      "mutation": "supervisor_senses_ground",
+      "detected": true,
+      "failed_contract": "Connectivity mismatch: {(('U403', '5'), 'USB_GND'), (('U403', '5'), 'AUX_3V3')}"
+    },
+    {
+      "mutation": "output_connector_uses_clock",
+      "detected": true,
+      "failed_contract": "Connectivity mismatch: {(('J404', '1'), 'CLK'), (('J404', '1'), 'PERMIT_Q')}"
+    }
+  ],
+  "ideal_logic_sequences": [
+    {
+      "scenario": "unknown_without_startup_reset",
+      "initial_q": null,
+      "events": [
+        {
+          "arm": false
+        }
+      ],
+      "observed_q": [
+        null
+      ]
+    },
+    {
+      "scenario": "startup_reset_from_None",
+      "initial_q": null,
+      "events": [
+        {
+          "arm": true,
+          "supervisor": true
+        },
+        {
+          "arm": true
+        },
+        {
+          "arm": false
+        },
+        {
+          "arm": true
+        }
+      ],
+      "observed_q": [
+        0,
+        0,
+        0,
+        1
+      ]
+    },
+    {
+      "scenario": "startup_reset_from_0",
+      "initial_q": 0,
+      "events": [
+        {
+          "arm": true,
+          "supervisor": true
+        },
+        {
+          "arm": true
+        },
+        {
+          "arm": false
+        },
+        {
+          "arm": true
+        }
+      ],
+      "observed_q": [
+        0,
+        0,
+        0,
+        1
+      ]
+    },
+    {
+      "scenario": "startup_reset_from_1",
+      "initial_q": 1,
+      "events": [
+        {
+          "arm": true,
+          "supervisor": true
+        },
+        {
+          "arm": true
+        },
+        {
+          "arm": false
+        },
+        {
+          "arm": true
+        }
+      ],
+      "observed_q": [
+        0,
+        0,
+        0,
+        1
+      ]
+    },
+    {
+      "scenario": "supervisor_clears_and_release_with_stuck_high_stays_off",
+      "initial_q": null,
+      "events": [
+        {
+          "arm": false,
+          "supervisor": true
+        },
+        {
+          "arm": false
+        },
+        {
+          "arm": true
+        },
+        {
+          "arm": true,
+          "supervisor": true
+        },
+        {
+          "arm": true
+        },
+        {
+          "arm": true
+        }
+      ],
+      "observed_q": [
+        0,
+        0,
+        1,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "scenario": "external_clears_and_release_with_stuck_high_stays_off",
+      "initial_q": null,
+      "events": [
+        {
+          "arm": false,
+          "supervisor": true
+        },
+        {
+          "arm": false
+        },
+        {
+          "arm": true
+        },
+        {
+          "arm": true,
+          "external": true
+        },
+        {
+          "arm": true
+        },
+        {
+          "arm": true
+        }
+      ],
+      "observed_q": [
+        0,
+        0,
+        1,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "scenario": "revoke_clears_and_release_with_stuck_high_stays_off",
+      "initial_q": null,
+      "events": [
+        {
+          "arm": false,
+          "supervisor": true
+        },
+        {
+          "arm": false
+        },
+        {
+          "arm": true
+        },
+        {
+          "arm": true,
+          "revoke": true
+        },
+        {
+          "arm": true
+        },
+        {
+          "arm": true
+        }
+      ],
+      "observed_q": [
+        0,
+        0,
+        1,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "scenario": "fault_wins_over_simultaneous_arm",
+      "initial_q": null,
+      "events": [
+        {
+          "arm": false,
+          "supervisor": true
+        },
+        {
+          "arm": true,
+          "external": true
+        },
+        {
+          "arm": true
+        },
+        {
+          "arm": false
+        },
+        {
+          "arm": true
+        }
+      ],
+      "observed_q": [
+        0,
+        0,
+        0,
+        0,
+        1
+      ]
+    },
+    {
+      "scenario": "stuck_low_cannot_rearm",
+      "initial_q": null,
+      "events": [
+        {
+          "arm": false,
+          "external": true
+        },
+        {
+          "arm": false
+        },
+        {
+          "arm": false
+        }
+      ],
+      "observed_q": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "scenario": "one_fault_released_while_another_holds",
+      "initial_q": null,
+      "events": [
+        {
+          "arm": false,
+          "external": true,
+          "revoke": true
+        },
+        {
+          "arm": false,
+          "external": true
+        },
+        {
+          "arm": true,
+          "external": true
+        },
+        {
+          "arm": true
+        }
+      ],
+      "observed_q": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "scenario": "limitation_new_edges_can_rearm_after_all_faults_release",
+      "initial_q": null,
+      "events": [
+        {
+          "arm": false,
+          "external": true
+        },
+        {
+          "arm": false
+        },
+        {
+          "arm": true
+        },
+        {
+          "arm": false,
+          "external": true
+        },
+        {
+          "arm": false
+        },
+        {
+          "arm": true
+        }
+      ],
+      "observed_q": [
+        0,
+        0,
+        1,
+        0,
+        0,
+        1
+      ]
+    }
+  ],
+  "arithmetic": {
+    "fault_pullup_max_A": 0.00036363636363636367,
+    "arm_pulldown_max_A": 0.00036363636363636367,
+    "q_load_max_A_with_proposed_20uA_external": 9.736943907156672e-05,
+    "q_voltage_from_10uA_Ioff_at_VCC_zero_V": 0.4747,
+    "supervisor_falling_threshold_full_temperature_min_V": 3.0239499999999997,
+    "supervisor_falling_threshold_full_temperature_max_V": 3.1160499999999995,
+    "supervisor_ct_open_release_ms_min_typ_max": [
+      12,
+      20,
+      28
+    ],
+    "scope": "Separate datasheet conditions and assumed resistor tolerance. No analog simulation, whole AUX budget, output threshold acceptance, fast supply-fall or total turnoff proof."
+  },
+  "sha256": {
+    "hardware/charge-permit/charge-permit.kicad_sch": "7951c92e564736b35f8ac078b37e22abfe2a02618afe8e71cbf3cbb6f999eced",
+    "hardware/charge-permit/charge-permit.kicad_pro": "1486176357f81a1e7c03fe66e5cb59d71759bed0f8557e6b8a776fe5035b3d85",
+    "hardware/charge-permit/RaceRemote_Permit.kicad_sym": "7754d4df427d2fd5b8108f3a4471e006e50dfc2dabd97885064ce7fc00e6336f",
+    "hardware/charge-permit/charge-permit.net": "8e57dff00b4246899e589e994a8137a924911acbf85c3ad7cd167a8008c7088c",
+    "hardware/charge-permit/charge-permit.pdf": "96517df6be382bccaecd4f088ca05284b4a96977484d64232a24bb71f554a9f6",
+    "hardware/charge-permit/bom.csv": "2c119b3c6bc4341d67dfba0f230471a95959153f6c8f74d449d2bc7f578a3a1c",
+    "docs/evidence/charge-permit-erc.json": "d88bda529f55fe448f3c0bd35c8d1919ac41a0e91dd950cc551bbc92480ab856",
+    "tools/build_charge_permit.py": "55919f73c6859b0aafa903fd284a94e15d93bcb0b8bb7a9201b8e2f5d6407414",
+    "tools/verify_charge_permit.py": "a488ce2a02a6597d17cdb97a0623c59d427850ae94f9c2195e0c6d7079a0fc28",
+    "tools/verify_usb_detector.py": "68d2ebf584a14c0aa0192de131e2af41f19f1ccb08c81a478b64a3895b83996a",
+    "tools/build_usb_port_schematic.py": "96b38c6c6cac91787961c1f4be5152a5175b215b0812dd1e0153f1d6a89addfa"
+  },
+  "not_verified": [
+    "Startup/deep brownout/metastability/pulse widths and real fault timing",
+    "MCU firmware, independent watchdog and INA300 circuits",
+    "Persistent error versus incorrectly repeated MCU ARM edges",
+    "CD/CE/SOURCE_ALLOW actuator, charge current interruption and residual energy",
+    "Footprints, PCB, assembly, complete assembled cost and battery acceptance"
+  ]
+}

@@ -1,0 +1,930 @@
+(kicad_sch (version 20250901) (generator "raceremote")
+(uuid "dee5d6a9-d751-5a9d-94e1-a01dfcba550a") (paper "A3")
+(title_block (title "RaceRemote - hardware permit latch PROPOSAL") (date "2026-09-14") (rev "0.1") (company "vea.raceremote"))
+(lib_symbols (symbol "RaceRemote_Permit:R"
+		(pin_numbers
+			(hide yes)
+		)
+		(pin_names
+			(offset 0)
+		)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(duplicate_pin_numbers_are_jumpers no)
+		(property "Reference" "R"
+			(at 2.032 0 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "R"
+			(at 0 0 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at -1.778 0 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Resistor"
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "ki_keywords" "R res resistor"
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "ki_fp_filters" "R_*"
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(symbol "R_0_1"
+			(rectangle
+				(start -1.016 -2.54)
+				(end 1.016 2.54)
+				(stroke
+					(width 0.254)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+		)
+		(symbol "R_1_1"
+			(pin passive line
+				(at 0 3.81 270)
+				(length 1.27)
+				(name ""
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "1"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin passive line
+				(at 0 -3.81 90)
+				(length 1.27)
+				(name ""
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "2"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+		)
+		(embedded_fonts no)
+	)
+(symbol "RaceRemote_Permit:C"
+		(pin_numbers
+			(hide yes)
+		)
+		(pin_names
+			(offset 0.254)
+		)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(duplicate_pin_numbers_are_jumpers no)
+		(property "Reference" "C"
+			(at 0.635 2.54 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "C"
+			(at 0.635 -2.54 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" ""
+			(at 0.9652 -3.81 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Unpolarized capacitor"
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "ki_keywords" "cap capacitor"
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "ki_fp_filters" "C_*"
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(symbol "C_0_1"
+			(polyline
+				(pts
+					(xy -2.032 0.762) (xy 2.032 0.762)
+				)
+				(stroke
+					(width 0.508)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(polyline
+				(pts
+					(xy -2.032 -0.762) (xy 2.032 -0.762)
+				)
+				(stroke
+					(width 0.508)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+		)
+		(symbol "C_1_1"
+			(pin passive line
+				(at 0 3.81 270)
+				(length 2.794)
+				(name ""
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "1"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin passive line
+				(at 0 -3.81 90)
+				(length 2.794)
+				(name ""
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "2"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+		)
+		(embedded_fonts no)
+	)
+(symbol "RaceRemote_Permit:Conn_01x02"
+		(pin_names
+			(offset 1.016)
+			(hide yes)
+		)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(duplicate_pin_numbers_are_jumpers no)
+		(property "Reference" "J"
+			(at 0 2.54 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "Conn_01x02"
+			(at 0 -5.08 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Generic connector, single row, 01x02, script generated (kicad-library-utils/schlib/autogen/connector/)"
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "ki_keywords" "connector"
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "ki_fp_filters" "Connector*:*_1x??_*"
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(symbol "Conn_01x02_1_1"
+			(rectangle
+				(start -1.27 1.27)
+				(end 1.27 -3.81)
+				(stroke
+					(width 0.254)
+					(type default)
+				)
+				(fill
+					(type background)
+				)
+			)
+			(rectangle
+				(start -1.27 0.127)
+				(end 0 -0.127)
+				(stroke
+					(width 0.1524)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(rectangle
+				(start -1.27 -2.413)
+				(end 0 -2.667)
+				(stroke
+					(width 0.1524)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(pin passive line
+				(at -5.08 0 0)
+				(length 3.81)
+				(name "Pin_1"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "1"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin passive line
+				(at -5.08 -2.54 0)
+				(length 3.81)
+				(name "Pin_2"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "2"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+		)
+		(embedded_fonts no)
+	)
+(symbol "RaceRemote_Permit:Conn_01x04"
+		(pin_names
+			(offset 1.016)
+			(hide yes)
+		)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(duplicate_pin_numbers_are_jumpers no)
+		(property "Reference" "J"
+			(at 0 5.08 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "Conn_01x04"
+			(at 0 -7.62 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Generic connector, single row, 01x04, script generated (kicad-library-utils/schlib/autogen/connector/)"
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "ki_keywords" "connector"
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "ki_fp_filters" "Connector*:*_1x??_*"
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(symbol "Conn_01x04_1_1"
+			(rectangle
+				(start -1.27 3.81)
+				(end 1.27 -6.35)
+				(stroke
+					(width 0.254)
+					(type default)
+				)
+				(fill
+					(type background)
+				)
+			)
+			(rectangle
+				(start -1.27 2.667)
+				(end 0 2.413)
+				(stroke
+					(width 0.1524)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(rectangle
+				(start -1.27 0.127)
+				(end 0 -0.127)
+				(stroke
+					(width 0.1524)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(rectangle
+				(start -1.27 -2.413)
+				(end 0 -2.667)
+				(stroke
+					(width 0.1524)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(rectangle
+				(start -1.27 -4.953)
+				(end 0 -5.207)
+				(stroke
+					(width 0.1524)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(pin passive line
+				(at -5.08 2.54 0)
+				(length 3.81)
+				(name "Pin_1"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "1"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin passive line
+				(at -5.08 0 0)
+				(length 3.81)
+				(name "Pin_2"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "2"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin passive line
+				(at -5.08 -2.54 0)
+				(length 3.81)
+				(name "Pin_3"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "3"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin passive line
+				(at -5.08 -5.08 0)
+				(length 3.81)
+				(name "Pin_4"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "4"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+		)
+		(embedded_fonts no)
+	)
+(symbol "RaceRemote_Permit:PWR_FLAG"
+		(power global)
+		(pin_numbers
+			(hide yes)
+		)
+		(pin_names
+			(offset 0)
+			(hide yes)
+		)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(duplicate_pin_numbers_are_jumpers no)
+		(property "Reference" "#FLG"
+			(at 0 1.905 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "PWR_FLAG"
+			(at 0 3.81 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Special symbol for telling ERC where power comes from"
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "ki_keywords" "flag power"
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(symbol "PWR_FLAG_0_0"
+			(pin power_out line
+				(at 0 0 90)
+				(length 0)
+				(name ""
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "1"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+		)
+		(symbol "PWR_FLAG_0_1"
+			(polyline
+				(pts
+					(xy 0 0) (xy 0 1.27) (xy -1.016 1.905) (xy 0 2.54) (xy 1.016 1.905) (xy 0 1.27)
+				)
+				(stroke
+					(width 0)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+		)
+		(embedded_fonts no)
+	)
+(symbol "RaceRemote_Permit:SN74LVC1G74DCT" (pin_names (offset 1.016)) (in_bom yes) (on_board yes)
+(property "Reference" "U" (at 0 27.94 0) (effects (font (size 1.27 1.27))))
+(property "Value" "SN74LVC1G74DCT" (at 0 30.48 0) (effects (font (size 1.27 1.27))))
+(property "Footprint" "" (at 0 0 0) (effects (font (size 1.27 1.27)) hide))
+(symbol "SN74LVC1G74DCT_0_1" (rectangle (start -17.78 25.4) (end 17.78 -17.78) (stroke (width 0.254) (type default)) (fill (type background))))
+(symbol "SN74LVC1G74DCT_1_1"
+(pin input line (at -25.4 20.32 0) (length 7.62) (name "CLK" (effects (font (size 1.27 1.27)))) (number "1" (effects (font (size 1.27 1.27)))))
+(pin input line (at -25.4 10.16 0) (length 7.62) (name "D" (effects (font (size 1.27 1.27)))) (number "2" (effects (font (size 1.27 1.27)))))
+(pin input line (at -25.4 0 0) (length 7.62) (name "~{CLR}" (effects (font (size 1.27 1.27)))) (number "6" (effects (font (size 1.27 1.27)))))
+(pin input line (at -25.4 -10.16 0) (length 7.62) (name "~{PRE}" (effects (font (size 1.27 1.27)))) (number "7" (effects (font (size 1.27 1.27)))))
+(pin output line (at 25.4 20.32 180) (length 7.62) (name "Q" (effects (font (size 1.27 1.27)))) (number "5" (effects (font (size 1.27 1.27)))))
+(pin output line (at 25.4 10.16 180) (length 7.62) (name "~{Q}" (effects (font (size 1.27 1.27)))) (number "3" (effects (font (size 1.27 1.27)))))
+(pin power_in line (at 25.4 0 180) (length 7.62) (name "VCC" (effects (font (size 1.27 1.27)))) (number "8" (effects (font (size 1.27 1.27)))))
+(pin power_in line (at 25.4 -10.16 180) (length 7.62) (name "GND" (effects (font (size 1.27 1.27)))) (number "4" (effects (font (size 1.27 1.27)))))))
+(symbol "RaceRemote_Permit:SN74LVC2G17DCK" (pin_names (offset 1.016)) (in_bom yes) (on_board yes)
+(property "Reference" "U" (at 0 27.94 0) (effects (font (size 1.27 1.27))))
+(property "Value" "SN74LVC2G17DCK" (at 0 30.48 0) (effects (font (size 1.27 1.27))))
+(property "Footprint" "" (at 0 0 0) (effects (font (size 1.27 1.27)) hide))
+(symbol "SN74LVC2G17DCK_0_1" (rectangle (start -17.78 25.4) (end 17.78 -17.78) (stroke (width 0.254) (type default)) (fill (type background))))
+(symbol "SN74LVC2G17DCK_1_1"
+(pin input line (at -25.4 20.32 0) (length 7.62) (name "1A" (effects (font (size 1.27 1.27)))) (number "1" (effects (font (size 1.27 1.27)))))
+(pin input line (at -25.4 10.16 0) (length 7.62) (name "2A" (effects (font (size 1.27 1.27)))) (number "3" (effects (font (size 1.27 1.27)))))
+(pin power_in line (at -25.4 0 0) (length 7.62) (name "GND" (effects (font (size 1.27 1.27)))) (number "2" (effects (font (size 1.27 1.27)))))
+(pin output line (at 25.4 20.32 180) (length 7.62) (name "1Y" (effects (font (size 1.27 1.27)))) (number "6" (effects (font (size 1.27 1.27)))))
+(pin output line (at 25.4 10.16 180) (length 7.62) (name "2Y" (effects (font (size 1.27 1.27)))) (number "4" (effects (font (size 1.27 1.27)))))
+(pin power_in line (at 25.4 0 180) (length 7.62) (name "VCC" (effects (font (size 1.27 1.27)))) (number "5" (effects (font (size 1.27 1.27)))))))
+(symbol "RaceRemote_Permit:TPS3808G33DBV" (pin_names (offset 1.016)) (in_bom yes) (on_board yes)
+(property "Reference" "U" (at 0 27.94 0) (effects (font (size 1.27 1.27))))
+(property "Value" "TPS3808G33DBV" (at 0 30.48 0) (effects (font (size 1.27 1.27))))
+(property "Footprint" "" (at 0 0 0) (effects (font (size 1.27 1.27)) hide))
+(symbol "TPS3808G33DBV_0_1" (rectangle (start -17.78 25.4) (end 17.78 -17.78) (stroke (width 0.254) (type default)) (fill (type background))))
+(symbol "TPS3808G33DBV_1_1"
+(pin input line (at -25.4 20.32 0) (length 7.62) (name "SENSE" (effects (font (size 1.27 1.27)))) (number "5" (effects (font (size 1.27 1.27)))))
+(pin input line (at -25.4 10.16 0) (length 7.62) (name "~{MR}" (effects (font (size 1.27 1.27)))) (number "3" (effects (font (size 1.27 1.27)))))
+(pin power_in line (at -25.4 0 0) (length 7.62) (name "GND" (effects (font (size 1.27 1.27)))) (number "2" (effects (font (size 1.27 1.27)))))
+(pin open_collector line (at 25.4 20.32 180) (length 7.62) (name "~{RESET}" (effects (font (size 1.27 1.27)))) (number "1" (effects (font (size 1.27 1.27)))))
+(pin input line (at 25.4 10.16 180) (length 7.62) (name "CT" (effects (font (size 1.27 1.27)))) (number "4" (effects (font (size 1.27 1.27)))))
+(pin power_in line (at 25.4 0 180) (length 7.62) (name "VDD" (effects (font (size 1.27 1.27)))) (number "6" (effects (font (size 1.27 1.27))))))))
+(symbol (lib_id "RaceRemote_Permit:TPS3808G33DBV") (at 76.2 88.9 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid "96e31754-0555-5299-b063-c6cae9d9020e") (property "Reference" "U403" (at 76.2 58.42 0) (effects (font (size 1.27 1.27))))(property "Value" "TPS3808G33DBVR" (at 76.2 55.88 0) (effects (font (size 1.27 1.27))))(property "Footprint" "" (at 76.2 88.9 0) (hide yes) (effects (font (size 1.27 1.27))))(property "Datasheet" "https://www.ti.com/lit/ds/symlink/tps3808.pdf" (at 76.2 88.9 0) (hide yes) (effects (font (size 1.27 1.27))))(pin "5" (uuid "f2b7f7de-b0f7-511c-8134-dad4237a1ddc"))(pin "3" (uuid "b1632194-5bd4-57ca-a7ff-3f7fdce30589"))(pin "2" (uuid "9fae7bae-5e73-56e7-bd86-e5a7cfedf882"))(pin "1" (uuid "6c95b990-7730-5d36-a3df-534ff0d1eabd"))(pin "4" (uuid "b2ccb9c7-69a3-5c91-9cad-a7966794a115"))(pin "6" (uuid "a78058c0-9ac6-565c-8c9b-0735908a7142"))(instances (project "charge-permit" (path "/dee5d6a9-d751-5a9d-94e1-a01dfcba550a" (reference "U403") (unit 1)))))
+(symbol (lib_id "RaceRemote_Permit:SN74LVC2G17DCK") (at 203.2 88.9 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid "8fd8ca9a-9514-5adf-9ba7-4fb3a5a4cc50") (property "Reference" "U402" (at 203.2 58.42 0) (effects (font (size 1.27 1.27))))(property "Value" "SN74LVC2G17DCKR" (at 203.2 55.88 0) (effects (font (size 1.27 1.27))))(property "Footprint" "" (at 203.2 88.9 0) (hide yes) (effects (font (size 1.27 1.27))))(property "Datasheet" "https://www.ti.com/lit/gpn/sn74lvc2g17" (at 203.2 88.9 0) (hide yes) (effects (font (size 1.27 1.27))))(pin "1" (uuid "1d4499b9-a0b6-5ccd-a785-bb04fdcdf842"))(pin "3" (uuid "65365427-d86f-5866-b849-b84e064f3fb8"))(pin "2" (uuid "1774ce33-c715-5a89-b45b-c4e211cc6fd9"))(pin "6" (uuid "454260eb-86c0-569d-b280-e501e40b3c18"))(pin "4" (uuid "fa4b9366-7337-506c-9654-38ca3ea71f30"))(pin "5" (uuid "f4df88c8-2b80-5eb2-a12e-a873f5380530"))(instances (project "charge-permit" (path "/dee5d6a9-d751-5a9d-94e1-a01dfcba550a" (reference "U402") (unit 1)))))
+(symbol (lib_id "RaceRemote_Permit:SN74LVC1G74DCT") (at 330.2 88.9 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid "05309c09-73a7-5a04-9c0d-e0b5e8374304") (property "Reference" "U401" (at 330.2 58.42 0) (effects (font (size 1.27 1.27))))(property "Value" "SN74LVC1G74DCTR" (at 330.2 55.88 0) (effects (font (size 1.27 1.27))))(property "Footprint" "" (at 330.2 88.9 0) (hide yes) (effects (font (size 1.27 1.27))))(property "Datasheet" "https://www.ti.com/lit/gpn/sn74lvc1g74" (at 330.2 88.9 0) (hide yes) (effects (font (size 1.27 1.27))))(pin "1" (uuid "dfffe0d4-ba80-5f3b-9458-7046f8f6fa67"))(pin "2" (uuid "b7efbf5f-a2ff-598a-b295-7ec2b874c025"))(pin "6" (uuid "b372f036-2c28-538b-8f32-c9ca9576b114"))(pin "7" (uuid "cbf56862-0045-5535-aa10-d45a3913b840"))(pin "5" (uuid "36164b9e-7ad3-5ca1-a06f-f79016416b4f"))(pin "3" (uuid "9f03a457-f17b-5fef-a2d2-4fdbfcf6d914"))(pin "8" (uuid "cd073d95-fe6f-5f50-a66b-77d22a8ac592"))(pin "4" (uuid "833523e7-5287-53c3-985f-859af71de53e"))(instances (project "charge-permit" (path "/dee5d6a9-d751-5a9d-94e1-a01dfcba550a" (reference "U401") (unit 1)))))
+(wire (pts (xy 50.8 68.58) (xy 43.18 68.58)) (stroke (width 0) (type default)) (uuid "c342e3e8-0773-5316-997b-a904fa7ec83a"))
+(global_label "AUX_3V3" (shape passive) (at 43.18 68.58 180) (effects (font (size 1 1)) (justify right)) (uuid "5a145d8d-eb2d-59f5-8fbf-73b5b7e987c3"))
+(wire (pts (xy 50.8 78.74) (xy 43.18 78.74)) (stroke (width 0) (type default)) (uuid "7fc6a1b8-f643-5c65-9283-fcfe8c298f6a"))
+(global_label "AUX_3V3" (shape passive) (at 43.18 78.74 180) (effects (font (size 1 1)) (justify right)) (uuid "2a37a502-31f6-5b27-84c6-4632b8a1b169"))
+(wire (pts (xy 50.8 88.9) (xy 43.18 88.9)) (stroke (width 0) (type default)) (uuid "5262f905-9aba-53d0-a059-4966c9c9db46"))
+(global_label "USB_GND" (shape passive) (at 43.18 88.9 180) (effects (font (size 1 1)) (justify right)) (uuid "b30c4424-b350-5fbd-a556-e879dfd5938e"))
+(wire (pts (xy 101.6 68.58) (xy 109.22 68.58)) (stroke (width 0) (type default)) (uuid "14438328-4e77-5f5d-820a-8078ce4218ba"))
+(global_label "FAULT_BUS_N" (shape passive) (at 109.22 68.58 0) (effects (font (size 1 1)) (justify left)) (uuid "13609bb1-cd90-5f0f-9700-1196190c79f8"))
+(wire (pts (xy 101.6 88.9) (xy 109.22 88.9)) (stroke (width 0) (type default)) (uuid "be3947d2-c937-52b5-a9cc-0c9bfda5d544"))
+(global_label "AUX_3V3" (shape passive) (at 109.22 88.9 0) (effects (font (size 1 1)) (justify left)) (uuid "e70afda9-fda1-5b52-8b22-1a69ec625178"))
+(wire (pts (xy 177.8 68.58) (xy 170.18 68.58)) (stroke (width 0) (type default)) (uuid "efaca0a6-d7fc-5fb1-8f3c-e1676789fdc4"))
+(global_label "FAULT_BUS_N" (shape passive) (at 170.18 68.58 180) (effects (font (size 1 1)) (justify right)) (uuid "01aab376-dd74-5945-853b-a7d1bdb0480a"))
+(wire (pts (xy 177.8 78.74) (xy 170.18 78.74)) (stroke (width 0) (type default)) (uuid "45a2055f-3d16-56f7-90d4-1f08f077770f"))
+(global_label "ARM" (shape passive) (at 170.18 78.74 180) (effects (font (size 1 1)) (justify right)) (uuid "c3fb99c7-e05d-592c-8c35-3292b24a8875"))
+(wire (pts (xy 177.8 88.9) (xy 170.18 88.9)) (stroke (width 0) (type default)) (uuid "5b51b6e7-63f9-5d26-bcf2-ca3c4997542b"))
+(global_label "USB_GND" (shape passive) (at 170.18 88.9 180) (effects (font (size 1 1)) (justify right)) (uuid "4e566357-9d8e-51f9-a6b7-4ab5c92c895a"))
+(wire (pts (xy 228.6 68.58) (xy 236.22 68.58)) (stroke (width 0) (type default)) (uuid "9007c38c-04ed-5d28-98b9-3e388642ced9"))
+(global_label "CLR_N" (shape passive) (at 236.22 68.58 0) (effects (font (size 1 1)) (justify left)) (uuid "494d690a-f92d-562c-ae5e-bb98d9c97317"))
+(wire (pts (xy 228.6 78.74) (xy 236.22 78.74)) (stroke (width 0) (type default)) (uuid "e446f63a-0f7f-57f0-8a84-589bbde8ab47"))
+(global_label "CLK" (shape passive) (at 236.22 78.74 0) (effects (font (size 1 1)) (justify left)) (uuid "919d5425-6ad4-5a40-bf5e-40faf0bdfa5c"))
+(wire (pts (xy 228.6 88.9) (xy 236.22 88.9)) (stroke (width 0) (type default)) (uuid "8424738e-627e-508a-9629-607d0899fc69"))
+(global_label "AUX_3V3" (shape passive) (at 236.22 88.9 0) (effects (font (size 1 1)) (justify left)) (uuid "d4cdfe8d-a71d-5c5a-9858-880aeef65896"))
+(wire (pts (xy 304.8 68.58) (xy 297.18 68.58)) (stroke (width 0) (type default)) (uuid "d9ef71d5-5407-5fe5-b0f2-5e8954d44d60"))
+(global_label "CLK" (shape passive) (at 297.18 68.58 180) (effects (font (size 1 1)) (justify right)) (uuid "d49664c2-3a94-50b2-878d-2545fd26a91c"))
+(wire (pts (xy 304.8 78.74) (xy 297.18 78.74)) (stroke (width 0) (type default)) (uuid "32a0d9af-a002-5e38-8391-0ab498b2bbfc"))
+(global_label "AUX_3V3" (shape passive) (at 297.18 78.74 180) (effects (font (size 1 1)) (justify right)) (uuid "99d96980-1cb8-58c1-a7c4-16db183439ff"))
+(wire (pts (xy 304.8 88.9) (xy 297.18 88.9)) (stroke (width 0) (type default)) (uuid "b5fb83e3-70e7-5478-b275-2ddf156fb6da"))
+(global_label "CLR_N" (shape passive) (at 297.18 88.9 180) (effects (font (size 1 1)) (justify right)) (uuid "91ad7961-c485-536a-b101-d383acb51de3"))
+(wire (pts (xy 304.8 99.06) (xy 297.18 99.06)) (stroke (width 0) (type default)) (uuid "b2236167-4ce1-54f2-8a60-353842137046"))
+(global_label "AUX_3V3" (shape passive) (at 297.18 99.06 180) (effects (font (size 1 1)) (justify right)) (uuid "cd8495ef-6f00-59d7-8fde-2a4095f3f505"))
+(wire (pts (xy 355.6 68.58) (xy 363.22 68.58)) (stroke (width 0) (type default)) (uuid "d635afaf-a731-5106-8557-8fabd42f3c31"))
+(global_label "PERMIT_Q" (shape passive) (at 363.22 68.58 0) (effects (font (size 1 1)) (justify left)) (uuid "9165143f-b466-51ec-b2e4-7e0800d742de"))
+(wire (pts (xy 355.6 88.9) (xy 363.22 88.9)) (stroke (width 0) (type default)) (uuid "1541deae-8069-5dc3-8c86-f9ab611d4b14"))
+(global_label "AUX_3V3" (shape passive) (at 363.22 88.9 0) (effects (font (size 1 1)) (justify left)) (uuid "2a613688-d2ef-5b3c-b921-9e4227db3d05"))
+(wire (pts (xy 355.6 99.06) (xy 363.22 99.06)) (stroke (width 0) (type default)) (uuid "4c88eff8-11c0-53fb-ab01-d7a76a558bf4"))
+(global_label "USB_GND" (shape passive) (at 363.22 99.06 0) (effects (font (size 1 1)) (justify left)) (uuid "dc3d99fb-ba92-5630-a0cb-2fd3ab5857c0"))
+(no_connect (at 101.6 78.74) (uuid "700dfe41-e12c-5f7d-9d01-49ed36354358"))
+(no_connect (at 355.6 78.74) (uuid "c6e4b2f0-eb74-596c-acf8-6c03b0979ffa"))
+(symbol (lib_id "RaceRemote_Permit:C") (at 76.2 144.78 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid "b933c850-abc7-5746-aa29-6ce58c305d0a") (property "Reference" "C403" (at 76.2 139.7 0) (effects (font (size 1.27 1.27))))(property "Value" "100n / 16V" (at 88.9 144.78 0) (effects (font (size 1.27 1.27))))(property "Footprint" "" (at 76.2 144.78 0) (hide yes) (effects (font (size 1.27 1.27))))(property "Datasheet" "" (at 76.2 144.78 0) (hide yes) (effects (font (size 1.27 1.27))))(pin "1" (uuid "ec373533-bd58-556f-b262-c4cb88db6b34"))(pin "2" (uuid "ab2b6435-a271-5acd-8fee-97494e81ca33"))(instances (project "charge-permit" (path "/dee5d6a9-d751-5a9d-94e1-a01dfcba550a" (reference "C403") (unit 1)))))
+(wire (pts (xy 76.2 140.97) (xy 76.2 133.35)) (stroke (width 0) (type default)) (uuid "b1b3620d-fc81-5026-8402-b54d0c232726"))
+(global_label "AUX_3V3" (shape passive) (at 76.2 133.35 0) (effects (font (size 1 1)) (justify left)) (uuid "8acd8ff8-2afc-5539-9dd1-8613a15741ec"))
+(wire (pts (xy 76.2 148.59) (xy 76.2 156.21)) (stroke (width 0) (type default)) (uuid "656d1601-8091-5655-b725-70342325a4b0"))
+(global_label "USB_GND" (shape passive) (at 76.2 156.21 0) (effects (font (size 1 1)) (justify left)) (uuid "b94f1e0e-3b09-5c01-a16c-23ec7306102b"))
+(symbol (lib_id "RaceRemote_Permit:C") (at 203.2 144.78 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid "95531e73-6608-5b28-ab95-1e714598a02f") (property "Reference" "C402" (at 203.2 139.7 0) (effects (font (size 1.27 1.27))))(property "Value" "100n / 16V" (at 215.9 144.78 0) (effects (font (size 1.27 1.27))))(property "Footprint" "" (at 203.2 144.78 0) (hide yes) (effects (font (size 1.27 1.27))))(property "Datasheet" "" (at 203.2 144.78 0) (hide yes) (effects (font (size 1.27 1.27))))(pin "1" (uuid "efce6699-bbf6-56d0-b0db-d28308ce8b2d"))(pin "2" (uuid "78a90409-9df1-5b9a-ace9-4dc55b371d20"))(instances (project "charge-permit" (path "/dee5d6a9-d751-5a9d-94e1-a01dfcba550a" (reference "C402") (unit 1)))))
+(wire (pts (xy 203.2 140.97) (xy 203.2 133.35)) (stroke (width 0) (type default)) (uuid "5eba196a-91eb-5c6d-a0c5-c0ca023cd8d6"))
+(global_label "AUX_3V3" (shape passive) (at 203.2 133.35 0) (effects (font (size 1 1)) (justify left)) (uuid "9c30767b-7b07-594c-8663-49f448729a86"))
+(wire (pts (xy 203.2 148.59) (xy 203.2 156.21)) (stroke (width 0) (type default)) (uuid "2065a0de-6f41-5009-ab83-33c419b63745"))
+(global_label "USB_GND" (shape passive) (at 203.2 156.21 0) (effects (font (size 1 1)) (justify left)) (uuid "df17e369-a7c5-5019-8e99-99b28168e125"))
+(symbol (lib_id "RaceRemote_Permit:C") (at 330.2 144.78 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid "23ba86b7-58c8-5f2e-9679-977da961dcd8") (property "Reference" "C401" (at 330.2 139.7 0) (effects (font (size 1.27 1.27))))(property "Value" "100n / 16V" (at 342.9 144.78 0) (effects (font (size 1.27 1.27))))(property "Footprint" "" (at 330.2 144.78 0) (hide yes) (effects (font (size 1.27 1.27))))(property "Datasheet" "" (at 330.2 144.78 0) (hide yes) (effects (font (size 1.27 1.27))))(pin "1" (uuid "d14daa86-a880-53dc-892a-4c6779b54ccf"))(pin "2" (uuid "d0400149-f804-57c7-8aaa-14b92214707f"))(instances (project "charge-permit" (path "/dee5d6a9-d751-5a9d-94e1-a01dfcba550a" (reference "C401") (unit 1)))))
+(wire (pts (xy 330.2 140.97) (xy 330.2 133.35)) (stroke (width 0) (type default)) (uuid "9ef29de9-3165-5514-b465-924d42408d91"))
+(global_label "AUX_3V3" (shape passive) (at 330.2 133.35 0) (effects (font (size 1 1)) (justify left)) (uuid "9f91ce6b-43c9-55dd-b14c-437ee7ad5357"))
+(wire (pts (xy 330.2 148.59) (xy 330.2 156.21)) (stroke (width 0) (type default)) (uuid "d327591c-d597-5bad-a510-c1aa1ee34c25"))
+(global_label "USB_GND" (shape passive) (at 330.2 156.21 0) (effects (font (size 1 1)) (justify left)) (uuid "6ca7062a-4511-53a0-8094-d4d056324e28"))
+(symbol (lib_id "RaceRemote_Permit:R") (at 76.2 195.58 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid "38f33f01-3aca-52ed-a87c-ae34485825bc") (property "Reference" "R401" (at 76.2 190.5 0) (effects (font (size 1.27 1.27))))(property "Value" "10k / 1%" (at 88.9 195.58 0) (effects (font (size 1.27 1.27))))(property "Footprint" "" (at 76.2 195.58 0) (hide yes) (effects (font (size 1.27 1.27))))(property "Datasheet" "" (at 76.2 195.58 0) (hide yes) (effects (font (size 1.27 1.27))))(pin "1" (uuid "0aa462ae-31e7-5dee-aedc-dd96d6415615"))(pin "2" (uuid "fe46320b-8e67-5918-9458-aa0ab85e7c77"))(instances (project "charge-permit" (path "/dee5d6a9-d751-5a9d-94e1-a01dfcba550a" (reference "R401") (unit 1)))))
+(wire (pts (xy 76.2 191.77) (xy 76.2 184.15)) (stroke (width 0) (type default)) (uuid "c232fcae-4ce4-5913-b602-81ce7887b175"))
+(global_label "AUX_3V3" (shape passive) (at 76.2 184.15 0) (effects (font (size 1 1)) (justify left)) (uuid "47d2dc86-6a39-5b07-b427-654c51c9dbb8"))
+(wire (pts (xy 76.2 199.39) (xy 76.2 207.01)) (stroke (width 0) (type default)) (uuid "23e77950-b433-5177-a109-a7ae878d110b"))
+(global_label "FAULT_BUS_N" (shape passive) (at 76.2 207.01 0) (effects (font (size 1 1)) (justify left)) (uuid "124302b8-8b01-5f07-883e-6f96c03bc267"))
+(symbol (lib_id "RaceRemote_Permit:R") (at 203.2 195.58 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid "b912138c-bc0d-5a6f-b005-46c7356bc03b") (property "Reference" "R402" (at 203.2 190.5 0) (effects (font (size 1.27 1.27))))(property "Value" "10k / 1%" (at 215.9 195.58 0) (effects (font (size 1.27 1.27))))(property "Footprint" "" (at 203.2 195.58 0) (hide yes) (effects (font (size 1.27 1.27))))(property "Datasheet" "" (at 203.2 195.58 0) (hide yes) (effects (font (size 1.27 1.27))))(pin "1" (uuid "1a90e1d3-1c61-5aed-bdb1-b54a772b890d"))(pin "2" (uuid "3992c88a-4cab-562d-b8b6-a57b3052c2cc"))(instances (project "charge-permit" (path "/dee5d6a9-d751-5a9d-94e1-a01dfcba550a" (reference "R402") (unit 1)))))
+(wire (pts (xy 203.2 191.77) (xy 203.2 184.15)) (stroke (width 0) (type default)) (uuid "8054af53-0828-573f-b11d-3426bcd946ae"))
+(global_label "ARM" (shape passive) (at 203.2 184.15 0) (effects (font (size 1 1)) (justify left)) (uuid "8186ffca-f2f8-5373-9e6f-055690d9be49"))
+(wire (pts (xy 203.2 199.39) (xy 203.2 207.01)) (stroke (width 0) (type default)) (uuid "672ef93a-2e50-5f0a-a554-cc451f27156e"))
+(global_label "USB_GND" (shape passive) (at 203.2 207.01 0) (effects (font (size 1 1)) (justify left)) (uuid "1cc20001-787a-54be-824c-05f073615c95"))
+(symbol (lib_id "RaceRemote_Permit:R") (at 330.2 195.58 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid "be214956-9314-5da4-9823-e2b37e938a73") (property "Reference" "R403" (at 330.2 190.5 0) (effects (font (size 1.27 1.27))))(property "Value" "47k / 1%" (at 342.9 195.58 0) (effects (font (size 1.27 1.27))))(property "Footprint" "" (at 330.2 195.58 0) (hide yes) (effects (font (size 1.27 1.27))))(property "Datasheet" "" (at 330.2 195.58 0) (hide yes) (effects (font (size 1.27 1.27))))(pin "1" (uuid "2fd510ca-5150-54a1-9819-5631b4a3f6b4"))(pin "2" (uuid "e3a54df1-c4d6-516c-83c3-c6a3a5c96ec8"))(instances (project "charge-permit" (path "/dee5d6a9-d751-5a9d-94e1-a01dfcba550a" (reference "R403") (unit 1)))))
+(wire (pts (xy 330.2 191.77) (xy 330.2 184.15)) (stroke (width 0) (type default)) (uuid "d33fd187-4246-5f29-be8b-54e324564cf4"))
+(global_label "PERMIT_Q" (shape passive) (at 330.2 184.15 0) (effects (font (size 1 1)) (justify left)) (uuid "f0648a46-56d1-5fa3-8d61-d87228d9244e"))
+(wire (pts (xy 330.2 199.39) (xy 330.2 207.01)) (stroke (width 0) (type default)) (uuid "7c33c654-78d8-575d-a984-bb1d848499bb"))
+(global_label "USB_GND" (shape passive) (at 330.2 207.01 0) (effects (font (size 1 1)) (justify left)) (uuid "25595dba-56ca-52a6-9cbf-dddb53f8c6d0"))
+(symbol (lib_id "RaceRemote_Permit:Conn_01x02") (at 63.5 246.38 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid "50127a2a-c1e2-5734-b1bf-7334309fc122") (property "Reference" "J401" (at 63.5 241.3 0) (effects (font (size 1.27 1.27))))(property "Value" "FROM AUX" (at 63.5 238.76 0) (effects (font (size 1.27 1.27))))(property "Footprint" "" (at 63.5 246.38 0) (hide yes) (effects (font (size 1.27 1.27))))(property "Datasheet" "" (at 63.5 246.38 0) (hide yes) (effects (font (size 1.27 1.27))))(pin "1" (uuid "29f43b90-322d-592b-b3fc-4e5f880a2e4c"))(pin "2" (uuid "5992adcd-5be6-5b82-a6db-8d291692b235"))(instances (project "charge-permit" (path "/dee5d6a9-d751-5a9d-94e1-a01dfcba550a" (reference "J401") (unit 1)))))
+(wire (pts (xy 58.42 246.38) (xy 50.8 246.38)) (stroke (width 0) (type default)) (uuid "4c947396-1b2c-5392-bd61-2541d54cadce"))
+(global_label "AUX_3V3" (shape passive) (at 50.8 246.38 180) (effects (font (size 1 1)) (justify right)) (uuid "b92d372e-8c13-544f-961c-1cecae659e41"))
+(wire (pts (xy 58.42 248.92) (xy 50.8 248.92)) (stroke (width 0) (type default)) (uuid "6769c57e-d17e-503b-9341-980e316b87c4"))
+(global_label "USB_GND" (shape passive) (at 50.8 248.92 180) (effects (font (size 1 1)) (justify right)) (uuid "b8219994-7501-54d8-9d76-c68c9fc921b5"))
+(symbol (lib_id "RaceRemote_Permit:Conn_01x02") (at 177.8 246.38 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid "1330ae25-e5f7-50fe-bb95-b8b0454e1097") (property "Reference" "J402" (at 177.8 241.3 0) (effects (font (size 1.27 1.27))))(property "Value" "FAULT SOURCES" (at 177.8 238.76 0) (effects (font (size 1.27 1.27))))(property "Footprint" "" (at 177.8 246.38 0) (hide yes) (effects (font (size 1.27 1.27))))(property "Datasheet" "" (at 177.8 246.38 0) (hide yes) (effects (font (size 1.27 1.27))))(pin "1" (uuid "a3f8593f-0de0-5b3c-a0a3-4c3f6a5c6507"))(pin "2" (uuid "ea9d78e8-72e7-5bb5-bd12-72cbebc2d0e1"))(instances (project "charge-permit" (path "/dee5d6a9-d751-5a9d-94e1-a01dfcba550a" (reference "J402") (unit 1)))))
+(wire (pts (xy 172.72 246.38) (xy 165.1 246.38)) (stroke (width 0) (type default)) (uuid "1087b74d-4145-5e50-90af-7413d7ab71b8"))
+(global_label "FAULT_BUS_N" (shape passive) (at 165.1 246.38 180) (effects (font (size 1 1)) (justify right)) (uuid "675d02a0-f680-5e7f-be39-e93c8318e118"))
+(wire (pts (xy 172.72 248.92) (xy 165.1 248.92)) (stroke (width 0) (type default)) (uuid "65d3c08e-56ba-5e51-886f-243af6213b45"))
+(global_label "USB_GND" (shape passive) (at 165.1 248.92 180) (effects (font (size 1 1)) (justify right)) (uuid "95d97aeb-5233-5719-a993-6ef8de9773f7"))
+(symbol (lib_id "RaceRemote_Permit:Conn_01x04") (at 279.4 246.38 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid "4bff565f-a4d2-50fe-b277-680ff24713a9") (property "Reference" "J403" (at 279.4 241.3 0) (effects (font (size 1.27 1.27))))(property "Value" "MCU INTERFACE" (at 279.4 238.76 0) (effects (font (size 1.27 1.27))))(property "Footprint" "" (at 279.4 246.38 0) (hide yes) (effects (font (size 1.27 1.27))))(property "Datasheet" "" (at 279.4 246.38 0) (hide yes) (effects (font (size 1.27 1.27))))(pin "1" (uuid "651e9258-1bed-51b2-b0f7-24dc1f7c5d1a"))(pin "2" (uuid "0ba39728-56da-592c-9463-67016de407f2"))(pin "3" (uuid "f39174d9-28ec-5b55-a7f3-2b515c3c8b5e"))(pin "4" (uuid "f09c7393-e399-5262-9532-9ac059691f6b"))(instances (project "charge-permit" (path "/dee5d6a9-d751-5a9d-94e1-a01dfcba550a" (reference "J403") (unit 1)))))
+(wire (pts (xy 274.32 243.84) (xy 266.7 243.84)) (stroke (width 0) (type default)) (uuid "f9e003f8-d5b1-5056-b239-82a5b85c629e"))
+(global_label "ARM" (shape passive) (at 266.7 243.84 180) (effects (font (size 1 1)) (justify right)) (uuid "7063c9cc-6f9f-51ee-a122-4fd5627dd920"))
+(wire (pts (xy 274.32 246.38) (xy 266.7 246.38)) (stroke (width 0) (type default)) (uuid "f92c76de-17cf-55b0-a793-cb81aaa3d6d6"))
+(global_label "FAULT_BUS_N" (shape passive) (at 266.7 246.38 180) (effects (font (size 1 1)) (justify right)) (uuid "e40467c8-211f-5a95-95f6-923b47d33534"))
+(wire (pts (xy 274.32 248.92) (xy 266.7 248.92)) (stroke (width 0) (type default)) (uuid "58f3cded-246a-5a0b-a8ca-3fde60449292"))
+(global_label "PERMIT_Q" (shape passive) (at 266.7 248.92 180) (effects (font (size 1 1)) (justify right)) (uuid "98881123-599c-5a07-9674-5df19beac524"))
+(wire (pts (xy 274.32 251.46) (xy 266.7 251.46)) (stroke (width 0) (type default)) (uuid "63a43ac7-969f-5752-ada7-0a477693bc19"))
+(global_label "USB_GND" (shape passive) (at 266.7 251.46 180) (effects (font (size 1 1)) (justify right)) (uuid "0f1d1cf8-72a4-585e-89fb-95ea4221f8bc"))
+(symbol (lib_id "RaceRemote_Permit:Conn_01x02") (at 381 246.38 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid "d1aec571-f4c7-5702-b9b2-874ec0456202") (property "Reference" "J404" (at 381 241.3 0) (effects (font (size 1.27 1.27))))(property "Value" "TO FUTURE GATE" (at 381 238.76 0) (effects (font (size 1.27 1.27))))(property "Footprint" "" (at 381 246.38 0) (hide yes) (effects (font (size 1.27 1.27))))(property "Datasheet" "" (at 381 246.38 0) (hide yes) (effects (font (size 1.27 1.27))))(pin "1" (uuid "05c28dc0-bc4c-5dd5-a372-d63dd1dfef8a"))(pin "2" (uuid "9494a67c-a0b2-5781-8a53-0b99543e2204"))(instances (project "charge-permit" (path "/dee5d6a9-d751-5a9d-94e1-a01dfcba550a" (reference "J404") (unit 1)))))
+(wire (pts (xy 375.92 246.38) (xy 368.3 246.38)) (stroke (width 0) (type default)) (uuid "036cc1de-6e64-5eef-b858-877f1bea0bd4"))
+(global_label "PERMIT_Q" (shape passive) (at 368.3 246.38 180) (effects (font (size 1 1)) (justify right)) (uuid "d3ac2176-bac9-578e-accf-e94d2b468868"))
+(wire (pts (xy 375.92 248.92) (xy 368.3 248.92)) (stroke (width 0) (type default)) (uuid "a1f6d903-08eb-5760-879f-811e194b7ae2"))
+(global_label "USB_GND" (shape passive) (at 368.3 248.92 180) (effects (font (size 1 1)) (justify right)) (uuid "fc149abd-c9b3-5c6e-aeb6-e822552b86b6"))
+(symbol (lib_id "RaceRemote_Permit:PWR_FLAG") (at 165.1 119.38 0) (unit 1) (in_bom no) (on_board no) (dnp no) (uuid "b28fd173-2499-534b-9b0d-09861ae56bbf") (property "Reference" "#FLG401" (at 165.1 114.3 0) (hide yes) (effects (font (size 1.27 1.27))))(property "Value" "PWR_FLAG" (at 165.1 111.76 0) (hide yes) (effects (font (size 1.27 1.27))))(property "Footprint" "" (at 165.1 119.38 0) (hide yes) (effects (font (size 1.27 1.27))))(property "Datasheet" "" (at 165.1 119.38 0) (hide yes) (effects (font (size 1.27 1.27))))(pin "1" (uuid "744ba48e-e602-5a04-b9ac-fe53cf7c3468"))(instances (project "charge-permit" (path "/dee5d6a9-d751-5a9d-94e1-a01dfcba550a" (reference "#FLG401") (unit 1)))))
+(wire (pts (xy 165.1 119.38) (xy 165.1 124.46)) (stroke (width 0) (type default)) (uuid "03a331b9-0e0e-522f-a3a6-fc0610e1ce1f"))
+(global_label "AUX_3V3" (shape passive) (at 165.1 124.46 0) (effects (font (size 1 1)) (justify left)) (uuid "e6c13934-be53-5f5c-a436-6bf509c55caf"))
+(symbol (lib_id "RaceRemote_Permit:PWR_FLAG") (at 292.1 119.38 0) (unit 1) (in_bom no) (on_board no) (dnp no) (uuid "01e4723c-ac2d-5dbd-8eb8-265531c1343e") (property "Reference" "#FLG402" (at 292.1 114.3 0) (hide yes) (effects (font (size 1.27 1.27))))(property "Value" "PWR_FLAG" (at 292.1 111.76 0) (hide yes) (effects (font (size 1.27 1.27))))(property "Footprint" "" (at 292.1 119.38 0) (hide yes) (effects (font (size 1.27 1.27))))(property "Datasheet" "" (at 292.1 119.38 0) (hide yes) (effects (font (size 1.27 1.27))))(pin "1" (uuid "34fb3b32-c80c-5964-b936-de388a8e8c73"))(instances (project "charge-permit" (path "/dee5d6a9-d751-5a9d-94e1-a01dfcba550a" (reference "#FLG402") (unit 1)))))
+(wire (pts (xy 292.1 119.38) (xy 292.1 124.46)) (stroke (width 0) (type default)) (uuid "10ef7c5e-19d1-538d-9b24-0b8ff61a3919"))
+(global_label "USB_GND" (shape passive) (at 292.1 124.46 0) (effects (font (size 1 1)) (justify left)) (uuid "24273a3b-e55c-5508-b13c-93871667b6f6"))
+(text "CHARGE-PERMIT-01 v0.1 - logical latch candidate, NOT a complete charger shutdown" (at 25.4 17.78 0) (effects (font (size 2 2)) (justify left top)) (uuid "41f326a0-367e-57ab-8c80-da4caf0f3a35"))
+(text "FAULT_BUS_N LOW clears Q even with ARM HIGH. Releasing fault alone does not re-arm.\nD and PRE tied HIGH. Only a new ARM rising edge after reset recovery may set Q. Q-bar intentionally unused.\nExternal fault sources / MCU revoke must sink or release; never drive shared bus HIGH." (at 25.4 27.94 0) (effects (font (size 1.27 1.27)) (justify left top)) (uuid "df065ae8-0cfd-50dd-b219-4bca92bdd51f"))
+(text "AUX 3.0..3.6V proposal; supervisor falling nominal 3.07V. Below IC valid rails, outputs are NOT guaranteed.\nNo MCU/watchdog/INA300/charger actuator here. PCB, timing, transient and deep-brownout qualification are open." (at 25.4 274.32 0) (effects (font (size 1 1)) (justify left top)) (uuid "f9fb2807-eddd-5f9f-8a6a-2cd3ca081d9d"))
+(sheet_instances (path "/" (page "1"))) (embedded_fonts no))

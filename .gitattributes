@@ -85,3 +85,16 @@ docs/evidence/charger-cost-comparison.json text eol=crlf
 tools/compare_charger_cost.py text eol=lf
 tools/calculate_charge_guard.py text eol=lf
 docs/evidence/charge-current-guard.json text eol=crlf
+
+# Preserve the permit-latch evidence inputs across Windows checkouts.
+hardware/charge-permit/*.kicad_sch text eol=crlf
+hardware/charge-permit/*.kicad_sym text eol=crlf
+hardware/charge-permit/*.kicad_pro text eol=crlf
+hardware/charge-permit/*-lib-table text eol=crlf
+hardware/charge-permit/*.csv text eol=crlf
+hardware/charge-permit/*.net text eol=lf
+hardware/charge-permit/*.pdf binary
+hardware/charge-permit/*.md text eol=lf
+docs/evidence/charge-permit-*.json text eol=crlf
+tools/build_charge_permit.py text eol=lf
+tools/verify_charge_permit.py text eol=lf

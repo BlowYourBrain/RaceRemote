@@ -38,6 +38,8 @@ def main():
         variant_a = [offer('CHG-886', index), offer('BAL-29209', index)]
         variant_b = [cheapest(['CHG-887-ONE', 'CHG-887-LOT'], index)]
         b_guard = cheapest(['CHG-OC-ONE', 'CHG-OC-LOT'], index)
+        permit = [offer(part, index) for part in ['CHG-PERMIT-FF', 'CHG-PERMIT-SUP', 'CHG-PERMIT-SCHMITT']]
+        permit_cost = sum(o['spend_RUB'] for o in permit)
         subtotal = sum(o['spend_RUB'] for o in common)
         a = subtotal + sum(o['spend_RUB'] for o in variant_a)
         b = subtotal + sum(o['spend_RUB'] for o in variant_b)
@@ -47,17 +49,23 @@ def main():
                           'B_current_detector_candidate': b_guard,
                           'B_subset_plus_detector_RUB': b+b_guard['spend_RUB'],
                           'A_minus_B_with_detector_RUB': a-b-b_guard['spend_RUB'],
-                          'stock_shortages': [o['id'] for o in common+variant_a+variant_b if not o['stock_sufficient']],
+                          'permit_latch_candidate': permit,
+                          'permit_latch_ICs_RUB': permit_cost,
+                          'A_subset_plus_one_permit_latch_RUB': a+permit_cost,
+                          'B_subset_plus_detector_and_one_permit_latch_RUB': b+b_guard['spend_RUB']+permit_cost,
+                          'stock_shortages': [o['id'] for o in common+variant_a+variant_b+[b_guard]+permit
+                                              if not o['stock_sufficient']],
                           'complete_purchase_ready': False})
     report = {'date': '2026-09-14', 'scope': 'Conditional priced subset, not full BOM or authorization to buy',
               'source_sha256': hashlib.sha256(SOURCE.read_bytes()).hexdigest(),
               'scenarios': scenarios,
               'missing_costs': ['PCB fabrication/assembly, footprints, shipping and spares',
                                 'Inductor, capacitors, resistors, thermistor, harness and power MOSFETs',
-                                'Supervisor, fault latch, voltage adaptation and source-policy circuit',
+                                'Permit-latch passives, voltage adaptation, actuator and source-policy circuit',
                                 'A: complete per-cell charge control; B: shunt and independent interruption/latch circuit',
                                 'Common programming tool and MCU board/debug access'],
               'limitations': ['Current-limit and battery protection candidates are not approved complete circuits',
+                              'Permit supplement assumes one identical latch per A/B car; full integration/count is not qualified',
                               'TPS3431 stock is insufficient for 4/6; substituted watchdog pricing is unknown',
                               'BQ25887 single-unit offer lacks exact ordering suffix confirmation',
                               'Prices are recorded card snapshots; this script does not check live stock',
@@ -65,6 +73,8 @@ def main():
     OUT.write_text(json.dumps(report, indent=2) + '\n', encoding='utf-8')
     print(json.dumps([{k: s[k] for k in ['cars', 'common_subtotal_RUB', 'A_priced_subset_RUB',
                       'B_priced_subset_RUB', 'B_subset_plus_detector_RUB', 'A_minus_B_with_detector_RUB',
+                      'permit_latch_ICs_RUB', 'A_subset_plus_one_permit_latch_RUB',
+                      'B_subset_plus_detector_and_one_permit_latch_RUB',
                       'stock_shortages']} for s in scenarios]))
 
 

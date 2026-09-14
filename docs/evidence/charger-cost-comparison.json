@@ -1,7 +1,7 @@
 {
   "date": "2026-09-14",
   "scope": "Conditional priced subset, not full BOM or authorization to buy",
-  "source_sha256": "3d40ef0320ae382dd37ed4e2345d6e1f615c60e5caefa9473581c99caea257fe",
+  "source_sha256": "beeae74d8ffcbcbbdfd594c638448eaebd00128265404949ca3e6dbe1515c893",
   "scenarios": [
     {
       "cars": 1,
@@ -149,6 +149,44 @@
       },
       "B_subset_plus_detector_RUB": 2530,
       "A_minus_B_with_detector_RUB": 33,
+      "permit_latch_candidate": [
+        {
+          "id": "CHG-PERMIT-FF",
+          "url": "https://www.chipdip.ru/product/sn74lvc1g74dctr-trigger-1-elementnyy-texas-instruments-9001599903",
+          "needed": 1,
+          "purchase": 1,
+          "unit_RUB": 69,
+          "spend_RUB": 69,
+          "stock": 1222,
+          "stock_sufficient": true,
+          "checked": "2026-09-14"
+        },
+        {
+          "id": "CHG-PERMIT-SUP",
+          "url": "https://www.chipdip.ru/product/tps3808g33dbvr-supervizor-3.07v-s-texas-instruments-9000406641",
+          "needed": 1,
+          "purchase": 1,
+          "unit_RUB": 32,
+          "spend_RUB": 32,
+          "stock": 298,
+          "stock_sufficient": true,
+          "checked": "2026-09-14"
+        },
+        {
+          "id": "CHG-PERMIT-SCHMITT",
+          "url": "https://www.chipdip.ru/product/sn74lvc2g17dckr-sdvoennyy-bufer-s-texas-instruments-9000215534",
+          "needed": 1,
+          "purchase": 1,
+          "unit_RUB": 45,
+          "spend_RUB": 45,
+          "stock": 39,
+          "stock_sufficient": true,
+          "checked": "2026-09-14"
+        }
+      ],
+      "permit_latch_ICs_RUB": 146,
+      "A_subset_plus_one_permit_latch_RUB": 2709,
+      "B_subset_plus_detector_and_one_permit_latch_RUB": 2676,
       "stock_shortages": [],
       "complete_purchase_ready": false
     },
@@ -298,6 +336,44 @@
       },
       "B_subset_plus_detector_RUB": 7480,
       "A_minus_B_with_detector_RUB": 193,
+      "permit_latch_candidate": [
+        {
+          "id": "CHG-PERMIT-FF",
+          "url": "https://www.chipdip.ru/product/sn74lvc1g74dctr-trigger-1-elementnyy-texas-instruments-9001599903",
+          "needed": 4,
+          "purchase": 4,
+          "unit_RUB": 69,
+          "spend_RUB": 276,
+          "stock": 1222,
+          "stock_sufficient": true,
+          "checked": "2026-09-14"
+        },
+        {
+          "id": "CHG-PERMIT-SUP",
+          "url": "https://www.chipdip.ru/product/tps3808g33dbvr-supervizor-3.07v-s-texas-instruments-9000406641",
+          "needed": 4,
+          "purchase": 4,
+          "unit_RUB": 32,
+          "spend_RUB": 128,
+          "stock": 298,
+          "stock_sufficient": true,
+          "checked": "2026-09-14"
+        },
+        {
+          "id": "CHG-PERMIT-SCHMITT",
+          "url": "https://www.chipdip.ru/product/sn74lvc2g17dckr-sdvoennyy-bufer-s-texas-instruments-9000215534",
+          "needed": 4,
+          "purchase": 4,
+          "unit_RUB": 45,
+          "spend_RUB": 180,
+          "stock": 39,
+          "stock_sufficient": true,
+          "checked": "2026-09-14"
+        }
+      ],
+      "permit_latch_ICs_RUB": 584,
+      "A_subset_plus_one_permit_latch_RUB": 8257,
+      "B_subset_plus_detector_and_one_permit_latch_RUB": 8064,
       "stock_shortages": [
         "WD-3431"
       ],
@@ -449,6 +525,44 @@
       },
       "B_subset_plus_detector_RUB": 9834,
       "A_minus_B_with_detector_RUB": 1033,
+      "permit_latch_candidate": [
+        {
+          "id": "CHG-PERMIT-FF",
+          "url": "https://www.chipdip.ru/product/sn74lvc1g74dctr-trigger-1-elementnyy-texas-instruments-9001599903",
+          "needed": 6,
+          "purchase": 6,
+          "unit_RUB": 69,
+          "spend_RUB": 414,
+          "stock": 1222,
+          "stock_sufficient": true,
+          "checked": "2026-09-14"
+        },
+        {
+          "id": "CHG-PERMIT-SUP",
+          "url": "https://www.chipdip.ru/product/tps3808g33dbvr-supervizor-3.07v-s-texas-instruments-9000406641",
+          "needed": 6,
+          "purchase": 6,
+          "unit_RUB": 32,
+          "spend_RUB": 192,
+          "stock": 298,
+          "stock_sufficient": true,
+          "checked": "2026-09-14"
+        },
+        {
+          "id": "CHG-PERMIT-SCHMITT",
+          "url": "https://www.chipdip.ru/product/sn74lvc2g17dckr-sdvoennyy-bufer-s-texas-instruments-9000215534",
+          "needed": 6,
+          "purchase": 6,
+          "unit_RUB": 45,
+          "spend_RUB": 270,
+          "stock": 39,
+          "stock_sufficient": true,
+          "checked": "2026-09-14"
+        }
+      ],
+      "permit_latch_ICs_RUB": 876,
+      "A_subset_plus_one_permit_latch_RUB": 11743,
+      "B_subset_plus_detector_and_one_permit_latch_RUB": 10710,
       "stock_shortages": [
         "WD-3431"
       ],
@@ -458,12 +572,13 @@
   "missing_costs": [
     "PCB fabrication/assembly, footprints, shipping and spares",
     "Inductor, capacitors, resistors, thermistor, harness and power MOSFETs",
-    "Supervisor, fault latch, voltage adaptation and source-policy circuit",
+    "Permit-latch passives, voltage adaptation, actuator and source-policy circuit",
     "A: complete per-cell charge control; B: shunt and independent interruption/latch circuit",
     "Common programming tool and MCU board/debug access"
   ],
   "limitations": [
     "Current-limit and battery protection candidates are not approved complete circuits",
+    "Permit supplement assumes one identical latch per A/B car; full integration/count is not qualified",
     "TPS3431 stock is insufficient for 4/6; substituted watchdog pricing is unknown",
     "BQ25887 single-unit offer lacks exact ordering suffix confirmation",
     "Prices are recorded card snapshots; this script does not check live stock",

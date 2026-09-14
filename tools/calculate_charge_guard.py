@@ -20,6 +20,18 @@ def main():
     trip_nom = current_nom * limit_r / shunt
     trip_low = (current_min * limit_r * (1-resistor_tolerance)-error)/(shunt*(1+resistor_tolerance))
     trip_high = (current_max * limit_r * (1+resistor_tolerance)+error)/(shunt*(1-resistor_tolerance))
+    # Selected shunt Yageo RL2512FK-070R1L: +/-600ppm/C. Body temperature,
+    # not ambient. LIMIT resistor TCR is still unknown, so these are partial estimates.
+    temperature_cases = []
+    for body_c in [-40, 25, 70, 125]:
+        drift = abs(body_c - 25) * 600e-6
+        r_low = shunt * (1-resistor_tolerance) * (1-drift)
+        r_high = shunt * (1+resistor_tolerance) * (1+drift)
+        temperature_cases.append({'assumed_shunt_body_C': body_c,
+            'shunt_ohm_min': r_low, 'shunt_ohm_max': r_high,
+            'partial_trip_min_A': (current_min*limit_r*(1-resistor_tolerance)-error)/r_high,
+            'partial_trip_max_A': (current_max*limit_r*(1+resistor_tolerance)+error)/r_low,
+            'shunt_power_at_2p2A_max_W': 2.2**2*r_high})
     samples = [{'current_A': i, 'shunt_drop_V': i*shunt, 'shunt_loss_W': i*i*shunt}
                for i in [.25, trip_nom, 1.5, 2.2]]
     # Charge/energy exposure of a hypothetical rectangular pulse, NOT a predicted peak or delay.
@@ -27,17 +39,22 @@ def main():
                'charge_C': i*us*1e-6, 'battery_energy_at_8p4V_J': 8.4*i*us*1e-6}
               for i in [1.5, 2.2] for us in [50, 100, 1000]]
     assert abs(.25*.1-.025)<1e-12 and abs(.25**2*.1-.00625)<1e-12
-    report = {'date': '2026-09-14', 'contract': 'CHARGE-OC-01 v0.1',
-              'status': 'Proposed detection study only; no schematic/PCB or protection acceptance',
+    report = {'date': '2026-09-14', 'contract': 'CHARGE-OC-01 v0.2',
+              'status': 'Candidate schematic exists; this file is arithmetic only, no PCB/protection acceptance',
               'source': 'https://www.ti.com/lit/ds/symlink/ina300.pdf',
               'datasheet': 'SBOS613C, June 2021, sections 6.5, 7.3, 7.4',
               'shunt_ohm': shunt, 'limit_resistor_ohm': limit_r,
               'resistor_tolerance_fraction': resistor_tolerance,
+              'shunt_part': 'RL2512FK-070R1L',
+              'shunt_source': 'https://yageogroup.com/component-documentation/download/specsheet/RL2512FK-070R1L',
+              'shunt_rated_power_W_at_70C': 1,
+              'shunt_temperature_partial_estimates': temperature_cases,
+              'temperature_scope': 'Only shunt TCR added. Body temperature, LIMIT TCR, aging, derating and pulse rating are not qualified.',
               'delay_setting_us': 50, 'delay_scope': 'Comparator setting, not complete turn-off bound',
               'trip_nom_A': trip_nom, 'illustrative_trip_low_A': trip_low,
               'illustrative_trip_high_A': trip_high, 'input_error_allowance_V': error,
-              'error_scope': 'Sum of separate datasheet error rows under stated assumptions. '
-                             'No resistor TCR, PCB errors, ripple or combined-condition guarantee',
+              'error_scope': 'Base trip pair omits resistor TCR; separate temperature cases add only shunt TCR. '
+                             'Sum of separate datasheet rows, not a combined-condition guarantee; PCB errors/ripple remain open',
               'shunt_samples': samples, 'hypothetical_pulses': pulses,
               'guard_acceptance_proven': False,
               'missing': ['Approved LW continuous and transient charge envelope',

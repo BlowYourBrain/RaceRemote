@@ -1,0 +1,8 @@
+﻿reference,value,purpose,footprint,selection
+U701,INA300AIDSQR,Always enabled and latched; no MCU clear/disable; not a current limiter,,Candidate; no PCB or physical overcurrent qualification
+C701,100n / 16V,Local bypass at VS,,Candidate; no PCB or physical overcurrent qualification
+R701,1.74k / 1%,Nominal 34.8mV threshold; 50us mode,,Candidate; no PCB or physical overcurrent qualification
+R702,RL2512FK-070R1L,0.1 ohm 1% 1W at70C +/-600ppm/C; two-terminal Kelvin layout required; placement pending,,Candidate; no PCB or physical overcurrent qualification
+J701,FROM USB AUX,"Not CHG_BIAS, XIAO or battery",,Candidate; no PCB or physical overcurrent qualification
+J702,BENCH SERIES PATH,Positive charge flow pin1 to pin2; NOT actual battery connector or final BQ BAT/MID placement,,Candidate; no PCB or physical overcurrent qualification
+J703,TO PERMIT J402,Only existing R401 pulls up; no push-pull or second pull-up,,Candidate; no PCB or physical overcurrent qualification

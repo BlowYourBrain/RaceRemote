@@ -1,19 +1,57 @@
 {
   "date": "2026-09-14",
-  "contract": "CHARGE-OC-01 v0.1",
-  "status": "Proposed detection study only; no schematic/PCB or protection acceptance",
+  "contract": "CHARGE-OC-01 v0.2",
+  "status": "Candidate schematic exists; this file is arithmetic only, no PCB/protection acceptance",
   "source": "https://www.ti.com/lit/ds/symlink/ina300.pdf",
   "datasheet": "SBOS613C, June 2021, sections 6.5, 7.3, 7.4",
   "shunt_ohm": 0.1,
   "limit_resistor_ohm": 1740,
   "resistor_tolerance_fraction": 0.01,
+  "shunt_part": "RL2512FK-070R1L",
+  "shunt_source": "https://yageogroup.com/component-documentation/download/specsheet/RL2512FK-070R1L",
+  "shunt_rated_power_W_at_70C": 1,
+  "shunt_temperature_partial_estimates": [
+    {
+      "assumed_shunt_body_C": -40,
+      "shunt_ohm_min": 0.095139,
+      "shunt_ohm_max": 0.104939,
+      "partial_trip_min_A": 0.31902924556170725,
+      "partial_trip_max_A": 0.3797245083509391,
+      "shunt_power_at_2p2A_max_W": 0.5079047600000001
+    },
+    {
+      "assumed_shunt_body_C": 25,
+      "shunt_ohm_min": 0.099,
+      "shunt_ohm_max": 0.101,
+      "partial_trip_min_A": 0.3314713861386138,
+      "partial_trip_max_A": 0.3649152525252525,
+      "shunt_power_at_2p2A_max_W": 0.4888400000000001
+    },
+    {
+      "assumed_shunt_body_C": 70,
+      "shunt_ohm_min": 0.096327,
+      "shunt_ohm_max": 0.103727,
+      "partial_trip_min_A": 0.32275694852834846,
+      "partial_trip_max_A": 0.3750413695018011,
+      "shunt_power_at_2p2A_max_W": 0.5020386800000001
+    },
+    {
+      "assumed_shunt_body_C": 125,
+      "shunt_ohm_min": 0.09306,
+      "shunt_ohm_max": 0.10706000000000002,
+      "partial_trip_min_A": 0.31270885484774885,
+      "partial_trip_max_A": 0.38820771545239624,
+      "shunt_power_at_2p2A_max_W": 0.5181704000000001
+    }
+  ],
+  "temperature_scope": "Only shunt TCR added. Body temperature, LIMIT TCR, aging, derating and pulse rating are not qualified.",
   "delay_setting_us": 50,
   "delay_scope": "Comparator setting, not complete turn-off bound",
   "trip_nom_A": 0.34800000000000003,
   "illustrative_trip_low_A": 0.3314713861386138,
   "illustrative_trip_high_A": 0.3649152525252525,
   "input_error_allowance_V": 0.000715,
-  "error_scope": "Sum of separate datasheet error rows under stated assumptions. No resistor TCR, PCB errors, ripple or combined-condition guarantee",
+  "error_scope": "Base trip pair omits resistor TCR; separate temperature cases add only shunt TCR. Sum of separate datasheet rows, not a combined-condition guarantee; PCB errors/ripple remain open",
   "shunt_samples": [
     {
       "current_A": 0.25,

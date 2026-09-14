@@ -1,7 +1,7 @@
 {
   "date": "2026-09-14",
   "scope": "Conditional priced subset, not full BOM or authorization to buy",
-  "source_sha256": "5940a534f47d5785e642a5544b23c4c888d90255536695459fd2851d46f88a1b",
+  "source_sha256": "12b38891269b3d01ca8153f15febc6a2b5087d3b19b76de5482bbb026466275d",
   "scenarios": [
     {
       "cars": 1,
@@ -220,6 +220,18 @@
         "stock_sufficient": true,
         "checked": "2026-09-14"
       },
+      "OC_shunt_candidate": {
+        "id": "CHG-OC-SHUNT",
+        "url": "https://www.chipdip.ru/product/1vt-2512-0.1-om-1-rl2512fk-070r1l-chip-rezistor-smd-yageo-9030002190",
+        "needed": 1,
+        "purchase": 10,
+        "unit_RUB": 8,
+        "spend_RUB": 80,
+        "stock": 5028,
+        "stock_sufficient": true,
+        "checked": "2026-09-14"
+      },
+      "B_latest_priced_subset_RUB": 3053,
       "B_subset_with_MCU_IO_candidate_RUB": 2973,
       "B_subset_with_regulated_CD_candidate_RUB": 2916,
       "A_subset_plus_one_permit_latch_RUB": 2709,
@@ -444,6 +456,18 @@
         "stock_sufficient": true,
         "checked": "2026-09-14"
       },
+      "OC_shunt_candidate": {
+        "id": "CHG-OC-SHUNT",
+        "url": "https://www.chipdip.ru/product/1vt-2512-0.1-om-1-rl2512fk-070r1l-chip-rezistor-smd-yageo-9030002190",
+        "needed": 4,
+        "purchase": 10,
+        "unit_RUB": 8,
+        "spend_RUB": 80,
+        "stock": 5028,
+        "stock_sufficient": true,
+        "checked": "2026-09-14"
+      },
+      "B_latest_priced_subset_RUB": 9082,
       "B_subset_with_MCU_IO_candidate_RUB": 9002,
       "B_subset_with_regulated_CD_candidate_RUB": 8774,
       "A_subset_plus_one_permit_latch_RUB": 8257,
@@ -670,6 +694,18 @@
         "stock_sufficient": true,
         "checked": "2026-09-14"
       },
+      "OC_shunt_candidate": {
+        "id": "CHG-OC-SHUNT",
+        "url": "https://www.chipdip.ru/product/1vt-2512-0.1-om-1-rl2512fk-070r1l-chip-rezistor-smd-yageo-9030002190",
+        "needed": 6,
+        "purchase": 10,
+        "unit_RUB": 8,
+        "spend_RUB": 80,
+        "stock": 5028,
+        "stock_sufficient": true,
+        "checked": "2026-09-14"
+      },
+      "B_latest_priced_subset_RUB": 12032,
       "B_subset_with_MCU_IO_candidate_RUB": 11952,
       "B_subset_with_regulated_CD_candidate_RUB": 11610,
       "A_subset_plus_one_permit_latch_RUB": 11743,
@@ -685,12 +721,12 @@
     "Inductor, capacitors, resistors, thermistor, harness and power MOSFETs",
     "Permit/CD/regulator passives, qualified supply integration and source-policy circuit",
     "A: equivalent actuator not priced; B: CD switches do not close supply-transition qualification",
-    "A: complete per-cell charge control; B: shunt and independent interruption/latch circuit",
+    "A: complete per-cell charge control; B: remaining OC passives, interruption integration and reset circuit",
     "Common programming tool and MCU board/debug access"
   ],
   "limitations": [
     "Current-limit and battery protection candidates are not approved complete circuits",
-    "Use B_subset_with_MCU_IO_candidate_RUB for current B; earlier fields omit the new IO inverter",
+    "Use B_latest_priced_subset_RUB for current B; MCU_IO field omits the selected shunt and earlier fields omit the IO inverter",
     "B_subset_with_CD_candidate_RUB retains the earlier subset without U406; use regulated_CD field for current candidate",
     "USB-AUX-LDO and CHG-BIAS-LDO are distinct placements of one SKU; aggregate them when ordering",
     "Permit supplement assumes one identical latch per A/B car; full integration/count is not qualified",

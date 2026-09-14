@@ -1,0 +1,106 @@
+{
+  "date": "2026-09-14",
+  "contract": "CHARGE-OC-01 v0.2",
+  "kicad_version": "10.0.6",
+  "erc_violations": 0,
+  "components": 7,
+  "pins_including_ep_and_nc": 23,
+  "fault_injections": [
+    {
+      "mutation": "sense_positive_swapped",
+      "detected": true,
+      "reason": "Connectivity mismatch: {(('U701', '1'), 'SHUNT_UPSTREAM_P'), (('U701', '1'), 'SHUNT_DOWNSTREAM_P')}"
+    },
+    {
+      "mutation": "latch_transparent",
+      "detected": true,
+      "reason": "Connectivity mismatch: {(('U701', '6'), 'USB_GND'), (('U701', '6'), 'AUX_3V3')}"
+    },
+    {
+      "mutation": "monitor_disabled",
+      "detected": true,
+      "reason": "Connectivity mismatch: {(('U701', '4'), 'USB_GND'), (('U701', '4'), 'AUX_3V3')}"
+    },
+    {
+      "mutation": "wrong_100us_delay",
+      "detected": true,
+      "reason": "Connectivity mismatch: {(('U701', '7'), 'USB_GND'), (('U701', '7'), 'AUX_3V3')}"
+    },
+    {
+      "mutation": "fault_wrong_output",
+      "detected": true,
+      "reason": "Connectivity mismatch: {(('J703', '1'), 'PERMIT_Q'), (('J703', '1'), 'FAULT_BUS_N')}"
+    },
+    {
+      "mutation": "shunt_bypassed",
+      "detected": true,
+      "reason": "Connectivity mismatch: {(('R702', '2'), 'SHUNT_UPSTREAM_P'), (('R702', '2'), 'SHUNT_DOWNSTREAM_P')}"
+    }
+  ],
+  "window_model_sequences": [
+    {
+      "name": "nominal_250mA",
+      "samples_1us": 200,
+      "first_alert_us": null,
+      "postfault_hold_with_all_ARM_modes": false
+    },
+    {
+      "name": "continuous_above_threshold",
+      "samples_1us": 100,
+      "first_alert_us": 50,
+      "postfault_hold_with_all_ARM_modes": true
+    },
+    {
+      "name": "one_low_window_restarts_counter",
+      "samples_1us": 100,
+      "first_alert_us": 100,
+      "postfault_hold_with_all_ARM_modes": true
+    },
+    {
+      "name": "limitation_repeated_40us_bursts_missed",
+      "samples_1us": 1000,
+      "first_alert_us": null,
+      "postfault_hold_with_all_ARM_modes": false
+    },
+    {
+      "name": "within_window_average_above_threshold",
+      "samples_1us": 100,
+      "first_alert_us": 50,
+      "postfault_hold_with_all_ARM_modes": true
+    },
+    {
+      "name": "limitation_reversed_sense_not_detected",
+      "samples_1us": 200,
+      "first_alert_us": null,
+      "postfault_hold_with_all_ARM_modes": false
+    }
+  ],
+  "existing_pullup_sink_max_A": 0.00036363636363636367,
+  "arithmetic_scope": "Pull-up only; complete bus leakage and transient sink current not measured",
+  "not_verified": [
+    "Approved LW charge and pulse limits; complete shutdown latency/peak/energy",
+    "Final shunt placement relative to BAT/MID/CBSET and BMS; reverse/balance paths",
+    "Shunt PCB Kelvin layout, temperature, pulse rating and LIMIT resistor TCR",
+    "INA startup/brownout, power-cycle fault recovery and no-backfeed discharge of AUX",
+    "MCU/source policy, common PCB, assembly and actual charging"
+  ],
+  "sha256": {
+    "hardware/charge-overcurrent/charge-overcurrent.kicad_sch": "0797acb205232ef70f8cc308a2f28bbc0cef3dd4d533ae95a7fa26fe8a6ef608",
+    "hardware/charge-overcurrent/charge-overcurrent.kicad_pro": "5d890d8524ebc0291e6ab9343d4b3f58ab332e4053e03c50618b298bfc2d88e5",
+    "hardware/charge-overcurrent/RaceRemote_Overcurrent.kicad_sym": "cf8bf1b717632968000fcd428d8bbed7b8149a5982d22eaee19fc25d1641faea",
+    "hardware/charge-overcurrent/charge-overcurrent.net": "798c449bc15e649add37ed19524e2fa49689e160f846030a05435698ce88ce77",
+    "hardware/charge-overcurrent/charge-overcurrent.pdf": "4b9149e592344e80dd77b8cf4eb1f08b80c5cd5ca66bcfdd23f8297fc5ffec8f",
+    "hardware/charge-overcurrent/bom.csv": "6984274604378230320cf7fe0023f23681ab28041dac7de833e284b869d039f5",
+    "hardware/charge-overcurrent/sym-lib-table": "387a10d41c42f6606e16f367adb5a163f94258dc6b6fe29bda0d6cf500f00795",
+    "hardware/charge-overcurrent/fp-lib-table": "60ef99d0df04aed362dd0c7962ab4c36105ae3926bd3050612a8de0c3bfae4ca",
+    "docs/evidence/charge-overcurrent-erc.json": "2c4e1e0687b5460b6f01becb467010215da4ea8181705557398cda5db085c1f1",
+    "hardware/charge-permit/charge-permit.kicad_sch": "8fda19bbd1f1fcf1e2917cc35d52570cadd0abdf17fd13e9a5add2e12ed2ed3c",
+    "hardware/charge-core/RaceRemote_Charge.kicad_sym": "db052fcebd747ff27c908112797eef32c70e673b8c5ca08fdeb1f256d3b8e4c4",
+    "tools/build_charge_overcurrent.py": "81088a35d776c5134180cf36c1414b6932829ac22b4f5ec9623541ce41b76573",
+    "tools/verify_charge_overcurrent.py": "1aebdc85f3bd3bd12342deef370c2fd94226f8285fff281df6508eaaca0dfe27",
+    "tools/build_charge_permit.py": "5c860010fbd25fe639780fefc81b28164161fc1f5ddc781ce1144811def10d58",
+    "tools/build_usb_port_schematic.py": "96b38c6c6cac91787961c1f4be5152a5175b215b0812dd1e0153f1d6a89addfa",
+    "tools/verify_charge_permit.py": "61bf650a46744f05c84a08080bb05babfd5a7999a569783388beb6d27969ca98",
+    "tools/verify_usb_detector.py": "68d2ebf584a14c0aa0192de131e2af41f19f1ccb08c81a478b64a3895b83996a"
+  }
+}

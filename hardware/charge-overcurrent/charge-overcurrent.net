@@ -1,0 +1,316 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<export version="E">
+  <design>
+    <source>C:\Users\Evgeny\orca\RaceRemote\hardware\charge-overcurrent\charge-overcurrent.kicad_sch</source>
+    <date>2026-09-14T06:51:34</date>
+    <tool>Eeschema 10.0.6</tool>
+    <sheet number="1" name="/" tstamps="/">
+      <title_block>
+        <title>RaceRemote - latched overcurrent PROPOSAL</title>
+        <company>vea.raceremote</company>
+        <rev>0.2</rev>
+        <date>2026-09-14</date>
+        <source>charge-overcurrent.kicad_sch</source>
+        <comment number="1" value=""/>
+        <comment number="2" value=""/>
+        <comment number="3" value=""/>
+        <comment number="4" value=""/>
+        <comment number="5" value=""/>
+        <comment number="6" value=""/>
+        <comment number="7" value=""/>
+        <comment number="8" value=""/>
+        <comment number="9" value=""/>
+      </title_block>
+    </sheet>
+  </design>
+  <components>
+    <comp ref="C701">
+      <value>100n / 16V</value>
+      <fields>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="RaceRemote_Overcurrent" part="C" description="Unpolarized capacitor"/>
+      <property name="Sheetname" value="charge-overcurrent"/>
+      <property name="Sheetfile" value="charge-overcurrent.kicad_sch"/>
+      <property name="ki_keywords" value="cap capacitor"/>
+      <property name="ki_fp_filters" value="C_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>a3ec0495-ef41-5c9a-8190-788d9d740e18</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="J701">
+      <value>FROM USB AUX</value>
+      <fields>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="RaceRemote_Overcurrent" part="Conn_01x02" description="Generic connector, single row, 01x02, script generated (kicad-library-utils/schlib/autogen/connector/)"/>
+      <property name="Sheetname" value="charge-overcurrent"/>
+      <property name="Sheetfile" value="charge-overcurrent.kicad_sch"/>
+      <property name="ki_keywords" value="connector"/>
+      <property name="ki_fp_filters" value="Connector*:*_1x??_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>97bb9520-13f5-5902-a971-c9c16ba0e2ae</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="J702">
+      <value>BENCH SERIES PATH</value>
+      <fields>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="RaceRemote_Overcurrent" part="Conn_01x02" description="Generic connector, single row, 01x02, script generated (kicad-library-utils/schlib/autogen/connector/)"/>
+      <property name="Sheetname" value="charge-overcurrent"/>
+      <property name="Sheetfile" value="charge-overcurrent.kicad_sch"/>
+      <property name="ki_keywords" value="connector"/>
+      <property name="ki_fp_filters" value="Connector*:*_1x??_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>187a2b4d-7e32-5a55-9e66-2a2d8150fa09</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="J703">
+      <value>TO PERMIT J402</value>
+      <fields>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="RaceRemote_Overcurrent" part="Conn_01x02" description="Generic connector, single row, 01x02, script generated (kicad-library-utils/schlib/autogen/connector/)"/>
+      <property name="Sheetname" value="charge-overcurrent"/>
+      <property name="Sheetfile" value="charge-overcurrent.kicad_sch"/>
+      <property name="ki_keywords" value="connector"/>
+      <property name="ki_fp_filters" value="Connector*:*_1x??_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>7bc022ad-a572-580b-a920-88277ca60a44</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="R701">
+      <value>1.74k / 1%</value>
+      <fields>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="RaceRemote_Overcurrent" part="R" description="Resistor"/>
+      <property name="Sheetname" value="charge-overcurrent"/>
+      <property name="Sheetfile" value="charge-overcurrent.kicad_sch"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <property name="ki_fp_filters" value="R_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>46dbca04-be8d-536e-a6bb-4ff5f512c6e5</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="R702">
+      <value>RL2512FK-070R1L</value>
+      <fields>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="RaceRemote_Overcurrent" part="R" description="Resistor"/>
+      <property name="Sheetname" value="charge-overcurrent"/>
+      <property name="Sheetfile" value="charge-overcurrent.kicad_sch"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <property name="ki_fp_filters" value="R_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>0c2ad036-0d8e-5f69-b4a9-343050344b6a</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="U701">
+      <value>INA300AIDSQR</value>
+      <datasheet>https://www.ti.com/lit/gpn/ina300</datasheet>
+      <fields>
+        <field name="Footprint"/>
+        <field name="Datasheet">https://www.ti.com/lit/gpn/ina300</field>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="RaceRemote_Overcurrent" part="INA300DSQ" description=""/>
+      <property name="Sheetname" value="charge-overcurrent"/>
+      <property name="Sheetfile" value="charge-overcurrent.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>2549fb7c-d7b2-5b9e-b878-8b85fd10cb40</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+            <pin num="4"/>
+            <pin num="6"/>
+            <pin num="9"/>
+            <pin num="8"/>
+            <pin num="5"/>
+            <pin num="3"/>
+            <pin num="7"/>
+            <pin num="10"/>
+            <pin num="11"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+  </components>
+  <libparts>
+    <libpart lib="RaceRemote_Overcurrent" part="C">
+      <description>Unpolarized capacitor</description>
+      <footprints>
+        <fp>C_*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">C</field>
+        <field name="Value">C</field>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description">Unpolarized capacitor</field>
+      </fields>
+      <pins>
+        <pin num="1" name="" type="passive"/>
+        <pin num="2" name="" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="RaceRemote_Overcurrent" part="Conn_01x02">
+      <description>Generic connector, single row, 01x02, script generated (kicad-library-utils/schlib/autogen/connector/)</description>
+      <footprints>
+        <fp>Connector*:*_1x??_*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">J</field>
+        <field name="Value">Conn_01x02</field>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description">Generic connector, single row, 01x02, script generated (kicad-library-utils/schlib/autogen/connector/)</field>
+      </fields>
+      <pins>
+        <pin num="1" name="Pin_1" type="passive"/>
+        <pin num="2" name="Pin_2" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="RaceRemote_Overcurrent" part="INA300DSQ">
+      <fields>
+        <field name="Reference">U</field>
+        <field name="Value">INA300DSQ</field>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <pins>
+        <pin num="1" name="IN+" type="input"/>
+        <pin num="2" name="IN-" type="input"/>
+        <pin num="3" name="LIMIT" type="input"/>
+        <pin num="4" name="ENABLE" type="input"/>
+        <pin num="5" name="~{ALERT}" type="open_collector"/>
+        <pin num="6" name="LATCH" type="input"/>
+        <pin num="7" name="DELAY" type="input"/>
+        <pin num="8" name="GND" type="power_in"/>
+        <pin num="9" name="VS" type="power_in"/>
+        <pin num="10" name="HYS" type="input"/>
+        <pin num="11" name="EP" type="power_in"/>
+      </pins>
+    </libpart>
+    <libpart lib="RaceRemote_Overcurrent" part="R">
+      <description>Resistor</description>
+      <footprints>
+        <fp>R_*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">R</field>
+        <field name="Value">R</field>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description">Resistor</field>
+      </fields>
+      <pins>
+        <pin num="1" name="" type="passive"/>
+        <pin num="2" name="" type="passive"/>
+      </pins>
+    </libpart>
+  </libparts>
+  <libraries>
+    <library logical="RaceRemote_Overcurrent">
+      <uri>${KIPRJMOD}/RaceRemote_Overcurrent.kicad_sym</uri>
+    </library>
+  </libraries>
+  <nets>
+    <net code="1" name="AUX_3V3" class="Default">
+      <node ref="C701" pin="1" pintype="passive"/>
+      <node ref="J701" pin="1" pinfunction="Pin_1_1" pintype="passive"/>
+      <node ref="U701" pin="4" pinfunction="ENABLE_4" pintype="input"/>
+      <node ref="U701" pin="6" pinfunction="LATCH_6" pintype="input"/>
+      <node ref="U701" pin="9" pinfunction="VS_9" pintype="power_in"/>
+    </net>
+    <net code="2" name="FAULT_BUS_N" class="Default">
+      <node ref="J703" pin="1" pinfunction="Pin_1_1" pintype="passive"/>
+      <node ref="U701" pin="5" pinfunction="~{ALERT}_5" pintype="open_collector"/>
+    </net>
+    <net code="3" name="OC_LIMIT" class="Default">
+      <node ref="R701" pin="1" pintype="passive"/>
+      <node ref="U701" pin="3" pinfunction="LIMIT_3" pintype="input"/>
+    </net>
+    <net code="4" name="SHUNT_DOWNSTREAM_P" class="Default">
+      <node ref="J702" pin="2" pinfunction="Pin_2_2" pintype="passive"/>
+      <node ref="R702" pin="2" pintype="passive"/>
+      <node ref="U701" pin="2" pinfunction="IN-_2" pintype="input"/>
+    </net>
+    <net code="5" name="SHUNT_UPSTREAM_P" class="Default">
+      <node ref="J702" pin="1" pinfunction="Pin_1_1" pintype="passive"/>
+      <node ref="R702" pin="1" pintype="passive"/>
+      <node ref="U701" pin="1" pinfunction="IN+_1" pintype="input"/>
+    </net>
+    <net code="6" name="USB_GND" class="Default">
+      <node ref="C701" pin="2" pintype="passive"/>
+      <node ref="J701" pin="2" pinfunction="Pin_2_2" pintype="passive"/>
+      <node ref="J703" pin="2" pinfunction="Pin_2_2" pintype="passive"/>
+      <node ref="R701" pin="2" pintype="passive"/>
+      <node ref="U701" pin="11" pinfunction="EP_11" pintype="power_in"/>
+      <node ref="U701" pin="7" pinfunction="DELAY_7" pintype="input"/>
+      <node ref="U701" pin="8" pinfunction="GND_8" pintype="power_in"/>
+    </net>
+    <net code="7" name="unconnected-(U701-HYS-Pad10)" class="Default">
+      <node ref="U701" pin="10" pinfunction="HYS_10" pintype="input+no_connect"/>
+    </net>
+  </nets>
+</export>

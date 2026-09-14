@@ -123,6 +123,18 @@ docs/evidence/charger-mcu-*.json text eol=crlf
 tools/build_charger_mcu.py text eol=lf
 tools/verify_charger_mcu.py text eol=lf
 
+hardware/charge-overcurrent/*.kicad_sch text eol=crlf
+hardware/charge-overcurrent/*.kicad_sym text eol=crlf
+hardware/charge-overcurrent/*.kicad_pro text eol=crlf
+hardware/charge-overcurrent/*-lib-table text eol=crlf
+hardware/charge-overcurrent/*.csv text eol=crlf
+hardware/charge-overcurrent/*.net text eol=lf
+hardware/charge-overcurrent/*.pdf binary
+hardware/charge-overcurrent/*.md text eol=lf
+docs/evidence/charge-overcurrent-*.json text eol=crlf
+tools/build_charge_overcurrent.py text eol=lf
+tools/verify_charge_overcurrent.py text eol=lf
+
 # Stable source and device-evidence hashes for the driving UI.
 app/src/main/java/vea/raceremote/control/CarControlScreen.kt text eol=lf
 app/src/main/java/vea/raceremote/control/DrivingPad.kt text eol=lf

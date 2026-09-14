@@ -134,6 +134,8 @@ hardware/charge-overcurrent/*.md text eol=lf
 docs/evidence/charge-overcurrent-*.json text eol=crlf
 tools/build_charge_overcurrent.py text eol=lf
 tools/verify_charge_overcurrent.py text eol=lf
+tools/analyze_charge_sense_paths.py text eol=lf
+docs/evidence/charge-sense-paths.json text eol=lf
 
 # Stable source and device-evidence hashes for the driving UI.
 app/src/main/java/vea/raceremote/control/CarControlScreen.kt text eol=lf

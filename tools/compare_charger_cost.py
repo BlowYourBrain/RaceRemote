@@ -20,6 +20,8 @@ def main():
         r = parts[part]
         need, purchase, price, cost = (int(r[start + index]) for start in [5, 8, 11, 14])
         assert purchase >= need and purchase >= int(r[4])
+        if part == 'CHG-CD-LOT':
+            assert purchase % 5 == 0
         assert cost == purchase * price
         return {'id': part, 'url': r[3], 'needed': need, 'purchase': purchase,
                 'unit_RUB': price, 'spend_RUB': cost, 'stock': int(r[17]),
@@ -38,6 +40,7 @@ def main():
         variant_a = [offer('CHG-886', index), offer('BAL-29209', index)]
         variant_b = [cheapest(['CHG-887-ONE', 'CHG-887-LOT'], index)]
         b_guard = cheapest(['CHG-OC-ONE', 'CHG-OC-LOT'], index)
+        b_cd = cheapest(['CHG-CD-ONE', 'CHG-CD-LOT'], index)
         permit = [offer(part, index) for part in ['CHG-PERMIT-FF', 'CHG-PERMIT-SUP', 'CHG-PERMIT-SCHMITT']]
         permit_cost = sum(o['spend_RUB'] for o in permit)
         subtotal = sum(o['spend_RUB'] for o in common)
@@ -51,9 +54,12 @@ def main():
                           'A_minus_B_with_detector_RUB': a-b-b_guard['spend_RUB'],
                           'permit_latch_candidate': permit,
                           'permit_latch_ICs_RUB': permit_cost,
+                          'B_cd_actuator_candidate': b_cd,
+                          'cd_actuator_ICs_RUB': b_cd['spend_RUB'],
+                          'B_subset_with_CD_candidate_RUB': b+b_guard['spend_RUB']+permit_cost+b_cd['spend_RUB'],
                           'A_subset_plus_one_permit_latch_RUB': a+permit_cost,
                           'B_subset_plus_detector_and_one_permit_latch_RUB': b+b_guard['spend_RUB']+permit_cost,
-                          'stock_shortages': [o['id'] for o in common+variant_a+variant_b+[b_guard]+permit
+                          'stock_shortages': [o['id'] for o in common+variant_a+variant_b+[b_guard, b_cd]+permit
                                               if not o['stock_sufficient']],
                           'complete_purchase_ready': False})
     report = {'date': '2026-09-14', 'scope': 'Conditional priced subset, not full BOM or authorization to buy',
@@ -61,7 +67,8 @@ def main():
               'scenarios': scenarios,
               'missing_costs': ['PCB fabrication/assembly, footprints, shipping and spares',
                                 'Inductor, capacitors, resistors, thermistor, harness and power MOSFETs',
-                                'Permit-latch passives, voltage adaptation, actuator and source-policy circuit',
+                                'Permit/CD passives, qualified CHG_BIAS input and source-policy circuit',
+                                'A: equivalent actuator not priced; B: CD switches do not close supply-transition qualification',
                                 'A: complete per-cell charge control; B: shunt and independent interruption/latch circuit',
                                 'Common programming tool and MCU board/debug access'],
               'limitations': ['Current-limit and battery protection candidates are not approved complete circuits',

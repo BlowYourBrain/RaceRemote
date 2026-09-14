@@ -1,16 +1,16 @@
 {
   "date": "2026-09-14",
-  "contract": "CHARGE-PERMIT-01 v0.1",
+  "contract": "CHARGE-PERMIT-01 v0.2",
   "kicad_version": "10.0.6",
   "erc_violations": 0,
-  "ic_pins_checked": 20,
-  "all_pins_checked": 42,
-  "logical_components": 13,
+  "ic_pins_checked": 32,
+  "all_pins_checked": 64,
+  "logical_components": 19,
   "fault_injections": [
     {
       "mutation": "clear_bypassed_to_aux",
       "detected": true,
-      "failed_contract": "Connectivity mismatch: {(('U401', '6'), 'AUX_3V3'), (('U401', '6'), 'CLR_N')}"
+      "failed_contract": "Connectivity mismatch: {(('U401', '6'), 'CLR_N'), (('U401', '6'), 'AUX_3V3')}"
     },
     {
       "mutation": "data_tied_low",
@@ -20,12 +20,27 @@
     {
       "mutation": "supervisor_senses_ground",
       "detected": true,
-      "failed_contract": "Connectivity mismatch: {(('U403', '5'), 'USB_GND'), (('U403', '5'), 'AUX_3V3')}"
+      "failed_contract": "Connectivity mismatch: {(('U403', '5'), 'AUX_3V3'), (('U403', '5'), 'USB_GND')}"
     },
     {
       "mutation": "output_connector_uses_clock",
       "detected": true,
-      "failed_contract": "Connectivity mismatch: {(('J404', '1'), 'CLK'), (('J404', '1'), 'PERMIT_Q')}"
+      "failed_contract": "Connectivity mismatch: {(('J404', '1'), 'CLK'), (('J404', '1'), 'CHARGER_CD')}"
+    },
+    {
+      "mutation": "supervisor_supply_back_on_aux",
+      "detected": true,
+      "failed_contract": "Connectivity mismatch: {(('U403', '6'), 'AUX_3V3'), (('U403', '6'), 'CHG_BIAS')}"
+    },
+    {
+      "mutation": "fault_mux_inhibit_branch_grounded",
+      "detected": true,
+      "failed_contract": "Connectivity mismatch: {(('U405', '4'), 'USB_GND'), (('U405', '4'), 'CHG_BIAS')}"
+    },
+    {
+      "mutation": "fault_mux_select_bypassed_by_q",
+      "detected": true,
+      "failed_contract": "Connectivity mismatch: {(('U405', '1'), 'PERMIT_Q'), (('U405', '1'), 'FAULT_BUS_N')}"
     }
   ],
   "ideal_logic_sequences": [
@@ -346,16 +361,143 @@
     ],
     "scope": "Separate datasheet conditions and assumed resistor tolerance. No analog simulation, whole AUX budget, output threshold acceptance, fast supply-fall or total turnoff proof."
   },
+  "ideal_actuator_cases": [
+    {
+      "bias_valid": true,
+      "q": 0,
+      "fault_bus_n": 0,
+      "cd": 1
+    },
+    {
+      "bias_valid": true,
+      "q": 0,
+      "fault_bus_n": 1,
+      "cd": 1
+    },
+    {
+      "bias_valid": true,
+      "q": 0,
+      "fault_bus_n": null,
+      "cd": 1
+    },
+    {
+      "bias_valid": true,
+      "q": 1,
+      "fault_bus_n": 0,
+      "cd": 1
+    },
+    {
+      "bias_valid": true,
+      "q": 1,
+      "fault_bus_n": 1,
+      "cd": 0
+    },
+    {
+      "bias_valid": true,
+      "q": 1,
+      "fault_bus_n": null,
+      "cd": null
+    },
+    {
+      "bias_valid": true,
+      "q": null,
+      "fault_bus_n": 0,
+      "cd": 1
+    },
+    {
+      "bias_valid": true,
+      "q": null,
+      "fault_bus_n": 1,
+      "cd": null
+    },
+    {
+      "bias_valid": true,
+      "q": null,
+      "fault_bus_n": null,
+      "cd": null
+    },
+    {
+      "bias_valid": false,
+      "q": 0,
+      "fault_bus_n": 0,
+      "cd": null
+    },
+    {
+      "bias_valid": false,
+      "q": 0,
+      "fault_bus_n": 1,
+      "cd": null
+    },
+    {
+      "bias_valid": false,
+      "q": 0,
+      "fault_bus_n": null,
+      "cd": null
+    },
+    {
+      "bias_valid": false,
+      "q": 1,
+      "fault_bus_n": 0,
+      "cd": null
+    },
+    {
+      "bias_valid": false,
+      "q": 1,
+      "fault_bus_n": 1,
+      "cd": null
+    },
+    {
+      "bias_valid": false,
+      "q": 1,
+      "fault_bus_n": null,
+      "cd": null
+    },
+    {
+      "bias_valid": false,
+      "q": null,
+      "fault_bus_n": 0,
+      "cd": null
+    },
+    {
+      "bias_valid": false,
+      "q": null,
+      "fault_bus_n": 1,
+      "cd": null
+    },
+    {
+      "bias_valid": false,
+      "q": null,
+      "fault_bus_n": null,
+      "cd": null
+    }
+  ],
+  "conditional_cd_model": {
+    "bias_range_V": [
+      4.5,
+      5.5
+    ],
+    "ron_each_ohm": 6,
+    "assumed_external_load_A": 0.0001,
+    "low_V": 0.0026184397163120567,
+    "high_V": 4.4988,
+    "supervisor_LOW_V_max_at_specified_sink": 0.4,
+    "mux_VIL_max_V": 0.87,
+    "mux_VIH_min_V": 1.49,
+    "fault_high_V_with_1M_and_assumed_10uA_leakage": 2.86972302769723,
+    "input_gate_conditional_clamp_V_max": 5.55,
+    "input_gate_compatible": false,
+    "scope": "DC budget only at stated TI test conditions; no interpolation into supply ramps, switch charge-injection, BQ timing, residual current or all-state safety proof."
+  },
   "sha256": {
-    "hardware/charge-permit/charge-permit.kicad_sch": "7951c92e564736b35f8ac078b37e22abfe2a02618afe8e71cbf3cbb6f999eced",
+    "hardware/charge-permit/charge-permit.kicad_sch": "24a61efb9bd8276162d3eefb69ac4de71bf5c1635582862bb92f63534aff3b23",
     "hardware/charge-permit/charge-permit.kicad_pro": "1486176357f81a1e7c03fe66e5cb59d71759bed0f8557e6b8a776fe5035b3d85",
-    "hardware/charge-permit/RaceRemote_Permit.kicad_sym": "7754d4df427d2fd5b8108f3a4471e006e50dfc2dabd97885064ce7fc00e6336f",
-    "hardware/charge-permit/charge-permit.net": "8e57dff00b4246899e589e994a8137a924911acbf85c3ad7cd167a8008c7088c",
-    "hardware/charge-permit/charge-permit.pdf": "96517df6be382bccaecd4f088ca05284b4a96977484d64232a24bb71f554a9f6",
-    "hardware/charge-permit/bom.csv": "2c119b3c6bc4341d67dfba0f230471a95959153f6c8f74d449d2bc7f578a3a1c",
-    "docs/evidence/charge-permit-erc.json": "d88bda529f55fe448f3c0bd35c8d1919ac41a0e91dd950cc551bbc92480ab856",
-    "tools/build_charge_permit.py": "55919f73c6859b0aafa903fd284a94e15d93bcb0b8bb7a9201b8e2f5d6407414",
-    "tools/verify_charge_permit.py": "a488ce2a02a6597d17cdb97a0623c59d427850ae94f9c2195e0c6d7079a0fc28",
+    "hardware/charge-permit/RaceRemote_Permit.kicad_sym": "0012985ce097888e9fc6716743435d4f329f24a36f288d9a077184f04d40aa78",
+    "hardware/charge-permit/charge-permit.net": "7dd4523d9b52e654b94e1bde084f10338be22ee68cb6811a0e25eb3a58d1050c",
+    "hardware/charge-permit/charge-permit.pdf": "7ee4023e241e9647e960b599865f813fb0b72be7af3ad716d861647bb14689bb",
+    "hardware/charge-permit/bom.csv": "ba3a8e6a93542e173a6e0a196d215c905918cf20ebb2f03bcdd51380480a648b",
+    "docs/evidence/charge-permit-erc.json": "b84031a2b3938dd07a4a74b2f0d7635d1b5ab3ac62ad45c987a7b38357f68407",
+    "tools/build_charge_permit.py": "1ec784e6280e418ea56e4bee761f2e203f37d8dca996879837d4d29a83b04a41",
+    "tools/verify_charge_permit.py": "716d92167e8a7c005907afd115a7e7c8ffeab4443c297e5dd4cdc7adf8dea592",
     "tools/verify_usb_detector.py": "68d2ebf584a14c0aa0192de131e2af41f19f1ccb08c81a478b64a3895b83996a",
     "tools/build_usb_port_schematic.py": "96b38c6c6cac91787961c1f4be5152a5175b215b0812dd1e0153f1d6a89addfa"
   },
@@ -363,7 +505,8 @@
     "Startup/deep brownout/metastability/pulse widths and real fault timing",
     "MCU firmware, independent watchdog and INA300 circuits",
     "Persistent error versus incorrectly repeated MCU ARM edges",
-    "CD/CE/SOURCE_ALLOW actuator, charge current interruption and residual energy",
+    "CHG_BIAS compatibility with TPS25200 and charger VBUS across all states",
+    "CD physical switching, charge current interruption and residual energy",
     "Footprints, PCB, assembly, complete assembled cost and battery acceptance"
   ]
 }

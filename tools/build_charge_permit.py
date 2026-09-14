@@ -1,4 +1,4 @@
-"""Generate the logical permit latch candidate; no charger power actuator."""
+"""Generate permit latch and CD signal actuator; power/input integration pending."""
 import csv
 import json
 from pathlib import Path
@@ -51,14 +51,17 @@ def main():
     symbols['TPS3808G33DBV'] = ic('TPS3808G33DBV',
         [(5, 'SENSE', 'input'), (3, '~{MR}', 'input'), (2, 'GND', 'power_in')],
         [(1, '~{RESET}', 'open_collector'), (4, 'CT', 'input'), (6, 'VDD', 'power_in')])
+    symbols['TMUX1219DBV'] = ic('TMUX1219DBV',
+        [(1, 'SEL', 'input'), (2, 'VDD', 'power_in'), (3, 'GND', 'power_in')],
+        [(4, 'S1 (SEL=0)', 'passive'), (6, 'S2 (SEL=1)', 'passive'), (5, 'D', 'passive')])
     (DEST / (LIB + '.kicad_sym')).write_text('(kicad_symbol_lib (version 20251024) (generator "raceremote")\n'
         + '\n'.join(symbols.values()) + ')\n', encoding='utf-8')
     cache = [s.replace('(symbol "' + n + '"', '(symbol "' + LIB + ':' + n + '"', 1)
              for n, s in symbols.items()]
     out = ['(kicad_sch (version 20250901) (generator "raceremote")',
-           f'(uuid "{uid("sheet")}") (paper "A3")',
-           '(title_block (title "RaceRemote - hardware permit latch PROPOSAL") '
-           '(date "2026-09-14") (rev "0.1") (company "vea.raceremote"))',
+           f'(uuid "{uid("sheet")}") (paper "A2")',
+           '(title_block (title "RaceRemote - permit latch and CD actuator PROPOSAL") '
+           '(date "2026-09-14") (rev "0.2") (company "vea.raceremote"))',
            '(lib_symbols ' + '\n'.join(cache) + ')']
     positions, bom = {}, []
 
@@ -82,7 +85,7 @@ def main():
                    + f'(instances (project "charge-permit" (path "/{uid("sheet")}" (reference "{ref}") (unit 1)))))')
         if not flag:
             bom.append({'reference': ref, 'value': value, 'purpose': purpose, 'footprint': '',
-                        'selection': 'Candidate; footprints, actuator and physical qualification pending'})
+                        'selection': 'Candidate; footprints, qualified bias supply and physical qualification pending'})
 
     def net(ref, pin, name, dx=12.7, dy=0):
         a = positions[ref][str(pin)]
@@ -107,16 +110,24 @@ def main():
                    f'(justify left top)) (uuid "{uid(value)}"))')
 
     symbol('TPS3808G33DBV', 'U403', 'TPS3808G33DBVR', 76.2, 88.9,
-           'AUX supervisor, CT open: nominal 20ms reset release', 'https://www.ti.com/lit/ds/symlink/tps3808.pdf')
+           'SENSE=AUX; powered by independent CHG_BIAS; CT open', 'https://www.ti.com/lit/ds/symlink/tps3808.pdf')
     symbol('SN74LVC2G17DCK', 'U402', 'SN74LVC2G17DCKR', 203.2, 88.9,
            'Schmitt buffers for open-drain fault bus and ARM', 'https://www.ti.com/lit/gpn/sn74lvc2g17')
     symbol('SN74LVC1G74DCT', 'U401', 'SN74LVC1G74DCTR', 330.2, 88.9,
            'Positive-edge ARM, asynchronous fault clear; Q pin5 is permit', 'https://www.ti.com/lit/gpn/sn74lvc1g74')
+    symbol('TMUX1219DBV', 'U404', 'TMUX1219DBVR', 457.2, 88.9,
+           'Q LOW selects bias (inhibit); Q HIGH selects ground', 'https://www.ti.com/lit/gpn/tmux1219')
+    symbol('TMUX1219DBV', 'U405', 'TMUX1219DBVR', 457.2, 190.5,
+           'Fault LOW forces CD to bias independently of latch state', 'https://www.ti.com/lit/gpn/tmux1219')
     for ref, left, right in [
-        ('U403', [(5, 'AUX_3V3'), (3, 'AUX_3V3'), (2, 'USB_GND')], [(1, 'FAULT_BUS_N'), (6, 'AUX_3V3')]),
+        ('U403', [(5, 'AUX_3V3'), (3, 'CHG_BIAS'), (2, 'USB_GND')], [(1, 'FAULT_BUS_N'), (6, 'CHG_BIAS')]),
         ('U402', [(1, 'FAULT_BUS_N'), (3, 'ARM'), (2, 'USB_GND')], [(6, 'CLR_N'), (4, 'CLK'), (5, 'AUX_3V3')]),
         ('U401', [(1, 'CLK'), (2, 'AUX_3V3'), (6, 'CLR_N'), (7, 'AUX_3V3')],
-         [(5, 'PERMIT_Q'), (8, 'AUX_3V3'), (4, 'USB_GND')])]:
+         [(5, 'PERMIT_Q'), (8, 'AUX_3V3'), (4, 'USB_GND')]),
+        ('U404', [(1, 'PERMIT_Q'), (2, 'CHG_BIAS'), (3, 'USB_GND')],
+         [(4, 'CHG_BIAS'), (6, 'USB_GND'), (5, 'CD_REQUEST')]),
+        ('U405', [(1, 'FAULT_BUS_N'), (2, 'CHG_BIAS'), (3, 'USB_GND')],
+         [(4, 'CHG_BIAS'), (6, 'CD_REQUEST'), (5, 'CHARGER_CD')])]:
         for pin, name in left:
             net(ref, pin, name, -7.62)
         for pin, name in right:
@@ -124,30 +135,42 @@ def main():
     nc('U403', 4)
     nc('U401', 3)
     for ref, x in [('C403', 76.2), ('C402', 203.2), ('C401', 330.2)]:
-        pair('C', ref, '100n / 16V', x, 144.78, 'AUX_3V3', 'USB_GND', 'Local IC bypass; place at corresponding IC')
+        pair('C', ref, '100n / 16V', x, 144.78, 'CHG_BIAS' if ref == 'C403' else 'AUX_3V3',
+             'USB_GND', 'Local IC bypass; place at corresponding IC')
+    for ref, x in [('C404', 431.8), ('C405', 533.4)]:
+        pair('C', ref, '100n / 16V', x, 269.24, 'CHG_BIAS', 'USB_GND', 'Local TMUX bias bypass, not AUX')
     for ref, value, x, top, bottom, purpose in [
         ('R401', '10k / 1%', 76.2, 'AUX_3V3', 'FAULT_BUS_N', 'Only pull-up for shared open-drain error bus'),
         ('R402', '10k / 1%', 203.2, 'ARM', 'USB_GND', 'Default ARM LOW when MCU input floats'),
         ('R403', '47k / 1%', 330.2, 'PERMIT_Q', 'USB_GND', 'Pull-down at VCC=0 only; not brownout proof')]:
         pair('R', ref, value, x, 195.58, top, bottom, purpose)
+    pair('R', 'R404', '47k / 1%', 431.8, 330.2, 'CHG_BIAS', 'CHARGER_CD', 'Pull-up during switch transition; dynamic CD timing open')
+    pair('R', 'R405', '1M / 1%', 533.4, 330.2, 'FAULT_BUS_N', 'USB_GND', 'Weak fault-bus pull-down; include in HIGH level budget')
     for ref, name, value, x, nets, purpose in [
-        ('J401', 'Conn_01x02', 'FROM AUX', 63.5, ['AUX_3V3', 'USB_GND'], 'Single source TPS709; no battery/raw USB'),
+        ('J401', 'Conn_01x04', 'AUX AND CHARGER BIAS', 63.5, ['AUX_3V3', 'USB_GND', 'CHG_BIAS', 'USB_GND'],
+         'AUX from TPS709; separate qualified bias 4.5..5.5V from charger input; NOT raw USB or REGN'),
         ('J402', 'Conn_01x02', 'FAULT SOURCES', 177.8, ['FAULT_BUS_N', 'USB_GND'], 'External watchdog and OC: open drain only'),
         ('J403', 'Conn_01x04', 'MCU INTERFACE', 279.4, ['ARM', 'FAULT_BUS_N', 'PERMIT_Q', 'USB_GND'], 'ARM edge, open-drain revoke/readback, Q observation'),
-        ('J404', 'Conn_01x02', 'TO FUTURE GATE', 381, ['PERMIT_Q', 'USB_GND'], 'Logical output only; no direct CD/CE or SOURCE_ALLOW')]:
+        ('J404', 'Conn_01x02', 'TO BQ25887 CD', 381, ['CHARGER_CD', 'USB_GND'],
+         'Active HIGH disable to BQ25887 pin3; signal only, no battery/traction current')]:
         symbol(name, ref, value, x, 246.38, purpose)
         for i, name in enumerate(nets):
             net(ref, i + 1, name, -7.62)
-    for i, (name, x) in enumerate([('AUX_3V3', 165.1), ('USB_GND', 292.1)]):
+    for i, (name, x) in enumerate([('AUX_3V3', 165.1), ('USB_GND', 292.1), ('CHG_BIAS', 558.8)]):
         ref = '#FLG' + str(401 + i)
         symbol('PWR_FLAG', ref, 'PWR_FLAG', x, 119.38)
         net(ref, 1, name, 0, 5.08)
-    note('CHARGE-PERMIT-01 v0.1 - logical latch candidate, NOT a complete charger shutdown', 25.4, 17.78, 2)
+    note('CHARGE-PERMIT-01 v0.2 - latch + CD signal actuator; complete charger NOT qualified', 25.4, 17.78, 2)
     note('FAULT_BUS_N LOW clears Q even with ARM HIGH. Releasing fault alone does not re-arm.\n'
          'D and PRE tied HIGH. Only a new ARM rising edge after reset recovery may set Q. Q-bar intentionally unused.\n'
          'External fault sources / MCU revoke must sink or release; never drive shared bus HIGH.', 25.4, 27.94)
-    note('AUX 3.0..3.6V proposal; supervisor falling nominal 3.07V. Below IC valid rails, outputs are NOT guaranteed.\n'
-         'No MCU/watchdog/INA300/charger actuator here. PCB, timing, transient and deep-brownout qualification are open.', 25.4, 274.32, 1)
+    note('FAULT LOW: U405 selects CHG_BIAS directly, even when Q is unknown.\n'
+         'FAULT HIGH: U405 passes U404 output. CD LOW requires Q HIGH.\n'
+         'Supervisor and both muxes use CHG_BIAS; U401/U402 use AUX.\n'
+         'J401 changed to 4 pins. J404 is now active-HIGH CD, NOT PERMIT_Q.', 25.4, 294.64)
+    note('CHG_BIAS proposal: qualified charger-input rail 4.5..5.5V. Existing TPS25200 may clamp at 5.55V: NOT yet compatible.\n'
+         'AUX 3.0..3.6V; SENSE falling nominal 3.07V. Delays/fast ramps/bias loss and restart still require measurement.\n'
+         'No MCU, watchdog, INA300 or charger power stage here. This sheet does not authorize battery connection.', 25.4, 391.16, 1)
     out.append('(sheet_instances (path "/" (page "1"))) (embedded_fonts no))')
     (DEST / 'charge-permit.kicad_sch').write_text('\n'.join(out) + '\n', encoding='utf-8')
     (DEST / 'charge-permit.kicad_pro').write_text(json.dumps({'meta': {'filename': 'charge-permit.kicad_pro', 'version': 3}}, indent=2) + '\n')

@@ -1,7 +1,7 @@
 {
   "date": "2026-09-14",
   "scope": "Conditional priced subset, not full BOM or authorization to buy",
-  "source_sha256": "beeae74d8ffcbcbbdfd594c638448eaebd00128265404949ca3e6dbe1515c893",
+  "source_sha256": "43248ddd86f444990476d193aa2e890cc6237b43ac18f9e6de9d4653c4ad0eed",
   "scenarios": [
     {
       "cars": 1,
@@ -185,6 +185,19 @@
         }
       ],
       "permit_latch_ICs_RUB": 146,
+      "B_cd_actuator_candidate": {
+        "id": "CHG-CD-ONE",
+        "url": "https://www.chipdip.ru/product/tmux1219dbvr-analog-switch-ics-5-v-2-1-texas-instruments-8005016499",
+        "needed": 2,
+        "purchase": 2,
+        "unit_RUB": 100,
+        "spend_RUB": 200,
+        "stock": 15319,
+        "stock_sufficient": true,
+        "checked": "2026-09-14"
+      },
+      "cd_actuator_ICs_RUB": 200,
+      "B_subset_with_CD_candidate_RUB": 2876,
       "A_subset_plus_one_permit_latch_RUB": 2709,
       "B_subset_plus_detector_and_one_permit_latch_RUB": 2676,
       "stock_shortages": [],
@@ -372,6 +385,19 @@
         }
       ],
       "permit_latch_ICs_RUB": 584,
+      "B_cd_actuator_candidate": {
+        "id": "CHG-CD-ONE",
+        "url": "https://www.chipdip.ru/product/tmux1219dbvr-analog-switch-ics-5-v-2-1-texas-instruments-8005016499",
+        "needed": 8,
+        "purchase": 10,
+        "unit_RUB": 55,
+        "spend_RUB": 550,
+        "stock": 15319,
+        "stock_sufficient": true,
+        "checked": "2026-09-14"
+      },
+      "cd_actuator_ICs_RUB": 550,
+      "B_subset_with_CD_candidate_RUB": 8614,
       "A_subset_plus_one_permit_latch_RUB": 8257,
       "B_subset_plus_detector_and_one_permit_latch_RUB": 8064,
       "stock_shortages": [
@@ -561,6 +587,19 @@
         }
       ],
       "permit_latch_ICs_RUB": 876,
+      "B_cd_actuator_candidate": {
+        "id": "CHG-CD-ONE",
+        "url": "https://www.chipdip.ru/product/tmux1219dbvr-analog-switch-ics-5-v-2-1-texas-instruments-8005016499",
+        "needed": 12,
+        "purchase": 12,
+        "unit_RUB": 55,
+        "spend_RUB": 660,
+        "stock": 15319,
+        "stock_sufficient": true,
+        "checked": "2026-09-14"
+      },
+      "cd_actuator_ICs_RUB": 660,
+      "B_subset_with_CD_candidate_RUB": 11370,
       "A_subset_plus_one_permit_latch_RUB": 11743,
       "B_subset_plus_detector_and_one_permit_latch_RUB": 10710,
       "stock_shortages": [
@@ -572,7 +611,8 @@
   "missing_costs": [
     "PCB fabrication/assembly, footprints, shipping and spares",
     "Inductor, capacitors, resistors, thermistor, harness and power MOSFETs",
-    "Permit-latch passives, voltage adaptation, actuator and source-policy circuit",
+    "Permit/CD passives, qualified CHG_BIAS input and source-policy circuit",
+    "A: equivalent actuator not priced; B: CD switches do not close supply-transition qualification",
     "A: complete per-cell charge control; B: shunt and independent interruption/latch circuit",
     "Common programming tool and MCU board/debug access"
   ],

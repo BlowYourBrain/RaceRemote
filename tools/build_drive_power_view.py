@@ -35,7 +35,7 @@ def main():
                          wire=False,hidden=False,count=len(raw),data=base64.b64encode(raw.tobytes()).decode()))
     page = template.read_text(encoding='utf-8').replace('3D-компоновка 0.1','Привод и питание XIAO')
     begin = page.index('<p class="note">'); end = page.index('</p>',begin)+4
-    page = page[:begin]+'''<p class="note">Общая плата 30 × 18 мм: новые детали питания находятся снизу. Только начальное положение 0/+3. Корпуса — резервы места; новые провода H8/H9, нагрев и снятие платы ещё не проверены. Печать отложена.</p>'''+page[end:]
+    page = page[:begin]+'''<p class="note">Плата 0.3: отдельная площадка H10 для общего провода XIAO; H5 — силовой возврат. Габарит 30 × 18 мм. Здесь справочная сцена компонентов; <a href="../xiao-return-h10/viewer.html">актуальная проводка</a> показана отдельно. Нагрев, монтаж и физическая посадка не проверены. Печать отложена.</p>'''+page[end:]
     page = page.replace('assembly.scad','added-power-and-pcb.step').replace('Редактировать в OpenSCAD','STEP новых деталей')
     page = page.replace('assembly.md','README.md').replace('reference/NOTICE.md','../packaging-v05/NOTICE.md')
     page = page.replace('part.visible=true;','part.visible=!part.hidden;').replace('input.checked=true;','input.checked=!part.hidden;')
@@ -69,10 +69,10 @@ def main():
             for name in ('U2','U3'):
                 pt=meshes[name].centroid;ax.text(*pt,name,color='black',fontsize=11)
     fig.tight_layout();fig.savefig(DEST/'preview.png',dpi=150);plt.close(fig)
-    report = {'date':'2026-09-15','new_parts':11,'viewer_pose_mm':[0,3],
+    report = {'date':'2026-09-15','new_parts':len(spec['new_component_positions']),'viewer_pose_mm':[0,3],
               'source_sha256':{p.relative_to(ROOT).as_posix():hashlib.sha256(p.read_bytes()).hexdigest() for p in inputs},
               'artifact_sha256':{(DEST/n).relative_to(ROOT).as_posix():hashlib.sha256((DEST/n).read_bytes()).hexdigest() for n in ('viewer.html','preview.png')}}
-    (ROOT/'docs/evidence/drive-power-carrier-v02/view.json').write_text(json.dumps(report,indent=2)+'\n',encoding='utf-8',newline='\n')
+    (ROOT/'docs/evidence/drive-power-carrier-v03/view.json').write_text(json.dumps(report,indent=2)+'\n',encoding='utf-8',newline='\n')
     print('Generated interactive nominal-pose viewer and two CAD mesh views.')
 
 

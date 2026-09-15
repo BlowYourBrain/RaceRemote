@@ -13,7 +13,7 @@ import pcbnew as p
 
 ROOT = Path(__file__).resolve().parents[1]
 HW = ROOT / 'hardware/drive-power-carrier'
-OUT = ROOT / 'docs/evidence/drive-power-carrier-v02'
+OUT = ROOT / 'docs/evidence/drive-power-carrier-v03'
 CLI = ROOT / 'build/tooling/kicad-10.0.6/bin/kicad-cli.exe'
 
 # Deliberately separate from the generator's net assignment and rename table.
@@ -31,7 +31,7 @@ EXPECTED = {
     'R7': {'1':'LDO_4V','2':'DRIVE_GND'},
     'C3': {'1':'WAVE_5V','2':'DRIVE_GND'}, 'C4': {'1':'LDO_4V','2':'DRIVE_GND'},
     'C5': {'1':'LDO_4V','2':'DRIVE_GND'}, 'C6': {'1':'XIAO_BAT','2':'DRIVE_GND'},
-    'H8': {'1':'WAVE_5V'}, 'H9': {'1':'XIAO_BAT'},
+    'H8': {'1':'WAVE_5V'}, 'H9': {'1':'XIAO_BAT'}, 'H10': {'1':'DRIVE_GND'},
 }
 
 
@@ -84,6 +84,15 @@ def main():
             sch[ref][pin] = normalize(net.attrib['name'])
     board = p.LoadBoard(pcbfile)
     actual = pad_map(board)
+    # Preserve every existing combined-board landing, not only the old TA6586 set.
+    base_bytes=subprocess.check_output(['git','show','957e015:hardware/drive-power-carrier/drive-power-carrier.kicad_pcb'],cwd=ROOT)
+    base_path=ROOT/'build/drive-power-carrier/previous-v02.kicad_pcb'
+    base_path.write_bytes(base_bytes)
+    baseline=p.LoadBoard(str(base_path))
+    baseline_pads=pad_geometry(baseline)
+    assert len(baseline_pads)==57
+    assert all(pad_geometry(board)[key]==value for key,value in baseline_pads.items())
+    assert track_geometry(board)==track_geometry(baseline)
     assert sch == EXPECTED, ('schematic',sch)
     assert actual == EXPECTED, ('PCB',actual)
     old = p.LoadBoard(str(ROOT/'hardware/motor-carrier/motor-carrier.kicad_pcb'))
@@ -119,7 +128,8 @@ def main():
         assert item['side'] == ('B' if f.GetLayer() == p.B_Cu else 'F')
     faults = [('swap motor inputs','U1','1','FI'), ('reverse MAX40200','U3','5','LDO_4V'),
               ('ground local diode enable','U3','3','DRIVE_GND'), ('break LDO exposed ground','U2','9','WAVE_5V'),
-              ('bridge BAT to motor','H9','1','VM'), ('preload after diode','R7','1','XIAO_BAT')]
+              ('bridge BAT to motor','H9','1','VM'), ('preload after diode','R7','1','XIAO_BAT'),
+              ('XIAO return on motor supply','H10','1','VM')]
     for name,ref,pin,net in faults:
         bad = copy.deepcopy(actual); bad[ref][pin] = net
         assert bad != EXPECTED, name
@@ -150,12 +160,14 @@ def main():
     paths += [ROOT/'hardware/motor-carrier/motor-carrier.kicad_pcb',
               ROOT/'hardware/motor-carrier/motor-carrier.kicad_sch',
               ROOT/'hardware/xiao-logic-power/xiao-logic-power.kicad_sch']
-    report = {'date':'2026-09-15','contract':'DRIVE-POWER-CARRIER-01 v0.2',
+    report = {'date':'2026-09-15','contract':'DRIVE-POWER-CARRIER-01 v0.3',
               'positions':len(actual),'pins_including_nc':sum(map(len,actual.values())),
               'working_nets':sorted({v for pins in actual.values() for v in pins.values()}-{'NC'}),
               'erc_violations':0,'drc_violations':0,'unconnected_items':0,'schematic_parity_issues':0,
               'kicad_version':drc['kicad_version'],'default_ignored_drc_checks':drc['ignored_checks'],
               'original_pad_geometries_unchanged':27,'original_track_segments_removed':2,
+              'previous_v02_commit':'957e015','previous_v02_pcb_sha256':hashlib.sha256(base_bytes).hexdigest(),
+              'previous_combined_pad_geometries_unchanged':57,'previous_combined_tracks_unchanged':True,
               'cad_pad_coordinates_and_new_component_centers_match_pcb':True,
               'u3_land_matches_reviewed_90_0174_rev_b':True,
               'u3_current_manufacturer_land_revision_confirmed':False,
@@ -163,7 +175,7 @@ def main():
               'physical_tests':False,'thermal_qualification':False,'fabrication_released':False,
               'source_sha256':{q.relative_to(ROOT).as_posix():hashlib.sha256(q.read_bytes()).hexdigest() for q in paths}}
     (OUT/'summary.json').write_text(json.dumps(report,indent=2)+'\n',encoding='utf-8',newline='\n')
-    print('PASS: 25 positions / 57 pins; ERC, DRC, parity zero; six oracle faults detected. No physical qualification.')
+    print('PASS: 26 positions / 58 pins; ERC, DRC, parity zero; seven oracle faults detected. No physical qualification.')
 
 
 if __name__ == '__main__': main()

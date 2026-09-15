@@ -1,24 +1,24 @@
-(footprint "WirePad_1mm_H8"
+(footprint "WirePad_1mm_H10"
 	(version 20260206)
 	(generator "pcbnew")
 	(generator_version "10.0")
 	(layer "F.Cu")
-	(property "Reference" "H8"
+	(property "Reference" "H10"
 		(at 0 0 0)
 		(layer "F.SilkS")
 		(hide yes)
-		(uuid "f913b94f-aca2-4eee-b308-fbeb877fd4e6")
+		(uuid "82f38433-88ff-41fd-9e35-7c08e7f2222e")
 		(effects
 			(font
 				(size 1.27 1.27)
 			)
 		)
 	)
-	(property "Value" "WAVE_5V"
+	(property "Value" "DRIVE_GND"
 		(at 0 0 0)
 		(layer "F.Fab")
 		(hide yes)
-		(uuid "65d0429c-87be-47f5-8565-7890013e65ee")
+		(uuid "fb8649ae-e467-4df3-a698-4340b332dd17")
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -29,7 +29,7 @@
 		(at 0 0 0)
 		(layer "F.Fab")
 		(hide yes)
-		(uuid "c6aeae64-0658-40ae-9fa3-df6a8b7e2709")
+		(uuid "c3a906cb-5888-4486-bea4-edfc35e65988")
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -40,7 +40,7 @@
 		(at 0 0 0)
 		(layer "F.Fab")
 		(hide yes)
-		(uuid "f1665147-014c-4f61-b103-6b00a5c820b6")
+		(uuid "b9ebc8c4-b07e-41db-9372-00fafb69152b")
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -58,7 +58,7 @@
 		)
 		(fill no)
 		(layer "F.CrtYd")
-		(uuid "e25e4d3b-08df-4173-a8f9-8958f5889b4f")
+		(uuid "a920ead3-d811-4632-9450-48a9cf1cc7a7")
 	)
 	(pad "1" thru_hole circle
 		(at 0 0)
@@ -66,7 +66,7 @@
 		(drill 1)
 		(layers "*.Cu" "*.Mask")
 		(remove_unused_layers no)
-		(uuid "1c124370-0cf6-46ba-afd4-5e75b0a02bd0")
+		(uuid "eaed6d91-7dc5-494d-85cc-086dd71b2fb5")
 	)
 	(embedded_fonts no)
 )

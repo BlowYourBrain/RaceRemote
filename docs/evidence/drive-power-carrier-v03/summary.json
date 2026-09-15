@@ -1,0 +1,100 @@
+{
+  "date": "2026-09-15",
+  "contract": "DRIVE-POWER-CARRIER-01 v0.3",
+  "positions": 26,
+  "pins_including_nc": 58,
+  "working_nets": [
+    "BI",
+    "BO",
+    "CMD_BI",
+    "CMD_FI",
+    "DRIVE_GND",
+    "FB",
+    "FI",
+    "FO",
+    "LDO_4V",
+    "VM",
+    "WAVE_5V",
+    "XIAO_BAT"
+  ],
+  "erc_violations": 0,
+  "drc_violations": 0,
+  "unconnected_items": 0,
+  "schematic_parity_issues": 0,
+  "kicad_version": "10.0.6",
+  "default_ignored_drc_checks": [
+    {
+      "description": "Footprint has no courtyard defined",
+      "key": "missing_courtyard"
+    },
+    {
+      "description": "Track endpoint not centered on via",
+      "key": "track_not_centered_on_via"
+    },
+    {
+      "description": "Tuning profile track geometries",
+      "key": "tuning_profile_track_geometries"
+    },
+    {
+      "description": "Footprint doesn't match symbol's footprint filters",
+      "key": "footprint_filters_mismatch"
+    },
+    {
+      "description": "Footprint component type doesn't match footprint pads",
+      "key": "footprint_type_mismatch"
+    }
+  ],
+  "original_pad_geometries_unchanged": 27,
+  "original_track_segments_removed": 2,
+  "previous_v02_commit": "957e015",
+  "previous_v02_pcb_sha256": "fc5d1faa1c851e782e2f41e485d2ce61d98aaa4734e3841286bb93db03951750",
+  "previous_combined_pad_geometries_unchanged": 57,
+  "previous_combined_tracks_unchanged": true,
+  "cad_pad_coordinates_and_new_component_centers_match_pcb": true,
+  "u3_land_matches_reviewed_90_0174_rev_b": true,
+  "u3_current_manufacturer_land_revision_confirmed": false,
+  "oracle_mutations_detected": [
+    "swap motor inputs",
+    "reverse MAX40200",
+    "ground local diode enable",
+    "break LDO exposed ground",
+    "bridge BAT to motor",
+    "preload after diode",
+    "XIAO return on motor supply"
+  ],
+  "physical_tests": false,
+  "thermal_qualification": false,
+  "fabrication_released": false,
+  "source_sha256": {
+    "hardware/drive-power-carrier/bom.csv": "77c7120d0e10a26be213dd17d9a7e60fe8278c8b2f9ab0941effd26fc5309a25",
+    "hardware/drive-power-carrier/bottom.svg": "384372f93773bf56a20ee3ab9b9b5a7f92efc0f64de2404249baedd21a2ee5f3",
+    "hardware/drive-power-carrier/connections.csv": "abbb66cdbed8df7997dd34f2a7553e048321b326ac087f2d2ec1a897bef56dc0",
+    "hardware/drive-power-carrier/drive-power-carrier.kicad_pcb": "d8738d93fdf3f1c87804c35b369fbb1c4ba71f494e7c5e23cfd25ec0f335ba84",
+    "hardware/drive-power-carrier/drive-power-carrier.kicad_pro": "0f969470320f50a4f75081b6af8ad157139bf62d4b79778396f3c74754032823",
+    "hardware/drive-power-carrier/drive-power-carrier.kicad_sch": "04206eba8bcc788ccdb2f6c4ad7379b3542635a0d4b6311974dfd4d16e17cff9",
+    "hardware/drive-power-carrier/fp-lib-table": "e478b51ae73a587e475033da129935b5fd3e56f3d492e88dbee18a0653ce58d1",
+    "hardware/drive-power-carrier/geometry.json": "a67fdbe7533c2979a8c5453be1583fdd144e0cf0ca281ec9584742d6002fd21e",
+    "hardware/drive-power-carrier/RaceRemote_LogicPower.kicad_sym": "62c090fa76d593b7ae39628fe7a409aa4de9a6307f0703b7da7ba2b088c29da5",
+    "hardware/drive-power-carrier/RaceRemote_Motor.kicad_sym": "299733df37e91486802ec8a12a0766d9d2d838c515f43d6d2e5760faf580de72",
+    "hardware/drive-power-carrier/schematic.pdf": "65727c32e3a4bf098b1dcf4cc40ba33ffc3f92632fa26b77d67da3a863c34920",
+    "hardware/drive-power-carrier/sym-lib-table": "2de55cfcf87ccb07fc0a8e53ced1cdf39c3f2c1d3ce8bc3b3006bca6e7041475",
+    "hardware/drive-power-carrier/top.svg": "d4e89250b6dd8855180d5ba38719ce894585d89832ac558cd8dd71974baed848",
+    "hardware/drive-power-carrier/RaceRemote_DrivePower.pretty/C_0805_C3.kicad_mod": "46f9992409d8f84215698ce703b97ed886b74bbe2097a5cd140358e6ed3a8d85",
+    "hardware/drive-power-carrier/RaceRemote_DrivePower.pretty/C_0805_C4.kicad_mod": "8b3f44a3d07510088cb77511ca3e5278754e0f921cace203d301a31fffb810fc",
+    "hardware/drive-power-carrier/RaceRemote_DrivePower.pretty/C_0805_C5.kicad_mod": "d91cc4db3a70effe6c01aa459646b8b3575363b9e3859df8b039449b274dce7d",
+    "hardware/drive-power-carrier/RaceRemote_DrivePower.pretty/C_0805_C6.kicad_mod": "ddd9562f53167f5ae70041f5543a8001d7ba31725c292df319591a97c8709a0d",
+    "hardware/drive-power-carrier/RaceRemote_DrivePower.pretty/R_0805_R5.kicad_mod": "b5d2c7ed2eb38c71399112edc8082cd5abcfff836375d1aec9a939bbd0a7f24a",
+    "hardware/drive-power-carrier/RaceRemote_DrivePower.pretty/R_0805_R6.kicad_mod": "ae70a5526cd1e01b8c941f20296c45d575ec26a401d19b520cb7dc2354c185f9",
+    "hardware/drive-power-carrier/RaceRemote_DrivePower.pretty/R_1206_R7.kicad_mod": "47bf0fbdfc6e742d7249f586dcab58eac829c1b962a721b3ed26bd660f9e57fa",
+    "hardware/drive-power-carrier/RaceRemote_DrivePower.pretty/SOT23_5_ADI_90_0174_B_U3.kicad_mod": "eaaa7392dbfc04955a0864d32cfc4e1f28404630b277e2af5943c483eb209fb0",
+    "hardware/drive-power-carrier/RaceRemote_DrivePower.pretty/TPS73701_DRB_3x3_EP_U2.kicad_mod": "8ca8518f1d591a1177344737bab624e9038cd288f4588672faf176a4bd281d90",
+    "hardware/drive-power-carrier/RaceRemote_DrivePower.pretty/WirePad_1mm_H10.kicad_mod": "cce99cc361948266c6f32e0819134136dc53f8523169b995b76d4e86126ccb40",
+    "hardware/drive-power-carrier/RaceRemote_DrivePower.pretty/WirePad_1mm_H8.kicad_mod": "34bcd6332125aaa070194f8930f244c907ee7838ffefae38eb60a34634b2eb14",
+    "hardware/drive-power-carrier/RaceRemote_DrivePower.pretty/WirePad_1mm_H9.kicad_mod": "6d60b10e81f0fece0f308fe86d34cc28f7dc9725512ce45ab24053ba6622beb7",
+    "tools/verify_drive_power_carrier.py": "b3b2ac212dad77de8efb574f90bfe3814762729d61b1e83a9fc83489ec9c7cdf",
+    "tools/build_drive_power_carrier.py": "74ee6f9c2e119cc3cd0080cf36f18f1d3a5f0f9102f56aac0aac81d58215941e",
+    "hardware/motor-carrier/motor-carrier.kicad_pcb": "f2e5ab92eef4895bfd3ff0a2a48ef7372b4d1e5544644ef98affe201cef06be3",
+    "hardware/motor-carrier/motor-carrier.kicad_sch": "c45fafda31ea2d1dc20e1b9fbac6f84f33219897604aeb6c35c831cfd86bd021",
+    "hardware/xiao-logic-power/xiao-logic-power.kicad_sch": "193f5ed417189467e66cb713585d7fdbdd5c53a2131afee5c493aea37fecf972"
+  }
+}

@@ -6,6 +6,7 @@ C4,4.7u / 10V X7R,RaceRemote_DrivePower:C_0805_C4,B,,Candidate; not purchased
 C5,1u / 10V X7R,RaceRemote_DrivePower:C_0805_C5,B,,Candidate; not purchased
 C6,1u / 10V X7R,RaceRemote_DrivePower:C_0805_C6,B,,Candidate; not purchased
 H1,CMD_FI,RaceRemote_Motor:WirePad_1mm,F,,Integral PCB solder pad; not purchased connector
+H10,DRIVE_GND,RaceRemote_DrivePower:WirePad_1mm_H10,F,,Integral PCB solder pad; not purchased connector
 H2,CMD_BI,RaceRemote_Motor:WirePad_1mm,F,,Integral PCB solder pad; not purchased connector
 H3,DRIVE_GND,RaceRemote_Motor:WirePad_1mm,F,,Integral PCB solder pad; not purchased connector
 H4,VM,RaceRemote_Motor:WirePad_1mm,F,,Integral PCB solder pad; not purchased connector

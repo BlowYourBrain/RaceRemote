@@ -158,6 +158,20 @@
       ],
       "height_reserve_mm": 0.9,
       "vertical": false
+    },
+    "H10": {
+      "value": "DRIVE_GND",
+      "center_mm": [
+        18,
+        1.7
+      ],
+      "side": "F",
+      "body_mm": [
+        0.6,
+        0.6
+      ],
+      "height_reserve_mm": 0.9,
+      "vertical": false
     }
   },
   "removed_vm_segments": [
@@ -189,6 +203,15 @@
   "sot23_outline_reserve_basis": "3mm D/E max plus conservative .25mm protrusion each side; Amax1.45 plus .05 seating allowance",
   "pin2571c_status": "shipping box change only; no fit/form/function impact per official notice",
   "pads": [
+    {
+      "ref": "H10",
+      "pin": "1",
+      "net": "DRIVE_GND",
+      "xy_mm": [
+        18.0,
+        1.7
+      ]
+    },
     {
       "ref": "H9",
       "pin": "1",
@@ -460,6 +483,33 @@
       ]
     },
     {
+      "ref": "R2",
+      "pin": "1",
+      "net": "CMD_BI",
+      "xy_mm": [
+        4.05,
+        6.0
+      ]
+    },
+    {
+      "ref": "R2",
+      "pin": "2",
+      "net": "BI",
+      "xy_mm": [
+        5.95,
+        6.0
+      ]
+    },
+    {
+      "ref": "H3",
+      "pin": "1",
+      "net": "DRIVE_GND",
+      "xy_mm": [
+        2.0,
+        9.0
+      ]
+    },
+    {
       "ref": "H2",
       "pin": "1",
       "net": "CMD_BI",
@@ -469,21 +519,75 @@
       ]
     },
     {
-      "ref": "R4",
+      "ref": "R3",
       "pin": "1",
-      "net": "BI",
+      "net": "FI",
       "xy_mm": [
-        4.15,
-        9.0
+        9.78,
+        2.1
       ]
     },
     {
-      "ref": "R4",
+      "ref": "R3",
       "pin": "2",
       "net": "DRIVE_GND",
       "xy_mm": [
-        6.05,
-        9.0
+        11.68,
+        2.1
+      ]
+    },
+    {
+      "ref": "R1",
+      "pin": "1",
+      "net": "CMD_FI",
+      "xy_mm": [
+        4.05,
+        3.0
+      ]
+    },
+    {
+      "ref": "R1",
+      "pin": "2",
+      "net": "FI",
+      "xy_mm": [
+        5.95,
+        3.0
+      ]
+    },
+    {
+      "ref": "C2",
+      "pin": "1",
+      "net": "VM",
+      "xy_mm": [
+        21.25,
+        6.0
+      ]
+    },
+    {
+      "ref": "C2",
+      "pin": "2",
+      "net": "DRIVE_GND",
+      "xy_mm": [
+        24.75,
+        6.0
+      ]
+    },
+    {
+      "ref": "H4",
+      "pin": "1",
+      "net": "VM",
+      "xy_mm": [
+        28.0,
+        13.0
+      ]
+    },
+    {
+      "ref": "H7",
+      "pin": "1",
+      "net": "BO",
+      "xy_mm": [
+        2.0,
+        15.0
       ]
     },
     {
@@ -496,12 +600,21 @@
       ]
     },
     {
-      "ref": "H3",
+      "ref": "H1",
       "pin": "1",
-      "net": "DRIVE_GND",
+      "net": "CMD_FI",
+      "xy_mm": [
+        1.8,
+        3.0
+      ]
+    },
+    {
+      "ref": "H6",
+      "pin": "1",
+      "net": "FO",
       "xy_mm": [
         2.0,
-        9.0
+        12.0
       ]
     },
     {
@@ -577,111 +690,21 @@
       ]
     },
     {
-      "ref": "H6",
+      "ref": "R4",
       "pin": "1",
-      "net": "FO",
-      "xy_mm": [
-        2.0,
-        12.0
-      ]
-    },
-    {
-      "ref": "H4",
-      "pin": "1",
-      "net": "VM",
-      "xy_mm": [
-        28.0,
-        13.0
-      ]
-    },
-    {
-      "ref": "R2",
-      "pin": "1",
-      "net": "CMD_BI",
-      "xy_mm": [
-        4.05,
-        6.0
-      ]
-    },
-    {
-      "ref": "R2",
-      "pin": "2",
       "net": "BI",
       "xy_mm": [
-        5.95,
-        6.0
+        4.15,
+        9.0
       ]
     },
     {
-      "ref": "C2",
-      "pin": "1",
-      "net": "VM",
-      "xy_mm": [
-        21.25,
-        6.0
-      ]
-    },
-    {
-      "ref": "C2",
+      "ref": "R4",
       "pin": "2",
       "net": "DRIVE_GND",
       "xy_mm": [
-        24.75,
-        6.0
-      ]
-    },
-    {
-      "ref": "H1",
-      "pin": "1",
-      "net": "CMD_FI",
-      "xy_mm": [
-        1.8,
-        3.0
-      ]
-    },
-    {
-      "ref": "R1",
-      "pin": "1",
-      "net": "CMD_FI",
-      "xy_mm": [
-        4.05,
-        3.0
-      ]
-    },
-    {
-      "ref": "R1",
-      "pin": "2",
-      "net": "FI",
-      "xy_mm": [
-        5.95,
-        3.0
-      ]
-    },
-    {
-      "ref": "R3",
-      "pin": "1",
-      "net": "FI",
-      "xy_mm": [
-        9.78,
-        2.1
-      ]
-    },
-    {
-      "ref": "R3",
-      "pin": "2",
-      "net": "DRIVE_GND",
-      "xy_mm": [
-        11.68,
-        2.1
-      ]
-    },
-    {
-      "ref": "H7",
-      "pin": "1",
-      "net": "BO",
-      "xy_mm": [
-        2.0,
-        15.0
+        6.05,
+        9.0
       ]
     },
     {

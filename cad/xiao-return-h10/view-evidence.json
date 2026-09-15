@@ -1,0 +1,17 @@
+{
+  "scene_objects": 74,
+  "removed_ids": [
+    "harness-GND",
+    "power-pcb"
+  ],
+  "source_sha256": {
+    "cad/motor-harness/viewer.html": "f3ad5152039e11d0917cc05b6453bdbf06e9a3125ac6d71afd3b1794ff21305a",
+    "docs/evidence/xiao-return-h10-v01.json": "908cd69504480bb8c04a83b6cea9d4504bb10579433b65b6788bbd655cfea66d",
+    "tools/build_xiao_return_view.py": "88a0cf76602c6319e2cf9e9af484321560cb689741dc210e815530b460dd5749",
+    "cad/drive-power-carrier/pcb.stl": "99bf9c24b430d41c6132e5415ef2ecabd3f7c51c7eecb56106f1a947c1ff50b4",
+    "cad/xiao-return-h10/GND.stl": "fffd7b859a4034dc65dabf8babb593322f06b5d8752b78de3a762a358dd59bba"
+  },
+  "artifact_sha256": {
+    "viewer.html": "95549c05e2625004467b79fe3667d7e28d318dd716ec3c04786d6db5c8e5b9e4"
+  }
+}

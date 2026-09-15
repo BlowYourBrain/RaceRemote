@@ -19,7 +19,7 @@ from layout_zcar_battery import box
 
 ROOT=Path(__file__).resolve().parents[1]
 DEST=ROOT/'cad/drive-power-carrier'
-EVIDENCE=ROOT/'docs/evidence/drive-power-carrier-v02'
+EVIDENCE=ROOT/'docs/evidence/drive-power-carrier-v03'
 
 
 def main():
@@ -35,7 +35,7 @@ def main():
     # Board drawing +x,+y map to car +Y,+X. Board underside remains Z29.5.
     pcb=BRepPrimAPI_MakeBox(gp_Pnt(25.75,47,29.5),18,30,1.6).Shape()
     for pad in spec['pads']:
-        if pad['ref'] not in ['U1','C2',*[f'H{i}' for i in range(1,10)]]: continue
+        if pad['ref'] not in ['U1','C2',*[f'H{i}' for i in range(1,11)]]: continue
         x,y=pad['xy_mm']; r=.5 if pad['ref'].startswith('H') else .45
         hole=BRepPrimAPI_MakeCylinder(gp_Ax2(gp_Pnt(25.75+y,47+x,29.4),gp_Dir(0,0,1)),r,1.8).Shape()
         pcb=BRepAlgoAPI_Cut(pcb,hole).Shape()
@@ -91,7 +91,7 @@ def main():
     combined=trimesh.util.concatenate([*models.values(),*retained]);combined.export(DEST/'combined-reserves.stl')
     for path in [Path(__file__),ROOT/'tools/build_packaging_v05.py',ROOT/'tools/layout_zcar_battery.py']:
         record(path)
-    result={'date':'2026-09-15','contract':'DRIVE-POWER-CARRIER-01 v0.2','pose_mm':[0,3],
+    result={'date':'2026-09-15','contract':'DRIVE-POWER-CARRIER-01 v0.3','pose_mm':[0,3],
             'new_solid_count':len(models)-1,'obstacle_solid_count':len(obstacles),
             'hits_mm3':hits,'new_part_pair_hits_mm3':pair_hits,'outside_cavity_mm3':outside,
             'positive_control_shifted_U3_into_PCB_mm3':positive,'assembly_bounds_mm':combined.bounds.tolist(),

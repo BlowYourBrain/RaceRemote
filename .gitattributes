@@ -1,4 +1,15 @@
 # Preserve device evidence/source hashes across Windows checkouts.
+cad/xiao-return-h10/*.stl binary
+cad/xiao-return-h10/*.html text eol=lf
+cad/xiao-return-h10/*.json text eol=lf
+cad/xiao-return-h10/*.md text eol=lf
+docs/evidence/xiao-return-h10-v01.json text eol=lf
+docs/evidence/drive-power-carrier-v03/*.json text eol=crlf
+docs/evidence/drive-power-carrier-v03/summary.json text eol=lf
+docs/evidence/drive-power-carrier-v03/view.json text eol=lf
+docs/evidence/drive-power-carrier-v03/*.xml text eol=lf
+tools/build_xiao_return_h10.py text eol=lf
+tools/build_xiao_return_view.py text eol=lf
 cad/motor-harness/*.stl binary
 cad/motor-harness/*.png binary
 cad/motor-harness/*.html text eol=lf

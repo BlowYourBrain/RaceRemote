@@ -4,6 +4,7 @@ Run using the local KiCad Python. Existing traction copper is retained except
 for the documented VM detour around the new LDO thermal vias.
 """
 import csv
+import copy
 import json
 from pathlib import Path
 import re
@@ -67,7 +68,7 @@ def schematic():
     child(a, 'paper')[1] = '"A1"'
     title = child(a, 'title_block')
     child(title, 'title')[1] = q('TA6586 + XIAO logic power - COMBINED PCB PROPOSAL')
-    child(title, 'rev')[1] = '"0.2"'
+    child(title, 'rev')[1] = '"0.3"'
     child(a, 'lib_symbols').extend(child(c, 'lib_symbols')[1:])
 
     def rewrite(node, mapping, power=False):
@@ -91,6 +92,22 @@ def schematic():
     for node in a:
         if isinstance(node, list) and node[0] == 'symbol':
             rewrite(node, {})
+    # Separate XIAO return landing: H5 remains available for the motor supply.
+    originals={motor_uid('H5'),motor_uid('H51wire'),motor_uid('H51label')}
+    def clone_ground(node):
+        if not isinstance(node,list):return
+        if node[0]=='uuid':node[1]=q(uid('H10/'+json.loads(node[1])))
+        if node[0] in ('at','xy'):node[2]=f'{float(node[2])+20.32:g}'
+        if node[0]=='property' and node[1]=='"Footprint"':node[2]=q(f'{LIB}:WirePad_1mm')
+        for item in node[1:]:
+            if isinstance(item,list):clone_ground(item)
+    extra=[]
+    for node in a:
+        ident=child(node,'uuid') if isinstance(node,list) else None
+        if ident and json.loads(ident[1]) in originals:
+            n=copy.deepcopy(node);rewrite(n,{'H5':'H10'});clone_ground(n);extra.append(n)
+    assert len(extra)==3
+    a.extend(extra)
     omit = set()
     for ref in ('J2', 'J5', '#FLG02'):
         omit.add(logic_uid(ref))
@@ -115,7 +132,7 @@ def schematic():
         a.append(node)
     for i, text in enumerate([
         'COMBINED PROPOSAL: motor at left, logic at right. No physical power/thermal qualification or fabrication release.',
-        'H8 = qualified Waveshare +5V. H9 = XIAO BAT0 positive. H3/H5 = DRIVE_GND. No native USB VBUS wire.',
+        'H8 = qualified Waveshare +5V. H9 = XIAO BAT0 positive. H10 = XIAO ground. H5 = motor supply return. H3 = Waveshare ground.',
         'VM remains the separately qualified motor supply. Never bridge VM, WAVE_5V, XIAO_BAT or raw battery terminals.',
         'U2 TPS73701 and U3 MAX40200 are on the underside. Package/paste/via manufacture and actual PCB fit remain open.'
     ]):
@@ -175,8 +192,8 @@ def pcb():
         f.SetAttributes(p.FP_THROUGH_HOLE if ref.startswith('H') else p.FP_SMD)
         if side == 'B': f.SetLayer(p.B_Cu)
         f.SetFPID(p.LIB_ID(LIB, fpname(ref)))
-        source = next(k for k, val in RENAME.items() if val == ref)
-        f.SetPath(p.KIID_PATH('/' + uid('sheet') + '/' + logic_uid(source)))
+        symbol_id=uid('H10/'+motor_uid('H5')) if ref=='H10' else logic_uid(next(k for k,val in RENAME.items() if val==ref))
+        f.SetPath(p.KIID_PATH('/' + uid('sheet') + '/' + symbol_id))
         b.Add(f)
         positions[ref] = {'value': value, 'center_mm': [x, y], 'side': side,
                           'body_mm': list(body), 'height_reserve_mm': height, 'vertical': vertical}
@@ -234,7 +251,7 @@ def pcb():
             if vertical: pad(f,pin,net,x,y+sign*distance,ph,pw)
             else: pad(f,pin,net,x+sign*distance*(-1 if side=='B' else 1),y,pw,ph)
         outline(f,x,y,(1.45 if vertical else 4.3 if large else 3.0),(3.0 if vertical else 1.8 if large else 1.45),.25)
-    for ref,x,y,net in [('H8',28,2,'WAVE_5V'),('H9',28.2,9.5,'XIAO_BAT')]:
+    for ref,x,y,net in [('H8',28,2,'WAVE_5V'),('H9',28.2,9.5,'XIAO_BAT'),('H10',18,1.7,'DRIVE_GND')]:
         f = new(ref,net,x,y,'F',(.6,.6),.9);pad(f,1,net,x,y,2.2,2.2,1)
         graphic(f,p.SHAPE_T_CIRCLE,(x,y),(x+1.35,y),p.F_CrtYd,.05)
 
@@ -283,10 +300,13 @@ def pcb():
     (DEST/'fp-lib-table').write_text(f'(fp_lib_table (version 7)(lib (name "RaceRemote_Motor")(type "KiCad")(uri "${{KIPRJMOD}}/../motor-carrier/RaceRemote_Motor.pretty")(options "")(descr "Existing motor carrier"))(lib (name "{LIB}")(type "KiCad")(uri "${{KIPRJMOD}}/{LIB}.pretty")(options "")(descr "Combined proposal footprints")))\n',encoding='utf-8')
     # Schematic assignment matches the per-instance library footprints.
     sch=DEST/'drive-power-carrier.kicad_sch'
-    content=sch.read_text()
-    for ref in positions:
-        content=content.replace(q(f'{LIB}:'+fpname(ref)),q(f'{LIB}:'+fpname(ref)+'_'+ref),1)
-    sch.write_text(content,encoding='utf-8')
+    sheet=parse(sch.read_text())
+    for node in sheet:
+        if not isinstance(node,list) or node[0]!='symbol':continue
+        props={json.loads(n[1]):n for n in node if isinstance(n,list) and n[0]=='property'}
+        ref=json.loads(props['Reference'][2])
+        if ref in positions:props['Footprint'][2]=q(f'{LIB}:'+fpname(ref)+'_'+ref)
+    sch.write_text(render(sheet)+'\n',encoding='utf-8')
     p.SaveBoard(str(DEST/'drive-power-carrier.kicad_pcb'),b)
     p.ZONE_FILLER(b).Fill(b.Zones())
     p.SaveBoard(str(DEST/'drive-power-carrier.kicad_pcb'),b)

@@ -1,0 +1,50 @@
+{
+  "date": "2026-09-15",
+  "new_parts": 12,
+  "viewer_pose_mm": [
+    0,
+    3
+  ],
+  "source_sha256": {
+    "cad/current-service/viewer.html": "ce84129d0c30e65a6cf50ea50efe2c6fe64de327540d705b35c677e67d2b979b",
+    "tools/cad_viewer_template.html": "f70aa04fd54fb88ff2aba390bccbf6f17a9c2d79b01286e9c0f0e76fb281129c",
+    "hardware/drive-power-carrier/geometry.json": "a67fdbe7533c2979a8c5453be1583fdd144e0cf0ca281ec9584742d6002fd21e",
+    "tools/build_drive_power_view.py": "79f392c1154f1f8847accbf26d4750ccd893a84197177f7bf7275efaa90bd80c",
+    "cad/drive-power-carrier/pcb.stl": "99bf9c24b430d41c6132e5415ef2ecabd3f7c51c7eecb56106f1a947c1ff50b4",
+    "cad/drive-power-carrier/U2.stl": "ff11875816854b945f193eca8c4d975ecad30cf31e64600684c218c61ea42569",
+    "cad/drive-power-carrier/U3.stl": "9c5c8898b58191cfe7d304cbd1c0a92adc6c2808ec0851c08639f5d016936849",
+    "cad/drive-power-carrier/R5.stl": "1c0a73ee343d4606b613baf812c752f9ab434bb412f05477130ec92d032d8d02",
+    "cad/drive-power-carrier/R6.stl": "ec5870d941954d8c8d1f2fade5e9aa2e37f184d198c5eb5711d84ba762489fce",
+    "cad/drive-power-carrier/R7.stl": "0a796c4cd252a3e6fcbbab02eb350a1050bc8bc8050a745d8d04ee7841357a38",
+    "cad/drive-power-carrier/C3.stl": "138eab5d24325e1f2f406b182ac73b0e2841c132e5398c9a86cc4b707502ade5",
+    "cad/drive-power-carrier/C4.stl": "26cf4a44d4d84f82ac2dfd37134aebe3809a21bdf3b9df64f884ea053e5cdcbf",
+    "cad/drive-power-carrier/C5.stl": "c2c496a5d45e9f817eb5f17a67c68a48c7e21d6d41f5a1fadd58614c8c5f7721",
+    "cad/drive-power-carrier/C6.stl": "c4dee17c42b3c17406df518b25b505c196554c1bf051ff974f13f3f789604176",
+    "cad/drive-power-carrier/H8.stl": "e8f213f84bd1ed758ac62b4b68121b4d20733bae4572b1f37ecd97f5f30aa728",
+    "cad/drive-power-carrier/H9.stl": "b74456ff6260fa8795420a8d67123b7e87cf886bb6268eb5d07da8aa7db0a80f",
+    "cad/drive-power-carrier/H10.stl": "ba3b37e0668cc75f0159678dbfa3e806dddf869e3ad87c3f8a4e3b8d927952a5",
+    "cad/motor-carrier/C1.stl": "a982df888e715319a78c1cec0ff4e2b7d32b14494118552fc6c6cd9463b530a0",
+    "cad/motor-carrier/C2.stl": "206e3e92bb1afb0f2addcff723c05102eabd297ecadffa1e6c851b035e06a627",
+    "cad/motor-carrier/C2lead1.stl": "3dd49124333401e078d457c9c22925ded4ba52c7091a4ee874268e67863e0725",
+    "cad/motor-carrier/C2lead2.stl": "504e48aa9a731978ba8f299e9d5de36f20ed9c83b84aaa06e0abf1e6f5b2c888",
+    "cad/motor-carrier/lead1.stl": "a83ae98e99c79c43209f2c57d1ba03284358337a1544b5e4f43a5ad7dc01ee07",
+    "cad/motor-carrier/lead2.stl": "87e97a46908d40f7dfacb2b2d7212c7d516efcc7f906681208a175e87d5b4a1d",
+    "cad/motor-carrier/lead3.stl": "790681a1b071825fb06c5dbfa96898de388d3eb1bd44913fc373cb80278cdff6",
+    "cad/motor-carrier/lead4.stl": "aaf668b644fe16bac7d1611109be68de704a4a5f643fbdf1eb65fb3d1d18368a",
+    "cad/motor-carrier/lead5.stl": "fad6ac714b47fc61b4cb72d54c447a603ec2d680fca463218d42bfcc614bbc49",
+    "cad/motor-carrier/lead6.stl": "72c3ef6191e697e0f250178f0fe02a86ef5921096cb62dbba5e6b08969d36d7b",
+    "cad/motor-carrier/lead7.stl": "f748058fee12aa31a207712b5c0d9595551e780561b7f6912037f436a2b3341f",
+    "cad/motor-carrier/lead8.stl": "12a80347bc6d2068b6eae01df75d5fcde6c9c9b5ff6df83a03f601fb2d723afe",
+    "cad/motor-carrier/R1.stl": "fe504c05e6e5d9530775b1429a56bb95637abaf58c835061759befcdebc312d8",
+    "cad/motor-carrier/R2.stl": "a4db30a48cf8eb57f8486e8d7335517191c598a6feb85dc5055bf8ca8dc4e52e",
+    "cad/motor-carrier/R3.stl": "94a65f777f98593b538ae7f73563c7819a28569e2e9190a5a6fa3c83b3bf008a",
+    "cad/motor-carrier/R4.stl": "dd7ba25c481268741d0df69ddfc2c7fc4428dd3c33585a2887c23387d3fd0037",
+    "cad/motor-carrier/ta6586.stl": "6888a9b59f3d0a6d8b6ceb97abcccf4058b86bd54186219a04e7da1dab0a0813",
+    "cad/motor-carrier-mount/tray.stl": "6ca5dd7fb145b434bf2d9f103436a60665c26ea0ba055ad04786baccfdb6bc42",
+    "cad/motor-carrier-mount/clamp.stl": "dce11b0e4efb062a89fee43792cc41d6594052843a58ee4386d8b423d25ce717"
+  },
+  "artifact_sha256": {
+    "cad/drive-power-carrier/viewer.html": "d14d43e506deb791a55b3ac0e1f28602376c2680f21ec49620bcd920eb1e5535",
+    "cad/drive-power-carrier/preview.png": "91c17698f8255c4d8313d324c8788bb37ba4ff7e588827bcef9603dcf67d5e9c"
+  }
+}

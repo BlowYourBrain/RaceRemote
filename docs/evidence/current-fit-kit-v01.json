@@ -1,0 +1,528 @@
+{
+  "contract": "CURRENT-FIT-KIT-01 v0.1",
+  "date": "2026-09-15",
+  "unit": "millimeter",
+  "parts": [
+    {
+      "name": "tray",
+      "quantity": 1,
+      "role": "current holder",
+      "source": "cad/direct-logic-harness/tray.stl",
+      "source_sha256": "86b03eb2cdd341e667779157820ea33a0409c3569dc52a95960b87e755abfb7e",
+      "source_is_in_current_assembly": true,
+      "source_to_stl_matrix": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          2.5
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          -30.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          -26.299999237060547
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "source_to_plate_matrix": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          22.5
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          -26.299999237060547
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "size_mm": [
+        53.25,
+        48.0,
+        8.5
+      ],
+      "plate_bounds_mm": [
+        [
+          20.0,
+          30.0,
+          0.0
+        ],
+        [
+          73.25,
+          78.0,
+          8.5
+        ]
+      ],
+      "volume_mm3": 2912.076385181261,
+      "triangles": 2672,
+      "output": "tray.stl"
+    },
+    {
+      "name": "xiao_cradle",
+      "quantity": 1,
+      "role": "current holder",
+      "source": "cad/xiao-power-harness/cradle.stl",
+      "source_sha256": "160e657b47a2c46bdac40a6617ee48bd9cf62606a3a22efd993c058447512043",
+      "source_is_in_current_assembly": true,
+      "source_to_stl_matrix": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          5.25
+        ],
+        [
+          0.0,
+          0.0,
+          -1.0,
+          45.5
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          -74.5
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "source_to_plate_matrix": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          95.25
+        ],
+        [
+          0.0,
+          0.0,
+          -1.0,
+          75.5
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          -74.5
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "size_mm": [
+        60.0,
+        24.5,
+        10.300003051757812
+      ],
+      "plate_bounds_mm": [
+        [
+          90.0,
+          30.0,
+          0.0
+        ],
+        [
+          150.0,
+          54.5,
+          10.300003051757812
+        ]
+      ],
+      "volume_mm3": 922.5148977898433,
+      "triangles": 1634,
+      "output": "xiao_cradle.stl"
+    },
+    {
+      "name": "xiao_cap",
+      "quantity": 1,
+      "role": "current holder",
+      "source": "cad/harness-guides/cap.stl",
+      "source_sha256": "8344dcb2c2b430b324d7748fc2da33408bc7f5a085eeb63b0c0c72824d4d32d7",
+      "source_is_in_current_assembly": true,
+      "source_to_stl_matrix": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          -13.75
+        ],
+        [
+          0.0,
+          0.0,
+          -1.0,
+          45.5
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          -82.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "source_to_plate_matrix": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          76.25
+        ],
+        [
+          0.0,
+          0.0,
+          -1.0,
+          120.5
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          -82.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "size_mm": [
+        32.75,
+        8.200000000000003,
+        3.5
+      ],
+      "plate_bounds_mm": [
+        [
+          90.0,
+          75.0,
+          0.0
+        ],
+        [
+          122.75,
+          83.2,
+          3.5
+        ]
+      ],
+      "volume_mm3": 304.00145192800034,
+      "triangles": 596,
+      "output": "xiao_cap.stl"
+    },
+    {
+      "name": "pcb_clamp",
+      "quantity": 1,
+      "role": "current holder",
+      "source": "cad/motor-carrier-mount/clamp.stl",
+      "source_sha256": "dce11b0e4efb062a89fee43792cc41d6594052843a58ee4386d8b423d25ce717",
+      "source_is_in_current_assembly": true,
+      "source_to_stl_matrix": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          -20.2
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          -54.2
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          -31.1
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "source_to_plate_matrix": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          114.8
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          20.799999999999997
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          -31.1
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "size_mm": [
+        6.600000000000001,
+        11.599999999999994,
+        1.6000000000000014
+      ],
+      "plate_bounds_mm": [
+        [
+          135.0,
+          75.0,
+          0.0
+        ],
+        [
+          141.6,
+          86.6,
+          1.6000000000000014
+        ]
+      ],
+      "volume_mm3": 108.06118438400004,
+      "triangles": 404,
+      "output": "pcb_clamp.stl"
+    },
+    {
+      "name": "pcb_gauge",
+      "quantity": 1,
+      "role": "bare PCB dimensional gauge",
+      "source": "cad/motor-carrier-mount/pcb_gauge_print.stl",
+      "source_sha256": "6ce3b99da5dbd3114acd7d1838a6fbff9d57322f55fcbf9f40d87be16d534cf6",
+      "source_is_in_current_assembly": false,
+      "source_to_stl_matrix": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          -0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          -0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          -0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "source_to_plate_matrix": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          160.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          30.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          -0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "size_mm": [
+        18.0,
+        30.0,
+        1.6
+      ],
+      "plate_bounds_mm": [
+        [
+          160.0,
+          30.0,
+          0.0
+        ],
+        [
+          178.0,
+          60.0,
+          1.6
+        ]
+      ],
+      "volume_mm3": 864.0,
+      "triangles": 12,
+      "output": "pcb_gauge.stl"
+    }
+  ],
+  "xy_gaps": [
+    {
+      "parts": [
+        "tray",
+        "xiao_cradle"
+      ],
+      "xy_bounding_box_gap_mm": 16.75
+    },
+    {
+      "parts": [
+        "tray",
+        "xiao_cap"
+      ],
+      "xy_bounding_box_gap_mm": 16.75
+    },
+    {
+      "parts": [
+        "tray",
+        "pcb_clamp"
+      ],
+      "xy_bounding_box_gap_mm": 61.75
+    },
+    {
+      "parts": [
+        "tray",
+        "pcb_gauge"
+      ],
+      "xy_bounding_box_gap_mm": 86.75
+    },
+    {
+      "parts": [
+        "xiao_cradle",
+        "xiao_cap"
+      ],
+      "xy_bounding_box_gap_mm": 20.5
+    },
+    {
+      "parts": [
+        "xiao_cradle",
+        "pcb_clamp"
+      ],
+      "xy_bounding_box_gap_mm": 20.5
+    },
+    {
+      "parts": [
+        "xiao_cradle",
+        "pcb_gauge"
+      ],
+      "xy_bounding_box_gap_mm": 10.0
+    },
+    {
+      "parts": [
+        "xiao_cap",
+        "pcb_clamp"
+      ],
+      "xy_bounding_box_gap_mm": 12.25
+    },
+    {
+      "parts": [
+        "xiao_cap",
+        "pcb_gauge"
+      ],
+      "xy_bounding_box_gap_mm": 40.15672421898977
+    },
+    {
+      "parts": [
+        "pcb_clamp",
+        "pcb_gauge"
+      ],
+      "xy_bounding_box_gap_mm": 23.739418695494635
+    }
+  ],
+  "source_sha256": {
+    "docs/evidence/servo-lacing-v01.json": "771db9a1f21d31b869b769407f57e36735421781e2e0782abb62b7621a80f1dd",
+    "hardware/drive-power-carrier/geometry.json": "a67fdbe7533c2979a8c5453be1583fdd144e0cf0ca281ec9584742d6002fd21e",
+    "cad/direct-logic-harness/tray.stl": "86b03eb2cdd341e667779157820ea33a0409c3569dc52a95960b87e755abfb7e",
+    "cad/xiao-power-harness/cradle.stl": "160e657b47a2c46bdac40a6617ee48bd9cf62606a3a22efd993c058447512043",
+    "cad/harness-guides/cap.stl": "8344dcb2c2b430b324d7748fc2da33408bc7f5a085eeb63b0c0c72824d4d32d7",
+    "cad/motor-carrier-mount/clamp.stl": "dce11b0e4efb062a89fee43792cc41d6594052843a58ee4386d8b423d25ce717",
+    "cad/motor-carrier-mount/pcb_gauge_print.stl": "6ce3b99da5dbd3114acd7d1838a6fbff9d57322f55fcbf9f40d87be16d534cf6",
+    "tools/build_current_fit_kit.py": "6c7dc4b00e51854eee3407d075370ab3047606c36c83ffd0ed2b7777abe55556",
+    "tools/build_motor_print_kit.py": "92fccf2f227c4c95805a031e46d859e352c7149720c3db2e3c0bcd70300dd9a9",
+    "tools/print-kit-requirements.txt": "34ac5697f10886cfafba0db7eab0c96dfef4e7f1303fc60f76cddaff56fa97aa",
+    "tools/cad-requirements.txt": "722a541e9b0a93c5d1798d57322e6ea476bf2a956822d1e2c926a42d73278885"
+  },
+  "profile_reference": {
+    "path": "C:\\Program Files\\Creality\\Creality Print 7.0\\resources\\profiles\\Creality\\machine\\Creality K1C 0.4 nozzle.json",
+    "sha256": "934ee1016af9fe742c7513525b095bf3b51bddf9d61a216dc5b2321ab455a143",
+    "usable_box_mm": [
+      220,
+      215,
+      250
+    ],
+    "nozzle_material_or_process_selected": false
+  },
+  "checks": {
+    "assembly_source_hashes": true,
+    "single_closed_solids": true,
+    "rigid_transforms_only": true,
+    "stl_reload_triangles": true,
+    "five_object_3mf_roundtrip": true,
+    "bed_and_spacing": true
+  },
+  "slicer_import_verified": false,
+  "sliced": false,
+  "printed": false,
+  "limitations": [
+    "Electronics holder fit kit, not complete chassis or finished assembly",
+    "Gauge has no components/holes and is not an electrically functional PCB",
+    "No process/nozzle/material, support, brim, sequential clearance or physical tolerance validation",
+    "Current cradle window and tray lacing saddle included; source CAD remains unchanged"
+  ],
+  "artifacts": {
+    "cad/current-fit-kit/electronics-fit.3mf": "097d41bb911cf8fac2157281b07861557ecb69883087c91a41406747e0005b5f",
+    "cad/current-fit-kit/layout.png": "9bc48517335351284b96bebd9e7349299602641942785f2f3597173e5230d9ab",
+    "cad/current-fit-kit/pcb_clamp.stl": "ceaabc7a8f61b1417c4f9f062fe7caffaba5b66e3793f9b405e33c64d8e0f103",
+    "cad/current-fit-kit/pcb_gauge.stl": "3cbed44f7e9917f2e902780311bf74ea2d31b116f2d8e52bb1ecef5e93be4684",
+    "cad/current-fit-kit/tray.stl": "a6eaf4928b50984f15b33480d5225bad51dc7d9f774e41184db8d7a03e51e8e6",
+    "cad/current-fit-kit/xiao_cap.stl": "ba97a5d9e0d53d0e8dafe0f0e32eac55aee5b845a286c03fa2a869c92640f103",
+    "cad/current-fit-kit/xiao_cradle.stl": "bd4bb19a8bdd1e75312b19383c4e71eabf249d9bda3a11503c62dc5c3fe210fa"
+  }
+}

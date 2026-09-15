@@ -1,0 +1,15 @@
+{
+  "action": "--help",
+  "exit_code": 0,
+  "stdout_bytes": 318,
+  "stderr_bytes": 0,
+  "cwd": "C:\\Program Files\\Creality\\Creality Print 7.0",
+  "date": "2026-09-15",
+  "slicer_import_verified": false,
+  "sliced": false,
+  "printed": false,
+  "interpretation": "Help action only returned startup logs; no model load was attempted or proven",
+  "exe_file_version": "5476",
+  "exe_product_version": "5476",
+  "log_sha256": "5973d1c8c5a22ce494af9319e5306538d097fb44bbc7df521e33ef37a3a68bcc"
+}

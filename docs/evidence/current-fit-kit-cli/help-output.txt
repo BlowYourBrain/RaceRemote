@@ -1,0 +1,4 @@
+OpenGL probe display point: x=0, y=0
+OpenGL probe: version=4.6.0 NVIDIA 591.59, vendor=NVIDIA Corporation, renderer=NVIDIA GeForce RTX 5070 Ti/PCIe/SSE2
+[2026-09-15 21:41:55.934220] [0x00009df4] [trace]   Initializing StaticPrintConfigs
+[2026-09-15 21:41:55.940219] [0x00009df4] [error]   crealityprint_main start

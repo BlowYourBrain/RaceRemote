@@ -1,0 +1,37 @@
+{
+  "scope": "JVM Android client and actual C++ control.h via host transport adapter; not ESP32 main/RTOS/HAL, RF or physical cars",
+  "firmware_commit": "f9f582d7f1b4d38423fa4b7d016b14fc9111784b",
+  "firmware_control_sha256": "95ac372f6589a46419ffd6ac6457fef59972327a89e0f6e5b456be178b38d18f",
+  "compiler": "g++.EXE (Rev10, Built by MSYS2 project) 12.2.0",
+  "source_sha256": {
+    "tools/firmware_control_bridge.cpp": "92476cd8bf79ae336d2ba769489a5196bc31f0e8f7979ca01594809596a06cc2",
+    "tools/run_firmware_fleet.py": "39289edf852a7b22e09787b346f16fa2738f75cd41ac15ce828953aea8a5897e",
+    "app/src/main/java/vea/raceremote/control/CarControlClient.kt": "a5b07c9f22c58a6934666368d616309ba6afe970a2747274a58eafd65ab5ea14",
+    "app/src/main/java/vea/raceremote/control/ControlPacket.kt": "c32aad47fecbb798ab5c83a514f8db40baaa85a1564b0949fffcc3946796916f",
+    "app/src/test/java/vea/raceremote/control/FirmwareFleetTest.kt": "5eaef9b5902b7225001017eec9f0a25c438e98cfddabd263bb4f2b33e0726495"
+  },
+  "runs": {
+    "baseline": {
+      "gradle_exit_code": 0,
+      "tests": 1,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "bridge_sha256": "68d39a8a4d8de2a3949e9bae45add8963781009ccf7666a3e2d0b31088c0c4ca",
+      "junit_sha256": "3fe44e3d1b46e19f4e593e070fe31ec2637e830353322082529af03393b1957c",
+      "control_header_sha256": "95ac372f6589a46419ffd6ac6457fef59972327a89e0f6e5b456be178b38d18f"
+    },
+    "allow-takeover": {
+      "gradle_exit_code": 1,
+      "tests": 1,
+      "failures": 1,
+      "errors": 0,
+      "skipped": 0,
+      "bridge_sha256": "001e75293a0609fafbeef58328a6a7e0a72a03758b8aa9d181dedfdee10b441d",
+      "junit_sha256": "6b9107dfdb919c5397d1f33c7b3e286c98780f40503a141c158e01e7d273c57f",
+      "control_header_sha256": "a34ecf525aaf06a9e6d3f016e192f2ce808401baa1c68b5aef50abc01485342a",
+      "ownership_mutation_detected": true
+    }
+  },
+  "passed": true
+}

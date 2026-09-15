@@ -1,0 +1,88 @@
+{
+  "serial": "emulator-5556",
+  "api": 35,
+  "display": {
+    "size": "Physical size: 2560x1600\nOverride size: 1280x720",
+    "density": "Physical density: 320",
+    "emulator": true
+  },
+  "classes": [
+    "vea.raceremote.VideoControlIsolationTest",
+    "vea.raceremote.DrivingModeTest"
+  ],
+  "expected_tests": 4,
+  "passed": true,
+  "adb_exit_code": 0,
+  "apk_sha256": {
+    "app/build/outputs/apk/debug/app-debug.apk": "d4dc755f32655fd8b55e472018242bd26adf71b83d31bf29f7be722f8271640b",
+    "app/build/outputs/apk/androidTest/debug/app-debug-androidTest.apk": "558104672440d70b94998903bfb15317b0614334fc330606fd4370908fef2054"
+  },
+  "transcript_sha256": "4d01f934f845fa84106a9a35b6519bb34a936e9afd2f68f60e05fc82868b2fc4",
+  "runner_sha256": "119b928397f722d1bcf4843a085f91311d9c79b5bd6f44327ea54476c11be975",
+  "scope": "Android UI and software loopback; no physical camera, RF, motor or optical latency",
+  "date": "2026-09-15",
+  "package": "vea.raceremote",
+  "main_code_commit": "cba3b76",
+  "physical_phone_passed": false,
+  "screen_pixel_cycle_argb": [
+    "ff0000fe",
+    "ff000000",
+    "ff00007f"
+  ],
+  "prior_attempts": [
+    {
+      "target": "API36 Small_Phone",
+      "result": "3 of 4 passed initially",
+      "finding": "Control ACK delayed 215ms before video startup; configured 200ms stop retained"
+    },
+    {
+      "target": "API36 Small_Phone",
+      "result": "Later run incomplete",
+      "finding": "Pixel capture assertion failed; emulator subsequently ADB offline, process remained running; stopped explicitly"
+    },
+    {
+      "target": "Existing API35 Pixel_Tablet on C",
+      "result": "Did not boot",
+      "finding": "Emulator rejected start for insufficient disk space; C free about 0.6GB"
+    },
+    {
+      "target": "Temporary API35 tablet on D",
+      "result": "2 of 4 passed",
+      "finding": "Returned frame had blue127 rather than expected >200; tablet video enlargement below phone-specific1.3 ratio"
+    },
+    {
+      "target": "Temporary API35 with720x1280 override",
+      "result": "4 tests failed in input setup",
+      "finding": "Screenshot showed cropped letterboxed UI; invalid orientation for this tablet profile"
+    },
+    {
+      "target": "Temporary API35 with1280x720 override",
+      "result": "4 of 4 passed",
+      "finding": "Verified complete visible app layout before run; dominant-blue/black pixel assertions"
+    }
+  ],
+  "changes": [
+    "Prepare video fields before ARM in metadata test",
+    "Read screen pixels with UiAutomation",
+    "Allow dimmed blue; black remains exact black",
+    "Wait for resumed visible image",
+    "Always stop lifecycle and both servers in cleanup",
+    "Runner requires explicit device, unlocked API31+, four-test success marker"
+  ],
+  "source_sha256": {
+    "app/src/androidTest/java/vea/raceremote/VideoControlIsolationTest.kt": "955b96877128869e902a9c926af0d2ae7243b00fc9f9dd244ea5f9bc2239d844",
+    "app/src/androidTest/java/vea/raceremote/DrivingModeTest.kt": "b3a82cc97870faab94752a88b0d9aef9c0400a26effd57a23ed68d794a0eba93",
+    "tools/run_video_android_smoke.py": "119b928397f722d1bcf4843a085f91311d9c79b5bd6f44327ea54476c11be975"
+  },
+  "evidence_sha256": {
+    "instrumentation.txt": "4d01f934f845fa84106a9a35b6519bb34a936e9afd2f68f60e05fc82868b2fc4",
+    "video-log.txt": "90743d5a45fb8708ec97df29b5397da9fe5cdc228a79718efa775bd1ec062aff"
+  },
+  "temporary_avd_cleanup": {
+    "removed": false,
+    "emulator_stop_command_accepted": true,
+    "original_avd_directories_deleted": false,
+    "remaining_path": "D:/raceremote-video-dr80xg66",
+    "block": "Automatic review rejected recursive removal with Force, then rejected removal without Force; no workaround deletion attempted"
+  }
+}

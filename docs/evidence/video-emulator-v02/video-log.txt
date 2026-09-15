@@ -1,0 +1,41 @@
+09-15 13:04:28.265  7865  7881 I TestRunner: run started: 4 tests
+09-15 13:04:28.267  7865  7881 I TestRunner: started: unavailableVideoDoesNotStopControlAndBackgroundStopsBoth(vea.raceremote.VideoControlIsolationTest)
+09-15 13:04:33.111  7865  7865 D RaceRemoteVideo: Видео выключено
+09-15 13:04:33.206  7865  7865 D RaceRemoteVideo: Видео недоступно: HTTP 503
+09-15 13:04:33.592  7865  7865 D RaceRemoteVideo: Видео выключено
+09-15 13:04:34.346  7865  7865 D RaceRemoteVideo: Видео выключено
+09-15 13:04:34.849  7865  7865 D RaceRemoteVideo: Видео выключено
+09-15 13:04:34.879  7865  7865 D RaceRemoteVideo: Видео выключено
+09-15 13:04:34.963  7865  7881 I TestRunner: finished: unavailableVideoDoesNotStopControlAndBackgroundStopsBoth(vea.raceremote.VideoControlIsolationTest)
+09-15 13:04:35.007  7865  7881 I TestRunner: started: repeatedCaptureTimesOutVideoWhileControlContinuesAndReconnectStartsFresh(vea.raceremote.VideoControlIsolationTest)
+09-15 13:04:37.774  7865  7865 D RaceRemoteVideo: Видео выключено
+09-15 13:04:38.814  7865  7881 D RaceRemoteVideoTest: Video center pixel=ff0000fe
+09-15 13:04:38.967  7865  7865 D RaceRemoteVideo: fps accepted=8.382229673093041 decoded=8.382229673093041 drawn=8.382229673093041
+09-15 13:04:40.088  7865  7865 D RaceRemoteVideo: fps accepted=0.0 decoded=0.0 drawn=0.0
+09-15 13:04:40.352  7865  7865 D RaceRemoteVideo: Нет свежего видео
+09-15 13:04:40.487  7865  7881 D RaceRemoteVideoTest: Video center pixel=ff000000
+09-15 13:04:40.564  7865  7865 D RaceRemoteVideo: Видео выключено
+09-15 13:04:41.604  7865  7865 D RaceRemoteVideo: fps accepted=10.576923076923077 decoded=10.576923076923077 drawn=9.615384615384615
+09-15 13:04:42.699  7865  7865 D RaceRemoteVideo: fps accepted=9.132420091324201 decoded=9.132420091324201 drawn=10.045662100456621
+09-15 13:04:42.937  7865  7881 D RaceRemoteVideoTest: Video center pixel=ff00007f
+09-15 13:04:42.988  7865  7865 D RaceRemoteVideo: Видео выключено
+09-15 13:04:43.584  7865  7865 D RaceRemoteVideo: Видео выключено
+09-15 13:04:43.611  7865  7865 D RaceRemoteVideo: Видео выключено
+09-15 13:04:43.665  7865  7881 I TestRunner: finished: repeatedCaptureTimesOutVideoWhileControlContinuesAndReconnectStartsFresh(vea.raceremote.VideoControlIsolationTest)
+09-15 13:04:43.689  7865  7881 I TestRunner: started: backgroundDuringDragDoesNotResumeControl(vea.raceremote.DrivingModeTest)
+09-15 13:04:48.483  7865  7881 I TestRunner: finished: backgroundDuringDragDoesNotResumeControl(vea.raceremote.DrivingModeTest)
+09-15 13:04:48.485  7865  7881 I TestRunner: started: twoThumbsCancelAndVideoSurviveModeChanges(vea.raceremote.DrivingModeTest)
+09-15 13:04:51.630  7865  7865 D RaceRemoteVideo: Видео выключено
+09-15 13:04:52.728  7865  7865 D RaceRemoteVideo: fps accepted=27.347310847766636 decoded=27.347310847766636 drawn=27.347310847766636
+09-15 13:04:53.790  7865  7865 D RaceRemoteVideo: fps accepted=27.281279397930387 decoded=27.281279397930387 drawn=27.281279397930387
+09-15 13:04:54.851  7865  7865 D RaceRemoteVideo: fps accepted=29.2177191328935 decoded=29.2177191328935 drawn=28.275212064090482
+09-15 13:04:56.051  7865  7865 D RaceRemoteVideo: fps accepted=28.333333333333336 decoded=27.5 drawn=25.833333333333336
+09-15 13:04:57.124  7865  7865 D RaceRemoteVideo: fps accepted=27.05223880597015 decoded=27.98507462686567 drawn=27.98507462686567
+09-15 13:04:58.220  7865  7865 D RaceRemoteVideo: fps accepted=28.258887876025526 decoded=28.258887876025526 drawn=26.43573381950775
+09-15 13:04:59.283  7865  7865 D RaceRemoteVideo: fps accepted=27.281279397930387 decoded=27.281279397930387 drawn=26.34054562558796
+09-15 13:04:59.755  7865  7865 D RaceRemoteVideo: Видео выключено
+09-15 13:05:00.319  7865  7865 D RaceRemoteVideo: Видео выключено
+09-15 13:05:00.979  7865  7865 D RaceRemoteVideo: Видео выключено
+09-15 13:05:01.008  7865  7865 D RaceRemoteVideo: Видео выключено
+09-15 13:05:01.064  7865  7881 I TestRunner: finished: twoThumbsCancelAndVideoSurviveModeChanges(vea.raceremote.DrivingModeTest)
+09-15 13:05:01.074  7865  7881 I TestRunner: run finished: 4 tests, 0 failed, 0 ignored

@@ -129,8 +129,8 @@ class DrivingModeTest {
             compose.onNodeWithTag("drive_throttle").assert(SemanticsMatcher.expectValue(SemanticsProperties.StateDescription, "0%"))
             compose.onRoot().performTouchInput { cancel() }
         } finally {
-            compose.onNodeWithTag("stop_car").performClick()
-            control.shutdown(); video.shutdown()
+            try { compose.activityRule.scenario.moveToState(Lifecycle.State.STARTED) }
+            finally { try { control.shutdown() } finally { video.shutdown() } }
         }
     }
 

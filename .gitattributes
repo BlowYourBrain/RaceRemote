@@ -243,3 +243,7 @@ app/src/androidTest/java/vea/raceremote/VideoControlIsolationTest.kt text eol=lf
 app/src/androidTest/java/vea/raceremote/DrivingModeTest.kt text eol=lf
 docs/evidence/video-freshness-v02.json text eol=lf
 docs/video-freshness.md text eol=lf
+
+tools/run_video_android_smoke.py text eol=lf
+docs/evidence/video-emulator-v02/*.json text eol=lf
+docs/evidence/video-emulator-v02/*.txt text eol=lf

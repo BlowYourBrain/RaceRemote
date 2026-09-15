@@ -1,0 +1,31 @@
+{
+  "date": "2026-09-15",
+  "source": "user_report_in_chat",
+  "battery": "LW LiPo 601844HP 7.4V 600mAh",
+  "sample_count": 1,
+  "sample_identifier": null,
+  "meter": "DT838",
+  "black_lead_socket_reported": "COM",
+  "red_lead_socket_reported": "V maC",
+  "dc_voltage_range_confirmed": false,
+  "meter_battery_replacement_confirmed": false,
+  "pin_numbering": "user-local, identified by wire color, not manufacturer numbering",
+  "pins": {"1": "red", "2": "white", "3": "black"},
+  "readings": [
+    {"black_probe_pin": 1, "red_probe_pin": 2, "reported_voltage_v": "-3.6"},
+    {"black_probe_pin": 2, "red_probe_pin": 3, "reported_voltage_v": "-3.6"},
+    {"black_probe_pin": 1, "red_probe_pin": 3, "reported_voltage_v": "-7.23"}
+  ],
+  "conditional_interpretation": {
+    "condition": "DC voltage mode and functioning meter",
+    "pack_positive": 1,
+    "cell_midpoint": 2,
+    "pack_negative": 3
+  },
+  "limitations": [
+    "Previous meter readings were anomalous; mode and meter recovery not yet confirmed",
+    "Cell values reported to one decimal place; no quantified cell imbalance",
+    "Does not validate other packs, capacity, internal resistance, charge rating or protection",
+    "Two-pin power connector and protection ground topology not measured"
+  ]
+}

@@ -1,0 +1,80 @@
+{
+  "date": "2026-09-15",
+  "base_commit": "34314e20055402e29530fd9733fc1b08fb2415ac",
+  "scope": "HELLO receive deadline regression, JVM loopback; updated APK Android loopback smoke, no RF or physical outputs",
+  "before": {
+    "tests": 3,
+    "failures": 2,
+    "passed": [
+      "helloBeforeDeadlineCanArm"
+    ],
+    "failed": [
+      "helloAtDeadlineCannotArm",
+      "helloAfterDeadlineCannotArm"
+    ],
+    "report": "before.xml"
+  },
+  "after_suites": [
+    {
+      "suite": "vea.raceremote.control.CarControlTest",
+      "tests": 7,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    {
+      "suite": "vea.raceremote.control.CarDiscoveryTest",
+      "tests": 3,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    {
+      "suite": "vea.raceremote.features.remote_control.CompoundCommandCreatorTest",
+      "tests": 5,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    {
+      "suite": "vea.raceremote.features.remote_control.presentation.EngineMapperTest",
+      "tests": 6,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    {
+      "suite": "vea.raceremote.features.remote_control.presentation.SteeringWheelMapperTest",
+      "tests": 5,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    {
+      "suite": "vea.raceremote.video.FrameFreshnessTest",
+      "tests": 6,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    {
+      "suite": "vea.raceremote.video.MjpegTest",
+      "tests": 5,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    }
+  ],
+  "after_total": {
+    "tests": 37,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0
+  },
+  "source_sha256": {
+    "app/src/main/java/vea/raceremote/control/CarControlClient.kt": "a5b07c9f22c58a6934666368d616309ba6afe970a2747274a58eafd65ab5ea14",
+    "app/src/test/java/vea/raceremote/control/CarControlTest.kt": "8ce0b89756f27602abeb75560b4ab71b464e622a4c35fb704e748cfd69d32a78",
+    "tools/run_video_android_smoke.py": "119b928397f722d1bcf4843a085f91311d9c79b5bd6f44327ea54476c11be975"
+  },
+  "android": "android-result.json"
+}

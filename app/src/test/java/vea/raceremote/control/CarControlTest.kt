@@ -95,6 +95,54 @@ class CarControlTest {
         }
     }
 
+    @Test fun helloBeforeDeadlineCanArm() = checkHelloDeadline(3999, true)
+
+    @Test fun helloAtDeadlineCannotArm() = checkHelloDeadline(4000, false)
+
+    @Test fun helloAfterDeadlineCannotArm() = checkHelloDeadline(4001, false)
+
+    private fun checkHelloDeadline(arrivalMs: Long, shouldArm: Boolean) {
+        val now = AtomicLong(0)
+        val packets = LinkedBlockingQueue<ControlPacket>()
+        val received = java.util.concurrent.CountDownLatch(1)
+        val server = MockWebServer()
+        val http = OkHttpClient()
+        // Advance time inside the receive callback's lock. The timer cannot win
+        // this race and hide a missing deadline check in the message handler.
+        val client = CarControlClient(diagnostics = { message ->
+            if (message.startsWith("Received bytes=")) {
+                now.set(arrivalMs)
+                received.countDown()
+            }
+        }, clockMs = { now.get() })
+        server.enqueue(MockResponse().withWebSocketUpgrade(object : WebSocketListener() {
+            override fun onOpen(webSocket: WebSocket, response: Response) {
+                webSocket.send(ByteString.of(*ControlPacket(ControlPacket.HELLO, 42, 0).encode()))
+            }
+            override fun onMessage(webSocket: WebSocket, bytes: ByteString) {
+                packets.add(ControlPacket.decode(bytes.toByteArray())!!)
+            }
+        }))
+        server.start()
+        try {
+            client.connect("127.0.0.1", http, server.port)
+            assertTrue(received.await(3, TimeUnit.SECONDS))
+            if (shouldArm) {
+                assertEquals(ControlPacket(ControlPacket.ARM, 42, 1), packets.poll(3, TimeUnit.SECONDS))
+                assertTrue(client.state.value.connecting)
+                assertFalse(client.state.value.connected) // ARM still needs its ACK.
+            } else {
+                await { !client.state.value.connecting }
+                assertFalse(client.state.value.connected)
+                assertEquals("Нет свежего ответа — остановлено", client.state.value.message)
+                assertNull("Expired HELLO must not send ARM", packets.poll(100, TimeUnit.MILLISECONDS))
+            }
+        } finally {
+            client.close(); server.shutdown()
+            http.dispatcher().executorService().shutdownNow(); http.connectionPool().evictAll()
+        }
+    }
+
     @Test fun publicHostsAreRejectedBeforeConnecting() {
         val client = CarControlClient()
         val http = OkHttpClient()

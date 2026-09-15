@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="vea.raceremote.video.FrameFreshnessTest" tests="6" skipped="0" failures="0" errors="0" timestamp="2026-09-15T17:00:49" hostname="DESKTOP-LR64B4F" time="0.005">
+  <properties/>
+  <testcase name="parserPreservesCapturePrecisionAndRejectsInvalidMetadata" classname="vea.raceremote.video.FrameFreshnessTest" time="0.004"/>
+  <testcase name="unsignedSequenceWrapAndLossAreAllowedButReplayIsNot" classname="vea.raceremote.video.FrameFreshnessTest" time="0.001"/>
+  <testcase name="metadataCannotDisappearOrChangeModeMidstream" classname="vea.raceremote.video.FrameFreshnessTest" time="0.0"/>
+  <testcase name="repeatedCaptureIsRejectedEvenWithNewSendSequence" classname="vea.raceremote.video.FrameFreshnessTest" time="0.0"/>
+  <testcase name="genericAndTimestampOnlyCamerasRemainSupported" classname="vea.raceremote.video.FrameFreshnessTest" time="0.0"/>
+  <testcase name="reconnectResetsClockAndSequenceHistory" classname="vea.raceremote.video.FrameFreshnessTest" time="0.0"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

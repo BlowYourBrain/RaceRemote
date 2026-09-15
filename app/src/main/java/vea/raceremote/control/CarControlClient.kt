@@ -64,6 +64,9 @@ class CarControlClient(
                 if (token == 0L || sequence <= 30) diagnostics("Received bytes=${bytes.size()} kind=${p?.kind} sequence=${p?.sequence} rttMs=${clockMs() - sentAt}")
                 if (p == null) { disconnect("Ошибка протокола"); return@synchronized }
                 if (token == 0L && p.kind == ControlPacket.HELLO && p.sequence == 0L && p.throttle == 0 && p.steering == 0) {
+                    // A receive callback can run before the next timer tick.
+                    // Reject expired handshakes before assigning a token or sending ARM.
+                    if (clockMs() - sentAt >= 4000) { disconnect("Нет свежего ответа — остановлено"); return@synchronized }
                     token = p.token; sequence = 1
                     send(ControlPacket(ControlPacket.ARM, token, sequence))
                 } else if (p.kind == ControlPacket.ACK && p.token == token && p.sequence == pending) {

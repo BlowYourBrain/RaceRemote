@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="vea.raceremote.features.remote_control.presentation.SteeringWheelMapperTest" tests="5" skipped="0" failures="0" errors="0" timestamp="2026-09-15T17:00:49" hostname="DESKTOP-LR64B4F" time="0.001">
+  <properties/>
+  <testcase name="value higher than 1f" classname="vea.raceremote.features.remote_control.presentation.SteeringWheelMapperTest" time="0.0"/>
+  <testcase name="value is -1f" classname="vea.raceremote.features.remote_control.presentation.SteeringWheelMapperTest" time="0.0"/>
+  <testcase name="value lower than -1f" classname="vea.raceremote.features.remote_control.presentation.SteeringWheelMapperTest" time="0.0"/>
+  <testcase name="value is 0f" classname="vea.raceremote.features.remote_control.presentation.SteeringWheelMapperTest" time="0.0"/>
+  <testcase name="value lower than 1f" classname="vea.raceremote.features.remote_control.presentation.SteeringWheelMapperTest" time="0.0"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

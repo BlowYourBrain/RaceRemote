@@ -1,0 +1,16 @@
+--------- beginning of main
+09-15 20:08:31.879  8709  8771 D CarVideoSelectionTest: pixel=ff0000fe center=Offset(541.5, 574.0)
+09-15 20:08:32.425  8709  8771 D CarVideoSelectionTest: pixel=ff000000 center=Offset(541.5, 574.0)
+09-15 20:08:33.563  8709  8771 D CarVideoSelectionTest: pixel=fffe0100 center=Offset(541.5, 574.0)
+09-15 20:08:33.831  8709  8771 D CarVideoSelectionTest: pixel=fffe0100 center=Offset(541.5, 574.0)
+09-15 20:09:28.946  9114  9151 D CarVideoSelectionTest: pixel=ff0000fe center=Offset(541.5, 574.0)
+09-15 20:09:29.440  9114  9151 D CarVideoSelectionTest: pixel=ff2d2d2d center=Offset(541.5, 574.0)
+09-15 20:10:33.350  9770  9818 D CarVideoSelectionTest: pixel=ff0000fe center=Offset(541.5, 574.0)
+09-15 20:10:33.802  9770  9818 D CarVideoSelectionTest: ime=true
+09-15 20:10:33.804  9770  9818 D CarVideoSelectionTest: pixel=ff2d2d2d center=Offset(541.5, 574.0)
+09-15 20:11:38.323 10944 10990 D CarVideoSelectionTest: pixel=ff0000fe center=Offset(541.5, 574.0)
+09-15 20:11:38.976 10944 10990 D CarVideoSelectionTest: ime=false
+09-15 20:11:38.978 10944 10990 D CarVideoSelectionTest: pixel=ff252525 center=Offset(541.5, 574.0)
+09-15 20:11:39.039 10944 10990 D CarVideoSelectionTest: pixel=ff000000 center=Offset(541.5, 574.0)
+09-15 20:11:40.209 10944 10990 D CarVideoSelectionTest: pixel=fffe0100 center=Offset(541.5, 574.0)
+09-15 20:11:40.464 10944 10990 D CarVideoSelectionTest: pixel=fffe0100 center=Offset(541.5, 574.0)

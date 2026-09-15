@@ -1,0 +1,79 @@
+{
+  "date": "2026-09-15",
+  "base_commit": "557408972c0580d2e46e132a42d4f644cad69691",
+  "scope": "Android endpoint-specific video lifecycle, local HTTP/WebSocket and display-pixel check; no camera hardware, RF, Discovery UI or six-car validation",
+  "source_sha256": {
+    "app/src/main/java/vea/raceremote/control/CarControlScreen.kt": "906e78c8a371616b864ee01e086aabb1faa4e874c11111285b01611ddcef6c27",
+    "app/src/main/java/vea/raceremote/video/VideoPanel.kt": "c2a4363ba0dc2a4372898572b54b9d29dfdca40367f29bc184af909b27b4628c",
+    "app/src/androidTest/java/vea/raceremote/CarVideoSelectionTest.kt": "3b68d9abbda57020336dbf8ae29e2c424e340696901b88aa3f941406168ab195",
+    "tools/run_video_android_smoke.py": "acecbce71aa500d01830dbd38cbce065645d00eb6c157c9af0f432b600d85122"
+  },
+  "jvm_suites": [
+    {
+      "suite": "vea.raceremote.control.CarControlTest",
+      "tests": 7,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    {
+      "suite": "vea.raceremote.control.CarDiscoveryTest",
+      "tests": 3,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    {
+      "suite": "vea.raceremote.features.remote_control.CompoundCommandCreatorTest",
+      "tests": 5,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    {
+      "suite": "vea.raceremote.features.remote_control.presentation.EngineMapperTest",
+      "tests": 6,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    {
+      "suite": "vea.raceremote.features.remote_control.presentation.SteeringWheelMapperTest",
+      "tests": 5,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    {
+      "suite": "vea.raceremote.video.FrameFreshnessTest",
+      "tests": 6,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    {
+      "suite": "vea.raceremote.video.MjpegTest",
+      "tests": 5,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    }
+  ],
+  "jvm_total": {
+    "tests": 37,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0
+  },
+  "before": "before/result.json",
+  "after": "after/result.json",
+  "diagnostic": "keyboard-diagnostic/result.json",
+  "diagnostic_cause": "Samsung IME covered sampled pixel; ff2d2d2d and ime=true confirmed by screenshot, test now hides and waits for IME before sampling; production pixel thresholds unchanged",
+  "pixel_log": "pixel-logcat.txt",
+  "limits": [
+    "host and controlPort are endpoint keys, not physical identity",
+    "same endpoint with changed chip ID is not detected",
+    "no physical camera or actuator enabled",
+    "no firmware changed or uploaded"
+  ]
+}

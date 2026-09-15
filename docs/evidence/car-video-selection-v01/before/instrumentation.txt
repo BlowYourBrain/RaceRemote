@@ -1,0 +1,126 @@
+INSTRUMENTATION_STATUS: class=vea.raceremote.VideoControlIsolationTest
+INSTRUMENTATION_STATUS: current=1
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=5
+INSTRUMENTATION_STATUS: stream=
+vea.raceremote.VideoControlIsolationTest:
+INSTRUMENTATION_STATUS: test=unavailableVideoDoesNotStopControlAndBackgroundStopsBoth
+INSTRUMENTATION_STATUS_CODE: 1
+INSTRUMENTATION_STATUS: class=vea.raceremote.VideoControlIsolationTest
+INSTRUMENTATION_STATUS: current=1
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=5
+INSTRUMENTATION_STATUS: stream=.
+INSTRUMENTATION_STATUS: test=unavailableVideoDoesNotStopControlAndBackgroundStopsBoth
+INSTRUMENTATION_STATUS_CODE: 0
+INSTRUMENTATION_STATUS: class=vea.raceremote.VideoControlIsolationTest
+INSTRUMENTATION_STATUS: current=2
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=5
+INSTRUMENTATION_STATUS: stream=
+INSTRUMENTATION_STATUS: test=repeatedCaptureTimesOutVideoWhileControlContinuesAndReconnectStartsFresh
+INSTRUMENTATION_STATUS_CODE: 1
+INSTRUMENTATION_STATUS: class=vea.raceremote.VideoControlIsolationTest
+INSTRUMENTATION_STATUS: current=2
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=5
+INSTRUMENTATION_STATUS: stream=.
+INSTRUMENTATION_STATUS: test=repeatedCaptureTimesOutVideoWhileControlContinuesAndReconnectStartsFresh
+INSTRUMENTATION_STATUS_CODE: 0
+INSTRUMENTATION_STATUS: class=vea.raceremote.CarVideoSelectionTest
+INSTRUMENTATION_STATUS: current=3
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=5
+INSTRUMENTATION_STATUS: stream=
+vea.raceremote.CarVideoSelectionTest:
+INSTRUMENTATION_STATUS: test=changingCarClearsPreviousVideoAndRequiresExplicitRestart
+INSTRUMENTATION_STATUS_CODE: 1
+INSTRUMENTATION_STATUS: class=vea.raceremote.CarVideoSelectionTest
+INSTRUMENTATION_STATUS: current=3
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=5
+INSTRUMENTATION_STATUS: stack=java.lang.AssertionError: Failed to assert the following: (Text + EditableText contains 'Видео выключено' (ignoreCase: false))
+Semantics of the node:
+Node #211 at (l=99.0, t=416.0, r=385.0, b=452.0)px, Tag: 'video_status'
+Text = '[Подключение видео…]'
+Actions = [GetTextLayoutResult]
+Has 16 siblings
+Selector used: (TestTag = 'video_status')
+
+	at androidx.compose.ui.test.AssertionsKt.assert(Assertions.kt:270)
+	at androidx.compose.ui.test.AssertionsKt.assert$default(Assertions.kt:260)
+	at androidx.compose.ui.test.AssertionsKt.assertTextContains(Assertions.kt:214)
+	at androidx.compose.ui.test.AssertionsKt.assertTextContains$default(Assertions.kt:209)
+	at vea.raceremote.CarVideoSelectionTest.changingCarClearsPreviousVideoAndRequiresExplicitRestart(CarVideoSelectionTest.kt:59)
+
+INSTRUMENTATION_STATUS: stream=
+Error in changingCarClearsPreviousVideoAndRequiresExplicitRestart(vea.raceremote.CarVideoSelectionTest):
+java.lang.AssertionError: Failed to assert the following: (Text + EditableText contains 'Видео выключено' (ignoreCase: false))
+Semantics of the node:
+Node #211 at (l=99.0, t=416.0, r=385.0, b=452.0)px, Tag: 'video_status'
+Text = '[Подключение видео…]'
+Actions = [GetTextLayoutResult]
+Has 16 siblings
+Selector used: (TestTag = 'video_status')
+
+	at androidx.compose.ui.test.AssertionsKt.assert(Assertions.kt:270)
+	at androidx.compose.ui.test.AssertionsKt.assert$default(Assertions.kt:260)
+	at androidx.compose.ui.test.AssertionsKt.assertTextContains(Assertions.kt:214)
+	at androidx.compose.ui.test.AssertionsKt.assertTextContains$default(Assertions.kt:209)
+	at vea.raceremote.CarVideoSelectionTest.changingCarClearsPreviousVideoAndRequiresExplicitRestart(CarVideoSelectionTest.kt:59)
+
+INSTRUMENTATION_STATUS: test=changingCarClearsPreviousVideoAndRequiresExplicitRestart
+INSTRUMENTATION_STATUS_CODE: -2
+INSTRUMENTATION_STATUS: class=vea.raceremote.DrivingModeTest
+INSTRUMENTATION_STATUS: current=4
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=5
+INSTRUMENTATION_STATUS: stream=
+vea.raceremote.DrivingModeTest:
+INSTRUMENTATION_STATUS: test=backgroundDuringDragDoesNotResumeControl
+INSTRUMENTATION_STATUS_CODE: 1
+INSTRUMENTATION_STATUS: class=vea.raceremote.DrivingModeTest
+INSTRUMENTATION_STATUS: current=4
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=5
+INSTRUMENTATION_STATUS: stream=.
+INSTRUMENTATION_STATUS: test=backgroundDuringDragDoesNotResumeControl
+INSTRUMENTATION_STATUS_CODE: 0
+INSTRUMENTATION_STATUS: class=vea.raceremote.DrivingModeTest
+INSTRUMENTATION_STATUS: current=5
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=5
+INSTRUMENTATION_STATUS: stream=
+INSTRUMENTATION_STATUS: test=twoThumbsCancelAndVideoSurviveModeChanges
+INSTRUMENTATION_STATUS_CODE: 1
+INSTRUMENTATION_STATUS: class=vea.raceremote.DrivingModeTest
+INSTRUMENTATION_STATUS: current=5
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=5
+INSTRUMENTATION_STATUS: stream=.
+INSTRUMENTATION_STATUS: test=twoThumbsCancelAndVideoSurviveModeChanges
+INSTRUMENTATION_STATUS_CODE: 0
+INSTRUMENTATION_RESULT: stream=
+
+Time: 19,202
+There was 1 failure:
+1) changingCarClearsPreviousVideoAndRequiresExplicitRestart(vea.raceremote.CarVideoSelectionTest)
+java.lang.AssertionError: Failed to assert the following: (Text + EditableText contains 'Видео выключено' (ignoreCase: false))
+Semantics of the node:
+Node #211 at (l=99.0, t=416.0, r=385.0, b=452.0)px, Tag: 'video_status'
+Text = '[Подключение видео…]'
+Actions = [GetTextLayoutResult]
+Has 16 siblings
+Selector used: (TestTag = 'video_status')
+
+	at androidx.compose.ui.test.AssertionsKt.assert(Assertions.kt:270)
+	at androidx.compose.ui.test.AssertionsKt.assert$default(Assertions.kt:260)
+	at androidx.compose.ui.test.AssertionsKt.assertTextContains(Assertions.kt:214)
+	at androidx.compose.ui.test.AssertionsKt.assertTextContains$default(Assertions.kt:209)
+	at vea.raceremote.CarVideoSelectionTest.changingCarClearsPreviousVideoAndRequiresExplicitRestart(CarVideoSelectionTest.kt:59)
+
+FAILURES!!!
+Tests run: 5,  Failures: 1
+
+
+INSTRUMENTATION_CODE: -1

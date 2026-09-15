@@ -1,4 +1,4 @@
-"""Run the four loopback video/control UI tests on an explicitly selected Android.
+"""Run the five loopback video/control UI tests on an explicitly selected Android.
 
 Build app-debug.apk and app-debug-androidTest.apk first. This installs debug APKs;
 it never selects a device implicitly, unlocks a phone, or contacts a physical car.
@@ -12,7 +12,8 @@ import re
 import subprocess
 
 ROOT = Path(__file__).resolve().parents[1]
-CLASSES = "vea.raceremote.VideoControlIsolationTest,vea.raceremote.DrivingModeTest"
+CLASSES = "vea.raceremote.VideoControlIsolationTest,vea.raceremote.DrivingModeTest,vea.raceremote.CarVideoSelectionTest"
+EXPECTED_TESTS = 5
 
 
 def main():
@@ -50,16 +51,16 @@ def main():
         installed = adb("install", "-r", str(apk), timeout=120)
         if "Success" not in installed:
             raise RuntimeError(f"Install failed for {apk.name}: {installed}")
-    print(f"Running four loopback tests on {args.serial}, API{sdk}", flush=True)
+    print(f"Running {EXPECTED_TESTS} loopback tests on {args.serial}, API{sdk}", flush=True)
     process = subprocess.run([str(args.adb), "-s", args.serial, "shell", "am", "instrument", "-w", "-r",
                               "-e", "class", CLASSES, "vea.raceremote.test/androidx.test.runner.AndroidJUnitRunner"],
                              capture_output=True, text=True, encoding="utf-8", errors="replace", timeout=300)
     transcript = process.stdout + process.stderr
     log_path = args.output / "instrumentation.txt"
     log_path.write_text(transcript, encoding="utf-8", newline="\n")
-    passed = process.returncode == 0 and bool(re.search(r"\bOK \(4 tests\)", transcript)) and not re.search(
+    passed = process.returncode == 0 and bool(re.search(rf"\bOK \({EXPECTED_TESTS} tests\)", transcript)) and not re.search(
         r"INSTRUMENTATION_STATUS_CODE: -[1-9]|FAILURES!!!|INSTRUMENTATION_FAILED", transcript)
-    report = {"serial": args.serial, "api": sdk, "display": display, "classes": CLASSES.split(","), "expected_tests": 4,
+    report = {"serial": args.serial, "api": sdk, "display": display, "classes": CLASSES.split(","), "expected_tests": EXPECTED_TESTS,
               "passed": passed, "adb_exit_code": process.returncode, "apk_sha256": hashes,
               "transcript_sha256": hashlib.sha256(log_path.read_bytes()).hexdigest(),
               "runner_sha256": hashlib.sha256(Path(__file__).read_bytes()).hexdigest(),

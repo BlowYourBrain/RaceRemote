@@ -99,7 +99,11 @@ fun CarControlScreen() {
             if (driving) DrivingPad("Газ", true, throttle, state.connected, Modifier.width(104.dp).fillMaxHeight()) {
                 throttle = it; client.setInput(throttle, steering)
             }
-            if (showVideo) VideoPanel(Modifier.weight(1f).fillMaxHeight(), showSettings = !driving) { videoActive = it }
+            if (showVideo) key(host.trim(), controlPort) {
+                // A different control target owns a fresh video session. Dispose
+                // the previous stream/view before showing another car's camera.
+                VideoPanel(carHost = host.trim(), modifier = Modifier.weight(1f).fillMaxHeight(), showSettings = !driving) { videoActive = it }
+            }
             else if (driving) Text("Газ слева, руль справа.\nОтпусти палец для возврата в нейтраль.", Modifier.weight(1f))
             if (driving) DrivingPad("Руль", false, steering, state.connected, Modifier.width(160.dp).fillMaxHeight()) {
                 steering = it; client.setInput(throttle, steering)

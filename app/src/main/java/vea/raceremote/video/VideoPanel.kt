@@ -18,11 +18,11 @@ import androidx.lifecycle.LifecycleEventObserver
 import okhttp3.OkHttpClient
 
 @Composable
-fun VideoPanel(modifier: Modifier = Modifier, showSettings: Boolean = true, onActiveChanged: (Boolean) -> Unit) {
+fun VideoPanel(carHost: String, modifier: Modifier = Modifier, showSettings: Boolean = true, onActiveChanged: (Boolean) -> Unit) {
     val context = LocalContext.current
     val lifecycle = LocalLifecycleOwner.current.lifecycle
     val activeCallback by rememberUpdatedState(onActiveChanged)
-    var url by rememberSaveable { mutableStateOf("http://192.168.4.1:81/stream") }
+    var url by rememberSaveable { mutableStateOf("http://$carHost:81/stream") }
     var message by remember { mutableStateOf("Видео выключено") }
     var active by remember { mutableStateOf(false) }
     val http = remember { OkHttpClient() }

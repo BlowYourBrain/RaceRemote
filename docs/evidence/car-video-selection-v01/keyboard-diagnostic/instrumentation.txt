@@ -1,0 +1,102 @@
+INSTRUMENTATION_STATUS: class=vea.raceremote.VideoControlIsolationTest
+INSTRUMENTATION_STATUS: current=1
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=5
+INSTRUMENTATION_STATUS: stream=
+vea.raceremote.VideoControlIsolationTest:
+INSTRUMENTATION_STATUS: test=unavailableVideoDoesNotStopControlAndBackgroundStopsBoth
+INSTRUMENTATION_STATUS_CODE: 1
+INSTRUMENTATION_STATUS: class=vea.raceremote.VideoControlIsolationTest
+INSTRUMENTATION_STATUS: current=1
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=5
+INSTRUMENTATION_STATUS: stream=.
+INSTRUMENTATION_STATUS: test=unavailableVideoDoesNotStopControlAndBackgroundStopsBoth
+INSTRUMENTATION_STATUS_CODE: 0
+INSTRUMENTATION_STATUS: class=vea.raceremote.VideoControlIsolationTest
+INSTRUMENTATION_STATUS: current=2
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=5
+INSTRUMENTATION_STATUS: stream=
+INSTRUMENTATION_STATUS: test=repeatedCaptureTimesOutVideoWhileControlContinuesAndReconnectStartsFresh
+INSTRUMENTATION_STATUS_CODE: 1
+INSTRUMENTATION_STATUS: class=vea.raceremote.VideoControlIsolationTest
+INSTRUMENTATION_STATUS: current=2
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=5
+INSTRUMENTATION_STATUS: stream=.
+INSTRUMENTATION_STATUS: test=repeatedCaptureTimesOutVideoWhileControlContinuesAndReconnectStartsFresh
+INSTRUMENTATION_STATUS_CODE: 0
+INSTRUMENTATION_STATUS: class=vea.raceremote.CarVideoSelectionTest
+INSTRUMENTATION_STATUS: current=3
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=5
+INSTRUMENTATION_STATUS: stream=
+vea.raceremote.CarVideoSelectionTest:
+INSTRUMENTATION_STATUS: test=changingCarClearsPreviousVideoAndRequiresExplicitRestart
+INSTRUMENTATION_STATUS_CODE: 1
+INSTRUMENTATION_STATUS: class=vea.raceremote.CarVideoSelectionTest
+INSTRUMENTATION_STATUS: current=3
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=5
+INSTRUMENTATION_STATUS: stack=androidx.compose.ui.test.ComposeTimeoutException: Condition still not satisfied after 5000 ms
+	at androidx.compose.ui.test.AndroidComposeUiTestEnvironment$AndroidComposeUiTestImpl.waitUntil(ComposeUiTest.android.kt:412)
+	at androidx.compose.ui.test.junit4.AndroidComposeTestRule.waitUntil(AndroidComposeTestRule.android.kt:182)
+	at vea.raceremote.CarVideoSelectionTest.awaitPixel(CarVideoSelectionTest.kt:88)
+	at vea.raceremote.CarVideoSelectionTest.changingCarClearsPreviousVideoAndRequiresExplicitRestart(CarVideoSelectionTest.kt:61)
+
+INSTRUMENTATION_STATUS: stream=
+Error in changingCarClearsPreviousVideoAndRequiresExplicitRestart(vea.raceremote.CarVideoSelectionTest):
+androidx.compose.ui.test.ComposeTimeoutException: Condition still not satisfied after 5000 ms
+	at androidx.compose.ui.test.AndroidComposeUiTestEnvironment$AndroidComposeUiTestImpl.waitUntil(ComposeUiTest.android.kt:412)
+	at androidx.compose.ui.test.junit4.AndroidComposeTestRule.waitUntil(AndroidComposeTestRule.android.kt:182)
+	at vea.raceremote.CarVideoSelectionTest.awaitPixel(CarVideoSelectionTest.kt:88)
+	at vea.raceremote.CarVideoSelectionTest.changingCarClearsPreviousVideoAndRequiresExplicitRestart(CarVideoSelectionTest.kt:61)
+
+INSTRUMENTATION_STATUS: test=changingCarClearsPreviousVideoAndRequiresExplicitRestart
+INSTRUMENTATION_STATUS_CODE: -2
+INSTRUMENTATION_STATUS: class=vea.raceremote.DrivingModeTest
+INSTRUMENTATION_STATUS: current=4
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=5
+INSTRUMENTATION_STATUS: stream=
+vea.raceremote.DrivingModeTest:
+INSTRUMENTATION_STATUS: test=backgroundDuringDragDoesNotResumeControl
+INSTRUMENTATION_STATUS_CODE: 1
+INSTRUMENTATION_STATUS: class=vea.raceremote.DrivingModeTest
+INSTRUMENTATION_STATUS: current=4
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=5
+INSTRUMENTATION_STATUS: stream=.
+INSTRUMENTATION_STATUS: test=backgroundDuringDragDoesNotResumeControl
+INSTRUMENTATION_STATUS_CODE: 0
+INSTRUMENTATION_STATUS: class=vea.raceremote.DrivingModeTest
+INSTRUMENTATION_STATUS: current=5
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=5
+INSTRUMENTATION_STATUS: stream=
+INSTRUMENTATION_STATUS: test=twoThumbsCancelAndVideoSurviveModeChanges
+INSTRUMENTATION_STATUS_CODE: 1
+INSTRUMENTATION_STATUS: class=vea.raceremote.DrivingModeTest
+INSTRUMENTATION_STATUS: current=5
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=5
+INSTRUMENTATION_STATUS: stream=.
+INSTRUMENTATION_STATUS: test=twoThumbsCancelAndVideoSurviveModeChanges
+INSTRUMENTATION_STATUS_CODE: 0
+INSTRUMENTATION_RESULT: stream=
+
+Time: 24,18
+There was 1 failure:
+1) changingCarClearsPreviousVideoAndRequiresExplicitRestart(vea.raceremote.CarVideoSelectionTest)
+androidx.compose.ui.test.ComposeTimeoutException: Condition still not satisfied after 5000 ms
+	at androidx.compose.ui.test.AndroidComposeUiTestEnvironment$AndroidComposeUiTestImpl.waitUntil(ComposeUiTest.android.kt:412)
+	at androidx.compose.ui.test.junit4.AndroidComposeTestRule.waitUntil(AndroidComposeTestRule.android.kt:182)
+	at vea.raceremote.CarVideoSelectionTest.awaitPixel(CarVideoSelectionTest.kt:88)
+	at vea.raceremote.CarVideoSelectionTest.changingCarClearsPreviousVideoAndRequiresExplicitRestart(CarVideoSelectionTest.kt:61)
+
+FAILURES!!!
+Tests run: 5,  Failures: 1
+
+
+INSTRUMENTATION_CODE: -1

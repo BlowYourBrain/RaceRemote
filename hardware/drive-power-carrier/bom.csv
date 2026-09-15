@@ -1,0 +1,26 @@
+reference,value,footprint,side,mpn_reference,status
+C1,100n / 25V,RaceRemote_Motor:C_0805,B,,Candidate; not purchased
+C2,470u / 16V,RaceRemote_Motor:CP_D8_P3.5,F,16ZLH470MEFC8X11.5,Candidate; not purchased
+C3,4.7u / 10V X7R,RaceRemote_DrivePower:C_0805_C3,B,,Candidate; not purchased
+C4,4.7u / 10V X7R,RaceRemote_DrivePower:C_0805_C4,B,,Candidate; not purchased
+C5,1u / 10V X7R,RaceRemote_DrivePower:C_0805_C5,B,,Candidate; not purchased
+C6,1u / 10V X7R,RaceRemote_DrivePower:C_0805_C6,B,,Candidate; not purchased
+H1,CMD_FI,RaceRemote_Motor:WirePad_1mm,F,,Integral PCB solder pad; not purchased connector
+H2,CMD_BI,RaceRemote_Motor:WirePad_1mm,F,,Integral PCB solder pad; not purchased connector
+H3,DRIVE_GND,RaceRemote_Motor:WirePad_1mm,F,,Integral PCB solder pad; not purchased connector
+H4,VM,RaceRemote_Motor:WirePad_1mm,F,,Integral PCB solder pad; not purchased connector
+H5,DRIVE_GND,RaceRemote_Motor:WirePad_1mm,F,,Integral PCB solder pad; not purchased connector
+H6,FO,RaceRemote_Motor:WirePad_1mm,F,,Integral PCB solder pad; not purchased connector
+H7,BO,RaceRemote_Motor:WirePad_1mm,F,,Integral PCB solder pad; not purchased connector
+H8,WAVE_5V,RaceRemote_DrivePower:WirePad_1mm_H8,F,,Integral PCB solder pad; not purchased connector
+H9,XIAO_BAT,RaceRemote_DrivePower:WirePad_1mm_H9,F,,Integral PCB solder pad; not purchased connector
+R1,100 / 1%,RaceRemote_Motor:R_0805,F,,Candidate; not purchased
+R2,100 / 1%,RaceRemote_Motor:R_0805,F,,Candidate; not purchased
+R3,10k / 1%,RaceRemote_Motor:R_0805,F,,Candidate; not purchased
+R4,10k / 1%,RaceRemote_Motor:R_0805,F,,Candidate; not purchased
+R5,23.2k / 0.1%,RaceRemote_DrivePower:R_0805_R5,B,,Candidate; not purchased
+R6,10k / 0.1%,RaceRemote_DrivePower:R_0805_R6,B,,Candidate; not purchased
+R7,360 / 1% / 0.25W,RaceRemote_DrivePower:R_1206_R7,F,,Candidate; not purchased
+U1,TA6586 DIP8,RaceRemote_Motor:TA6586_DIP8,F,TA6586,Existing inventory
+U2,TPS73701DRBR,RaceRemote_DrivePower:TPS73701_DRB_3x3_EP_U2,B,TPS73701DRBR,Candidate; not purchased
+U3,MAX40200AUK+T,RaceRemote_DrivePower:SOT23_5_Provisional_U3,B,MAX40200AUK+T,Candidate; not purchased

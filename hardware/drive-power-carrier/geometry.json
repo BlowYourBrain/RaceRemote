@@ -1,0 +1,706 @@
+{
+  "board_size_mm": [
+    30,
+    18,
+    1.6
+  ],
+  "new_component_positions": {
+    "U2": {
+      "value": "TPS73701DRBR",
+      "center_mm": [
+        20.5,
+        11
+      ],
+      "side": "B",
+      "body_mm": [
+        3.1,
+        3.1
+      ],
+      "height_reserve_mm": 1.05,
+      "vertical": false
+    },
+    "U3": {
+      "value": "MAX40200AUK+T",
+      "center_mm": [
+        24.5,
+        10.8
+      ],
+      "side": "B",
+      "body_mm": [
+        3.2,
+        3.2
+      ],
+      "height_reserve_mm": 1.5,
+      "vertical": false
+    },
+    "R5": {
+      "value": "23.2k / 0.1%",
+      "center_mm": [
+        23,
+        15.6
+      ],
+      "side": "B",
+      "body_mm": [
+        1.25,
+        2
+      ],
+      "height_reserve_mm": 0.9,
+      "vertical": true
+    },
+    "R6": {
+      "value": "10k / 0.1%",
+      "center_mm": [
+        25,
+        15.6
+      ],
+      "side": "B",
+      "body_mm": [
+        1.25,
+        2
+      ],
+      "height_reserve_mm": 0.9,
+      "vertical": true
+    },
+    "R7": {
+      "value": "360 / 1% / 0.25W",
+      "center_mm": [
+        19.7,
+        16
+      ],
+      "side": "F",
+      "body_mm": [
+        3.2,
+        1.6
+      ],
+      "height_reserve_mm": 0.9,
+      "vertical": false
+    },
+    "C3": {
+      "value": "4.7u / 10V X7R",
+      "center_mm": [
+        19,
+        4.2
+      ],
+      "side": "B",
+      "body_mm": [
+        2,
+        1.25
+      ],
+      "height_reserve_mm": 0.9,
+      "vertical": false
+    },
+    "C4": {
+      "value": "4.7u / 10V X7R",
+      "center_mm": [
+        19.3,
+        15.4
+      ],
+      "side": "B",
+      "body_mm": [
+        2,
+        1.25
+      ],
+      "height_reserve_mm": 0.9,
+      "vertical": false
+    },
+    "C5": {
+      "value": "1u / 10V X7R",
+      "center_mm": [
+        23,
+        7.9
+      ],
+      "side": "B",
+      "body_mm": [
+        2,
+        1.25
+      ],
+      "height_reserve_mm": 0.9,
+      "vertical": false
+    },
+    "C6": {
+      "value": "1u / 10V X7R",
+      "center_mm": [
+        27.8,
+        6.5
+      ],
+      "side": "B",
+      "body_mm": [
+        1.25,
+        2
+      ],
+      "height_reserve_mm": 0.9,
+      "vertical": true
+    },
+    "H8": {
+      "value": "WAVE_5V",
+      "center_mm": [
+        28,
+        2
+      ],
+      "side": "F",
+      "body_mm": [
+        0.6,
+        0.6
+      ],
+      "height_reserve_mm": 0.9,
+      "vertical": false
+    },
+    "H9": {
+      "value": "XIAO_BAT",
+      "center_mm": [
+        28,
+        9.5
+      ],
+      "side": "F",
+      "body_mm": [
+        0.6,
+        0.6
+      ],
+      "height_reserve_mm": 0.9,
+      "vertical": false
+    }
+  },
+  "removed_vm_segments": [
+    [
+      [
+        21.25,
+        6.0
+      ],
+      [
+        21.25,
+        13.0
+      ]
+    ],
+    [
+      [
+        21.25,
+        13.0
+      ],
+      [
+        28.0,
+        13.0
+      ]
+    ]
+  ],
+  "proposed_min_clearance_mm": 0.15,
+  "thermal_vias": 4,
+  "thermal_via_drill_mm": 0.3,
+  "sot23_footprint_status": "provisional generic reserve; ADI 21-0057 / 90-0174 and PCN2571C not yet read",
+  "pads": [
+    {
+      "ref": "H9",
+      "pin": "1",
+      "net": "XIAO_BAT",
+      "xy_mm": [
+        28.0,
+        9.5
+      ]
+    },
+    {
+      "ref": "H8",
+      "pin": "1",
+      "net": "WAVE_5V",
+      "xy_mm": [
+        28.0,
+        2.0
+      ]
+    },
+    {
+      "ref": "C6",
+      "pin": "2",
+      "net": "DRIVE_GND",
+      "xy_mm": [
+        27.8,
+        7.45
+      ]
+    },
+    {
+      "ref": "C6",
+      "pin": "1",
+      "net": "XIAO_BAT",
+      "xy_mm": [
+        27.8,
+        5.55
+      ]
+    },
+    {
+      "ref": "C5",
+      "pin": "2",
+      "net": "DRIVE_GND",
+      "xy_mm": [
+        22.05,
+        7.9
+      ]
+    },
+    {
+      "ref": "C5",
+      "pin": "1",
+      "net": "LDO_4V",
+      "xy_mm": [
+        23.95,
+        7.9
+      ]
+    },
+    {
+      "ref": "C4",
+      "pin": "2",
+      "net": "DRIVE_GND",
+      "xy_mm": [
+        18.35,
+        15.4
+      ]
+    },
+    {
+      "ref": "C4",
+      "pin": "1",
+      "net": "LDO_4V",
+      "xy_mm": [
+        20.25,
+        15.4
+      ]
+    },
+    {
+      "ref": "C3",
+      "pin": "2",
+      "net": "DRIVE_GND",
+      "xy_mm": [
+        18.05,
+        4.2
+      ]
+    },
+    {
+      "ref": "C3",
+      "pin": "1",
+      "net": "WAVE_5V",
+      "xy_mm": [
+        19.95,
+        4.2
+      ]
+    },
+    {
+      "ref": "R7",
+      "pin": "2",
+      "net": "DRIVE_GND",
+      "xy_mm": [
+        21.1,
+        16.0
+      ]
+    },
+    {
+      "ref": "R7",
+      "pin": "1",
+      "net": "LDO_4V",
+      "xy_mm": [
+        18.3,
+        16.0
+      ]
+    },
+    {
+      "ref": "R6",
+      "pin": "2",
+      "net": "DRIVE_GND",
+      "xy_mm": [
+        25.0,
+        16.55
+      ]
+    },
+    {
+      "ref": "R6",
+      "pin": "1",
+      "net": "FB",
+      "xy_mm": [
+        25.0,
+        14.65
+      ]
+    },
+    {
+      "ref": "R5",
+      "pin": "2",
+      "net": "FB",
+      "xy_mm": [
+        23.0,
+        16.55
+      ]
+    },
+    {
+      "ref": "R5",
+      "pin": "1",
+      "net": "LDO_4V",
+      "xy_mm": [
+        23.0,
+        14.65
+      ]
+    },
+    {
+      "ref": "U3",
+      "pin": "5",
+      "net": "XIAO_BAT",
+      "xy_mm": [
+        23.2,
+        9.85
+      ]
+    },
+    {
+      "ref": "U3",
+      "pin": "4",
+      "net": "unconnected-(U3-NC-Pad4)",
+      "xy_mm": [
+        23.2,
+        11.75
+      ]
+    },
+    {
+      "ref": "U3",
+      "pin": "3",
+      "net": "LDO_4V",
+      "xy_mm": [
+        25.8,
+        11.75
+      ]
+    },
+    {
+      "ref": "U3",
+      "pin": "2",
+      "net": "DRIVE_GND",
+      "xy_mm": [
+        25.8,
+        10.8
+      ]
+    },
+    {
+      "ref": "U3",
+      "pin": "1",
+      "net": "LDO_4V",
+      "xy_mm": [
+        25.8,
+        9.85
+      ]
+    },
+    {
+      "ref": "U2",
+      "pin": "9",
+      "net": "DRIVE_GND",
+      "xy_mm": [
+        20.5,
+        11.0
+      ]
+    },
+    {
+      "ref": "U2",
+      "pin": "8",
+      "net": "WAVE_5V",
+      "xy_mm": [
+        19.1,
+        10.025
+      ]
+    },
+    {
+      "ref": "U2",
+      "pin": "7",
+      "net": "unconnected-(U2-NC-Pad7)",
+      "xy_mm": [
+        19.1,
+        10.675
+      ]
+    },
+    {
+      "ref": "U2",
+      "pin": "6",
+      "net": "unconnected-(U2-NC-Pad6)",
+      "xy_mm": [
+        19.1,
+        11.325
+      ]
+    },
+    {
+      "ref": "U2",
+      "pin": "5",
+      "net": "WAVE_5V",
+      "xy_mm": [
+        19.1,
+        11.975
+      ]
+    },
+    {
+      "ref": "U2",
+      "pin": "4",
+      "net": "DRIVE_GND",
+      "xy_mm": [
+        21.9,
+        11.975
+      ]
+    },
+    {
+      "ref": "U2",
+      "pin": "3",
+      "net": "FB",
+      "xy_mm": [
+        21.9,
+        11.325
+      ]
+    },
+    {
+      "ref": "U2",
+      "pin": "2",
+      "net": "unconnected-(U2-NC-Pad2)",
+      "xy_mm": [
+        21.9,
+        10.675
+      ]
+    },
+    {
+      "ref": "U2",
+      "pin": "1",
+      "net": "LDO_4V",
+      "xy_mm": [
+        21.9,
+        10.025
+      ]
+    },
+    {
+      "ref": "R4",
+      "pin": "1",
+      "net": "BI",
+      "xy_mm": [
+        4.15,
+        9.0
+      ]
+    },
+    {
+      "ref": "R4",
+      "pin": "2",
+      "net": "DRIVE_GND",
+      "xy_mm": [
+        6.05,
+        9.0
+      ]
+    },
+    {
+      "ref": "H2",
+      "pin": "1",
+      "net": "CMD_BI",
+      "xy_mm": [
+        1.8,
+        6.0
+      ]
+    },
+    {
+      "ref": "C2",
+      "pin": "1",
+      "net": "VM",
+      "xy_mm": [
+        21.25,
+        6.0
+      ]
+    },
+    {
+      "ref": "C2",
+      "pin": "2",
+      "net": "DRIVE_GND",
+      "xy_mm": [
+        24.75,
+        6.0
+      ]
+    },
+    {
+      "ref": "R3",
+      "pin": "1",
+      "net": "FI",
+      "xy_mm": [
+        9.78,
+        2.1
+      ]
+    },
+    {
+      "ref": "R3",
+      "pin": "2",
+      "net": "DRIVE_GND",
+      "xy_mm": [
+        11.68,
+        2.1
+      ]
+    },
+    {
+      "ref": "R2",
+      "pin": "1",
+      "net": "CMD_BI",
+      "xy_mm": [
+        4.05,
+        6.0
+      ]
+    },
+    {
+      "ref": "R2",
+      "pin": "2",
+      "net": "BI",
+      "xy_mm": [
+        5.95,
+        6.0
+      ]
+    },
+    {
+      "ref": "R1",
+      "pin": "1",
+      "net": "CMD_FI",
+      "xy_mm": [
+        4.05,
+        3.0
+      ]
+    },
+    {
+      "ref": "R1",
+      "pin": "2",
+      "net": "FI",
+      "xy_mm": [
+        5.95,
+        3.0
+      ]
+    },
+    {
+      "ref": "H4",
+      "pin": "1",
+      "net": "VM",
+      "xy_mm": [
+        28.0,
+        13.0
+      ]
+    },
+    {
+      "ref": "H7",
+      "pin": "1",
+      "net": "BO",
+      "xy_mm": [
+        2.0,
+        15.0
+      ]
+    },
+    {
+      "ref": "U1",
+      "pin": "1",
+      "net": "BI",
+      "xy_mm": [
+        8.19,
+        5.19
+      ]
+    },
+    {
+      "ref": "U1",
+      "pin": "2",
+      "net": "FI",
+      "xy_mm": [
+        10.73,
+        5.19
+      ]
+    },
+    {
+      "ref": "U1",
+      "pin": "3",
+      "net": "DRIVE_GND",
+      "xy_mm": [
+        13.27,
+        5.19
+      ]
+    },
+    {
+      "ref": "U1",
+      "pin": "4",
+      "net": "VM",
+      "xy_mm": [
+        15.81,
+        5.19
+      ]
+    },
+    {
+      "ref": "U1",
+      "pin": "5",
+      "net": "FO",
+      "xy_mm": [
+        15.81,
+        12.81
+      ]
+    },
+    {
+      "ref": "U1",
+      "pin": "6",
+      "net": "FO",
+      "xy_mm": [
+        13.27,
+        12.81
+      ]
+    },
+    {
+      "ref": "U1",
+      "pin": "7",
+      "net": "BO",
+      "xy_mm": [
+        10.73,
+        12.81
+      ]
+    },
+    {
+      "ref": "U1",
+      "pin": "8",
+      "net": "BO",
+      "xy_mm": [
+        8.19,
+        12.81
+      ]
+    },
+    {
+      "ref": "H3",
+      "pin": "1",
+      "net": "DRIVE_GND",
+      "xy_mm": [
+        2.0,
+        9.0
+      ]
+    },
+    {
+      "ref": "H6",
+      "pin": "1",
+      "net": "FO",
+      "xy_mm": [
+        2.0,
+        12.0
+      ]
+    },
+    {
+      "ref": "H5",
+      "pin": "1",
+      "net": "DRIVE_GND",
+      "xy_mm": [
+        28.0,
+        16.0
+      ]
+    },
+    {
+      "ref": "H1",
+      "pin": "1",
+      "net": "CMD_FI",
+      "xy_mm": [
+        1.8,
+        3.0
+      ]
+    },
+    {
+      "ref": "C1",
+      "pin": "1",
+      "net": "VM",
+      "xy_mm": [
+        15.49,
+        2.8
+      ]
+    },
+    {
+      "ref": "C1",
+      "pin": "2",
+      "net": "DRIVE_GND",
+      "xy_mm": [
+        13.59,
+        2.8
+      ]
+    }
+  ],
+  "physical_tests": false,
+  "fabrication_released": false
+}

@@ -258,3 +258,21 @@ docs/evidence/xiao-logic-power-v01/*.json text eol=crlf
 docs/evidence/xiao-logic-power-v01/*.xml text eol=crlf
 docs/evidence/xiao-logic-power-v02/*.json text eol=crlf
 docs/evidence/xiao-logic-power-v02/*.xml text eol=crlf
+
+tools/build_drive_power_carrier.py text eol=lf
+tools/verify_drive_power_carrier.py text eol=lf
+tools/check_drive_power_fit.py text eol=lf
+tools/build_drive_power_view.py text eol=lf
+hardware/drive-power-carrier/** text eol=crlf
+hardware/drive-power-carrier/*.md text eol=lf
+hardware/drive-power-carrier/*.pdf binary
+hardware/drive-power-carrier/*.kicad_pro text eol=lf
+cad/drive-power-carrier/*.stl binary
+cad/drive-power-carrier/*.step binary
+cad/drive-power-carrier/*.png binary
+cad/drive-power-carrier/*.html text eol=lf
+cad/drive-power-carrier/*.md text eol=lf
+docs/evidence/drive-power-carrier-v01/*.json text eol=crlf
+docs/evidence/drive-power-carrier-v01/summary.json text eol=lf
+docs/evidence/drive-power-carrier-v01/view.json text eol=lf
+docs/evidence/drive-power-carrier-v01/*.xml text eol=lf

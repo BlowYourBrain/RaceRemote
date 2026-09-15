@@ -1,0 +1,1 @@
+(fp_lib_table (version 7)(lib (name "RaceRemote_Motor")(type "KiCad")(uri "${KIPRJMOD}/../motor-carrier/RaceRemote_Motor.pretty")(options "")(descr "Existing motor carrier"))(lib (name "RaceRemote_DrivePower")(type "KiCad")(uri "${KIPRJMOD}/RaceRemote_DrivePower.pretty")(options "")(descr "Combined proposal footprints")))

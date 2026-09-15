@@ -1,0 +1,2703 @@
+{
+  "contract": "SERVO-POWER-HARNESS-01 v0.1",
+  "date": "2026-09-15",
+  "pose_mm": [
+    0,
+    3
+  ],
+  "routes": {
+    "VOUT": {
+      "source_pin": "5",
+      "source_net": "VOUT",
+      "color": [
+        0.85,
+        0.1,
+        0.1
+      ],
+      "points_mm": [
+        [
+          7.99,
+          48.1,
+          39.1
+        ],
+        [
+          7.99,
+          48.1,
+          40.3
+        ],
+        [
+          7.99,
+          44.3,
+          40.3
+        ],
+        [
+          48.4,
+          44.3,
+          40.3
+        ],
+        [
+          48.4,
+          76,
+          40.3
+        ],
+        [
+          47.5,
+          78,
+          40.3
+        ],
+        [
+          47.5,
+          92,
+          40.3
+        ],
+        [
+          47.5,
+          95,
+          19
+        ],
+        [
+          43.2,
+          89,
+          16
+        ],
+        [
+          42.2,
+          79,
+          14
+        ]
+      ],
+      "source_contact": "top of estimated existing header pin, soldered; no mating housing",
+      "radius_mm": 0.8,
+      "centerline_length_mm": 133.0284133549423,
+      "target": "approximate servo-side wiring point; no connector pin or splice assigned"
+    },
+    "GND": {
+      "source_pin": "2",
+      "source_net": "GND",
+      "color": [
+        0.15,
+        0.15,
+        0.16
+      ],
+      "points_mm": [
+        [
+          15.61,
+          48.1,
+          39.1
+        ],
+        [
+          15.61,
+          48.1,
+          42.1
+        ],
+        [
+          15.61,
+          46.2,
+          42.1
+        ],
+        [
+          49.0,
+          46.2,
+          42.1
+        ],
+        [
+          49.0,
+          94,
+          42.1
+        ],
+        [
+          49.0,
+          98,
+          17
+        ],
+        [
+          45.8,
+          90,
+          15
+        ],
+        [
+          45.8,
+          76.5,
+          15
+        ],
+        [
+          42.2,
+          76.5,
+          14
+        ]
+      ],
+      "source_contact": "top of estimated existing header pin, soldered; no mating housing",
+      "radius_mm": 0.8,
+      "centerline_length_mm": 137.5883728693375,
+      "target": "approximate servo-side wiring point; no connector pin or splice assigned"
+    }
+  },
+  "wire_obstacle_hits_mm3": {
+    "VOUT": {},
+    "GND": {}
+  },
+  "pair_intersection_mm3": 0.0,
+  "outside_cavity_mm3": {
+    "VOUT": 0.0,
+    "GND": 0.0
+  },
+  "straight_shortcut_hits_mm3": {
+    "VOUT": {
+      "cad/packaging-v05/servo-installed.stl": 0.068331,
+      "cad/packaging-v05/buck.stl": 12.916466,
+      "cad/packaging-v05/inputs/cover.stl": 6.022689,
+      "cad/packaging-v05/inputs/usb-base.stl": 8.030258,
+      "cad/motor-carrier-mount/screws.stl": 1.453004,
+      "cad/motor-carrier-mount/nuts.stl": 2.82394,
+      "cad/direct-logic-harness/tray.stl": 7.673191
+    },
+    "GND": {
+      "cad/packaging-v05/servo-installed.stl": 0.028745,
+      "cad/packaging-v05/buck.stl": 0.021892,
+      "cad/packaging-v05/inputs/cover.stl": 5.312392,
+      "cad/packaging-v05/inputs/usb-base.stl": 7.083191,
+      "cad/motor-carrier-mount/clamp.stl": 2.796009,
+      "cad/motor-carrier-mount/screws.stl": 3.385139,
+      "cad/direct-logic-harness/tray.stl": 9.662579,
+      "current-carrier-pcb": 0.859082
+    }
+  },
+  "service": {
+    "fixed_inventory": [
+      "cad/components/motor-installed.stl",
+      "cad/direct-logic-harness/5V.stl",
+      "cad/direct-logic-harness/GND.stl",
+      "cad/direct-logic-harness/tie-head-space.stl",
+      "cad/direct-logic-harness/tie-space.stl",
+      "cad/direct-logic-harness/tray.stl",
+      "cad/drive-power-carrier/C3.stl",
+      "cad/drive-power-carrier/C4.stl",
+      "cad/drive-power-carrier/C5.stl",
+      "cad/drive-power-carrier/C6.stl",
+      "cad/drive-power-carrier/R5.stl",
+      "cad/drive-power-carrier/R6.stl",
+      "cad/drive-power-carrier/R7.stl",
+      "cad/drive-power-carrier/U2.stl",
+      "cad/drive-power-carrier/U3.stl",
+      "cad/harness-guides/cap.stl",
+      "cad/motor-carrier-mount/clamp.stl",
+      "cad/motor-carrier-mount/nuts.stl",
+      "cad/motor-carrier-mount/pads.stl",
+      "cad/motor-carrier-mount/screws.stl",
+      "cad/motor-carrier/C1.stl",
+      "cad/motor-carrier/C2.stl",
+      "cad/motor-carrier/C2lead1.stl",
+      "cad/motor-carrier/C2lead2.stl",
+      "cad/motor-carrier/R1.stl",
+      "cad/motor-carrier/R2.stl",
+      "cad/motor-carrier/R3.stl",
+      "cad/motor-carrier/R4.stl",
+      "cad/motor-carrier/lead1.stl",
+      "cad/motor-carrier/lead2.stl",
+      "cad/motor-carrier/lead3.stl",
+      "cad/motor-carrier/lead4.stl",
+      "cad/motor-carrier/lead5.stl",
+      "cad/motor-carrier/lead6.stl",
+      "cad/motor-carrier/lead7.stl",
+      "cad/motor-carrier/lead8.stl",
+      "cad/motor-carrier/ta6586.stl",
+      "cad/motor-carrier/wire-antenna.stl",
+      "cad/motor-harness/BO.stl",
+      "cad/motor-harness/FO.stl",
+      "cad/motor-harness/terminal-A.stl",
+      "cad/motor-harness/terminal-B.stl",
+      "cad/packaging-v05/antenna.stl",
+      "cad/packaging-v05/antenna_support.stl",
+      "cad/packaging-v05/buck.stl",
+      "cad/packaging-v05/charge.stl",
+      "cad/packaging-v05/frame-relief-proposal.stl",
+      "cad/packaging-v05/inputs/adjustable-main_fasteners.stl",
+      "cad/packaging-v05/inputs/adjustable-support.stl",
+      "cad/packaging-v05/inputs/cover.stl",
+      "cad/packaging-v05/inputs/usb-base.stl",
+      "cad/packaging-v05/inputs/usb-components.stl",
+      "cad/packaging-v05/inputs/usb-connector.stl",
+      "cad/packaging-v05/inputs/usb-pcb.stl",
+      "cad/packaging-v05/servo-installed.stl",
+      "cad/xiao-mount/screws.stl",
+      "cad/xiao-mount/stage_screws.stl",
+      "cad/xiao-power-harness/BAT.stl",
+      "cad/xiao-power-harness/cradle.stl",
+      "cad/xiao-return-h10/GND.stl",
+      "control-BI",
+      "control-FI",
+      "current-carrier-pcb",
+      "power-wire-GND",
+      "power-wire-VOUT",
+      "servo-signal",
+      "wire-power",
+      "xiao-0",
+      "xiao-1",
+      "xiao-10",
+      "xiao-100",
+      "xiao-101",
+      "xiao-102",
+      "xiao-11",
+      "xiao-12",
+      "xiao-13",
+      "xiao-14",
+      "xiao-15",
+      "xiao-16",
+      "xiao-17",
+      "xiao-18",
+      "xiao-19",
+      "xiao-2",
+      "xiao-20",
+      "xiao-21",
+      "xiao-22",
+      "xiao-23",
+      "xiao-24",
+      "xiao-25",
+      "xiao-26",
+      "xiao-27",
+      "xiao-28",
+      "xiao-29",
+      "xiao-3",
+      "xiao-30",
+      "xiao-31",
+      "xiao-32",
+      "xiao-33",
+      "xiao-34",
+      "xiao-35",
+      "xiao-36",
+      "xiao-37",
+      "xiao-38",
+      "xiao-39",
+      "xiao-4",
+      "xiao-40",
+      "xiao-41",
+      "xiao-42",
+      "xiao-43",
+      "xiao-44",
+      "xiao-45",
+      "xiao-46",
+      "xiao-47",
+      "xiao-48",
+      "xiao-49",
+      "xiao-5",
+      "xiao-50",
+      "xiao-51",
+      "xiao-52",
+      "xiao-53",
+      "xiao-54",
+      "xiao-55",
+      "xiao-56",
+      "xiao-57",
+      "xiao-58",
+      "xiao-59",
+      "xiao-6",
+      "xiao-60",
+      "xiao-61",
+      "xiao-62",
+      "xiao-63",
+      "xiao-64",
+      "xiao-65",
+      "xiao-66",
+      "xiao-67",
+      "xiao-68",
+      "xiao-69",
+      "xiao-7",
+      "xiao-70",
+      "xiao-71",
+      "xiao-72",
+      "xiao-73",
+      "xiao-74",
+      "xiao-75",
+      "xiao-76",
+      "xiao-77",
+      "xiao-78",
+      "xiao-79",
+      "xiao-8",
+      "xiao-80",
+      "xiao-81",
+      "xiao-82",
+      "xiao-83",
+      "xiao-84",
+      "xiao-85",
+      "xiao-86",
+      "xiao-87",
+      "xiao-88",
+      "xiao-89",
+      "xiao-9",
+      "xiao-90",
+      "xiao-91",
+      "xiao-92",
+      "xiao-93",
+      "xiao-94",
+      "xiao-95",
+      "xiao-96",
+      "xiao-97",
+      "xiao-98",
+      "xiao-99"
+    ],
+    "fixed_solid_count": 170,
+    "battery_sweep_hits_mm3": {},
+    "battery_continuous_exit_mm": [
+      -50,
+      0,
+      0
+    ],
+    "body_samples": [
+      {
+        "offset_mm": [
+          0,
+          0,
+          0.0
+        ],
+        "hits_mm3": {}
+      },
+      {
+        "offset_mm": [
+          0,
+          0,
+          0.25
+        ],
+        "hits_mm3": {}
+      },
+      {
+        "offset_mm": [
+          0,
+          0,
+          0.5
+        ],
+        "hits_mm3": {}
+      },
+      {
+        "offset_mm": [
+          0,
+          0,
+          0.75
+        ],
+        "hits_mm3": {}
+      },
+      {
+        "offset_mm": [
+          0,
+          0,
+          1.0
+        ],
+        "hits_mm3": {}
+      },
+      {
+        "offset_mm": [
+          0,
+          0,
+          1.25
+        ],
+        "hits_mm3": {}
+      },
+      {
+        "offset_mm": [
+          0,
+          0,
+          1.5
+        ],
+        "hits_mm3": {}
+      },
+      {
+        "offset_mm": [
+          0,
+          0,
+          1.75
+        ],
+        "hits_mm3": {}
+      },
+      {
+        "offset_mm": [
+          0,
+          0,
+          2.0
+        ],
+        "hits_mm3": {}
+      },
+      {
+        "offset_mm": [
+          0.25,
+          0,
+          2
+        ],
+        "hits_mm3": {}
+      },
+      {
+        "offset_mm": [
+          0.5,
+          0,
+          2
+        ],
+        "hits_mm3": {}
+      },
+      {
+        "offset_mm": [
+          0.75,
+          0,
+          2
+        ],
+        "hits_mm3": {}
+      },
+      {
+        "offset_mm": [
+          1.0,
+          0,
+          2
+        ],
+        "hits_mm3": {}
+      },
+      {
+        "offset_mm": [
+          1,
+          0,
+          2.25
+        ],
+        "hits_mm3": {}
+      },
+      {
+        "offset_mm": [
+          1,
+          0,
+          2.5
+        ],
+        "hits_mm3": {}
+      },
+      {
+        "offset_mm": [
+          1,
+          0,
+          2.75
+        ],
+        "hits_mm3": {}
+      },
+      {
+        "offset_mm": [
+          1,
+          0,
+          3.0
+        ],
+        "hits_mm3": {}
+      },
+      {
+        "offset_mm": [
+          1,
+          0,
+          3.25
+        ],
+        "hits_mm3": {}
+      },
+      {
+        "offset_mm": [
+          1,
+          0,
+          3.5
+        ],
+        "hits_mm3": {}
+      },
+      {
+        "offset_mm": [
+          1,
+          0,
+          3.75
+        ],
+        "hits_mm3": {}
+      },
+      {
+        "offset_mm": [
+          1,
+          0,
+          4.0
+        ],
+        "hits_mm3": {}
+      },
+      {
+        "offset_mm": [
+          1,
+          0,
+          4.25
+        ],
+        "hits_mm3": {}
+      },
+      {
+        "offset_mm": [
+          1,
+          0,
+          4.5
+        ],
+        "hits_mm3": {}
+      },
+      {
+        "offset_mm": [
+          1,
+          0,
+          4.75
+        ],
+        "hits_mm3": {}
+      },
+      {
+        "offset_mm": [
+          1,
+          0,
+          5.0
+        ],
+        "hits_mm3": {}
+      },
+      {
+        "offset_mm": [
+          1,
+          0,
+          5.25
+        ],
+        "hits_mm3": {}
+      },
+      {
+        "offset_mm": [
+          1,
+          0,
+          5.5
+        ],
+        "hits_mm3": {}
+      },
+      {
+        "offset_mm": [
+          1,
+          0,
+          5.75
+        ],
+        "hits_mm3": {}
+      },
+      {
+        "offset_mm": [
+          1,
+          0,
+          6.0
+        ],
+        "hits_mm3": {}
+      },
+      {
+        "offset_mm": [
+          1,
+          0,
+          6.25
+        ],
+        "hits_mm3": {}
+      },
+      {
+        "offset_mm": [
+          1,
+          0,
+          6.5
+        ],
+        "hits_mm3": {}
+      },
+      {
+        "offset_mm": [
+          1,
+          0,
+          6.75
+        ],
+        "hits_mm3": {}
+      },
+      {
+        "offset_mm": [
+          1,
+          0,
+          7.0
+        ],
+        "hits_mm3": {}
+      },
+      {
+        "offset_mm": [
+          1,
+          0,
+          7.25
+        ],
+        "hits_mm3": {}
+      },
+      {
+        "offset_mm": [
+          1,
+          0,
+          7.5
+        ],
+        "hits_mm3": {}
+      },
+      {
+        "offset_mm": [
+          1,
+          0,
+          7.75
+        ],
+        "hits_mm3": {}
+      },
+      {
+        "offset_mm": [
+          1,
+          0,
+          8.0
+        ],
+        "hits_mm3": {}
+      },
+      {
+        "offset_mm": [
+          1,
+          0,
+          8.25
+        ],
+        "hits_mm3": {}
+      },
+      {
+        "offset_mm": [
+          1,
+          0,
+          8.5
+        ],
+        "hits_mm3": {}
+      },
+      {
+        "offset_mm": [
+          1,
+          0,
+          8.75
+        ],
+        "hits_mm3": {}
+      },
+      {
+        "offset_mm": [
+          1,
+          0,
+          9.0
+        ],
+        "hits_mm3": {}
+      },
+      {
+        "offset_mm": [
+          1,
+          0,
+          9.25
+        ],
+        "hits_mm3": {}
+      },
+      {
+        "offset_mm": [
+          1,
+          0,
+          9.5
+        ],
+        "hits_mm3": {}
+      },
+      {
+        "offset_mm": [
+          1,
+          0,
+          9.75
+        ],
+        "hits_mm3": {}
+      },
+      {
+        "offset_mm": [
+          1,
+          0,
+          10.0
+        ],
+        "hits_mm3": {}
+      },
+      {
+        "offset_mm": [
+          1,
+          0,
+          10.25
+        ],
+        "hits_mm3": {}
+      },
+      {
+        "offset_mm": [
+          1,
+          0,
+          10.5
+        ],
+        "hits_mm3": {}
+      },
+      {
+        "offset_mm": [
+          1,
+          0,
+          10.75
+        ],
+        "hits_mm3": {}
+      },
+      {
+        "offset_mm": [
+          1,
+          0,
+          11.0
+        ],
+        "hits_mm3": {}
+      },
+      {
+        "offset_mm": [
+          1,
+          0,
+          11.25
+        ],
+        "hits_mm3": {}
+      },
+      {
+        "offset_mm": [
+          1,
+          0,
+          11.5
+        ],
+        "hits_mm3": {}
+      },
+      {
+        "offset_mm": [
+          1,
+          0,
+          11.75
+        ],
+        "hits_mm3": {}
+      },
+      {
+        "offset_mm": [
+          1,
+          0,
+          12.0
+        ],
+        "hits_mm3": {}
+      },
+      {
+        "offset_mm": [
+          1,
+          0,
+          12.25
+        ],
+        "hits_mm3": {}
+      },
+      {
+        "offset_mm": [
+          1,
+          0,
+          12.5
+        ],
+        "hits_mm3": {}
+      },
+      {
+        "offset_mm": [
+          1,
+          0,
+          12.75
+        ],
+        "hits_mm3": {}
+      },
+      {
+        "offset_mm": [
+          1,
+          0,
+          13.0
+        ],
+        "hits_mm3": {}
+      },
+      {
+        "offset_mm": [
+          1,
+          0,
+          13.25
+        ],
+        "hits_mm3": {}
+      },
+      {
+        "offset_mm": [
+          1,
+          0,
+          13.5
+        ],
+        "hits_mm3": {}
+      },
+      {
+        "offset_mm": [
+          1,
+          0,
+          13.75
+        ],
+        "hits_mm3": {}
+      },
+      {
+        "offset_mm": [
+          1,
+          0,
+          14.0
+        ],
+        "hits_mm3": {}
+      },
+      {
+        "offset_mm": [
+          1,
+          0,
+          14.25
+        ],
+        "hits_mm3": {}
+      },
+      {
+        "offset_mm": [
+          1,
+          0,
+          14.5
+        ],
+        "hits_mm3": {}
+      },
+      {
+        "offset_mm": [
+          1,
+          0,
+          14.75
+        ],
+        "hits_mm3": {}
+      },
+      {
+        "offset_mm": [
+          1,
+          0,
+          15.0
+        ],
+        "hits_mm3": {}
+      },
+      {
+        "offset_mm": [
+          1,
+          0,
+          15.25
+        ],
+        "hits_mm3": {}
+      },
+      {
+        "offset_mm": [
+          1,
+          0,
+          15.5
+        ],
+        "hits_mm3": {}
+      },
+      {
+        "offset_mm": [
+          1,
+          0,
+          15.75
+        ],
+        "hits_mm3": {}
+      },
+      {
+        "offset_mm": [
+          1,
+          0,
+          16.0
+        ],
+        "hits_mm3": {}
+      },
+      {
+        "offset_mm": [
+          1,
+          0,
+          16.25
+        ],
+        "hits_mm3": {}
+      },
+      {
+        "offset_mm": [
+          1,
+          0,
+          16.5
+        ],
+        "hits_mm3": {}
+      },
+      {
+        "offset_mm": [
+          1,
+          0,
+          16.75
+        ],
+        "hits_mm3": {}
+      },
+      {
+        "offset_mm": [
+          1,
+          0,
+          17.0
+        ],
+        "hits_mm3": {}
+      },
+      {
+        "offset_mm": [
+          1,
+          0,
+          17.25
+        ],
+        "hits_mm3": {}
+      },
+      {
+        "offset_mm": [
+          1,
+          0,
+          17.5
+        ],
+        "hits_mm3": {}
+      },
+      {
+        "offset_mm": [
+          1,
+          0,
+          17.75
+        ],
+        "hits_mm3": {}
+      },
+      {
+        "offset_mm": [
+          1,
+          0,
+          18.0
+        ],
+        "hits_mm3": {}
+      },
+      {
+        "offset_mm": [
+          1,
+          0,
+          18.25
+        ],
+        "hits_mm3": {}
+      },
+      {
+        "offset_mm": [
+          1,
+          0,
+          18.5
+        ],
+        "hits_mm3": {}
+      },
+      {
+        "offset_mm": [
+          1,
+          0,
+          18.75
+        ],
+        "hits_mm3": {}
+      },
+      {
+        "offset_mm": [
+          1,
+          0,
+          19.0
+        ],
+        "hits_mm3": {}
+      },
+      {
+        "offset_mm": [
+          1,
+          0,
+          19.25
+        ],
+        "hits_mm3": {}
+      },
+      {
+        "offset_mm": [
+          1,
+          0,
+          19.5
+        ],
+        "hits_mm3": {}
+      },
+      {
+        "offset_mm": [
+          1,
+          0,
+          19.75
+        ],
+        "hits_mm3": {}
+      },
+      {
+        "offset_mm": [
+          1,
+          0,
+          20.0
+        ],
+        "hits_mm3": {}
+      },
+      {
+        "offset_mm": [
+          1,
+          0,
+          20.25
+        ],
+        "hits_mm3": {}
+      },
+      {
+        "offset_mm": [
+          1,
+          0,
+          20.5
+        ],
+        "hits_mm3": {}
+      },
+      {
+        "offset_mm": [
+          1,
+          0,
+          20.75
+        ],
+        "hits_mm3": {}
+      },
+      {
+        "offset_mm": [
+          1,
+          0,
+          21.0
+        ],
+        "hits_mm3": {}
+      },
+      {
+        "offset_mm": [
+          1,
+          0,
+          21.25
+        ],
+        "hits_mm3": {}
+      },
+      {
+        "offset_mm": [
+          1,
+          0,
+          21.5
+        ],
+        "hits_mm3": {}
+      },
+      {
+        "offset_mm": [
+          1,
+          0,
+          21.75
+        ],
+        "hits_mm3": {}
+      },
+      {
+        "offset_mm": [
+          1,
+          0,
+          22.0
+        ],
+        "hits_mm3": {}
+      },
+      {
+        "offset_mm": [
+          1,
+          0,
+          22.25
+        ],
+        "hits_mm3": {}
+      },
+      {
+        "offset_mm": [
+          1,
+          0,
+          22.5
+        ],
+        "hits_mm3": {}
+      },
+      {
+        "offset_mm": [
+          1,
+          0,
+          22.75
+        ],
+        "hits_mm3": {}
+      },
+      {
+        "offset_mm": [
+          1,
+          0,
+          23.0
+        ],
+        "hits_mm3": {}
+      },
+      {
+        "offset_mm": [
+          1,
+          0,
+          23.25
+        ],
+        "hits_mm3": {}
+      },
+      {
+        "offset_mm": [
+          1,
+          0,
+          23.5
+        ],
+        "hits_mm3": {}
+      },
+      {
+        "offset_mm": [
+          1,
+          0,
+          23.75
+        ],
+        "hits_mm3": {}
+      },
+      {
+        "offset_mm": [
+          1,
+          0,
+          24.0
+        ],
+        "hits_mm3": {}
+      },
+      {
+        "offset_mm": [
+          1,
+          0,
+          24.25
+        ],
+        "hits_mm3": {}
+      },
+      {
+        "offset_mm": [
+          1,
+          0,
+          24.5
+        ],
+        "hits_mm3": {}
+      },
+      {
+        "offset_mm": [
+          1,
+          0,
+          24.75
+        ],
+        "hits_mm3": {}
+      },
+      {
+        "offset_mm": [
+          1,
+          0,
+          25.0
+        ],
+        "hits_mm3": {}
+      },
+      {
+        "offset_mm": [
+          1,
+          0,
+          25.25
+        ],
+        "hits_mm3": {}
+      },
+      {
+        "offset_mm": [
+          1,
+          0,
+          25.5
+        ],
+        "hits_mm3": {}
+      },
+      {
+        "offset_mm": [
+          1,
+          0,
+          25.75
+        ],
+        "hits_mm3": {}
+      },
+      {
+        "offset_mm": [
+          1,
+          0,
+          26.0
+        ],
+        "hits_mm3": {}
+      },
+      {
+        "offset_mm": [
+          1,
+          0,
+          26.25
+        ],
+        "hits_mm3": {}
+      },
+      {
+        "offset_mm": [
+          1,
+          0,
+          26.5
+        ],
+        "hits_mm3": {}
+      },
+      {
+        "offset_mm": [
+          1,
+          0,
+          26.75
+        ],
+        "hits_mm3": {}
+      },
+      {
+        "offset_mm": [
+          1,
+          0,
+          27.0
+        ],
+        "hits_mm3": {}
+      },
+      {
+        "offset_mm": [
+          1,
+          0,
+          27.25
+        ],
+        "hits_mm3": {}
+      },
+      {
+        "offset_mm": [
+          1,
+          0,
+          27.5
+        ],
+        "hits_mm3": {}
+      },
+      {
+        "offset_mm": [
+          1,
+          0,
+          27.75
+        ],
+        "hits_mm3": {}
+      },
+      {
+        "offset_mm": [
+          1,
+          0,
+          28.0
+        ],
+        "hits_mm3": {}
+      },
+      {
+        "offset_mm": [
+          1,
+          0,
+          28.25
+        ],
+        "hits_mm3": {}
+      },
+      {
+        "offset_mm": [
+          1,
+          0,
+          28.5
+        ],
+        "hits_mm3": {}
+      },
+      {
+        "offset_mm": [
+          1,
+          0,
+          28.75
+        ],
+        "hits_mm3": {}
+      },
+      {
+        "offset_mm": [
+          1,
+          0,
+          29.0
+        ],
+        "hits_mm3": {}
+      },
+      {
+        "offset_mm": [
+          1,
+          0,
+          29.25
+        ],
+        "hits_mm3": {}
+      },
+      {
+        "offset_mm": [
+          1,
+          0,
+          29.5
+        ],
+        "hits_mm3": {}
+      },
+      {
+        "offset_mm": [
+          1,
+          0,
+          29.75
+        ],
+        "hits_mm3": {}
+      },
+      {
+        "offset_mm": [
+          1,
+          0,
+          30.0
+        ],
+        "hits_mm3": {}
+      },
+      {
+        "offset_mm": [
+          1,
+          0,
+          30.25
+        ],
+        "hits_mm3": {}
+      },
+      {
+        "offset_mm": [
+          1,
+          0,
+          30.5
+        ],
+        "hits_mm3": {}
+      },
+      {
+        "offset_mm": [
+          1,
+          0,
+          30.75
+        ],
+        "hits_mm3": {}
+      },
+      {
+        "offset_mm": [
+          1,
+          0,
+          31.0
+        ],
+        "hits_mm3": {}
+      },
+      {
+        "offset_mm": [
+          1,
+          0,
+          31.25
+        ],
+        "hits_mm3": {}
+      },
+      {
+        "offset_mm": [
+          1,
+          0,
+          31.5
+        ],
+        "hits_mm3": {}
+      },
+      {
+        "offset_mm": [
+          1,
+          0,
+          31.75
+        ],
+        "hits_mm3": {}
+      },
+      {
+        "offset_mm": [
+          1,
+          0,
+          32.0
+        ],
+        "hits_mm3": {}
+      },
+      {
+        "offset_mm": [
+          1,
+          0,
+          32.25
+        ],
+        "hits_mm3": {}
+      },
+      {
+        "offset_mm": [
+          1,
+          0,
+          32.5
+        ],
+        "hits_mm3": {}
+      },
+      {
+        "offset_mm": [
+          1,
+          0,
+          32.75
+        ],
+        "hits_mm3": {}
+      },
+      {
+        "offset_mm": [
+          1,
+          0,
+          33.0
+        ],
+        "hits_mm3": {}
+      },
+      {
+        "offset_mm": [
+          1,
+          0,
+          33.25
+        ],
+        "hits_mm3": {}
+      },
+      {
+        "offset_mm": [
+          1,
+          0,
+          33.5
+        ],
+        "hits_mm3": {}
+      },
+      {
+        "offset_mm": [
+          1,
+          0,
+          33.75
+        ],
+        "hits_mm3": {}
+      },
+      {
+        "offset_mm": [
+          1,
+          0,
+          34.0
+        ],
+        "hits_mm3": {}
+      },
+      {
+        "offset_mm": [
+          1,
+          0,
+          34.25
+        ],
+        "hits_mm3": {}
+      },
+      {
+        "offset_mm": [
+          1,
+          0,
+          34.5
+        ],
+        "hits_mm3": {}
+      },
+      {
+        "offset_mm": [
+          1,
+          0,
+          34.75
+        ],
+        "hits_mm3": {}
+      },
+      {
+        "offset_mm": [
+          1,
+          0,
+          35.0
+        ],
+        "hits_mm3": {}
+      },
+      {
+        "offset_mm": [
+          1,
+          0,
+          35.25
+        ],
+        "hits_mm3": {}
+      },
+      {
+        "offset_mm": [
+          1,
+          0,
+          35.5
+        ],
+        "hits_mm3": {}
+      },
+      {
+        "offset_mm": [
+          1,
+          0,
+          35.75
+        ],
+        "hits_mm3": {}
+      },
+      {
+        "offset_mm": [
+          1,
+          0,
+          36.0
+        ],
+        "hits_mm3": {}
+      },
+      {
+        "offset_mm": [
+          1,
+          0,
+          36.25
+        ],
+        "hits_mm3": {}
+      },
+      {
+        "offset_mm": [
+          1,
+          0,
+          36.5
+        ],
+        "hits_mm3": {}
+      },
+      {
+        "offset_mm": [
+          1,
+          0,
+          36.75
+        ],
+        "hits_mm3": {}
+      },
+      {
+        "offset_mm": [
+          1,
+          0,
+          37.0
+        ],
+        "hits_mm3": {}
+      },
+      {
+        "offset_mm": [
+          1,
+          0,
+          37.25
+        ],
+        "hits_mm3": {}
+      },
+      {
+        "offset_mm": [
+          1,
+          0,
+          37.5
+        ],
+        "hits_mm3": {}
+      },
+      {
+        "offset_mm": [
+          1,
+          0,
+          37.75
+        ],
+        "hits_mm3": {}
+      },
+      {
+        "offset_mm": [
+          1,
+          0,
+          38.0
+        ],
+        "hits_mm3": {}
+      },
+      {
+        "offset_mm": [
+          1,
+          0,
+          38.25
+        ],
+        "hits_mm3": {}
+      },
+      {
+        "offset_mm": [
+          1,
+          0,
+          38.5
+        ],
+        "hits_mm3": {}
+      },
+      {
+        "offset_mm": [
+          1,
+          0,
+          38.75
+        ],
+        "hits_mm3": {}
+      },
+      {
+        "offset_mm": [
+          1,
+          0,
+          39.0
+        ],
+        "hits_mm3": {}
+      },
+      {
+        "offset_mm": [
+          1,
+          0,
+          39.25
+        ],
+        "hits_mm3": {}
+      },
+      {
+        "offset_mm": [
+          1,
+          0,
+          39.5
+        ],
+        "hits_mm3": {}
+      },
+      {
+        "offset_mm": [
+          1,
+          0,
+          39.75
+        ],
+        "hits_mm3": {}
+      },
+      {
+        "offset_mm": [
+          1,
+          0,
+          40.0
+        ],
+        "hits_mm3": {}
+      },
+      {
+        "offset_mm": [
+          1,
+          0,
+          40.25
+        ],
+        "hits_mm3": {}
+      },
+      {
+        "offset_mm": [
+          1,
+          0,
+          40.5
+        ],
+        "hits_mm3": {}
+      },
+      {
+        "offset_mm": [
+          1,
+          0,
+          40.75
+        ],
+        "hits_mm3": {}
+      },
+      {
+        "offset_mm": [
+          1,
+          0,
+          41.0
+        ],
+        "hits_mm3": {}
+      },
+      {
+        "offset_mm": [
+          1,
+          0,
+          41.25
+        ],
+        "hits_mm3": {}
+      },
+      {
+        "offset_mm": [
+          1,
+          0,
+          41.5
+        ],
+        "hits_mm3": {}
+      },
+      {
+        "offset_mm": [
+          1,
+          0,
+          41.75
+        ],
+        "hits_mm3": {}
+      },
+      {
+        "offset_mm": [
+          1,
+          0,
+          42.0
+        ],
+        "hits_mm3": {}
+      },
+      {
+        "offset_mm": [
+          1,
+          0,
+          42.25
+        ],
+        "hits_mm3": {}
+      },
+      {
+        "offset_mm": [
+          1,
+          0,
+          42.5
+        ],
+        "hits_mm3": {}
+      },
+      {
+        "offset_mm": [
+          1,
+          0,
+          42.75
+        ],
+        "hits_mm3": {}
+      },
+      {
+        "offset_mm": [
+          1,
+          0,
+          43.0
+        ],
+        "hits_mm3": {}
+      },
+      {
+        "offset_mm": [
+          1,
+          0,
+          43.25
+        ],
+        "hits_mm3": {}
+      },
+      {
+        "offset_mm": [
+          1,
+          0,
+          43.5
+        ],
+        "hits_mm3": {}
+      },
+      {
+        "offset_mm": [
+          1,
+          0,
+          43.75
+        ],
+        "hits_mm3": {}
+      },
+      {
+        "offset_mm": [
+          1,
+          0,
+          44.0
+        ],
+        "hits_mm3": {}
+      },
+      {
+        "offset_mm": [
+          1,
+          0,
+          44.25
+        ],
+        "hits_mm3": {}
+      },
+      {
+        "offset_mm": [
+          1,
+          0,
+          44.5
+        ],
+        "hits_mm3": {}
+      },
+      {
+        "offset_mm": [
+          1,
+          0,
+          44.75
+        ],
+        "hits_mm3": {}
+      },
+      {
+        "offset_mm": [
+          1,
+          0,
+          45.0
+        ],
+        "hits_mm3": {}
+      },
+      {
+        "offset_mm": [
+          1,
+          0,
+          45.25
+        ],
+        "hits_mm3": {}
+      },
+      {
+        "offset_mm": [
+          1,
+          0,
+          45.5
+        ],
+        "hits_mm3": {}
+      },
+      {
+        "offset_mm": [
+          1,
+          0,
+          45.75
+        ],
+        "hits_mm3": {}
+      },
+      {
+        "offset_mm": [
+          1,
+          0,
+          46.0
+        ],
+        "hits_mm3": {}
+      },
+      {
+        "offset_mm": [
+          1,
+          0,
+          46.25
+        ],
+        "hits_mm3": {}
+      },
+      {
+        "offset_mm": [
+          1,
+          0,
+          46.5
+        ],
+        "hits_mm3": {}
+      },
+      {
+        "offset_mm": [
+          1,
+          0,
+          46.75
+        ],
+        "hits_mm3": {}
+      },
+      {
+        "offset_mm": [
+          1,
+          0,
+          47.0
+        ],
+        "hits_mm3": {}
+      },
+      {
+        "offset_mm": [
+          1,
+          0,
+          47.25
+        ],
+        "hits_mm3": {}
+      },
+      {
+        "offset_mm": [
+          1,
+          0,
+          47.5
+        ],
+        "hits_mm3": {}
+      },
+      {
+        "offset_mm": [
+          1,
+          0,
+          47.75
+        ],
+        "hits_mm3": {}
+      },
+      {
+        "offset_mm": [
+          1,
+          0,
+          48.0
+        ],
+        "hits_mm3": {}
+      },
+      {
+        "offset_mm": [
+          1,
+          0,
+          48.25
+        ],
+        "hits_mm3": {}
+      },
+      {
+        "offset_mm": [
+          1,
+          0,
+          48.5
+        ],
+        "hits_mm3": {}
+      },
+      {
+        "offset_mm": [
+          1,
+          0,
+          48.75
+        ],
+        "hits_mm3": {}
+      },
+      {
+        "offset_mm": [
+          1,
+          0,
+          49.0
+        ],
+        "hits_mm3": {}
+      },
+      {
+        "offset_mm": [
+          1,
+          0,
+          49.25
+        ],
+        "hits_mm3": {}
+      },
+      {
+        "offset_mm": [
+          1,
+          0,
+          49.5
+        ],
+        "hits_mm3": {}
+      },
+      {
+        "offset_mm": [
+          1,
+          0,
+          49.75
+        ],
+        "hits_mm3": {}
+      },
+      {
+        "offset_mm": [
+          1,
+          0,
+          50.0
+        ],
+        "hits_mm3": {}
+      },
+      {
+        "offset_mm": [
+          1,
+          0,
+          50.25
+        ],
+        "hits_mm3": {}
+      },
+      {
+        "offset_mm": [
+          1,
+          0,
+          50.5
+        ],
+        "hits_mm3": {}
+      },
+      {
+        "offset_mm": [
+          1,
+          0,
+          50.75
+        ],
+        "hits_mm3": {}
+      },
+      {
+        "offset_mm": [
+          1,
+          0,
+          51.0
+        ],
+        "hits_mm3": {}
+      },
+      {
+        "offset_mm": [
+          1,
+          0,
+          51.25
+        ],
+        "hits_mm3": {}
+      },
+      {
+        "offset_mm": [
+          1,
+          0,
+          51.5
+        ],
+        "hits_mm3": {}
+      },
+      {
+        "offset_mm": [
+          1,
+          0,
+          51.75
+        ],
+        "hits_mm3": {}
+      },
+      {
+        "offset_mm": [
+          1,
+          0,
+          52.0
+        ],
+        "hits_mm3": {}
+      },
+      {
+        "offset_mm": [
+          1,
+          0,
+          52.25
+        ],
+        "hits_mm3": {}
+      },
+      {
+        "offset_mm": [
+          1,
+          0,
+          52.5
+        ],
+        "hits_mm3": {}
+      },
+      {
+        "offset_mm": [
+          1,
+          0,
+          52.75
+        ],
+        "hits_mm3": {}
+      },
+      {
+        "offset_mm": [
+          1,
+          0,
+          53.0
+        ],
+        "hits_mm3": {}
+      },
+      {
+        "offset_mm": [
+          1,
+          0,
+          53.25
+        ],
+        "hits_mm3": {}
+      },
+      {
+        "offset_mm": [
+          1,
+          0,
+          53.5
+        ],
+        "hits_mm3": {}
+      },
+      {
+        "offset_mm": [
+          1,
+          0,
+          53.75
+        ],
+        "hits_mm3": {}
+      },
+      {
+        "offset_mm": [
+          1,
+          0,
+          54.0
+        ],
+        "hits_mm3": {}
+      },
+      {
+        "offset_mm": [
+          1,
+          0,
+          54.25
+        ],
+        "hits_mm3": {}
+      },
+      {
+        "offset_mm": [
+          1,
+          0,
+          54.5
+        ],
+        "hits_mm3": {}
+      },
+      {
+        "offset_mm": [
+          1,
+          0,
+          54.75
+        ],
+        "hits_mm3": {}
+      },
+      {
+        "offset_mm": [
+          1,
+          0,
+          55.0
+        ],
+        "hits_mm3": {}
+      },
+      {
+        "offset_mm": [
+          1,
+          0,
+          55.25
+        ],
+        "hits_mm3": {}
+      },
+      {
+        "offset_mm": [
+          1,
+          0,
+          55.5
+        ],
+        "hits_mm3": {}
+      },
+      {
+        "offset_mm": [
+          1,
+          0,
+          55.75
+        ],
+        "hits_mm3": {}
+      },
+      {
+        "offset_mm": [
+          1,
+          0,
+          56.0
+        ],
+        "hits_mm3": {}
+      },
+      {
+        "offset_mm": [
+          1,
+          0,
+          56.25
+        ],
+        "hits_mm3": {}
+      },
+      {
+        "offset_mm": [
+          1,
+          0,
+          56.5
+        ],
+        "hits_mm3": {}
+      },
+      {
+        "offset_mm": [
+          1,
+          0,
+          56.75
+        ],
+        "hits_mm3": {}
+      },
+      {
+        "offset_mm": [
+          1,
+          0,
+          57.0
+        ],
+        "hits_mm3": {}
+      },
+      {
+        "offset_mm": [
+          1,
+          0,
+          57.25
+        ],
+        "hits_mm3": {}
+      },
+      {
+        "offset_mm": [
+          1,
+          0,
+          57.5
+        ],
+        "hits_mm3": {}
+      },
+      {
+        "offset_mm": [
+          1,
+          0,
+          57.75
+        ],
+        "hits_mm3": {}
+      },
+      {
+        "offset_mm": [
+          1,
+          0,
+          58.0
+        ],
+        "hits_mm3": {}
+      },
+      {
+        "offset_mm": [
+          1,
+          0,
+          58.25
+        ],
+        "hits_mm3": {}
+      },
+      {
+        "offset_mm": [
+          1,
+          0,
+          58.5
+        ],
+        "hits_mm3": {}
+      },
+      {
+        "offset_mm": [
+          1,
+          0,
+          58.75
+        ],
+        "hits_mm3": {}
+      },
+      {
+        "offset_mm": [
+          1,
+          0,
+          59.0
+        ],
+        "hits_mm3": {}
+      },
+      {
+        "offset_mm": [
+          1,
+          0,
+          59.25
+        ],
+        "hits_mm3": {}
+      },
+      {
+        "offset_mm": [
+          1,
+          0,
+          59.5
+        ],
+        "hits_mm3": {}
+      },
+      {
+        "offset_mm": [
+          1,
+          0,
+          59.75
+        ],
+        "hits_mm3": {}
+      },
+      {
+        "offset_mm": [
+          1,
+          0,
+          60.0
+        ],
+        "hits_mm3": {}
+      },
+      {
+        "offset_mm": [
+          1,
+          0,
+          60.25
+        ],
+        "hits_mm3": {}
+      },
+      {
+        "offset_mm": [
+          1,
+          0,
+          60.5
+        ],
+        "hits_mm3": {}
+      },
+      {
+        "offset_mm": [
+          1,
+          0,
+          60.75
+        ],
+        "hits_mm3": {}
+      },
+      {
+        "offset_mm": [
+          1,
+          0,
+          61.0
+        ],
+        "hits_mm3": {}
+      },
+      {
+        "offset_mm": [
+          1,
+          0,
+          61.25
+        ],
+        "hits_mm3": {}
+      },
+      {
+        "offset_mm": [
+          1,
+          0,
+          61.5
+        ],
+        "hits_mm3": {}
+      },
+      {
+        "offset_mm": [
+          1,
+          0,
+          61.75
+        ],
+        "hits_mm3": {}
+      },
+      {
+        "offset_mm": [
+          1,
+          0,
+          62.0
+        ],
+        "hits_mm3": {}
+      },
+      {
+        "offset_mm": [
+          1,
+          0,
+          62.25
+        ],
+        "hits_mm3": {}
+      },
+      {
+        "offset_mm": [
+          1,
+          0,
+          62.5
+        ],
+        "hits_mm3": {}
+      },
+      {
+        "offset_mm": [
+          1,
+          0,
+          62.75
+        ],
+        "hits_mm3": {}
+      },
+      {
+        "offset_mm": [
+          1,
+          0,
+          63.0
+        ],
+        "hits_mm3": {}
+      },
+      {
+        "offset_mm": [
+          1,
+          0,
+          63.25
+        ],
+        "hits_mm3": {}
+      },
+      {
+        "offset_mm": [
+          1,
+          0,
+          63.5
+        ],
+        "hits_mm3": {}
+      },
+      {
+        "offset_mm": [
+          1,
+          0,
+          63.75
+        ],
+        "hits_mm3": {}
+      },
+      {
+        "offset_mm": [
+          1,
+          0,
+          64.0
+        ],
+        "hits_mm3": {}
+      },
+      {
+        "offset_mm": [
+          1,
+          0,
+          64.25
+        ],
+        "hits_mm3": {}
+      },
+      {
+        "offset_mm": [
+          1,
+          0,
+          64.5
+        ],
+        "hits_mm3": {}
+      },
+      {
+        "offset_mm": [
+          1,
+          0,
+          64.75
+        ],
+        "hits_mm3": {}
+      },
+      {
+        "offset_mm": [
+          1,
+          0,
+          65.0
+        ],
+        "hits_mm3": {}
+      }
+    ],
+    "left_guard_samples": [
+      {
+        "outward_mm": 0.0,
+        "hits_mm3": {}
+      },
+      {
+        "outward_mm": 0.25,
+        "hits_mm3": {}
+      },
+      {
+        "outward_mm": 0.5,
+        "hits_mm3": {}
+      },
+      {
+        "outward_mm": 0.75,
+        "hits_mm3": {}
+      },
+      {
+        "outward_mm": 1.0,
+        "hits_mm3": {}
+      },
+      {
+        "outward_mm": 1.25,
+        "hits_mm3": {}
+      },
+      {
+        "outward_mm": 1.5,
+        "hits_mm3": {}
+      },
+      {
+        "outward_mm": 1.75,
+        "hits_mm3": {}
+      },
+      {
+        "outward_mm": 2.0,
+        "hits_mm3": {}
+      },
+      {
+        "outward_mm": 2.25,
+        "hits_mm3": {}
+      },
+      {
+        "outward_mm": 2.5,
+        "hits_mm3": {}
+      },
+      {
+        "outward_mm": 2.75,
+        "hits_mm3": {}
+      },
+      {
+        "outward_mm": 3.0,
+        "hits_mm3": {}
+      },
+      {
+        "outward_mm": 3.25,
+        "hits_mm3": {}
+      },
+      {
+        "outward_mm": 3.5,
+        "hits_mm3": {}
+      },
+      {
+        "outward_mm": 3.75,
+        "hits_mm3": {}
+      },
+      {
+        "outward_mm": 4.0,
+        "hits_mm3": {}
+      },
+      {
+        "outward_mm": 4.25,
+        "hits_mm3": {}
+      },
+      {
+        "outward_mm": 4.5,
+        "hits_mm3": {}
+      },
+      {
+        "outward_mm": 4.75,
+        "hits_mm3": {}
+      },
+      {
+        "outward_mm": 5.0,
+        "hits_mm3": {}
+      },
+      {
+        "outward_mm": 5.25,
+        "hits_mm3": {}
+      },
+      {
+        "outward_mm": 5.5,
+        "hits_mm3": {}
+      },
+      {
+        "outward_mm": 5.75,
+        "hits_mm3": {}
+      },
+      {
+        "outward_mm": 6.0,
+        "hits_mm3": {}
+      }
+    ],
+    "positive_controls": {
+      "retained_left_guard_mm3": 123.0000002682209,
+      "straight_body_lift_usb_mm3": 14.821192771707805
+    },
+    "passed": true,
+    "limitations": [
+      "Only nominal 0/+3 pose and hypothetical shell; body/guard sampled every .25mm",
+      "Battery box only; pack tails, connectors, fingers, ties, magnets and some moving mechanism absent",
+      "Power off and external USB unplugged; remove body/band and electrically disconnect battery before extraction",
+      "No PCB/camera extraction or strain, flexibility, current, heat or physical qualification"
+    ]
+  },
+  "contact_window_bounds_mm": [
+    [
+      [
+        7.04,
+        47.15,
+        38.2
+      ],
+      [
+        8.94,
+        49.050000000000004,
+        40.0
+      ]
+    ],
+    [
+      [
+        14.66,
+        47.15,
+        38.2
+      ],
+      [
+        16.56,
+        49.050000000000004,
+        40.0
+      ]
+    ]
+  ],
+  "header_top_z_mm": 39.1,
+  "physical_pin_numbering_verified": false,
+  "wire_sku_selected": false,
+  "electrical_qualification": false,
+  "complete_servo_harness": false,
+  "source_sha256": {
+    "docs/evidence/servo-wiring-v01.json": "068c7127347f2e38b7681ee429c474e79c29c58a5b625460bc627b43020fbeea",
+    "cad/packaging-v05/frame-relief-proposal.stl": "b7024c986e2ee169f2557a3c4c9e47876cdf0e77cd0bbcd713e1de39999f109a",
+    "cad/packaging-v05/servo-installed.stl": "8f7c94bd577f4b44eff27a8daa9d61ad3e7f52759edf7b92f44a65f943c10d41",
+    "cad/packaging-v05/buck.stl": "16e923ac30f38cd5763b4369c6f1daf32c9255f6a8e8383c4410b2388063d06a",
+    "cad/packaging-v05/charge.stl": "d2af805332b2b8e555be6f8455eb8b95174316f01fa19408f43dad3a45aaf578",
+    "cad/packaging-v05/antenna.stl": "f5ec77dd68d7dc71eb959ab0f52c6f4ee3666378bc113d79e683fc5d03307217",
+    "cad/packaging-v05/antenna_support.stl": "62be42076e6d4623de95ae72836375f5265bb88fdb740caf039ecc8263fe5896",
+    "cad/packaging-v05/inputs/cover.stl": "67991811518bfd981143b4541ee1d936b84bc55d2d8379382a0746b7e6b283ac",
+    "cad/packaging-v05/inputs/adjustable-support.stl": "16d698f494ca637d73c1da61f0c55adfa5b2b3ff1df42e631b94d073970eac54",
+    "cad/packaging-v05/inputs/adjustable-main_fasteners.stl": "82b66767791535c0289c7de2f5a1b4b6f8cd4a11f3b95302ccb9543c6656ebe1",
+    "cad/packaging-v05/inputs/usb-base.stl": "8f3d20d5952a249fb1f8c9440751bce8590ce505d7476cd053d51f62dc57a0fc",
+    "cad/packaging-v05/inputs/usb-pcb.stl": "d68ee033c3ed97af9e8045ee6799d95ace9f633f0d8beddba5a9e5f09e86cee2",
+    "cad/packaging-v05/inputs/usb-connector.stl": "4731ab48bd28f1708d8c598f3711ae5c87890473968fb6e1e48d629e606e9cbc",
+    "cad/packaging-v05/inputs/usb-components.stl": "c8cc27cf13eacee53a7227c45acd32dbd6ba0aecd7fad42379c8de0192013a70",
+    "cad/xiao-mount/screws.stl": "344530c44bfa7a7dd5e15b6b5d53e5583001325b0ab067984c89dd493dc08bd8",
+    "cad/xiao-mount/stage_screws.stl": "398e1fce190911f7d9d3187ac6f38c2c09f2ddff61ff45dcf810bf489f38a8ca",
+    "cad/harness-guides/cap.stl": "8344dcb2c2b430b324d7748fc2da33408bc7f5a085eeb63b0c0c72824d4d32d7",
+    "cad/motor-carrier-mount/pads.stl": "82ca6552ded90faa47ef3253f1995069ca1a04e96c0ca54f3523d21157bfe93d",
+    "cad/motor-carrier-mount/clamp.stl": "dce11b0e4efb062a89fee43792cc41d6594052843a58ee4386d8b423d25ce717",
+    "cad/motor-carrier-mount/screws.stl": "d019e847506100476e54a6c570e5d5f91f31f4dafe99e838b2a4d6e1d6f026d4",
+    "cad/motor-carrier-mount/nuts.stl": "1bf409971759c7c67eeb4d50a83ee354399c0f86bd0ef7817b213c5078779361",
+    "cad/motor-carrier/ta6586.stl": "6888a9b59f3d0a6d8b6ceb97abcccf4058b86bd54186219a04e7da1dab0a0813",
+    "cad/motor-carrier/R1.stl": "fe504c05e6e5d9530775b1429a56bb95637abaf58c835061759befcdebc312d8",
+    "cad/motor-carrier/R2.stl": "a4db30a48cf8eb57f8486e8d7335517191c598a6feb85dc5055bf8ca8dc4e52e",
+    "cad/motor-carrier/R3.stl": "94a65f777f98593b538ae7f73563c7819a28569e2e9190a5a6fa3c83b3bf008a",
+    "cad/motor-carrier/R4.stl": "dd7ba25c481268741d0df69ddfc2c7fc4428dd3c33585a2887c23387d3fd0037",
+    "cad/motor-carrier/C1.stl": "a982df888e715319a78c1cec0ff4e2b7d32b14494118552fc6c6cd9463b530a0",
+    "cad/motor-carrier/C2.stl": "206e3e92bb1afb0f2addcff723c05102eabd297ecadffa1e6c851b035e06a627",
+    "cad/motor-carrier/C2lead1.stl": "3dd49124333401e078d457c9c22925ded4ba52c7091a4ee874268e67863e0725",
+    "cad/motor-carrier/C2lead2.stl": "504e48aa9a731978ba8f299e9d5de36f20ed9c83b84aaa06e0abf1e6f5b2c888",
+    "cad/motor-carrier/lead1.stl": "a83ae98e99c79c43209f2c57d1ba03284358337a1544b5e4f43a5ad7dc01ee07",
+    "cad/motor-carrier/lead2.stl": "87e97a46908d40f7dfacb2b2d7212c7d516efcc7f906681208a175e87d5b4a1d",
+    "cad/motor-carrier/lead3.stl": "790681a1b071825fb06c5dbfa96898de388d3eb1bd44913fc373cb80278cdff6",
+    "cad/motor-carrier/lead4.stl": "aaf668b644fe16bac7d1611109be68de704a4a5f643fbdf1eb65fb3d1d18368a",
+    "cad/motor-carrier/lead5.stl": "fad6ac714b47fc61b4cb72d54c447a603ec2d680fca463218d42bfcc614bbc49",
+    "cad/motor-carrier/lead6.stl": "72c3ef6191e697e0f250178f0fe02a86ef5921096cb62dbba5e6b08969d36d7b",
+    "cad/motor-carrier/lead7.stl": "f748058fee12aa31a207712b5c0d9595551e780561b7f6912037f436a2b3341f",
+    "cad/motor-carrier/lead8.stl": "12a80347bc6d2068b6eae01df75d5fcde6c9c9b5ff6df83a03f601fb2d723afe",
+    "cad/components/motor-installed.stl": "08368cbf61c451de981b3aa44b8e624300c274c43da541815456cff0680208a6",
+    "cad/motor-carrier/wire-antenna.stl": "ed584132a15f81f164510d29ae075a12520ccdf8a6262bc7fa344b7d418e984e",
+    "cad/packaging-v05/inputs/adjustable-battery.stl": "99e5c2cd66c0d59f1e402d83f8988ba361016054b88bee3651f8274ff42d786a",
+    "cad/packaging-v05/inputs/adjustable-guards.stl": "30534ff4a38cee23058b438597c313693c3a3497d5a815964862a4112c54d7d6",
+    "cad/packaging-v05/inputs/adjustable-band.stl": "d9d652240b22b1f40fdb39d07892e0d45d97b9c7cae642a50b26f1772b67e2e2",
+    "cad/packaging-v05/inputs/usb-body.stl": "4d973e4bcbde30b80b112cad8d40e8f90aa257a44434bbe32c8dab11db1f40f3",
+    "cad/packaging-v05/inputs/usb-cover.stl": "44928cadd21fad7e4211398b069e0d20a3ba919f2389e4e7f6cebb25cd2b4650",
+    "cad/drive-power-carrier/pcb.stl": "99bf9c24b430d41c6132e5415ef2ecabd3f7c51c7eecb56106f1a947c1ff50b4",
+    "cad/drive-power-carrier/U2.stl": "ff11875816854b945f193eca8c4d975ecad30cf31e64600684c218c61ea42569",
+    "cad/drive-power-carrier/U3.stl": "9c5c8898b58191cfe7d304cbd1c0a92adc6c2808ec0851c08639f5d016936849",
+    "cad/drive-power-carrier/R5.stl": "1c0a73ee343d4606b613baf812c752f9ab434bb412f05477130ec92d032d8d02",
+    "cad/drive-power-carrier/R6.stl": "ec5870d941954d8c8d1f2fade5e9aa2e37f184d198c5eb5711d84ba762489fce",
+    "cad/drive-power-carrier/R7.stl": "0a796c4cd252a3e6fcbbab02eb350a1050bc8bc8050a745d8d04ee7841357a38",
+    "cad/drive-power-carrier/C3.stl": "138eab5d24325e1f2f406b182ac73b0e2841c132e5398c9a86cc4b707502ade5",
+    "cad/drive-power-carrier/C4.stl": "26cf4a44d4d84f82ac2dfd37134aebe3809a21bdf3b9df64f884ea053e5cdcbf",
+    "cad/drive-power-carrier/C5.stl": "c2c496a5d45e9f817eb5f17a67c68a48c7e21d6d41f5a1fadd58614c8c5f7721",
+    "cad/drive-power-carrier/C6.stl": "c4dee17c42b3c17406df518b25b505c196554c1bf051ff974f13f3f789604176",
+    "cad/xiao-power-harness/cradle.stl": "160e657b47a2c46bdac40a6617ee48bd9cf62606a3a22efd993c058447512043",
+    "cad/xiao-power-harness/BAT.stl": "67ed567603c4eec0a54aaf9f3c77580851a22c58e59e9dbb62828e084b283960",
+    "cad/direct-logic-harness/tray.stl": "86b03eb2cdd341e667779157820ea33a0409c3569dc52a95960b87e755abfb7e",
+    "cad/direct-logic-harness/5V.stl": "701fc2bcc4a993ec0d079d23c988853f2b0ed002bb1e12d67f470de4aabf4e17",
+    "cad/direct-logic-harness/GND.stl": "6db0c0ffe1a9b988d51470e99fbe4d15b14ea79cb6a9dfa44828a5eaff56411b",
+    "cad/direct-logic-harness/tie-space.stl": "b2092fdc61650475825e02c9308cd1bdb7ed8b48ef1315793c5772ff9de95496",
+    "cad/direct-logic-harness/tie-head-space.stl": "393af2ee546fb78e7b196d65b6f5e9030ae47e1e34ad23b01cc250e1ea7b778d",
+    "cad/motor-harness/FO.stl": "db4d470f7186b0f93fdbf2a56fd23b6772a2811d283e50578487e0fb999d1cd2",
+    "cad/motor-harness/BO.stl": "87da7b55315cc8b2b0938905c7fc8d97a57aa04dcdcde260f037cc28d87e962d",
+    "cad/motor-harness/terminal-A.stl": "37e9e2cff65e25af5735519eaea296e22ce0a01c1a1e0dc56eb88e39b116d28a",
+    "cad/motor-harness/terminal-B.stl": "d25c783d1c7c8a52c6e0d92dfe1165ffa7ee39498a655a8499889317314f7686",
+    "cad/xiao-return-h10/GND.stl": "fffd7b859a4034dc65dabf8babb593322f06b5d8752b78de3a762a358dd59bba",
+    "docs/evidence/xiao-mount-v01.json": "2e17654f50ad3ef5111e132c7e1178d1c623863f6b8713c3ad05a5c66bf458d8",
+    "docs/evidence/control-harness-v01.json": "8ebd89b9a7375b3bfc196bdad0be72ff6f977f987db22684c1147dce15e87606",
+    "docs/evidence/packaging-v05.json": "c891dbd44a1fc8b4b11869432baf7cc3f8c15805ed40a70246dbf0744875795f",
+    "cad/servo-wiring/signal.stl": "4d0ac85260f703e310139e4ce1298401276a7cc13b6891d902e5b79041104c69",
+    "docs/evidence/direct-logic-harness-v01.json": "0ae51371b9c3371093ecf22075f3f7a0f2f188d7401ca3311d4d5307534c0d1d",
+    "cad/packaging-v05/inputs/adjustable-cavity.stl": "271b880213a2abe8e282b0ebcb23aab949275a23d3dcc8d8c419b1363b40d246",
+    "tools/build_servo_power.py": "b0a53f5b59d30ebe5034fa48b11c36ecc160b0494c76c5c19fd52266658bf4a9",
+    "tools/build_packaging_v05.py": "c39baef2a3e561b209256817c468905b7c28b9907fbc766debe53f0bbab09161",
+    "tools/layout_zcar_battery.py": "1e40df72db95aab72c68ebcfafe4f723f90976e249cc1c83aa274f56bc5857c1",
+    "tools/build_xiao_power_harness.py": "4548e0949dd9b75d9b17b6b60cb5662c78ccd614b3d833539d680f725bcf7c85",
+    "cad/packaging-v05/layout.scad": "c0208e6d0d41365dd222a408f0a5d03a21d2c56dcfb4b8effb56f36505f35139"
+  },
+  "limitations": [
+    "Independent pair from Waveshare P2.5/P2.2, not via XIAO or carrier logic traces",
+    "P2 groups sourced; numbering within same-net triples and tail height still estimated",
+    "Only two local buck pin contact windows; all other geometry retained; full buck restored for service",
+    "No actual connector/splice/strain relief, bending or current/thermal qualification",
+    "Nominal0/+3 only, hypothetical body and static steering; existing motor/input-power conflicts remain"
+  ],
+  "artifact_sha256": {
+    "cad/servo-power/GND.stl": "8afaa604085d4465ac77f7cad3dffd6a30e15f1427dc8129ce52b6b851a5f377",
+    "cad/servo-power/VOUT.stl": "f6eaca28989f78b2ed726cec7bbc748995e1f0ddc3364242884ae220ca5dd983"
+  }
+}

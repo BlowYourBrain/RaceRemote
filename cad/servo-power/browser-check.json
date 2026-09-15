@@ -1,0 +1,36 @@
+{
+  "title": "RaceRemote — Питание и сигнал сервопривода",
+  "objects": 76,
+  "uniqueIds": 76,
+  "adjustmentHidden": true,
+  "visibleWires": [
+    {
+      "id": "servo-signal",
+      "visible": true
+    },
+    {
+      "id": "servo-power-VOUT",
+      "visible": true
+    },
+    {
+      "id": "servo-power-GND",
+      "visible": true
+    }
+  ],
+  "rendered": "true",
+  "glError": 0,
+  "capture": {
+    "bodyVisible": false,
+    "usbCoverVisible": false,
+    "az": 0.8,
+    "el": 0.7,
+    "span": 155
+  },
+  "scope": "Canvas rendering and visual inspection; not physical fit, RF or electrical proof",
+  "source_sha256": {
+    "viewer.html": "4f50cbe687a6466ecef5701c7fb2fa295a92c738f4ab70e5b92273cceb2d5776"
+  },
+  "artifact_sha256": {
+    "overview.png": "a7d794cc43b7f997235f5859a5881acd7f4452d9906457c18b9e6b06a5b45aa4"
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "scene_objects": 76,
+  "removed_ids": [
+    "servo-bundle",
+    "servo-old-clash"
+  ],
+  "source_sha256": {
+    "cad/servo-wiring/viewer.html": "c416ca487d35a7e1a19e26f832edd029d47a86d89d4b88f57225374eece07ca6",
+    "docs/evidence/servo-power-v01.json": "306b4b514329f2f6251e17c18c02c4cfce0e8993ed9ea297542e645e2cf30738",
+    "tools/build_servo_power_view.py": "96a64c823f2bac9631054ff39e41acf984d848153d7f04450c6b8ac4eba542f9",
+    "cad/servo-power/VOUT.stl": "f6eaca28989f78b2ed726cec7bbc748995e1f0ddc3364242884ae220ca5dd983",
+    "cad/servo-power/GND.stl": "8afaa604085d4465ac77f7cad3dffd6a30e15f1427dc8129ce52b6b851a5f377"
+  },
+  "artifact_sha256": {
+    "viewer.html": "4f50cbe687a6466ecef5701c7fb2fa295a92c738f4ab70e5b92273cceb2d5776"
+  }
+}

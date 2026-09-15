@@ -1,4 +1,7 @@
 # Preserve device evidence/source hashes across Windows checkouts.
+docs/power-ground-domains.md text eol=lf
+docs/evidence/power-ground-v01.json text eol=lf
+tools/check_power_ground_domains.py text eol=lf
 cad/xiao-return-h10/*.stl binary
 cad/xiao-return-h10/*.html text eol=lf
 cad/xiao-return-h10/*.json text eol=lf

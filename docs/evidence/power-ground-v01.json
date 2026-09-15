@@ -1,0 +1,728 @@
+{
+  "contract": "POWER-GROUND-01 v0.1",
+  "date": "2026-09-15",
+  "status": "proposed boundary condition; complete power circuit NOT qualified",
+  "model": "undirected galvanic wiring and ideal contacts; not voltage/current or protection-FET simulation",
+  "carrier_ground_pins_verified": [
+    [
+      "C1",
+      "2"
+    ],
+    [
+      "C2",
+      "2"
+    ],
+    [
+      "C3",
+      "2"
+    ],
+    [
+      "C4",
+      "2"
+    ],
+    [
+      "C5",
+      "2"
+    ],
+    [
+      "C6",
+      "2"
+    ],
+    [
+      "H10",
+      "1"
+    ],
+    [
+      "H3",
+      "1"
+    ],
+    [
+      "H5",
+      "1"
+    ],
+    [
+      "R3",
+      "2"
+    ],
+    [
+      "R4",
+      "2"
+    ],
+    [
+      "R6",
+      "2"
+    ],
+    [
+      "R7",
+      "2"
+    ],
+    [
+      "U1",
+      "3"
+    ],
+    [
+      "U2",
+      "4"
+    ],
+    [
+      "U2",
+      "9"
+    ],
+    [
+      "U3",
+      "2"
+    ]
+  ],
+  "proposed_protected_bus_cases": [
+    {
+      "protection_closed": false,
+      "drive_on": false,
+      "charge_usb": false,
+      "service_usb": false,
+      "shared_host": false,
+      "raw_to_protected_ground_path": null,
+      "pack_positive_to_VM_path": null
+    },
+    {
+      "protection_closed": false,
+      "drive_on": false,
+      "charge_usb": false,
+      "service_usb": false,
+      "shared_host": true,
+      "raw_to_protected_ground_path": null,
+      "pack_positive_to_VM_path": null
+    },
+    {
+      "protection_closed": false,
+      "drive_on": false,
+      "charge_usb": false,
+      "service_usb": true,
+      "shared_host": false,
+      "raw_to_protected_ground_path": null,
+      "pack_positive_to_VM_path": null
+    },
+    {
+      "protection_closed": false,
+      "drive_on": false,
+      "charge_usb": false,
+      "service_usb": true,
+      "shared_host": true,
+      "raw_to_protected_ground_path": null,
+      "pack_positive_to_VM_path": null
+    },
+    {
+      "protection_closed": false,
+      "drive_on": false,
+      "charge_usb": true,
+      "service_usb": false,
+      "shared_host": false,
+      "raw_to_protected_ground_path": null,
+      "pack_positive_to_VM_path": null
+    },
+    {
+      "protection_closed": false,
+      "drive_on": false,
+      "charge_usb": true,
+      "service_usb": false,
+      "shared_host": true,
+      "raw_to_protected_ground_path": null,
+      "pack_positive_to_VM_path": null
+    },
+    {
+      "protection_closed": false,
+      "drive_on": false,
+      "charge_usb": true,
+      "service_usb": true,
+      "shared_host": false,
+      "raw_to_protected_ground_path": null,
+      "pack_positive_to_VM_path": null
+    },
+    {
+      "protection_closed": false,
+      "drive_on": false,
+      "charge_usb": true,
+      "service_usb": true,
+      "shared_host": true,
+      "raw_to_protected_ground_path": null,
+      "pack_positive_to_VM_path": null
+    },
+    {
+      "protection_closed": false,
+      "drive_on": true,
+      "charge_usb": false,
+      "service_usb": false,
+      "shared_host": false,
+      "raw_to_protected_ground_path": null,
+      "pack_positive_to_VM_path": [
+        {
+          "from": "PACK_P",
+          "to": "PROTECTED_P",
+          "connection": "proposed common positive; fuse and positive cutoff not modelled"
+        },
+        {
+          "from": "PROTECTED_P",
+          "to": "VM",
+          "connection": "ideal positive drive switch"
+        }
+      ]
+    },
+    {
+      "protection_closed": false,
+      "drive_on": true,
+      "charge_usb": false,
+      "service_usb": false,
+      "shared_host": true,
+      "raw_to_protected_ground_path": null,
+      "pack_positive_to_VM_path": [
+        {
+          "from": "PACK_P",
+          "to": "PROTECTED_P",
+          "connection": "proposed common positive; fuse and positive cutoff not modelled"
+        },
+        {
+          "from": "PROTECTED_P",
+          "to": "VM",
+          "connection": "ideal positive drive switch"
+        }
+      ]
+    },
+    {
+      "protection_closed": false,
+      "drive_on": true,
+      "charge_usb": false,
+      "service_usb": true,
+      "shared_host": false,
+      "raw_to_protected_ground_path": null,
+      "pack_positive_to_VM_path": [
+        {
+          "from": "PACK_P",
+          "to": "PROTECTED_P",
+          "connection": "proposed common positive; fuse and positive cutoff not modelled"
+        },
+        {
+          "from": "PROTECTED_P",
+          "to": "VM",
+          "connection": "ideal positive drive switch"
+        }
+      ]
+    },
+    {
+      "protection_closed": false,
+      "drive_on": true,
+      "charge_usb": false,
+      "service_usb": true,
+      "shared_host": true,
+      "raw_to_protected_ground_path": null,
+      "pack_positive_to_VM_path": [
+        {
+          "from": "PACK_P",
+          "to": "PROTECTED_P",
+          "connection": "proposed common positive; fuse and positive cutoff not modelled"
+        },
+        {
+          "from": "PROTECTED_P",
+          "to": "VM",
+          "connection": "ideal positive drive switch"
+        }
+      ]
+    },
+    {
+      "protection_closed": false,
+      "drive_on": true,
+      "charge_usb": true,
+      "service_usb": false,
+      "shared_host": false,
+      "raw_to_protected_ground_path": null,
+      "pack_positive_to_VM_path": [
+        {
+          "from": "PACK_P",
+          "to": "PROTECTED_P",
+          "connection": "proposed common positive; fuse and positive cutoff not modelled"
+        },
+        {
+          "from": "PROTECTED_P",
+          "to": "VM",
+          "connection": "ideal positive drive switch"
+        }
+      ]
+    },
+    {
+      "protection_closed": false,
+      "drive_on": true,
+      "charge_usb": true,
+      "service_usb": false,
+      "shared_host": true,
+      "raw_to_protected_ground_path": null,
+      "pack_positive_to_VM_path": [
+        {
+          "from": "PACK_P",
+          "to": "PROTECTED_P",
+          "connection": "proposed common positive; fuse and positive cutoff not modelled"
+        },
+        {
+          "from": "PROTECTED_P",
+          "to": "VM",
+          "connection": "ideal positive drive switch"
+        }
+      ]
+    },
+    {
+      "protection_closed": false,
+      "drive_on": true,
+      "charge_usb": true,
+      "service_usb": true,
+      "shared_host": false,
+      "raw_to_protected_ground_path": null,
+      "pack_positive_to_VM_path": [
+        {
+          "from": "PACK_P",
+          "to": "PROTECTED_P",
+          "connection": "proposed common positive; fuse and positive cutoff not modelled"
+        },
+        {
+          "from": "PROTECTED_P",
+          "to": "VM",
+          "connection": "ideal positive drive switch"
+        }
+      ]
+    },
+    {
+      "protection_closed": false,
+      "drive_on": true,
+      "charge_usb": true,
+      "service_usb": true,
+      "shared_host": true,
+      "raw_to_protected_ground_path": null,
+      "pack_positive_to_VM_path": [
+        {
+          "from": "PACK_P",
+          "to": "PROTECTED_P",
+          "connection": "proposed common positive; fuse and positive cutoff not modelled"
+        },
+        {
+          "from": "PROTECTED_P",
+          "to": "VM",
+          "connection": "ideal positive drive switch"
+        }
+      ]
+    },
+    {
+      "protection_closed": true,
+      "drive_on": false,
+      "charge_usb": false,
+      "service_usb": false,
+      "shared_host": false,
+      "raw_to_protected_ground_path": [
+        {
+          "from": "RAW_N",
+          "to": "PROTECTED_N",
+          "connection": "ideal protection return contact"
+        }
+      ],
+      "pack_positive_to_VM_path": null
+    },
+    {
+      "protection_closed": true,
+      "drive_on": false,
+      "charge_usb": false,
+      "service_usb": false,
+      "shared_host": true,
+      "raw_to_protected_ground_path": [
+        {
+          "from": "RAW_N",
+          "to": "PROTECTED_N",
+          "connection": "ideal protection return contact"
+        }
+      ],
+      "pack_positive_to_VM_path": null
+    },
+    {
+      "protection_closed": true,
+      "drive_on": false,
+      "charge_usb": false,
+      "service_usb": true,
+      "shared_host": false,
+      "raw_to_protected_ground_path": [
+        {
+          "from": "RAW_N",
+          "to": "PROTECTED_N",
+          "connection": "ideal protection return contact"
+        }
+      ],
+      "pack_positive_to_VM_path": null
+    },
+    {
+      "protection_closed": true,
+      "drive_on": false,
+      "charge_usb": false,
+      "service_usb": true,
+      "shared_host": true,
+      "raw_to_protected_ground_path": [
+        {
+          "from": "RAW_N",
+          "to": "PROTECTED_N",
+          "connection": "ideal protection return contact"
+        }
+      ],
+      "pack_positive_to_VM_path": null
+    },
+    {
+      "protection_closed": true,
+      "drive_on": false,
+      "charge_usb": true,
+      "service_usb": false,
+      "shared_host": false,
+      "raw_to_protected_ground_path": [
+        {
+          "from": "RAW_N",
+          "to": "PROTECTED_N",
+          "connection": "ideal protection return contact"
+        }
+      ],
+      "pack_positive_to_VM_path": null
+    },
+    {
+      "protection_closed": true,
+      "drive_on": false,
+      "charge_usb": true,
+      "service_usb": false,
+      "shared_host": true,
+      "raw_to_protected_ground_path": [
+        {
+          "from": "RAW_N",
+          "to": "PROTECTED_N",
+          "connection": "ideal protection return contact"
+        }
+      ],
+      "pack_positive_to_VM_path": null
+    },
+    {
+      "protection_closed": true,
+      "drive_on": false,
+      "charge_usb": true,
+      "service_usb": true,
+      "shared_host": false,
+      "raw_to_protected_ground_path": [
+        {
+          "from": "RAW_N",
+          "to": "PROTECTED_N",
+          "connection": "ideal protection return contact"
+        }
+      ],
+      "pack_positive_to_VM_path": null
+    },
+    {
+      "protection_closed": true,
+      "drive_on": false,
+      "charge_usb": true,
+      "service_usb": true,
+      "shared_host": true,
+      "raw_to_protected_ground_path": [
+        {
+          "from": "RAW_N",
+          "to": "PROTECTED_N",
+          "connection": "ideal protection return contact"
+        }
+      ],
+      "pack_positive_to_VM_path": null
+    },
+    {
+      "protection_closed": true,
+      "drive_on": true,
+      "charge_usb": false,
+      "service_usb": false,
+      "shared_host": false,
+      "raw_to_protected_ground_path": [
+        {
+          "from": "RAW_N",
+          "to": "PROTECTED_N",
+          "connection": "ideal protection return contact"
+        }
+      ],
+      "pack_positive_to_VM_path": [
+        {
+          "from": "PACK_P",
+          "to": "PROTECTED_P",
+          "connection": "proposed common positive; fuse and positive cutoff not modelled"
+        },
+        {
+          "from": "PROTECTED_P",
+          "to": "VM",
+          "connection": "ideal positive drive switch"
+        }
+      ]
+    },
+    {
+      "protection_closed": true,
+      "drive_on": true,
+      "charge_usb": false,
+      "service_usb": false,
+      "shared_host": true,
+      "raw_to_protected_ground_path": [
+        {
+          "from": "RAW_N",
+          "to": "PROTECTED_N",
+          "connection": "ideal protection return contact"
+        }
+      ],
+      "pack_positive_to_VM_path": [
+        {
+          "from": "PACK_P",
+          "to": "PROTECTED_P",
+          "connection": "proposed common positive; fuse and positive cutoff not modelled"
+        },
+        {
+          "from": "PROTECTED_P",
+          "to": "VM",
+          "connection": "ideal positive drive switch"
+        }
+      ]
+    },
+    {
+      "protection_closed": true,
+      "drive_on": true,
+      "charge_usb": false,
+      "service_usb": true,
+      "shared_host": false,
+      "raw_to_protected_ground_path": [
+        {
+          "from": "RAW_N",
+          "to": "PROTECTED_N",
+          "connection": "ideal protection return contact"
+        }
+      ],
+      "pack_positive_to_VM_path": [
+        {
+          "from": "PACK_P",
+          "to": "PROTECTED_P",
+          "connection": "proposed common positive; fuse and positive cutoff not modelled"
+        },
+        {
+          "from": "PROTECTED_P",
+          "to": "VM",
+          "connection": "ideal positive drive switch"
+        }
+      ]
+    },
+    {
+      "protection_closed": true,
+      "drive_on": true,
+      "charge_usb": false,
+      "service_usb": true,
+      "shared_host": true,
+      "raw_to_protected_ground_path": [
+        {
+          "from": "RAW_N",
+          "to": "PROTECTED_N",
+          "connection": "ideal protection return contact"
+        }
+      ],
+      "pack_positive_to_VM_path": [
+        {
+          "from": "PACK_P",
+          "to": "PROTECTED_P",
+          "connection": "proposed common positive; fuse and positive cutoff not modelled"
+        },
+        {
+          "from": "PROTECTED_P",
+          "to": "VM",
+          "connection": "ideal positive drive switch"
+        }
+      ]
+    },
+    {
+      "protection_closed": true,
+      "drive_on": true,
+      "charge_usb": true,
+      "service_usb": false,
+      "shared_host": false,
+      "raw_to_protected_ground_path": [
+        {
+          "from": "RAW_N",
+          "to": "PROTECTED_N",
+          "connection": "ideal protection return contact"
+        }
+      ],
+      "pack_positive_to_VM_path": [
+        {
+          "from": "PACK_P",
+          "to": "PROTECTED_P",
+          "connection": "proposed common positive; fuse and positive cutoff not modelled"
+        },
+        {
+          "from": "PROTECTED_P",
+          "to": "VM",
+          "connection": "ideal positive drive switch"
+        }
+      ]
+    },
+    {
+      "protection_closed": true,
+      "drive_on": true,
+      "charge_usb": true,
+      "service_usb": false,
+      "shared_host": true,
+      "raw_to_protected_ground_path": [
+        {
+          "from": "RAW_N",
+          "to": "PROTECTED_N",
+          "connection": "ideal protection return contact"
+        }
+      ],
+      "pack_positive_to_VM_path": [
+        {
+          "from": "PACK_P",
+          "to": "PROTECTED_P",
+          "connection": "proposed common positive; fuse and positive cutoff not modelled"
+        },
+        {
+          "from": "PROTECTED_P",
+          "to": "VM",
+          "connection": "ideal positive drive switch"
+        }
+      ]
+    },
+    {
+      "protection_closed": true,
+      "drive_on": true,
+      "charge_usb": true,
+      "service_usb": true,
+      "shared_host": false,
+      "raw_to_protected_ground_path": [
+        {
+          "from": "RAW_N",
+          "to": "PROTECTED_N",
+          "connection": "ideal protection return contact"
+        }
+      ],
+      "pack_positive_to_VM_path": [
+        {
+          "from": "PACK_P",
+          "to": "PROTECTED_P",
+          "connection": "proposed common positive; fuse and positive cutoff not modelled"
+        },
+        {
+          "from": "PROTECTED_P",
+          "to": "VM",
+          "connection": "ideal positive drive switch"
+        }
+      ]
+    },
+    {
+      "protection_closed": true,
+      "drive_on": true,
+      "charge_usb": true,
+      "service_usb": true,
+      "shared_host": true,
+      "raw_to_protected_ground_path": [
+        {
+          "from": "RAW_N",
+          "to": "PROTECTED_N",
+          "connection": "ideal protection return contact"
+        }
+      ],
+      "pack_positive_to_VM_path": [
+        {
+          "from": "PACK_P",
+          "to": "PROTECTED_P",
+          "connection": "proposed common positive; fuse and positive cutoff not modelled"
+        },
+        {
+          "from": "PROTECTED_P",
+          "to": "VM",
+          "connection": "ideal positive drive switch"
+        }
+      ]
+    }
+  ],
+  "raw_charger_ground_counterexample": [
+    {
+      "from": "RAW_N",
+      "to": "CHARGER_GND",
+      "connection": "charger ground assignment"
+    },
+    {
+      "from": "CHARGER_GND",
+      "to": "USB_CHARGE_GND",
+      "connection": "proposed non-isolated charger input ground"
+    },
+    {
+      "from": "USB_CHARGE_GND",
+      "to": "HOST_CHARGE_GND",
+      "connection": "charge USB cable"
+    },
+    {
+      "from": "HOST_CHARGE_GND",
+      "to": "HOST_SERVICE_GND",
+      "connection": "external common host/hub ground"
+    },
+    {
+      "from": "HOST_SERVICE_GND",
+      "to": "USB_SERVICE_GND",
+      "connection": "service USB cable"
+    },
+    {
+      "from": "USB_SERVICE_GND",
+      "to": "XIAO_GND",
+      "connection": "native XIAO service ground"
+    },
+    {
+      "from": "XIAO_GND",
+      "to": "DRIVE_GND",
+      "connection": "carrier H10 and GND0 wire"
+    },
+    {
+      "from": "DRIVE_GND",
+      "to": "PROTECTED_N",
+      "connection": "proposed dedicated supply return to carrier H5"
+    }
+  ],
+  "raw_ground_miswire_bypass_states": [
+    {
+      "drive_on": false,
+      "charge_usb": true,
+      "service_usb": true,
+      "shared_host": true
+    },
+    {
+      "drive_on": true,
+      "charge_usb": true,
+      "service_usb": true,
+      "shared_host": true
+    }
+  ],
+  "direct_raw_monitor_counterexample": [
+    {
+      "from": "RAW_N",
+      "to": "RAW_MONITOR_GND",
+      "connection": "battery-side monitor ground; no signal crossing assigned"
+    },
+    {
+      "from": "RAW_MONITOR_GND",
+      "to": "DRIVE_GND",
+      "connection": "incorrect direct raw-side reference wire"
+    },
+    {
+      "from": "DRIVE_GND",
+      "to": "PROTECTED_N",
+      "connection": "proposed dedicated supply return to carrier H5"
+    }
+  ],
+  "omitted_paths": [
+    "battery sources and midpoint conductors",
+    "charger CBSET/MID/BAT internal paths",
+    "MOSFET body diodes, leakage, shutdown and transient behaviour",
+    "sensor signal ESD/protection paths",
+    "shield/chassis connections not yet assigned",
+    "positive-rail converter and GPIO backfeed, fuse/current limits"
+  ],
+  "physical_tests": false,
+  "ready_to_wire_LW": false,
+  "source_sha256": {
+    "tools/check_power_ground_domains.py": "3074b76cfbb4bd5280634065a5c69fae23b179ce24d38d3edfa72a8c9667ba6b",
+    "docs/evidence/drive-power-carrier-v03/netlist.xml": "fcba20102e51fe1e3e2e557a21f2b9d92a8603ca7a311c8e4326298fd8523252",
+    "docs/xiao-usb-power.md": "dff695c8da0e5e7bd685566e5e1a86391de6425de4a9c39344768c800936485c",
+    "hardware/pack-balancer/README.md": "ebc310bb884a9ec83613dfd0278f57a50252bfa7d63f02d9187c161fedca20c9",
+    "docs/charge-sense-paths.md": "e837ed1a761e8b929f6e03e753c4390783f2dd8a8ed03e26bccf7f0eed453d7b"
+  }
+}

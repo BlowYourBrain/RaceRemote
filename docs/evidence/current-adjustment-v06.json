@@ -1,0 +1,3192 @@
+{
+  "version": "0.6",
+  "date": "2026-09-15",
+  "physical_fit_verified": false,
+  "sample_step_mm": 1,
+  "nominal": {
+    "electronics_mm": 0,
+    "camera_mm": 3,
+    "slot_constraints_clear": true,
+    "mechanical_clear": true,
+    "hypothetical_body_clear": true,
+    "service_usb_solids_clear": true,
+    "overlaps_mm3": {},
+    "outside_body_mm3": {},
+    "service_usb_hits_mm3": {},
+    "wire_routing_verified": true
+  },
+  "feasible_pose_count": 27,
+  "poses": [
+    {
+      "electronics_mm": -3,
+      "camera_mm": -3,
+      "slot_constraints_clear": false,
+      "mechanical_clear": false,
+      "hypothetical_body_clear": false,
+      "service_usb_solids_clear": false,
+      "overlaps_mm3": {
+        "cradle/antenna_support": 0.53597,
+        "stage_screws/antenna_support": 1.07194,
+        "stage_screws/usb-base": 6.26522,
+        "stage_screws/usb-pcb": 6.7088,
+        "buck/cradle": 126.95325,
+        "buck/cap": 2.0,
+        "buck/camera_components": 30.5377,
+        "driver/cradle": 21.5,
+        "tray/cradle": 13.98973
+      },
+      "outside_body_mm3": {
+        "charge": 52.84843
+      },
+      "service_usb_hits_mm3": {
+        "tray": 7.32
+      },
+      "wire_routing_verified": false
+    },
+    {
+      "electronics_mm": -3,
+      "camera_mm": -2,
+      "slot_constraints_clear": false,
+      "mechanical_clear": false,
+      "hypothetical_body_clear": false,
+      "service_usb_solids_clear": true,
+      "overlaps_mm3": {
+        "cradle/antenna_support": 3.95391,
+        "stage_screws/antenna_support": 2.87999,
+        "stage_screws/usb-base": 6.26522,
+        "stage_screws/usb-pcb": 4.22564,
+        "buck/cradle": 99.55987,
+        "driver/cradle": 10.75
+      },
+      "outside_body_mm3": {
+        "charge": 52.84843
+      },
+      "service_usb_hits_mm3": {},
+      "wire_routing_verified": false
+    },
+    {
+      "electronics_mm": -3,
+      "camera_mm": -1,
+      "slot_constraints_clear": false,
+      "mechanical_clear": false,
+      "hypothetical_body_clear": false,
+      "service_usb_solids_clear": true,
+      "overlaps_mm3": {
+        "cradle/antenna_support": 0.63731,
+        "stage_screws/antenna_support": 7.5726,
+        "stage_screws/usb-base": 6.02566,
+        "stage_screws/usb-pcb": 2.07172,
+        "buck/cradle": 11.95988
+      },
+      "outside_body_mm3": {
+        "charge": 52.84843
+      },
+      "service_usb_hits_mm3": {},
+      "wire_routing_verified": false
+    },
+    {
+      "electronics_mm": -3,
+      "camera_mm": 0,
+      "slot_constraints_clear": false,
+      "mechanical_clear": false,
+      "hypothetical_body_clear": false,
+      "service_usb_solids_clear": true,
+      "overlaps_mm3": {
+        "cradle/antenna_support": 0.15982,
+        "stage_screws/antenna_support": 8.67658,
+        "stage_screws/usb-base": 2.95562
+      },
+      "outside_body_mm3": {
+        "charge": 52.84843
+      },
+      "service_usb_hits_mm3": {},
+      "wire_routing_verified": false
+    },
+    {
+      "electronics_mm": -3,
+      "camera_mm": 1,
+      "slot_constraints_clear": true,
+      "mechanical_clear": false,
+      "hypothetical_body_clear": false,
+      "service_usb_solids_clear": true,
+      "overlaps_mm3": {
+        "cradle/antenna_support": 3.86462,
+        "stage_screws/antenna_support": 3.46789
+      },
+      "outside_body_mm3": {
+        "charge": 52.84843
+      },
+      "service_usb_hits_mm3": {},
+      "wire_routing_verified": false
+    },
+    {
+      "electronics_mm": -3,
+      "camera_mm": 2,
+      "slot_constraints_clear": true,
+      "mechanical_clear": false,
+      "hypothetical_body_clear": false,
+      "service_usb_solids_clear": true,
+      "overlaps_mm3": {
+        "cradle/antenna_support": 0.77597,
+        "stage_screws/antenna_support": 1.55194
+      },
+      "outside_body_mm3": {
+        "charge": 52.84843
+      },
+      "service_usb_hits_mm3": {},
+      "wire_routing_verified": false
+    },
+    {
+      "electronics_mm": -3,
+      "camera_mm": 3,
+      "slot_constraints_clear": true,
+      "mechanical_clear": true,
+      "hypothetical_body_clear": false,
+      "service_usb_solids_clear": true,
+      "overlaps_mm3": {},
+      "outside_body_mm3": {
+        "charge": 52.84843
+      },
+      "service_usb_hits_mm3": {},
+      "wire_routing_verified": false
+    },
+    {
+      "electronics_mm": -3,
+      "camera_mm": 4,
+      "slot_constraints_clear": true,
+      "mechanical_clear": true,
+      "hypothetical_body_clear": false,
+      "service_usb_solids_clear": true,
+      "overlaps_mm3": {},
+      "outside_body_mm3": {
+        "charge": 52.84843
+      },
+      "service_usb_hits_mm3": {},
+      "wire_routing_verified": false
+    },
+    {
+      "electronics_mm": -3,
+      "camera_mm": 5,
+      "slot_constraints_clear": true,
+      "mechanical_clear": true,
+      "hypothetical_body_clear": false,
+      "service_usb_solids_clear": true,
+      "overlaps_mm3": {},
+      "outside_body_mm3": {
+        "charge": 52.84843
+      },
+      "service_usb_hits_mm3": {},
+      "wire_routing_verified": false
+    },
+    {
+      "electronics_mm": -3,
+      "camera_mm": 6,
+      "slot_constraints_clear": true,
+      "mechanical_clear": true,
+      "hypothetical_body_clear": false,
+      "service_usb_solids_clear": true,
+      "overlaps_mm3": {},
+      "outside_body_mm3": {
+        "charge": 52.84843
+      },
+      "service_usb_hits_mm3": {},
+      "wire_routing_verified": false
+    },
+    {
+      "electronics_mm": -3,
+      "camera_mm": 7,
+      "slot_constraints_clear": true,
+      "mechanical_clear": true,
+      "hypothetical_body_clear": false,
+      "service_usb_solids_clear": true,
+      "overlaps_mm3": {},
+      "outside_body_mm3": {
+        "charge": 52.84843
+      },
+      "service_usb_hits_mm3": {},
+      "wire_routing_verified": false
+    },
+    {
+      "electronics_mm": -3,
+      "camera_mm": 8,
+      "slot_constraints_clear": true,
+      "mechanical_clear": true,
+      "hypothetical_body_clear": false,
+      "service_usb_solids_clear": true,
+      "overlaps_mm3": {},
+      "outside_body_mm3": {
+        "charge": 52.84843
+      },
+      "service_usb_hits_mm3": {},
+      "wire_routing_verified": false
+    },
+    {
+      "electronics_mm": -2,
+      "camera_mm": -3,
+      "slot_constraints_clear": false,
+      "mechanical_clear": false,
+      "hypothetical_body_clear": false,
+      "service_usb_solids_clear": false,
+      "overlaps_mm3": {
+        "cradle/antenna_support": 0.53597,
+        "stage_screws/antenna_support": 1.07194,
+        "stage_screws/usb-base": 6.26522,
+        "stage_screws/usb-pcb": 6.7088,
+        "buck/cradle": 130.39237,
+        "buck/cap": 6.165,
+        "buck/camera_components": 86.87557,
+        "driver/cradle": 73.95987,
+        "tray/cradle": 30.51442
+      },
+      "outside_body_mm3": {
+        "charge": 12.4235
+      },
+      "service_usb_hits_mm3": {
+        "driver": 31.882,
+        "tray": 21.96
+      },
+      "wire_routing_verified": false
+    },
+    {
+      "electronics_mm": -2,
+      "camera_mm": -2,
+      "slot_constraints_clear": false,
+      "mechanical_clear": false,
+      "hypothetical_body_clear": false,
+      "service_usb_solids_clear": false,
+      "overlaps_mm3": {
+        "cradle/antenna_support": 3.95391,
+        "stage_screws/antenna_support": 2.87999,
+        "stage_screws/usb-base": 6.26522,
+        "stage_screws/usb-pcb": 4.22564,
+        "buck/cradle": 126.95325,
+        "buck/cap": 2.0,
+        "buck/camera_components": 30.5377,
+        "driver/cradle": 21.5,
+        "tray/cradle": 13.98973
+      },
+      "outside_body_mm3": {
+        "charge": 12.4235
+      },
+      "service_usb_hits_mm3": {
+        "tray": 7.32
+      },
+      "wire_routing_verified": false
+    },
+    {
+      "electronics_mm": -2,
+      "camera_mm": -1,
+      "slot_constraints_clear": false,
+      "mechanical_clear": false,
+      "hypothetical_body_clear": false,
+      "service_usb_solids_clear": true,
+      "overlaps_mm3": {
+        "cradle/antenna_support": 0.63731,
+        "stage_screws/antenna_support": 7.5726,
+        "stage_screws/usb-base": 6.02566,
+        "stage_screws/usb-pcb": 2.07172,
+        "buck/cradle": 99.55987,
+        "driver/cradle": 10.75
+      },
+      "outside_body_mm3": {
+        "charge": 12.4235
+      },
+      "service_usb_hits_mm3": {},
+      "wire_routing_verified": false
+    },
+    {
+      "electronics_mm": -2,
+      "camera_mm": 0,
+      "slot_constraints_clear": false,
+      "mechanical_clear": false,
+      "hypothetical_body_clear": false,
+      "service_usb_solids_clear": true,
+      "overlaps_mm3": {
+        "cradle/antenna_support": 0.15982,
+        "stage_screws/antenna_support": 8.67658,
+        "stage_screws/usb-base": 2.95562,
+        "buck/cradle": 11.95988
+      },
+      "outside_body_mm3": {
+        "charge": 12.4235
+      },
+      "service_usb_hits_mm3": {},
+      "wire_routing_verified": false
+    },
+    {
+      "electronics_mm": -2,
+      "camera_mm": 1,
+      "slot_constraints_clear": true,
+      "mechanical_clear": false,
+      "hypothetical_body_clear": false,
+      "service_usb_solids_clear": true,
+      "overlaps_mm3": {
+        "cradle/antenna_support": 3.86462,
+        "stage_screws/antenna_support": 3.46789
+      },
+      "outside_body_mm3": {
+        "charge": 12.4235
+      },
+      "service_usb_hits_mm3": {},
+      "wire_routing_verified": false
+    },
+    {
+      "electronics_mm": -2,
+      "camera_mm": 2,
+      "slot_constraints_clear": true,
+      "mechanical_clear": false,
+      "hypothetical_body_clear": false,
+      "service_usb_solids_clear": true,
+      "overlaps_mm3": {
+        "cradle/antenna_support": 0.77597,
+        "stage_screws/antenna_support": 1.55194
+      },
+      "outside_body_mm3": {
+        "charge": 12.4235
+      },
+      "service_usb_hits_mm3": {},
+      "wire_routing_verified": false
+    },
+    {
+      "electronics_mm": -2,
+      "camera_mm": 3,
+      "slot_constraints_clear": true,
+      "mechanical_clear": true,
+      "hypothetical_body_clear": false,
+      "service_usb_solids_clear": true,
+      "overlaps_mm3": {},
+      "outside_body_mm3": {
+        "charge": 12.4235
+      },
+      "service_usb_hits_mm3": {},
+      "wire_routing_verified": false
+    },
+    {
+      "electronics_mm": -2,
+      "camera_mm": 4,
+      "slot_constraints_clear": true,
+      "mechanical_clear": true,
+      "hypothetical_body_clear": false,
+      "service_usb_solids_clear": true,
+      "overlaps_mm3": {},
+      "outside_body_mm3": {
+        "charge": 12.4235
+      },
+      "service_usb_hits_mm3": {},
+      "wire_routing_verified": false
+    },
+    {
+      "electronics_mm": -2,
+      "camera_mm": 5,
+      "slot_constraints_clear": true,
+      "mechanical_clear": true,
+      "hypothetical_body_clear": false,
+      "service_usb_solids_clear": true,
+      "overlaps_mm3": {},
+      "outside_body_mm3": {
+        "charge": 12.4235
+      },
+      "service_usb_hits_mm3": {},
+      "wire_routing_verified": false
+    },
+    {
+      "electronics_mm": -2,
+      "camera_mm": 6,
+      "slot_constraints_clear": true,
+      "mechanical_clear": true,
+      "hypothetical_body_clear": false,
+      "service_usb_solids_clear": true,
+      "overlaps_mm3": {},
+      "outside_body_mm3": {
+        "charge": 12.4235
+      },
+      "service_usb_hits_mm3": {},
+      "wire_routing_verified": false
+    },
+    {
+      "electronics_mm": -2,
+      "camera_mm": 7,
+      "slot_constraints_clear": true,
+      "mechanical_clear": true,
+      "hypothetical_body_clear": false,
+      "service_usb_solids_clear": true,
+      "overlaps_mm3": {},
+      "outside_body_mm3": {
+        "charge": 12.4235
+      },
+      "service_usb_hits_mm3": {},
+      "wire_routing_verified": false
+    },
+    {
+      "electronics_mm": -2,
+      "camera_mm": 8,
+      "slot_constraints_clear": true,
+      "mechanical_clear": true,
+      "hypothetical_body_clear": false,
+      "service_usb_solids_clear": true,
+      "overlaps_mm3": {},
+      "outside_body_mm3": {
+        "charge": 12.4235
+      },
+      "service_usb_hits_mm3": {},
+      "wire_routing_verified": false
+    },
+    {
+      "electronics_mm": -1,
+      "camera_mm": -3,
+      "slot_constraints_clear": false,
+      "mechanical_clear": false,
+      "hypothetical_body_clear": true,
+      "service_usb_solids_clear": false,
+      "overlaps_mm3": {
+        "cradle/antenna_support": 0.53597,
+        "stage_screws/antenna_support": 1.07194,
+        "stage_screws/usb-base": 6.26522,
+        "stage_screws/usb-pcb": 6.7088,
+        "buck/cradle": 119.93404,
+        "buck/cap": 12.98636,
+        "buck/camera_components": 128.99687,
+        "driver/cradle": 135.21161,
+        "tray/cradle": 31.41442,
+        "tray/camera_components": 21.95765
+      },
+      "outside_body_mm3": {},
+      "service_usb_hits_mm3": {
+        "driver": 95.646,
+        "tray": 36.6
+      },
+      "wire_routing_verified": false
+    },
+    {
+      "electronics_mm": -1,
+      "camera_mm": -2,
+      "slot_constraints_clear": false,
+      "mechanical_clear": false,
+      "hypothetical_body_clear": true,
+      "service_usb_solids_clear": false,
+      "overlaps_mm3": {
+        "cradle/antenna_support": 3.95391,
+        "stage_screws/antenna_support": 2.87999,
+        "stage_screws/usb-base": 6.26522,
+        "stage_screws/usb-pcb": 4.22564,
+        "buck/cradle": 130.39237,
+        "buck/cap": 6.165,
+        "buck/camera_components": 86.87557,
+        "driver/cradle": 73.95987,
+        "tray/cradle": 30.51442
+      },
+      "outside_body_mm3": {},
+      "service_usb_hits_mm3": {
+        "driver": 31.882,
+        "tray": 21.96
+      },
+      "wire_routing_verified": false
+    },
+    {
+      "electronics_mm": -1,
+      "camera_mm": -1,
+      "slot_constraints_clear": false,
+      "mechanical_clear": false,
+      "hypothetical_body_clear": true,
+      "service_usb_solids_clear": false,
+      "overlaps_mm3": {
+        "cradle/antenna_support": 0.63731,
+        "stage_screws/antenna_support": 7.5726,
+        "stage_screws/usb-base": 6.02566,
+        "stage_screws/usb-pcb": 2.07172,
+        "buck/cradle": 126.95325,
+        "buck/cap": 2.0,
+        "buck/camera_components": 30.5377,
+        "driver/cradle": 21.5,
+        "tray/cradle": 13.98973
+      },
+      "outside_body_mm3": {},
+      "service_usb_hits_mm3": {
+        "tray": 7.32
+      },
+      "wire_routing_verified": false
+    },
+    {
+      "electronics_mm": -1,
+      "camera_mm": 0,
+      "slot_constraints_clear": false,
+      "mechanical_clear": false,
+      "hypothetical_body_clear": true,
+      "service_usb_solids_clear": true,
+      "overlaps_mm3": {
+        "cradle/antenna_support": 0.15982,
+        "stage_screws/antenna_support": 8.67658,
+        "stage_screws/usb-base": 2.95562,
+        "buck/cradle": 99.55987,
+        "driver/cradle": 10.75
+      },
+      "outside_body_mm3": {},
+      "service_usb_hits_mm3": {},
+      "wire_routing_verified": false
+    },
+    {
+      "electronics_mm": -1,
+      "camera_mm": 1,
+      "slot_constraints_clear": true,
+      "mechanical_clear": false,
+      "hypothetical_body_clear": true,
+      "service_usb_solids_clear": true,
+      "overlaps_mm3": {
+        "cradle/antenna_support": 3.86462,
+        "stage_screws/antenna_support": 3.46789,
+        "buck/cradle": 11.95988
+      },
+      "outside_body_mm3": {},
+      "service_usb_hits_mm3": {},
+      "wire_routing_verified": false
+    },
+    {
+      "electronics_mm": -1,
+      "camera_mm": 2,
+      "slot_constraints_clear": true,
+      "mechanical_clear": false,
+      "hypothetical_body_clear": true,
+      "service_usb_solids_clear": true,
+      "overlaps_mm3": {
+        "cradle/antenna_support": 0.77597,
+        "stage_screws/antenna_support": 1.55194
+      },
+      "outside_body_mm3": {},
+      "service_usb_hits_mm3": {},
+      "wire_routing_verified": false
+    },
+    {
+      "electronics_mm": -1,
+      "camera_mm": 3,
+      "slot_constraints_clear": true,
+      "mechanical_clear": true,
+      "hypothetical_body_clear": true,
+      "service_usb_solids_clear": true,
+      "overlaps_mm3": {},
+      "outside_body_mm3": {},
+      "service_usb_hits_mm3": {},
+      "wire_routing_verified": false
+    },
+    {
+      "electronics_mm": -1,
+      "camera_mm": 4,
+      "slot_constraints_clear": true,
+      "mechanical_clear": true,
+      "hypothetical_body_clear": true,
+      "service_usb_solids_clear": true,
+      "overlaps_mm3": {},
+      "outside_body_mm3": {},
+      "service_usb_hits_mm3": {},
+      "wire_routing_verified": false
+    },
+    {
+      "electronics_mm": -1,
+      "camera_mm": 5,
+      "slot_constraints_clear": true,
+      "mechanical_clear": true,
+      "hypothetical_body_clear": true,
+      "service_usb_solids_clear": true,
+      "overlaps_mm3": {},
+      "outside_body_mm3": {},
+      "service_usb_hits_mm3": {},
+      "wire_routing_verified": false
+    },
+    {
+      "electronics_mm": -1,
+      "camera_mm": 6,
+      "slot_constraints_clear": true,
+      "mechanical_clear": true,
+      "hypothetical_body_clear": true,
+      "service_usb_solids_clear": true,
+      "overlaps_mm3": {},
+      "outside_body_mm3": {},
+      "service_usb_hits_mm3": {},
+      "wire_routing_verified": false
+    },
+    {
+      "electronics_mm": -1,
+      "camera_mm": 7,
+      "slot_constraints_clear": true,
+      "mechanical_clear": true,
+      "hypothetical_body_clear": true,
+      "service_usb_solids_clear": true,
+      "overlaps_mm3": {},
+      "outside_body_mm3": {},
+      "service_usb_hits_mm3": {},
+      "wire_routing_verified": false
+    },
+    {
+      "electronics_mm": -1,
+      "camera_mm": 8,
+      "slot_constraints_clear": true,
+      "mechanical_clear": true,
+      "hypothetical_body_clear": true,
+      "service_usb_solids_clear": true,
+      "overlaps_mm3": {},
+      "outside_body_mm3": {},
+      "service_usb_hits_mm3": {},
+      "wire_routing_verified": false
+    },
+    {
+      "electronics_mm": 0,
+      "camera_mm": -3,
+      "slot_constraints_clear": false,
+      "mechanical_clear": false,
+      "hypothetical_body_clear": true,
+      "service_usb_solids_clear": false,
+      "overlaps_mm3": {
+        "cradle/antenna_support": 0.53597,
+        "stage_screws/antenna_support": 1.07194,
+        "stage_screws/usb-base": 6.26522,
+        "stage_screws/usb-pcb": 6.7088,
+        "buck/cradle": 126.32841,
+        "buck/cap": 10.69033,
+        "buck/camera_components": 161.38768,
+        "driver/cradle": 137.5516,
+        "driver/cap": 1.40141,
+        "driver/camera_components": 88.36355,
+        "tray/cradle": 31.81942,
+        "tray/camera_components": 42.59313
+      },
+      "outside_body_mm3": {},
+      "service_usb_hits_mm3": {
+        "driver": 159.41,
+        "tray": 51.24
+      },
+      "wire_routing_verified": false
+    },
+    {
+      "electronics_mm": 0,
+      "camera_mm": -2,
+      "slot_constraints_clear": false,
+      "mechanical_clear": false,
+      "hypothetical_body_clear": true,
+      "service_usb_solids_clear": false,
+      "overlaps_mm3": {
+        "cradle/antenna_support": 3.95391,
+        "stage_screws/antenna_support": 2.87999,
+        "stage_screws/usb-base": 6.26522,
+        "stage_screws/usb-pcb": 4.22564,
+        "buck/cradle": 119.93404,
+        "buck/cap": 12.98636,
+        "buck/camera_components": 128.99687,
+        "driver/cradle": 135.21161,
+        "tray/cradle": 31.41442,
+        "tray/camera_components": 21.95765
+      },
+      "outside_body_mm3": {},
+      "service_usb_hits_mm3": {
+        "driver": 95.646,
+        "tray": 36.6
+      },
+      "wire_routing_verified": false
+    },
+    {
+      "electronics_mm": 0,
+      "camera_mm": -1,
+      "slot_constraints_clear": false,
+      "mechanical_clear": false,
+      "hypothetical_body_clear": true,
+      "service_usb_solids_clear": false,
+      "overlaps_mm3": {
+        "cradle/antenna_support": 0.63731,
+        "stage_screws/antenna_support": 7.5726,
+        "stage_screws/usb-base": 6.02566,
+        "stage_screws/usb-pcb": 2.07172,
+        "buck/cradle": 130.39237,
+        "buck/cap": 6.165,
+        "buck/camera_components": 86.87557,
+        "driver/cradle": 73.95987,
+        "tray/cradle": 30.51442
+      },
+      "outside_body_mm3": {},
+      "service_usb_hits_mm3": {
+        "driver": 31.882,
+        "tray": 21.96
+      },
+      "wire_routing_verified": false
+    },
+    {
+      "electronics_mm": 0,
+      "camera_mm": 0,
+      "slot_constraints_clear": false,
+      "mechanical_clear": false,
+      "hypothetical_body_clear": true,
+      "service_usb_solids_clear": false,
+      "overlaps_mm3": {
+        "cradle/antenna_support": 0.15982,
+        "stage_screws/antenna_support": 8.67658,
+        "stage_screws/usb-base": 2.95562,
+        "buck/cradle": 126.95325,
+        "buck/cap": 2.0,
+        "buck/camera_components": 30.5377,
+        "driver/cradle": 21.5,
+        "tray/cradle": 13.98973
+      },
+      "outside_body_mm3": {},
+      "service_usb_hits_mm3": {
+        "tray": 7.32
+      },
+      "wire_routing_verified": false
+    },
+    {
+      "electronics_mm": 0,
+      "camera_mm": 1,
+      "slot_constraints_clear": true,
+      "mechanical_clear": false,
+      "hypothetical_body_clear": true,
+      "service_usb_solids_clear": true,
+      "overlaps_mm3": {
+        "cradle/antenna_support": 3.86462,
+        "stage_screws/antenna_support": 3.46789,
+        "buck/cradle": 99.55987,
+        "driver/cradle": 10.75
+      },
+      "outside_body_mm3": {},
+      "service_usb_hits_mm3": {},
+      "wire_routing_verified": false
+    },
+    {
+      "electronics_mm": 0,
+      "camera_mm": 2,
+      "slot_constraints_clear": true,
+      "mechanical_clear": false,
+      "hypothetical_body_clear": true,
+      "service_usb_solids_clear": true,
+      "overlaps_mm3": {
+        "cradle/antenna_support": 0.77597,
+        "stage_screws/antenna_support": 1.55194,
+        "buck/cradle": 11.95988
+      },
+      "outside_body_mm3": {},
+      "service_usb_hits_mm3": {},
+      "wire_routing_verified": false
+    },
+    {
+      "electronics_mm": 0,
+      "camera_mm": 3,
+      "slot_constraints_clear": true,
+      "mechanical_clear": true,
+      "hypothetical_body_clear": true,
+      "service_usb_solids_clear": true,
+      "overlaps_mm3": {},
+      "outside_body_mm3": {},
+      "service_usb_hits_mm3": {},
+      "wire_routing_verified": true
+    },
+    {
+      "electronics_mm": 0,
+      "camera_mm": 4,
+      "slot_constraints_clear": true,
+      "mechanical_clear": true,
+      "hypothetical_body_clear": true,
+      "service_usb_solids_clear": true,
+      "overlaps_mm3": {},
+      "outside_body_mm3": {},
+      "service_usb_hits_mm3": {},
+      "wire_routing_verified": false
+    },
+    {
+      "electronics_mm": 0,
+      "camera_mm": 5,
+      "slot_constraints_clear": true,
+      "mechanical_clear": true,
+      "hypothetical_body_clear": true,
+      "service_usb_solids_clear": true,
+      "overlaps_mm3": {},
+      "outside_body_mm3": {},
+      "service_usb_hits_mm3": {},
+      "wire_routing_verified": false
+    },
+    {
+      "electronics_mm": 0,
+      "camera_mm": 6,
+      "slot_constraints_clear": true,
+      "mechanical_clear": true,
+      "hypothetical_body_clear": true,
+      "service_usb_solids_clear": true,
+      "overlaps_mm3": {},
+      "outside_body_mm3": {},
+      "service_usb_hits_mm3": {},
+      "wire_routing_verified": false
+    },
+    {
+      "electronics_mm": 0,
+      "camera_mm": 7,
+      "slot_constraints_clear": true,
+      "mechanical_clear": true,
+      "hypothetical_body_clear": true,
+      "service_usb_solids_clear": true,
+      "overlaps_mm3": {},
+      "outside_body_mm3": {},
+      "service_usb_hits_mm3": {},
+      "wire_routing_verified": false
+    },
+    {
+      "electronics_mm": 0,
+      "camera_mm": 8,
+      "slot_constraints_clear": true,
+      "mechanical_clear": true,
+      "hypothetical_body_clear": true,
+      "service_usb_solids_clear": true,
+      "overlaps_mm3": {},
+      "outside_body_mm3": {},
+      "service_usb_hits_mm3": {},
+      "wire_routing_verified": false
+    },
+    {
+      "electronics_mm": 1,
+      "camera_mm": -3,
+      "slot_constraints_clear": false,
+      "mechanical_clear": false,
+      "hypothetical_body_clear": true,
+      "service_usb_solids_clear": false,
+      "overlaps_mm3": {
+        "cradle/antenna_support": 0.53597,
+        "stage_screws/antenna_support": 1.07194,
+        "stage_screws/usb-base": 6.26522,
+        "stage_screws/usb-pcb": 6.7088,
+        "buck/cradle": 135.30931,
+        "buck/cap": 7.04388,
+        "buck/camera_components": 192.99709,
+        "driver/cradle": 138.60459,
+        "driver/cap": 4.20423,
+        "driver/camera_components": 160.24841,
+        "tray/cradle": 30.85942,
+        "tray/camera_components": 61.17048,
+        "main_screws/cradle": 0.26985,
+        "main_screws/stage_screws": 0.07076
+      },
+      "outside_body_mm3": {},
+      "service_usb_hits_mm3": {
+        "driver": 223.17399,
+        "tray": 66.255
+      },
+      "wire_routing_verified": false
+    },
+    {
+      "electronics_mm": 1,
+      "camera_mm": -2,
+      "slot_constraints_clear": false,
+      "mechanical_clear": false,
+      "hypothetical_body_clear": true,
+      "service_usb_solids_clear": false,
+      "overlaps_mm3": {
+        "cradle/antenna_support": 3.95391,
+        "stage_screws/antenna_support": 2.87999,
+        "stage_screws/usb-base": 6.26522,
+        "stage_screws/usb-pcb": 4.22564,
+        "buck/cradle": 126.32841,
+        "buck/cap": 10.69033,
+        "buck/camera_components": 161.38768,
+        "driver/cradle": 137.5516,
+        "driver/cap": 1.40141,
+        "driver/camera_components": 88.36355,
+        "tray/cradle": 31.81942,
+        "tray/camera_components": 42.59313
+      },
+      "outside_body_mm3": {},
+      "service_usb_hits_mm3": {
+        "driver": 159.41,
+        "tray": 51.24
+      },
+      "wire_routing_verified": false
+    },
+    {
+      "electronics_mm": 1,
+      "camera_mm": -1,
+      "slot_constraints_clear": false,
+      "mechanical_clear": false,
+      "hypothetical_body_clear": true,
+      "service_usb_solids_clear": false,
+      "overlaps_mm3": {
+        "cradle/antenna_support": 0.63731,
+        "stage_screws/antenna_support": 7.5726,
+        "stage_screws/usb-base": 6.02566,
+        "stage_screws/usb-pcb": 2.07172,
+        "buck/cradle": 119.93404,
+        "buck/cap": 12.98636,
+        "buck/camera_components": 128.99687,
+        "driver/cradle": 135.21161,
+        "tray/cradle": 31.41442,
+        "tray/camera_components": 21.95765
+      },
+      "outside_body_mm3": {},
+      "service_usb_hits_mm3": {
+        "driver": 95.646,
+        "tray": 36.6
+      },
+      "wire_routing_verified": false
+    },
+    {
+      "electronics_mm": 1,
+      "camera_mm": 0,
+      "slot_constraints_clear": false,
+      "mechanical_clear": false,
+      "hypothetical_body_clear": true,
+      "service_usb_solids_clear": false,
+      "overlaps_mm3": {
+        "cradle/antenna_support": 0.15982,
+        "stage_screws/antenna_support": 8.67658,
+        "stage_screws/usb-base": 2.95562,
+        "buck/cradle": 130.39237,
+        "buck/cap": 6.165,
+        "buck/camera_components": 86.87557,
+        "driver/cradle": 73.95987,
+        "tray/cradle": 30.51442
+      },
+      "outside_body_mm3": {},
+      "service_usb_hits_mm3": {
+        "driver": 31.882,
+        "tray": 21.96
+      },
+      "wire_routing_verified": false
+    },
+    {
+      "electronics_mm": 1,
+      "camera_mm": 1,
+      "slot_constraints_clear": true,
+      "mechanical_clear": false,
+      "hypothetical_body_clear": true,
+      "service_usb_solids_clear": false,
+      "overlaps_mm3": {
+        "cradle/antenna_support": 3.86462,
+        "stage_screws/antenna_support": 3.46789,
+        "buck/cradle": 126.95325,
+        "buck/cap": 2.0,
+        "buck/camera_components": 30.5377,
+        "driver/cradle": 21.5,
+        "tray/cradle": 13.98973
+      },
+      "outside_body_mm3": {},
+      "service_usb_hits_mm3": {
+        "tray": 7.32
+      },
+      "wire_routing_verified": false
+    },
+    {
+      "electronics_mm": 1,
+      "camera_mm": 2,
+      "slot_constraints_clear": true,
+      "mechanical_clear": false,
+      "hypothetical_body_clear": true,
+      "service_usb_solids_clear": true,
+      "overlaps_mm3": {
+        "cradle/antenna_support": 0.77597,
+        "stage_screws/antenna_support": 1.55194,
+        "buck/cradle": 99.55987,
+        "driver/cradle": 10.75
+      },
+      "outside_body_mm3": {},
+      "service_usb_hits_mm3": {},
+      "wire_routing_verified": false
+    },
+    {
+      "electronics_mm": 1,
+      "camera_mm": 3,
+      "slot_constraints_clear": true,
+      "mechanical_clear": false,
+      "hypothetical_body_clear": true,
+      "service_usb_solids_clear": true,
+      "overlaps_mm3": {
+        "buck/cradle": 11.95988
+      },
+      "outside_body_mm3": {},
+      "service_usb_hits_mm3": {},
+      "wire_routing_verified": false
+    },
+    {
+      "electronics_mm": 1,
+      "camera_mm": 4,
+      "slot_constraints_clear": true,
+      "mechanical_clear": true,
+      "hypothetical_body_clear": true,
+      "service_usb_solids_clear": true,
+      "overlaps_mm3": {},
+      "outside_body_mm3": {},
+      "service_usb_hits_mm3": {},
+      "wire_routing_verified": false
+    },
+    {
+      "electronics_mm": 1,
+      "camera_mm": 5,
+      "slot_constraints_clear": true,
+      "mechanical_clear": true,
+      "hypothetical_body_clear": true,
+      "service_usb_solids_clear": true,
+      "overlaps_mm3": {},
+      "outside_body_mm3": {},
+      "service_usb_hits_mm3": {},
+      "wire_routing_verified": false
+    },
+    {
+      "electronics_mm": 1,
+      "camera_mm": 6,
+      "slot_constraints_clear": true,
+      "mechanical_clear": true,
+      "hypothetical_body_clear": true,
+      "service_usb_solids_clear": true,
+      "overlaps_mm3": {},
+      "outside_body_mm3": {},
+      "service_usb_hits_mm3": {},
+      "wire_routing_verified": false
+    },
+    {
+      "electronics_mm": 1,
+      "camera_mm": 7,
+      "slot_constraints_clear": true,
+      "mechanical_clear": true,
+      "hypothetical_body_clear": true,
+      "service_usb_solids_clear": true,
+      "overlaps_mm3": {},
+      "outside_body_mm3": {},
+      "service_usb_hits_mm3": {},
+      "wire_routing_verified": false
+    },
+    {
+      "electronics_mm": 1,
+      "camera_mm": 8,
+      "slot_constraints_clear": true,
+      "mechanical_clear": true,
+      "hypothetical_body_clear": true,
+      "service_usb_solids_clear": true,
+      "overlaps_mm3": {},
+      "outside_body_mm3": {},
+      "service_usb_hits_mm3": {},
+      "wire_routing_verified": false
+    },
+    {
+      "electronics_mm": 2,
+      "camera_mm": -3,
+      "slot_constraints_clear": false,
+      "mechanical_clear": false,
+      "hypothetical_body_clear": true,
+      "service_usb_solids_clear": false,
+      "overlaps_mm3": {
+        "cradle/antenna_support": 0.53597,
+        "stage_screws/antenna_support": 1.07194,
+        "stage_screws/usb-base": 6.26522,
+        "stage_screws/usb-pcb": 6.7088,
+        "buck/cradle": 135.7449,
+        "buck/cap": 6.71554,
+        "buck/camera_components": 255.61221,
+        "driver/cradle": 138.60459,
+        "driver/cap": 7.00704,
+        "driver/camera_components": 221.2532,
+        "tray/cradle": 29.73943,
+        "tray/camera_components": 70.29792,
+        "main_screws/cradle": 0.60743,
+        "main_screws/stage_screws": 0.53264
+      },
+      "outside_body_mm3": {},
+      "service_usb_hits_mm3": {
+        "driver": 286.93799,
+        "tray": 81.645
+      },
+      "wire_routing_verified": false
+    },
+    {
+      "electronics_mm": 2,
+      "camera_mm": -2,
+      "slot_constraints_clear": false,
+      "mechanical_clear": false,
+      "hypothetical_body_clear": true,
+      "service_usb_solids_clear": false,
+      "overlaps_mm3": {
+        "cradle/antenna_support": 3.95391,
+        "stage_screws/antenna_support": 2.87999,
+        "stage_screws/usb-base": 6.26522,
+        "stage_screws/usb-pcb": 4.22564,
+        "buck/cradle": 135.30931,
+        "buck/cap": 7.04388,
+        "buck/camera_components": 192.99709,
+        "driver/cradle": 138.60459,
+        "driver/cap": 4.20423,
+        "driver/camera_components": 160.24841,
+        "tray/cradle": 30.85942,
+        "tray/camera_components": 61.17048,
+        "main_screws/cradle": 0.26985,
+        "main_screws/stage_screws": 0.07076
+      },
+      "outside_body_mm3": {},
+      "service_usb_hits_mm3": {
+        "driver": 223.17399,
+        "tray": 66.255
+      },
+      "wire_routing_verified": false
+    },
+    {
+      "electronics_mm": 2,
+      "camera_mm": -1,
+      "slot_constraints_clear": false,
+      "mechanical_clear": false,
+      "hypothetical_body_clear": true,
+      "service_usb_solids_clear": false,
+      "overlaps_mm3": {
+        "cradle/antenna_support": 0.63731,
+        "stage_screws/antenna_support": 7.5726,
+        "stage_screws/usb-base": 6.02566,
+        "stage_screws/usb-pcb": 2.07172,
+        "buck/cradle": 126.32841,
+        "buck/cap": 10.69033,
+        "buck/camera_components": 161.38768,
+        "driver/cradle": 137.5516,
+        "driver/cap": 1.40141,
+        "driver/camera_components": 88.36355,
+        "tray/cradle": 31.81942,
+        "tray/camera_components": 42.59313
+      },
+      "outside_body_mm3": {},
+      "service_usb_hits_mm3": {
+        "driver": 159.41,
+        "tray": 51.24
+      },
+      "wire_routing_verified": false
+    },
+    {
+      "electronics_mm": 2,
+      "camera_mm": 0,
+      "slot_constraints_clear": false,
+      "mechanical_clear": false,
+      "hypothetical_body_clear": true,
+      "service_usb_solids_clear": false,
+      "overlaps_mm3": {
+        "cradle/antenna_support": 0.15982,
+        "stage_screws/antenna_support": 8.67658,
+        "stage_screws/usb-base": 2.95562,
+        "buck/cradle": 119.93404,
+        "buck/cap": 12.98636,
+        "buck/camera_components": 128.99687,
+        "driver/cradle": 135.21161,
+        "tray/cradle": 31.41442,
+        "tray/camera_components": 21.95765
+      },
+      "outside_body_mm3": {},
+      "service_usb_hits_mm3": {
+        "driver": 95.646,
+        "tray": 36.6
+      },
+      "wire_routing_verified": false
+    },
+    {
+      "electronics_mm": 2,
+      "camera_mm": 1,
+      "slot_constraints_clear": true,
+      "mechanical_clear": false,
+      "hypothetical_body_clear": true,
+      "service_usb_solids_clear": false,
+      "overlaps_mm3": {
+        "cradle/antenna_support": 3.86462,
+        "stage_screws/antenna_support": 3.46789,
+        "buck/cradle": 130.39237,
+        "buck/cap": 6.165,
+        "buck/camera_components": 86.87557,
+        "driver/cradle": 73.95987,
+        "tray/cradle": 30.51442
+      },
+      "outside_body_mm3": {},
+      "service_usb_hits_mm3": {
+        "driver": 31.882,
+        "tray": 21.96
+      },
+      "wire_routing_verified": false
+    },
+    {
+      "electronics_mm": 2,
+      "camera_mm": 2,
+      "slot_constraints_clear": true,
+      "mechanical_clear": false,
+      "hypothetical_body_clear": true,
+      "service_usb_solids_clear": false,
+      "overlaps_mm3": {
+        "cradle/antenna_support": 0.77597,
+        "stage_screws/antenna_support": 1.55194,
+        "buck/cradle": 126.95325,
+        "buck/cap": 2.0,
+        "buck/camera_components": 30.5377,
+        "driver/cradle": 21.5,
+        "tray/cradle": 13.98973
+      },
+      "outside_body_mm3": {},
+      "service_usb_hits_mm3": {
+        "tray": 7.32
+      },
+      "wire_routing_verified": false
+    },
+    {
+      "electronics_mm": 2,
+      "camera_mm": 3,
+      "slot_constraints_clear": true,
+      "mechanical_clear": false,
+      "hypothetical_body_clear": true,
+      "service_usb_solids_clear": true,
+      "overlaps_mm3": {
+        "buck/cradle": 99.55987,
+        "driver/cradle": 10.75
+      },
+      "outside_body_mm3": {},
+      "service_usb_hits_mm3": {},
+      "wire_routing_verified": false
+    },
+    {
+      "electronics_mm": 2,
+      "camera_mm": 4,
+      "slot_constraints_clear": true,
+      "mechanical_clear": false,
+      "hypothetical_body_clear": true,
+      "service_usb_solids_clear": true,
+      "overlaps_mm3": {
+        "buck/cradle": 11.95988
+      },
+      "outside_body_mm3": {},
+      "service_usb_hits_mm3": {},
+      "wire_routing_verified": false
+    },
+    {
+      "electronics_mm": 2,
+      "camera_mm": 5,
+      "slot_constraints_clear": true,
+      "mechanical_clear": true,
+      "hypothetical_body_clear": true,
+      "service_usb_solids_clear": true,
+      "overlaps_mm3": {},
+      "outside_body_mm3": {},
+      "service_usb_hits_mm3": {},
+      "wire_routing_verified": false
+    },
+    {
+      "electronics_mm": 2,
+      "camera_mm": 6,
+      "slot_constraints_clear": true,
+      "mechanical_clear": true,
+      "hypothetical_body_clear": true,
+      "service_usb_solids_clear": true,
+      "overlaps_mm3": {},
+      "outside_body_mm3": {},
+      "service_usb_hits_mm3": {},
+      "wire_routing_verified": false
+    },
+    {
+      "electronics_mm": 2,
+      "camera_mm": 7,
+      "slot_constraints_clear": true,
+      "mechanical_clear": true,
+      "hypothetical_body_clear": true,
+      "service_usb_solids_clear": true,
+      "overlaps_mm3": {},
+      "outside_body_mm3": {},
+      "service_usb_hits_mm3": {},
+      "wire_routing_verified": false
+    },
+    {
+      "electronics_mm": 2,
+      "camera_mm": 8,
+      "slot_constraints_clear": true,
+      "mechanical_clear": true,
+      "hypothetical_body_clear": true,
+      "service_usb_solids_clear": true,
+      "overlaps_mm3": {},
+      "outside_body_mm3": {},
+      "service_usb_hits_mm3": {},
+      "wire_routing_verified": false
+    },
+    {
+      "electronics_mm": 3,
+      "camera_mm": -3,
+      "slot_constraints_clear": false,
+      "mechanical_clear": false,
+      "hypothetical_body_clear": true,
+      "service_usb_solids_clear": false,
+      "overlaps_mm3": {
+        "cradle/antenna_support": 0.53597,
+        "stage_screws/antenna_support": 1.07194,
+        "stage_screws/usb-base": 6.26522,
+        "stage_screws/usb-pcb": 6.7088,
+        "buck/cradle": 87.07533,
+        "buck/cap": 10.31741,
+        "buck/camera_components": 307.5375,
+        "pads/cradle": 4.31999,
+        "driver/cradle": 138.60459,
+        "driver/cap": 8.40845,
+        "driver/camera_components": 273.47528,
+        "tray/cradle": 28.77943,
+        "tray/camera_components": 83.71227,
+        "main_screws/cradle": 0.26985,
+        "main_screws/stage_screws": 0.07076
+      },
+      "outside_body_mm3": {},
+      "service_usb_hits_mm3": {
+        "pads": 1.3,
+        "driver": 350.70199,
+        "tray": 96.235
+      },
+      "wire_routing_verified": false
+    },
+    {
+      "electronics_mm": 3,
+      "camera_mm": -2,
+      "slot_constraints_clear": false,
+      "mechanical_clear": false,
+      "hypothetical_body_clear": true,
+      "service_usb_solids_clear": false,
+      "overlaps_mm3": {
+        "cradle/antenna_support": 3.95391,
+        "stage_screws/antenna_support": 2.87999,
+        "stage_screws/usb-base": 6.26522,
+        "stage_screws/usb-pcb": 4.22564,
+        "buck/cradle": 135.7449,
+        "buck/cap": 6.71554,
+        "buck/camera_components": 255.61221,
+        "driver/cradle": 138.60459,
+        "driver/cap": 7.00704,
+        "driver/camera_components": 221.2532,
+        "tray/cradle": 29.73943,
+        "tray/camera_components": 70.29792,
+        "main_screws/cradle": 0.60743,
+        "main_screws/stage_screws": 0.53264
+      },
+      "outside_body_mm3": {},
+      "service_usb_hits_mm3": {
+        "driver": 286.93799,
+        "tray": 81.645
+      },
+      "wire_routing_verified": false
+    },
+    {
+      "electronics_mm": 3,
+      "camera_mm": -1,
+      "slot_constraints_clear": false,
+      "mechanical_clear": false,
+      "hypothetical_body_clear": true,
+      "service_usb_solids_clear": false,
+      "overlaps_mm3": {
+        "cradle/antenna_support": 0.63731,
+        "stage_screws/antenna_support": 7.5726,
+        "stage_screws/usb-base": 6.02566,
+        "stage_screws/usb-pcb": 2.07172,
+        "buck/cradle": 135.30931,
+        "buck/cap": 7.04388,
+        "buck/camera_components": 192.99709,
+        "driver/cradle": 138.60459,
+        "driver/cap": 4.20423,
+        "driver/camera_components": 160.24841,
+        "tray/cradle": 30.85942,
+        "tray/camera_components": 61.17048,
+        "main_screws/cradle": 0.26985,
+        "main_screws/stage_screws": 0.07076
+      },
+      "outside_body_mm3": {},
+      "service_usb_hits_mm3": {
+        "driver": 223.17399,
+        "tray": 66.255
+      },
+      "wire_routing_verified": false
+    },
+    {
+      "electronics_mm": 3,
+      "camera_mm": 0,
+      "slot_constraints_clear": false,
+      "mechanical_clear": false,
+      "hypothetical_body_clear": true,
+      "service_usb_solids_clear": false,
+      "overlaps_mm3": {
+        "cradle/antenna_support": 0.15982,
+        "stage_screws/antenna_support": 8.67658,
+        "stage_screws/usb-base": 2.95562,
+        "buck/cradle": 126.32841,
+        "buck/cap": 10.69033,
+        "buck/camera_components": 161.38768,
+        "driver/cradle": 137.5516,
+        "driver/cap": 1.40141,
+        "driver/camera_components": 88.36355,
+        "tray/cradle": 31.81942,
+        "tray/camera_components": 42.59313
+      },
+      "outside_body_mm3": {},
+      "service_usb_hits_mm3": {
+        "driver": 159.41,
+        "tray": 51.24
+      },
+      "wire_routing_verified": false
+    },
+    {
+      "electronics_mm": 3,
+      "camera_mm": 1,
+      "slot_constraints_clear": true,
+      "mechanical_clear": false,
+      "hypothetical_body_clear": true,
+      "service_usb_solids_clear": false,
+      "overlaps_mm3": {
+        "cradle/antenna_support": 3.86462,
+        "stage_screws/antenna_support": 3.46789,
+        "buck/cradle": 119.93404,
+        "buck/cap": 12.98636,
+        "buck/camera_components": 128.99687,
+        "driver/cradle": 135.21161,
+        "tray/cradle": 31.41442,
+        "tray/camera_components": 21.95765
+      },
+      "outside_body_mm3": {},
+      "service_usb_hits_mm3": {
+        "driver": 95.646,
+        "tray": 36.6
+      },
+      "wire_routing_verified": false
+    },
+    {
+      "electronics_mm": 3,
+      "camera_mm": 2,
+      "slot_constraints_clear": true,
+      "mechanical_clear": false,
+      "hypothetical_body_clear": true,
+      "service_usb_solids_clear": false,
+      "overlaps_mm3": {
+        "cradle/antenna_support": 0.77597,
+        "stage_screws/antenna_support": 1.55194,
+        "buck/cradle": 130.39237,
+        "buck/cap": 6.165,
+        "buck/camera_components": 86.87557,
+        "driver/cradle": 73.95987,
+        "tray/cradle": 30.51442
+      },
+      "outside_body_mm3": {},
+      "service_usb_hits_mm3": {
+        "driver": 31.882,
+        "tray": 21.96
+      },
+      "wire_routing_verified": false
+    },
+    {
+      "electronics_mm": 3,
+      "camera_mm": 3,
+      "slot_constraints_clear": true,
+      "mechanical_clear": false,
+      "hypothetical_body_clear": true,
+      "service_usb_solids_clear": false,
+      "overlaps_mm3": {
+        "buck/cradle": 126.95325,
+        "buck/cap": 2.0,
+        "buck/camera_components": 30.5377,
+        "driver/cradle": 21.5,
+        "tray/cradle": 13.98973
+      },
+      "outside_body_mm3": {},
+      "service_usb_hits_mm3": {
+        "tray": 7.32
+      },
+      "wire_routing_verified": false
+    },
+    {
+      "electronics_mm": 3,
+      "camera_mm": 4,
+      "slot_constraints_clear": true,
+      "mechanical_clear": false,
+      "hypothetical_body_clear": true,
+      "service_usb_solids_clear": true,
+      "overlaps_mm3": {
+        "buck/cradle": 99.55987,
+        "driver/cradle": 10.75
+      },
+      "outside_body_mm3": {},
+      "service_usb_hits_mm3": {},
+      "wire_routing_verified": false
+    },
+    {
+      "electronics_mm": 3,
+      "camera_mm": 5,
+      "slot_constraints_clear": true,
+      "mechanical_clear": false,
+      "hypothetical_body_clear": true,
+      "service_usb_solids_clear": true,
+      "overlaps_mm3": {
+        "buck/cradle": 11.95988
+      },
+      "outside_body_mm3": {},
+      "service_usb_hits_mm3": {},
+      "wire_routing_verified": false
+    },
+    {
+      "electronics_mm": 3,
+      "camera_mm": 6,
+      "slot_constraints_clear": true,
+      "mechanical_clear": true,
+      "hypothetical_body_clear": true,
+      "service_usb_solids_clear": true,
+      "overlaps_mm3": {},
+      "outside_body_mm3": {},
+      "service_usb_hits_mm3": {},
+      "wire_routing_verified": false
+    },
+    {
+      "electronics_mm": 3,
+      "camera_mm": 7,
+      "slot_constraints_clear": true,
+      "mechanical_clear": true,
+      "hypothetical_body_clear": true,
+      "service_usb_solids_clear": true,
+      "overlaps_mm3": {},
+      "outside_body_mm3": {},
+      "service_usb_hits_mm3": {},
+      "wire_routing_verified": false
+    },
+    {
+      "electronics_mm": 3,
+      "camera_mm": 8,
+      "slot_constraints_clear": true,
+      "mechanical_clear": true,
+      "hypothetical_body_clear": true,
+      "service_usb_solids_clear": true,
+      "overlaps_mm3": {},
+      "outside_body_mm3": {},
+      "service_usb_hits_mm3": {},
+      "wire_routing_verified": false
+    },
+    {
+      "electronics_mm": 4,
+      "camera_mm": -3,
+      "slot_constraints_clear": false,
+      "mechanical_clear": false,
+      "hypothetical_body_clear": true,
+      "service_usb_solids_clear": false,
+      "overlaps_mm3": {
+        "cradle/antenna_support": 0.53597,
+        "stage_screws/antenna_support": 1.07194,
+        "stage_screws/usb-base": 6.26522,
+        "stage_screws/usb-pcb": 6.7088,
+        "buck/cradle": 45.44062,
+        "buck/cap": 12.69998,
+        "buck/camera_components": 349.99002,
+        "pads/cradle": 9.35997,
+        "driver/cradle": 138.60459,
+        "driver/cap": 8.40845,
+        "driver/camera_components": 308.40831,
+        "tray/cradle": 27.65943,
+        "tray/camera_components": 94.57817
+      },
+      "outside_body_mm3": {},
+      "service_usb_hits_mm3": {
+        "pads": 3.9,
+        "driver": 414.46599,
+        "tray": 110.025,
+        "main_screws": 5.55849
+      },
+      "wire_routing_verified": false
+    },
+    {
+      "electronics_mm": 4,
+      "camera_mm": -2,
+      "slot_constraints_clear": false,
+      "mechanical_clear": false,
+      "hypothetical_body_clear": true,
+      "service_usb_solids_clear": false,
+      "overlaps_mm3": {
+        "cradle/antenna_support": 3.95391,
+        "stage_screws/antenna_support": 2.87999,
+        "stage_screws/usb-base": 6.26522,
+        "stage_screws/usb-pcb": 4.22564,
+        "buck/cradle": 87.07533,
+        "buck/cap": 10.31741,
+        "buck/camera_components": 307.5375,
+        "pads/cradle": 4.31999,
+        "driver/cradle": 138.60459,
+        "driver/cap": 8.40845,
+        "driver/camera_components": 273.47528,
+        "tray/cradle": 28.77943,
+        "tray/camera_components": 83.71227,
+        "main_screws/cradle": 0.26985,
+        "main_screws/stage_screws": 0.07076
+      },
+      "outside_body_mm3": {},
+      "service_usb_hits_mm3": {
+        "pads": 1.3,
+        "driver": 350.70199,
+        "tray": 96.235
+      },
+      "wire_routing_verified": false
+    },
+    {
+      "electronics_mm": 4,
+      "camera_mm": -1,
+      "slot_constraints_clear": false,
+      "mechanical_clear": false,
+      "hypothetical_body_clear": true,
+      "service_usb_solids_clear": false,
+      "overlaps_mm3": {
+        "cradle/antenna_support": 0.63731,
+        "stage_screws/antenna_support": 7.5726,
+        "stage_screws/usb-base": 6.02566,
+        "stage_screws/usb-pcb": 2.07172,
+        "buck/cradle": 135.7449,
+        "buck/cap": 6.71554,
+        "buck/camera_components": 255.61221,
+        "driver/cradle": 138.60459,
+        "driver/cap": 7.00704,
+        "driver/camera_components": 221.2532,
+        "tray/cradle": 29.73943,
+        "tray/camera_components": 70.29792,
+        "main_screws/cradle": 0.60743,
+        "main_screws/stage_screws": 0.53264
+      },
+      "outside_body_mm3": {},
+      "service_usb_hits_mm3": {
+        "driver": 286.93799,
+        "tray": 81.645
+      },
+      "wire_routing_verified": false
+    },
+    {
+      "electronics_mm": 4,
+      "camera_mm": 0,
+      "slot_constraints_clear": false,
+      "mechanical_clear": false,
+      "hypothetical_body_clear": true,
+      "service_usb_solids_clear": false,
+      "overlaps_mm3": {
+        "cradle/antenna_support": 0.15982,
+        "stage_screws/antenna_support": 8.67658,
+        "stage_screws/usb-base": 2.95562,
+        "buck/cradle": 135.30931,
+        "buck/cap": 7.04388,
+        "buck/camera_components": 192.99709,
+        "driver/cradle": 138.60459,
+        "driver/cap": 4.20423,
+        "driver/camera_components": 160.24841,
+        "tray/cradle": 30.85942,
+        "tray/camera_components": 61.17048,
+        "main_screws/cradle": 0.26985,
+        "main_screws/stage_screws": 0.07076
+      },
+      "outside_body_mm3": {},
+      "service_usb_hits_mm3": {
+        "driver": 223.17399,
+        "tray": 66.255
+      },
+      "wire_routing_verified": false
+    },
+    {
+      "electronics_mm": 4,
+      "camera_mm": 1,
+      "slot_constraints_clear": true,
+      "mechanical_clear": false,
+      "hypothetical_body_clear": true,
+      "service_usb_solids_clear": false,
+      "overlaps_mm3": {
+        "cradle/antenna_support": 3.86462,
+        "stage_screws/antenna_support": 3.46789,
+        "buck/cradle": 126.32841,
+        "buck/cap": 10.69033,
+        "buck/camera_components": 161.38768,
+        "driver/cradle": 137.5516,
+        "driver/cap": 1.40141,
+        "driver/camera_components": 88.36355,
+        "tray/cradle": 31.81942,
+        "tray/camera_components": 42.59313
+      },
+      "outside_body_mm3": {},
+      "service_usb_hits_mm3": {
+        "driver": 159.41,
+        "tray": 51.24
+      },
+      "wire_routing_verified": false
+    },
+    {
+      "electronics_mm": 4,
+      "camera_mm": 2,
+      "slot_constraints_clear": true,
+      "mechanical_clear": false,
+      "hypothetical_body_clear": true,
+      "service_usb_solids_clear": false,
+      "overlaps_mm3": {
+        "cradle/antenna_support": 0.77597,
+        "stage_screws/antenna_support": 1.55194,
+        "buck/cradle": 119.93404,
+        "buck/cap": 12.98636,
+        "buck/camera_components": 128.99687,
+        "driver/cradle": 135.21161,
+        "tray/cradle": 31.41442,
+        "tray/camera_components": 21.95765
+      },
+      "outside_body_mm3": {},
+      "service_usb_hits_mm3": {
+        "driver": 95.646,
+        "tray": 36.6
+      },
+      "wire_routing_verified": false
+    },
+    {
+      "electronics_mm": 4,
+      "camera_mm": 3,
+      "slot_constraints_clear": true,
+      "mechanical_clear": false,
+      "hypothetical_body_clear": true,
+      "service_usb_solids_clear": false,
+      "overlaps_mm3": {
+        "buck/cradle": 130.39237,
+        "buck/cap": 6.165,
+        "buck/camera_components": 86.87557,
+        "driver/cradle": 73.95987,
+        "tray/cradle": 30.51442
+      },
+      "outside_body_mm3": {},
+      "service_usb_hits_mm3": {
+        "driver": 31.882,
+        "tray": 21.96
+      },
+      "wire_routing_verified": false
+    },
+    {
+      "electronics_mm": 4,
+      "camera_mm": 4,
+      "slot_constraints_clear": true,
+      "mechanical_clear": false,
+      "hypothetical_body_clear": true,
+      "service_usb_solids_clear": false,
+      "overlaps_mm3": {
+        "buck/cradle": 126.95325,
+        "buck/cap": 2.0,
+        "buck/camera_components": 30.5377,
+        "driver/cradle": 21.5,
+        "tray/cradle": 13.98973
+      },
+      "outside_body_mm3": {},
+      "service_usb_hits_mm3": {
+        "tray": 7.32
+      },
+      "wire_routing_verified": false
+    },
+    {
+      "electronics_mm": 4,
+      "camera_mm": 5,
+      "slot_constraints_clear": true,
+      "mechanical_clear": false,
+      "hypothetical_body_clear": true,
+      "service_usb_solids_clear": true,
+      "overlaps_mm3": {
+        "buck/cradle": 99.55987,
+        "driver/cradle": 10.75
+      },
+      "outside_body_mm3": {},
+      "service_usb_hits_mm3": {},
+      "wire_routing_verified": false
+    },
+    {
+      "electronics_mm": 4,
+      "camera_mm": 6,
+      "slot_constraints_clear": true,
+      "mechanical_clear": false,
+      "hypothetical_body_clear": true,
+      "service_usb_solids_clear": true,
+      "overlaps_mm3": {
+        "buck/cradle": 11.95988
+      },
+      "outside_body_mm3": {},
+      "service_usb_hits_mm3": {},
+      "wire_routing_verified": false
+    },
+    {
+      "electronics_mm": 4,
+      "camera_mm": 7,
+      "slot_constraints_clear": true,
+      "mechanical_clear": true,
+      "hypothetical_body_clear": true,
+      "service_usb_solids_clear": true,
+      "overlaps_mm3": {},
+      "outside_body_mm3": {},
+      "service_usb_hits_mm3": {},
+      "wire_routing_verified": false
+    },
+    {
+      "electronics_mm": 4,
+      "camera_mm": 8,
+      "slot_constraints_clear": true,
+      "mechanical_clear": true,
+      "hypothetical_body_clear": true,
+      "service_usb_solids_clear": true,
+      "overlaps_mm3": {},
+      "outside_body_mm3": {},
+      "service_usb_hits_mm3": {},
+      "wire_routing_verified": false
+    },
+    {
+      "electronics_mm": 5,
+      "camera_mm": -3,
+      "slot_constraints_clear": false,
+      "mechanical_clear": false,
+      "hypothetical_body_clear": true,
+      "service_usb_solids_clear": false,
+      "overlaps_mm3": {
+        "cradle/antenna_support": 0.53597,
+        "stage_screws/antenna_support": 1.07194,
+        "stage_screws/usb-base": 6.26522,
+        "stage_screws/usb-pcb": 6.7088,
+        "buck/cradle": 39.80861,
+        "buck/cap": 8.69998,
+        "buck/camera_components": 296.97075,
+        "pads/cradle": 9.35997,
+        "pads/camera_components": 7.2,
+        "driver/cradle": 138.60459,
+        "driver/cap": 8.40845,
+        "driver/camera_components": 320.99131,
+        "tray/cradle": 27.65943,
+        "tray/camera_components": 104.09158,
+        "main_screws/cradle": 0.26986,
+        "main_screws/stage_screws": 0.07075
+      },
+      "outside_body_mm3": {},
+      "service_usb_hits_mm3": {
+        "pads": 6.50001,
+        "driver": 478.22999,
+        "tray": 108.08214,
+        "main_screws": 15.29215
+      },
+      "wire_routing_verified": false
+    },
+    {
+      "electronics_mm": 5,
+      "camera_mm": -2,
+      "slot_constraints_clear": false,
+      "mechanical_clear": false,
+      "hypothetical_body_clear": true,
+      "service_usb_solids_clear": false,
+      "overlaps_mm3": {
+        "cradle/antenna_support": 3.95391,
+        "stage_screws/antenna_support": 2.87999,
+        "stage_screws/usb-base": 6.26522,
+        "stage_screws/usb-pcb": 4.22564,
+        "buck/cradle": 45.44062,
+        "buck/cap": 12.69998,
+        "buck/camera_components": 349.99002,
+        "pads/cradle": 9.35997,
+        "driver/cradle": 138.60459,
+        "driver/cap": 8.40845,
+        "driver/camera_components": 308.40831,
+        "tray/cradle": 27.65943,
+        "tray/camera_components": 94.57817
+      },
+      "outside_body_mm3": {},
+      "service_usb_hits_mm3": {
+        "pads": 3.9,
+        "driver": 414.46599,
+        "tray": 110.025,
+        "main_screws": 5.55849
+      },
+      "wire_routing_verified": false
+    },
+    {
+      "electronics_mm": 5,
+      "camera_mm": -1,
+      "slot_constraints_clear": false,
+      "mechanical_clear": false,
+      "hypothetical_body_clear": true,
+      "service_usb_solids_clear": false,
+      "overlaps_mm3": {
+        "cradle/antenna_support": 0.63731,
+        "stage_screws/antenna_support": 7.5726,
+        "stage_screws/usb-base": 6.02566,
+        "stage_screws/usb-pcb": 2.07172,
+        "buck/cradle": 87.07533,
+        "buck/cap": 10.31741,
+        "buck/camera_components": 307.5375,
+        "pads/cradle": 4.31999,
+        "driver/cradle": 138.60459,
+        "driver/cap": 8.40845,
+        "driver/camera_components": 273.47528,
+        "tray/cradle": 28.77943,
+        "tray/camera_components": 83.71227,
+        "main_screws/cradle": 0.26985,
+        "main_screws/stage_screws": 0.07076
+      },
+      "outside_body_mm3": {},
+      "service_usb_hits_mm3": {
+        "pads": 1.3,
+        "driver": 350.70199,
+        "tray": 96.235
+      },
+      "wire_routing_verified": false
+    },
+    {
+      "electronics_mm": 5,
+      "camera_mm": 0,
+      "slot_constraints_clear": false,
+      "mechanical_clear": false,
+      "hypothetical_body_clear": true,
+      "service_usb_solids_clear": false,
+      "overlaps_mm3": {
+        "cradle/antenna_support": 0.15982,
+        "stage_screws/antenna_support": 8.67658,
+        "stage_screws/usb-base": 2.95562,
+        "buck/cradle": 135.7449,
+        "buck/cap": 6.71554,
+        "buck/camera_components": 255.61221,
+        "driver/cradle": 138.60459,
+        "driver/cap": 7.00704,
+        "driver/camera_components": 221.2532,
+        "tray/cradle": 29.73943,
+        "tray/camera_components": 70.29792,
+        "main_screws/cradle": 0.60743,
+        "main_screws/stage_screws": 0.53264
+      },
+      "outside_body_mm3": {},
+      "service_usb_hits_mm3": {
+        "driver": 286.93799,
+        "tray": 81.645
+      },
+      "wire_routing_verified": false
+    },
+    {
+      "electronics_mm": 5,
+      "camera_mm": 1,
+      "slot_constraints_clear": true,
+      "mechanical_clear": false,
+      "hypothetical_body_clear": true,
+      "service_usb_solids_clear": false,
+      "overlaps_mm3": {
+        "cradle/antenna_support": 3.86462,
+        "stage_screws/antenna_support": 3.46789,
+        "buck/cradle": 135.30931,
+        "buck/cap": 7.04388,
+        "buck/camera_components": 192.99709,
+        "driver/cradle": 138.60459,
+        "driver/cap": 4.20423,
+        "driver/camera_components": 160.24841,
+        "tray/cradle": 30.85942,
+        "tray/camera_components": 61.17048,
+        "main_screws/cradle": 0.26985,
+        "main_screws/stage_screws": 0.07076
+      },
+      "outside_body_mm3": {},
+      "service_usb_hits_mm3": {
+        "driver": 223.17399,
+        "tray": 66.255
+      },
+      "wire_routing_verified": false
+    },
+    {
+      "electronics_mm": 5,
+      "camera_mm": 2,
+      "slot_constraints_clear": true,
+      "mechanical_clear": false,
+      "hypothetical_body_clear": true,
+      "service_usb_solids_clear": false,
+      "overlaps_mm3": {
+        "cradle/antenna_support": 0.77597,
+        "stage_screws/antenna_support": 1.55194,
+        "buck/cradle": 126.32841,
+        "buck/cap": 10.69033,
+        "buck/camera_components": 161.38768,
+        "driver/cradle": 137.5516,
+        "driver/cap": 1.40141,
+        "driver/camera_components": 88.36355,
+        "tray/cradle": 31.81942,
+        "tray/camera_components": 42.59313
+      },
+      "outside_body_mm3": {},
+      "service_usb_hits_mm3": {
+        "driver": 159.41,
+        "tray": 51.24
+      },
+      "wire_routing_verified": false
+    },
+    {
+      "electronics_mm": 5,
+      "camera_mm": 3,
+      "slot_constraints_clear": true,
+      "mechanical_clear": false,
+      "hypothetical_body_clear": true,
+      "service_usb_solids_clear": false,
+      "overlaps_mm3": {
+        "buck/cradle": 119.93404,
+        "buck/cap": 12.98636,
+        "buck/camera_components": 128.99687,
+        "driver/cradle": 135.21161,
+        "tray/cradle": 31.41442,
+        "tray/camera_components": 21.95765
+      },
+      "outside_body_mm3": {},
+      "service_usb_hits_mm3": {
+        "driver": 95.646,
+        "tray": 36.6
+      },
+      "wire_routing_verified": false
+    },
+    {
+      "electronics_mm": 5,
+      "camera_mm": 4,
+      "slot_constraints_clear": true,
+      "mechanical_clear": false,
+      "hypothetical_body_clear": true,
+      "service_usb_solids_clear": false,
+      "overlaps_mm3": {
+        "buck/cradle": 130.39237,
+        "buck/cap": 6.165,
+        "buck/camera_components": 86.87557,
+        "driver/cradle": 73.95987,
+        "tray/cradle": 30.51442
+      },
+      "outside_body_mm3": {},
+      "service_usb_hits_mm3": {
+        "driver": 31.882,
+        "tray": 21.96
+      },
+      "wire_routing_verified": false
+    },
+    {
+      "electronics_mm": 5,
+      "camera_mm": 5,
+      "slot_constraints_clear": true,
+      "mechanical_clear": false,
+      "hypothetical_body_clear": true,
+      "service_usb_solids_clear": false,
+      "overlaps_mm3": {
+        "buck/cradle": 126.95325,
+        "buck/cap": 2.0,
+        "buck/camera_components": 30.5377,
+        "driver/cradle": 21.5,
+        "tray/cradle": 13.98973
+      },
+      "outside_body_mm3": {},
+      "service_usb_hits_mm3": {
+        "tray": 7.32
+      },
+      "wire_routing_verified": false
+    },
+    {
+      "electronics_mm": 5,
+      "camera_mm": 6,
+      "slot_constraints_clear": true,
+      "mechanical_clear": false,
+      "hypothetical_body_clear": true,
+      "service_usb_solids_clear": true,
+      "overlaps_mm3": {
+        "buck/cradle": 99.55987,
+        "driver/cradle": 10.75
+      },
+      "outside_body_mm3": {},
+      "service_usb_hits_mm3": {},
+      "wire_routing_verified": false
+    },
+    {
+      "electronics_mm": 5,
+      "camera_mm": 7,
+      "slot_constraints_clear": true,
+      "mechanical_clear": false,
+      "hypothetical_body_clear": true,
+      "service_usb_solids_clear": true,
+      "overlaps_mm3": {
+        "buck/cradle": 11.95988
+      },
+      "outside_body_mm3": {},
+      "service_usb_hits_mm3": {},
+      "wire_routing_verified": false
+    },
+    {
+      "electronics_mm": 5,
+      "camera_mm": 8,
+      "slot_constraints_clear": true,
+      "mechanical_clear": true,
+      "hypothetical_body_clear": true,
+      "service_usb_solids_clear": true,
+      "overlaps_mm3": {},
+      "outside_body_mm3": {},
+      "service_usb_hits_mm3": {},
+      "wire_routing_verified": false
+    },
+    {
+      "electronics_mm": 6,
+      "camera_mm": -3,
+      "slot_constraints_clear": false,
+      "mechanical_clear": false,
+      "hypothetical_body_clear": true,
+      "service_usb_solids_clear": false,
+      "overlaps_mm3": {
+        "cradle/antenna_support": 0.53597,
+        "stage_screws/antenna_support": 1.07194,
+        "stage_screws/usb-base": 6.26522,
+        "stage_screws/usb-pcb": 6.7088,
+        "buck/cradle": 37.99692,
+        "buck/cap": 2.55499,
+        "buck/camera_components": 263.98775,
+        "pads/cradle": 9.35997,
+        "pads/camera_components": 13.71143,
+        "driver/cradle": 138.60459,
+        "driver/cap": 8.40845,
+        "driver/camera_components": 342.15642,
+        "tray/cradle": 28.61943,
+        "tray/camera_components": 119.79787,
+        "main_screws/cradle": 0.60742,
+        "main_screws/stage_screws": 0.53264
+      },
+      "outside_body_mm3": {},
+      "service_usb_hits_mm3": {
+        "pads": 9.10001,
+        "driver": 478.22999,
+        "tray": 104.90697,
+        "main_screws": 27.31169
+      },
+      "wire_routing_verified": false
+    },
+    {
+      "electronics_mm": 6,
+      "camera_mm": -2,
+      "slot_constraints_clear": false,
+      "mechanical_clear": false,
+      "hypothetical_body_clear": true,
+      "service_usb_solids_clear": false,
+      "overlaps_mm3": {
+        "cradle/antenna_support": 3.95391,
+        "stage_screws/antenna_support": 2.87999,
+        "stage_screws/usb-base": 6.26522,
+        "stage_screws/usb-pcb": 4.22564,
+        "buck/cradle": 39.80861,
+        "buck/cap": 8.69998,
+        "buck/camera_components": 296.97075,
+        "pads/cradle": 9.35997,
+        "pads/camera_components": 7.2,
+        "driver/cradle": 138.60459,
+        "driver/cap": 8.40845,
+        "driver/camera_components": 320.99131,
+        "tray/cradle": 27.65943,
+        "tray/camera_components": 104.09158,
+        "main_screws/cradle": 0.26986,
+        "main_screws/stage_screws": 0.07075
+      },
+      "outside_body_mm3": {},
+      "service_usb_hits_mm3": {
+        "pads": 6.50001,
+        "driver": 478.22999,
+        "tray": 108.08214,
+        "main_screws": 15.29215
+      },
+      "wire_routing_verified": false
+    },
+    {
+      "electronics_mm": 6,
+      "camera_mm": -1,
+      "slot_constraints_clear": false,
+      "mechanical_clear": false,
+      "hypothetical_body_clear": true,
+      "service_usb_solids_clear": false,
+      "overlaps_mm3": {
+        "cradle/antenna_support": 0.63731,
+        "stage_screws/antenna_support": 7.5726,
+        "stage_screws/usb-base": 6.02566,
+        "stage_screws/usb-pcb": 2.07172,
+        "buck/cradle": 45.44062,
+        "buck/cap": 12.69998,
+        "buck/camera_components": 349.99002,
+        "pads/cradle": 9.35997,
+        "driver/cradle": 138.60459,
+        "driver/cap": 8.40845,
+        "driver/camera_components": 308.40831,
+        "tray/cradle": 27.65943,
+        "tray/camera_components": 94.57817
+      },
+      "outside_body_mm3": {},
+      "service_usb_hits_mm3": {
+        "pads": 3.9,
+        "driver": 414.46599,
+        "tray": 110.025,
+        "main_screws": 5.55849
+      },
+      "wire_routing_verified": false
+    },
+    {
+      "electronics_mm": 6,
+      "camera_mm": 0,
+      "slot_constraints_clear": false,
+      "mechanical_clear": false,
+      "hypothetical_body_clear": true,
+      "service_usb_solids_clear": false,
+      "overlaps_mm3": {
+        "cradle/antenna_support": 0.15982,
+        "stage_screws/antenna_support": 8.67658,
+        "stage_screws/usb-base": 2.95562,
+        "buck/cradle": 87.07533,
+        "buck/cap": 10.31741,
+        "buck/camera_components": 307.5375,
+        "pads/cradle": 4.31999,
+        "driver/cradle": 138.60459,
+        "driver/cap": 8.40845,
+        "driver/camera_components": 273.47528,
+        "tray/cradle": 28.77943,
+        "tray/camera_components": 83.71227,
+        "main_screws/cradle": 0.26985,
+        "main_screws/stage_screws": 0.07076
+      },
+      "outside_body_mm3": {},
+      "service_usb_hits_mm3": {
+        "pads": 1.3,
+        "driver": 350.70199,
+        "tray": 96.235
+      },
+      "wire_routing_verified": false
+    },
+    {
+      "electronics_mm": 6,
+      "camera_mm": 1,
+      "slot_constraints_clear": true,
+      "mechanical_clear": false,
+      "hypothetical_body_clear": true,
+      "service_usb_solids_clear": false,
+      "overlaps_mm3": {
+        "cradle/antenna_support": 3.86462,
+        "stage_screws/antenna_support": 3.46789,
+        "buck/cradle": 135.7449,
+        "buck/cap": 6.71554,
+        "buck/camera_components": 255.61221,
+        "driver/cradle": 138.60459,
+        "driver/cap": 7.00704,
+        "driver/camera_components": 221.2532,
+        "tray/cradle": 29.73943,
+        "tray/camera_components": 70.29792,
+        "main_screws/cradle": 0.60743,
+        "main_screws/stage_screws": 0.53264
+      },
+      "outside_body_mm3": {},
+      "service_usb_hits_mm3": {
+        "driver": 286.93799,
+        "tray": 81.645
+      },
+      "wire_routing_verified": false
+    },
+    {
+      "electronics_mm": 6,
+      "camera_mm": 2,
+      "slot_constraints_clear": true,
+      "mechanical_clear": false,
+      "hypothetical_body_clear": true,
+      "service_usb_solids_clear": false,
+      "overlaps_mm3": {
+        "cradle/antenna_support": 0.77597,
+        "stage_screws/antenna_support": 1.55194,
+        "buck/cradle": 135.30931,
+        "buck/cap": 7.04388,
+        "buck/camera_components": 192.99709,
+        "driver/cradle": 138.60459,
+        "driver/cap": 4.20423,
+        "driver/camera_components": 160.24841,
+        "tray/cradle": 30.85942,
+        "tray/camera_components": 61.17048,
+        "main_screws/cradle": 0.26985,
+        "main_screws/stage_screws": 0.07076
+      },
+      "outside_body_mm3": {},
+      "service_usb_hits_mm3": {
+        "driver": 223.17399,
+        "tray": 66.255
+      },
+      "wire_routing_verified": false
+    },
+    {
+      "electronics_mm": 6,
+      "camera_mm": 3,
+      "slot_constraints_clear": true,
+      "mechanical_clear": false,
+      "hypothetical_body_clear": true,
+      "service_usb_solids_clear": false,
+      "overlaps_mm3": {
+        "buck/cradle": 126.32841,
+        "buck/cap": 10.69033,
+        "buck/camera_components": 161.38768,
+        "driver/cradle": 137.5516,
+        "driver/cap": 1.40141,
+        "driver/camera_components": 88.36355,
+        "tray/cradle": 31.81942,
+        "tray/camera_components": 42.59313
+      },
+      "outside_body_mm3": {},
+      "service_usb_hits_mm3": {
+        "driver": 159.41,
+        "tray": 51.24
+      },
+      "wire_routing_verified": false
+    },
+    {
+      "electronics_mm": 6,
+      "camera_mm": 4,
+      "slot_constraints_clear": true,
+      "mechanical_clear": false,
+      "hypothetical_body_clear": true,
+      "service_usb_solids_clear": false,
+      "overlaps_mm3": {
+        "buck/cradle": 119.93404,
+        "buck/cap": 12.98636,
+        "buck/camera_components": 128.99687,
+        "driver/cradle": 135.21161,
+        "tray/cradle": 31.41442,
+        "tray/camera_components": 21.95765
+      },
+      "outside_body_mm3": {},
+      "service_usb_hits_mm3": {
+        "driver": 95.646,
+        "tray": 36.6
+      },
+      "wire_routing_verified": false
+    },
+    {
+      "electronics_mm": 6,
+      "camera_mm": 5,
+      "slot_constraints_clear": true,
+      "mechanical_clear": false,
+      "hypothetical_body_clear": true,
+      "service_usb_solids_clear": false,
+      "overlaps_mm3": {
+        "buck/cradle": 130.39237,
+        "buck/cap": 6.165,
+        "buck/camera_components": 86.87557,
+        "driver/cradle": 73.95987,
+        "tray/cradle": 30.51442
+      },
+      "outside_body_mm3": {},
+      "service_usb_hits_mm3": {
+        "driver": 31.882,
+        "tray": 21.96
+      },
+      "wire_routing_verified": false
+    },
+    {
+      "electronics_mm": 6,
+      "camera_mm": 6,
+      "slot_constraints_clear": true,
+      "mechanical_clear": false,
+      "hypothetical_body_clear": true,
+      "service_usb_solids_clear": false,
+      "overlaps_mm3": {
+        "buck/cradle": 126.95325,
+        "buck/cap": 2.0,
+        "buck/camera_components": 30.5377,
+        "driver/cradle": 21.5,
+        "tray/cradle": 13.98973
+      },
+      "outside_body_mm3": {},
+      "service_usb_hits_mm3": {
+        "tray": 7.32
+      },
+      "wire_routing_verified": false
+    },
+    {
+      "electronics_mm": 6,
+      "camera_mm": 7,
+      "slot_constraints_clear": true,
+      "mechanical_clear": false,
+      "hypothetical_body_clear": true,
+      "service_usb_solids_clear": true,
+      "overlaps_mm3": {
+        "buck/cradle": 99.55987,
+        "driver/cradle": 10.75
+      },
+      "outside_body_mm3": {},
+      "service_usb_hits_mm3": {},
+      "wire_routing_verified": false
+    },
+    {
+      "electronics_mm": 6,
+      "camera_mm": 8,
+      "slot_constraints_clear": true,
+      "mechanical_clear": false,
+      "hypothetical_body_clear": true,
+      "service_usb_solids_clear": true,
+      "overlaps_mm3": {
+        "buck/cradle": 11.95988
+      },
+      "outside_body_mm3": {},
+      "service_usb_hits_mm3": {},
+      "wire_routing_verified": false
+    },
+    {
+      "electronics_mm": 7,
+      "camera_mm": -3,
+      "slot_constraints_clear": false,
+      "mechanical_clear": false,
+      "hypothetical_body_clear": true,
+      "service_usb_solids_clear": false,
+      "overlaps_mm3": {
+        "cradle/antenna_support": 0.53597,
+        "stage_screws/antenna_support": 1.07194,
+        "stage_screws/usb-base": 6.26522,
+        "stage_screws/usb-pcb": 6.7088,
+        "buck/cradle": 36.36792,
+        "buck/camera_components": 234.00866,
+        "pads/cradle": 9.35997,
+        "pads/camera_components": 19.75866,
+        "driver/cradle": 138.60459,
+        "driver/cap": 8.40845,
+        "driver/camera_components": 422.06404,
+        "tray/cradle": 29.73943,
+        "tray/camera_components": 128.5677,
+        "main_screws/cradle": 0.26986,
+        "main_screws/stage_screws": 0.07075
+      },
+      "outside_body_mm3": {},
+      "service_usb_hits_mm3": {
+        "pads": 11.70001,
+        "driver": 478.22999,
+        "tray": 102.96412,
+        "main_screws": 37.04535
+      },
+      "wire_routing_verified": false
+    },
+    {
+      "electronics_mm": 7,
+      "camera_mm": -2,
+      "slot_constraints_clear": false,
+      "mechanical_clear": false,
+      "hypothetical_body_clear": true,
+      "service_usb_solids_clear": false,
+      "overlaps_mm3": {
+        "cradle/antenna_support": 3.95391,
+        "stage_screws/antenna_support": 2.87999,
+        "stage_screws/usb-base": 6.26522,
+        "stage_screws/usb-pcb": 4.22564,
+        "buck/cradle": 37.99692,
+        "buck/cap": 2.55499,
+        "buck/camera_components": 263.98775,
+        "pads/cradle": 9.35997,
+        "pads/camera_components": 13.71143,
+        "driver/cradle": 138.60459,
+        "driver/cap": 8.40845,
+        "driver/camera_components": 342.15642,
+        "tray/cradle": 28.61943,
+        "tray/camera_components": 119.79787,
+        "main_screws/cradle": 0.60742,
+        "main_screws/stage_screws": 0.53264
+      },
+      "outside_body_mm3": {},
+      "service_usb_hits_mm3": {
+        "pads": 9.10001,
+        "driver": 478.22999,
+        "tray": 104.90697,
+        "main_screws": 27.31169
+      },
+      "wire_routing_verified": false
+    },
+    {
+      "electronics_mm": 7,
+      "camera_mm": -1,
+      "slot_constraints_clear": false,
+      "mechanical_clear": false,
+      "hypothetical_body_clear": true,
+      "service_usb_solids_clear": false,
+      "overlaps_mm3": {
+        "cradle/antenna_support": 0.63731,
+        "stage_screws/antenna_support": 7.5726,
+        "stage_screws/usb-base": 6.02566,
+        "stage_screws/usb-pcb": 2.07172,
+        "buck/cradle": 39.80861,
+        "buck/cap": 8.69998,
+        "buck/camera_components": 296.97075,
+        "pads/cradle": 9.35997,
+        "pads/camera_components": 7.2,
+        "driver/cradle": 138.60459,
+        "driver/cap": 8.40845,
+        "driver/camera_components": 320.99131,
+        "tray/cradle": 27.65943,
+        "tray/camera_components": 104.09158,
+        "main_screws/cradle": 0.26986,
+        "main_screws/stage_screws": 0.07075
+      },
+      "outside_body_mm3": {},
+      "service_usb_hits_mm3": {
+        "pads": 6.50001,
+        "driver": 478.22999,
+        "tray": 108.08214,
+        "main_screws": 15.29215
+      },
+      "wire_routing_verified": false
+    },
+    {
+      "electronics_mm": 7,
+      "camera_mm": 0,
+      "slot_constraints_clear": false,
+      "mechanical_clear": false,
+      "hypothetical_body_clear": true,
+      "service_usb_solids_clear": false,
+      "overlaps_mm3": {
+        "cradle/antenna_support": 0.15982,
+        "stage_screws/antenna_support": 8.67658,
+        "stage_screws/usb-base": 2.95562,
+        "buck/cradle": 45.44062,
+        "buck/cap": 12.69998,
+        "buck/camera_components": 349.99002,
+        "pads/cradle": 9.35997,
+        "driver/cradle": 138.60459,
+        "driver/cap": 8.40845,
+        "driver/camera_components": 308.40831,
+        "tray/cradle": 27.65943,
+        "tray/camera_components": 94.57817
+      },
+      "outside_body_mm3": {},
+      "service_usb_hits_mm3": {
+        "pads": 3.9,
+        "driver": 414.46599,
+        "tray": 110.025,
+        "main_screws": 5.55849
+      },
+      "wire_routing_verified": false
+    },
+    {
+      "electronics_mm": 7,
+      "camera_mm": 1,
+      "slot_constraints_clear": true,
+      "mechanical_clear": false,
+      "hypothetical_body_clear": true,
+      "service_usb_solids_clear": false,
+      "overlaps_mm3": {
+        "cradle/antenna_support": 3.86462,
+        "stage_screws/antenna_support": 3.46789,
+        "buck/cradle": 87.07533,
+        "buck/cap": 10.31741,
+        "buck/camera_components": 307.5375,
+        "pads/cradle": 4.31999,
+        "driver/cradle": 138.60459,
+        "driver/cap": 8.40845,
+        "driver/camera_components": 273.47528,
+        "tray/cradle": 28.77943,
+        "tray/camera_components": 83.71227,
+        "main_screws/cradle": 0.26985,
+        "main_screws/stage_screws": 0.07076
+      },
+      "outside_body_mm3": {},
+      "service_usb_hits_mm3": {
+        "pads": 1.3,
+        "driver": 350.70199,
+        "tray": 96.235
+      },
+      "wire_routing_verified": false
+    },
+    {
+      "electronics_mm": 7,
+      "camera_mm": 2,
+      "slot_constraints_clear": true,
+      "mechanical_clear": false,
+      "hypothetical_body_clear": true,
+      "service_usb_solids_clear": false,
+      "overlaps_mm3": {
+        "cradle/antenna_support": 0.77597,
+        "stage_screws/antenna_support": 1.55194,
+        "buck/cradle": 135.7449,
+        "buck/cap": 6.71554,
+        "buck/camera_components": 255.61221,
+        "driver/cradle": 138.60459,
+        "driver/cap": 7.00704,
+        "driver/camera_components": 221.2532,
+        "tray/cradle": 29.73943,
+        "tray/camera_components": 70.29792,
+        "main_screws/cradle": 0.60743,
+        "main_screws/stage_screws": 0.53264
+      },
+      "outside_body_mm3": {},
+      "service_usb_hits_mm3": {
+        "driver": 286.93799,
+        "tray": 81.645
+      },
+      "wire_routing_verified": false
+    },
+    {
+      "electronics_mm": 7,
+      "camera_mm": 3,
+      "slot_constraints_clear": true,
+      "mechanical_clear": false,
+      "hypothetical_body_clear": true,
+      "service_usb_solids_clear": false,
+      "overlaps_mm3": {
+        "buck/cradle": 135.30931,
+        "buck/cap": 7.04388,
+        "buck/camera_components": 192.99709,
+        "driver/cradle": 138.60459,
+        "driver/cap": 4.20423,
+        "driver/camera_components": 160.24841,
+        "tray/cradle": 30.85942,
+        "tray/camera_components": 61.17048,
+        "main_screws/cradle": 0.26985,
+        "main_screws/stage_screws": 0.07076
+      },
+      "outside_body_mm3": {},
+      "service_usb_hits_mm3": {
+        "driver": 223.17399,
+        "tray": 66.255
+      },
+      "wire_routing_verified": false
+    },
+    {
+      "electronics_mm": 7,
+      "camera_mm": 4,
+      "slot_constraints_clear": true,
+      "mechanical_clear": false,
+      "hypothetical_body_clear": true,
+      "service_usb_solids_clear": false,
+      "overlaps_mm3": {
+        "buck/cradle": 126.32841,
+        "buck/cap": 10.69033,
+        "buck/camera_components": 161.38768,
+        "driver/cradle": 137.5516,
+        "driver/cap": 1.40141,
+        "driver/camera_components": 88.36355,
+        "tray/cradle": 31.81942,
+        "tray/camera_components": 42.59313
+      },
+      "outside_body_mm3": {},
+      "service_usb_hits_mm3": {
+        "driver": 159.41,
+        "tray": 51.24
+      },
+      "wire_routing_verified": false
+    },
+    {
+      "electronics_mm": 7,
+      "camera_mm": 5,
+      "slot_constraints_clear": true,
+      "mechanical_clear": false,
+      "hypothetical_body_clear": true,
+      "service_usb_solids_clear": false,
+      "overlaps_mm3": {
+        "buck/cradle": 119.93404,
+        "buck/cap": 12.98636,
+        "buck/camera_components": 128.99687,
+        "driver/cradle": 135.21161,
+        "tray/cradle": 31.41442,
+        "tray/camera_components": 21.95765
+      },
+      "outside_body_mm3": {},
+      "service_usb_hits_mm3": {
+        "driver": 95.646,
+        "tray": 36.6
+      },
+      "wire_routing_verified": false
+    },
+    {
+      "electronics_mm": 7,
+      "camera_mm": 6,
+      "slot_constraints_clear": true,
+      "mechanical_clear": false,
+      "hypothetical_body_clear": true,
+      "service_usb_solids_clear": false,
+      "overlaps_mm3": {
+        "buck/cradle": 130.39237,
+        "buck/cap": 6.165,
+        "buck/camera_components": 86.87557,
+        "driver/cradle": 73.95987,
+        "tray/cradle": 30.51442
+      },
+      "outside_body_mm3": {},
+      "service_usb_hits_mm3": {
+        "driver": 31.882,
+        "tray": 21.96
+      },
+      "wire_routing_verified": false
+    },
+    {
+      "electronics_mm": 7,
+      "camera_mm": 7,
+      "slot_constraints_clear": true,
+      "mechanical_clear": false,
+      "hypothetical_body_clear": true,
+      "service_usb_solids_clear": false,
+      "overlaps_mm3": {
+        "buck/cradle": 126.95325,
+        "buck/cap": 2.0,
+        "buck/camera_components": 30.5377,
+        "driver/cradle": 21.5,
+        "tray/cradle": 13.98973
+      },
+      "outside_body_mm3": {},
+      "service_usb_hits_mm3": {
+        "tray": 7.32
+      },
+      "wire_routing_verified": false
+    },
+    {
+      "electronics_mm": 7,
+      "camera_mm": 8,
+      "slot_constraints_clear": true,
+      "mechanical_clear": false,
+      "hypothetical_body_clear": true,
+      "service_usb_solids_clear": true,
+      "overlaps_mm3": {
+        "buck/cradle": 99.55987,
+        "driver/cradle": 10.75
+      },
+      "outside_body_mm3": {},
+      "service_usb_hits_mm3": {},
+      "wire_routing_verified": false
+    },
+    {
+      "electronics_mm": 8,
+      "camera_mm": -3,
+      "slot_constraints_clear": false,
+      "mechanical_clear": false,
+      "hypothetical_body_clear": true,
+      "service_usb_solids_clear": false,
+      "overlaps_mm3": {
+        "cradle/antenna_support": 0.53597,
+        "stage_screws/antenna_support": 1.07194,
+        "stage_screws/usb-base": 6.26522,
+        "stage_screws/usb-pcb": 6.7088,
+        "buck/cradle": 35.37993,
+        "buck/camera_components": 216.41025,
+        "pads/cradle": 9.35997,
+        "pads/camera_components": 21.27046,
+        "driver/cradle": 138.60459,
+        "driver/cap": 8.40845,
+        "driver/camera_components": 484.81929,
+        "tray/cradle": 30.69942,
+        "tray/camera_components": 136.81446
+      },
+      "outside_body_mm3": {},
+      "service_usb_hits_mm3": {
+        "pads": 14.30001,
+        "driver": 478.22999,
+        "tray": 102.91412,
+        "main_screws": 42.60384
+      },
+      "wire_routing_verified": false
+    },
+    {
+      "electronics_mm": 8,
+      "camera_mm": -2,
+      "slot_constraints_clear": false,
+      "mechanical_clear": false,
+      "hypothetical_body_clear": true,
+      "service_usb_solids_clear": false,
+      "overlaps_mm3": {
+        "cradle/antenna_support": 3.95391,
+        "stage_screws/antenna_support": 2.87999,
+        "stage_screws/usb-base": 6.26522,
+        "stage_screws/usb-pcb": 4.22564,
+        "buck/cradle": 36.36792,
+        "buck/camera_components": 234.00866,
+        "pads/cradle": 9.35997,
+        "pads/camera_components": 19.75866,
+        "driver/cradle": 138.60459,
+        "driver/cap": 8.40845,
+        "driver/camera_components": 422.06404,
+        "tray/cradle": 29.73943,
+        "tray/camera_components": 128.5677,
+        "main_screws/cradle": 0.26986,
+        "main_screws/stage_screws": 0.07075
+      },
+      "outside_body_mm3": {},
+      "service_usb_hits_mm3": {
+        "pads": 11.70001,
+        "driver": 478.22999,
+        "tray": 102.96412,
+        "main_screws": 37.04535
+      },
+      "wire_routing_verified": false
+    },
+    {
+      "electronics_mm": 8,
+      "camera_mm": -1,
+      "slot_constraints_clear": false,
+      "mechanical_clear": false,
+      "hypothetical_body_clear": true,
+      "service_usb_solids_clear": false,
+      "overlaps_mm3": {
+        "cradle/antenna_support": 0.63731,
+        "stage_screws/antenna_support": 7.5726,
+        "stage_screws/usb-base": 6.02566,
+        "stage_screws/usb-pcb": 2.07172,
+        "buck/cradle": 37.99692,
+        "buck/cap": 2.55499,
+        "buck/camera_components": 263.98775,
+        "pads/cradle": 9.35997,
+        "pads/camera_components": 13.71143,
+        "driver/cradle": 138.60459,
+        "driver/cap": 8.40845,
+        "driver/camera_components": 342.15642,
+        "tray/cradle": 28.61943,
+        "tray/camera_components": 119.79787,
+        "main_screws/cradle": 0.60742,
+        "main_screws/stage_screws": 0.53264
+      },
+      "outside_body_mm3": {},
+      "service_usb_hits_mm3": {
+        "pads": 9.10001,
+        "driver": 478.22999,
+        "tray": 104.90697,
+        "main_screws": 27.31169
+      },
+      "wire_routing_verified": false
+    },
+    {
+      "electronics_mm": 8,
+      "camera_mm": 0,
+      "slot_constraints_clear": false,
+      "mechanical_clear": false,
+      "hypothetical_body_clear": true,
+      "service_usb_solids_clear": false,
+      "overlaps_mm3": {
+        "cradle/antenna_support": 0.15982,
+        "stage_screws/antenna_support": 8.67658,
+        "stage_screws/usb-base": 2.95562,
+        "buck/cradle": 39.80861,
+        "buck/cap": 8.69998,
+        "buck/camera_components": 296.97075,
+        "pads/cradle": 9.35997,
+        "pads/camera_components": 7.2,
+        "driver/cradle": 138.60459,
+        "driver/cap": 8.40845,
+        "driver/camera_components": 320.99131,
+        "tray/cradle": 27.65943,
+        "tray/camera_components": 104.09158,
+        "main_screws/cradle": 0.26986,
+        "main_screws/stage_screws": 0.07075
+      },
+      "outside_body_mm3": {},
+      "service_usb_hits_mm3": {
+        "pads": 6.50001,
+        "driver": 478.22999,
+        "tray": 108.08214,
+        "main_screws": 15.29215
+      },
+      "wire_routing_verified": false
+    },
+    {
+      "electronics_mm": 8,
+      "camera_mm": 1,
+      "slot_constraints_clear": true,
+      "mechanical_clear": false,
+      "hypothetical_body_clear": true,
+      "service_usb_solids_clear": false,
+      "overlaps_mm3": {
+        "cradle/antenna_support": 3.86462,
+        "stage_screws/antenna_support": 3.46789,
+        "buck/cradle": 45.44062,
+        "buck/cap": 12.69998,
+        "buck/camera_components": 349.99002,
+        "pads/cradle": 9.35997,
+        "driver/cradle": 138.60459,
+        "driver/cap": 8.40845,
+        "driver/camera_components": 308.40831,
+        "tray/cradle": 27.65943,
+        "tray/camera_components": 94.57817
+      },
+      "outside_body_mm3": {},
+      "service_usb_hits_mm3": {
+        "pads": 3.9,
+        "driver": 414.46599,
+        "tray": 110.025,
+        "main_screws": 5.55849
+      },
+      "wire_routing_verified": false
+    },
+    {
+      "electronics_mm": 8,
+      "camera_mm": 2,
+      "slot_constraints_clear": true,
+      "mechanical_clear": false,
+      "hypothetical_body_clear": true,
+      "service_usb_solids_clear": false,
+      "overlaps_mm3": {
+        "cradle/antenna_support": 0.77597,
+        "stage_screws/antenna_support": 1.55194,
+        "buck/cradle": 87.07533,
+        "buck/cap": 10.31741,
+        "buck/camera_components": 307.5375,
+        "pads/cradle": 4.31999,
+        "driver/cradle": 138.60459,
+        "driver/cap": 8.40845,
+        "driver/camera_components": 273.47528,
+        "tray/cradle": 28.77943,
+        "tray/camera_components": 83.71227,
+        "main_screws/cradle": 0.26985,
+        "main_screws/stage_screws": 0.07076
+      },
+      "outside_body_mm3": {},
+      "service_usb_hits_mm3": {
+        "pads": 1.3,
+        "driver": 350.70199,
+        "tray": 96.235
+      },
+      "wire_routing_verified": false
+    },
+    {
+      "electronics_mm": 8,
+      "camera_mm": 3,
+      "slot_constraints_clear": true,
+      "mechanical_clear": false,
+      "hypothetical_body_clear": true,
+      "service_usb_solids_clear": false,
+      "overlaps_mm3": {
+        "buck/cradle": 135.7449,
+        "buck/cap": 6.71554,
+        "buck/camera_components": 255.61221,
+        "driver/cradle": 138.60459,
+        "driver/cap": 7.00704,
+        "driver/camera_components": 221.2532,
+        "tray/cradle": 29.73943,
+        "tray/camera_components": 70.29792,
+        "main_screws/cradle": 0.60743,
+        "main_screws/stage_screws": 0.53264
+      },
+      "outside_body_mm3": {},
+      "service_usb_hits_mm3": {
+        "driver": 286.93799,
+        "tray": 81.645
+      },
+      "wire_routing_verified": false
+    },
+    {
+      "electronics_mm": 8,
+      "camera_mm": 4,
+      "slot_constraints_clear": true,
+      "mechanical_clear": false,
+      "hypothetical_body_clear": true,
+      "service_usb_solids_clear": false,
+      "overlaps_mm3": {
+        "buck/cradle": 135.30931,
+        "buck/cap": 7.04388,
+        "buck/camera_components": 192.99709,
+        "driver/cradle": 138.60459,
+        "driver/cap": 4.20423,
+        "driver/camera_components": 160.24841,
+        "tray/cradle": 30.85942,
+        "tray/camera_components": 61.17048,
+        "main_screws/cradle": 0.26985,
+        "main_screws/stage_screws": 0.07076
+      },
+      "outside_body_mm3": {},
+      "service_usb_hits_mm3": {
+        "driver": 223.17399,
+        "tray": 66.255
+      },
+      "wire_routing_verified": false
+    },
+    {
+      "electronics_mm": 8,
+      "camera_mm": 5,
+      "slot_constraints_clear": true,
+      "mechanical_clear": false,
+      "hypothetical_body_clear": true,
+      "service_usb_solids_clear": false,
+      "overlaps_mm3": {
+        "buck/cradle": 126.32841,
+        "buck/cap": 10.69033,
+        "buck/camera_components": 161.38768,
+        "driver/cradle": 137.5516,
+        "driver/cap": 1.40141,
+        "driver/camera_components": 88.36355,
+        "tray/cradle": 31.81942,
+        "tray/camera_components": 42.59313
+      },
+      "outside_body_mm3": {},
+      "service_usb_hits_mm3": {
+        "driver": 159.41,
+        "tray": 51.24
+      },
+      "wire_routing_verified": false
+    },
+    {
+      "electronics_mm": 8,
+      "camera_mm": 6,
+      "slot_constraints_clear": true,
+      "mechanical_clear": false,
+      "hypothetical_body_clear": true,
+      "service_usb_solids_clear": false,
+      "overlaps_mm3": {
+        "buck/cradle": 119.93404,
+        "buck/cap": 12.98636,
+        "buck/camera_components": 128.99687,
+        "driver/cradle": 135.21161,
+        "tray/cradle": 31.41442,
+        "tray/camera_components": 21.95765
+      },
+      "outside_body_mm3": {},
+      "service_usb_hits_mm3": {
+        "driver": 95.646,
+        "tray": 36.6
+      },
+      "wire_routing_verified": false
+    },
+    {
+      "electronics_mm": 8,
+      "camera_mm": 7,
+      "slot_constraints_clear": true,
+      "mechanical_clear": false,
+      "hypothetical_body_clear": true,
+      "service_usb_solids_clear": false,
+      "overlaps_mm3": {
+        "buck/cradle": 130.39237,
+        "buck/cap": 6.165,
+        "buck/camera_components": 86.87557,
+        "driver/cradle": 73.95987,
+        "tray/cradle": 30.51442
+      },
+      "outside_body_mm3": {},
+      "service_usb_hits_mm3": {
+        "driver": 31.882,
+        "tray": 21.96
+      },
+      "wire_routing_verified": false
+    },
+    {
+      "electronics_mm": 8,
+      "camera_mm": 8,
+      "slot_constraints_clear": true,
+      "mechanical_clear": false,
+      "hypothetical_body_clear": true,
+      "service_usb_solids_clear": false,
+      "overlaps_mm3": {
+        "buck/cradle": 126.95325,
+        "buck/cap": 2.0,
+        "buck/camera_components": 30.5377,
+        "driver/cradle": 21.5,
+        "tray/cradle": 13.98973
+      },
+      "outside_body_mm3": {},
+      "service_usb_hits_mm3": {
+        "tray": 7.32
+      },
+      "wire_routing_verified": false
+    }
+  ],
+  "feasible_pairs_mm": [
+    [
+      -1,
+      3
+    ],
+    [
+      -1,
+      4
+    ],
+    [
+      -1,
+      5
+    ],
+    [
+      -1,
+      6
+    ],
+    [
+      -1,
+      7
+    ],
+    [
+      -1,
+      8
+    ],
+    [
+      0,
+      3
+    ],
+    [
+      0,
+      4
+    ],
+    [
+      0,
+      5
+    ],
+    [
+      0,
+      6
+    ],
+    [
+      0,
+      7
+    ],
+    [
+      0,
+      8
+    ],
+    [
+      1,
+      4
+    ],
+    [
+      1,
+      5
+    ],
+    [
+      1,
+      6
+    ],
+    [
+      1,
+      7
+    ],
+    [
+      1,
+      8
+    ],
+    [
+      2,
+      5
+    ],
+    [
+      2,
+      6
+    ],
+    [
+      2,
+      7
+    ],
+    [
+      2,
+      8
+    ],
+    [
+      3,
+      6
+    ],
+    [
+      3,
+      7
+    ],
+    [
+      3,
+      8
+    ],
+    [
+      4,
+      7
+    ],
+    [
+      4,
+      8
+    ],
+    [
+      5,
+      8
+    ]
+  ],
+  "source_sha256": {
+    "cad/packaging-v05/buck.stl": "16e923ac30f38cd5763b4369c6f1daf32c9255f6a8e8383c4410b2388063d06a",
+    "cad/packaging-v05/buck_plug.stl": "6d390fdfbe2734ee671f1278a3635b22e4535a3bd69d32174a6cca960d07eb38",
+    "cad/packaging-v05/pads.stl": "184beabc4244ffe4a3c5ac3f3e208ba58a3578687ca1d21d6426cecdc4630556",
+    "cad/packaging-v05/driver.stl": "ab9310a220e3f75b1d9b9698efb304ff8660a142f42ec93e0954f88e141014d1",
+    "cad/packaging-v05/charge.stl": "d2af805332b2b8e555be6f8455eb8b95174316f01fa19408f43dad3a45aaf578",
+    "cad/harness-guides/tray.stl": "c3c7e7b08737eb7553ccf7ffa33f1197876d206857e401ee02811662ef78e0ad",
+    "cad/packaging-v05/inputs/adjustable-main_fasteners.stl": "82b66767791535c0289c7de2f5a1b4b6f8cd4a11f3b95302ccb9543c6656ebe1",
+    "cad/xiao-mount/cradle.stl": "059b90f45d623519551034e7003d177faeb619caad623f4de1958738af257caa",
+    "cad/xiao-mount/screws.stl": "344530c44bfa7a7dd5e15b6b5d53e5583001325b0ab067984c89dd493dc08bd8",
+    "cad/xiao-mount/stage_screws.stl": "398e1fce190911f7d9d3187ac6f38c2c09f2ddff61ff45dcf810bf489f38a8ca",
+    "cad/harness-guides/cap.stl": "8344dcb2c2b430b324d7748fc2da33408bc7f5a085eeb63b0c0c72824d4d32d7",
+    "docs/evidence/xiao-mount-v01.json": "2e17654f50ad3ef5111e132c7e1178d1c623863f6b8713c3ad05a5c66bf458d8",
+    "cad/packaging-v05/frame-relief-proposal.stl": "b7024c986e2ee169f2557a3c4c9e47876cdf0e77cd0bbcd713e1de39999f109a",
+    "cad/packaging-v05/servo-installed.stl": "8f7c94bd577f4b44eff27a8daa9d61ad3e7f52759edf7b92f44a65f943c10d41",
+    "cad/packaging-v05/antenna.stl": "f5ec77dd68d7dc71eb959ab0f52c6f4ee3666378bc113d79e683fc5d03307217",
+    "cad/packaging-v05/antenna_support.stl": "62be42076e6d4623de95ae72836375f5265bb88fdb740caf039ecc8263fe5896",
+    "cad/packaging-v05/inputs/cover.stl": "67991811518bfd981143b4541ee1d936b84bc55d2d8379382a0746b7e6b283ac",
+    "cad/packaging-v05/inputs/usb-base.stl": "8f3d20d5952a249fb1f8c9440751bce8590ce505d7476cd053d51f62dc57a0fc",
+    "cad/packaging-v05/inputs/usb-pcb.stl": "d68ee033c3ed97af9e8045ee6799d95ace9f633f0d8beddba5a9e5f09e86cee2",
+    "cad/packaging-v05/inputs/usb-connector.stl": "4731ab48bd28f1708d8c598f3711ae5c87890473968fb6e1e48d629e606e9cbc",
+    "cad/packaging-v05/inputs/usb-components.stl": "c8cc27cf13eacee53a7227c45acd32dbd6ba0aecd7fad42379c8de0192013a70",
+    "cad/packaging-v05/inputs/adjustable-battery.stl": "99e5c2cd66c0d59f1e402d83f8988ba361016054b88bee3651f8274ff42d786a",
+    "cad/packaging-v05/inputs/adjustable-support.stl": "16d698f494ca637d73c1da61f0c55adfa5b2b3ff1df42e631b94d073970eac54",
+    "cad/packaging-v05/inputs/adjustable-guards.stl": "30534ff4a38cee23058b438597c313693c3a3497d5a815964862a4112c54d7d6",
+    "cad/packaging-v05/inputs/adjustable-band.stl": "d9d652240b22b1f40fdb39d07892e0d45d97b9c7cae642a50b26f1772b67e2e2",
+    "cad/components/motor-installed.stl": "08368cbf61c451de981b3aa44b8e624300c274c43da541815456cff0680208a6",
+    "cad/packaging-v05/inputs/adjustable-cavity.stl": "271b880213a2abe8e282b0ebcb23aab949275a23d3dcc8d8c419b1363b40d246",
+    "cad/xiao-mount/usb_access.stl": "a40ce6d18dd215319f675d86546b97bdf6a06f2176a939d4a0da0a795e38af20",
+    "tools/check_current_adjustment.py": "9e9e7d11927b4d221ae49c9817cb3c10242a75f66f3efb4b0e0890529120b8f8"
+  },
+  "limits": [
+    "Rigid solids only; routed wires qualified only for nominal 0/+3 by prior harness audit",
+    "Wire length, flexibility and fastening must be rechecked after moving stages, with power off",
+    "No continuous stage-travel or all-position body-removal proof",
+    "103 per-solid STEP boxes are conservative; actual OV3660 revision unmeasured",
+    "Charger/driver and mating USB shell are allocations; body is hypothetical",
+    "Slot range uses screw centres, no clamp-force or printer tolerance qualification"
+  ]
+}

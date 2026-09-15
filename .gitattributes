@@ -1,4 +1,10 @@
 # Preserve device evidence/source hashes across Windows checkouts.
+cad/current-layout/*.html text eol=lf
+cad/current-layout/*.md text eol=lf
+tools/check_current_adjustment.py text eol=lf
+tools/build_current_viewer.py text eol=lf
+docs/evidence/current-*.json text eol=lf
+docs/evidence/current-*.png binary
 cad/harness-guides*.scad text eol=lf
 cad/harness-guides/*.stl binary
 cad/harness-guides/*.md text eol=lf

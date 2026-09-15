@@ -1,0 +1,22 @@
+{
+  "version": "0.6",
+  "date": "2026-09-15",
+  "parts": 36,
+  "physical_fit_verified": false,
+  "sources_sha256": {
+    "cad/packaging-v05/viewer.html": "f53291fe492c81b05925b7f8752fd07acbc1976da198c90c7c59b4cc3e37ee7d",
+    "tools/cad_viewer_template.html": "f70aa04fd54fb88ff2aba390bccbf6f17a9c2d79b01286e9c0f0e76fb281129c",
+    "tools/build_current_viewer.py": "b214ad33130c3fda9022cab3d4458dff1177034dd08972fff4dd59cd6e4b74c8",
+    "cad/harness-guides/tray.stl": "c3c7e7b08737eb7553ccf7ffa33f1197876d206857e401ee02811662ef78e0ad",
+    "cad/xiao-mount/cradle.stl": "059b90f45d623519551034e7003d177faeb619caad623f4de1958738af257caa",
+    "cad/harness-guides/cap.stl": "8344dcb2c2b430b324d7748fc2da33408bc7f5a085eeb63b0c0c72824d4d32d7",
+    "cad/xiao-mount/screws.stl": "344530c44bfa7a7dd5e15b6b5d53e5583001325b0ab067984c89dd493dc08bd8",
+    "cad/xiao-mount/stage_screws.stl": "398e1fce190911f7d9d3187ac6f38c2c09f2ddff61ff45dcf810bf489f38a8ca",
+    "cad/xiao-mount/usb_access.stl": "a40ce6d18dd215319f675d86546b97bdf6a06f2176a939d4a0da0a795e38af20",
+    "cad/xiao-mount/wire-servo.stl": "6f77ecc3e8faa9c68ed84a3fbd8dfc5508d49ec89bb5204a0c0662a1893b35cd",
+    "cad/xiao-mount/wire-antenna.stl": "c7eba24f70fbece34b80dd107e11e7ac18e45c9e2a3843d0eee2019dbc415144",
+    "cad/xiao-mount/wire-control.stl": "dc9714dbbd32521b9c3d70c003bce6a394b5836382a3561c223e399f11bd8af7",
+    "docs/evidence/current-adjustment-v06.json": "05144d1126494a65759309be715b5051618ac64b75a5150984e3b846c585e729"
+  },
+  "viewer_sha256": "4c00db2d80ad27a730873e59ad2025d9aef245bcfd7b71fc0c01c3f90e3e40a8"
+}

@@ -1,4 +1,10 @@
 # Preserve device evidence/source hashes across Windows checkouts.
+cad/harness-guides*.scad text eol=lf
+cad/harness-guides/*.stl binary
+cad/harness-guides/*.md text eol=lf
+tools/build_harness_guides.py text eol=lf
+docs/evidence/harness-guides*.json text eol=lf
+docs/evidence/harness-guides*.png binary
 cad/xiao-mount.scad text eol=lf
 cad/xiao-mount-assembly.scad text eol=lf
 cad/xiao-mount/*.stl binary

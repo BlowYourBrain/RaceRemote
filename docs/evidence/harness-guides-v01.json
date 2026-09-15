@@ -1,0 +1,1165 @@
+{
+  "version": "0.1",
+  "date": "2026-09-15",
+  "physical_fit_verified": false,
+  "camera_electronics_mm": [
+    3,
+    0
+  ],
+  "guide_collisions_mm3": {
+    "power_guide": {},
+    "servo_guide": {}
+  },
+  "outside_body_mm3": {
+    "tray": 0.0,
+    "cap": 0.0
+  },
+  "battery_sweep_mm3": {
+    "frame-relief-proposal": 0.0,
+    "servo-installed": 0.0,
+    "buck": 0.0,
+    "buck_plug": 0.0,
+    "pads": 0.0,
+    "driver": 0.0,
+    "charge": 0.0,
+    "antenna": 0.0,
+    "antenna_support": 0.0,
+    "cover": 0.0,
+    "adjustable-support": 0.0,
+    "adjustable-main_fasteners": 0.0,
+    "usb-base": 0.0,
+    "usb-pcb": 0.0,
+    "usb-connector": 0.0,
+    "usb-components": 0.0,
+    "cradle": 0.0,
+    "screws": 0.0,
+    "stage_screws": 0.0,
+    "tray": 0.0,
+    "cap": 0.0,
+    "motor": 0.0,
+    "wire-power": 0.0,
+    "wire-servo": 0.0,
+    "wire-antenna": 0.0,
+    "wire-motor": 0.0,
+    "wire-control": 0.0,
+    "component-0": 0.0,
+    "component-1": 0.0,
+    "component-2": 0.0,
+    "component-3": 0.0,
+    "component-4": 0.0,
+    "component-5": 0.0,
+    "component-6": 0.0,
+    "component-7": 0.0,
+    "component-8": 0.0,
+    "component-9": 0.0,
+    "component-10": 0.0,
+    "component-11": 0.0,
+    "component-12": 0.0,
+    "component-13": 0.0,
+    "component-14": 0.0,
+    "component-15": 0.0,
+    "component-16": 0.0,
+    "component-17": 0.0,
+    "component-18": 0.0,
+    "component-19": 0.0,
+    "component-20": 0.0,
+    "component-21": 0.0,
+    "component-22": 0.0,
+    "component-23": 0.0,
+    "component-24": 0.0,
+    "component-25": 0.0,
+    "component-26": 0.0,
+    "component-27": 0.0,
+    "component-28": 0.0,
+    "component-29": 0.0,
+    "component-30": 0.0,
+    "component-31": 0.0,
+    "component-32": 0.0,
+    "component-33": 0.0,
+    "component-34": 0.0,
+    "component-35": 0.0,
+    "component-36": 0.0,
+    "component-37": 0.0,
+    "component-38": 0.0,
+    "component-39": 0.0,
+    "component-40": 0.0,
+    "component-41": 0.0,
+    "component-42": 0.0,
+    "component-43": 0.0,
+    "component-44": 0.0,
+    "component-45": 0.0,
+    "component-46": 0.0,
+    "component-47": 0.0,
+    "component-48": 0.0,
+    "component-49": 0.0,
+    "component-50": 0.0,
+    "component-51": 0.0,
+    "component-52": 0.0,
+    "component-53": 0.0,
+    "component-54": 0.0,
+    "component-55": 0.0,
+    "component-56": 0.0,
+    "component-57": 0.0,
+    "component-58": 0.0,
+    "component-59": 0.0,
+    "component-60": 0.0,
+    "component-61": 0.0,
+    "component-62": 0.0,
+    "component-63": 0.0,
+    "component-64": 0.0,
+    "component-65": 0.0,
+    "component-66": 0.0,
+    "component-67": 0.0,
+    "component-68": 0.0,
+    "component-69": 0.0,
+    "component-70": 0.0,
+    "component-71": 0.0,
+    "component-72": 0.0,
+    "component-73": 0.0,
+    "component-74": 0.0,
+    "component-75": 0.0,
+    "component-76": 0.0,
+    "component-77": 0.0,
+    "component-78": 0.0,
+    "component-79": 0.0,
+    "component-80": 0.0,
+    "component-81": 0.0,
+    "component-82": 0.0,
+    "component-83": 0.0,
+    "component-84": 0.0,
+    "component-85": 0.0,
+    "component-86": 0.0,
+    "component-87": 0.0,
+    "component-88": 0.0,
+    "component-89": 0.0,
+    "component-90": 0.0,
+    "component-91": 0.0,
+    "component-92": 0.0,
+    "component-93": 0.0,
+    "component-94": 0.0,
+    "component-95": 0.0,
+    "component-96": 0.0,
+    "component-97": 0.0,
+    "component-98": 0.0,
+    "component-99": 0.0,
+    "component-100": 0.0,
+    "component-101": 0.0,
+    "component-102": 0.0,
+    "right_guard": 0.0
+  },
+  "left_guard_samples": [
+    {
+      "outward_mm": 0.0,
+      "hits": {}
+    },
+    {
+      "outward_mm": 0.25,
+      "hits": {}
+    },
+    {
+      "outward_mm": 0.5,
+      "hits": {}
+    },
+    {
+      "outward_mm": 0.75,
+      "hits": {}
+    },
+    {
+      "outward_mm": 1.0,
+      "hits": {}
+    },
+    {
+      "outward_mm": 1.25,
+      "hits": {}
+    },
+    {
+      "outward_mm": 1.5,
+      "hits": {}
+    },
+    {
+      "outward_mm": 1.75,
+      "hits": {}
+    },
+    {
+      "outward_mm": 2.0,
+      "hits": {}
+    },
+    {
+      "outward_mm": 2.25,
+      "hits": {}
+    },
+    {
+      "outward_mm": 2.5,
+      "hits": {}
+    },
+    {
+      "outward_mm": 2.75,
+      "hits": {}
+    },
+    {
+      "outward_mm": 3.0,
+      "hits": {}
+    },
+    {
+      "outward_mm": 3.25,
+      "hits": {}
+    },
+    {
+      "outward_mm": 3.5,
+      "hits": {}
+    },
+    {
+      "outward_mm": 3.75,
+      "hits": {}
+    },
+    {
+      "outward_mm": 4.0,
+      "hits": {}
+    },
+    {
+      "outward_mm": 4.25,
+      "hits": {}
+    },
+    {
+      "outward_mm": 4.5,
+      "hits": {}
+    },
+    {
+      "outward_mm": 4.75,
+      "hits": {}
+    },
+    {
+      "outward_mm": 5.0,
+      "hits": {}
+    },
+    {
+      "outward_mm": 5.25,
+      "hits": {}
+    },
+    {
+      "outward_mm": 5.5,
+      "hits": {}
+    },
+    {
+      "outward_mm": 5.75,
+      "hits": {}
+    },
+    {
+      "outward_mm": 6.0,
+      "hits": {}
+    }
+  ],
+  "body_samples": [
+    {
+      "offset_mm": [
+        0,
+        0,
+        0.0
+      ],
+      "hits": {}
+    },
+    {
+      "offset_mm": [
+        0,
+        0,
+        0.25
+      ],
+      "hits": {}
+    },
+    {
+      "offset_mm": [
+        0,
+        0,
+        0.5
+      ],
+      "hits": {}
+    },
+    {
+      "offset_mm": [
+        0,
+        0,
+        0.75
+      ],
+      "hits": {}
+    },
+    {
+      "offset_mm": [
+        0,
+        0,
+        1.0
+      ],
+      "hits": {}
+    },
+    {
+      "offset_mm": [
+        0,
+        0,
+        1.25
+      ],
+      "hits": {}
+    },
+    {
+      "offset_mm": [
+        0,
+        0,
+        1.5
+      ],
+      "hits": {}
+    },
+    {
+      "offset_mm": [
+        0,
+        0,
+        1.75
+      ],
+      "hits": {}
+    },
+    {
+      "offset_mm": [
+        0,
+        0,
+        2.0
+      ],
+      "hits": {}
+    },
+    {
+      "offset_mm": [
+        0.25,
+        0,
+        2
+      ],
+      "hits": {}
+    },
+    {
+      "offset_mm": [
+        0.5,
+        0,
+        2
+      ],
+      "hits": {}
+    },
+    {
+      "offset_mm": [
+        0.75,
+        0,
+        2
+      ],
+      "hits": {}
+    },
+    {
+      "offset_mm": [
+        1.0,
+        0,
+        2
+      ],
+      "hits": {}
+    },
+    {
+      "offset_mm": [
+        1,
+        0,
+        3.0
+      ],
+      "hits": {}
+    },
+    {
+      "offset_mm": [
+        1,
+        0,
+        4.0
+      ],
+      "hits": {}
+    },
+    {
+      "offset_mm": [
+        1,
+        0,
+        5.0
+      ],
+      "hits": {}
+    },
+    {
+      "offset_mm": [
+        1,
+        0,
+        6.0
+      ],
+      "hits": {}
+    },
+    {
+      "offset_mm": [
+        1,
+        0,
+        7.0
+      ],
+      "hits": {}
+    },
+    {
+      "offset_mm": [
+        1,
+        0,
+        8.0
+      ],
+      "hits": {}
+    },
+    {
+      "offset_mm": [
+        1,
+        0,
+        9.0
+      ],
+      "hits": {}
+    },
+    {
+      "offset_mm": [
+        1,
+        0,
+        10.0
+      ],
+      "hits": {}
+    },
+    {
+      "offset_mm": [
+        1,
+        0,
+        11.0
+      ],
+      "hits": {}
+    },
+    {
+      "offset_mm": [
+        1,
+        0,
+        12.0
+      ],
+      "hits": {}
+    },
+    {
+      "offset_mm": [
+        1,
+        0,
+        13.0
+      ],
+      "hits": {}
+    },
+    {
+      "offset_mm": [
+        1,
+        0,
+        14.0
+      ],
+      "hits": {}
+    },
+    {
+      "offset_mm": [
+        1,
+        0,
+        15.0
+      ],
+      "hits": {}
+    },
+    {
+      "offset_mm": [
+        1,
+        0,
+        16.0
+      ],
+      "hits": {}
+    },
+    {
+      "offset_mm": [
+        1,
+        0,
+        17.0
+      ],
+      "hits": {}
+    },
+    {
+      "offset_mm": [
+        1,
+        0,
+        18.0
+      ],
+      "hits": {}
+    },
+    {
+      "offset_mm": [
+        1,
+        0,
+        19.0
+      ],
+      "hits": {}
+    },
+    {
+      "offset_mm": [
+        1,
+        0,
+        20.0
+      ],
+      "hits": {}
+    },
+    {
+      "offset_mm": [
+        1,
+        0,
+        21.0
+      ],
+      "hits": {}
+    },
+    {
+      "offset_mm": [
+        1,
+        0,
+        22.0
+      ],
+      "hits": {}
+    },
+    {
+      "offset_mm": [
+        1,
+        0,
+        23.0
+      ],
+      "hits": {}
+    },
+    {
+      "offset_mm": [
+        1,
+        0,
+        24.0
+      ],
+      "hits": {}
+    },
+    {
+      "offset_mm": [
+        1,
+        0,
+        25.0
+      ],
+      "hits": {}
+    },
+    {
+      "offset_mm": [
+        1,
+        0,
+        26.0
+      ],
+      "hits": {}
+    },
+    {
+      "offset_mm": [
+        1,
+        0,
+        27.0
+      ],
+      "hits": {}
+    },
+    {
+      "offset_mm": [
+        1,
+        0,
+        28.0
+      ],
+      "hits": {}
+    },
+    {
+      "offset_mm": [
+        1,
+        0,
+        29.0
+      ],
+      "hits": {}
+    },
+    {
+      "offset_mm": [
+        1,
+        0,
+        30.0
+      ],
+      "hits": {}
+    },
+    {
+      "offset_mm": [
+        1,
+        0,
+        31.0
+      ],
+      "hits": {}
+    },
+    {
+      "offset_mm": [
+        1,
+        0,
+        32.0
+      ],
+      "hits": {}
+    },
+    {
+      "offset_mm": [
+        1,
+        0,
+        33.0
+      ],
+      "hits": {}
+    },
+    {
+      "offset_mm": [
+        1,
+        0,
+        34.0
+      ],
+      "hits": {}
+    },
+    {
+      "offset_mm": [
+        1,
+        0,
+        35.0
+      ],
+      "hits": {}
+    },
+    {
+      "offset_mm": [
+        1,
+        0,
+        36.0
+      ],
+      "hits": {}
+    },
+    {
+      "offset_mm": [
+        1,
+        0,
+        37.0
+      ],
+      "hits": {}
+    },
+    {
+      "offset_mm": [
+        1,
+        0,
+        38.0
+      ],
+      "hits": {}
+    },
+    {
+      "offset_mm": [
+        1,
+        0,
+        39.0
+      ],
+      "hits": {}
+    },
+    {
+      "offset_mm": [
+        1,
+        0,
+        40.0
+      ],
+      "hits": {}
+    },
+    {
+      "offset_mm": [
+        1,
+        0,
+        41.0
+      ],
+      "hits": {}
+    },
+    {
+      "offset_mm": [
+        1,
+        0,
+        42.0
+      ],
+      "hits": {}
+    },
+    {
+      "offset_mm": [
+        1,
+        0,
+        43.0
+      ],
+      "hits": {}
+    },
+    {
+      "offset_mm": [
+        1,
+        0,
+        44.0
+      ],
+      "hits": {}
+    },
+    {
+      "offset_mm": [
+        1,
+        0,
+        45.0
+      ],
+      "hits": {}
+    },
+    {
+      "offset_mm": [
+        1,
+        0,
+        46.0
+      ],
+      "hits": {}
+    },
+    {
+      "offset_mm": [
+        1,
+        0,
+        47.0
+      ],
+      "hits": {}
+    },
+    {
+      "offset_mm": [
+        1,
+        0,
+        48.0
+      ],
+      "hits": {}
+    },
+    {
+      "offset_mm": [
+        1,
+        0,
+        49.0
+      ],
+      "hits": {}
+    },
+    {
+      "offset_mm": [
+        1,
+        0,
+        50.0
+      ],
+      "hits": {}
+    },
+    {
+      "offset_mm": [
+        1,
+        0,
+        51.0
+      ],
+      "hits": {}
+    },
+    {
+      "offset_mm": [
+        1,
+        0,
+        52.0
+      ],
+      "hits": {}
+    },
+    {
+      "offset_mm": [
+        1,
+        0,
+        53.0
+      ],
+      "hits": {}
+    },
+    {
+      "offset_mm": [
+        1,
+        0,
+        54.0
+      ],
+      "hits": {}
+    },
+    {
+      "offset_mm": [
+        1,
+        0,
+        55.0
+      ],
+      "hits": {}
+    },
+    {
+      "offset_mm": [
+        1,
+        0,
+        56.0
+      ],
+      "hits": {}
+    },
+    {
+      "offset_mm": [
+        1,
+        0,
+        57.0
+      ],
+      "hits": {}
+    },
+    {
+      "offset_mm": [
+        1,
+        0,
+        58.0
+      ],
+      "hits": {}
+    },
+    {
+      "offset_mm": [
+        1,
+        0,
+        59.0
+      ],
+      "hits": {}
+    },
+    {
+      "offset_mm": [
+        1,
+        0,
+        60.0
+      ],
+      "hits": {}
+    },
+    {
+      "offset_mm": [
+        1,
+        0,
+        61.0
+      ],
+      "hits": {}
+    },
+    {
+      "offset_mm": [
+        1,
+        0,
+        62.0
+      ],
+      "hits": {}
+    },
+    {
+      "offset_mm": [
+        1,
+        0,
+        63.0
+      ],
+      "hits": {}
+    },
+    {
+      "offset_mm": [
+        1,
+        0,
+        64.0
+      ],
+      "hits": {}
+    },
+    {
+      "offset_mm": [
+        1,
+        0,
+        65.0
+      ],
+      "hits": {}
+    }
+  ],
+  "cap_samples": [
+    {
+      "offset_mm": [
+        0,
+        0,
+        0.0
+      ],
+      "hits": {}
+    },
+    {
+      "offset_mm": [
+        0,
+        0,
+        0.1
+      ],
+      "hits": {}
+    },
+    {
+      "offset_mm": [
+        0,
+        0,
+        0.2
+      ],
+      "hits": {}
+    },
+    {
+      "offset_mm": [
+        0,
+        0,
+        0.30000000000000004
+      ],
+      "hits": {}
+    },
+    {
+      "offset_mm": [
+        0,
+        0,
+        0.4
+      ],
+      "hits": {}
+    },
+    {
+      "offset_mm": [
+        0,
+        0,
+        0.5
+      ],
+      "hits": {}
+    },
+    {
+      "offset_mm": [
+        0,
+        0,
+        0.6000000000000001
+      ],
+      "hits": {}
+    },
+    {
+      "offset_mm": [
+        0,
+        0,
+        0.7000000000000001
+      ],
+      "hits": {}
+    },
+    {
+      "offset_mm": [
+        0,
+        0,
+        0.8
+      ],
+      "hits": {}
+    },
+    {
+      "offset_mm": [
+        0,
+        0,
+        0.9
+      ],
+      "hits": {}
+    },
+    {
+      "offset_mm": [
+        0,
+        0,
+        1.0
+      ],
+      "hits": {}
+    },
+    {
+      "offset_mm": [
+        0,
+        0,
+        1.1
+      ],
+      "hits": {}
+    },
+    {
+      "offset_mm": [
+        0,
+        0.5,
+        1.1
+      ],
+      "hits": {}
+    },
+    {
+      "offset_mm": [
+        0,
+        1.0,
+        1.1
+      ],
+      "hits": {}
+    },
+    {
+      "offset_mm": [
+        0,
+        1.5,
+        1.1
+      ],
+      "hits": {}
+    },
+    {
+      "offset_mm": [
+        0,
+        2.0,
+        1.1
+      ],
+      "hits": {}
+    },
+    {
+      "offset_mm": [
+        0,
+        2.5,
+        1.1
+      ],
+      "hits": {}
+    },
+    {
+      "offset_mm": [
+        0,
+        3.0,
+        1.1
+      ],
+      "hits": {}
+    },
+    {
+      "offset_mm": [
+        0,
+        3.5,
+        1.1
+      ],
+      "hits": {}
+    },
+    {
+      "offset_mm": [
+        0,
+        4.0,
+        1.1
+      ],
+      "hits": {}
+    },
+    {
+      "offset_mm": [
+        0,
+        4.5,
+        1.1
+      ],
+      "hits": {}
+    },
+    {
+      "offset_mm": [
+        0,
+        5.0,
+        1.1
+      ],
+      "hits": {}
+    },
+    {
+      "offset_mm": [
+        0,
+        5.5,
+        1.1
+      ],
+      "hits": {}
+    },
+    {
+      "offset_mm": [
+        0,
+        6.0,
+        1.1
+      ],
+      "hits": {}
+    },
+    {
+      "offset_mm": [
+        0,
+        6.5,
+        1.1
+      ],
+      "hits": {}
+    },
+    {
+      "offset_mm": [
+        0,
+        7.0,
+        1.1
+      ],
+      "hits": {}
+    },
+    {
+      "offset_mm": [
+        0,
+        7.5,
+        1.1
+      ],
+      "hits": {}
+    },
+    {
+      "offset_mm": [
+        0,
+        8.0,
+        1.1
+      ],
+      "hits": {}
+    }
+  ],
+  "cap_service_requires": [
+    "Remove clamp screws",
+    "Release tie and move servo lead out of saddle; free wire shape not simulated"
+  ],
+  "positive_controls_mm3": {
+    "retained_left_guard": 123.0000002682209,
+    "straight_lift_usb": 14.821192771707805
+  },
+  "source_sha256": {
+    "cad/packaging-v05/frame-relief-proposal.stl": "b7024c986e2ee169f2557a3c4c9e47876cdf0e77cd0bbcd713e1de39999f109a",
+    "cad/packaging-v05/servo-installed.stl": "8f7c94bd577f4b44eff27a8daa9d61ad3e7f52759edf7b92f44a65f943c10d41",
+    "cad/packaging-v05/buck.stl": "16e923ac30f38cd5763b4369c6f1daf32c9255f6a8e8383c4410b2388063d06a",
+    "cad/packaging-v05/buck_plug.stl": "6d390fdfbe2734ee671f1278a3635b22e4535a3bd69d32174a6cca960d07eb38",
+    "cad/packaging-v05/pads.stl": "184beabc4244ffe4a3c5ac3f3e208ba58a3578687ca1d21d6426cecdc4630556",
+    "cad/packaging-v05/driver.stl": "ab9310a220e3f75b1d9b9698efb304ff8660a142f42ec93e0954f88e141014d1",
+    "cad/packaging-v05/charge.stl": "d2af805332b2b8e555be6f8455eb8b95174316f01fa19408f43dad3a45aaf578",
+    "cad/packaging-v05/antenna.stl": "f5ec77dd68d7dc71eb959ab0f52c6f4ee3666378bc113d79e683fc5d03307217",
+    "cad/packaging-v05/antenna_support.stl": "62be42076e6d4623de95ae72836375f5265bb88fdb740caf039ecc8263fe5896",
+    "cad/packaging-v05/inputs/cover.stl": "67991811518bfd981143b4541ee1d936b84bc55d2d8379382a0746b7e6b283ac",
+    "cad/packaging-v05/inputs/adjustable-support.stl": "16d698f494ca637d73c1da61f0c55adfa5b2b3ff1df42e631b94d073970eac54",
+    "cad/packaging-v05/inputs/adjustable-main_fasteners.stl": "82b66767791535c0289c7de2f5a1b4b6f8cd4a11f3b95302ccb9543c6656ebe1",
+    "cad/packaging-v05/inputs/usb-base.stl": "8f3d20d5952a249fb1f8c9440751bce8590ce505d7476cd053d51f62dc57a0fc",
+    "cad/packaging-v05/inputs/usb-pcb.stl": "d68ee033c3ed97af9e8045ee6799d95ace9f633f0d8beddba5a9e5f09e86cee2",
+    "cad/packaging-v05/inputs/usb-connector.stl": "4731ab48bd28f1708d8c598f3711ae5c87890473968fb6e1e48d629e606e9cbc",
+    "cad/packaging-v05/inputs/usb-components.stl": "c8cc27cf13eacee53a7227c45acd32dbd6ba0aecd7fad42379c8de0192013a70",
+    "cad/xiao-mount/cradle.stl": "059b90f45d623519551034e7003d177faeb619caad623f4de1958738af257caa",
+    "cad/xiao-mount/screws.stl": "344530c44bfa7a7dd5e15b6b5d53e5583001325b0ab067984c89dd493dc08bd8",
+    "cad/xiao-mount/stage_screws.stl": "398e1fce190911f7d9d3187ac6f38c2c09f2ddff61ff45dcf810bf489f38a8ca",
+    "cad/components/motor-installed.stl": "08368cbf61c451de981b3aa44b8e624300c274c43da541815456cff0680208a6",
+    "cad/packaging-v05/inputs/adjustable-battery.stl": "99e5c2cd66c0d59f1e402d83f8988ba361016054b88bee3651f8274ff42d786a",
+    "cad/packaging-v05/inputs/adjustable-guards.stl": "30534ff4a38cee23058b438597c313693c3a3497d5a815964862a4112c54d7d6",
+    "cad/packaging-v05/inputs/adjustable-band.stl": "d9d652240b22b1f40fdb39d07892e0d45d97b9c7cae642a50b26f1772b67e2e2",
+    "cad/packaging-v05/inputs/adjustable-cavity.stl": "271b880213a2abe8e282b0ebcb23aab949275a23d3dcc8d8c419b1363b40d246",
+    "cad/packaging-v05/inputs/usb-body.stl": "4d973e4bcbde30b80b112cad8d40e8f90aa257a44434bbe32c8dab11db1f40f3",
+    "cad/packaging-v05/inputs/usb-cover.stl": "44928cadd21fad7e4211398b069e0d20a3ba919f2389e4e7f6cebb25cd2b4650",
+    "cad/xiao-mount/usb_access.stl": "a40ce6d18dd215319f675d86546b97bdf6a06f2176a939d4a0da0a795e38af20",
+    "tools/build_harness_guides.py": "0f60234a1f8f34b078326de1e6757f9ae8d920280e5ba62df973763c9dcdd17f",
+    "cad/harness-guides.scad": "3bff87bdd8992b8430bca1d1b6b92af87444611c28ae0db258a44143ba71e136",
+    "cad/harness-guides-assembly.scad": "c1382f4e19fe24a175ff05f097c1f9eda845043e4759108292ce5ad845e1cd17",
+    "cad/xiao-mount.scad": "f6fc6e1a94f5d5f44bd05e190c23828095bbd5a60726d0fb7a8b07005de42170",
+    "docs/evidence/packaging-v05.json": "c891dbd44a1fc8b4b11869432baf7cc3f8c15805ed40a70246dbf0744875795f",
+    "docs/evidence/xiao-mount-v01.json": "2e17654f50ad3ef5111e132c7e1178d1c623863f6b8713c3ad05a5c66bf458d8"
+  },
+  "print_bounds_mm": {
+    "tray_print": [
+      [
+        0.0,
+        0.0,
+        -7.62939e-07
+      ],
+      [
+        53.25,
+        48.0,
+        8.5
+      ]
+    ],
+    "cap_print": [
+      [
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        32.75,
+        8.2,
+        3.5
+      ]
+    ]
+  },
+  "limits": [
+    "Open saddles need removable ties/lacing; no elastic retention or cable squeeze qualification",
+    "Saddle slots are size allocations, no purchased tie SKU",
+    "Nominal pose only; sampled body and guard motions, continuous battery box sweep",
+    "Battery leads, fingers, magnets, some suspension parts and real cable plugs omitted",
+    "Cap sampled with servo lead moved aside and screws removed; no flexible-wire reach/strain proof",
+    "No print, electrical connection, real OV3660 size, RF or thermal validation"
+  ]
+}

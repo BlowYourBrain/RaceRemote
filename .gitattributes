@@ -189,3 +189,22 @@ app/src/androidTest/java/vea/raceremote/DrivingModeTest.kt text eol=lf
 docs/evidence/driving-mode-2026-09-14/*.json text eol=lf
 docs/evidence/driving-mode-2026-09-14/*.xml text eol=lf
 docs/evidence/driving-mode-2026-09-14/*.png binary
+
+# Motor carrier: preserve generated artifacts and source-hash byte conventions.
+tools/motor_carrier_identity.py text eol=lf
+tools/build_motor_carrier_schematic.py text eol=lf
+tools/build_motor_carrier_pcb.py text eol=lf
+tools/build_motor_carrier_cad.py text eol=lf
+tools/verify_motor_carrier.py text eol=lf
+hardware/motor-carrier/** text eol=crlf
+hardware/motor-carrier/*.pdf binary
+hardware/motor-carrier/*.md text eol=lf
+cad/motor-carrier/*.stl binary
+cad/motor-carrier/*.step binary
+cad/motor-carrier/*.png binary
+cad/motor-carrier/*.html text eol=lf
+cad/motor-carrier/*.md text eol=lf
+docs/evidence/motor-carrier-fit-v01.json text eol=lf
+docs/evidence/motor-carrier-v01/*.json text eol=crlf
+docs/evidence/motor-carrier-v01/summary.json text eol=lf
+docs/evidence/motor-carrier-v01/*.xml text eol=crlf

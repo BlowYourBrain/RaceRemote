@@ -1,0 +1,115 @@
+{
+  "version": "0.1",
+  "date": "2026-09-15",
+  "pose_mm": {
+    "electronics": 0,
+    "camera": 3
+  },
+  "bounds_mm": [
+    [
+      25.75,
+      47.0,
+      28.600000381469727
+    ],
+    [
+      43.75,
+      77.0,
+      44.599998474121094
+    ]
+  ],
+  "envelope_mm": [
+    18.0,
+    30.0,
+    15.999998092651367
+  ],
+  "solid_intersections_mm3": {},
+  "outside_hypothetical_body_mm3": {},
+  "old_antenna_wire_intersections_mm3": {
+    "C2": 8.90914
+  },
+  "new_antenna_route": {
+    "radius_mm": 0.65,
+    "points_mm": [
+      [
+        14.59,
+        85.2,
+        26.16
+      ],
+      [
+        10,
+        85.2,
+        28
+      ],
+      [
+        10,
+        85.2,
+        42
+      ],
+      [
+        10,
+        76.5,
+        42
+      ],
+      [
+        22,
+        76.5,
+        42
+      ],
+      [
+        40,
+        76.5,
+        42
+      ],
+      [
+        43,
+        70,
+        42
+      ],
+      [
+        47.5,
+        63,
+        42
+      ]
+    ],
+    "intersections_mm3": {},
+    "outside_body_mm3": 0.0,
+    "exclusion": "antenna endpoint; wire-wire intersections and strain not checked"
+  },
+  "physical_fit_verified": false,
+  "wires_rerouted": false,
+  "mounting_designed": false,
+  "sources_sha256": {
+    "tools/build_motor_carrier_cad.py": "3f14e6b7ffc6ad15f5a7b6acbba4766e772b33e8cbec172564a1f368fbfa1dab",
+    "hardware/motor-carrier/geometry.json": "d26ae891a7ac5fd0e126702bc269316d21dd9e073c8a2c62fc6851a0d4cae886",
+    "cad/current-layout/viewer.html": "4c00db2d80ad27a730873e59ad2025d9aef245bcfd7b71fc0c01c3f90e3e40a8",
+    "tools/cad_viewer_template.html": "f70aa04fd54fb88ff2aba390bccbf6f17a9c2d79b01286e9c0f0e76fb281129c",
+    "cad/packaging-v05/buck.stl": "16e923ac30f38cd5763b4369c6f1daf32c9255f6a8e8383c4410b2388063d06a",
+    "cad/packaging-v05/buck_plug.stl": "6d390fdfbe2734ee671f1278a3635b22e4535a3bd69d32174a6cca960d07eb38",
+    "cad/packaging-v05/pads.stl": "184beabc4244ffe4a3c5ac3f3e208ba58a3578687ca1d21d6426cecdc4630556",
+    "cad/packaging-v05/charge.stl": "d2af805332b2b8e555be6f8455eb8b95174316f01fa19408f43dad3a45aaf578",
+    "cad/packaging-v05/frame-relief-proposal.stl": "b7024c986e2ee169f2557a3c4c9e47876cdf0e77cd0bbcd713e1de39999f109a",
+    "cad/packaging-v05/servo-installed.stl": "8f7c94bd577f4b44eff27a8daa9d61ad3e7f52759edf7b92f44a65f943c10d41",
+    "cad/packaging-v05/antenna.stl": "f5ec77dd68d7dc71eb959ab0f52c6f4ee3666378bc113d79e683fc5d03307217",
+    "cad/packaging-v05/antenna_support.stl": "62be42076e6d4623de95ae72836375f5265bb88fdb740caf039ecc8263fe5896",
+    "cad/packaging-v05/inputs/cover.stl": "67991811518bfd981143b4541ee1d936b84bc55d2d8379382a0746b7e6b283ac",
+    "cad/packaging-v05/inputs/usb-base.stl": "8f3d20d5952a249fb1f8c9440751bce8590ce505d7476cd053d51f62dc57a0fc",
+    "cad/packaging-v05/inputs/usb-pcb.stl": "d68ee033c3ed97af9e8045ee6799d95ace9f633f0d8beddba5a9e5f09e86cee2",
+    "cad/packaging-v05/inputs/usb-connector.stl": "4731ab48bd28f1708d8c598f3711ae5c87890473968fb6e1e48d629e606e9cbc",
+    "cad/packaging-v05/inputs/usb-components.stl": "c8cc27cf13eacee53a7227c45acd32dbd6ba0aecd7fad42379c8de0192013a70",
+    "cad/packaging-v05/inputs/adjustable-battery.stl": "99e5c2cd66c0d59f1e402d83f8988ba361016054b88bee3651f8274ff42d786a",
+    "cad/packaging-v05/inputs/adjustable-support.stl": "16d698f494ca637d73c1da61f0c55adfa5b2b3ff1df42e631b94d073970eac54",
+    "cad/packaging-v05/inputs/adjustable-guards.stl": "30534ff4a38cee23058b438597c313693c3a3497d5a815964862a4112c54d7d6",
+    "cad/packaging-v05/inputs/adjustable-band.stl": "d9d652240b22b1f40fdb39d07892e0d45d97b9c7cae642a50b26f1772b67e2e2",
+    "cad/packaging-v05/inputs/adjustable-main_fasteners.stl": "82b66767791535c0289c7de2f5a1b4b6f8cd4a11f3b95302ccb9543c6656ebe1",
+    "cad/xiao-mount/cradle.stl": "059b90f45d623519551034e7003d177faeb619caad623f4de1958738af257caa",
+    "cad/xiao-mount/screws.stl": "344530c44bfa7a7dd5e15b6b5d53e5583001325b0ab067984c89dd493dc08bd8",
+    "cad/xiao-mount/stage_screws.stl": "398e1fce190911f7d9d3187ac6f38c2c09f2ddff61ff45dcf810bf489f38a8ca",
+    "cad/xiao-mount/usb_access.stl": "a40ce6d18dd215319f675d86546b97bdf6a06f2176a939d4a0da0a795e38af20",
+    "cad/harness-guides/tray.stl": "c3c7e7b08737eb7553ccf7ffa33f1197876d206857e401ee02811662ef78e0ad",
+    "cad/harness-guides/cap.stl": "8344dcb2c2b430b324d7748fc2da33408bc7f5a085eeb63b0c0c72824d4d32d7",
+    "cad/components/motor-installed.stl": "08368cbf61c451de981b3aa44b8e624300c274c43da541815456cff0680208a6",
+    "docs/evidence/xiao-mount-v01.json": "2e17654f50ad3ef5111e132c7e1178d1c623863f6b8713c3ad05a5c66bf458d8",
+    "cad/packaging-v05/inputs/adjustable-cavity.stl": "271b880213a2abe8e282b0ebcb23aab949275a23d3dcc8d8c419b1363b40d246",
+    "cad/xiao-mount/wire-antenna.stl": "c7eba24f70fbece34b80dd107e11e7ac18e45c9e2a3843d0eee2019dbc415144"
+  }
+}

@@ -1,0 +1,374 @@
+{
+  "board_size_mm": [
+    30,
+    18,
+    1.6
+  ],
+  "component_positions": {
+    "U1": {
+      "value": "TA6586 DIP8",
+      "center_mm": [
+        12,
+        9
+      ],
+      "side": "F"
+    },
+    "R1": {
+      "value": "100 / 1%",
+      "center_mm": [
+        5,
+        3
+      ],
+      "side": "F"
+    },
+    "R2": {
+      "value": "100 / 1%",
+      "center_mm": [
+        5,
+        6
+      ],
+      "side": "F"
+    },
+    "R3": {
+      "value": "10k / 1%",
+      "center_mm": [
+        10.73,
+        2.1
+      ],
+      "side": "F"
+    },
+    "R4": {
+      "value": "10k / 1%",
+      "center_mm": [
+        5.1,
+        9
+      ],
+      "side": "F"
+    },
+    "C1": {
+      "value": "100n / 25V",
+      "center_mm": [
+        14.54,
+        2.8
+      ],
+      "side": "B"
+    },
+    "C2": {
+      "value": "470u / 16V",
+      "center_mm": [
+        23,
+        6
+      ],
+      "side": "F"
+    },
+    "H1": {
+      "value": "CMD_FI",
+      "center_mm": [
+        1.8,
+        3
+      ],
+      "side": "F"
+    },
+    "H2": {
+      "value": "CMD_BI",
+      "center_mm": [
+        1.8,
+        6
+      ],
+      "side": "F"
+    },
+    "H3": {
+      "value": "DRIVE_GND",
+      "center_mm": [
+        2,
+        9
+      ],
+      "side": "F"
+    },
+    "H4": {
+      "value": "VM",
+      "center_mm": [
+        28,
+        13
+      ],
+      "side": "F"
+    },
+    "H5": {
+      "value": "DRIVE_GND",
+      "center_mm": [
+        28,
+        16
+      ],
+      "side": "F"
+    },
+    "H6": {
+      "value": "FO",
+      "center_mm": [
+        2,
+        12
+      ],
+      "side": "F"
+    },
+    "H7": {
+      "value": "BO",
+      "center_mm": [
+        2,
+        15
+      ],
+      "side": "F"
+    }
+  },
+  "pads": [
+    {
+      "ref": "H7",
+      "pin": "1",
+      "net": "BO",
+      "xy_mm": [
+        2.0,
+        15.0
+      ]
+    },
+    {
+      "ref": "H6",
+      "pin": "1",
+      "net": "FO",
+      "xy_mm": [
+        2.0,
+        12.0
+      ]
+    },
+    {
+      "ref": "H5",
+      "pin": "1",
+      "net": "DRIVE_GND",
+      "xy_mm": [
+        28.0,
+        16.0
+      ]
+    },
+    {
+      "ref": "H4",
+      "pin": "1",
+      "net": "VM",
+      "xy_mm": [
+        28.0,
+        13.0
+      ]
+    },
+    {
+      "ref": "H3",
+      "pin": "1",
+      "net": "DRIVE_GND",
+      "xy_mm": [
+        2.0,
+        9.0
+      ]
+    },
+    {
+      "ref": "H2",
+      "pin": "1",
+      "net": "CMD_BI",
+      "xy_mm": [
+        1.8,
+        6.0
+      ]
+    },
+    {
+      "ref": "H1",
+      "pin": "1",
+      "net": "CMD_FI",
+      "xy_mm": [
+        1.8,
+        3.0
+      ]
+    },
+    {
+      "ref": "C2",
+      "pin": "2",
+      "net": "DRIVE_GND",
+      "xy_mm": [
+        24.75,
+        6.0
+      ]
+    },
+    {
+      "ref": "C2",
+      "pin": "1",
+      "net": "VM",
+      "xy_mm": [
+        21.25,
+        6.0
+      ]
+    },
+    {
+      "ref": "C1",
+      "pin": "2",
+      "net": "DRIVE_GND",
+      "xy_mm": [
+        13.59,
+        2.8
+      ]
+    },
+    {
+      "ref": "C1",
+      "pin": "1",
+      "net": "VM",
+      "xy_mm": [
+        15.49,
+        2.8
+      ]
+    },
+    {
+      "ref": "R4",
+      "pin": "2",
+      "net": "DRIVE_GND",
+      "xy_mm": [
+        6.05,
+        9.0
+      ]
+    },
+    {
+      "ref": "R4",
+      "pin": "1",
+      "net": "BI",
+      "xy_mm": [
+        4.15,
+        9.0
+      ]
+    },
+    {
+      "ref": "R3",
+      "pin": "2",
+      "net": "DRIVE_GND",
+      "xy_mm": [
+        11.68,
+        2.1
+      ]
+    },
+    {
+      "ref": "R3",
+      "pin": "1",
+      "net": "FI",
+      "xy_mm": [
+        9.78,
+        2.1
+      ]
+    },
+    {
+      "ref": "R2",
+      "pin": "2",
+      "net": "BI",
+      "xy_mm": [
+        5.95,
+        6.0
+      ]
+    },
+    {
+      "ref": "R2",
+      "pin": "1",
+      "net": "CMD_BI",
+      "xy_mm": [
+        4.05,
+        6.0
+      ]
+    },
+    {
+      "ref": "R1",
+      "pin": "2",
+      "net": "FI",
+      "xy_mm": [
+        5.95,
+        3.0
+      ]
+    },
+    {
+      "ref": "R1",
+      "pin": "1",
+      "net": "CMD_FI",
+      "xy_mm": [
+        4.05,
+        3.0
+      ]
+    },
+    {
+      "ref": "U1",
+      "pin": "8",
+      "net": "BO",
+      "xy_mm": [
+        8.19,
+        12.81
+      ]
+    },
+    {
+      "ref": "U1",
+      "pin": "7",
+      "net": "BO",
+      "xy_mm": [
+        10.73,
+        12.81
+      ]
+    },
+    {
+      "ref": "U1",
+      "pin": "6",
+      "net": "FO",
+      "xy_mm": [
+        13.27,
+        12.81
+      ]
+    },
+    {
+      "ref": "U1",
+      "pin": "5",
+      "net": "FO",
+      "xy_mm": [
+        15.81,
+        12.81
+      ]
+    },
+    {
+      "ref": "U1",
+      "pin": "4",
+      "net": "VM",
+      "xy_mm": [
+        15.81,
+        5.19
+      ]
+    },
+    {
+      "ref": "U1",
+      "pin": "3",
+      "net": "DRIVE_GND",
+      "xy_mm": [
+        13.27,
+        5.19
+      ]
+    },
+    {
+      "ref": "U1",
+      "pin": "2",
+      "net": "FI",
+      "xy_mm": [
+        10.73,
+        5.19
+      ]
+    },
+    {
+      "ref": "U1",
+      "pin": "1",
+      "net": "BI",
+      "xy_mm": [
+        8.19,
+        5.19
+      ]
+    }
+  ],
+  "capacitor_reference": "Rubycon 16ZLH470MEFC8X11.5; candidate, not purchased",
+  "capacitor_case_max_mm": [
+    8.5,
+    13
+  ],
+  "capacitor_seating_gap_proposal_mm": 0.5,
+  "bottom_capacitor_height_reserve_mm": 0.9,
+  "total_envelope_height_mm": 16.0
+}

@@ -1,0 +1,72 @@
+{
+  "date": "2026-09-15",
+  "version": "0.1",
+  "kicad_version": "10.0.6",
+  "components": 14,
+  "pads_checked": 27,
+  "nets": 8,
+  "erc_violations": 0,
+  "drc_violations": 0,
+  "unconnected_items": 0,
+  "schematic_parity_issues": 0,
+  "default_ignored_checks": [
+    {
+      "description": "Footprint has no courtyard defined",
+      "key": "missing_courtyard"
+    },
+    {
+      "description": "Track endpoint not centered on via",
+      "key": "track_not_centered_on_via"
+    },
+    {
+      "description": "Tuning profile track geometries",
+      "key": "tuning_profile_track_geometries"
+    },
+    {
+      "description": "Footprint doesn't match symbol's footprint filters",
+      "key": "footprint_filters_mismatch"
+    },
+    {
+      "description": "Footprint component type doesn't match footprint pads",
+      "key": "footprint_type_mismatch"
+    }
+  ],
+  "oracle_mutations_detected": [
+    "swap FI and BI",
+    "break paired FO",
+    "reverse electrolytic",
+    "pulldown before series resistor"
+  ],
+  "physical_tests": false,
+  "current_rating_a": null,
+  "fabrication_released": false,
+  "source_documents": {
+    "ta6586.pdf": {
+      "url": "https://static.chipdip.ru/lib/923/DOC012923012.pdf",
+      "sha256": "73ad4ae4cc75fb6555e9cb36b9e8129c6dbaed010ead0c3fd987e807721a084c"
+    },
+    "rubycon-zlh.pdf": {
+      "url": "https://www.rubycon.co.jp/wp-content/uploads/catalog-aluminum/ZLH.pdf",
+      "sha256": "f28d0524c711cd7f04a88708bd8fa2d2fb1ef81e9cc00c5576ce03bc7e4bf1bc"
+    }
+  },
+  "source_sha256": {
+    "tools/motor_carrier_identity.py": "9808c57149e1c7a88991c43726c5825c3b95b945cfa27d1761f5ad210e628502",
+    "tools/build_motor_carrier_schematic.py": "5a5bb2cd4ff6b37c7493cfe5b7e4ad11238409b9780959986755d58e061a5c38",
+    "tools/build_motor_carrier_pcb.py": "7f6db5c540cd9ef6a234bf4e75e860b2e4aa821fb250a2ff62fb0c864e95b56c",
+    "tools/verify_motor_carrier.py": "291e9065dca92cb18069c8a85fa2dc501ad1a14ff630400cf48bfda394491b0a",
+    "hardware/motor-carrier/bom.csv": "3acb0ab6e60127aa1a27da122492f3102aa9f03bf2930ecb708f72b6ec431e34",
+    "hardware/motor-carrier/fp-lib-table": "395486db204215903b38f87f3522632cca9297027770d0f4c2557cc428d43cf8",
+    "hardware/motor-carrier/geometry.json": "d26ae891a7ac5fd0e126702bc269316d21dd9e073c8a2c62fc6851a0d4cae886",
+    "hardware/motor-carrier/motor-carrier.kicad_pcb": "f2e5ab92eef4895bfd3ff0a2a48ef7372b4d1e5544644ef98affe201cef06be3",
+    "hardware/motor-carrier/motor-carrier.kicad_pro": "86f3fcbfaf89b5f373e5ba46520581d1adf14c64ccb773c7a183fd2d3e96064f",
+    "hardware/motor-carrier/motor-carrier.kicad_sch": "c45fafda31ea2d1dc20e1b9fbac6f84f33219897604aeb6c35c831cfd86bd021",
+    "hardware/motor-carrier/RaceRemote_Motor.kicad_sym": "299733df37e91486802ec8a12a0766d9d2d838c515f43d6d2e5760faf580de72",
+    "hardware/motor-carrier/RaceRemote_Motor.pretty/C_0805.kicad_mod": "be26e11e125ecf8b63ceebfa263b7002af15b2e94d9acb6299634272a3352327",
+    "hardware/motor-carrier/RaceRemote_Motor.pretty/CP_D8_P3.5.kicad_mod": "4d42a16d62c0b781f57c6b4418d73f741611917a029086ad8f5daef7ba708db2",
+    "hardware/motor-carrier/RaceRemote_Motor.pretty/R_0805.kicad_mod": "b703ac700c017a901401cd103dfe94d0e79e89ea9e0abea6df256b8ae8862767",
+    "hardware/motor-carrier/RaceRemote_Motor.pretty/TA6586_DIP8.kicad_mod": "9dc5f384c9223650eb801c56e1482b67e0990431f63ab0f7f9da8e1e8fd7bda5",
+    "hardware/motor-carrier/RaceRemote_Motor.pretty/WirePad_1mm.kicad_mod": "e7500c8e97701f51fedf8af5f80b1f48865ec7348e3210b9672167c99745fc7f",
+    "hardware/motor-carrier/sym-lib-table": "f7ccbba878eb7e25a2281681aaa6af1a0d592c8283a35265ad6caaca8a05fee2"
+  }
+}

@@ -301,3 +301,11 @@ cad/buck-output-harness/*.md text eol=lf
 tools/build_buck_output_harness.py text eol=lf
 tools/build_buck_output_view.py text eol=lf
 docs/evidence/buck-output-harness-v01.json text eol=lf
+
+cad/logic-connector-study/*.stl binary
+cad/logic-connector-study/*.html text eol=lf
+cad/logic-connector-study/*.json text eol=lf
+cad/logic-connector-study/*.md text eol=lf
+tools/check_logic_connector_fit.py text eol=lf
+tools/build_logic_connector_view.py text eol=lf
+docs/evidence/logic-connector-fit-v01.json text eol=lf

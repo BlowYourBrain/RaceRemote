@@ -1,0 +1,17 @@
+{
+  "source_sha256": {
+    "cad/buck-output-harness/viewer.html": "24979d5faa761cbc39d328eab8a5346b198586c856c34b01dceb1346c06001b2",
+    "docs/evidence/logic-connector-fit-v01.json": "ba8efb0a3afabccf78212321b0c7d384d28ec20939d7e9e3f48e4f7f95cde591",
+    "cad/logic-connector-study/sm-envelope.stl": "7588e672ef853854f3195330d7f364095ec42cf6cac2a011e0554df902d90716",
+    "tools/build_logic_connector_view.py": "c5b7b91c36ea28d8b4270621b013cc489185a389e61817c3ea502d95947bbabc"
+  },
+  "artifact_sha256": {
+    "viewer.html": "01ceee3293fceb3984937b4cdf7c6e8d99ba21020ee5bb642c6a90b32d6ba33a"
+  },
+  "scene_objects": 68,
+  "removed_ids": [
+    "buck-output-5V",
+    "buck-output-GND",
+    "buck_plug"
+  ]
+}

@@ -1,0 +1,32 @@
+{
+  "date": "2026-09-15",
+  "jst_url": "https://www.jst-mfg.com/product/pdf/eng/eSM.pdf",
+  "cable_drawing_url": "https://static.chipdip.ru/lib/245/DOC021245649.pdf",
+  "cable_drawing_revision": "A 2022-09-30",
+  "cable_spec": {
+    "awg": 24,
+    "outer_diameter_mm": 1.4,
+    "length_mm": 100,
+    "length_tolerance_mm": 5,
+    "pin1": "red",
+    "pin2": "black",
+    "metal_contacts": "male"
+  },
+  "offer": {
+    "url": "https://www.chipdip.ru/product/sct2505fh-02pl100-hk0083-0005-rozetka-razem-jst-scondar-9001071847",
+    "part": "SCT2505FH-02PL100 HK0083-0005",
+    "price_rub": 86,
+    "quantity_in_offer": 1,
+    "unit": "one cable half, not pair",
+    "moscow_stock": 892,
+    "city": "Cheboksary",
+    "estimated_store_pickup": "2026-09-18",
+    "pickup_rub": 0,
+    "ordered": false
+  },
+  "complete_ready_pair_selected": false,
+  "source_sha256": {
+    "build/connector-research/jst-sm.pdf": "05bb0ede946ab6255692e007706c9ac87eece07e2ade4f6dd687723b4a7a3301",
+    "build/connector-research/scondar-hk0083-0005.pdf": "fa8bb626f073ba60967301e9723ce21c566d529dc5b9f2eb1e9e4905bcefa9e2"
+  }
+}

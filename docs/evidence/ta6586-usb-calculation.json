@@ -1,0 +1,107 @@
+{
+  "contract": "TA-USB-STATIC-01 v0.1",
+  "evidence": "ideal DC calculation only",
+  "assumptions": {
+    "USB_measured_V": [
+      4.75,
+      5.25
+    ],
+    "series_operating_ohm": [
+      44.65,
+      49.35
+    ],
+    "four_load_resistors_ohm": [
+      990,
+      1010
+    ],
+    "assumed_ICC_mA": [
+      0,
+      7
+    ],
+    "ICC_caveat": "7 mA is specified at VCC=6 V, not guaranteed at fixture voltage",
+    "output_model": "ideal switches or open; no transient, leakage or dropout model",
+    "resistor_caveat": "operating resistance bounds assumed; no thermal/drift qualification"
+  },
+  "corner_count": 512,
+  "states": {
+    "00": {
+      "vm_V": [
+        4.195414922788282,
+        5.0277343194424695
+      ],
+      "source_mA": [
+        4.4838816255250755,
+        11.772096844343496
+      ],
+      "series_W": [
+        0.0009057158511317036,
+        0.006777321574843567
+      ],
+      "load_max_W": [
+        0.004365012879058966,
+        0.006380022025261652
+      ]
+    },
+    "10": {
+      "vm_V": [
+        4.005239735464316,
+        4.8235240607659415
+      ],
+      "source_mA": [
+        8.568593848651583,
+        16.149356064115626
+      ],
+      "series_W": [
+        0.0033345421992240776,
+        0.012649270659693729
+      ],
+      "load_max_W": [
+        0.015940295481849078,
+        0.0234628780663292
+      ]
+    },
+    "01": {
+      "vm_V": [
+        4.005239735464316,
+        4.8235240607659415
+      ],
+      "source_mA": [
+        8.568593848651583,
+        16.149356064115626
+      ],
+      "series_W": [
+        0.0033345421992240776,
+        0.012649270659693729
+      ],
+      "load_max_W": [
+        0.015940295481849078,
+        0.0234628780663292
+      ]
+    },
+    "11": {
+      "vm_V": [
+        4.005239735464316,
+        4.8235240607659415
+      ],
+      "source_mA": [
+        8.568593848651583,
+        16.149356064115626
+      ],
+      "series_W": [
+        0.0033345421992240776,
+        0.012649270659693729
+      ],
+      "load_max_W": [
+        0.015940295481849078,
+        0.0234628780663292
+      ]
+    }
+  },
+  "hard_short_source_mA": 117.58118701007838,
+  "hard_short_series_W": 0.6173012318029115,
+  "downstream_470uF_plus20percent_energy_mJ": 7.772624999999999,
+  "capacitor_caveat": "downstream capacitor discharge bypasses the series resistor",
+  "max_KCL_residual_A": 2.3418766925686896e-17,
+  "max_power_residual_W": 1.0755285551056204e-16,
+  "physical_measurements": null
+}

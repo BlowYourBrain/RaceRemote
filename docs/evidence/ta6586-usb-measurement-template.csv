@@ -1,0 +1,8 @@
+sample_id;date;board_revision;rusb_measured_ohm;fi_command;bi_command;vbus_V;vm_V;logic_V;fi_V;bi_V;fo_V;bo_V;rusb_drop_V;vm_branch_estimate_mA;notes
+;;;;0;0;;;;;;;;;;
+;;;;1;0;;;;;;;;;;
+;;;;0;0;;;;;;;;;;
+;;;;0;1;;;;;;;;;;
+;;;;0;0;;;;;;;;;;
+;;;;1;1;;;;;;;;;;
+;;;;0;0;;;;;;;;;;

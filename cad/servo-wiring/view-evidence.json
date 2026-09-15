@@ -1,0 +1,12 @@
+{
+  "scene_objects": 76,
+  "source_sha256": {
+    "tools/build_servo_wiring_view.py": "b81a1e979b54a724de4338c7aeb4827bcd66645f0938578d1c87ea1b7dad1b96",
+    "cad/servo-bundle-study/viewer.html": "2d4967560460a5143e42428385ef0879d973490432b46d596bb8224a00b9f542",
+    "docs/evidence/servo-wiring-v01.json": "068c7127347f2e38b7681ee429c474e79c29c58a5b625460bc627b43020fbeea",
+    "cad/servo-wiring/signal.stl": "4d0ac85260f703e310139e4ce1298401276a7cc13b6891d902e5b79041104c69"
+  },
+  "artifact_sha256": {
+    "viewer.html": "c416ca487d35a7e1a19e26f832edd029d47a86d89d4b88f57225374eece07ca6"
+  }
+}

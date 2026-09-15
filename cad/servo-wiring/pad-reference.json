@@ -1,0 +1,36 @@
+{
+  "contract": "SERVO-WIRING-01 v0.1",
+  "date": "2026-09-15",
+  "source_label": "D3",
+  "gpio": 4,
+  "pad": {
+    "vendor_ref": "U9",
+    "pin": "4",
+    "net": "/03 XIAO ESP32-S3-Sense/D3{slash}A3",
+    "vendor_xy_mm": [
+      140.8811,
+      104.9771
+    ],
+    "pad_diameter_mm": 1.4,
+    "candidate_xyz_mm": [
+      23.34583,
+      83.25,
+      23.27
+    ]
+  },
+  "physical_pad_identification": false,
+  "vendor_url": "https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/new-res/202003751_XIAO%20ESP32S3_v1.4_SCH%26PCB_260226.zip",
+  "vendor_pcb_sha256": "d20724aa7198a897871cc1ce87f1a322d0b9cf77521fd2fc4ccda61bc5e4af6c",
+  "limitations": [
+    "URL1.4 contains Sense1.5; actual purchased board revision unknown",
+    "PCB1.5 coordinates transferred to STEP2023; sample revision unverified",
+    "Signal only; 3.3V input threshold and unpowered-servo behavior unqualified"
+  ],
+  "source_sha256": {
+    "tools/extract_servo_pad.py": "7d3eae652c1f60a8cfa012c220fdad40c7dd473db083a77ccc9f02cceab995e2",
+    "cad/control-harness/xiao-pad-reference.json": "a3371e95539c49c03eb71825c2914d6b4c8750427856848f5b311e1d6c675ff3",
+    "docs/evidence/xiao-mount-v01.json": "2e17654f50ad3ef5111e132c7e1178d1c623863f6b8713c3ad05a5c66bf458d8"
+  },
+  "firmware_profile_sha256": "3014a2edb8969c82c9f13b5a029b07d1ba8478b6956c5ce4f9c173999da03f9c",
+  "arduino_variant_sha256": "5d1c9414881bea0e35253fbc0b75e84599609dbe914dbfe49eab9adb5238109d"
+}

@@ -1,0 +1,25 @@
+{
+  "page_title": "RaceRemote - Servo signal wiring",
+  "scene_objects": 76,
+  "unique_ids": 76,
+  "canvas_rendered": true,
+  "webgl_error": 0,
+  "adjustment_hidden": true,
+  "signal_visible": true,
+  "capture": "Canvas PNG after hiding body and usb_cover, az=.8 el=.7 span=155",
+  "hidden_ids": [
+    "wire-power",
+    "usb_cover",
+    "body",
+    "service_usb",
+    "servo-bundle",
+    "servo-old-clash"
+  ],
+  "visual_review": "Signal visible below camera assembly; entire assembly overview inspected, not dimensional proof",
+  "source_sha256": {
+    "viewer.html": "c416ca487d35a7e1a19e26f832edd029d47a86d89d4b88f57225374eece07ca6"
+  },
+  "artifact_sha256": {
+    "overview.png": "7d9f6db57b50c107468c464fe5e2d66011c0e22a37bac10b8036289418bb70bc"
+  }
+}

@@ -1,0 +1,44 @@
+{
+  "date": "2026-09-15",
+  "viewer_sha256": "f53291fe492c81b05925b7f8752fd07acbc1976da198c90c7c59b4cc3e37ee7d",
+  "local_file_page": true,
+  "canvas_rendered": true,
+  "webgl_error": 0,
+  "display_parts": 36,
+  "checked_sliders_mm": [
+    [
+      0,
+      3
+    ],
+    [
+      8,
+      8
+    ],
+    [
+      -1,
+      2
+    ],
+    [
+      0,
+      3
+    ]
+  ],
+  "status_results": [
+    "clear",
+    "intersection",
+    "clear",
+    "clear"
+  ],
+  "views_checked": [
+    "top",
+    "side",
+    "iso"
+  ],
+  "body_visibility_toggled_twice": true,
+  "canvas_screenshot": "docs/evidence/packaging-v05-browser.png",
+  "canvas_screenshot_sha256": "28272a98e9535e2879df37bb775731c854c383d987722ae97abf1b00f53d816f",
+  "console_note": "One file-origin security warning observed during browser-tool screenshot attempt; canvas rendering and controls worked. Screenshot saved from render()+canvas.toDataURL().",
+  "physical_fit_verified": false,
+  "artifact_hashes_verified": 49,
+  "documentation_local_links_valid": true
+}

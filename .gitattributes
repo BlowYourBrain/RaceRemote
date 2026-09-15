@@ -1,4 +1,15 @@
 # Preserve device evidence/source hashes across Windows checkouts.
+# Detailed packaging: retain imported/source bytes and reproducible evidence.
+cad/packaging-v05/*.stl binary
+cad/packaging-v05/inputs/*.stl binary
+cad/packaging-v05/*.step binary
+cad/packaging-v05/LICENSE-FreeCAD-Assets binary
+cad/packaging-v05/*.scad text eol=lf
+cad/packaging-v05/*.html text eol=lf
+cad/packaging-v05/*.md text eol=lf
+tools/build_packaging_v05.py text eol=lf
+docs/evidence/packaging-v05*.json text eol=lf
+docs/evidence/packaging-v05*.png binary
 app/src/androidTest/java/vea/raceremote/DriveDeviceBenchTest.kt text eol=lf
 docs/evidence/drive-device-2026-09-14/* text eol=lf
 docs/evidence/link-comparison-2026-09-14/* text eol=lf

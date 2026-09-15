@@ -1,0 +1,2370 @@
+{
+  "version": "0.5",
+  "date": "2026-09-15",
+  "physical_fit_verified": false,
+  "servo_source": {
+    "url": "https://github.com/FreeCAD/FreeCAD-library/tree/6f071a4bab37fff7784092548e6dbff21499b751/Electrical%20Parts/Servos/SG-90",
+    "sha256": "9ad7b12887580bf68135e7bf544f0fc231ab9af988508184c097b1d1c3e7d734",
+    "native_bounds_mm": [
+      [
+        -5.900000095367432,
+        -4.699999809265137,
+        0.0
+      ],
+      [
+        5.900000095367432,
+        27.700000762939453,
+        29.899999618530273
+      ]
+    ],
+    "transform": [
+      [
+        0.0,
+        -1.0,
+        0.0,
+        41.35
+      ],
+      [
+        0.0,
+        0.0,
+        1.0,
+        71.375
+      ],
+      [
+        -1.0,
+        0.0,
+        0.0,
+        8.1
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ]
+    ],
+    "scaled": false,
+    "sample_match_confirmed": false
+  },
+  "buck_sources": [
+    "https://www.waveshare.com/img/devkit/accBoard/DC5-36-TO-DC3V3-5/DC5-36-TO-DC3V3-5-size.jpg",
+    "https://www.waveshare.com/img/devkit/accBoard/DC5-36-TO-DC3V3-5/DC5-36-TO-DC3V3-5-details-1.jpg"
+  ],
+  "buck_terminal_dimensions_estimated": true,
+  "old_stacked_charge_with_M_module_overlap_mm3": 437.8392533539645,
+  "servo_frame_overlap_mm3": 3.7239312860394116,
+  "servo_revised_frame_overlap_mm3": 0.0,
+  "frame_removed_volume_mm3": 23.16725625239597,
+  "frame_connected_components_before": 1,
+  "frame_connected_components_after": 1,
+  "servo_cover_overlap_mm3": 0.0,
+  "internal_electronics_overlaps_mm3": {
+    "buck/tray": 0.0,
+    "buck/driver": 0.0,
+    "buck/charge": 0.0,
+    "tray/driver": 0.0,
+    "tray/charge": 0.0,
+    "driver/charge": 0.0
+  },
+  "fixed_antenna_outside_body_mm3": {
+    "antenna": 0.0,
+    "antenna_support": 0.0
+  },
+  "nominal_pose": {
+    "electronics_mm": 0,
+    "camera_mm": 3,
+    "mechanical_clear": true,
+    "hypothetical_body_clear": true,
+    "overlaps_mm3": {},
+    "outside_body_mm3": {}
+  },
+  "feasible_pose_count": 6,
+  "poses": [
+    {
+      "electronics_mm": -3,
+      "camera_mm": -3,
+      "mechanical_clear": false,
+      "hypothetical_body_clear": false,
+      "overlaps_mm3": {
+        "buck/camera": 32.0647,
+        "buck/camera_mount": 126.78764,
+        "tray/camera_mount": 27.39976,
+        "camera_mount/antenna_support": 3.86462
+      },
+      "outside_body_mm3": {
+        "charge": 52.84843
+      }
+    },
+    {
+      "electronics_mm": -3,
+      "camera_mm": -2,
+      "mechanical_clear": false,
+      "hypothetical_body_clear": false,
+      "overlaps_mm3": {
+        "buck/camera_mount": 95.24999,
+        "camera_mount/antenna_support": 0.77597
+      },
+      "outside_body_mm3": {
+        "charge": 52.84843
+      }
+    },
+    {
+      "electronics_mm": -3,
+      "camera_mm": -1,
+      "mechanical_clear": false,
+      "hypothetical_body_clear": false,
+      "overlaps_mm3": {
+        "buck/camera_mount": 31.75
+      },
+      "outside_body_mm3": {
+        "charge": 52.84843
+      }
+    },
+    {
+      "electronics_mm": -3,
+      "camera_mm": 0,
+      "mechanical_clear": true,
+      "hypothetical_body_clear": false,
+      "overlaps_mm3": {},
+      "outside_body_mm3": {
+        "charge": 52.84843
+      }
+    },
+    {
+      "electronics_mm": -3,
+      "camera_mm": 1,
+      "mechanical_clear": true,
+      "hypothetical_body_clear": false,
+      "overlaps_mm3": {},
+      "outside_body_mm3": {
+        "charge": 52.84843
+      }
+    },
+    {
+      "electronics_mm": -3,
+      "camera_mm": 2,
+      "mechanical_clear": true,
+      "hypothetical_body_clear": false,
+      "overlaps_mm3": {},
+      "outside_body_mm3": {
+        "charge": 52.84843
+      }
+    },
+    {
+      "electronics_mm": -3,
+      "camera_mm": 3,
+      "mechanical_clear": true,
+      "hypothetical_body_clear": false,
+      "overlaps_mm3": {},
+      "outside_body_mm3": {
+        "charge": 52.84843
+      }
+    },
+    {
+      "electronics_mm": -3,
+      "camera_mm": 4,
+      "mechanical_clear": true,
+      "hypothetical_body_clear": false,
+      "overlaps_mm3": {},
+      "outside_body_mm3": {
+        "charge": 52.84843
+      }
+    },
+    {
+      "electronics_mm": -3,
+      "camera_mm": 5,
+      "mechanical_clear": true,
+      "hypothetical_body_clear": false,
+      "overlaps_mm3": {},
+      "outside_body_mm3": {
+        "charge": 52.84843,
+        "camera": 1.67703
+      }
+    },
+    {
+      "electronics_mm": -3,
+      "camera_mm": 6,
+      "mechanical_clear": true,
+      "hypothetical_body_clear": false,
+      "overlaps_mm3": {},
+      "outside_body_mm3": {
+        "charge": 52.84843,
+        "camera": 24.74088
+      }
+    },
+    {
+      "electronics_mm": -3,
+      "camera_mm": 7,
+      "mechanical_clear": true,
+      "hypothetical_body_clear": false,
+      "overlaps_mm3": {},
+      "outside_body_mm3": {
+        "charge": 52.84843,
+        "camera": 74.87511
+      }
+    },
+    {
+      "electronics_mm": -3,
+      "camera_mm": 8,
+      "mechanical_clear": true,
+      "hypothetical_body_clear": false,
+      "overlaps_mm3": {},
+      "outside_body_mm3": {
+        "charge": 52.84843,
+        "camera": 152.07985
+      }
+    },
+    {
+      "electronics_mm": -2,
+      "camera_mm": -3,
+      "mechanical_clear": false,
+      "hypothetical_body_clear": false,
+      "overlaps_mm3": {
+        "buck/camera": 96.19409,
+        "buck/camera_mount": 121.08495,
+        "tray/camera_mount": 54.79952,
+        "driver/camera_mount": 55.49999,
+        "camera_mount/antenna_support": 3.86462
+      },
+      "outside_body_mm3": {
+        "charge": 12.4235
+      }
+    },
+    {
+      "electronics_mm": -2,
+      "camera_mm": -2,
+      "mechanical_clear": false,
+      "hypothetical_body_clear": false,
+      "overlaps_mm3": {
+        "buck/camera": 32.0647,
+        "buck/camera_mount": 126.78764,
+        "tray/camera_mount": 27.39976,
+        "camera_mount/antenna_support": 0.77597
+      },
+      "outside_body_mm3": {
+        "charge": 12.4235
+      }
+    },
+    {
+      "electronics_mm": -2,
+      "camera_mm": -1,
+      "mechanical_clear": false,
+      "hypothetical_body_clear": false,
+      "overlaps_mm3": {
+        "buck/camera_mount": 95.24999
+      },
+      "outside_body_mm3": {
+        "charge": 12.4235
+      }
+    },
+    {
+      "electronics_mm": -2,
+      "camera_mm": 0,
+      "mechanical_clear": false,
+      "hypothetical_body_clear": false,
+      "overlaps_mm3": {
+        "buck/camera_mount": 31.75
+      },
+      "outside_body_mm3": {
+        "charge": 12.4235
+      }
+    },
+    {
+      "electronics_mm": -2,
+      "camera_mm": 1,
+      "mechanical_clear": true,
+      "hypothetical_body_clear": false,
+      "overlaps_mm3": {},
+      "outside_body_mm3": {
+        "charge": 12.4235
+      }
+    },
+    {
+      "electronics_mm": -2,
+      "camera_mm": 2,
+      "mechanical_clear": true,
+      "hypothetical_body_clear": false,
+      "overlaps_mm3": {},
+      "outside_body_mm3": {
+        "charge": 12.4235
+      }
+    },
+    {
+      "electronics_mm": -2,
+      "camera_mm": 3,
+      "mechanical_clear": true,
+      "hypothetical_body_clear": false,
+      "overlaps_mm3": {},
+      "outside_body_mm3": {
+        "charge": 12.4235
+      }
+    },
+    {
+      "electronics_mm": -2,
+      "camera_mm": 4,
+      "mechanical_clear": true,
+      "hypothetical_body_clear": false,
+      "overlaps_mm3": {},
+      "outside_body_mm3": {
+        "charge": 12.4235
+      }
+    },
+    {
+      "electronics_mm": -2,
+      "camera_mm": 5,
+      "mechanical_clear": true,
+      "hypothetical_body_clear": false,
+      "overlaps_mm3": {},
+      "outside_body_mm3": {
+        "charge": 12.4235,
+        "camera": 1.67703
+      }
+    },
+    {
+      "electronics_mm": -2,
+      "camera_mm": 6,
+      "mechanical_clear": true,
+      "hypothetical_body_clear": false,
+      "overlaps_mm3": {},
+      "outside_body_mm3": {
+        "charge": 12.4235,
+        "camera": 24.74088
+      }
+    },
+    {
+      "electronics_mm": -2,
+      "camera_mm": 7,
+      "mechanical_clear": true,
+      "hypothetical_body_clear": false,
+      "overlaps_mm3": {},
+      "outside_body_mm3": {
+        "charge": 12.4235,
+        "camera": 74.87511
+      }
+    },
+    {
+      "electronics_mm": -2,
+      "camera_mm": 8,
+      "mechanical_clear": true,
+      "hypothetical_body_clear": false,
+      "overlaps_mm3": {},
+      "outside_body_mm3": {
+        "charge": 12.4235,
+        "camera": 152.07985
+      }
+    },
+    {
+      "electronics_mm": -1,
+      "camera_mm": -3,
+      "mechanical_clear": false,
+      "hypothetical_body_clear": true,
+      "overlaps_mm3": {
+        "buck/camera": 160.13944,
+        "buck/camera_mount": 114.29846,
+        "tray/camera": 24.36334,
+        "tray/camera_mount": 54.79952,
+        "driver/camera_mount": 110.99998,
+        "camera_mount/antenna_support": 3.86462
+      },
+      "outside_body_mm3": {}
+    },
+    {
+      "electronics_mm": -1,
+      "camera_mm": -2,
+      "mechanical_clear": false,
+      "hypothetical_body_clear": true,
+      "overlaps_mm3": {
+        "buck/camera": 96.19409,
+        "buck/camera_mount": 121.08495,
+        "tray/camera_mount": 54.79952,
+        "driver/camera_mount": 55.49999,
+        "camera_mount/antenna_support": 0.77597
+      },
+      "outside_body_mm3": {}
+    },
+    {
+      "electronics_mm": -1,
+      "camera_mm": -1,
+      "mechanical_clear": false,
+      "hypothetical_body_clear": true,
+      "overlaps_mm3": {
+        "buck/camera": 32.0647,
+        "buck/camera_mount": 126.78764,
+        "tray/camera_mount": 27.39976
+      },
+      "outside_body_mm3": {}
+    },
+    {
+      "electronics_mm": -1,
+      "camera_mm": 0,
+      "mechanical_clear": false,
+      "hypothetical_body_clear": true,
+      "overlaps_mm3": {
+        "buck/camera_mount": 95.24999
+      },
+      "outside_body_mm3": {}
+    },
+    {
+      "electronics_mm": -1,
+      "camera_mm": 1,
+      "mechanical_clear": false,
+      "hypothetical_body_clear": true,
+      "overlaps_mm3": {
+        "buck/camera_mount": 31.75
+      },
+      "outside_body_mm3": {}
+    },
+    {
+      "electronics_mm": -1,
+      "camera_mm": 2,
+      "mechanical_clear": true,
+      "hypothetical_body_clear": true,
+      "overlaps_mm3": {},
+      "outside_body_mm3": {}
+    },
+    {
+      "electronics_mm": -1,
+      "camera_mm": 3,
+      "mechanical_clear": true,
+      "hypothetical_body_clear": true,
+      "overlaps_mm3": {},
+      "outside_body_mm3": {}
+    },
+    {
+      "electronics_mm": -1,
+      "camera_mm": 4,
+      "mechanical_clear": true,
+      "hypothetical_body_clear": true,
+      "overlaps_mm3": {},
+      "outside_body_mm3": {}
+    },
+    {
+      "electronics_mm": -1,
+      "camera_mm": 5,
+      "mechanical_clear": true,
+      "hypothetical_body_clear": false,
+      "overlaps_mm3": {},
+      "outside_body_mm3": {
+        "camera": 1.67703
+      }
+    },
+    {
+      "electronics_mm": -1,
+      "camera_mm": 6,
+      "mechanical_clear": true,
+      "hypothetical_body_clear": false,
+      "overlaps_mm3": {},
+      "outside_body_mm3": {
+        "camera": 24.74088
+      }
+    },
+    {
+      "electronics_mm": -1,
+      "camera_mm": 7,
+      "mechanical_clear": true,
+      "hypothetical_body_clear": false,
+      "overlaps_mm3": {},
+      "outside_body_mm3": {
+        "camera": 74.87511
+      }
+    },
+    {
+      "electronics_mm": -1,
+      "camera_mm": 8,
+      "mechanical_clear": true,
+      "hypothetical_body_clear": false,
+      "overlaps_mm3": {},
+      "outside_body_mm3": {
+        "camera": 152.07985
+      }
+    },
+    {
+      "electronics_mm": 0,
+      "camera_mm": -3,
+      "mechanical_clear": false,
+      "hypothetical_body_clear": true,
+      "overlaps_mm3": {
+        "buck/camera": 220.07296,
+        "buck/camera_mount": 119.24496,
+        "tray/camera": 48.72668,
+        "tray/camera_mount": 54.79952,
+        "driver/camera": 111.81669,
+        "driver/camera_mount": 110.99998,
+        "camera_mount/antenna_support": 3.86462
+      },
+      "outside_body_mm3": {}
+    },
+    {
+      "electronics_mm": 0,
+      "camera_mm": -2,
+      "mechanical_clear": false,
+      "hypothetical_body_clear": true,
+      "overlaps_mm3": {
+        "buck/camera": 160.13944,
+        "buck/camera_mount": 114.29846,
+        "tray/camera": 24.36334,
+        "tray/camera_mount": 54.79952,
+        "driver/camera_mount": 110.99998,
+        "camera_mount/antenna_support": 0.77597
+      },
+      "outside_body_mm3": {}
+    },
+    {
+      "electronics_mm": 0,
+      "camera_mm": -1,
+      "mechanical_clear": false,
+      "hypothetical_body_clear": true,
+      "overlaps_mm3": {
+        "buck/camera": 96.19409,
+        "buck/camera_mount": 121.08495,
+        "tray/camera_mount": 54.79952,
+        "driver/camera_mount": 55.49999
+      },
+      "outside_body_mm3": {}
+    },
+    {
+      "electronics_mm": 0,
+      "camera_mm": 0,
+      "mechanical_clear": false,
+      "hypothetical_body_clear": true,
+      "overlaps_mm3": {
+        "buck/camera": 32.0647,
+        "buck/camera_mount": 126.78764,
+        "tray/camera_mount": 27.39976
+      },
+      "outside_body_mm3": {}
+    },
+    {
+      "electronics_mm": 0,
+      "camera_mm": 1,
+      "mechanical_clear": false,
+      "hypothetical_body_clear": true,
+      "overlaps_mm3": {
+        "buck/camera_mount": 95.24999
+      },
+      "outside_body_mm3": {}
+    },
+    {
+      "electronics_mm": 0,
+      "camera_mm": 2,
+      "mechanical_clear": false,
+      "hypothetical_body_clear": true,
+      "overlaps_mm3": {
+        "buck/camera_mount": 31.75
+      },
+      "outside_body_mm3": {}
+    },
+    {
+      "electronics_mm": 0,
+      "camera_mm": 3,
+      "mechanical_clear": true,
+      "hypothetical_body_clear": true,
+      "overlaps_mm3": {},
+      "outside_body_mm3": {}
+    },
+    {
+      "electronics_mm": 0,
+      "camera_mm": 4,
+      "mechanical_clear": true,
+      "hypothetical_body_clear": true,
+      "overlaps_mm3": {},
+      "outside_body_mm3": {}
+    },
+    {
+      "electronics_mm": 0,
+      "camera_mm": 5,
+      "mechanical_clear": true,
+      "hypothetical_body_clear": false,
+      "overlaps_mm3": {},
+      "outside_body_mm3": {
+        "camera": 1.67703
+      }
+    },
+    {
+      "electronics_mm": 0,
+      "camera_mm": 6,
+      "mechanical_clear": true,
+      "hypothetical_body_clear": false,
+      "overlaps_mm3": {},
+      "outside_body_mm3": {
+        "camera": 24.74088
+      }
+    },
+    {
+      "electronics_mm": 0,
+      "camera_mm": 7,
+      "mechanical_clear": true,
+      "hypothetical_body_clear": false,
+      "overlaps_mm3": {},
+      "outside_body_mm3": {
+        "camera": 74.87511
+      }
+    },
+    {
+      "electronics_mm": 0,
+      "camera_mm": 8,
+      "mechanical_clear": true,
+      "hypothetical_body_clear": false,
+      "overlaps_mm3": {},
+      "outside_body_mm3": {
+        "camera": 152.07985
+      }
+    },
+    {
+      "electronics_mm": 1,
+      "camera_mm": -3,
+      "mechanical_clear": false,
+      "hypothetical_body_clear": true,
+      "overlaps_mm3": {
+        "buck/camera": 279.16724,
+        "buck/camera_mount": 126.2438,
+        "tray/camera": 73.09002,
+        "tray/camera_mount": 53.19952,
+        "driver/camera": 223.63338,
+        "driver/camera_mount": 110.99998,
+        "camera_mount/antenna_support": 3.86462
+      },
+      "outside_body_mm3": {}
+    },
+    {
+      "electronics_mm": 1,
+      "camera_mm": -2,
+      "mechanical_clear": false,
+      "hypothetical_body_clear": true,
+      "overlaps_mm3": {
+        "buck/camera": 220.07296,
+        "buck/camera_mount": 119.24496,
+        "tray/camera": 48.72668,
+        "tray/camera_mount": 54.79952,
+        "driver/camera": 111.81669,
+        "driver/camera_mount": 110.99998,
+        "camera_mount/antenna_support": 0.77597
+      },
+      "outside_body_mm3": {}
+    },
+    {
+      "electronics_mm": 1,
+      "camera_mm": -1,
+      "mechanical_clear": false,
+      "hypothetical_body_clear": true,
+      "overlaps_mm3": {
+        "buck/camera": 160.13944,
+        "buck/camera_mount": 114.29846,
+        "tray/camera": 24.36334,
+        "tray/camera_mount": 54.79952,
+        "driver/camera_mount": 110.99998
+      },
+      "outside_body_mm3": {}
+    },
+    {
+      "electronics_mm": 1,
+      "camera_mm": 0,
+      "mechanical_clear": false,
+      "hypothetical_body_clear": true,
+      "overlaps_mm3": {
+        "buck/camera": 96.19409,
+        "buck/camera_mount": 121.08495,
+        "tray/camera_mount": 54.79952,
+        "driver/camera_mount": 55.49999
+      },
+      "outside_body_mm3": {}
+    },
+    {
+      "electronics_mm": 1,
+      "camera_mm": 1,
+      "mechanical_clear": false,
+      "hypothetical_body_clear": true,
+      "overlaps_mm3": {
+        "buck/camera": 32.0647,
+        "buck/camera_mount": 126.78764,
+        "tray/camera_mount": 27.39976
+      },
+      "outside_body_mm3": {}
+    },
+    {
+      "electronics_mm": 1,
+      "camera_mm": 2,
+      "mechanical_clear": false,
+      "hypothetical_body_clear": true,
+      "overlaps_mm3": {
+        "buck/camera_mount": 95.24999
+      },
+      "outside_body_mm3": {}
+    },
+    {
+      "electronics_mm": 1,
+      "camera_mm": 3,
+      "mechanical_clear": false,
+      "hypothetical_body_clear": true,
+      "overlaps_mm3": {
+        "buck/camera_mount": 31.75
+      },
+      "outside_body_mm3": {}
+    },
+    {
+      "electronics_mm": 1,
+      "camera_mm": 4,
+      "mechanical_clear": true,
+      "hypothetical_body_clear": true,
+      "overlaps_mm3": {},
+      "outside_body_mm3": {}
+    },
+    {
+      "electronics_mm": 1,
+      "camera_mm": 5,
+      "mechanical_clear": true,
+      "hypothetical_body_clear": false,
+      "overlaps_mm3": {},
+      "outside_body_mm3": {
+        "camera": 1.67703
+      }
+    },
+    {
+      "electronics_mm": 1,
+      "camera_mm": 6,
+      "mechanical_clear": true,
+      "hypothetical_body_clear": false,
+      "overlaps_mm3": {},
+      "outside_body_mm3": {
+        "camera": 24.74088
+      }
+    },
+    {
+      "electronics_mm": 1,
+      "camera_mm": 7,
+      "mechanical_clear": true,
+      "hypothetical_body_clear": false,
+      "overlaps_mm3": {},
+      "outside_body_mm3": {
+        "camera": 74.87511
+      }
+    },
+    {
+      "electronics_mm": 1,
+      "camera_mm": 8,
+      "mechanical_clear": true,
+      "hypothetical_body_clear": false,
+      "overlaps_mm3": {},
+      "outside_body_mm3": {
+        "camera": 152.07985
+      }
+    },
+    {
+      "electronics_mm": 2,
+      "camera_mm": -3,
+      "mechanical_clear": false,
+      "hypothetical_body_clear": true,
+      "overlaps_mm3": {
+        "buck/camera": 342.65039,
+        "buck/camera_mount": 122.00006,
+        "tray/camera": 97.45337,
+        "tray/camera_mount": 51.59952,
+        "driver/camera": 335.45007,
+        "driver/camera_mount": 110.99998,
+        "camera_mount/antenna_support": 3.86462
+      },
+      "outside_body_mm3": {}
+    },
+    {
+      "electronics_mm": 2,
+      "camera_mm": -2,
+      "mechanical_clear": false,
+      "hypothetical_body_clear": true,
+      "overlaps_mm3": {
+        "buck/camera": 279.16724,
+        "buck/camera_mount": 126.2438,
+        "tray/camera": 73.09002,
+        "tray/camera_mount": 53.19952,
+        "driver/camera": 223.63338,
+        "driver/camera_mount": 110.99998,
+        "camera_mount/antenna_support": 0.77597
+      },
+      "outside_body_mm3": {}
+    },
+    {
+      "electronics_mm": 2,
+      "camera_mm": -1,
+      "mechanical_clear": false,
+      "hypothetical_body_clear": true,
+      "overlaps_mm3": {
+        "buck/camera": 220.07296,
+        "buck/camera_mount": 119.24496,
+        "tray/camera": 48.72668,
+        "tray/camera_mount": 54.79952,
+        "driver/camera": 111.81669,
+        "driver/camera_mount": 110.99998
+      },
+      "outside_body_mm3": {}
+    },
+    {
+      "electronics_mm": 2,
+      "camera_mm": 0,
+      "mechanical_clear": false,
+      "hypothetical_body_clear": true,
+      "overlaps_mm3": {
+        "buck/camera": 160.13944,
+        "buck/camera_mount": 114.29846,
+        "tray/camera": 24.36334,
+        "tray/camera_mount": 54.79952,
+        "driver/camera_mount": 110.99998
+      },
+      "outside_body_mm3": {}
+    },
+    {
+      "electronics_mm": 2,
+      "camera_mm": 1,
+      "mechanical_clear": false,
+      "hypothetical_body_clear": true,
+      "overlaps_mm3": {
+        "buck/camera": 96.19409,
+        "buck/camera_mount": 121.08495,
+        "tray/camera_mount": 54.79952,
+        "driver/camera_mount": 55.49999
+      },
+      "outside_body_mm3": {}
+    },
+    {
+      "electronics_mm": 2,
+      "camera_mm": 2,
+      "mechanical_clear": false,
+      "hypothetical_body_clear": true,
+      "overlaps_mm3": {
+        "buck/camera": 32.0647,
+        "buck/camera_mount": 126.78764,
+        "tray/camera_mount": 27.39976
+      },
+      "outside_body_mm3": {}
+    },
+    {
+      "electronics_mm": 2,
+      "camera_mm": 3,
+      "mechanical_clear": false,
+      "hypothetical_body_clear": true,
+      "overlaps_mm3": {
+        "buck/camera_mount": 95.24999
+      },
+      "outside_body_mm3": {}
+    },
+    {
+      "electronics_mm": 2,
+      "camera_mm": 4,
+      "mechanical_clear": false,
+      "hypothetical_body_clear": true,
+      "overlaps_mm3": {
+        "buck/camera_mount": 31.75
+      },
+      "outside_body_mm3": {}
+    },
+    {
+      "electronics_mm": 2,
+      "camera_mm": 5,
+      "mechanical_clear": true,
+      "hypothetical_body_clear": false,
+      "overlaps_mm3": {},
+      "outside_body_mm3": {
+        "camera": 1.67703
+      }
+    },
+    {
+      "electronics_mm": 2,
+      "camera_mm": 6,
+      "mechanical_clear": true,
+      "hypothetical_body_clear": false,
+      "overlaps_mm3": {},
+      "outside_body_mm3": {
+        "camera": 24.74088
+      }
+    },
+    {
+      "electronics_mm": 2,
+      "camera_mm": 7,
+      "mechanical_clear": true,
+      "hypothetical_body_clear": false,
+      "overlaps_mm3": {},
+      "outside_body_mm3": {
+        "camera": 74.87511
+      }
+    },
+    {
+      "electronics_mm": 2,
+      "camera_mm": 8,
+      "mechanical_clear": true,
+      "hypothetical_body_clear": false,
+      "overlaps_mm3": {},
+      "outside_body_mm3": {
+        "camera": 152.07985
+      }
+    },
+    {
+      "electronics_mm": 3,
+      "camera_mm": -3,
+      "mechanical_clear": false,
+      "hypothetical_body_clear": true,
+      "overlaps_mm3": {
+        "buck/camera": 406.77978,
+        "buck/camera_mount": 72.00006,
+        "tray/camera": 120.21671,
+        "tray/camera_mount": 49.99952,
+        "pads/camera_mount": 2.8,
+        "driver/camera": 447.26676,
+        "driver/camera_mount": 110.99998,
+        "camera_mount/antenna_support": 3.86462
+      },
+      "outside_body_mm3": {}
+    },
+    {
+      "electronics_mm": 3,
+      "camera_mm": -2,
+      "mechanical_clear": false,
+      "hypothetical_body_clear": true,
+      "overlaps_mm3": {
+        "buck/camera": 342.65039,
+        "buck/camera_mount": 122.00006,
+        "tray/camera": 97.45337,
+        "tray/camera_mount": 51.59952,
+        "driver/camera": 335.45007,
+        "driver/camera_mount": 110.99998,
+        "camera_mount/antenna_support": 0.77597
+      },
+      "outside_body_mm3": {}
+    },
+    {
+      "electronics_mm": 3,
+      "camera_mm": -1,
+      "mechanical_clear": false,
+      "hypothetical_body_clear": true,
+      "overlaps_mm3": {
+        "buck/camera": 279.16724,
+        "buck/camera_mount": 126.2438,
+        "tray/camera": 73.09002,
+        "tray/camera_mount": 53.19952,
+        "driver/camera": 223.63338,
+        "driver/camera_mount": 110.99998
+      },
+      "outside_body_mm3": {}
+    },
+    {
+      "electronics_mm": 3,
+      "camera_mm": 0,
+      "mechanical_clear": false,
+      "hypothetical_body_clear": true,
+      "overlaps_mm3": {
+        "buck/camera": 220.07296,
+        "buck/camera_mount": 119.24496,
+        "tray/camera": 48.72668,
+        "tray/camera_mount": 54.79952,
+        "driver/camera": 111.81669,
+        "driver/camera_mount": 110.99998
+      },
+      "outside_body_mm3": {}
+    },
+    {
+      "electronics_mm": 3,
+      "camera_mm": 1,
+      "mechanical_clear": false,
+      "hypothetical_body_clear": true,
+      "overlaps_mm3": {
+        "buck/camera": 160.13944,
+        "buck/camera_mount": 114.29846,
+        "tray/camera": 24.36334,
+        "tray/camera_mount": 54.79952,
+        "driver/camera_mount": 110.99998
+      },
+      "outside_body_mm3": {}
+    },
+    {
+      "electronics_mm": 3,
+      "camera_mm": 2,
+      "mechanical_clear": false,
+      "hypothetical_body_clear": true,
+      "overlaps_mm3": {
+        "buck/camera": 96.19409,
+        "buck/camera_mount": 121.08495,
+        "tray/camera_mount": 54.79952,
+        "driver/camera_mount": 55.49999
+      },
+      "outside_body_mm3": {}
+    },
+    {
+      "electronics_mm": 3,
+      "camera_mm": 3,
+      "mechanical_clear": false,
+      "hypothetical_body_clear": true,
+      "overlaps_mm3": {
+        "buck/camera": 32.0647,
+        "buck/camera_mount": 126.78764,
+        "tray/camera_mount": 27.39976
+      },
+      "outside_body_mm3": {}
+    },
+    {
+      "electronics_mm": 3,
+      "camera_mm": 4,
+      "mechanical_clear": false,
+      "hypothetical_body_clear": true,
+      "overlaps_mm3": {
+        "buck/camera_mount": 95.24999
+      },
+      "outside_body_mm3": {}
+    },
+    {
+      "electronics_mm": 3,
+      "camera_mm": 5,
+      "mechanical_clear": false,
+      "hypothetical_body_clear": false,
+      "overlaps_mm3": {
+        "buck/camera_mount": 31.75
+      },
+      "outside_body_mm3": {
+        "camera": 1.67703
+      }
+    },
+    {
+      "electronics_mm": 3,
+      "camera_mm": 6,
+      "mechanical_clear": true,
+      "hypothetical_body_clear": false,
+      "overlaps_mm3": {},
+      "outside_body_mm3": {
+        "camera": 24.74088
+      }
+    },
+    {
+      "electronics_mm": 3,
+      "camera_mm": 7,
+      "mechanical_clear": true,
+      "hypothetical_body_clear": false,
+      "overlaps_mm3": {},
+      "outside_body_mm3": {
+        "camera": 74.87511
+      }
+    },
+    {
+      "electronics_mm": 3,
+      "camera_mm": 8,
+      "mechanical_clear": true,
+      "hypothetical_body_clear": false,
+      "overlaps_mm3": {},
+      "outside_body_mm3": {
+        "camera": 152.07985
+      }
+    },
+    {
+      "electronics_mm": 4,
+      "camera_mm": -3,
+      "mechanical_clear": false,
+      "hypothetical_body_clear": true,
+      "overlaps_mm3": {
+        "buck/camera": 465.35811,
+        "buck/camera_mount": 29.69999,
+        "tray/camera": 142.98005,
+        "tray/camera_mount": 48.39952,
+        "pads/camera_mount": 5.60001,
+        "driver/camera": 559.08345,
+        "driver/camera_mount": 110.99998,
+        "camera_mount/antenna_support": 3.86462
+      },
+      "outside_body_mm3": {}
+    },
+    {
+      "electronics_mm": 4,
+      "camera_mm": -2,
+      "mechanical_clear": false,
+      "hypothetical_body_clear": true,
+      "overlaps_mm3": {
+        "buck/camera": 406.77978,
+        "buck/camera_mount": 72.00006,
+        "tray/camera": 120.21671,
+        "tray/camera_mount": 49.99952,
+        "pads/camera_mount": 2.8,
+        "driver/camera": 447.26676,
+        "driver/camera_mount": 110.99998,
+        "camera_mount/antenna_support": 0.77597
+      },
+      "outside_body_mm3": {}
+    },
+    {
+      "electronics_mm": 4,
+      "camera_mm": -1,
+      "mechanical_clear": false,
+      "hypothetical_body_clear": true,
+      "overlaps_mm3": {
+        "buck/camera": 342.65039,
+        "buck/camera_mount": 122.00006,
+        "tray/camera": 97.45337,
+        "tray/camera_mount": 51.59952,
+        "driver/camera": 335.45007,
+        "driver/camera_mount": 110.99998
+      },
+      "outside_body_mm3": {}
+    },
+    {
+      "electronics_mm": 4,
+      "camera_mm": 0,
+      "mechanical_clear": false,
+      "hypothetical_body_clear": true,
+      "overlaps_mm3": {
+        "buck/camera": 279.16724,
+        "buck/camera_mount": 126.2438,
+        "tray/camera": 73.09002,
+        "tray/camera_mount": 53.19952,
+        "driver/camera": 223.63338,
+        "driver/camera_mount": 110.99998
+      },
+      "outside_body_mm3": {}
+    },
+    {
+      "electronics_mm": 4,
+      "camera_mm": 1,
+      "mechanical_clear": false,
+      "hypothetical_body_clear": true,
+      "overlaps_mm3": {
+        "buck/camera": 220.07296,
+        "buck/camera_mount": 119.24496,
+        "tray/camera": 48.72668,
+        "tray/camera_mount": 54.79952,
+        "driver/camera": 111.81669,
+        "driver/camera_mount": 110.99998
+      },
+      "outside_body_mm3": {}
+    },
+    {
+      "electronics_mm": 4,
+      "camera_mm": 2,
+      "mechanical_clear": false,
+      "hypothetical_body_clear": true,
+      "overlaps_mm3": {
+        "buck/camera": 160.13944,
+        "buck/camera_mount": 114.29846,
+        "tray/camera": 24.36334,
+        "tray/camera_mount": 54.79952,
+        "driver/camera_mount": 110.99998
+      },
+      "outside_body_mm3": {}
+    },
+    {
+      "electronics_mm": 4,
+      "camera_mm": 3,
+      "mechanical_clear": false,
+      "hypothetical_body_clear": true,
+      "overlaps_mm3": {
+        "buck/camera": 96.19409,
+        "buck/camera_mount": 121.08495,
+        "tray/camera_mount": 54.79952,
+        "driver/camera_mount": 55.49999
+      },
+      "outside_body_mm3": {}
+    },
+    {
+      "electronics_mm": 4,
+      "camera_mm": 4,
+      "mechanical_clear": false,
+      "hypothetical_body_clear": true,
+      "overlaps_mm3": {
+        "buck/camera": 32.0647,
+        "buck/camera_mount": 126.78764,
+        "tray/camera_mount": 27.39976
+      },
+      "outside_body_mm3": {}
+    },
+    {
+      "electronics_mm": 4,
+      "camera_mm": 5,
+      "mechanical_clear": false,
+      "hypothetical_body_clear": false,
+      "overlaps_mm3": {
+        "buck/camera_mount": 95.24999
+      },
+      "outside_body_mm3": {
+        "camera": 1.67703
+      }
+    },
+    {
+      "electronics_mm": 4,
+      "camera_mm": 6,
+      "mechanical_clear": false,
+      "hypothetical_body_clear": false,
+      "overlaps_mm3": {
+        "buck/camera_mount": 31.75
+      },
+      "outside_body_mm3": {
+        "camera": 24.74088
+      }
+    },
+    {
+      "electronics_mm": 4,
+      "camera_mm": 7,
+      "mechanical_clear": true,
+      "hypothetical_body_clear": false,
+      "overlaps_mm3": {},
+      "outside_body_mm3": {
+        "camera": 74.87511
+      }
+    },
+    {
+      "electronics_mm": 4,
+      "camera_mm": 8,
+      "mechanical_clear": true,
+      "hypothetical_body_clear": false,
+      "overlaps_mm3": {},
+      "outside_body_mm3": {
+        "camera": 152.07985
+      }
+    },
+    {
+      "electronics_mm": 5,
+      "camera_mm": -3,
+      "mechanical_clear": false,
+      "hypothetical_body_clear": true,
+      "overlaps_mm3": {
+        "buck/camera": 475.21111,
+        "buck/camera_mount": 32.7,
+        "tray/camera": 164.14339,
+        "tray/camera_mount": 48.39952,
+        "pads/camera": 7.2,
+        "pads/camera_mount": 5.60001,
+        "driver/camera": 670.90014,
+        "driver/camera_mount": 110.99998,
+        "camera_mount/antenna_support": 3.86462
+      },
+      "outside_body_mm3": {}
+    },
+    {
+      "electronics_mm": 5,
+      "camera_mm": -2,
+      "mechanical_clear": false,
+      "hypothetical_body_clear": true,
+      "overlaps_mm3": {
+        "buck/camera": 465.35811,
+        "buck/camera_mount": 29.69999,
+        "tray/camera": 142.98005,
+        "tray/camera_mount": 48.39952,
+        "pads/camera_mount": 5.60001,
+        "driver/camera": 559.08345,
+        "driver/camera_mount": 110.99998,
+        "camera_mount/antenna_support": 0.77597
+      },
+      "outside_body_mm3": {}
+    },
+    {
+      "electronics_mm": 5,
+      "camera_mm": -1,
+      "mechanical_clear": false,
+      "hypothetical_body_clear": true,
+      "overlaps_mm3": {
+        "buck/camera": 406.77978,
+        "buck/camera_mount": 72.00006,
+        "tray/camera": 120.21671,
+        "tray/camera_mount": 49.99952,
+        "pads/camera_mount": 2.8,
+        "driver/camera": 447.26676,
+        "driver/camera_mount": 110.99998
+      },
+      "outside_body_mm3": {}
+    },
+    {
+      "electronics_mm": 5,
+      "camera_mm": 0,
+      "mechanical_clear": false,
+      "hypothetical_body_clear": true,
+      "overlaps_mm3": {
+        "buck/camera": 342.65039,
+        "buck/camera_mount": 122.00006,
+        "tray/camera": 97.45337,
+        "tray/camera_mount": 51.59952,
+        "driver/camera": 335.45007,
+        "driver/camera_mount": 110.99998
+      },
+      "outside_body_mm3": {}
+    },
+    {
+      "electronics_mm": 5,
+      "camera_mm": 1,
+      "mechanical_clear": false,
+      "hypothetical_body_clear": true,
+      "overlaps_mm3": {
+        "buck/camera": 279.16724,
+        "buck/camera_mount": 126.2438,
+        "tray/camera": 73.09002,
+        "tray/camera_mount": 53.19952,
+        "driver/camera": 223.63338,
+        "driver/camera_mount": 110.99998
+      },
+      "outside_body_mm3": {}
+    },
+    {
+      "electronics_mm": 5,
+      "camera_mm": 2,
+      "mechanical_clear": false,
+      "hypothetical_body_clear": true,
+      "overlaps_mm3": {
+        "buck/camera": 220.07296,
+        "buck/camera_mount": 119.24496,
+        "tray/camera": 48.72668,
+        "tray/camera_mount": 54.79952,
+        "driver/camera": 111.81669,
+        "driver/camera_mount": 110.99998
+      },
+      "outside_body_mm3": {}
+    },
+    {
+      "electronics_mm": 5,
+      "camera_mm": 3,
+      "mechanical_clear": false,
+      "hypothetical_body_clear": true,
+      "overlaps_mm3": {
+        "buck/camera": 160.13944,
+        "buck/camera_mount": 114.29846,
+        "tray/camera": 24.36334,
+        "tray/camera_mount": 54.79952,
+        "driver/camera_mount": 110.99998
+      },
+      "outside_body_mm3": {}
+    },
+    {
+      "electronics_mm": 5,
+      "camera_mm": 4,
+      "mechanical_clear": false,
+      "hypothetical_body_clear": true,
+      "overlaps_mm3": {
+        "buck/camera": 96.19409,
+        "buck/camera_mount": 121.08495,
+        "tray/camera_mount": 54.79952,
+        "driver/camera_mount": 55.49999
+      },
+      "outside_body_mm3": {}
+    },
+    {
+      "electronics_mm": 5,
+      "camera_mm": 5,
+      "mechanical_clear": false,
+      "hypothetical_body_clear": false,
+      "overlaps_mm3": {
+        "buck/camera": 32.0647,
+        "buck/camera_mount": 126.78764,
+        "tray/camera_mount": 27.39976
+      },
+      "outside_body_mm3": {
+        "camera": 1.67703
+      }
+    },
+    {
+      "electronics_mm": 5,
+      "camera_mm": 6,
+      "mechanical_clear": false,
+      "hypothetical_body_clear": false,
+      "overlaps_mm3": {
+        "buck/camera_mount": 95.24999
+      },
+      "outside_body_mm3": {
+        "camera": 24.74088
+      }
+    },
+    {
+      "electronics_mm": 5,
+      "camera_mm": 7,
+      "mechanical_clear": false,
+      "hypothetical_body_clear": false,
+      "overlaps_mm3": {
+        "buck/camera_mount": 31.75
+      },
+      "outside_body_mm3": {
+        "camera": 74.87511
+      }
+    },
+    {
+      "electronics_mm": 5,
+      "camera_mm": 8,
+      "mechanical_clear": true,
+      "hypothetical_body_clear": false,
+      "overlaps_mm3": {},
+      "outside_body_mm3": {
+        "camera": 152.07985
+      }
+    },
+    {
+      "electronics_mm": 6,
+      "camera_mm": -3,
+      "mechanical_clear": false,
+      "hypothetical_body_clear": true,
+      "overlaps_mm3": {
+        "buck/camera": 487.57531,
+        "buck/camera_mount": 32.99999,
+        "tray/camera": 185.30673,
+        "tray/camera_mount": 49.99952,
+        "pads/camera": 14.40001,
+        "pads/camera_mount": 5.60001,
+        "driver/camera": 782.71683,
+        "driver/camera_mount": 110.99998,
+        "camera_mount/antenna_support": 3.86462
+      },
+      "outside_body_mm3": {}
+    },
+    {
+      "electronics_mm": 6,
+      "camera_mm": -2,
+      "mechanical_clear": false,
+      "hypothetical_body_clear": true,
+      "overlaps_mm3": {
+        "buck/camera": 475.21111,
+        "buck/camera_mount": 32.7,
+        "tray/camera": 164.14339,
+        "tray/camera_mount": 48.39952,
+        "pads/camera": 7.2,
+        "pads/camera_mount": 5.60001,
+        "driver/camera": 670.90014,
+        "driver/camera_mount": 110.99998,
+        "camera_mount/antenna_support": 0.77597
+      },
+      "outside_body_mm3": {}
+    },
+    {
+      "electronics_mm": 6,
+      "camera_mm": -1,
+      "mechanical_clear": false,
+      "hypothetical_body_clear": true,
+      "overlaps_mm3": {
+        "buck/camera": 465.35811,
+        "buck/camera_mount": 29.69999,
+        "tray/camera": 142.98005,
+        "tray/camera_mount": 48.39952,
+        "pads/camera_mount": 5.60001,
+        "driver/camera": 559.08345,
+        "driver/camera_mount": 110.99998
+      },
+      "outside_body_mm3": {}
+    },
+    {
+      "electronics_mm": 6,
+      "camera_mm": 0,
+      "mechanical_clear": false,
+      "hypothetical_body_clear": true,
+      "overlaps_mm3": {
+        "buck/camera": 406.77978,
+        "buck/camera_mount": 72.00006,
+        "tray/camera": 120.21671,
+        "tray/camera_mount": 49.99952,
+        "pads/camera_mount": 2.8,
+        "driver/camera": 447.26676,
+        "driver/camera_mount": 110.99998
+      },
+      "outside_body_mm3": {}
+    },
+    {
+      "electronics_mm": 6,
+      "camera_mm": 1,
+      "mechanical_clear": false,
+      "hypothetical_body_clear": true,
+      "overlaps_mm3": {
+        "buck/camera": 342.65039,
+        "buck/camera_mount": 122.00006,
+        "tray/camera": 97.45337,
+        "tray/camera_mount": 51.59952,
+        "driver/camera": 335.45007,
+        "driver/camera_mount": 110.99998
+      },
+      "outside_body_mm3": {}
+    },
+    {
+      "electronics_mm": 6,
+      "camera_mm": 2,
+      "mechanical_clear": false,
+      "hypothetical_body_clear": true,
+      "overlaps_mm3": {
+        "buck/camera": 279.16724,
+        "buck/camera_mount": 126.2438,
+        "tray/camera": 73.09002,
+        "tray/camera_mount": 53.19952,
+        "driver/camera": 223.63338,
+        "driver/camera_mount": 110.99998
+      },
+      "outside_body_mm3": {}
+    },
+    {
+      "electronics_mm": 6,
+      "camera_mm": 3,
+      "mechanical_clear": false,
+      "hypothetical_body_clear": true,
+      "overlaps_mm3": {
+        "buck/camera": 220.07296,
+        "buck/camera_mount": 119.24496,
+        "tray/camera": 48.72668,
+        "tray/camera_mount": 54.79952,
+        "driver/camera": 111.81669,
+        "driver/camera_mount": 110.99998
+      },
+      "outside_body_mm3": {}
+    },
+    {
+      "electronics_mm": 6,
+      "camera_mm": 4,
+      "mechanical_clear": false,
+      "hypothetical_body_clear": true,
+      "overlaps_mm3": {
+        "buck/camera": 160.13944,
+        "buck/camera_mount": 114.29846,
+        "tray/camera": 24.36334,
+        "tray/camera_mount": 54.79952,
+        "driver/camera_mount": 110.99998
+      },
+      "outside_body_mm3": {}
+    },
+    {
+      "electronics_mm": 6,
+      "camera_mm": 5,
+      "mechanical_clear": false,
+      "hypothetical_body_clear": false,
+      "overlaps_mm3": {
+        "buck/camera": 96.19409,
+        "buck/camera_mount": 121.08495,
+        "tray/camera_mount": 54.79952,
+        "driver/camera_mount": 55.49999
+      },
+      "outside_body_mm3": {
+        "camera": 1.67703
+      }
+    },
+    {
+      "electronics_mm": 6,
+      "camera_mm": 6,
+      "mechanical_clear": false,
+      "hypothetical_body_clear": false,
+      "overlaps_mm3": {
+        "buck/camera": 32.0647,
+        "buck/camera_mount": 126.78764,
+        "tray/camera_mount": 27.39976
+      },
+      "outside_body_mm3": {
+        "camera": 24.74088
+      }
+    },
+    {
+      "electronics_mm": 6,
+      "camera_mm": 7,
+      "mechanical_clear": false,
+      "hypothetical_body_clear": false,
+      "overlaps_mm3": {
+        "buck/camera_mount": 95.24999
+      },
+      "outside_body_mm3": {
+        "camera": 74.87511
+      }
+    },
+    {
+      "electronics_mm": 6,
+      "camera_mm": 8,
+      "mechanical_clear": false,
+      "hypothetical_body_clear": false,
+      "overlaps_mm3": {
+        "buck/camera_mount": 31.75
+      },
+      "outside_body_mm3": {
+        "camera": 152.07985
+      }
+    },
+    {
+      "electronics_mm": 7,
+      "camera_mm": -3,
+      "mechanical_clear": false,
+      "hypothetical_body_clear": true,
+      "overlaps_mm3": {
+        "buck/camera": 500.08131,
+        "buck/camera_mount": 32.99999,
+        "tray/camera": 206.47007,
+        "tray/camera_mount": 51.59952,
+        "pads/camera": 21.60001,
+        "pads/camera_mount": 5.60001,
+        "driver/camera": 894.53352,
+        "driver/camera_mount": 110.99998,
+        "camera_mount/antenna_support": 3.86462
+      },
+      "outside_body_mm3": {}
+    },
+    {
+      "electronics_mm": 7,
+      "camera_mm": -2,
+      "mechanical_clear": false,
+      "hypothetical_body_clear": true,
+      "overlaps_mm3": {
+        "buck/camera": 487.57531,
+        "buck/camera_mount": 32.99999,
+        "tray/camera": 185.30673,
+        "tray/camera_mount": 49.99952,
+        "pads/camera": 14.40001,
+        "pads/camera_mount": 5.60001,
+        "driver/camera": 782.71683,
+        "driver/camera_mount": 110.99998,
+        "camera_mount/antenna_support": 0.77597
+      },
+      "outside_body_mm3": {}
+    },
+    {
+      "electronics_mm": 7,
+      "camera_mm": -1,
+      "mechanical_clear": false,
+      "hypothetical_body_clear": true,
+      "overlaps_mm3": {
+        "buck/camera": 475.21111,
+        "buck/camera_mount": 32.7,
+        "tray/camera": 164.14339,
+        "tray/camera_mount": 48.39952,
+        "pads/camera": 7.2,
+        "pads/camera_mount": 5.60001,
+        "driver/camera": 670.90014,
+        "driver/camera_mount": 110.99998
+      },
+      "outside_body_mm3": {}
+    },
+    {
+      "electronics_mm": 7,
+      "camera_mm": 0,
+      "mechanical_clear": false,
+      "hypothetical_body_clear": true,
+      "overlaps_mm3": {
+        "buck/camera": 465.35811,
+        "buck/camera_mount": 29.69999,
+        "tray/camera": 142.98005,
+        "tray/camera_mount": 48.39952,
+        "pads/camera_mount": 5.60001,
+        "driver/camera": 559.08345,
+        "driver/camera_mount": 110.99998
+      },
+      "outside_body_mm3": {}
+    },
+    {
+      "electronics_mm": 7,
+      "camera_mm": 1,
+      "mechanical_clear": false,
+      "hypothetical_body_clear": true,
+      "overlaps_mm3": {
+        "buck/camera": 406.77978,
+        "buck/camera_mount": 72.00006,
+        "tray/camera": 120.21671,
+        "tray/camera_mount": 49.99952,
+        "pads/camera_mount": 2.8,
+        "driver/camera": 447.26676,
+        "driver/camera_mount": 110.99998
+      },
+      "outside_body_mm3": {}
+    },
+    {
+      "electronics_mm": 7,
+      "camera_mm": 2,
+      "mechanical_clear": false,
+      "hypothetical_body_clear": true,
+      "overlaps_mm3": {
+        "buck/camera": 342.65039,
+        "buck/camera_mount": 122.00006,
+        "tray/camera": 97.45337,
+        "tray/camera_mount": 51.59952,
+        "driver/camera": 335.45007,
+        "driver/camera_mount": 110.99998
+      },
+      "outside_body_mm3": {}
+    },
+    {
+      "electronics_mm": 7,
+      "camera_mm": 3,
+      "mechanical_clear": false,
+      "hypothetical_body_clear": true,
+      "overlaps_mm3": {
+        "buck/camera": 279.16724,
+        "buck/camera_mount": 126.2438,
+        "tray/camera": 73.09002,
+        "tray/camera_mount": 53.19952,
+        "driver/camera": 223.63338,
+        "driver/camera_mount": 110.99998
+      },
+      "outside_body_mm3": {}
+    },
+    {
+      "electronics_mm": 7,
+      "camera_mm": 4,
+      "mechanical_clear": false,
+      "hypothetical_body_clear": true,
+      "overlaps_mm3": {
+        "buck/camera": 220.07296,
+        "buck/camera_mount": 119.24496,
+        "tray/camera": 48.72668,
+        "tray/camera_mount": 54.79952,
+        "driver/camera": 111.81669,
+        "driver/camera_mount": 110.99998
+      },
+      "outside_body_mm3": {}
+    },
+    {
+      "electronics_mm": 7,
+      "camera_mm": 5,
+      "mechanical_clear": false,
+      "hypothetical_body_clear": false,
+      "overlaps_mm3": {
+        "buck/camera": 160.13944,
+        "buck/camera_mount": 114.29846,
+        "tray/camera": 24.36334,
+        "tray/camera_mount": 54.79952,
+        "driver/camera_mount": 110.99998
+      },
+      "outside_body_mm3": {
+        "camera": 1.67703
+      }
+    },
+    {
+      "electronics_mm": 7,
+      "camera_mm": 6,
+      "mechanical_clear": false,
+      "hypothetical_body_clear": false,
+      "overlaps_mm3": {
+        "buck/camera": 96.19409,
+        "buck/camera_mount": 121.08495,
+        "tray/camera_mount": 54.79952,
+        "driver/camera_mount": 55.49999
+      },
+      "outside_body_mm3": {
+        "camera": 24.74088
+      }
+    },
+    {
+      "electronics_mm": 7,
+      "camera_mm": 7,
+      "mechanical_clear": false,
+      "hypothetical_body_clear": false,
+      "overlaps_mm3": {
+        "buck/camera": 32.0647,
+        "buck/camera_mount": 126.78764,
+        "tray/camera_mount": 27.39976
+      },
+      "outside_body_mm3": {
+        "camera": 74.87511
+      }
+    },
+    {
+      "electronics_mm": 7,
+      "camera_mm": 8,
+      "mechanical_clear": false,
+      "hypothetical_body_clear": false,
+      "overlaps_mm3": {
+        "buck/camera_mount": 95.24999
+      },
+      "outside_body_mm3": {
+        "camera": 152.07985
+      }
+    },
+    {
+      "electronics_mm": 8,
+      "camera_mm": -3,
+      "mechanical_clear": false,
+      "hypothetical_body_clear": true,
+      "overlaps_mm3": {
+        "buck/camera": 511.8463,
+        "buck/camera_mount": 31.79999,
+        "tray/camera": 229.23341,
+        "tray/camera_mount": 53.19952,
+        "pads/camera": 28.80002,
+        "pads/camera_mount": 5.60001,
+        "driver/camera": 1006.35021,
+        "driver/camera_mount": 110.99998,
+        "camera_mount/antenna_support": 3.86462
+      },
+      "outside_body_mm3": {}
+    },
+    {
+      "electronics_mm": 8,
+      "camera_mm": -2,
+      "mechanical_clear": false,
+      "hypothetical_body_clear": true,
+      "overlaps_mm3": {
+        "buck/camera": 500.08131,
+        "buck/camera_mount": 32.99999,
+        "tray/camera": 206.47007,
+        "tray/camera_mount": 51.59952,
+        "pads/camera": 21.60001,
+        "pads/camera_mount": 5.60001,
+        "driver/camera": 894.53352,
+        "driver/camera_mount": 110.99998,
+        "camera_mount/antenna_support": 0.77597
+      },
+      "outside_body_mm3": {}
+    },
+    {
+      "electronics_mm": 8,
+      "camera_mm": -1,
+      "mechanical_clear": false,
+      "hypothetical_body_clear": true,
+      "overlaps_mm3": {
+        "buck/camera": 487.57531,
+        "buck/camera_mount": 32.99999,
+        "tray/camera": 185.30673,
+        "tray/camera_mount": 49.99952,
+        "pads/camera": 14.40001,
+        "pads/camera_mount": 5.60001,
+        "driver/camera": 782.71683,
+        "driver/camera_mount": 110.99998
+      },
+      "outside_body_mm3": {}
+    },
+    {
+      "electronics_mm": 8,
+      "camera_mm": 0,
+      "mechanical_clear": false,
+      "hypothetical_body_clear": true,
+      "overlaps_mm3": {
+        "buck/camera": 475.21111,
+        "buck/camera_mount": 32.7,
+        "tray/camera": 164.14339,
+        "tray/camera_mount": 48.39952,
+        "pads/camera": 7.2,
+        "pads/camera_mount": 5.60001,
+        "driver/camera": 670.90014,
+        "driver/camera_mount": 110.99998
+      },
+      "outside_body_mm3": {}
+    },
+    {
+      "electronics_mm": 8,
+      "camera_mm": 1,
+      "mechanical_clear": false,
+      "hypothetical_body_clear": true,
+      "overlaps_mm3": {
+        "buck/camera": 465.35811,
+        "buck/camera_mount": 29.69999,
+        "tray/camera": 142.98005,
+        "tray/camera_mount": 48.39952,
+        "pads/camera_mount": 5.60001,
+        "driver/camera": 559.08345,
+        "driver/camera_mount": 110.99998
+      },
+      "outside_body_mm3": {}
+    },
+    {
+      "electronics_mm": 8,
+      "camera_mm": 2,
+      "mechanical_clear": false,
+      "hypothetical_body_clear": true,
+      "overlaps_mm3": {
+        "buck/camera": 406.77978,
+        "buck/camera_mount": 72.00006,
+        "tray/camera": 120.21671,
+        "tray/camera_mount": 49.99952,
+        "pads/camera_mount": 2.8,
+        "driver/camera": 447.26676,
+        "driver/camera_mount": 110.99998
+      },
+      "outside_body_mm3": {}
+    },
+    {
+      "electronics_mm": 8,
+      "camera_mm": 3,
+      "mechanical_clear": false,
+      "hypothetical_body_clear": true,
+      "overlaps_mm3": {
+        "buck/camera": 342.65039,
+        "buck/camera_mount": 122.00006,
+        "tray/camera": 97.45337,
+        "tray/camera_mount": 51.59952,
+        "driver/camera": 335.45007,
+        "driver/camera_mount": 110.99998
+      },
+      "outside_body_mm3": {}
+    },
+    {
+      "electronics_mm": 8,
+      "camera_mm": 4,
+      "mechanical_clear": false,
+      "hypothetical_body_clear": true,
+      "overlaps_mm3": {
+        "buck/camera": 279.16724,
+        "buck/camera_mount": 126.2438,
+        "tray/camera": 73.09002,
+        "tray/camera_mount": 53.19952,
+        "driver/camera": 223.63338,
+        "driver/camera_mount": 110.99998
+      },
+      "outside_body_mm3": {}
+    },
+    {
+      "electronics_mm": 8,
+      "camera_mm": 5,
+      "mechanical_clear": false,
+      "hypothetical_body_clear": false,
+      "overlaps_mm3": {
+        "buck/camera": 220.07296,
+        "buck/camera_mount": 119.24496,
+        "tray/camera": 48.72668,
+        "tray/camera_mount": 54.79952,
+        "driver/camera": 111.81669,
+        "driver/camera_mount": 110.99998
+      },
+      "outside_body_mm3": {
+        "camera": 1.67703
+      }
+    },
+    {
+      "electronics_mm": 8,
+      "camera_mm": 6,
+      "mechanical_clear": false,
+      "hypothetical_body_clear": false,
+      "overlaps_mm3": {
+        "buck/camera": 160.13944,
+        "buck/camera_mount": 114.29846,
+        "tray/camera": 24.36334,
+        "tray/camera_mount": 54.79952,
+        "driver/camera_mount": 110.99998
+      },
+      "outside_body_mm3": {
+        "camera": 24.74088
+      }
+    },
+    {
+      "electronics_mm": 8,
+      "camera_mm": 7,
+      "mechanical_clear": false,
+      "hypothetical_body_clear": false,
+      "overlaps_mm3": {
+        "buck/camera": 96.19409,
+        "buck/camera_mount": 121.08495,
+        "tray/camera_mount": 54.79952,
+        "driver/camera_mount": 55.49999
+      },
+      "outside_body_mm3": {
+        "camera": 74.87511
+      }
+    },
+    {
+      "electronics_mm": 8,
+      "camera_mm": 8,
+      "mechanical_clear": false,
+      "hypothetical_body_clear": false,
+      "overlaps_mm3": {
+        "buck/camera": 32.0647,
+        "buck/camera_mount": 126.78764,
+        "tray/camera_mount": 27.39976
+      },
+      "outside_body_mm3": {
+        "camera": 152.07985
+      }
+    }
+  ],
+  "wire_corridors": {
+    "wire-power": {
+      "radius_mm": 1.0,
+      "points_mm": [
+        [
+          50.5,
+          54,
+          16
+        ],
+        [
+          51.5,
+          40,
+          16
+        ],
+        [
+          51.5,
+          30,
+          26
+        ],
+        [
+          45,
+          27,
+          28
+        ],
+        [
+          0,
+          27,
+          28
+        ],
+        [
+          0,
+          75,
+          35
+        ],
+        [
+          7,
+          82,
+          35
+        ],
+        [
+          7,
+          79,
+          35
+        ]
+      ],
+      "polyline_length_mm": 142.01806512415968,
+      "frame_overlap_mm3": 0.0,
+      "cover_overlap_mm3": 0.0,
+      "battery_overlap_mm3": 0.0,
+      "motor_overlap_mm3": 0.0,
+      "port_base_overlap_mm3": 0.0,
+      "outside_hypothetical_body_mm3": 0.0,
+      "note": "Nominal corridor only; endpoints unassigned, not a wire cutting length or bend-radius qualification"
+    },
+    "wire-servo": {
+      "radius_mm": 0.9,
+      "points_mm": [
+        [
+          35,
+          68,
+          38.6
+        ],
+        [
+          44,
+          68,
+          39.5
+        ],
+        [
+          44,
+          92,
+          34
+        ],
+        [
+          45,
+          95,
+          19
+        ],
+        [
+          44,
+          89,
+          16
+        ],
+        [
+          43,
+          78,
+          14
+        ]
+      ],
+      "polyline_length_mm": 67.00404442370204,
+      "frame_overlap_mm3": 0.0,
+      "cover_overlap_mm3": 0.0,
+      "battery_overlap_mm3": 0.0,
+      "motor_overlap_mm3": 0.0,
+      "port_base_overlap_mm3": 0.0,
+      "outside_hypothetical_body_mm3": 0.0,
+      "note": "Nominal corridor only; endpoints unassigned, not a wire cutting length or bend-radius qualification"
+    },
+    "wire-antenna": {
+      "radius_mm": 0.65,
+      "points_mm": [
+        [
+          37,
+          86,
+          34
+        ],
+        [
+          41,
+          86,
+          37
+        ],
+        [
+          47.5,
+          83,
+          42
+        ],
+        [
+          47.5,
+          63,
+          42
+        ]
+      ],
+      "polyline_length_mm": 33.73212459828649,
+      "frame_overlap_mm3": 0.0,
+      "cover_overlap_mm3": 0.0,
+      "battery_overlap_mm3": 0.0,
+      "motor_overlap_mm3": 0.0,
+      "port_base_overlap_mm3": 0.0,
+      "outside_hypothetical_body_mm3": 0.0,
+      "note": "Nominal corridor only; endpoints unassigned, not a wire cutting length or bend-radius qualification"
+    },
+    "wire-motor": {
+      "radius_mm": 0.9,
+      "points_mm": [
+        [
+          35,
+          49,
+          38.6
+        ],
+        [
+          44,
+          44,
+          35
+        ],
+        [
+          44,
+          32,
+          28
+        ],
+        [
+          41,
+          29,
+          25
+        ],
+        [
+          39,
+          24,
+          22
+        ]
+      ],
+      "polyline_length_mm": 36.159888978674196,
+      "frame_overlap_mm3": 0.0,
+      "cover_overlap_mm3": 0.0,
+      "battery_overlap_mm3": 0.0,
+      "motor_overlap_mm3": 0.0,
+      "port_base_overlap_mm3": 0.0,
+      "outside_hypothetical_body_mm3": 0.0,
+      "note": "Nominal corridor only; endpoints unassigned, not a wire cutting length or bend-radius qualification"
+    },
+    "wire-control": {
+      "radius_mm": 0.8,
+      "points_mm": [
+        [
+          37,
+          85,
+          35
+        ],
+        [
+          40.5,
+          82,
+          37
+        ],
+        [
+          41,
+          79,
+          40
+        ],
+        [
+          36,
+          74,
+          39
+        ]
+      ],
+      "polyline_length_mm": 16.43836811176206,
+      "frame_overlap_mm3": 0.0,
+      "cover_overlap_mm3": 0.0,
+      "battery_overlap_mm3": 0.0,
+      "motor_overlap_mm3": 0.0,
+      "port_base_overlap_mm3": 0.0,
+      "outside_hypothetical_body_mm3": 0.0,
+      "note": "Nominal corridor only; endpoints unassigned, not a wire cutting length or bend-radius qualification"
+    }
+  },
+  "bounds_mm": {
+    "buck": [
+      [
+        3.75,
+        46.5,
+        28.1
+      ],
+      [
+        19.75,
+        79.5,
+        40.8
+      ]
+    ],
+    "buck_pcb": [
+      [
+        3.75,
+        46.5,
+        29.6
+      ],
+      [
+        19.75,
+        79.5,
+        30.8
+      ]
+    ],
+    "buck_components": [
+      [
+        5.55,
+        50.0,
+        30.8
+      ],
+      [
+        18.55,
+        71.5,
+        35.3
+      ]
+    ],
+    "buck_terminals": [
+      [
+        4.15,
+        46.9,
+        28.1
+      ],
+      [
+        19.35,
+        79.5,
+        40.8
+      ]
+    ],
+    "buck_plug": [
+      [
+        3.55,
+        46.4,
+        33.3
+      ],
+      [
+        19.95,
+        49.8,
+        43.3
+      ]
+    ],
+    "tray": [
+      [
+        -1.25,
+        30.0,
+        26.3
+      ],
+      [
+        50.75,
+        78.0,
+        27.3
+      ]
+    ],
+    "pads": [
+      [
+        4.0,
+        33.0,
+        27.3
+      ],
+      [
+        43.0,
+        72.0,
+        29.6
+      ]
+    ],
+    "driver": [
+      [
+        25.75,
+        47.0,
+        28.6
+      ],
+      [
+        43.75,
+        77.0,
+        38.6
+      ]
+    ],
+    "charge": [
+      [
+        8.25,
+        30.0,
+        28.6
+      ],
+      [
+        41.25,
+        46.0,
+        36.6
+      ]
+    ],
+    "antenna": [
+      [
+        46.0,
+        48.0,
+        37.0
+      ],
+      [
+        47.0,
+        75.0,
+        44.0
+      ]
+    ],
+    "antenna_support": [
+      [
+        47.0,
+        55.0,
+        26.0
+      ],
+      [
+        53.2,
+        74.2,
+        37.0
+      ]
+    ],
+    "service_usb": [
+      [
+        -3.5,
+        82.0,
+        27.0
+      ],
+      [
+        13.5,
+        91.0,
+        36.0
+      ]
+    ],
+    "camera_support": [
+      [
+        -5.25,
+        78.5,
+        21.0
+      ],
+      [
+        54.75,
+        94.0,
+        44.0
+      ]
+    ]
+  },
+  "sources_and_artifacts_sha256": {
+    "cad/packaging-v05/antenna.stl": "f5ec77dd68d7dc71eb959ab0f52c6f4ee3666378bc113d79e683fc5d03307217",
+    "cad/packaging-v05/antenna_support.stl": "62be42076e6d4623de95ae72836375f5265bb88fdb740caf039ecc8263fe5896",
+    "cad/packaging-v05/buck.stl": "16e923ac30f38cd5763b4369c6f1daf32c9255f6a8e8383c4410b2388063d06a",
+    "cad/packaging-v05/buck_components.stl": "e6d1aced6397fec78abc6d02580c2495d4a807b8ffc8cbd45911640dd5d850f8",
+    "cad/packaging-v05/buck_pcb.stl": "e271879b4c5b70f5225e8b18a6ebddced819661f0d5811c72b497d5beb3221d9",
+    "cad/packaging-v05/buck_plug.stl": "6d390fdfbe2734ee671f1278a3635b22e4535a3bd69d32174a6cca960d07eb38",
+    "cad/packaging-v05/buck_terminals.stl": "e37cf9691062d60c29dae61f501daca63d152b062c1fa75dce4bed55c188f764",
+    "cad/packaging-v05/camera_support.stl": "012a736622d4a6ae36006da3ca14b8d715c9a2dede941f9f34a9687d122a053a",
+    "cad/packaging-v05/charge.stl": "d2af805332b2b8e555be6f8455eb8b95174316f01fa19408f43dad3a45aaf578",
+    "cad/packaging-v05/driver.stl": "ab9310a220e3f75b1d9b9698efb304ff8660a142f42ec93e0954f88e141014d1",
+    "cad/packaging-v05/frame-relief-proposal.stl": "b7024c986e2ee169f2557a3c4c9e47876cdf0e77cd0bbcd713e1de39999f109a",
+    "cad/packaging-v05/frame-removed-material.stl": "174eccf2c36468310385e9b2aa931f4ecc925597e2473f32d77cc8d18c2b6d6b",
+    "cad/packaging-v05/inputs/adjustable-band.stl": "d9d652240b22b1f40fdb39d07892e0d45d97b9c7cae642a50b26f1772b67e2e2",
+    "cad/packaging-v05/inputs/adjustable-battery.stl": "99e5c2cd66c0d59f1e402d83f8988ba361016054b88bee3651f8274ff42d786a",
+    "cad/packaging-v05/inputs/adjustable-camera_fasteners.stl": "401ee9e910633670619cbc827e84616f69c55a6b057d89fd048d3838aa30ecfd",
+    "cad/packaging-v05/inputs/adjustable-camera_mount.stl": "531d19e3a9111fb4556c3b2e88dc7b548215892a3837002f281553d919932821",
+    "cad/packaging-v05/inputs/adjustable-cavity.stl": "271b880213a2abe8e282b0ebcb23aab949275a23d3dcc8d8c419b1363b40d246",
+    "cad/packaging-v05/inputs/adjustable-charge.stl": "42c16c413cdb04840a93c21e6d7697d080ca4a44a5e4f42b68dee6f944ac57f8",
+    "cad/packaging-v05/inputs/adjustable-guards.stl": "30534ff4a38cee23058b438597c313693c3a3497d5a815964862a4112c54d7d6",
+    "cad/packaging-v05/inputs/adjustable-main_fasteners.stl": "82b66767791535c0289c7de2f5a1b4b6f8cd4a11f3b95302ccb9543c6656ebe1",
+    "cad/packaging-v05/inputs/adjustable-support.stl": "16d698f494ca637d73c1da61f0c55adfa5b2b3ff1df42e631b94d073970eac54",
+    "cad/packaging-v05/inputs/cover.stl": "67991811518bfd981143b4541ee1d936b84bc55d2d8379382a0746b7e6b283ac",
+    "cad/packaging-v05/inputs/frame.stl": "06b2c416d1aaa4d60804145899a786ddce3d83897b0949a6d6ca3620db8213c1",
+    "cad/packaging-v05/inputs/usb-base.stl": "8f3d20d5952a249fb1f8c9440751bce8590ce505d7476cd053d51f62dc57a0fc",
+    "cad/packaging-v05/inputs/usb-body.stl": "4d973e4bcbde30b80b112cad8d40e8f90aa257a44434bbe32c8dab11db1f40f3",
+    "cad/packaging-v05/inputs/usb-components.stl": "c8cc27cf13eacee53a7227c45acd32dbd6ba0aecd7fad42379c8de0192013a70",
+    "cad/packaging-v05/inputs/usb-connector.stl": "4731ab48bd28f1708d8c598f3711ae5c87890473968fb6e1e48d629e606e9cbc",
+    "cad/packaging-v05/inputs/usb-cover.stl": "44928cadd21fad7e4211398b069e0d20a3ba919f2389e4e7f6cebb25cd2b4650",
+    "cad/packaging-v05/inputs/usb-pcb.stl": "d68ee033c3ed97af9e8045ee6799d95ace9f633f0d8beddba5a9e5f09e86cee2",
+    "cad/packaging-v05/layout.scad": "c0208e6d0d41365dd222a408f0a5d03a21d2c56dcfb4b8effb56f36505f35139",
+    "cad/packaging-v05/LICENSE-FreeCAD-Assets": "f14f4d7cf4bf40f8f589b6b461a110d849031e2e43958235e018b3763e54b859",
+    "cad/packaging-v05/mechanics-without-frame.stl": "bcc6ab04035fa09a2fc36cac1e9e32c97a9c65db4823ef0a72e7d2fc66eef6cb",
+    "cad/packaging-v05/NOTICE.md": "8ffe337905e926edfdaa8e67ac975dec86a5b928152b79e835f75c92dc74dfe0",
+    "cad/packaging-v05/pads.stl": "184beabc4244ffe4a3c5ac3f3e208ba58a3578687ca1d21d6426cecdc4630556",
+    "cad/packaging-v05/README.md": "ad7272098ca762a1fb5df0ed4014eecdfa411020688c4093764e03a4a2031967",
+    "cad/packaging-v05/service_usb.stl": "61a76a5d349f245fc2d91e6aa359f066ffc06c48cb6c0c9ff28de29d516f7a5c",
+    "cad/packaging-v05/servo-frame-interference.stl": "6f4588f275ebeec6c24495d99525ec962573b56886908f21369482e165f35d5a",
+    "cad/packaging-v05/servo-installed.stl": "8f7c94bd577f4b44eff27a8daa9d61ad3e7f52759edf7b92f44a65f943c10d41",
+    "cad/packaging-v05/sg90-library.step": "9ad7b12887580bf68135e7bf544f0fc231ab9af988508184c097b1d1c3e7d734",
+    "cad/packaging-v05/tray.stl": "9f1af1d2c4420386191502f3873a1f5cb3643a04e61987d4d039a8cd4d51bb4b",
+    "cad/packaging-v05/viewer.html": "f53291fe492c81b05925b7f8752fd07acbc1976da198c90c7c59b4cc3e37ee7d",
+    "cad/packaging-v05/wire-antenna.stl": "8faae521a9eec57c2a3ea11f3563876d3b1e411ceec3244f12e8660ab8aa0df9",
+    "cad/packaging-v05/wire-control.stl": "8b714d914bf2b1661159cb796bef969527cccbf7b166a29a7a0bad0ee749a4db",
+    "cad/packaging-v05/wire-motor.stl": "114ace2c0ef3a60d7c95cfa69f558f7a327ef41da8af8a119520efb2b7bbc88c",
+    "cad/packaging-v05/wire-power.stl": "989bac26b40d1efb4255afcb5e72ff0a7512bd31273c2bcc3bdfd7f0b936b3c3",
+    "cad/packaging-v05/wire-servo.stl": "baf06fc3b3537b60b703cc902e126c07eb586ceaf1ebe0b69a17a178a8f4822e"
+  },
+  "previews_sha256": {
+    "docs/evidence/packaging-v05-overview.png": "ac9b8da37d0db700f3752395812a8dbf7e9b96b2334b5607cc0156ead7c60413",
+    "docs/evidence/packaging-v05-top.png": "24ae27da6b750b770e977babfc8dc4817bc7dee2eda5b984ef63aa4155927c84",
+    "docs/evidence/packaging-v05-side.png": "c9ff112f91be0e14e2c7645b41b94745d34c4419b4a89e13bb374e54b3a4a6fa"
+  },
+  "limitations": [
+    "XIAO vendor STEP 2023 not confirmed as OV3660 revision",
+    "Servo library model is not the ordered supplier model; source 11.8mm thickness versus seller 12.2mm",
+    "Static electronics sweep, no wheel/linkage motion or continuous travel qualification",
+    "Waveshare -M terminal height, pin tails, plugs and antenna dimensions are estimates",
+    "Existing camera support contact and printed tray cantilever are not validated",
+    "Driver and charger are unqualified volume allocations, not completed populated boards",
+    "Wires are geometric corridors at nominal pose only, not wiring instructions",
+    "No received parts, printed assembly, thermal or radio evidence"
+  ]
+}

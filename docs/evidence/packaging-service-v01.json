@@ -1,0 +1,812 @@
+{
+  "version": "0.1",
+  "date": "2026-09-15",
+  "packaging_version": "0.5",
+  "nominal_electronics_camera_mm": [
+    0,
+    3
+  ],
+  "physical_service_verified": false,
+  "battery_exit": {
+    "direction": "-X",
+    "distance_mm": 50,
+    "continuous_box_sweep": true,
+    "body_removed": true,
+    "band_removed": true,
+    "left_guard_removed": true,
+    "right_guard_retained": true,
+    "overlaps_mm3": {
+      "frame-relief-proposal": 0.0,
+      "servo-installed": 0.0,
+      "buck": 0.0,
+      "buck_plug": 0.0,
+      "tray": 0.0,
+      "pads": 0.0,
+      "driver": 0.0,
+      "charge": 0.0,
+      "antenna": 0.0,
+      "antenna_support": 0.0,
+      "camera_support": 0.0,
+      "wire-power": 0.0,
+      "wire-servo": 0.0,
+      "wire-antenna": 0.0,
+      "wire-motor": 0.0,
+      "wire-control": 0.0,
+      "cover": 0.0,
+      "adjustable-support": 0.0,
+      "adjustable-main_fasteners": 0.0,
+      "adjustable-camera_fasteners": 0.0,
+      "usb-base": 0.0,
+      "usb-pcb": 0.0,
+      "usb-connector": 0.0,
+      "usb-components": 0.0,
+      "motor": 0.0,
+      "camera": 0.0,
+      "right_guard": 0.0
+    }
+  },
+  "left_guard_removal_samples": [
+    {
+      "outward_mm": 0.0,
+      "overlaps_mm3": {}
+    },
+    {
+      "outward_mm": 0.25,
+      "overlaps_mm3": {}
+    },
+    {
+      "outward_mm": 0.5,
+      "overlaps_mm3": {}
+    },
+    {
+      "outward_mm": 0.75,
+      "overlaps_mm3": {}
+    },
+    {
+      "outward_mm": 1.0,
+      "overlaps_mm3": {}
+    },
+    {
+      "outward_mm": 1.25,
+      "overlaps_mm3": {}
+    },
+    {
+      "outward_mm": 1.5,
+      "overlaps_mm3": {}
+    },
+    {
+      "outward_mm": 1.75,
+      "overlaps_mm3": {}
+    },
+    {
+      "outward_mm": 2.0,
+      "overlaps_mm3": {}
+    },
+    {
+      "outward_mm": 2.25,
+      "overlaps_mm3": {}
+    },
+    {
+      "outward_mm": 2.5,
+      "overlaps_mm3": {}
+    },
+    {
+      "outward_mm": 2.75,
+      "overlaps_mm3": {}
+    },
+    {
+      "outward_mm": 3.0,
+      "overlaps_mm3": {}
+    },
+    {
+      "outward_mm": 3.25,
+      "overlaps_mm3": {}
+    },
+    {
+      "outward_mm": 3.5,
+      "overlaps_mm3": {}
+    },
+    {
+      "outward_mm": 3.75,
+      "overlaps_mm3": {}
+    },
+    {
+      "outward_mm": 4.0,
+      "overlaps_mm3": {}
+    },
+    {
+      "outward_mm": 4.25,
+      "overlaps_mm3": {}
+    },
+    {
+      "outward_mm": 4.5,
+      "overlaps_mm3": {}
+    },
+    {
+      "outward_mm": 4.75,
+      "overlaps_mm3": {}
+    },
+    {
+      "outward_mm": 5.0,
+      "overlaps_mm3": {}
+    },
+    {
+      "outward_mm": 5.25,
+      "overlaps_mm3": {}
+    },
+    {
+      "outward_mm": 5.5,
+      "overlaps_mm3": {}
+    },
+    {
+      "outward_mm": 5.75,
+      "overlaps_mm3": {}
+    },
+    {
+      "outward_mm": 6.0,
+      "overlaps_mm3": {}
+    }
+  ],
+  "body_removal_samples": [
+    {
+      "translation_mm": [
+        0,
+        0,
+        0.0
+      ],
+      "overlaps_mm3": {}
+    },
+    {
+      "translation_mm": [
+        0,
+        0,
+        0.25
+      ],
+      "overlaps_mm3": {}
+    },
+    {
+      "translation_mm": [
+        0,
+        0,
+        0.5
+      ],
+      "overlaps_mm3": {}
+    },
+    {
+      "translation_mm": [
+        0,
+        0,
+        0.75
+      ],
+      "overlaps_mm3": {}
+    },
+    {
+      "translation_mm": [
+        0,
+        0,
+        1.0
+      ],
+      "overlaps_mm3": {}
+    },
+    {
+      "translation_mm": [
+        0,
+        0,
+        1.25
+      ],
+      "overlaps_mm3": {}
+    },
+    {
+      "translation_mm": [
+        0,
+        0,
+        1.5
+      ],
+      "overlaps_mm3": {}
+    },
+    {
+      "translation_mm": [
+        0,
+        0,
+        1.75
+      ],
+      "overlaps_mm3": {}
+    },
+    {
+      "translation_mm": [
+        0,
+        0,
+        2.0
+      ],
+      "overlaps_mm3": {}
+    },
+    {
+      "translation_mm": [
+        0.25,
+        0,
+        2
+      ],
+      "overlaps_mm3": {}
+    },
+    {
+      "translation_mm": [
+        0.5,
+        0,
+        2
+      ],
+      "overlaps_mm3": {}
+    },
+    {
+      "translation_mm": [
+        0.75,
+        0,
+        2
+      ],
+      "overlaps_mm3": {}
+    },
+    {
+      "translation_mm": [
+        1.0,
+        0,
+        2
+      ],
+      "overlaps_mm3": {}
+    },
+    {
+      "translation_mm": [
+        1,
+        0,
+        3.0
+      ],
+      "overlaps_mm3": {}
+    },
+    {
+      "translation_mm": [
+        1,
+        0,
+        4.0
+      ],
+      "overlaps_mm3": {}
+    },
+    {
+      "translation_mm": [
+        1,
+        0,
+        5.0
+      ],
+      "overlaps_mm3": {}
+    },
+    {
+      "translation_mm": [
+        1,
+        0,
+        6.0
+      ],
+      "overlaps_mm3": {}
+    },
+    {
+      "translation_mm": [
+        1,
+        0,
+        7.0
+      ],
+      "overlaps_mm3": {}
+    },
+    {
+      "translation_mm": [
+        1,
+        0,
+        8.0
+      ],
+      "overlaps_mm3": {}
+    },
+    {
+      "translation_mm": [
+        1,
+        0,
+        9.0
+      ],
+      "overlaps_mm3": {}
+    },
+    {
+      "translation_mm": [
+        1,
+        0,
+        10.0
+      ],
+      "overlaps_mm3": {}
+    },
+    {
+      "translation_mm": [
+        1,
+        0,
+        11.0
+      ],
+      "overlaps_mm3": {}
+    },
+    {
+      "translation_mm": [
+        1,
+        0,
+        12.0
+      ],
+      "overlaps_mm3": {}
+    },
+    {
+      "translation_mm": [
+        1,
+        0,
+        13.0
+      ],
+      "overlaps_mm3": {}
+    },
+    {
+      "translation_mm": [
+        1,
+        0,
+        14.0
+      ],
+      "overlaps_mm3": {}
+    },
+    {
+      "translation_mm": [
+        1,
+        0,
+        15.0
+      ],
+      "overlaps_mm3": {}
+    },
+    {
+      "translation_mm": [
+        1,
+        0,
+        16.0
+      ],
+      "overlaps_mm3": {}
+    },
+    {
+      "translation_mm": [
+        1,
+        0,
+        17.0
+      ],
+      "overlaps_mm3": {}
+    },
+    {
+      "translation_mm": [
+        1,
+        0,
+        18.0
+      ],
+      "overlaps_mm3": {}
+    },
+    {
+      "translation_mm": [
+        1,
+        0,
+        19.0
+      ],
+      "overlaps_mm3": {}
+    },
+    {
+      "translation_mm": [
+        1,
+        0,
+        20.0
+      ],
+      "overlaps_mm3": {}
+    },
+    {
+      "translation_mm": [
+        1,
+        0,
+        21.0
+      ],
+      "overlaps_mm3": {}
+    },
+    {
+      "translation_mm": [
+        1,
+        0,
+        22.0
+      ],
+      "overlaps_mm3": {}
+    },
+    {
+      "translation_mm": [
+        1,
+        0,
+        23.0
+      ],
+      "overlaps_mm3": {}
+    },
+    {
+      "translation_mm": [
+        1,
+        0,
+        24.0
+      ],
+      "overlaps_mm3": {}
+    },
+    {
+      "translation_mm": [
+        1,
+        0,
+        25.0
+      ],
+      "overlaps_mm3": {}
+    },
+    {
+      "translation_mm": [
+        1,
+        0,
+        26.0
+      ],
+      "overlaps_mm3": {}
+    },
+    {
+      "translation_mm": [
+        1,
+        0,
+        27.0
+      ],
+      "overlaps_mm3": {}
+    },
+    {
+      "translation_mm": [
+        1,
+        0,
+        28.0
+      ],
+      "overlaps_mm3": {}
+    },
+    {
+      "translation_mm": [
+        1,
+        0,
+        29.0
+      ],
+      "overlaps_mm3": {}
+    },
+    {
+      "translation_mm": [
+        1,
+        0,
+        30.0
+      ],
+      "overlaps_mm3": {}
+    },
+    {
+      "translation_mm": [
+        1,
+        0,
+        31.0
+      ],
+      "overlaps_mm3": {}
+    },
+    {
+      "translation_mm": [
+        1,
+        0,
+        32.0
+      ],
+      "overlaps_mm3": {}
+    },
+    {
+      "translation_mm": [
+        1,
+        0,
+        33.0
+      ],
+      "overlaps_mm3": {}
+    },
+    {
+      "translation_mm": [
+        1,
+        0,
+        34.0
+      ],
+      "overlaps_mm3": {}
+    },
+    {
+      "translation_mm": [
+        1,
+        0,
+        35.0
+      ],
+      "overlaps_mm3": {}
+    },
+    {
+      "translation_mm": [
+        1,
+        0,
+        36.0
+      ],
+      "overlaps_mm3": {}
+    },
+    {
+      "translation_mm": [
+        1,
+        0,
+        37.0
+      ],
+      "overlaps_mm3": {}
+    },
+    {
+      "translation_mm": [
+        1,
+        0,
+        38.0
+      ],
+      "overlaps_mm3": {}
+    },
+    {
+      "translation_mm": [
+        1,
+        0,
+        39.0
+      ],
+      "overlaps_mm3": {}
+    },
+    {
+      "translation_mm": [
+        1,
+        0,
+        40.0
+      ],
+      "overlaps_mm3": {}
+    },
+    {
+      "translation_mm": [
+        1,
+        0,
+        41.0
+      ],
+      "overlaps_mm3": {}
+    },
+    {
+      "translation_mm": [
+        1,
+        0,
+        42.0
+      ],
+      "overlaps_mm3": {}
+    },
+    {
+      "translation_mm": [
+        1,
+        0,
+        43.0
+      ],
+      "overlaps_mm3": {}
+    },
+    {
+      "translation_mm": [
+        1,
+        0,
+        44.0
+      ],
+      "overlaps_mm3": {}
+    },
+    {
+      "translation_mm": [
+        1,
+        0,
+        45.0
+      ],
+      "overlaps_mm3": {}
+    },
+    {
+      "translation_mm": [
+        1,
+        0,
+        46.0
+      ],
+      "overlaps_mm3": {}
+    },
+    {
+      "translation_mm": [
+        1,
+        0,
+        47.0
+      ],
+      "overlaps_mm3": {}
+    },
+    {
+      "translation_mm": [
+        1,
+        0,
+        48.0
+      ],
+      "overlaps_mm3": {}
+    },
+    {
+      "translation_mm": [
+        1,
+        0,
+        49.0
+      ],
+      "overlaps_mm3": {}
+    },
+    {
+      "translation_mm": [
+        1,
+        0,
+        50.0
+      ],
+      "overlaps_mm3": {}
+    },
+    {
+      "translation_mm": [
+        1,
+        0,
+        51.0
+      ],
+      "overlaps_mm3": {}
+    },
+    {
+      "translation_mm": [
+        1,
+        0,
+        52.0
+      ],
+      "overlaps_mm3": {}
+    },
+    {
+      "translation_mm": [
+        1,
+        0,
+        53.0
+      ],
+      "overlaps_mm3": {}
+    },
+    {
+      "translation_mm": [
+        1,
+        0,
+        54.0
+      ],
+      "overlaps_mm3": {}
+    },
+    {
+      "translation_mm": [
+        1,
+        0,
+        55.0
+      ],
+      "overlaps_mm3": {}
+    },
+    {
+      "translation_mm": [
+        1,
+        0,
+        56.0
+      ],
+      "overlaps_mm3": {}
+    },
+    {
+      "translation_mm": [
+        1,
+        0,
+        57.0
+      ],
+      "overlaps_mm3": {}
+    },
+    {
+      "translation_mm": [
+        1,
+        0,
+        58.0
+      ],
+      "overlaps_mm3": {}
+    },
+    {
+      "translation_mm": [
+        1,
+        0,
+        59.0
+      ],
+      "overlaps_mm3": {}
+    },
+    {
+      "translation_mm": [
+        1,
+        0,
+        60.0
+      ],
+      "overlaps_mm3": {}
+    },
+    {
+      "translation_mm": [
+        1,
+        0,
+        61.0
+      ],
+      "overlaps_mm3": {}
+    },
+    {
+      "translation_mm": [
+        1,
+        0,
+        62.0
+      ],
+      "overlaps_mm3": {}
+    },
+    {
+      "translation_mm": [
+        1,
+        0,
+        63.0
+      ],
+      "overlaps_mm3": {}
+    },
+    {
+      "translation_mm": [
+        1,
+        0,
+        64.0
+      ],
+      "overlaps_mm3": {}
+    },
+    {
+      "translation_mm": [
+        1,
+        0,
+        65.0
+      ],
+      "overlaps_mm3": {}
+    }
+  ],
+  "positive_controls": {
+    "battery_exit_with_left_guard_mm3": 123.0000002682209,
+    "straight_body_lift_7mm_usb_collision_mm3": 14.821192771707805
+  },
+  "wire_check_geometry": "Rebuilt from pinned radius/points, original display STL unchanged",
+  "non_solid_wire_display_exports": [
+    "wire-power"
+  ],
+  "source_hashes": {
+    "tools/check_packaging_service.py": "0c492155ad73500fd460473b05494b2e6bb969a6ee678beda536d42547080025",
+    "cad/packaging-v05/frame-relief-proposal.stl": "b7024c986e2ee169f2557a3c4c9e47876cdf0e77cd0bbcd713e1de39999f109a",
+    "cad/packaging-v05/servo-installed.stl": "8f7c94bd577f4b44eff27a8daa9d61ad3e7f52759edf7b92f44a65f943c10d41",
+    "cad/packaging-v05/buck.stl": "16e923ac30f38cd5763b4369c6f1daf32c9255f6a8e8383c4410b2388063d06a",
+    "cad/packaging-v05/buck_plug.stl": "6d390fdfbe2734ee671f1278a3635b22e4535a3bd69d32174a6cca960d07eb38",
+    "cad/packaging-v05/tray.stl": "9f1af1d2c4420386191502f3873a1f5cb3643a04e61987d4d039a8cd4d51bb4b",
+    "cad/packaging-v05/pads.stl": "184beabc4244ffe4a3c5ac3f3e208ba58a3578687ca1d21d6426cecdc4630556",
+    "cad/packaging-v05/driver.stl": "ab9310a220e3f75b1d9b9698efb304ff8660a142f42ec93e0954f88e141014d1",
+    "cad/packaging-v05/charge.stl": "d2af805332b2b8e555be6f8455eb8b95174316f01fa19408f43dad3a45aaf578",
+    "cad/packaging-v05/antenna.stl": "f5ec77dd68d7dc71eb959ab0f52c6f4ee3666378bc113d79e683fc5d03307217",
+    "cad/packaging-v05/antenna_support.stl": "62be42076e6d4623de95ae72836375f5265bb88fdb740caf039ecc8263fe5896",
+    "cad/packaging-v05/camera_support.stl": "012a736622d4a6ae36006da3ca14b8d715c9a2dede941f9f34a9687d122a053a",
+    "cad/packaging-v05/wire-power.stl": "989bac26b40d1efb4255afcb5e72ff0a7512bd31273c2bcc3bdfd7f0b936b3c3",
+    "cad/packaging-v05/wire-servo.stl": "baf06fc3b3537b60b703cc902e126c07eb586ceaf1ebe0b69a17a178a8f4822e",
+    "cad/packaging-v05/wire-antenna.stl": "8faae521a9eec57c2a3ea11f3563876d3b1e411ceec3244f12e8660ab8aa0df9",
+    "cad/packaging-v05/wire-motor.stl": "114ace2c0ef3a60d7c95cfa69f558f7a327ef41da8af8a119520efb2b7bbc88c",
+    "cad/packaging-v05/wire-control.stl": "8b714d914bf2b1661159cb796bef969527cccbf7b166a29a7a0bad0ee749a4db",
+    "cad/packaging-v05/inputs/cover.stl": "67991811518bfd981143b4541ee1d936b84bc55d2d8379382a0746b7e6b283ac",
+    "cad/packaging-v05/inputs/adjustable-support.stl": "16d698f494ca637d73c1da61f0c55adfa5b2b3ff1df42e631b94d073970eac54",
+    "cad/packaging-v05/inputs/adjustable-main_fasteners.stl": "82b66767791535c0289c7de2f5a1b4b6f8cd4a11f3b95302ccb9543c6656ebe1",
+    "cad/packaging-v05/inputs/adjustable-camera_fasteners.stl": "401ee9e910633670619cbc827e84616f69c55a6b057d89fd048d3838aa30ecfd",
+    "cad/packaging-v05/inputs/usb-base.stl": "8f3d20d5952a249fb1f8c9440751bce8590ce505d7476cd053d51f62dc57a0fc",
+    "cad/packaging-v05/inputs/usb-pcb.stl": "d68ee033c3ed97af9e8045ee6799d95ace9f633f0d8beddba5a9e5f09e86cee2",
+    "cad/packaging-v05/inputs/usb-connector.stl": "4731ab48bd28f1708d8c598f3711ae5c87890473968fb6e1e48d629e606e9cbc",
+    "cad/packaging-v05/inputs/usb-components.stl": "c8cc27cf13eacee53a7227c45acd32dbd6ba0aecd7fad42379c8de0192013a70",
+    "docs/evidence/packaging-v05.json": "c891dbd44a1fc8b4b11869432baf7cc3f8c15805ed40a70246dbf0744875795f",
+    "cad/components/motor-installed.stl": "08368cbf61c451de981b3aa44b8e624300c274c43da541815456cff0680208a6",
+    "cad/components/xiao-sense-2023-installed.stl": "b9af922531dc8b2253ced5e1db66cb7e6030d0f6df47c143e9ab906f5856cb59",
+    "cad/packaging-v05/inputs/adjustable-battery.stl": "99e5c2cd66c0d59f1e402d83f8988ba361016054b88bee3651f8274ff42d786a",
+    "cad/packaging-v05/inputs/adjustable-guards.stl": "30534ff4a38cee23058b438597c313693c3a3497d5a815964862a4112c54d7d6",
+    "cad/packaging-v05/inputs/adjustable-band.stl": "d9d652240b22b1f40fdb39d07892e0d45d97b9c7cae642a50b26f1772b67e2e2",
+    "cad/packaging-v05/inputs/usb-body.stl": "4d973e4bcbde30b80b112cad8d40e8f90aa257a44434bbe32c8dab11db1f40f3",
+    "cad/packaging-v05/inputs/usb-cover.stl": "44928cadd21fad7e4211398b069e0d20a3ba919f2389e4e7f6cebb25cd2b4650"
+  },
+  "limitations": [
+    "Battery is seller-size box without its connectors or wires",
+    "Wire corridors are rigid estimates; disconnected battery lead must be handled separately",
+    "Body/guard paths sampled, not continuous collision proof",
+    "Only listed closed solids checked; remaining reference suspension/gears omitted",
+    "No finger clearance, magnet retention, strap elasticity, forces or physical fit checks",
+    "Only nominal 0/+3mm pose, not all accepted adjustment pairs",
+    "Real body, full populated charger/driver and service USB plug remain open"
+  ]
+}

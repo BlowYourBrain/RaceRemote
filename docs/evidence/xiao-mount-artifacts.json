@@ -1,0 +1,16 @@
+{
+  "cad/xiao-mount/cap.stl": "d39549daf87a1ec105a7cfb0df196f2296de9b59e67c2205b64d277b2d97dff7",
+  "cad/xiao-mount/cap_print.stl": "d3976feb6ffe0c0af999d1b51cb2e0e5223f6767e2fb72106e0eb2ef05b71358",
+  "cad/xiao-mount/cradle.stl": "059b90f45d623519551034e7003d177faeb619caad623f4de1958738af257caa",
+  "cad/xiao-mount/cradle_print.stl": "8cf0bcab18b33f8216e4ced2d6e3eae6ac3f7197a42ae637722a17da141b9938",
+  "cad/xiao-mount/README.md": "76e7a275f8f240d17956bc98e21ea97b9fd5600e711e1613c61a10a852485120",
+  "cad/xiao-mount/screws.stl": "344530c44bfa7a7dd5e15b6b5d53e5583001325b0ab067984c89dd493dc08bd8",
+  "cad/xiao-mount/stage_screws.stl": "398e1fce190911f7d9d3187ac6f38c2c09f2ddff61ff45dcf810bf489f38a8ca",
+  "cad/xiao-mount/tray_clearance.stl": "e4afaa20bda8d781b6af33a9274c82fbf5e7feaa38ab8d77fbc06c0c33d4a98a",
+  "cad/xiao-mount/usb_access.stl": "a40ce6d18dd215319f675d86546b97bdf6a06f2176a939d4a0da0a795e38af20",
+  "cad/xiao-mount/wire-antenna.stl": "c7eba24f70fbece34b80dd107e11e7ac18e45c9e2a3843d0eee2019dbc415144",
+  "cad/xiao-mount/wire-control.stl": "dc9714dbbd32521b9c3d70c003bce6a394b5836382a3561c223e399f11bd8af7",
+  "cad/xiao-mount/wire-servo.stl": "6f77ecc3e8faa9c68ed84a3fbd8dfc5508d49ec89bb5204a0c0662a1893b35cd",
+  "docs/evidence/xiao-mount-close.png": "0336ebfefc3fb021ffe1a4996d58f278d00a0239c411489b6d08b90a886c89c5",
+  "docs/evidence/xiao-mount-assembly.png": "3bde6e773ce0a57adb3c75c18918e2fb0ab403f8b57e127ab17dac7136541ec8"
+}

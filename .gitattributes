@@ -1,4 +1,11 @@
 # Preserve device evidence/source hashes across Windows checkouts.
+cad/xiao-mount.scad text eol=lf
+cad/xiao-mount-assembly.scad text eol=lf
+cad/xiao-mount/*.stl binary
+cad/xiao-mount/*.md text eol=lf
+tools/build_xiao_mount.py text eol=lf
+docs/evidence/xiao-mount*.json text eol=lf
+docs/evidence/xiao-mount*.png binary
 tools/check_packaging_service.py text eol=lf
 docs/evidence/packaging-service-v01.json text eol=lf
 cad/packaging-service.md text eol=lf

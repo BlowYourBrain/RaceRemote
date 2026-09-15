@@ -1,0 +1,14 @@
+{
+  "date": "2026-09-15",
+  "page": "cad/buck-output-harness/viewer.html",
+  "part_count": 70,
+  "unique_part_ids": 70,
+  "checkbox_count": 70,
+  "webgl_available": true,
+  "webgl_error": 0,
+  "replaced_H8_absent": true,
+  "added_ids": ["buck-output-5V", "buck-output-GND"],
+  "top_view_screenshot_visually_inspected": true,
+  "body_and_USB_lid_hidden_for_inspection": true,
+  "scope": "Browser rendering and scene inventory; no physical qualification"
+}

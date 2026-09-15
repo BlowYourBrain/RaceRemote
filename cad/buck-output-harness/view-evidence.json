@@ -1,0 +1,20 @@
+{
+  "source_sha256": {
+    "cad/xiao-power-harness/viewer.html": "15c38a93da909750c75604794e639b5829fd78ef05334ae3324e5e8cbba36b53",
+    "docs/evidence/buck-output-harness-v01.json": "fc1d0ee3e83065e84a947d91fc6a347b14bbf3829e0f093ad5b67827e1e33ed7",
+    "tools/build_buck_output_view.py": "c54a592fddb2f1f87730b186bfc538868fd42230c1f8ada99ae3ae34f8103dfe",
+    "cad/buck-output-harness/5V.stl": "210345ed57346192a806295657f7462f14ce2229ede4a72864733f5d45d558a5",
+    "cad/buck-output-harness/GND.stl": "c331f323a33b110025a16e1fcd5e57b8875973cee1f1ebe9ece6ee3cc53c01d8"
+  },
+  "artifact_sha256": {
+    "viewer.html": "24979d5faa761cbc39d328eab8a5346b198586c856c34b01dceb1346c06001b2"
+  },
+  "scene_objects": 70,
+  "removed_ids": [
+    "power-H8"
+  ],
+  "added_ids": [
+    "buck-output-5V",
+    "buck-output-GND"
+  ]
+}

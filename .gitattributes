@@ -293,3 +293,11 @@ tools/extract_xiao_power_pads.py text eol=lf
 tools/build_xiao_power_harness.py text eol=lf
 tools/build_xiao_power_view.py text eol=lf
 docs/evidence/xiao-power-harness-v01.json text eol=lf
+
+cad/buck-output-harness/*.stl binary
+cad/buck-output-harness/*.html text eol=lf
+cad/buck-output-harness/*.json text eol=lf
+cad/buck-output-harness/*.md text eol=lf
+tools/build_buck_output_harness.py text eol=lf
+tools/build_buck_output_view.py text eol=lf
+docs/evidence/buck-output-harness-v01.json text eol=lf

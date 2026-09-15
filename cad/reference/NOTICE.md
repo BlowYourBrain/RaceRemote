@@ -1,5 +1,7 @@
 # zcar reference geometry
 
+The unchanged stl/tray1.stl and stl/tray2.stl from the same pinned checkout are included as upstream-tray1.stl and upstream-tray2.stl. Their closed print solids supply the rigidly aligned parts reference-281 and reference-246 in ../motor-harness. Transformations and input hashes are in ../motor-harness/mechanism-alignment.json and ../../docs/evidence/motor-harness-v01.json. No source shape changes or mesh repair; GPL-3.0 continues to apply to these files and derived geometry.
+
 Source: https://github.com/alexyu132/zcar/tree/4b714e63fa30ed2030a8a48ab15f1e4a5fa380c4
 
 File: stl/zcar.stl; SHA256 943f59bfecd42b7eed32457dfd166559b0aec8fc64f6cd9ba6ce526d3f7c0e5b.

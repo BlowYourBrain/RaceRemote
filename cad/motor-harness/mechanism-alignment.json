@@ -1,0 +1,66 @@
+[
+  {
+    "reference_part": 246,
+    "source": "cad/reference/upstream-tray2.stl",
+    "source_part": 1,
+    "transform": [
+      [
+        -0.0,
+        -0.0,
+        -1.0,
+        55.58067870140076
+      ],
+      [
+        0.0,
+        1.0,
+        0.0,
+        -165.55753803253174
+      ],
+      [
+        1.0,
+        0.0,
+        0.0,
+        75.98111534118652
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ]
+    ],
+    "bidirectional_vertex_surface_max_mm": 1.1246181883879428e-05
+  },
+  {
+    "reference_part": 281,
+    "source": "cad/reference/upstream-tray1.stl",
+    "source_part": 5,
+    "transform": [
+      [
+        1.0,
+        0.0,
+        0.0,
+        -109.06518745422363
+      ],
+      [
+        0.0,
+        0.0,
+        1.0,
+        35.625000298023224
+      ],
+      [
+        -0.0,
+        -1.0,
+        -0.0,
+        165.69598388671875
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ]
+    ],
+    "bidirectional_vertex_surface_max_mm": 1.2795438920718674e-05
+  }
+]

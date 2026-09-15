@@ -1,4 +1,13 @@
 # Preserve device evidence/source hashes across Windows checkouts.
+cad/motor-harness/*.stl binary
+cad/motor-harness/*.png binary
+cad/motor-harness/*.html text eol=lf
+cad/motor-harness/*.json text eol=lf
+cad/motor-harness/*.md text eol=lf
+cad/reference/upstream-tray*.stl binary
+tools/build_motor_harness.py text eol=lf
+tools/build_motor_harness_view.py text eol=lf
+docs/evidence/motor-harness-v01.json text eol=lf
 cad/direct-logic-harness/*.stl binary
 cad/direct-logic-harness/*.png binary
 cad/direct-logic-harness/*.html text eol=lf

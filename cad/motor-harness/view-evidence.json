@@ -1,0 +1,20 @@
+{
+  "source_sha256": {
+    "cad/direct-logic-harness/viewer.html": "a4df62af8e18011ef8d39362a7ab3b62e565e27bc71e429ccbf388467c95d041",
+    "docs/evidence/motor-harness-v01.json": "1180294602dabf43e76b03efd9fbda47f0bc8df31ec614f7380a15ef2ab2cd23",
+    "tools/build_motor_harness_view.py": "fade444118bdc21cd163de1b7533c170e1cbfa61672445f71be904732340cf51",
+    "cad/motor-harness/FO.stl": "db4d470f7186b0f93fdbf2a56fd23b6772a2811d283e50578487e0fb999d1cd2",
+    "cad/motor-harness/BO.stl": "87da7b55315cc8b2b0938905c7fc8d97a57aa04dcdcde260f037cc28d87e962d",
+    "cad/motor-harness/terminal-A.stl": "37e9e2cff65e25af5735519eaea296e22ce0a01c1a1e0dc56eb88e39b116d28a",
+    "cad/motor-harness/terminal-B.stl": "d25c783d1c7c8a52c6e0d92dfe1165ffa7ee39498a655a8499889317314f7686",
+    "cad/motor-harness/reference-246.stl": "b7e2dd8d3350edcf632bc540e9aa6c4a915501b785a80a923d49910dcb549172",
+    "cad/motor-harness/reference-281.stl": "8acced2c28e6ed6a39b05c11e0d211c7572f1a5446076e157dac0fef3010888d"
+  },
+  "artifact_sha256": {
+    "viewer.html": "f3ad5152039e11d0917cc05b6453bdbf06e9a3125ac6d71afd3b1794ff21305a",
+    "closeup.png": "746c8b1864a2a56571f15219aebd87a467d94a251838bc3a86ac0e5f38c89c59"
+  },
+  "scene_objects": 74,
+  "wire_fit_passed": true,
+  "complete_fit_passed": false
+}

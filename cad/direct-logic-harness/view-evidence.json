@@ -1,0 +1,23 @@
+{
+  "source_sha256": {
+    "cad/buck-output-harness/viewer.html": "24979d5faa761cbc39d328eab8a5346b198586c856c34b01dceb1346c06001b2",
+    "docs/evidence/direct-logic-harness-v01.json": "0ae51371b9c3371093ecf22075f3f7a0f2f188d7401ca3311d4d5307534c0d1d",
+    "tools/build_direct_logic_view.py": "6ab59b6ba8919e9bdc682945fe80503f259cc83ccf6d3428fa205e3c2be51462",
+    "cad/direct-logic-harness/tray.stl": "86b03eb2cdd341e667779157820ea33a0409c3569dc52a95960b87e755abfb7e",
+    "cad/direct-logic-harness/5V.stl": "701fc2bcc4a993ec0d079d23c988853f2b0ed002bb1e12d67f470de4aabf4e17",
+    "cad/direct-logic-harness/GND.stl": "6db0c0ffe1a9b988d51470e99fbe4d15b14ea79cb6a9dfa44828a5eaff56411b",
+    "cad/direct-logic-harness/tie-space.stl": "b2092fdc61650475825e02c9308cd1bdb7ed8b48ef1315793c5772ff9de95496",
+    "cad/direct-logic-harness/tie-head-space.stl": "393af2ee546fb78e7b196d65b6f5e9030ae47e1e34ad23b01cc250e1ea7b778d"
+  },
+  "artifact_sha256": {
+    "viewer.html": "a4df62af8e18011ef8d39362a7ab3b62e565e27bc71e429ccbf388467c95d041",
+    "closeup.png": "947467477b1d54988a7a92b79627c4285ee3b7fab7094a9097a8e5732cb2da28"
+  },
+  "scene_objects": 71,
+  "removed_ids": [
+    "buck-output-5V",
+    "buck-output-GND",
+    "buck_plug",
+    "mount-tray"
+  ]
+}

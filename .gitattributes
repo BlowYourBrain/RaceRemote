@@ -1,4 +1,12 @@
 # Preserve device evidence/source hashes across Windows checkouts.
+cad/direct-logic-harness/*.stl binary
+cad/direct-logic-harness/*.png binary
+cad/direct-logic-harness/*.html text eol=lf
+cad/direct-logic-harness/*.json text eol=lf
+cad/direct-logic-harness/*.md text eol=lf
+tools/build_direct_logic_harness.py text eol=lf
+tools/build_direct_logic_view.py text eol=lf
+docs/evidence/direct-logic-harness-v01.json text eol=lf
 cad/current-layout/*.html text eol=lf
 cad/current-layout/*.md text eol=lf
 tools/check_current_adjustment.py text eol=lf

@@ -215,3 +215,12 @@ cad/motor-carrier-mount/*.html text eol=lf
 cad/motor-carrier-mount/*.md text eol=lf
 tools/build_motor_carrier_mount.py text eol=lf
 docs/evidence/motor-carrier-mount-v01.json text eol=lf
+
+cad/control-harness/*.stl binary
+cad/control-harness/*.html text eol=lf
+cad/control-harness/*.json text eol=lf
+cad/control-harness/*.md text eol=lf
+cad/control-harness/*.csv text eol=crlf
+tools/extract_xiao_control_pads.py text eol=lf
+tools/build_control_harness.py text eol=lf
+docs/evidence/control-harness-v01.json text eol=lf

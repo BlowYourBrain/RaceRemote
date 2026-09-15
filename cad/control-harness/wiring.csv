@@ -1,0 +1,4 @@
+﻿signal,xiao_pad,gpio,carrier_pad,net,path_mm,wire_outer_diameter_mm,status
+FI,D0,1,H1,CMD_FI,77.764,0.8,Proposal; not a cut length or verified wire SKU
+BI,D1,2,H2,CMD_BI,81.604,0.8,Proposal; not a cut length or verified wire SKU
+GND,GND,,H3,DRIVE_GND,66.37,0.8,Proposal; not a cut length or verified wire SKU

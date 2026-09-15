@@ -1,0 +1,73 @@
+{
+  "version": "0.1",
+  "date": "2026-09-15",
+  "vendor_url": "https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/new-res/202003751_XIAO%20ESP32S3_v1.4_SCH%26PCB_260226.zip",
+  "vendor_file": "XIAO ESP32S3_V1.5.kicad_pcb",
+  "archive_label_mismatch": "URL1.4 contains Sense1.5; actual purchased board revision unknown",
+  "vendor_archive_sha256": "a82247725c8a8bcd8cac81a7acbd126396217e5b680f6dfe28958851e02d5cdb",
+  "vendor_pcb_sha256": "d20724aa7198a897871cc1ce87f1a322d0b9cf77521fd2fc4ccda61bc5e4af6c",
+  "transform_description": "carX=STEP PCB centreX+U9originY-padY; carZ=STEP centreZ+padX-U9originX; copper frontY83.25",
+  "anchors_xyz_mm": {
+    "ANT1": [
+      14.48123,
+      83.25,
+      26.0386
+    ],
+    "USB0": [
+      28.04483,
+      83.25,
+      30.89
+    ]
+  },
+  "pads": {
+    "D0": {
+      "vendor_ref": "U9",
+      "pin": "1",
+      "net": "/03 XIAO ESP32-S3-Sense/D0{slash}A0",
+      "vendor_xy_mm": [
+        140.7811,
+        97.3571
+      ],
+      "candidate_xyz_mm": [
+        30.96583,
+        83.25,
+        23.17
+      ],
+      "pad_diameter_mm": 1.4
+    },
+    "D1": {
+      "vendor_ref": "U9",
+      "pin": "2",
+      "net": "/03 XIAO ESP32-S3-Sense/D1{slash}A1",
+      "vendor_xy_mm": [
+        140.8811,
+        99.8971
+      ],
+      "candidate_xyz_mm": [
+        28.42583,
+        83.25,
+        23.27
+      ],
+      "pad_diameter_mm": 1.4
+    },
+    "GND": {
+      "vendor_ref": "U9",
+      "pin": "13",
+      "net": "GND",
+      "vendor_xy_mm": [
+        156.1211,
+        99.8971
+      ],
+      "candidate_xyz_mm": [
+        28.42583,
+        83.25,
+        38.51
+      ],
+      "pad_diameter_mm": 1.4
+    }
+  },
+  "physical_pad_identification": false,
+  "firmware_profile_sha256": "3014a2edb8969c82c9f13b5a029b07d1ba8478b6956c5ce4f9c173999da03f9c",
+  "arduino_pin_header_sha256": "5d1c9414881bea0e35253fbc0b75e84599609dbe914dbfe49eab9adb5238109d",
+  "extractor_sha256": "f1dd26047c974ab1c9b769e70899ea3ffc2cf326ad5d7bc0c71be96b5f152152"
+}

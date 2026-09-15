@@ -1,0 +1,133 @@
+{
+  "contract": "VIDEO-METADATA-01",
+  "version": "0.2",
+  "date": "2026-09-15",
+  "jvm_suites": [
+    {
+      "name": "vea.raceremote.control.CarControlTest",
+      "tests": "4",
+      "failures": "0",
+      "errors": "0",
+      "skipped": "0"
+    },
+    {
+      "name": "vea.raceremote.control.CarDiscoveryTest",
+      "tests": "3",
+      "failures": "0",
+      "errors": "0",
+      "skipped": "0"
+    },
+    {
+      "name": "vea.raceremote.features.remote_control.CompoundCommandCreatorTest",
+      "tests": "5",
+      "failures": "0",
+      "errors": "0",
+      "skipped": "0"
+    },
+    {
+      "name": "vea.raceremote.features.remote_control.presentation.EngineMapperTest",
+      "tests": "6",
+      "failures": "0",
+      "errors": "0",
+      "skipped": "0"
+    },
+    {
+      "name": "vea.raceremote.features.remote_control.presentation.SteeringWheelMapperTest",
+      "tests": "5",
+      "failures": "0",
+      "errors": "0",
+      "skipped": "0"
+    },
+    {
+      "name": "vea.raceremote.video.FrameFreshnessTest",
+      "tests": "6",
+      "failures": "0",
+      "errors": "0",
+      "skipped": "0"
+    },
+    {
+      "name": "vea.raceremote.video.MjpegTest",
+      "tests": "5",
+      "failures": "0",
+      "errors": "0",
+      "skipped": "0"
+    }
+  ],
+  "checks": {
+    "jvm_tests": 34,
+    "jvm_failures": 0,
+    "app_debug_assembled": true,
+    "android_test_apk_assembled": true,
+    "network_mock": {
+      "parts_sent": 50,
+      "accepted_parts": [
+        1,
+        50
+      ],
+      "parts_1_to_49_same_capture_time": true
+    }
+  },
+  "android": {
+    "device": "Samsung SM-G973F Android 12",
+    "passed": false,
+    "requested_tests": [
+      "unavailableVideoDoesNotStopControlAndBackgroundStopsBoth",
+      "repeatedCaptureTimesOutVideoWhileControlContinuesAndReconnectStartsFresh"
+    ],
+    "attempts": [
+      {
+        "result": "failed",
+        "observed": [
+          "No compose hierarchies found",
+          "Second test EADDRINUSE after UI cleanup failure"
+        ]
+      },
+      {
+        "result": "failed",
+        "observed": [
+          "Activity never becomes RESUMED; last transition STOPPED for both tests",
+          "Keyguard showing=true after wake/dismiss command"
+        ]
+      }
+    ],
+    "cleanup_fix": "Server shutdown now runs in finally even if UI lifecycle cleanup throws",
+    "pending": "User asked to unlock when convenient; no UI success claim",
+    "last_report_summary": {
+      "tests": "2",
+      "failures": "2",
+      "errors": "0",
+      "test_cases": [
+        {
+          "name": "unavailableVideoDoesNotStopControlAndBackgroundStopsBoth",
+          "failure": null
+        },
+        {
+          "name": "repeatedCaptureTimesOutVideoWhileControlContinuesAndReconnectStartsFresh",
+          "failure": null
+        }
+      ]
+    }
+  },
+  "firmware_header_reference": {
+    "path": "../RC_CAR_ESP32/camera/main.cpp",
+    "sha256": "e75441256c34ee29da2ddb12d41c715945aef2cda7a6bc8cd33501738fee5fef"
+  },
+  "source_sha256": {
+    "app/src/main/java/vea/raceremote/video/MjpegFrame.kt": "0fc4cb46c8b62c65ab8099c7c32037f4c7505d8dded24d638d9065cc397bd1ad",
+    "app/src/main/java/vea/raceremote/video/MjpegReader.kt": "3bbcbd086af7ee1762fc7bcda4a9f9355a06118a5322156432a498f2cc30b047",
+    "app/src/main/java/vea/raceremote/video/MjpegStream.kt": "a51996c6557cc3f34cd313f3b5bd28c037e528cc2df710fd92166468ba75b3a1",
+    "app/src/main/java/vea/raceremote/video/MjpegVideoView.kt": "b49498744c05811302d52d93574a1bb2d82647c00a04a0c1a2518ad3a6465faf",
+    "app/src/main/java/vea/raceremote/video/VideoPanel.kt": "276aa5abad6b61049e865d449154fb697e2c76be02bf00646c1b44149e9c28c8",
+    "app/src/test/java/vea/raceremote/video/FrameFreshnessTest.kt": "41d714ef1a7e2eb7de0e7062b7c88d639769de68fc14d4aa392aaf652bd08f09",
+    "app/src/test/java/vea/raceremote/video/MjpegTest.kt": "db6ce02288eaf9eca36e73167f04264bfc266c2aebe67abfbb6e2e2ce47692e8",
+    "app/src/androidTest/java/vea/raceremote/VideoControlIsolationTest.kt": "ca22f85f590e96518339e62bb822dbd75d81ff9bcf2f07ce7ffde8655a2e4dba",
+    "app/src/androidTest/java/vea/raceremote/DrivingModeTest.kt": "e261e1fcd4f959bfc2e894b172a86a0e2b0d48e4e96e603df3802ca3272928f0"
+  },
+  "artifact_sha256": {
+    "app/build/outputs/apk/debug/app-debug.apk": "d4dc755f32655fd8b55e472018242bd26adf71b83d31bf29f7be722f8271640b",
+    "app/build/outputs/apk/androidTest/debug/app-debug-androidTest.apk": "17bd2026fbcad9d3e7cc8b1f0af665d5b5358ad4be832950b1cc41302537f6f8"
+  },
+  "physical_camera_tested": false,
+  "wifi_tested": false,
+  "optical_latency_measured": false
+}

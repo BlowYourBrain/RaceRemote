@@ -33,9 +33,10 @@ class MjpegStream(private val onFrame: (ByteArray) -> Unit, private val onEnd: (
                     if (!response.isSuccessful) throw IOException("HTTP ${response.code()}")
                     val body = response.body() ?: throw IOException("Empty video response")
                     val reader = MjpegReader(body.byteStream(), response.header("Content-Type") ?: "")
+                    val freshness = FrameFreshness()
                     while (!closed) {
-                        val frame = reader.nextFrame() ?: break
-                        if (!closed) onFrame(frame)
+                        val frame = reader.nextPart() ?: break
+                        if (!closed && freshness.accept(frame)) onFrame(frame.bytes)
                     }
                 }
                 if (!closed) onEnd("Видеопоток завершён")

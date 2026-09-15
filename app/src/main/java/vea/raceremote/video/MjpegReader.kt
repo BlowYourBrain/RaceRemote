@@ -22,7 +22,9 @@ class MjpegReader(input: InputStream, contentType: String) {
         delimiter = "--$boundary"
     }
 
-    fun nextFrame(): ByteArray? {
+    fun nextFrame(): ByteArray? = nextPart()?.bytes
+
+    fun nextPart(): MjpegFrame? {
         var line = readLine() ?: return null
         var emptyLines = 0
         while (line.isEmpty() && emptyLines++ < 2) line = readLine() ?: throw EOFException()
@@ -54,7 +56,23 @@ class MjpegReader(input: InputStream, contentType: String) {
         if (bytes[0] != 0xff.toByte() || bytes[1] != 0xd8.toByte() ||
             bytes[length - 2] != 0xff.toByte() || bytes[length - 1] != 0xd9.toByte())
             throw IOException("Invalid JPEG markers")
-        return bytes
+        return MjpegFrame(bytes, sequence(headers["x-sequence"]), timestamp(headers["x-timestamp"]))
+    }
+
+    private fun sequence(value: String?): Long? {
+        if (value == null) return null
+        if (!value.matches(Regex("[0-9]{1,10}"))) throw IOException("Invalid frame sequence")
+        return value.toLongOrNull()?.takeIf { it <= 0xffff_ffffL }
+            ?: throw IOException("Invalid frame sequence")
+    }
+
+    private fun timestamp(value: String?): Long? {
+        if (value == null) return null
+        // Firmware timeval: unsigned 32-bit seconds and exactly six fractional digits.
+        if (!value.matches(Regex("[0-9]{1,10}\\.[0-9]{6}"))) throw IOException("Invalid capture timestamp")
+        val seconds = value.substringBefore('.').toLong()
+        if (seconds > 0xffff_ffffL) throw IOException("Invalid capture timestamp")
+        return seconds * 1_000_000L + value.substringAfter('.').toLong()
     }
 
     private fun readLine(): String? {

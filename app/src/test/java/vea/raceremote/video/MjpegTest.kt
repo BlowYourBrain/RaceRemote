@@ -52,6 +52,31 @@ class MjpegTest {
         expectIo { MjpegReader(part().inputStream(), "multipart/x-mixed-replace;boundary=other").nextFrame() }
     }
 
+    @Test fun networkStreamDropsRepeatedCaptureEvenWhenSequenceAndJpegChange() {
+        val server = MockWebServer()
+        val http = OkHttpClient()
+        val ended = CountDownLatch(1)
+        val accepted = java.util.Collections.synchronizedList(mutableListOf<Int>())
+        val video = MjpegStream({ accepted.add(it[2].toInt()) }, { ended.countDown() })
+        val body = Buffer()
+        for (index in 1..50) {
+            val stamp = if (index == 50) "2.000001" else "2.000000"
+            body.write(part("Content-Type: image/jpeg\r\nContent-Length: 6\r\nX-Sequence: $index\r\nX-Timestamp: $stamp",
+                jpeg.copyOf().also { it[2] = index.toByte() }))
+        }
+        body.writeUtf8("\r\n--frame--\r\n")
+        server.enqueue(MockResponse().setHeader("Content-Type", "multipart/x-mixed-replace;boundary=frame").setBody(body))
+        server.start()
+        try {
+            video.start(server.url("/stream").toString(), http)
+            assertTrue(ended.await(3, TimeUnit.SECONDS))
+            assertEquals(listOf(1, 50), accepted.toList())
+        } finally {
+            video.close(); server.shutdown()
+            http.dispatcher().executorService().shutdownNow(); http.connectionPool().evictAll()
+        }
+    }
+
     @Test fun videoEndingPreservesControlAndNewDriveAcknowledgements() {
         val controlServer = MockWebServer()
         val videoServer = MockWebServer()

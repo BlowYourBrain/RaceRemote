@@ -69,7 +69,7 @@ class DrivingModeTest {
             compose.onNodeWithTag("video_address").performTextReplacement(video.url("/stream").toString())
             compose.onNodeWithTag("toggle_video").performClick()
             compose.waitUntil(5000) {
-                runCatching { compose.onNodeWithTag("video_status").assertTextContains("Получено", substring = true) }.isSuccess
+                runCatching { compose.onNodeWithTag("video_status").assertTextContains("Принято", substring = true) }.isSuccess
             }
             val setup = compose.onNodeWithTag("video_image").fetchSemanticsNode().boundsInRoot
             screenshot("driving-setup.png")
@@ -113,7 +113,7 @@ class DrivingModeTest {
 
             compose.onNodeWithTag("driving_mode").performClick()
             compose.onNodeWithTag("connection_status").assertTextContains("Управление подключено")
-            compose.onNodeWithTag("video_status").assertTextContains("Получено", substring = true)
+            compose.onNodeWithTag("video_status").assertTextContains("Принято", substring = true)
             compose.onNodeWithTag("toggle_video").assertTextContains("Выключить")
             assertEquals("Switching layout must not reconnect video", 1, video.requestCount)
             val beforeVideoStop = drives.get()

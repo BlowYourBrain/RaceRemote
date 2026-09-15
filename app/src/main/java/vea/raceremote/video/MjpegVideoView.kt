@@ -47,9 +47,9 @@ class MjpegVideoView(context: Context) : View(context) {
                 }
                 if (now - statsAt >= 1000) {
                     val seconds = (now - statsAt) / 1000.0
-                    val message = "Получено %.1f · отрисовано %.1f кадр/с".format(receivedFrames / seconds, drawnFrames / seconds)
+                    val message = "Принято %.1f · отрисовано %.1f кадр/с".format(receivedFrames / seconds, drawnFrames / seconds)
                     onStatus(message, true)
-                    android.util.Log.d("RaceRemoteVideo", "fps received=${receivedFrames / seconds} decoded=${decodedFrames / seconds} drawn=${drawnFrames / seconds}")
+                    android.util.Log.d("RaceRemoteVideo", "fps accepted=${receivedFrames / seconds} decoded=${decodedFrames / seconds} drawn=${drawnFrames / seconds}")
                     drawnFrames = 0; receivedFrames = 0; decodedFrames = 0; statsAt = now
                 }
             }

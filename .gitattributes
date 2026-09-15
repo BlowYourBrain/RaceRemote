@@ -236,3 +236,10 @@ tools/build_service_viewer.py text eol=lf
 cad/current-service/*.html text eol=lf
 cad/current-service/*.md text eol=lf
 docs/evidence/current-service*.json text eol=lf
+
+app/src/main/java/vea/raceremote/video/*.kt text eol=lf
+app/src/test/java/vea/raceremote/video/*.kt text eol=lf
+app/src/androidTest/java/vea/raceremote/VideoControlIsolationTest.kt text eol=lf
+app/src/androidTest/java/vea/raceremote/DrivingModeTest.kt text eol=lf
+docs/evidence/video-freshness-v02.json text eol=lf
+docs/video-freshness.md text eol=lf

@@ -1,0 +1,53 @@
+{
+  "date": "2026-09-15",
+  "contract": "XIAO-LOGIC-01 v0.1",
+  "positions": 15,
+  "pins_including_nc": 36,
+  "connected_pins": 32,
+  "named_nets": [
+    "DRIVE_GND",
+    "FB",
+    "LDO_4V",
+    "SERVICE_VBUS",
+    "WAVE_5V",
+    "XIAO_BAT"
+  ],
+  "native_netlist_and_csv_match_review_oracle": true,
+  "kicad_version": "10.0.6",
+  "erc_violations": 1,
+  "reviewed_erc_exception": "U2 ST to flagged GND, per LM66100 Rev A p3; remains visible, not suppressed",
+  "unexpected_erc_violations": 0,
+  "ignored_checks": [
+    {
+      "description": "Global label only appears once in the schematic",
+      "key": "single_global_label"
+    },
+    {
+      "description": "Four connection points are joined together",
+      "key": "four_way_junction"
+    },
+    {
+      "description": "SPICE model issue",
+      "key": "simulation_model_issue"
+    },
+    {
+      "description": "Assigned footprint doesn't match footprint filters",
+      "key": "footprint_filter"
+    }
+  ],
+  "physical_tests": false,
+  "pcb_exists": false,
+  "fabrication_released": false,
+  "artifact_sha256": {
+    "hardware/xiao-logic-power/bom.csv": "296bed048229d5c8006176616d39ed76c7a46748b8009e722b21fa47043e1869",
+    "hardware/xiao-logic-power/connections.csv": "bc6225ad880f08ca30106cb55312ef96ff4ef11761e7d7f2fe6de541bfe9428f",
+    "hardware/xiao-logic-power/RaceRemote_LogicPower.kicad_sym": "0978cfe45e620087458d087bbd3b480e277d61f9e3fabe9d4a33a514a084b06d",
+    "hardware/xiao-logic-power/sym-lib-table": "70b4fe89bb0679f72b1441d1870cc8aea3059b787b3ea3e671ddf89d7c543bbc",
+    "hardware/xiao-logic-power/xiao-logic-power.kicad_pro": "64cef37f11fe53d4801917dbc507a94d348cef8ec85a91ea4eddf0f1d7774d1a",
+    "hardware/xiao-logic-power/xiao-logic-power.kicad_sch": "ce268bd84d956700a453402190b399a767be1118b0cc322e1f212cf531ecdaea",
+    "tools/build_xiao_logic_power.py": "7ab74fcdf32e64c131bc117c6676322d8bcad93e43391ded96a159b8e5fd5896",
+    "tools/calculate_xiao_logic_power.py": "8ef7fc731d3b11601214ae0442e1636f8da1cd27f92796c34243bad0ea1b7acb",
+    "tools/verify_xiao_logic_power.py": "0d55bed19b2aaef53936f8ff2e1549c91b486a978e810dfd192ae9f7989a0871",
+    "docs/evidence/xiao-logic-power-v01/dc-calculation.json": "d868732039abf7b76c8f0e6e6df27dea1852653d443238974f560da7d19cef68"
+  }
+}

@@ -1,0 +1,39 @@
+{
+  "checked_date": "2026-09-15",
+  "tps737": {
+    "url": "https://www.ti.com/lit/ds/symlink/tps737.pdf",
+    "revision": "SBVS067W August 2025",
+    "reviewed_pages": [
+      3,
+      6,
+      7,
+      19,
+      20
+    ],
+    "access": "web PDF reader; direct download returned HTTP403",
+    "sha256": null
+  },
+  "lm66100": {
+    "url": "https://www.ti.com/lit/ds/symlink/lm66100.pdf",
+    "revision": "SLVSEZ8A June 2019",
+    "reviewed_pages": [
+      3,
+      4,
+      5,
+      9,
+      10
+    ],
+    "access": "web PDF reader; direct download returned HTTP403",
+    "sha256": null
+  },
+  "xiao": {
+    "url": "https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/new-res/202003753_XIAO%20ESP32S3%20Sense_v1.5_SCH_260226.pdf.pdf",
+    "revision": "filename v1.5, title V1.3 2026-02-10",
+    "reviewed_pages": [
+      4
+    ],
+    "access": "download and visual inspection",
+    "sha256": "15993097cd695d177af352f4664ca91290a99c833f51d122d1165ef222f9923c",
+    "ordered_board_revision_confirmed": false
+  }
+}

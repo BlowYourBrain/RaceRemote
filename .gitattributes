@@ -247,3 +247,12 @@ docs/video-freshness.md text eol=lf
 tools/run_video_android_smoke.py text eol=lf
 docs/evidence/video-emulator-v02/*.json text eol=lf
 docs/evidence/video-emulator-v02/*.txt text eol=lf
+
+tools/build_xiao_logic_power.py text eol=lf
+tools/calculate_xiao_logic_power.py text eol=lf
+tools/verify_xiao_logic_power.py text eol=lf
+hardware/xiao-logic-power/** text eol=crlf
+hardware/xiao-logic-power/*.md text eol=lf
+hardware/xiao-logic-power/*.pdf binary
+docs/evidence/xiao-logic-power-v01/*.json text eol=crlf
+docs/evidence/xiao-logic-power-v01/*.xml text eol=crlf

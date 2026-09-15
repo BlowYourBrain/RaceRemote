@@ -1,0 +1,58 @@
+{
+  "date": "2026-09-15",
+  "contract": "XIAO-LOGIC-01 v0.1",
+  "status": "Conditional settled-DC calculation only",
+  "corners": 320,
+  "nominal_ldo_v": 3.9972799999999995,
+  "ranges": {
+    "ldo_v": {
+      "min": 3.8580419703496505,
+      "max": 4.136892236716717
+    },
+    "preload_a": {
+      "min": 0.01061067648611015,
+      "max": 0.011607441741629396
+    },
+    "preload_w": {
+      "min": 0.04093643521721511,
+      "max": 0.04801873562908822
+    },
+    "ldo_load_a": {
+      "min": 0.010726747814781478,
+      "max": 0.6117321778777656
+    },
+    "pass_loss_w": {
+      "min": 0.007052166314431878,
+      "max": 0.850404376630602
+    },
+    "headroom_beyond_0_5v": {
+      "min": 0.11310776328328309,
+      "max": 0.8919580296503495
+    },
+    "bat_v_if_ron_0_14": {
+      "min": 3.7740419703496504,
+      "max": 4.136892236716717
+    },
+    "switch_loss_w_if_ron_0_14": {
+      "min": 0.0,
+      "max": 0.0504
+    }
+  },
+  "service_usb_off_margin_v": 0.5331077632832831,
+  "ce_pin_only_on_margin_v": 3.6050119703496506,
+  "nominal_pass_loss_at_0_5a_w": 0.5126144847146666,
+  "invalid_4_5v_rail_headroom_v": -0.1368922367167169,
+  "conditions": [
+    "Waveshare output measured 4.75..5.25V; not a supplier guarantee",
+    "Native USB when present 4.75..5.25V at CE, common valid ground",
+    "TPS737 legacy overall +/-3%, R1/R2 0.1%, signed IFB 0.6uA extra allowance",
+    "R3 360ohm 1%; camera load 0..0.6A is exploration, not observed demand",
+    "LM RON 0.14ohm extrapolated beyond specified 3.6V/200mA point",
+    "No converter ripple, wire loss, Q1 loss, ground current, startup or source transition model",
+    "Steady CE state assumes intact J4 and no unexpected VBUS source; no single-fault claim"
+  ],
+  "physical_tests": false,
+  "pcb_current_rating_a": null,
+  "battery_charging_qualified": false,
+  "fabrication_released": false
+}

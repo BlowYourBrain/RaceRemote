@@ -1,0 +1,16 @@
+{
+  "scene_objects": 75,
+  "removed_ids": [
+    "wire-servo"
+  ],
+  "source_sha256": {
+    "cad/xiao-return-h10/viewer.html": "95549c05e2625004467b79fe3667d7e28d318dd716ec3c04786d6db5c8e5b9e4",
+    "docs/evidence/servo-bundle-v01.json": "43a772d50006b9f511821bb33fa1ba97ab97c6e17418cc760efab8042ad6e3c8",
+    "tools/build_servo_bundle_view.py": "b8b02abccffb1bddd66cb20754b82625f23748b47059e9b1bbe85b845916f749",
+    "cad/servo-bundle-study/bundle.stl": "65d73dce2f80b765a2cd275e70d402c748090f21dabce18a552f01aa87a08465",
+    "cad/servo-bundle-study/old-bundle.stl": "6f77ecc3e8faa9c68ed84a3fbd8dfc5508d49ec89bb5204a0c0662a1893b35cd"
+  },
+  "artifact_sha256": {
+    "viewer.html": "2d4967560460a5143e42428385ef0879d973490432b46d596bb8224a00b9f542"
+  }
+}

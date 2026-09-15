@@ -1,0 +1,13 @@
+# Повторная проверка Samsung после разблокировки
+
+15 сентября 2026. Samsung SM-G973F, Android 12 / API31, ADB RF8M811X8FK. Пользователь подтвердил разблокировку; проверка keyguard в runner разрешила запуск. Установка обоих debug APK и все **7 UI-тестов прошли**, instrumentation: `OK (7 tests)`, 21,665 с.
+
+Проверены независимость видео/управления, управление двумя пальцами, уход приложения в фон, очистка видео при смене машинки, совпадение и несовпадение выбранного ID. Источники видео и контроллеры программные, выбор Discovery заменён тестовым callback. Это не испытание UDP Discovery, радиосвязи, настоящей камеры, приводов или задержки FPV.
+
+[Результат и SHA256 APK](result.json), [полный вывод instrumentation](instrumentation.txt). APK совпадают с финальными артефактами [CONTROL-IDENTITY-01](../control-identity-v01/samsung/result.json). Пересборка не выполнялась; исходники приложения не менялись относительно `9e6a156`. Существующие настройки экрана 720×1520 / 320 dpi не изменялись.
+
+```powershell
+python tools/run_video_android_smoke.py --serial RF8M811X8FK --adb C:/Users/Evgeny/AppData/Local/Android/Sdk/platform-tools/adb.exe --output build/video-samsung-unlocked-recheck
+```
+
+Печать и прошивка контроллера не запускались. Разблокировка телефона больше не является препятствием для этой проверки.

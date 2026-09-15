@@ -1,0 +1,13 @@
+09-15 18:14:35.701 25743 25809 I TestRunner: run started: 4 tests
+09-15 18:14:35.702 25743 25809 I TestRunner: started: unavailableVideoDoesNotStopControlAndBackgroundStopsBoth(vea.raceremote.VideoControlIsolationTest)
+09-15 18:14:40.203 25743 25809 I TestRunner: finished: unavailableVideoDoesNotStopControlAndBackgroundStopsBoth(vea.raceremote.VideoControlIsolationTest)
+09-15 18:14:40.208 25743 25809 I TestRunner: started: repeatedCaptureTimesOutVideoWhileControlContinuesAndReconnectStartsFresh(vea.raceremote.VideoControlIsolationTest)
+09-15 18:14:42.202 25743 25809 D RaceRemoteVideoTest: Video center pixel=ff0000fe
+09-15 18:14:44.417 25743 25809 D RaceRemoteVideoTest: Video center pixel=ff000000
+09-15 18:14:45.631 25743 25809 D RaceRemoteVideoTest: Video center pixel=ff0000fe
+09-15 18:14:45.966 25743 25809 I TestRunner: finished: repeatedCaptureTimesOutVideoWhileControlContinuesAndReconnectStartsFresh(vea.raceremote.VideoControlIsolationTest)
+09-15 18:14:45.970 25743 25809 I TestRunner: started: backgroundDuringDragDoesNotResumeControl(vea.raceremote.DrivingModeTest)
+09-15 18:14:47.935 25743 25809 I TestRunner: finished: backgroundDuringDragDoesNotResumeControl(vea.raceremote.DrivingModeTest)
+09-15 18:14:47.938 25743 25809 I TestRunner: started: twoThumbsCancelAndVideoSurviveModeChanges(vea.raceremote.DrivingModeTest)
+09-15 18:14:52.548 25743 25809 I TestRunner: finished: twoThumbsCancelAndVideoSurviveModeChanges(vea.raceremote.DrivingModeTest)
+09-15 18:14:52.551 25743 25809 I TestRunner: run finished: 4 tests, 0 failed, 0 ignored

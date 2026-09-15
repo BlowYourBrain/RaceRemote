@@ -1,0 +1,49 @@
+{
+  "serial": "RF8M811X8FK",
+  "api": 31,
+  "display": {
+    "size": "Physical size: 1440x3040\nOverride size: 720x1520",
+    "density": "Physical density: 420\nOverride density: 320",
+    "emulator": false
+  },
+  "classes": [
+    "vea.raceremote.VideoControlIsolationTest",
+    "vea.raceremote.DrivingModeTest"
+  ],
+  "expected_tests": 4,
+  "passed": true,
+  "adb_exit_code": 0,
+  "apk_sha256": {
+    "app/build/outputs/apk/debug/app-debug.apk": "d4dc755f32655fd8b55e472018242bd26adf71b83d31bf29f7be722f8271640b",
+    "app/build/outputs/apk/androidTest/debug/app-debug-androidTest.apk": "558104672440d70b94998903bfb15317b0614334fc330606fd4370908fef2054"
+  },
+  "transcript_sha256": "95ad3bfcbe71fbf26a8450eb7aacf66d5a53a2f84fbec1ab4cb95951eb317130",
+  "runner_sha256": "119b928397f722d1bcf4843a085f91311d9c79b5bd6f44327ea54476c11be975",
+  "scope": "Android UI and software loopback; no physical camera, RF, motor or optical latency",
+  "date": "2026-09-15",
+  "model": "SM-G973F",
+  "android_release": "12",
+  "package": "vea.raceremote",
+  "physical_phone_passed": true,
+  "physical_camera_tested": false,
+  "firmware_uploaded": false,
+  "actuators_enabled": false,
+  "screen_pixel_cycle_argb": [
+    "ff0000fe",
+    "ff000000",
+    "ff0000fe"
+  ],
+  "device_log_start": "09-15 18:14:35.701 25743 25809",
+  "device_log_end": "09-15 18:14:52.551 25743 25809",
+  "logcat_pid": 25743,
+  "test_logcat_sha256": "4ae95ffa2f0b97c11839dfdf6c3d5fe0307fe167f37dfef429864bf4567b8065",
+  "repository_head": "f0136c3a6eb47e802e9009c22c5be095536e59ee",
+  "app_tree_sha": "6a87b4dfa75c61d490ed0526bb2eee66ec62aa73",
+  "apk_provenance": "Same APK and test-source hashes as API35 emulator evidence; app tree unchanged since275f13f",
+  "display_configuration": "Existing720x1520 and320dpi overrides observed before test; not changed in this run",
+  "source_sha256": {
+    "app/src/androidTest/java/vea/raceremote/VideoControlIsolationTest.kt": "955b96877128869e902a9c926af0d2ae7243b00fc9f9dd244ea5f9bc2239d844",
+    "app/src/androidTest/java/vea/raceremote/DrivingModeTest.kt": "b3a82cc97870faab94752a88b0d9aef9c0400a26effd57a23ed68d794a0eba93",
+    "tools/run_video_android_smoke.py": "119b928397f722d1bcf4843a085f91311d9c79b5bd6f44327ea54476c11be975"
+  }
+}

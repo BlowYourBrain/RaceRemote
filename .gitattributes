@@ -281,3 +281,5 @@ docs/evidence/drive-power-carrier-v02/summary.json text eol=lf
 docs/evidence/drive-power-carrier-v02/view.json text eol=lf
 docs/evidence/drive-power-carrier-v02/package-sources.json text eol=lf
 docs/evidence/drive-power-carrier-v02/*.xml text eol=lf
+docs/evidence/video-samsung-v02/*.json text eol=lf
+docs/evidence/video-samsung-v02/*.txt text eol=lf

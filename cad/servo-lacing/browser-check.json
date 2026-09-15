@@ -1,0 +1,50 @@
+{
+  "title": "RaceRemote — Фиксация проводов сервопривода",
+  "objects": 78,
+  "uniqueIds": 78,
+  "adjustmentHidden": true,
+  "visibleLacing": [
+    {
+      "id": "servo-lacing-cord",
+      "visible": true
+    },
+    {
+      "id": "servo-lacing-knot-reserve",
+      "visible": true
+    }
+  ],
+  "rendered": "true",
+  "glError": 0,
+  "capture": {
+    "bodyVisible": false,
+    "usbCoverVisible": false,
+    "overview": {
+      "center": [
+        24.75,
+        58,
+        20
+      ],
+      "az": 0.8,
+      "el": 0.7,
+      "span": 155
+    },
+    "closeup": {
+      "center": [
+        43.5,
+        84,
+        40.5
+      ],
+      "az": 0.8,
+      "el": 0.5,
+      "span": 24
+    }
+  },
+  "scope": "Canvas rendering and inspected close-up; no physical retention or electrical proof",
+  "source_sha256": {
+    "viewer.html": "0659e09960d201591886ef77f04bd90ac5aa917f86953d0fd22dd3f1079542d6"
+  },
+  "artifact_sha256": {
+    "overview.png": "10f29289761f89d5cb95ed41ae8fbe948b750b589b8bf27426d6e0974b11960f",
+    "closeup.png": "38606ce710dc361726cec8094b9d67ecc13cc8f7b49b113971f3ac7a48c04dd7"
+  }
+}

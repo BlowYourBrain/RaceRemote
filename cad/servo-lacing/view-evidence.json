@@ -1,0 +1,19 @@
+{
+  "scene_objects": 78,
+  "replaced_wire_ids": [
+    "servo-power-VOUT",
+    "servo-power-GND"
+  ],
+  "source_sha256": {
+    "cad/servo-power/viewer.html": "4f50cbe687a6466ecef5701c7fb2fa295a92c738f4ab70e5b92273cceb2d5776",
+    "docs/evidence/servo-lacing-v01.json": "771db9a1f21d31b869b769407f57e36735421781e2e0782abb62b7621a80f1dd",
+    "tools/build_servo_lacing_view.py": "a17bfe2446678e711ea2967ade99786eabbf839e4b3c6746f09118c3152704e5",
+    "cad/servo-lacing/VOUT.stl": "0c49de81a23351097ac2f1f32082f2f0663fd2ed6f2dae9f5f5e5608ce5b59af",
+    "cad/servo-lacing/GND.stl": "1a8362e68f5d78ed51d0ef7036f54e4edd7c165df5a1e10e4f3be1e4fe93678d",
+    "cad/servo-lacing/cord.stl": "5847c1b3f15b3acf38312fc4575373f4c239e5e747563333cd69f57dbc25b24e",
+    "cad/servo-lacing/knot-reserve.stl": "18ce6ed5f38340f489547ea27e53ae364442e47208d9d88324f892fd4f35db5c"
+  },
+  "artifact_sha256": {
+    "viewer.html": "0659e09960d201591886ef77f04bd90ac5aa917f86953d0fd22dd3f1079542d6"
+  }
+}

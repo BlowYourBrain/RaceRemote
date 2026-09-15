@@ -256,3 +256,5 @@ hardware/xiao-logic-power/*.md text eol=lf
 hardware/xiao-logic-power/*.pdf binary
 docs/evidence/xiao-logic-power-v01/*.json text eol=crlf
 docs/evidence/xiao-logic-power-v01/*.xml text eol=crlf
+docs/evidence/xiao-logic-power-v02/*.json text eol=crlf
+docs/evidence/xiao-logic-power-v02/*.xml text eol=crlf

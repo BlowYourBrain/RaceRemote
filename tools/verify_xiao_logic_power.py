@@ -9,22 +9,22 @@ import xml.etree.ElementTree as ET
 
 ROOT = Path(__file__).resolve().parents[1]
 HW = ROOT / 'hardware/xiao-logic-power'
-OUT = ROOT / 'docs/evidence/xiao-logic-power-v01'
+OUT = ROOT / 'docs/evidence/xiao-logic-power-v02'
 CLI = ROOT / 'build/tooling/kicad-10.0.6/bin/kicad-cli.exe'
 
-# Separate review oracle: DRB numeric pin assignment, DCK assignment, divider,
-# preload before isolation, service-VBUS sensing, no supply-net short.
+# Separate review oracle: DRB assignment, MAX40200 SOT23 assignment, divider,
+# preload before isolation, local enable and no external service-VBUS connection.
 EXPECTED = {
     'U1': {'1': 'LDO_4V', '2': 'NC', '3': 'FB', '4': 'DRIVE_GND',
            '5': 'WAVE_5V', '6': 'NC', '7': 'NC', '8': 'WAVE_5V', '9': 'DRIVE_GND'},
-    'U2': {'1': 'LDO_4V', '2': 'DRIVE_GND', '3': 'SERVICE_VBUS',
-           '4': 'NC', '5': 'DRIVE_GND', '6': 'XIAO_BAT'},
+    'U2': {'1': 'LDO_4V', '2': 'DRIVE_GND', '3': 'LDO_4V',
+           '4': 'NC', '5': 'XIAO_BAT'},
     'R1': {'1': 'LDO_4V', '2': 'FB'}, 'R2': {'1': 'FB', '2': 'DRIVE_GND'},
-    'R3': {'1': 'LDO_4V', '2': 'DRIVE_GND'}, 'R4': {'1': 'SERVICE_VBUS', '2': 'DRIVE_GND'},
+    'R3': {'1': 'LDO_4V', '2': 'DRIVE_GND'},
     'C1': {'1': 'WAVE_5V', '2': 'DRIVE_GND'}, 'C2': {'1': 'LDO_4V', '2': 'DRIVE_GND'},
     'C3': {'1': 'LDO_4V', '2': 'DRIVE_GND'}, 'C4': {'1': 'XIAO_BAT', '2': 'DRIVE_GND'},
     'J1': {'1': 'WAVE_5V'}, 'J2': {'1': 'DRIVE_GND'}, 'J3': {'1': 'XIAO_BAT'},
-    'J4': {'1': 'SERVICE_VBUS'}, 'J5': {'1': 'DRIVE_GND'},
+    'J5': {'1': 'DRIVE_GND'},
 }
 
 
@@ -61,31 +61,24 @@ def main():
     assert exported == EXPECTED, 'Human connection list differs from native schematic'
     erc = json.loads((OUT / 'erc.json').read_text())
     violations = [v for sheet in erc['sheets'] for v in sheet['violations']]
-    # Keep the real ERC error visible: TI explicitly directs unused ST to GND.
-    # It is NOT suppressed and is NOT a zero-ERC claim. Any other finding fails.
-    assert len(violations) == 1, violations
-    v = violations[0]
-    assert v['type'] == 'pin_to_pin' and v['severity'] == 'error', v
-    assert sorted(i['description'] for i in v['items']) == sorted([
-        'Symbol U2 Pin 5 [ST, Open collector, Line]',
-        'Symbol #FLG02 Pin 1 [~, Power output, Line]']), v
+    assert not violations, violations
     artifacts = sorted(p for p in HW.iterdir() if p.suffix in ('.kicad_sch', '.kicad_sym', '.csv', '.kicad_pro') or p.name == 'sym-lib-table')
     artifacts += [ROOT / 'tools' / n for n in ('build_xiao_logic_power.py', 'calculate_xiao_logic_power.py', 'verify_xiao_logic_power.py')]
     artifacts += [OUT / 'dc-calculation.json']
     report = {
-        'date': '2026-09-15', 'contract': 'XIAO-LOGIC-01 v0.1',
+        'date': '2026-09-15', 'contract': 'XIAO-LOGIC-01 v0.2',
         'positions': len(actual), 'pins_including_nc': sum(map(len, actual.values())),
         'connected_pins': sum(n != 'NC' for pins in actual.values() for n in pins.values()),
         'named_nets': sorted({n for pins in actual.values() for n in pins.values()} - {'NC'}),
         'native_netlist_and_csv_match_review_oracle': True,
-        'kicad_version': erc['kicad_version'], 'erc_violations': 1,
-        'reviewed_erc_exception': 'U2 ST to flagged GND, per LM66100 Rev A p3; remains visible, not suppressed',
+        'kicad_version': erc['kicad_version'], 'erc_violations': 0,
+        'reviewed_erc_exception': None,
         'unexpected_erc_violations': 0, 'ignored_checks': erc['ignored_checks'],
         'physical_tests': False, 'pcb_exists': False, 'fabrication_released': False,
         'artifact_sha256': {p.relative_to(ROOT).as_posix(): hashlib.sha256(p.read_bytes()).hexdigest() for p in artifacts},
     }
     (OUT / 'summary.json').write_text(json.dumps(report, indent=2) + '\n', encoding='utf-8')
-    print('Verified 15 positions, 36 pins including 4 NC, 6 named nets. ERC: 1 reviewed ST-to-GND finding, 0 unexpected. No physical proof.')
+    print('Verified 13 positions, 32 pins including 4 NC, 5 named nets. ERC: 0; no USB sense wire. No physical proof.')
 
 
 if __name__ == '__main__':

@@ -1,0 +1,81 @@
+{
+  "date": "2026-09-15",
+  "contract": "XIAO-LOGIC-01 v0.2",
+  "status": "Conditional settled-DC calculation only",
+  "corners": 320,
+  "nominal_ldo_v": 3.9972799999999995,
+  "ranges": {
+    "ldo_v": {
+      "min": 3.8580419703496505,
+      "max": 4.136892236716717
+    },
+    "preload_a": {
+      "min": 0.01061067648611015,
+      "max": 0.011607441741629396
+    },
+    "preload_w": {
+      "min": 0.04093643521721511,
+      "max": 0.04801873562908822
+    },
+    "ldo_load_a": {
+      "min": 0.010726747814781478,
+      "max": 0.6117321778777656
+    },
+    "pass_loss_w": {
+      "min": 0.007052166314431878,
+      "max": 0.850404376630602
+    },
+    "headroom_beyond_0_5v": {
+      "min": 0.11310776328328309,
+      "max": 0.8919580296503495
+    }
+  },
+  "external_service_vbus_connection": false,
+  "sot23_forward_budget": [
+    {
+      "load_a": 0.1,
+      "assumed_drop_v": 0.065,
+      "bat_range_v_if_drop_between_zero_and_budget": [
+        3.7930419703496505,
+        4.136892236716717
+      ],
+      "switch_loss_upper_w_if_drop_budget_holds": 0.006500000000000001
+    },
+    {
+      "load_a": 0.2,
+      "assumed_drop_v": 0.09,
+      "bat_range_v_if_drop_between_zero_and_budget": [
+        3.7680419703496506,
+        4.136892236716717
+      ],
+      "switch_loss_upper_w_if_drop_budget_holds": 0.018
+    },
+    {
+      "load_a": 0.5,
+      "assumed_drop_v": 0.175,
+      "bat_range_v_if_drop_between_zero_and_budget": [
+        3.6830419703496506,
+        4.136892236716717
+      ],
+      "switch_loss_upper_w_if_drop_budget_holds": 0.0875
+    }
+  ],
+  "switch_drop_at_0_6a_v": null,
+  "reason_0_6a_drop_unknown": "No specified 600mA table point; no interpolation claimed as a guarantee",
+  "nominal_pass_loss_at_0_5a_w": 0.5126144847146666,
+  "invalid_4_5v_rail_headroom_v": -0.1368922367167169,
+  "conditions": [
+    "Waveshare output measured 4.75..5.25V; not a supplier guarantee",
+    "TPS737 legacy overall +/-3%, R1/R2 0.1%, signed IFB 0.6uA extra allowance",
+    "R3 360ohm 1%; camera load 0..0.6A is exploration, not observed demand",
+    "MAX40200AUK+T SOT23: 65/90/175mV max at 100/200/500mA at 3.3V; extension to ~4V is conditional",
+    "No converter ripple, wire loss, Q1 loss, U1/U2 own supply currents, startup or source transition model",
+    "MAX40200 EN connected locally to VDD; reverse blocking is internal, no external CE/USB wire",
+    "No guaranteed reverse switching time inferred from typical EN timing or marketing text",
+    "C3/C4 nominal1uF must retain >=0.33uF each; total effective OUT capacitance including XIAO <=100uF"
+  ],
+  "physical_tests": false,
+  "pcb_current_rating_a": null,
+  "battery_charging_qualified": false,
+  "fabrication_released": false
+}

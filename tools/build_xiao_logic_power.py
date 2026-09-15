@@ -19,7 +19,7 @@ def q(value):
 
 def main():
     DEST.mkdir(parents=True, exist_ok=True)
-    # Numeric pins from TPS737 Rev W p3 (DRB), LM66100 Rev A p3 (DCK).
+    # TPS737 Rev W p3 (DRB); MAX40200 Rev4 p8 (SOT23-5, not WLP).
     pins = {
         'TPS73701_DRB': [
             ('8', 'IN', 'power_in', -20.32, 12.7, 0),
@@ -31,12 +31,11 @@ def main():
             ('7', 'NC', 'passive', 20.32, -17.78, 180),
             ('4', 'GND', 'power_in', -5.08, -27.94, 90),
             ('9', 'EP_GND', 'passive', 5.08, -27.94, 90)],
-        'LM66100_DCK': [
-            ('1', 'VIN', 'power_in', -20.32, 12.7, 0),
-            ('3', 'CE', 'input', -20.32, 2.54, 0),
+        'MAX40200_AUK': [
+            ('1', 'VDD', 'power_in', -20.32, 12.7, 0),
+            ('3', 'EN', 'input', -20.32, 2.54, 0),
             ('4', 'NC', 'passive', -20.32, -7.62, 0),
-            ('6', 'VOUT', 'power_out', 20.32, 12.7, 180),
-            ('5', 'ST', 'open_collector', 20.32, -7.62, 180),
+            ('5', 'OUT', 'power_out', 20.32, 12.7, 180),
             ('2', 'GND', 'power_in', 0, -27.94, 90)],
         'R': [('1', '~', 'passive', 0, 5.08, 270), ('2', '~', 'passive', 0, -5.08, 90)],
         'C': [('1', '~', 'passive', 0, 5.08, 270), ('2', '~', 'passive', 0, -5.08, 90)],
@@ -45,7 +44,7 @@ def main():
     }
     symbols = {}
     for name, spec in pins.items():
-        ic = name in ('TPS73701_DRB', 'LM66100_DCK')
+        ic = name in ('TPS73701_DRB', 'MAX40200_AUK')
         if ic:
             graphics = '(rectangle (start -15.24 20.32)(end 15.24 -22.86)(stroke (width .254)(type default))(fill (type background)))'
         elif name == 'R':
@@ -66,13 +65,13 @@ def main():
     cached = [s.replace(f'(symbol {q(n)}', f'(symbol {q(LIB + ":" + n)}', 1) for n, s in symbols.items()]
     out = ['(kicad_sch (version 20250901)(generator "raceremote")',
            f'(uuid "{uid("sheet")}")(paper "A3")',
-           '(title_block (title "XIAO logic supply - DC proposal, NOT qualified") (date "2026-09-15")(rev "0.1")(company "vea.raceremote"))',
+           '(title_block (title "XIAO logic supply - automatic reverse blocking proposal") (date "2026-09-15")(rev "0.2")(company "vea.raceremote"))',
            '(lib_symbols ' + '\n'.join(cached) + ')']
     bom, connections = [], []
 
     def add(name, ref, value, x, y, nets, package=''):
         flag = name == 'Flag'
-        ic = name in ('TPS73701_DRB', 'LM66100_DCK')
+        ic = name in ('TPS73701_DRB', 'MAX40200_AUK')
         def prop(key, val, px, py, hide=False):
             return f'(property {q(key)} {q(val)} (at {px:g} {py:g} 0)' + ('(hide yes)' if hide else '') + '(effects (font (size 1.27 1.27))))'
         out.append(f'(symbol (lib_id "{LIB}:{name}")(at {x:g} {y:g} 0)(unit 1)(in_bom {"no" if flag else "yes"})(on_board {"no" if flag else "yes"})(dnp no)(uuid "{uid(ref)}")' +
@@ -83,7 +82,10 @@ def main():
                    f'(instances (project "xiao-logic-power" (path "/{uid("sheet")}" (reference "{ref}")(unit 1)))))')
         if not flag:
             bom.append({'reference': ref, 'value': value, 'package_proposal': package,
-                        'status': 'Logical interface, not purchased connector' if name == 'Terminal' else 'Candidate, not purchased', 'price_rub': ''})
+                        'status': 'Logical interface, not purchased connector' if name == 'Terminal' else 'Candidate, not purchased',
+                        'price_rub': '50' if ref == 'U2' else '',
+                        'price_checked': '2026-09-15; MOQ1; Cheboksary pickup estimate 18 September' if ref == 'U2' else '',
+                        'source_url': 'https://www.chipdip.ru/product/max40200auk-t-mikroshema-idealnyy-diod-s-sverhnizkim-maxim-9000587524' if ref == 'U2' else ''})
         for number, label, _, px, py, angle in pins[name]:
             ax, ay = x + px, y - py
             net = nets[number]
@@ -102,27 +104,28 @@ def main():
 
     add('TPS73701_DRB', 'U1', 'TPS73701DRBR', 101.6, 88.9,
         {'8': 'WAVE_5V', '5': 'WAVE_5V', '2': None, '1': 'LDO_4V', '3': 'FB', '6': None, '7': None, '4': 'DRIVE_GND', '9': 'DRIVE_GND'}, 'DRB VSON8 + EP, 3x3mm')
-    add('LM66100_DCK', 'U2', 'LM66100DCKR', 254, 88.9,
-        {'1': 'LDO_4V', '3': 'SERVICE_VBUS', '4': None, '6': 'XIAO_BAT', '5': 'DRIVE_GND', '2': 'DRIVE_GND'}, 'DCK SC70-6')
+    add('MAX40200_AUK', 'U2', 'MAX40200AUK+T', 254, 88.9,
+        {'1': 'LDO_4V', '3': 'LDO_4V', '4': None, '5': 'XIAO_BAT', '2': 'DRIVE_GND'}, 'SOT23-5, not WLP / not TPMAX clone')
     for ref, value, x, a, b, package in [
         ('R1', '23.2k / 0.1%', 48.26, 'LDO_4V', 'FB', '0805'),
         ('R2', '10k / 0.1%', 114.3, 'FB', 'DRIVE_GND', '0805'),
-        ('R3', '360 / 1% / 0.25W', 190.5, 'LDO_4V', 'DRIVE_GND', '1206, rating to verify'),
-        ('R4', '10k / 1%', 281.94, 'SERVICE_VBUS', 'DRIVE_GND', '0805')]:
+        ('R3', '360 / 1% / 0.25W', 190.5, 'LDO_4V', 'DRIVE_GND', '1206, rating to verify')]:
         add('R', ref, value, x, 182.88, {'1': a, '2': b}, package)
-    for ref, value, x, net in [('C1', '4.7u / 10V X7R', 48.26, 'WAVE_5V'), ('C2', '4.7u / 10V X7R', 144.78, 'LDO_4V'), ('C3', '100n / 10V X7R', 243.84, 'LDO_4V'), ('C4', '100n / 10V X7R', 340.36, 'XIAO_BAT')]:
-        add('C', ref, value, x, 231.14, {'1': net, '2': 'DRIVE_GND'}, '0805; C2 effective >=1uF')
-    for i, net in enumerate(['WAVE_5V', 'DRIVE_GND', 'XIAO_BAT', 'SERVICE_VBUS', 'DRIVE_GND'], 1):
+    for ref, value, x, net in [('C1', '4.7u / 10V X7R', 48.26, 'WAVE_5V'), ('C2', '4.7u / 10V X7R', 144.78, 'LDO_4V'), ('C3', '1u / 10V X7R', 243.84, 'LDO_4V'), ('C4', '1u / 10V X7R', 340.36, 'XIAO_BAT')]:
+        add('C', ref, value, x, 231.14, {'1': net, '2': 'DRIVE_GND'}, '0805; effective C2>=1uF, C3/C4>=0.33uF')
+    # J4 is deliberately retired: existing J5 keeps its ground meaning.
+    for i, net in [(1, 'WAVE_5V'), (2, 'DRIVE_GND'), (3, 'XIAO_BAT'), (5, 'DRIVE_GND')]:
         add('Terminal', f'J{i}', net, 358.14, 68.58 + (i - 1) * 17.78, {'1': net})
     for i, net in enumerate(['WAVE_5V', 'DRIVE_GND'], 1):
         add('Flag', f'#FLG0{i}', 'PWR_FLAG', 20.32 + i * 35.56, 142.24, {'1': net})
     notes = [
         'PROPOSAL ONLY: no PCB, no battery/charger/protection approval, no measured output current or source handover.',
-        'J4 = native XIAO 5V/VBUS SENSE ONLY. Never join it to J1/Waveshare or the separate charge-port VBUS.',
+        'No J4 / USB sense wire. Native XIAO 5V/VBUS and charge-port VBUS stay separate from this circuit.',
         'J3 = XIAO BAT0 positive; J5 = XIAO GND. 2S raw battery NEVER connects to J3.',
-        'CE compares against U2 VIN: USB present forces switch OFF. Forward body diode remains IN -> OUT.',
+        'U2 EN tied locally to VDD. MAX40200 detects reverse bias internally; switching transient limits remain unproven.',
         'U1 EN tied to IN does NOT guarantee reverse protection. Startup overshoot and local capacitor discharge remain open.',
-        'R3 keeps LDO load above 10mA. C2 must remain >=1uF effective. Thermal copper and all transients need validation.'
+        'R3 keeps LDO load above 10mA; C2>=1uF, C3/C4>=0.33uF effective. Total OUT load capacitance <=100uF.',
+        'Use SOT23-5 limits: 175mV max drop at 500mA / 3.3V test point. WLP headline values do not apply.'
     ]
     for i, note in enumerate(notes):
         out.append(f'(text {q(note)} (at 20.32 {12.7 + i * 5.08:g} 0)(effects (font (size 1.1 1.1))(justify left top))(uuid "{uid(note)}"))')

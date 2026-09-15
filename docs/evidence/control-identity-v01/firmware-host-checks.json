@@ -1,0 +1,53 @@
+{
+  "scope": "Host C++ checks only; no GPIO, upload or physical measurements",
+  "compiler": "g++.EXE (Rev10, Built by MSYS2 project) 12.2.0",
+  "tests": {
+    "control": {
+      "exit_code": 0,
+      "output": "PASS: ownership, neutral arm, commands, timeout boundary, replay, ranges, malformed frames, session, stop, disconnect, rollover, codec"
+    },
+    "discovery": {
+      "exit_code": 0,
+      "output": "PASS: discovery nonce, malformed queries, common reply vector, control separation"
+    },
+    "identity": {
+      "exit_code": 0,
+      "output": "PASS: identity golden vector, invalid token/ID and exact length-delimited opt-in path"
+    },
+    "drive_plan": {
+      "exit_code": 0,
+      "output": "PASS: drive planning, ramp/cap, reverse pause, STOP/session barrier, freshness, malformed/replay/disconnect, owner, rollover, config and 20000 mixed steps; no GPIO exercised"
+    }
+  },
+  "negative_controls": {
+    "late_timeout": {
+      "compiled": true,
+      "test_rejected": true,
+      "exit_code": 3,
+      "assertion": "Assertion failed: p.fi_permille == 0 && p.bi_permille == 0, file <mutation-copy>\\tests\\drive_plan_test.cpp, line 16"
+    },
+    "lost_stop_revision": {
+      "compiled": true,
+      "test_rejected": true,
+      "exit_code": 3,
+      "assertion": "Assertion failed: d.plan().mode == rc::DriveMode::SessionReset, file <mutation-copy>\\tests\\drive_plan_test.cpp, line 87"
+    },
+    "short_reverse_pause": {
+      "compiled": true,
+      "test_rejected": true,
+      "exit_code": 3,
+      "assertion": "Assertion failed: p.fi_permille == 0 && p.bi_permille == 0, file <mutation-copy>\\tests\\drive_plan_test.cpp, line 16"
+    }
+  },
+  "source_sha256": {
+    "prototype/control.h": "95ac372f6589a46419ffd6ac6457fef59972327a89e0f6e5b456be178b38d18f",
+    "prototype/identity.h": "41d726a01ce2d54ab5ffc143661d75b48773c971ee5886724e0922a041a4dc7c",
+    "prototype/drive_plan.h": "cb8899f70c1c3d31ebbc128f0d041eae3f2ff4a63746eb2d15cf4c18f1f23604",
+    "prototype/main.cpp": "e368e4b426e83d1869267bfb947698323d55235d677723eb085ccf1742eec57d",
+    "tests/control_test.cpp": "add6fb7c665ae65a86122adfa13b12dd23316f67728f66778ebb1a718da3b5b7",
+    "tests/discovery_test.cpp": "8a7566fc54b3c173a154bd18e99e812d2b3c1a2b70521024daf886dfba476fea",
+    "tests/drive_plan_test.cpp": "7d04b668445f643fc91e94dea4072728caa84214a8ebee4927ef4807fdf203ac",
+    "tests/identity_test.cpp": "a4f69a89efb1c92d1566b5842a6d9f0b9736790c8d459a584c8d8c79b9e47b8a",
+    "tests/run_drive_checks.py": "a0b8841aebd067d933cb4a9ef48ebf5ef4e93b64c4b731a5fce6cc43c1033369"
+  }
+}

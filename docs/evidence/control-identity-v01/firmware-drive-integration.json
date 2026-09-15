@@ -1,0 +1,105 @@
+{
+  "contract": "DRIVE-INTEGRATION-01 v0.1",
+  "scope": "Host mocks and optional real-SDK syntax; no hardware activation or timing proof",
+  "host_output": "drive integration: null mode, steering at rest, motor/servo faults, session revoke, expiry/rearm, startup and interlocks passed",
+  "host_exit_code": 0,
+  "profile_cases": {
+    "default_disabled": {
+      "exit_code": 0,
+      "expected_compile_success": true
+    },
+    "missing_calibration": {
+      "exit_code": 1,
+      "expected_compile_success": false
+    },
+    "zero_opt_in_is_rejected": {
+      "exit_code": 1,
+      "expected_compile_success": false
+    },
+    "zero_motor_frequency": {
+      "exit_code": 1,
+      "expected_compile_success": false
+    },
+    "neutral_outside_endpoints": {
+      "exit_code": 1,
+      "expected_compile_success": false
+    },
+    "pulse_exceeds_period": {
+      "exit_code": 1,
+      "expected_compile_success": false
+    },
+    "valid_synthetic": {
+      "exit_code": 0,
+      "expected_compile_success": true
+    },
+    "valid_reversed_synthetic": {
+      "exit_code": 0,
+      "expected_compile_success": true
+    }
+  },
+  "sdk_probes": {
+    "esp32-bench": {
+      "exit_code": 0,
+      "mode": "syntax-only with synthetic calibration",
+      "default_artifacts_unchanged": true
+    },
+    "xiao-car-qvga": {
+      "exit_code": 0,
+      "mode": "syntax-only with synthetic calibration",
+      "default_artifacts_unchanged": true
+    }
+  },
+  "default_ELF_checks": {
+    "esp32-bench": {
+      "actuator_IDF_symbols": [],
+      "nm_exit_code": 0
+    },
+    "esp32-bench-sta": {
+      "actuator_IDF_symbols": [],
+      "nm_exit_code": 0
+    },
+    "xiao-car-qvga": {
+      "actuator_IDF_symbols": [],
+      "nm_exit_code": 0
+    },
+    "xiao-car-vga": {
+      "actuator_IDF_symbols": [],
+      "nm_exit_code": 0
+    }
+  },
+  "probe_values": {
+    "RC_ENABLE_ACTUATORS": 1,
+    "RC_MOTOR_PWM_HZ": 20000,
+    "RC_SERVO_PWM_HZ": 50,
+    "RC_SERVO_NEGATIVE_US": 1102,
+    "RC_SERVO_NEUTRAL_US": 1450,
+    "RC_SERVO_POSITIVE_US": 1901
+  },
+  "probe_values_are_physical_calibration": false,
+  "existing_default_binary_sha256": {
+    "esp32-bench": "52bd22ed41ef2e35ffd7f205614b4d3fc85dca64040c074388e90576089aba9c",
+    "esp32-bench-sta": "09124ac3f6061321fa18f017ecf92a5d7677c205a5232af244de76754bf3d2e4",
+    "xiao-car-qvga": "9d170c4e2d648c68ba42327e973f4d6d997068580248962cec889a1c526d1597",
+    "xiao-car-vga": "75d97f943f510f6dc4c7ccb37d475dd6c023a7dca6c34540360cbac0336c2641"
+  },
+  "binary_note": "Hashes of existing files; build completion is recorded separately",
+  "source_sha256": {
+    "prototype/main.cpp": "e368e4b426e83d1869267bfb947698323d55235d677723eb085ccf1742eec57d",
+    "prototype/drive_outputs.h": "0189fb503a37ccd51cfc07021f70f101f102678c6d131e4fd9a6cd09a1445162",
+    "prototype/actuator_build_config.h": "548c9346e953ef7c165470bfe5a090eae1acf3f3c7a7d8bcd4703b9434efec26",
+    "prototype/actuator_outputs.h": "1f68e3f5fdb75d9ada9329e91e9afd84a663b0d22ce9fb82d9e94aab9e43ba94",
+    "prototype/control.h": "95ac372f6589a46419ffd6ac6457fef59972327a89e0f6e5b456be178b38d18f",
+    "prototype/drive_plan.h": "cb8899f70c1c3d31ebbc128f0d041eae3f2ff4a63746eb2d15cf4c18f1f23604",
+    "prototype/motor_dispatch.h": "5a2afecc8bf121fb2499556efa4ab38429071f4d4fa9539cfa382e81e2f9bbb4",
+    "prototype/motor_pwm.h": "bf4fdb7e4a0ed2c546fd113caec057a7097897d7fbd982df467999e390a0cdc6",
+    "prototype/motor_pwm_idf.cpp": "279adb0dc58eef01ac1971081bfd65c6257ab2365ff85843d87c1e1ac91ff28a",
+    "prototype/motor_pwm_idf.h": "34a909d50269f52a20968326b65f4b2b4a9d9e15cd81b9d72ede4c89de100cfd",
+    "prototype/servo_pwm.h": "8af502529c603ec31ba3dc43ba92d100e268c290ef81732c0b753ee3fd8e45fa",
+    "prototype/servo_pwm_idf.cpp": "fda261b5ab1ff6ae9593900bf427085d4b2fff862d455b72c57ac83f9a4b38b9",
+    "prototype/servo_pwm_idf.h": "88123c0fe0271ecb2ebf3441cf090d83c101e7134924c017605aa65ace04c500",
+    "platformio.ini": "07787cc5306dad5dc623dce2ea711f807315d565250324d384c12bf250a8d173",
+    "tests/drive_outputs_test.cpp": "8134d091001425f23f3d9dac9b0c20d6c52f5cb10e90305ef286d48204dfbb8d",
+    "tests/run_drive_outputs_checks.py": "684df65473113fbd1df8ad9e0283c316f3142193647218b669b2f2c3028dd31a"
+  },
+  "uploaded": false
+}

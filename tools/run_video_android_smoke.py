@@ -1,4 +1,4 @@
-"""Run the five loopback video/control UI tests on an explicitly selected Android.
+"""Run the seven loopback video/control/identity UI tests on an explicitly selected Android.
 
 Build app-debug.apk and app-debug-androidTest.apk first. This installs debug APKs;
 it never selects a device implicitly, unlocks a phone, or contacts a physical car.
@@ -12,8 +12,8 @@ import re
 import subprocess
 
 ROOT = Path(__file__).resolve().parents[1]
-CLASSES = "vea.raceremote.VideoControlIsolationTest,vea.raceremote.DrivingModeTest,vea.raceremote.CarVideoSelectionTest"
-EXPECTED_TESTS = 5
+CLASSES = "vea.raceremote.VideoControlIsolationTest,vea.raceremote.DrivingModeTest,vea.raceremote.CarVideoSelectionTest,vea.raceremote.CarIdentitySelectionTest"
+EXPECTED_TESTS = 7
 
 
 def main():

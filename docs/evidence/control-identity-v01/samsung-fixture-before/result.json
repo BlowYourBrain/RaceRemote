@@ -1,0 +1,25 @@
+{
+  "serial": "RF8M811X8FK",
+  "api": 31,
+  "display": {
+    "size": "Physical size: 1440x3040\nOverride size: 720x1520",
+    "density": "Physical density: 420\nOverride density: 320",
+    "emulator": false
+  },
+  "classes": [
+    "vea.raceremote.VideoControlIsolationTest",
+    "vea.raceremote.DrivingModeTest",
+    "vea.raceremote.CarVideoSelectionTest",
+    "vea.raceremote.CarIdentitySelectionTest"
+  ],
+  "expected_tests": 7,
+  "passed": false,
+  "adb_exit_code": 0,
+  "apk_sha256": {
+    "app/build/outputs/apk/debug/app-debug.apk": "a1a4984857198f72b9d404b62a2532d65a5204ab4630067bc48abb7265ad95df",
+    "app/build/outputs/apk/androidTest/debug/app-debug-androidTest.apk": "95f193bd5c3c686f1a75545ec4ac63f9ec2f487d73b515125732245ac760e788"
+  },
+  "transcript_sha256": "0e3cd8d5aff3dcc1674963f008ec30e5d8ed28883332165771bb56bf51a7a652",
+  "runner_sha256": "ad2819d8721b82455d07a0b325d728685c92942b488940fa01644140950591fb",
+  "scope": "Android UI and software loopback; no physical camera, RF, motor or optical latency"
+}

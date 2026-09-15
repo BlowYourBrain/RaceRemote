@@ -40,7 +40,7 @@ class CarControlClient(
     init { timer.scheduleAtFixedRate({ synchronized(this) { tick() } }, 20, 20, TimeUnit.MILLISECONDS) }
 
     @Synchronized
-    fun connect(host: String, httpClient: OkHttpClient, port: Int = 1337) {
+    fun connect(host: String, httpClient: OkHttpClient, port: Int = 1337, expectedChipId: Long? = null) {
         disconnect()
         // The prototype intentionally permits only local IPv4 destinations.
         val octets = host.split('.').map { it.toIntOrNull() }
@@ -49,17 +49,33 @@ class CarControlClient(
                 (octets[0] == 192 && octets[1] == 168) ||
                 (octets[0] == 172 && octets[1]!! in 16..31))
         if (!local || port !in 1..65535) { mutableState.value = CarConnectionState("Укажи локальный IPv4-адрес машинки"); return }
+        if (expectedChipId != null && expectedChipId !in 1..0xffffffffffffL) {
+            mutableState.value = CarConnectionState("Некорректный ID машинки"); return
+        }
         val current = generation
+        var identityToken: Long? = null
         sentAt = clockMs()
         mutableState.value = CarConnectionState("Подключение…", connecting = true)
         val transport = httpClient.newBuilder().socketFactory(ControlSocketFactory(httpClient.socketFactory())).build()
-        socket = transport.newWebSocket(Request.Builder().url("ws://$host:$port/control").build(), object : WebSocketListener() {
+        val path = if (expectedChipId == null) "/control" else IdentityPacket.PATH
+        socket = transport.newWebSocket(Request.Builder().url("ws://$host:$port$path").build(), object : WebSocketListener() {
             override fun onOpen(webSocket: WebSocket, response: Response) = synchronized(this@CarControlClient) {
                 diagnostics("WebSocket opened")
                 if (current == generation) opened = true else webSocket.cancel()
             }
             override fun onMessage(webSocket: WebSocket, bytes: ByteString) = synchronized(this@CarControlClient) {
                 if (current != generation) return@synchronized
+                if (expectedChipId != null && identityToken == null) {
+                    diagnostics("Received identity bytes=${bytes.size()}")
+                    val identity = IdentityPacket.decode(bytes.toByteArray())
+                    when {
+                        clockMs() - sentAt >= 4000 -> disconnect("Нет свежего ответа — остановлено")
+                        identity == null -> disconnect("Машинка не подтвердила свой ID")
+                        identity.chipId != expectedChipId -> disconnect("По этому адресу другая машинка")
+                        else -> identityToken = identity.token
+                    }
+                    return@synchronized // Identity alone never sends ARM or resets the deadline.
+                }
                 val p = ControlPacket.decode(bytes.toByteArray())
                 if (token == 0L || sequence <= 30) diagnostics("Received bytes=${bytes.size()} kind=${p?.kind} sequence=${p?.sequence} rttMs=${clockMs() - sentAt}")
                 if (p == null) { disconnect("Ошибка протокола"); return@synchronized }
@@ -67,6 +83,9 @@ class CarControlClient(
                     // A receive callback can run before the next timer tick.
                     // Reject expired handshakes before assigning a token or sending ARM.
                     if (clockMs() - sentAt >= 4000) { disconnect("Нет свежего ответа — остановлено"); return@synchronized }
+                    if (expectedChipId != null && p.token != identityToken) {
+                        disconnect("ID и управление относятся к разным сессиям"); return@synchronized
+                    }
                     token = p.token; sequence = 1
                     send(ControlPacket(ControlPacket.ARM, token, sequence))
                 } else if (p.kind == ControlPacket.ACK && p.token == token && p.sequence == pending) {

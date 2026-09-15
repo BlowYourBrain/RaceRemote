@@ -21,13 +21,16 @@ import java.util.concurrent.TimeUnit
 import vea.raceremote.video.VideoPanel
 
 @Composable
-fun CarControlScreen() {
+fun CarControlScreen(
+    carPicker: @Composable (Boolean, (DiscoveredCar) -> Unit) -> Unit = { enabled, onPick -> CarPicker(enabled, onPick) },
+) {
     val context = LocalContext.current
     val lifecycle = LocalLifecycleOwner.current.lifecycle
     val client = remember { CarControlClient(diagnostics = { android.util.Log.d("RaceRemoteControl", it) }) }
     val state by client.state.collectAsState()
     var host by rememberSaveable { mutableStateOf("192.168.4.1") }
     var controlPort by rememberSaveable { mutableStateOf(1337) }
+    var selectedChipId by rememberSaveable { mutableStateOf<Long?>(null) }
     var throttle by remember { mutableStateOf(0f) }
     var steering by remember { mutableStateOf(0f) }
     var showVideo by rememberSaveable { mutableStateOf(false) }
@@ -65,16 +68,16 @@ fun CarControlScreen() {
     Column(Modifier.fillMaxSize().windowInsetsPadding(WindowInsets.displayCutout).padding(12.dp)) {
         Row(Modifier.fillMaxWidth(), horizontalArrangement = Arrangement.spacedBy(12.dp)) {
             if (!driving) {
-            OutlinedTextField(host, { host = it; controlPort = 1337 }, label = { Text("Адрес машинки") }, singleLine = true,
+            OutlinedTextField(host, { host = it; controlPort = 1337; selectedChipId = null }, label = { Text("Адрес машинки") }, singleLine = true,
                 enabled = !state.connected && !state.connecting, modifier = Modifier.weight(1f).testTag("car_address"))
-            CarPicker(enabled = !state.connected && !state.connecting) { car -> host = car.host; controlPort = car.port }
+            carPicker(!state.connected && !state.connecting) { car -> host = car.host; controlPort = car.port; selectedChipId = car.chipId }
             Button(onClick = {
                 throttle = 0f; steering = 0f
                 wifiLock.acquire()
                 val manager = context.getSystemService(ConnectivityManager::class.java)
                 val wifi = manager.allNetworks.firstOrNull { manager.getNetworkCapabilities(it)?.hasTransport(NetworkCapabilities.TRANSPORT_WIFI) == true }
                 val networkClient = if (wifi != null) http.newBuilder().socketFactory(wifi.socketFactory).build() else http
-                client.connect(host.trim(), networkClient, controlPort)
+                client.connect(host.trim(), networkClient, controlPort, selectedChipId)
             }, enabled = !state.connected && !state.connecting, modifier = Modifier.testTag("connect_car")) { Text("Подключить") }
             } else {
                 Text(state.message, Modifier.weight(1f).testTag("driving_connection_status"))
@@ -91,6 +94,8 @@ fun CarControlScreen() {
             }
         }
         if (!driving) {
+            Text(selectedChipId?.let { "Выбрана машинка · ID ${it.toString(16).padStart(12, '0')}" }
+                ?: "Ручной адрес · ID не проверяется", Modifier.testTag("selected_car_identity"))
             Text(state.message, Modifier.testTag("connection_status"))
             Text("Газ: ${state.throttle / 10}%   Руль: ${state.steering / 10}%", Modifier.testTag("acknowledged_input"))
             Spacer(Modifier.height(12.dp))
@@ -99,7 +104,7 @@ fun CarControlScreen() {
             if (driving) DrivingPad("Газ", true, throttle, state.connected, Modifier.width(104.dp).fillMaxHeight()) {
                 throttle = it; client.setInput(throttle, steering)
             }
-            if (showVideo) key(host.trim(), controlPort) {
+            if (showVideo) key(host.trim(), controlPort, selectedChipId) {
                 // A different control target owns a fresh video session. Dispose
                 // the previous stream/view before showing another car's camera.
                 VideoPanel(carHost = host.trim(), modifier = Modifier.weight(1f).fillMaxHeight(), showSettings = !driving) { videoActive = it }

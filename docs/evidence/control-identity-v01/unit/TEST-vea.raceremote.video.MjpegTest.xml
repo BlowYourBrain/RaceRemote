@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="vea.raceremote.video.MjpegTest" tests="5" skipped="0" failures="0" errors="0" timestamp="2026-09-15T17:40:08" hostname="DESKTOP-LR64B4F" time="0.041">
+  <properties/>
+  <testcase name="networkStreamDropsRepeatedCaptureEvenWhenSequenceAndJpegChange" classname="vea.raceremote.video.MjpegTest" time="0.009"/>
+  <testcase name="fragmentedReadsAndQuotedBoundaryPreserveEveryFrame" classname="vea.raceremote.video.MjpegTest" time="0.001"/>
+  <testcase name="htmlMissingBoundaryAndWrongDelimiterAreRejected" classname="vea.raceremote.video.MjpegTest" time="0.001"/>
+  <testcase name="videoEndingPreservesControlAndNewDriveAcknowledgements" classname="vea.raceremote.video.MjpegTest" time="0.028"/>
+  <testcase name="incompleteAndUnboundedFramesAreRejected" classname="vea.raceremote.video.MjpegTest" time="0.002"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[сент. 15, 2026 8:40:08 PM okhttp3.mockwebserver.MockWebServer$3 execute
+INFO: MockWebServer[56801] starting to accept connections
+сент. 15, 2026 8:40:08 PM okhttp3.mockwebserver.MockWebServer$4 processOneRequest
+INFO: MockWebServer[56801] received request: GET /stream HTTP/1.1 and responded: HTTP/1.1 200 OK
+сент. 15, 2026 8:40:08 PM okhttp3.mockwebserver.MockWebServer$3 acceptConnections
+INFO: MockWebServer[56801] done accepting connections: Socket closed
+сент. 15, 2026 8:40:08 PM okhttp3.mockwebserver.MockWebServer$3 execute
+INFO: MockWebServer[56803] starting to accept connections
+сент. 15, 2026 8:40:08 PM okhttp3.mockwebserver.MockWebServer$3 execute
+INFO: MockWebServer[56804] starting to accept connections
+сент. 15, 2026 8:40:08 PM okhttp3.mockwebserver.MockWebServer$4 processOneRequest
+INFO: MockWebServer[56804] received request: GET /stream HTTP/1.1 and responded: HTTP/1.1 200 OK
+сент. 15, 2026 8:40:08 PM okhttp3.mockwebserver.MockWebServer$4 processOneRequest
+INFO: MockWebServer[56803] received request: GET /control HTTP/1.1 and responded: HTTP/1.1 101 Switching Protocols
+сент. 15, 2026 8:40:08 PM okhttp3.mockwebserver.MockWebServer$3 acceptConnections
+INFO: MockWebServer[56803] done accepting connections: Socket closed
+сент. 15, 2026 8:40:08 PM okhttp3.mockwebserver.MockWebServer$3 acceptConnections
+INFO: MockWebServer[56804] done accepting connections: Socket closed
+]]></system-err>
+</testsuite>

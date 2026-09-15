@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="vea.raceremote.control.CarControlTest" tests="7" skipped="0" failures="0" errors="0" timestamp="2026-09-15T17:40:04" hostname="DESKTOP-LR64B4F" time="0.391">
+  <properties/>
+  <testcase name="helloAfterDeadlineCannotArm" classname="vea.raceremote.control.CarControlTest" time="0.122"/>
+  <testcase name="helloBeforeDeadlineCanArm" classname="vea.raceremote.control.CarControlTest" time="0.006"/>
+  <testcase name="helloAtDeadlineCannotArm" classname="vea.raceremote.control.CarControlTest" time="0.117"/>
+  <testcase name="aWrongSessionAckCannotEnableControl" classname="vea.raceremote.control.CarControlTest" time="0.01"/>
+  <testcase name="persistentSocketWaitsForAckAndStopsOnDeadline" classname="vea.raceremote.control.CarControlTest" time="0.133"/>
+  <testcase name="codecMatchesFirmwareVectorAndRejectsMalformedInput" classname="vea.raceremote.control.CarControlTest" time="0.002"/>
+  <testcase name="publicHostsAreRejectedBeforeConnecting" classname="vea.raceremote.control.CarControlTest" time="0.001"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[сент. 15, 2026 8:40:04 PM okhttp3.mockwebserver.MockWebServer$3 execute
+INFO: MockWebServer[56498] starting to accept connections
+сент. 15, 2026 8:40:04 PM okhttp3.mockwebserver.MockWebServer$4 processOneRequest
+INFO: MockWebServer[56498] received request: GET /control HTTP/1.1 and responded: HTTP/1.1 101 Switching Protocols
+сент. 15, 2026 8:40:04 PM okhttp3.mockwebserver.MockWebServer$3 acceptConnections
+INFO: MockWebServer[56498] done accepting connections: Socket closed
+сент. 15, 2026 8:40:04 PM okhttp3.mockwebserver.MockWebServer$3 execute
+INFO: MockWebServer[56500] starting to accept connections
+сент. 15, 2026 8:40:04 PM okhttp3.mockwebserver.MockWebServer$4 processOneRequest
+INFO: MockWebServer[56500] received request: GET /control HTTP/1.1 and responded: HTTP/1.1 101 Switching Protocols
+сент. 15, 2026 8:40:04 PM okhttp3.mockwebserver.MockWebServer$3 acceptConnections
+INFO: MockWebServer[56500] done accepting connections: Socket closed
+сент. 15, 2026 8:40:04 PM okhttp3.mockwebserver.MockWebServer$3 execute
+INFO: MockWebServer[56502] starting to accept connections
+сент. 15, 2026 8:40:04 PM okhttp3.mockwebserver.MockWebServer$4 processOneRequest
+INFO: MockWebServer[56502] received request: GET /control HTTP/1.1 and responded: HTTP/1.1 101 Switching Protocols
+сент. 15, 2026 8:40:04 PM okhttp3.mockwebserver.MockWebServer$3 acceptConnections
+INFO: MockWebServer[56502] done accepting connections: Socket closed
+сент. 15, 2026 8:40:04 PM okhttp3.mockwebserver.MockWebServer$3 execute
+INFO: MockWebServer[56504] starting to accept connections
+сент. 15, 2026 8:40:04 PM okhttp3.mockwebserver.MockWebServer$4 processOneRequest
+INFO: MockWebServer[56504] received request: GET /control HTTP/1.1 and responded: HTTP/1.1 101 Switching Protocols
+сент. 15, 2026 8:40:04 PM okhttp3.mockwebserver.MockWebServer$3 acceptConnections
+INFO: MockWebServer[56504] done accepting connections: Socket closed
+сент. 15, 2026 8:40:04 PM okhttp3.mockwebserver.MockWebServer$3 execute
+INFO: MockWebServer[56506] starting to accept connections
+сент. 15, 2026 8:40:04 PM okhttp3.mockwebserver.MockWebServer$4 processOneRequest
+INFO: MockWebServer[56506] received request: GET /control HTTP/1.1 and responded: HTTP/1.1 101 Switching Protocols
+сент. 15, 2026 8:40:04 PM okhttp3.mockwebserver.MockWebServer$3 acceptConnections
+INFO: MockWebServer[56506] done accepting connections: Socket closed
+]]></system-err>
+</testsuite>

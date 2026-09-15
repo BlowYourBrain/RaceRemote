@@ -1,0 +1,543 @@
+Processing esp32-bench (platform: espressif32@6.9.0; board: esp32dev; framework: arduino)
+--------------------------------------------------------------------------------
+Verbose mode can be enabled via `-v, --verbose` option
+CONFIGURATION: https://docs.platformio.org/page/boards/espressif32/esp32dev.html
+PLATFORM: Espressif 32 (6.9.0) > Espressif ESP32 Dev Module
+HARDWARE: ESP32 240MHz, 320KB RAM, 4MB Flash
+DEBUG: Current (cmsis-dap) External (cmsis-dap, esp-bridge, esp-prog, iot-bus-jtag, jlink, minimodule, olimex-arm-usb-ocd, olimex-arm-usb-ocd-h, olimex-arm-usb-tiny-h, olimex-jtag-tiny, tumpa)
+PACKAGES: 
+ - framework-arduinoespressif32 @ 3.20017.241212+sha.dcc1105b 
+ - tool-esptoolpy @ 1.40501.0 (4.5.1) 
+ - toolchain-xtensa-esp32 @ 8.4.0+2021r2-patch5
+LDF: Library Dependency Finder -> https://bit.ly/configure-pio-ldf
+LDF Modes: Finder ~ chain, Compatibility ~ soft
+Found 34 compatible libraries
+Scanning dependencies...
+Dependency Graph
+|-- WebSockets @ 2.6.1
+|-- WebServer @ 2.0.0
+|-- WiFi @ 2.0.0
+|-- Ethernet @ 2.0.0
+|-- SPI @ 2.0.0
+|-- WiFiClientSecure @ 2.0.0
+Building in release mode
+Compiling .pio\build\esp32-bench\src\prototype\main.cpp.o
+Compiling .pio\build\esp32-bench\src\prototype\motor_pwm_idf.cpp.o
+Compiling .pio\build\esp32-bench\src\prototype\servo_pwm_idf.cpp.o
+Building .pio\build\esp32-bench\bootloader.bin
+Generating partitions .pio\build\esp32-bench\partitions.bin
+esptool.py v4.5.1
+Creating esp32 image...
+Merged 1 ELF section
+Successfully created esp32 image.
+Compiling .pio\build\esp32-bench\libeb0\WiFi\WiFi.cpp.o
+Compiling .pio\build\esp32-bench\libeb0\WiFi\WiFiAP.cpp.o
+Compiling .pio\build\esp32-bench\libeb0\WiFi\WiFiClient.cpp.o
+Compiling .pio\build\esp32-bench\libeb0\WiFi\WiFiGeneric.cpp.o
+Compiling .pio\build\esp32-bench\libeb0\WiFi\WiFiMulti.cpp.o
+Compiling .pio\build\esp32-bench\libeb0\WiFi\WiFiSTA.cpp.o
+Compiling .pio\build\esp32-bench\libeb0\WiFi\WiFiScan.cpp.o
+Compiling .pio\build\esp32-bench\libeb0\WiFi\WiFiServer.cpp.o
+Compiling .pio\build\esp32-bench\libeb0\WiFi\WiFiUdp.cpp.o
+Compiling .pio\build\esp32-bench\libd4a\Ethernet\ETH.cpp.o
+Archiving .pio\build\esp32-bench\libeb0\libWiFi.a
+Indexing .pio\build\esp32-bench\libeb0\libWiFi.a
+Compiling .pio\build\esp32-bench\lib2d7\SPI\SPI.cpp.o
+Compiling .pio\build\esp32-bench\lib081\WiFiClientSecure\WiFiClientSecure.cpp.o
+Compiling .pio\build\esp32-bench\lib081\WiFiClientSecure\esp_crt_bundle.c.o
+Compiling .pio\build\esp32-bench\lib081\WiFiClientSecure\ssl_client.cpp.o
+Compiling .pio\build\esp32-bench\lib404\WebSockets\SocketIOclient.cpp.o
+Compiling .pio\build\esp32-bench\lib404\WebSockets\WebSockets.cpp.o
+Compiling .pio\build\esp32-bench\lib404\WebSockets\WebSocketsClient.cpp.o
+Compiling .pio\build\esp32-bench\lib404\WebSockets\WebSocketsServer.cpp.o
+Compiling .pio\build\esp32-bench\lib404\WebSockets\libb64\cdecode.c.o
+Compiling .pio\build\esp32-bench\lib404\WebSockets\libb64\cencode.c.o
+Compiling .pio\build\esp32-bench\lib404\WebSockets\libsha1\libsha1.c.o
+Archiving .pio\build\esp32-bench\libd4a\libEthernet.a
+Indexing .pio\build\esp32-bench\libd4a\libEthernet.a
+Archiving .pio\build\esp32-bench\lib2d7\libSPI.a
+Indexing .pio\build\esp32-bench\lib2d7\libSPI.a
+Compiling .pio\build\esp32-bench\lib14a\FS\FS.cpp.o
+Compiling .pio\build\esp32-bench\lib14a\FS\vfs_api.cpp.o
+Compiling .pio\build\esp32-bench\lib2aa\WebServer\Parsing.cpp.o
+Compiling .pio\build\esp32-bench\lib2aa\WebServer\WebServer.cpp.o
+Compiling .pio\build\esp32-bench\lib2aa\WebServer\detail\mimetable.cpp.o
+Compiling .pio\build\esp32-bench\FrameworkArduino\Esp.cpp.o
+Archiving .pio\build\esp32-bench\lib404\libWebSockets.a
+Archiving .pio\build\esp32-bench\lib081\libWiFiClientSecure.a
+Compiling .pio\build\esp32-bench\FrameworkArduino\FirmwareMSC.cpp.o
+Indexing .pio\build\esp32-bench\lib404\libWebSockets.a
+Compiling .pio\build\esp32-bench\FrameworkArduino\FunctionalInterrupt.cpp.o
+Indexing .pio\build\esp32-bench\lib081\libWiFiClientSecure.a
+Compiling .pio\build\esp32-bench\FrameworkArduino\HWCDC.cpp.o
+Compiling .pio\build\esp32-bench\FrameworkArduino\HardwareSerial.cpp.o
+Compiling .pio\build\esp32-bench\FrameworkArduino\IPAddress.cpp.o
+Compiling .pio\build\esp32-bench\FrameworkArduino\IPv6Address.cpp.o
+Compiling .pio\build\esp32-bench\FrameworkArduino\MD5Builder.cpp.o
+Compiling .pio\build\esp32-bench\FrameworkArduino\Print.cpp.o
+Compiling .pio\build\esp32-bench\FrameworkArduino\Stream.cpp.o
+Compiling .pio\build\esp32-bench\FrameworkArduino\StreamString.cpp.o
+Archiving .pio\build\esp32-bench\lib14a\libFS.a
+Indexing .pio\build\esp32-bench\lib14a\libFS.a
+Compiling .pio\build\esp32-bench\FrameworkArduino\Tone.cpp.o
+Compiling .pio\build\esp32-bench\FrameworkArduino\USB.cpp.o
+Compiling .pio\build\esp32-bench\FrameworkArduino\USBCDC.cpp.o
+Compiling .pio\build\esp32-bench\FrameworkArduino\USBMSC.cpp.o
+Compiling .pio\build\esp32-bench\FrameworkArduino\WMath.cpp.o
+Compiling .pio\build\esp32-bench\FrameworkArduino\WString.cpp.o
+Compiling .pio\build\esp32-bench\FrameworkArduino\base64.cpp.o
+Compiling .pio\build\esp32-bench\FrameworkArduino\cbuf.cpp.o
+Compiling .pio\build\esp32-bench\FrameworkArduino\esp32-hal-adc.c.o
+Compiling .pio\build\esp32-bench\FrameworkArduino\esp32-hal-bt.c.o
+Archiving .pio\build\esp32-bench\lib2aa\libWebServer.a
+Indexing .pio\build\esp32-bench\lib2aa\libWebServer.a
+Compiling .pio\build\esp32-bench\FrameworkArduino\esp32-hal-cpu.c.o
+Compiling .pio\build\esp32-bench\FrameworkArduino\esp32-hal-dac.c.o
+Compiling .pio\build\esp32-bench\FrameworkArduino\esp32-hal-gpio.c.o
+Compiling .pio\build\esp32-bench\FrameworkArduino\esp32-hal-i2c-slave.c.o
+Compiling .pio\build\esp32-bench\FrameworkArduino\esp32-hal-i2c.c.o
+Compiling .pio\build\esp32-bench\FrameworkArduino\esp32-hal-ledc.c.o
+Compiling .pio\build\esp32-bench\FrameworkArduino\esp32-hal-matrix.c.o
+Compiling .pio\build\esp32-bench\FrameworkArduino\esp32-hal-misc.c.o
+Compiling .pio\build\esp32-bench\FrameworkArduino\esp32-hal-psram.c.o
+Compiling .pio\build\esp32-bench\FrameworkArduino\esp32-hal-rgb-led.c.o
+Compiling .pio\build\esp32-bench\FrameworkArduino\esp32-hal-rmt.c.o
+Compiling .pio\build\esp32-bench\FrameworkArduino\esp32-hal-sigmadelta.c.o
+Compiling .pio\build\esp32-bench\FrameworkArduino\esp32-hal-spi.c.o
+Compiling .pio\build\esp32-bench\FrameworkArduino\esp32-hal-time.c.o
+Compiling .pio\build\esp32-bench\FrameworkArduino\esp32-hal-timer.c.o
+Compiling .pio\build\esp32-bench\FrameworkArduino\esp32-hal-tinyusb.c.o
+Compiling .pio\build\esp32-bench\FrameworkArduino\esp32-hal-touch.c.o
+Compiling .pio\build\esp32-bench\FrameworkArduino\esp32-hal-uart.c.o
+Compiling .pio\build\esp32-bench\FrameworkArduino\firmware_msc_fat.c.o
+Compiling .pio\build\esp32-bench\FrameworkArduino\libb64\cdecode.c.o
+Compiling .pio\build\esp32-bench\FrameworkArduino\libb64\cencode.c.o
+Compiling .pio\build\esp32-bench\FrameworkArduino\main.cpp.o
+Compiling .pio\build\esp32-bench\FrameworkArduino\stdlib_noniso.c.o
+Compiling .pio\build\esp32-bench\FrameworkArduino\wiring_pulse.c.o
+Compiling .pio\build\esp32-bench\FrameworkArduino\wiring_shift.c.o
+Archiving .pio\build\esp32-bench\libFrameworkArduino.a
+Indexing .pio\build\esp32-bench\libFrameworkArduino.a
+Linking .pio\build\esp32-bench\firmware.elf
+Retrieving maximum program size .pio\build\esp32-bench\firmware.elf
+Checking size .pio\build\esp32-bench\firmware.elf
+Advanced Memory Usage is available via "PlatformIO Home > Project Inspect"
+RAM:   [=         ]  14.4% (used 47044 bytes from 327680 bytes)
+Flash: [======    ]  60.7% (used 795805 bytes from 1310720 bytes)
+Building .pio\build\esp32-bench\firmware.bin
+esptool.py v4.5.1
+Creating esp32 image...
+Merged 27 ELF sections
+Successfully created esp32 image.
+========================= [SUCCESS] Took 21.96 seconds =========================
+
+Processing esp32-bench-sta (platform: espressif32@6.9.0; board: esp32dev; framework: arduino)
+--------------------------------------------------------------------------------
+Verbose mode can be enabled via `-v, --verbose` option
+CONFIGURATION: https://docs.platformio.org/page/boards/espressif32/esp32dev.html
+PLATFORM: Espressif 32 (6.9.0) > Espressif ESP32 Dev Module
+HARDWARE: ESP32 240MHz, 320KB RAM, 4MB Flash
+DEBUG: Current (cmsis-dap) External (cmsis-dap, esp-bridge, esp-prog, iot-bus-jtag, jlink, minimodule, olimex-arm-usb-ocd, olimex-arm-usb-ocd-h, olimex-arm-usb-tiny-h, olimex-jtag-tiny, tumpa)
+PACKAGES: 
+ - framework-arduinoespressif32 @ 3.20017.241212+sha.dcc1105b 
+ - tool-esptoolpy @ 1.40501.0 (4.5.1) 
+ - toolchain-xtensa-esp32 @ 8.4.0+2021r2-patch5
+LDF: Library Dependency Finder -> https://bit.ly/configure-pio-ldf
+LDF Modes: Finder ~ chain, Compatibility ~ soft
+Found 34 compatible libraries
+Scanning dependencies...
+Dependency Graph
+|-- WebSockets @ 2.6.1
+|-- WebServer @ 2.0.0
+|-- WiFi @ 2.0.0
+|-- Ethernet @ 2.0.0
+|-- SPI @ 2.0.0
+|-- WiFiClientSecure @ 2.0.0
+Building in release mode
+Compiling .pio\build\esp32-bench-sta\src\prototype\main.cpp.o
+Compiling .pio\build\esp32-bench-sta\src\prototype\motor_pwm_idf.cpp.o
+Compiling .pio\build\esp32-bench-sta\src\prototype\servo_pwm_idf.cpp.o
+Building .pio\build\esp32-bench-sta\bootloader.bin
+Generating partitions .pio\build\esp32-bench-sta\partitions.bin
+esptool.py v4.5.1
+Creating esp32 image...
+Merged 1 ELF section
+Successfully created esp32 image.
+Compiling .pio\build\esp32-bench-sta\libeb0\WiFi\WiFi.cpp.o
+Compiling .pio\build\esp32-bench-sta\libeb0\WiFi\WiFiAP.cpp.o
+Compiling .pio\build\esp32-bench-sta\libeb0\WiFi\WiFiClient.cpp.o
+Compiling .pio\build\esp32-bench-sta\libeb0\WiFi\WiFiGeneric.cpp.o
+Compiling .pio\build\esp32-bench-sta\libeb0\WiFi\WiFiMulti.cpp.o
+Compiling .pio\build\esp32-bench-sta\libeb0\WiFi\WiFiSTA.cpp.o
+Compiling .pio\build\esp32-bench-sta\libeb0\WiFi\WiFiScan.cpp.o
+Compiling .pio\build\esp32-bench-sta\libeb0\WiFi\WiFiServer.cpp.o
+Compiling .pio\build\esp32-bench-sta\libeb0\WiFi\WiFiUdp.cpp.o
+Compiling .pio\build\esp32-bench-sta\libd4a\Ethernet\ETH.cpp.o
+Compiling .pio\build\esp32-bench-sta\lib2d7\SPI\SPI.cpp.o
+Compiling .pio\build\esp32-bench-sta\lib081\WiFiClientSecure\WiFiClientSecure.cpp.o
+Compiling .pio\build\esp32-bench-sta\lib081\WiFiClientSecure\esp_crt_bundle.c.o
+Compiling .pio\build\esp32-bench-sta\lib081\WiFiClientSecure\ssl_client.cpp.o
+Compiling .pio\build\esp32-bench-sta\libc7f\WebSockets\SocketIOclient.cpp.o
+Archiving .pio\build\esp32-bench-sta\libeb0\libWiFi.a
+Compiling .pio\build\esp32-bench-sta\libc7f\WebSockets\WebSockets.cpp.o
+Indexing .pio\build\esp32-bench-sta\libeb0\libWiFi.a
+Compiling .pio\build\esp32-bench-sta\libc7f\WebSockets\WebSocketsClient.cpp.o
+Compiling .pio\build\esp32-bench-sta\libc7f\WebSockets\WebSocketsServer.cpp.o
+Compiling .pio\build\esp32-bench-sta\libc7f\WebSockets\libb64\cdecode.c.o
+Compiling .pio\build\esp32-bench-sta\libc7f\WebSockets\libb64\cencode.c.o
+Compiling .pio\build\esp32-bench-sta\libc7f\WebSockets\libsha1\libsha1.c.o
+Compiling .pio\build\esp32-bench-sta\lib14a\FS\FS.cpp.o
+Compiling .pio\build\esp32-bench-sta\lib14a\FS\vfs_api.cpp.o
+Compiling .pio\build\esp32-bench-sta\lib2aa\WebServer\Parsing.cpp.o
+Compiling .pio\build\esp32-bench-sta\lib2aa\WebServer\WebServer.cpp.o
+Archiving .pio\build\esp32-bench-sta\lib2d7\libSPI.a
+Archiving .pio\build\esp32-bench-sta\libd4a\libEthernet.a
+Indexing .pio\build\esp32-bench-sta\lib2d7\libSPI.a
+Indexing .pio\build\esp32-bench-sta\libd4a\libEthernet.a
+Compiling .pio\build\esp32-bench-sta\lib2aa\WebServer\detail\mimetable.cpp.o
+Compiling .pio\build\esp32-bench-sta\FrameworkArduino\Esp.cpp.o
+Compiling .pio\build\esp32-bench-sta\FrameworkArduino\FirmwareMSC.cpp.o
+Compiling .pio\build\esp32-bench-sta\FrameworkArduino\FunctionalInterrupt.cpp.o
+Archiving .pio\build\esp32-bench-sta\lib081\libWiFiClientSecure.a
+Compiling .pio\build\esp32-bench-sta\FrameworkArduino\HWCDC.cpp.o
+Indexing .pio\build\esp32-bench-sta\lib081\libWiFiClientSecure.a
+Compiling .pio\build\esp32-bench-sta\FrameworkArduino\HardwareSerial.cpp.o
+Compiling .pio\build\esp32-bench-sta\FrameworkArduino\IPAddress.cpp.o
+Compiling .pio\build\esp32-bench-sta\FrameworkArduino\IPv6Address.cpp.o
+Compiling .pio\build\esp32-bench-sta\FrameworkArduino\MD5Builder.cpp.o
+Compiling .pio\build\esp32-bench-sta\FrameworkArduino\Print.cpp.o
+Compiling .pio\build\esp32-bench-sta\FrameworkArduino\Stream.cpp.o
+Archiving .pio\build\esp32-bench-sta\libc7f\libWebSockets.a
+Archiving .pio\build\esp32-bench-sta\lib14a\libFS.a
+Indexing .pio\build\esp32-bench-sta\libc7f\libWebSockets.a
+Indexing .pio\build\esp32-bench-sta\lib14a\libFS.a
+Compiling .pio\build\esp32-bench-sta\FrameworkArduino\StreamString.cpp.o
+Compiling .pio\build\esp32-bench-sta\FrameworkArduino\Tone.cpp.o
+Compiling .pio\build\esp32-bench-sta\FrameworkArduino\USB.cpp.o
+Compiling .pio\build\esp32-bench-sta\FrameworkArduino\USBCDC.cpp.o
+Compiling .pio\build\esp32-bench-sta\FrameworkArduino\USBMSC.cpp.o
+Archiving .pio\build\esp32-bench-sta\lib2aa\libWebServer.a
+Compiling .pio\build\esp32-bench-sta\FrameworkArduino\WMath.cpp.o
+Indexing .pio\build\esp32-bench-sta\lib2aa\libWebServer.a
+Compiling .pio\build\esp32-bench-sta\FrameworkArduino\WString.cpp.o
+Compiling .pio\build\esp32-bench-sta\FrameworkArduino\base64.cpp.o
+Compiling .pio\build\esp32-bench-sta\FrameworkArduino\cbuf.cpp.o
+Compiling .pio\build\esp32-bench-sta\FrameworkArduino\esp32-hal-adc.c.o
+Compiling .pio\build\esp32-bench-sta\FrameworkArduino\esp32-hal-bt.c.o
+Compiling .pio\build\esp32-bench-sta\FrameworkArduino\esp32-hal-cpu.c.o
+Compiling .pio\build\esp32-bench-sta\FrameworkArduino\esp32-hal-dac.c.o
+Compiling .pio\build\esp32-bench-sta\FrameworkArduino\esp32-hal-gpio.c.o
+Compiling .pio\build\esp32-bench-sta\FrameworkArduino\esp32-hal-i2c-slave.c.o
+Compiling .pio\build\esp32-bench-sta\FrameworkArduino\esp32-hal-i2c.c.o
+Compiling .pio\build\esp32-bench-sta\FrameworkArduino\esp32-hal-ledc.c.o
+Compiling .pio\build\esp32-bench-sta\FrameworkArduino\esp32-hal-matrix.c.o
+Compiling .pio\build\esp32-bench-sta\FrameworkArduino\esp32-hal-misc.c.o
+Compiling .pio\build\esp32-bench-sta\FrameworkArduino\esp32-hal-psram.c.o
+Compiling .pio\build\esp32-bench-sta\FrameworkArduino\esp32-hal-rgb-led.c.o
+Compiling .pio\build\esp32-bench-sta\FrameworkArduino\esp32-hal-rmt.c.o
+Compiling .pio\build\esp32-bench-sta\FrameworkArduino\esp32-hal-sigmadelta.c.o
+Compiling .pio\build\esp32-bench-sta\FrameworkArduino\esp32-hal-spi.c.o
+Compiling .pio\build\esp32-bench-sta\FrameworkArduino\esp32-hal-time.c.o
+Compiling .pio\build\esp32-bench-sta\FrameworkArduino\esp32-hal-timer.c.o
+Compiling .pio\build\esp32-bench-sta\FrameworkArduino\esp32-hal-tinyusb.c.o
+Compiling .pio\build\esp32-bench-sta\FrameworkArduino\esp32-hal-touch.c.o
+Compiling .pio\build\esp32-bench-sta\FrameworkArduino\esp32-hal-uart.c.o
+Compiling .pio\build\esp32-bench-sta\FrameworkArduino\firmware_msc_fat.c.o
+Compiling .pio\build\esp32-bench-sta\FrameworkArduino\libb64\cdecode.c.o
+Compiling .pio\build\esp32-bench-sta\FrameworkArduino\libb64\cencode.c.o
+Compiling .pio\build\esp32-bench-sta\FrameworkArduino\main.cpp.o
+Compiling .pio\build\esp32-bench-sta\FrameworkArduino\stdlib_noniso.c.o
+Compiling .pio\build\esp32-bench-sta\FrameworkArduino\wiring_pulse.c.o
+Compiling .pio\build\esp32-bench-sta\FrameworkArduino\wiring_shift.c.o
+Archiving .pio\build\esp32-bench-sta\libFrameworkArduino.a
+Indexing .pio\build\esp32-bench-sta\libFrameworkArduino.a
+Linking .pio\build\esp32-bench-sta\firmware.elf
+Retrieving maximum program size .pio\build\esp32-bench-sta\firmware.elf
+Checking size .pio\build\esp32-bench-sta\firmware.elf
+Advanced Memory Usage is available via "PlatformIO Home > Project Inspect"
+RAM:   [=         ]  14.4% (used 47044 bytes from 327680 bytes)
+Flash: [======    ]  60.7% (used 796161 bytes from 1310720 bytes)
+Building .pio\build\esp32-bench-sta\firmware.bin
+esptool.py v4.5.1
+Creating esp32 image...
+Merged 27 ELF sections
+Successfully created esp32 image.
+========================= [SUCCESS] Took 16.15 seconds =========================
+
+Processing xiao-car-qvga (platform: espressif32@6.9.0; board: seeed_xiao_esp32s3; framework: arduino)
+--------------------------------------------------------------------------------
+Verbose mode can be enabled via `-v, --verbose` option
+CONFIGURATION: https://docs.platformio.org/page/boards/espressif32/seeed_xiao_esp32s3.html
+PLATFORM: Espressif 32 (6.9.0) > Seeed Studio XIAO ESP32S3
+HARDWARE: ESP32S3 240MHz, 320KB RAM, 8MB Flash
+DEBUG: Current (cmsis-dap) External (cmsis-dap, esp-bridge, esp-builtin, esp-prog, iot-bus-jtag, jlink, minimodule, olimex-arm-usb-ocd, olimex-arm-usb-ocd-h, olimex-arm-usb-tiny-h, olimex-jtag-tiny, tumpa)
+PACKAGES: 
+ - framework-arduinoespressif32 @ 3.20017.241212+sha.dcc1105b 
+ - tool-esptoolpy @ 1.40501.0 (4.5.1) 
+ - toolchain-riscv32-esp @ 8.4.0+2021r2-patch5 
+ - toolchain-xtensa-esp32s3 @ 8.4.0+2021r2-patch5
+LDF: Library Dependency Finder -> https://bit.ly/configure-pio-ldf
+LDF Modes: Finder ~ chain, Compatibility ~ soft
+Found 34 compatible libraries
+Scanning dependencies...
+Dependency Graph
+|-- WebSockets @ 2.6.1
+|-- WiFi @ 2.0.0
+|-- WebServer @ 2.0.0
+|-- Ethernet @ 2.0.0
+|-- SPI @ 2.0.0
+|-- WiFiClientSecure @ 2.0.0
+Building in release mode
+Compiling .pio\build\xiao-car-qvga\src\camera\main.cpp.o
+Compiling .pio\build\xiao-car-qvga\src\prototype\main.cpp.o
+Compiling .pio\build\xiao-car-qvga\src\prototype\motor_pwm_idf.cpp.o
+Compiling .pio\build\xiao-car-qvga\src\prototype\servo_pwm_idf.cpp.o
+Building .pio\build\xiao-car-qvga\bootloader.bin
+Generating partitions .pio\build\xiao-car-qvga\partitions.bin
+esptool.py v4.5.1
+Creating esp32s3 image...
+Merged 1 ELF section
+Successfully created esp32s3 image.
+Compiling .pio\build\xiao-car-qvga\libeb0\WiFi\WiFi.cpp.o
+Compiling .pio\build\xiao-car-qvga\libeb0\WiFi\WiFiAP.cpp.o
+Compiling .pio\build\xiao-car-qvga\libeb0\WiFi\WiFiClient.cpp.o
+Compiling .pio\build\xiao-car-qvga\libeb0\WiFi\WiFiGeneric.cpp.o
+Compiling .pio\build\xiao-car-qvga\libeb0\WiFi\WiFiMulti.cpp.o
+Compiling .pio\build\xiao-car-qvga\libeb0\WiFi\WiFiSTA.cpp.o
+Compiling .pio\build\xiao-car-qvga\libeb0\WiFi\WiFiScan.cpp.o
+Compiling .pio\build\xiao-car-qvga\libeb0\WiFi\WiFiServer.cpp.o
+Compiling .pio\build\xiao-car-qvga\libeb0\WiFi\WiFiUdp.cpp.o
+Compiling .pio\build\xiao-car-qvga\libd4a\Ethernet\ETH.cpp.o
+Compiling .pio\build\xiao-car-qvga\lib2d7\SPI\SPI.cpp.o
+Compiling .pio\build\xiao-car-qvga\lib081\WiFiClientSecure\WiFiClientSecure.cpp.o
+Compiling .pio\build\xiao-car-qvga\lib081\WiFiClientSecure\esp_crt_bundle.c.o
+Compiling .pio\build\xiao-car-qvga\lib081\WiFiClientSecure\ssl_client.cpp.o
+Compiling .pio\build\xiao-car-qvga\lib2cf\WebSockets\SocketIOclient.cpp.o
+Compiling .pio\build\xiao-car-qvga\lib2cf\WebSockets\WebSockets.cpp.o
+Compiling .pio\build\xiao-car-qvga\lib2cf\WebSockets\WebSocketsClient.cpp.o
+Compiling .pio\build\xiao-car-qvga\lib2cf\WebSockets\WebSocketsServer.cpp.o
+Compiling .pio\build\xiao-car-qvga\lib2cf\WebSockets\libb64\cdecode.c.o
+Compiling .pio\build\xiao-car-qvga\lib2cf\WebSockets\libb64\cencode.c.o
+Archiving .pio\build\xiao-car-qvga\libeb0\libWiFi.a
+Indexing .pio\build\xiao-car-qvga\libeb0\libWiFi.a
+Archiving .pio\build\xiao-car-qvga\libd4a\libEthernet.a
+Indexing .pio\build\xiao-car-qvga\libd4a\libEthernet.a
+Compiling .pio\build\xiao-car-qvga\lib2cf\WebSockets\libsha1\libsha1.c.o
+Compiling .pio\build\xiao-car-qvga\lib14a\FS\FS.cpp.o
+Archiving .pio\build\xiao-car-qvga\lib2d7\libSPI.a
+Indexing .pio\build\xiao-car-qvga\lib2d7\libSPI.a
+Compiling .pio\build\xiao-car-qvga\lib14a\FS\vfs_api.cpp.o
+Compiling .pio\build\xiao-car-qvga\lib2aa\WebServer\Parsing.cpp.o
+Compiling .pio\build\xiao-car-qvga\lib2aa\WebServer\WebServer.cpp.o
+Compiling .pio\build\xiao-car-qvga\lib2aa\WebServer\detail\mimetable.cpp.o
+Compiling .pio\build\xiao-car-qvga\FrameworkArduino\Esp.cpp.o
+Archiving .pio\build\xiao-car-qvga\lib081\libWiFiClientSecure.a
+Archiving .pio\build\xiao-car-qvga\lib2cf\libWebSockets.a
+Compiling .pio\build\xiao-car-qvga\FrameworkArduino\FirmwareMSC.cpp.o
+Compiling .pio\build\xiao-car-qvga\FrameworkArduino\FunctionalInterrupt.cpp.o
+Compiling .pio\build\xiao-car-qvga\FrameworkArduino\HWCDC.cpp.o
+Indexing .pio\build\xiao-car-qvga\lib081\libWiFiClientSecure.a
+Indexing .pio\build\xiao-car-qvga\lib2cf\libWebSockets.a
+Compiling .pio\build\xiao-car-qvga\FrameworkArduino\HardwareSerial.cpp.o
+Compiling .pio\build\xiao-car-qvga\FrameworkArduino\IPAddress.cpp.o
+Compiling .pio\build\xiao-car-qvga\FrameworkArduino\IPv6Address.cpp.o
+Compiling .pio\build\xiao-car-qvga\FrameworkArduino\MD5Builder.cpp.o
+Compiling .pio\build\xiao-car-qvga\FrameworkArduino\Print.cpp.o
+Archiving .pio\build\xiao-car-qvga\lib14a\libFS.a
+Compiling .pio\build\xiao-car-qvga\FrameworkArduino\Stream.cpp.o
+Indexing .pio\build\xiao-car-qvga\lib14a\libFS.a
+Compiling .pio\build\xiao-car-qvga\FrameworkArduino\StreamString.cpp.o
+Compiling .pio\build\xiao-car-qvga\FrameworkArduino\Tone.cpp.o
+Compiling .pio\build\xiao-car-qvga\FrameworkArduino\USB.cpp.o
+Archiving .pio\build\xiao-car-qvga\lib2aa\libWebServer.a
+Compiling .pio\build\xiao-car-qvga\FrameworkArduino\USBCDC.cpp.o
+Compiling .pio\build\xiao-car-qvga\FrameworkArduino\USBMSC.cpp.o
+Compiling .pio\build\xiao-car-qvga\FrameworkArduino\WMath.cpp.o
+Compiling .pio\build\xiao-car-qvga\FrameworkArduino\WString.cpp.o
+Compiling .pio\build\xiao-car-qvga\FrameworkArduino\base64.cpp.o
+Compiling .pio\build\xiao-car-qvga\FrameworkArduino\cbuf.cpp.o
+Indexing .pio\build\xiao-car-qvga\lib2aa\libWebServer.a
+Compiling .pio\build\xiao-car-qvga\FrameworkArduino\esp32-hal-adc.c.o
+Compiling .pio\build\xiao-car-qvga\FrameworkArduino\esp32-hal-bt.c.o
+Compiling .pio\build\xiao-car-qvga\FrameworkArduino\esp32-hal-cpu.c.o
+Compiling .pio\build\xiao-car-qvga\FrameworkArduino\esp32-hal-dac.c.o
+Compiling .pio\build\xiao-car-qvga\FrameworkArduino\esp32-hal-gpio.c.o
+Compiling .pio\build\xiao-car-qvga\FrameworkArduino\esp32-hal-i2c-slave.c.o
+Compiling .pio\build\xiao-car-qvga\FrameworkArduino\esp32-hal-i2c.c.o
+Compiling .pio\build\xiao-car-qvga\FrameworkArduino\esp32-hal-ledc.c.o
+Compiling .pio\build\xiao-car-qvga\FrameworkArduino\esp32-hal-matrix.c.o
+Compiling .pio\build\xiao-car-qvga\FrameworkArduino\esp32-hal-misc.c.o
+Compiling .pio\build\xiao-car-qvga\FrameworkArduino\esp32-hal-psram.c.o
+Compiling .pio\build\xiao-car-qvga\FrameworkArduino\esp32-hal-rgb-led.c.o
+Compiling .pio\build\xiao-car-qvga\FrameworkArduino\esp32-hal-rmt.c.o
+Compiling .pio\build\xiao-car-qvga\FrameworkArduino\esp32-hal-sigmadelta.c.o
+Compiling .pio\build\xiao-car-qvga\FrameworkArduino\esp32-hal-spi.c.o
+Compiling .pio\build\xiao-car-qvga\FrameworkArduino\esp32-hal-time.c.o
+Compiling .pio\build\xiao-car-qvga\FrameworkArduino\esp32-hal-timer.c.o
+Compiling .pio\build\xiao-car-qvga\FrameworkArduino\esp32-hal-tinyusb.c.o
+Compiling .pio\build\xiao-car-qvga\FrameworkArduino\esp32-hal-touch.c.o
+Compiling .pio\build\xiao-car-qvga\FrameworkArduino\esp32-hal-uart.c.o
+Compiling .pio\build\xiao-car-qvga\FrameworkArduino\firmware_msc_fat.c.o
+Compiling .pio\build\xiao-car-qvga\FrameworkArduino\libb64\cdecode.c.o
+Compiling .pio\build\xiao-car-qvga\FrameworkArduino\libb64\cencode.c.o
+Compiling .pio\build\xiao-car-qvga\FrameworkArduino\main.cpp.o
+Compiling .pio\build\xiao-car-qvga\FrameworkArduino\stdlib_noniso.c.o
+Compiling .pio\build\xiao-car-qvga\FrameworkArduino\wiring_pulse.c.o
+Compiling .pio\build\xiao-car-qvga\FrameworkArduino\wiring_shift.c.o
+Archiving .pio\build\xiao-car-qvga\libFrameworkArduino.a
+Indexing .pio\build\xiao-car-qvga\libFrameworkArduino.a
+Linking .pio\build\xiao-car-qvga\firmware.elf
+Retrieving maximum program size .pio\build\xiao-car-qvga\firmware.elf
+Checking size .pio\build\xiao-car-qvga\firmware.elf
+Advanced Memory Usage is available via "PlatformIO Home > Project Inspect"
+RAM:   [==        ]  15.5% (used 50824 bytes from 327680 bytes)
+Flash: [==        ]  24.7% (used 827029 bytes from 3342336 bytes)
+Building .pio\build\xiao-car-qvga\firmware.bin
+esptool.py v4.5.1
+Creating esp32s3 image...
+Merged 2 ELF sections
+Successfully created esp32s3 image.
+========================= [SUCCESS] Took 22.73 seconds =========================
+
+Processing xiao-car-vga (platform: espressif32@6.9.0; board: seeed_xiao_esp32s3; framework: arduino)
+--------------------------------------------------------------------------------
+Verbose mode can be enabled via `-v, --verbose` option
+CONFIGURATION: https://docs.platformio.org/page/boards/espressif32/seeed_xiao_esp32s3.html
+PLATFORM: Espressif 32 (6.9.0) > Seeed Studio XIAO ESP32S3
+HARDWARE: ESP32S3 240MHz, 320KB RAM, 8MB Flash
+DEBUG: Current (cmsis-dap) External (cmsis-dap, esp-bridge, esp-builtin, esp-prog, iot-bus-jtag, jlink, minimodule, olimex-arm-usb-ocd, olimex-arm-usb-ocd-h, olimex-arm-usb-tiny-h, olimex-jtag-tiny, tumpa)
+PACKAGES: 
+ - framework-arduinoespressif32 @ 3.20017.241212+sha.dcc1105b 
+ - tool-esptoolpy @ 1.40501.0 (4.5.1) 
+ - toolchain-riscv32-esp @ 8.4.0+2021r2-patch5 
+ - toolchain-xtensa-esp32s3 @ 8.4.0+2021r2-patch5
+LDF: Library Dependency Finder -> https://bit.ly/configure-pio-ldf
+LDF Modes: Finder ~ chain, Compatibility ~ soft
+Found 34 compatible libraries
+Scanning dependencies...
+Dependency Graph
+|-- WebSockets @ 2.6.1
+|-- WiFi @ 2.0.0
+|-- WebServer @ 2.0.0
+|-- Ethernet @ 2.0.0
+|-- SPI @ 2.0.0
+|-- WiFiClientSecure @ 2.0.0
+Building in release mode
+Compiling .pio\build\xiao-car-vga\src\camera\main.cpp.o
+Compiling .pio\build\xiao-car-vga\src\prototype\main.cpp.o
+Compiling .pio\build\xiao-car-vga\src\prototype\motor_pwm_idf.cpp.o
+Compiling .pio\build\xiao-car-vga\src\prototype\servo_pwm_idf.cpp.o
+Building .pio\build\xiao-car-vga\bootloader.bin
+Generating partitions .pio\build\xiao-car-vga\partitions.bin
+esptool.py v4.5.1
+Creating esp32s3 image...
+Merged 1 ELF section
+Successfully created esp32s3 image.
+Compiling .pio\build\xiao-car-vga\libeb0\WiFi\WiFi.cpp.o
+Compiling .pio\build\xiao-car-vga\libeb0\WiFi\WiFiAP.cpp.o
+Compiling .pio\build\xiao-car-vga\libeb0\WiFi\WiFiClient.cpp.o
+Compiling .pio\build\xiao-car-vga\libeb0\WiFi\WiFiGeneric.cpp.o
+Compiling .pio\build\xiao-car-vga\libeb0\WiFi\WiFiMulti.cpp.o
+Compiling .pio\build\xiao-car-vga\libeb0\WiFi\WiFiSTA.cpp.o
+Compiling .pio\build\xiao-car-vga\libeb0\WiFi\WiFiScan.cpp.o
+Compiling .pio\build\xiao-car-vga\libeb0\WiFi\WiFiServer.cpp.o
+Compiling .pio\build\xiao-car-vga\libeb0\WiFi\WiFiUdp.cpp.o
+Compiling .pio\build\xiao-car-vga\libd4a\Ethernet\ETH.cpp.o
+Compiling .pio\build\xiao-car-vga\lib2d7\SPI\SPI.cpp.o
+Compiling .pio\build\xiao-car-vga\lib081\WiFiClientSecure\WiFiClientSecure.cpp.o
+Compiling .pio\build\xiao-car-vga\lib081\WiFiClientSecure\esp_crt_bundle.c.o
+Compiling .pio\build\xiao-car-vga\lib081\WiFiClientSecure\ssl_client.cpp.o
+Compiling .pio\build\xiao-car-vga\lib22b\WebSockets\SocketIOclient.cpp.o
+Compiling .pio\build\xiao-car-vga\lib22b\WebSockets\WebSockets.cpp.o
+Compiling .pio\build\xiao-car-vga\lib22b\WebSockets\WebSocketsClient.cpp.o
+Compiling .pio\build\xiao-car-vga\lib22b\WebSockets\WebSocketsServer.cpp.o
+Compiling .pio\build\xiao-car-vga\lib22b\WebSockets\libb64\cdecode.c.o
+Compiling .pio\build\xiao-car-vga\lib22b\WebSockets\libb64\cencode.c.o
+Archiving .pio\build\xiao-car-vga\libeb0\libWiFi.a
+Compiling .pio\build\xiao-car-vga\lib22b\WebSockets\libsha1\libsha1.c.o
+Indexing .pio\build\xiao-car-vga\libeb0\libWiFi.a
+Compiling .pio\build\xiao-car-vga\lib14a\FS\FS.cpp.o
+Compiling .pio\build\xiao-car-vga\lib14a\FS\vfs_api.cpp.o
+Compiling .pio\build\xiao-car-vga\lib2aa\WebServer\Parsing.cpp.o
+Compiling .pio\build\xiao-car-vga\lib2aa\WebServer\WebServer.cpp.o
+Archiving .pio\build\xiao-car-vga\lib2d7\libSPI.a
+Indexing .pio\build\xiao-car-vga\lib2d7\libSPI.a
+Archiving .pio\build\xiao-car-vga\libd4a\libEthernet.a
+Compiling .pio\build\xiao-car-vga\lib2aa\WebServer\detail\mimetable.cpp.o
+Indexing .pio\build\xiao-car-vga\libd4a\libEthernet.a
+Compiling .pio\build\xiao-car-vga\FrameworkArduino\Esp.cpp.o
+Compiling .pio\build\xiao-car-vga\FrameworkArduino\FirmwareMSC.cpp.o
+Compiling .pio\build\xiao-car-vga\FrameworkArduino\FunctionalInterrupt.cpp.o
+Archiving .pio\build\xiao-car-vga\lib081\libWiFiClientSecure.a
+Indexing .pio\build\xiao-car-vga\lib081\libWiFiClientSecure.a
+Compiling .pio\build\xiao-car-vga\FrameworkArduino\HWCDC.cpp.o
+Compiling .pio\build\xiao-car-vga\FrameworkArduino\HardwareSerial.cpp.o
+Compiling .pio\build\xiao-car-vga\FrameworkArduino\IPAddress.cpp.o
+Compiling .pio\build\xiao-car-vga\FrameworkArduino\IPv6Address.cpp.o
+Archiving .pio\build\xiao-car-vga\lib22b\libWebSockets.a
+Compiling .pio\build\xiao-car-vga\FrameworkArduino\MD5Builder.cpp.o
+Compiling .pio\build\xiao-car-vga\FrameworkArduino\Print.cpp.o
+Indexing .pio\build\xiao-car-vga\lib22b\libWebSockets.a
+Archiving .pio\build\xiao-car-vga\lib14a\libFS.a
+Compiling .pio\build\xiao-car-vga\FrameworkArduino\Stream.cpp.o
+Indexing .pio\build\xiao-car-vga\lib14a\libFS.a
+Compiling .pio\build\xiao-car-vga\FrameworkArduino\StreamString.cpp.o
+Compiling .pio\build\xiao-car-vga\FrameworkArduino\Tone.cpp.o
+Compiling .pio\build\xiao-car-vga\FrameworkArduino\USB.cpp.o
+Compiling .pio\build\xiao-car-vga\FrameworkArduino\USBCDC.cpp.o
+Compiling .pio\build\xiao-car-vga\FrameworkArduino\USBMSC.cpp.o
+Archiving .pio\build\xiao-car-vga\lib2aa\libWebServer.a
+Indexing .pio\build\xiao-car-vga\lib2aa\libWebServer.a
+Compiling .pio\build\xiao-car-vga\FrameworkArduino\WMath.cpp.o
+Compiling .pio\build\xiao-car-vga\FrameworkArduino\WString.cpp.o
+Compiling .pio\build\xiao-car-vga\FrameworkArduino\base64.cpp.o
+Compiling .pio\build\xiao-car-vga\FrameworkArduino\cbuf.cpp.o
+Compiling .pio\build\xiao-car-vga\FrameworkArduino\esp32-hal-adc.c.o
+Compiling .pio\build\xiao-car-vga\FrameworkArduino\esp32-hal-bt.c.o
+Compiling .pio\build\xiao-car-vga\FrameworkArduino\esp32-hal-cpu.c.o
+Compiling .pio\build\xiao-car-vga\FrameworkArduino\esp32-hal-dac.c.o
+Compiling .pio\build\xiao-car-vga\FrameworkArduino\esp32-hal-gpio.c.o
+Compiling .pio\build\xiao-car-vga\FrameworkArduino\esp32-hal-i2c-slave.c.o
+Compiling .pio\build\xiao-car-vga\FrameworkArduino\esp32-hal-i2c.c.o
+Compiling .pio\build\xiao-car-vga\FrameworkArduino\esp32-hal-ledc.c.o
+Compiling .pio\build\xiao-car-vga\FrameworkArduino\esp32-hal-matrix.c.o
+Compiling .pio\build\xiao-car-vga\FrameworkArduino\esp32-hal-misc.c.o
+Compiling .pio\build\xiao-car-vga\FrameworkArduino\esp32-hal-psram.c.o
+Compiling .pio\build\xiao-car-vga\FrameworkArduino\esp32-hal-rgb-led.c.o
+Compiling .pio\build\xiao-car-vga\FrameworkArduino\esp32-hal-rmt.c.o
+Compiling .pio\build\xiao-car-vga\FrameworkArduino\esp32-hal-sigmadelta.c.o
+Compiling .pio\build\xiao-car-vga\FrameworkArduino\esp32-hal-spi.c.o
+Compiling .pio\build\xiao-car-vga\FrameworkArduino\esp32-hal-time.c.o
+Compiling .pio\build\xiao-car-vga\FrameworkArduino\esp32-hal-timer.c.o
+Compiling .pio\build\xiao-car-vga\FrameworkArduino\esp32-hal-tinyusb.c.o
+Compiling .pio\build\xiao-car-vga\FrameworkArduino\esp32-hal-touch.c.o
+Compiling .pio\build\xiao-car-vga\FrameworkArduino\esp32-hal-uart.c.o
+Compiling .pio\build\xiao-car-vga\FrameworkArduino\firmware_msc_fat.c.o
+Compiling .pio\build\xiao-car-vga\FrameworkArduino\libb64\cdecode.c.o
+Compiling .pio\build\xiao-car-vga\FrameworkArduino\libb64\cencode.c.o
+Compiling .pio\build\xiao-car-vga\FrameworkArduino\main.cpp.o
+Compiling .pio\build\xiao-car-vga\FrameworkArduino\stdlib_noniso.c.o
+Compiling .pio\build\xiao-car-vga\FrameworkArduino\wiring_pulse.c.o
+Compiling .pio\build\xiao-car-vga\FrameworkArduino\wiring_shift.c.o
+Archiving .pio\build\xiao-car-vga\libFrameworkArduino.a
+Indexing .pio\build\xiao-car-vga\libFrameworkArduino.a
+Linking .pio\build\xiao-car-vga\firmware.elf
+Retrieving maximum program size .pio\build\xiao-car-vga\firmware.elf
+Checking size .pio\build\xiao-car-vga\firmware.elf
+Advanced Memory Usage is available via "PlatformIO Home > Project Inspect"
+RAM:   [==        ]  15.5% (used 50824 bytes from 327680 bytes)
+Flash: [==        ]  24.7% (used 827029 bytes from 3342336 bytes)
+Building .pio\build\xiao-car-vga\firmware.bin
+esptool.py v4.5.1
+Creating esp32s3 image...
+Merged 2 ELF sections
+Successfully created esp32s3 image.
+========================= [SUCCESS] Took 17.44 seconds =========================
+
+Environment      Status    Duration
+---------------  --------  ------------
+esp32-bench      SUCCESS   00:00:21.958
+esp32-bench-sta  SUCCESS   00:00:16.146
+xiao-car-qvga    SUCCESS   00:00:22.734
+xiao-car-vga     SUCCESS   00:00:17.445
+========================= 4 succeeded in 00:01:18.283 =========================

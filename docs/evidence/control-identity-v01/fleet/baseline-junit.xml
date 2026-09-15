@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="vea.raceremote.control.FirmwareFleetTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2026-09-15T17:37:47" hostname="DESKTOP-LR64B4F" time="0.627">
+  <properties/>
+  <testcase name="sixCarsKeepTheirOwnersAndIsolateLossOfOneLink" classname="vea.raceremote.control.FirmwareFleetTest" time="0.627"/>
+  <system-out><![CDATA[OWNERS [NativeState(accepted=true, active=true, armed=true, owner=1, token=1001, sequence=2, throttle=100, steering=-100, lastCommand=223, stopRevision=0, response=-), NativeState(accepted=true, active=true, armed=true, owner=1, token=1101, sequence=2, throttle=200, steering=-200, lastCommand=222, stopRevision=0, response=-), NativeState(accepted=true, active=true, armed=true, owner=1, token=1201, sequence=2, throttle=300, steering=-300, lastCommand=222, stopRevision=0, response=-), NativeState(accepted=true, active=true, armed=true, owner=1, token=1301, sequence=2, throttle=400, steering=-400, lastCommand=222, stopRevision=0, response=-), NativeState(accepted=true, active=true, armed=true, owner=1, token=1401, sequence=2, throttle=500, steering=-500, lastCommand=222, stopRevision=0, response=-), NativeState(accepted=true, active=true, armed=true, owner=1, token=1501, sequence=2, throttle=600, steering=-600, lastCommand=223, stopRevision=0, response=-)]
+REJECTED_SECOND_DRIVERS [NativeState(accepted=true, active=true, armed=true, owner=1, token=1001, sequence=2, throttle=100, steering=-100, lastCommand=223, stopRevision=0, response=-), NativeState(accepted=true, active=true, armed=true, owner=1, token=1101, sequence=2, throttle=200, steering=-200, lastCommand=222, stopRevision=0, response=-), NativeState(accepted=true, active=true, armed=true, owner=1, token=1201, sequence=2, throttle=300, steering=-300, lastCommand=222, stopRevision=0, response=-), NativeState(accepted=true, active=true, armed=true, owner=1, token=1301, sequence=2, throttle=400, steering=-400, lastCommand=222, stopRevision=0, response=-), NativeState(accepted=true, active=true, armed=true, owner=1, token=1401, sequence=2, throttle=500, steering=-500, lastCommand=222, stopRevision=0, response=-), NativeState(accepted=true, active=true, armed=true, owner=1, token=1501, sequence=2, throttle=600, steering=-600, lastCommand=223, stopRevision=0, response=-)]
+REPLACEMENT_NEUTRAL NativeState(accepted=true, active=true, armed=true, owner=3, token=1003, sequence=1, throttle=0, steering=0, lastCommand=239, stopRevision=1, response=-)
+ONE_LINK_LOST_OTHERS_ADVANCING [NativeState(accepted=true, active=true, armed=true, owner=3, token=1003, sequence=19, throttle=750, steering=-250, lastCommand=582, stopRevision=1, response=-), NativeState(accepted=true, active=true, armed=true, owner=1, token=1101, sequence=20, throttle=200, steering=-200, lastCommand=581, stopRevision=0, response=-), NativeState(accepted=true, active=false, armed=false, owner=1, token=0, sequence=4, throttle=0, steering=0, lastCommand=267, stopRevision=1, response=-), NativeState(accepted=true, active=true, armed=true, owner=1, token=1301, sequence=20, throttle=400, steering=-400, lastCommand=581, stopRevision=0, response=-), NativeState(accepted=true, active=true, armed=true, owner=1, token=1401, sequence=20, throttle=500, steering=-500, lastCommand=582, stopRevision=0, response=-), NativeState(accepted=true, active=true, armed=true, owner=1, token=1501, sequence=20, throttle=600, steering=-600, lastCommand=582, stopRevision=0, response=-)]
+]]></system-out>
+  <system-err><![CDATA[сент. 15, 2026 8:37:47 PM okhttp3.mockwebserver.MockWebServer$3 execute
+INFO: MockWebServer[63613] starting to accept connections
+сент. 15, 2026 8:37:47 PM okhttp3.mockwebserver.MockWebServer$3 execute
+INFO: MockWebServer[63618] starting to accept connections
+сент. 15, 2026 8:37:47 PM okhttp3.mockwebserver.MockWebServer$3 execute
+INFO: MockWebServer[63617] starting to accept connections
+сент. 15, 2026 8:37:47 PM okhttp3.mockwebserver.MockWebServer$3 execute
+INFO: MockWebServer[63616] starting to accept connections
+сент. 15, 2026 8:37:47 PM okhttp3.mockwebserver.MockWebServer$3 execute
+INFO: MockWebServer[63615] starting to accept connections
+сент. 15, 2026 8:37:47 PM okhttp3.mockwebserver.MockWebServer$3 execute
+INFO: MockWebServer[63614] starting to accept connections
+сент. 15, 2026 8:37:47 PM okhttp3.mockwebserver.MockWebServer$4 processOneRequest
+INFO: MockWebServer[63614] received request: GET /control HTTP/1.1 and responded: HTTP/1.1 101 Switching Protocols
+сент. 15, 2026 8:37:47 PM okhttp3.mockwebserver.MockWebServer$4 processOneRequest
+INFO: MockWebServer[63616] received request: GET /control HTTP/1.1 and responded: HTTP/1.1 101 Switching Protocols
+сент. 15, 2026 8:37:47 PM okhttp3.mockwebserver.MockWebServer$4 processOneRequest
+INFO: MockWebServer[63617] received request: GET /control HTTP/1.1 and responded: HTTP/1.1 101 Switching Protocols
+сент. 15, 2026 8:37:47 PM okhttp3.mockwebserver.MockWebServer$4 processOneRequest
+INFO: MockWebServer[63613] received request: GET /control HTTP/1.1 and responded: HTTP/1.1 101 Switching Protocols
+сент. 15, 2026 8:37:47 PM okhttp3.mockwebserver.MockWebServer$4 processOneRequest
+INFO: MockWebServer[63615] received request: GET /control HTTP/1.1 and responded: HTTP/1.1 101 Switching Protocols
+сент. 15, 2026 8:37:47 PM okhttp3.mockwebserver.MockWebServer$4 processOneRequest
+INFO: MockWebServer[63618] received request: GET /control HTTP/1.1 and responded: HTTP/1.1 101 Switching Protocols
+сент. 15, 2026 8:37:47 PM okhttp3.mockwebserver.MockWebServer$4 processOneRequest
+INFO: MockWebServer[63613] received request: GET /control HTTP/1.1 and responded: HTTP/1.1 101 Switching Protocols
+сент. 15, 2026 8:37:47 PM okhttp3.mockwebserver.MockWebServer$4 processOneRequest
+INFO: MockWebServer[63615] received request: GET /control HTTP/1.1 and responded: HTTP/1.1 101 Switching Protocols
+сент. 15, 2026 8:37:47 PM okhttp3.mockwebserver.MockWebServer$4 processOneRequest
+INFO: MockWebServer[63614] received request: GET /control HTTP/1.1 and responded: HTTP/1.1 101 Switching Protocols
+сент. 15, 2026 8:37:47 PM okhttp3.mockwebserver.MockWebServer$3 acceptConnections
+INFO: MockWebServer[63613] done accepting connections: Socket closed
+сент. 15, 2026 8:37:47 PM okhttp3.mockwebserver.MockWebServer$4 processOneRequest
+INFO: MockWebServer[63618] received request: GET /control HTTP/1.1 and responded: HTTP/1.1 101 Switching Protocols
+сент. 15, 2026 8:37:47 PM okhttp3.mockwebserver.MockWebServer$4 processOneRequest
+INFO: MockWebServer[63617] received request: GET /control HTTP/1.1 and responded: HTTP/1.1 101 Switching Protocols
+сент. 15, 2026 8:37:47 PM okhttp3.mockwebserver.MockWebServer$4 processOneRequest
+INFO: MockWebServer[63616] received request: GET /control HTTP/1.1 and responded: HTTP/1.1 101 Switching Protocols
+сент. 15, 2026 8:37:47 PM okhttp3.mockwebserver.MockWebServer$4 processOneRequest
+INFO: MockWebServer[63613] received request: GET /control HTTP/1.1 and responded: HTTP/1.1 101 Switching Protocols
+сент. 15, 2026 8:37:47 PM okhttp3.mockwebserver.MockWebServer$3 acceptConnections
+INFO: MockWebServer[63614] done accepting connections: Socket closed
+сент. 15, 2026 8:37:47 PM okhttp3.mockwebserver.MockWebServer$3 acceptConnections
+INFO: MockWebServer[63615] done accepting connections: Socket closed
+сент. 15, 2026 8:37:47 PM okhttp3.mockwebserver.MockWebServer$3 acceptConnections
+INFO: MockWebServer[63616] done accepting connections: Socket closed
+сент. 15, 2026 8:37:47 PM okhttp3.mockwebserver.MockWebServer$3 acceptConnections
+INFO: MockWebServer[63617] done accepting connections: Socket closed
+сент. 15, 2026 8:37:47 PM okhttp3.mockwebserver.MockWebServer$3 acceptConnections
+INFO: MockWebServer[63618] done accepting connections: Socket closed
+]]></system-err>
+</testsuite>

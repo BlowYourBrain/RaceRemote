@@ -1,0 +1,28 @@
+{
+  "date": "2026-09-15",
+  "application_base_commit": "5948b572d264dde132c75e5d1ef8e84d7841d066",
+  "firmware_commit": "a9db9771c0c08fe80ea6e7e125b1f6fbbd0a3490",
+  "source_sha256": {
+    "app/src/main/java/vea/raceremote/control/CarControlClient.kt": "e03ebc11ecc04f6aba2ead85d4eee429904c2163c12ed5c12416cb2608c393cb",
+    "app/src/main/java/vea/raceremote/control/CarControlScreen.kt": "7d06d2e17916d749ad7025c137fb0d72d4565cc4afedbd62dc88f4b7b25359a4",
+    "app/src/main/java/vea/raceremote/control/IdentityPacket.kt": "2b9822ae3fadc7ef56c30390777fa354b530711aadf74889c01fb5c9647943ea",
+    "app/src/main/java/vea/raceremote/control/ControlPacket.kt": "c32aad47fecbb798ab5c83a514f8db40baaa85a1564b0949fffcc3946796916f",
+    "app/src/test/java/vea/raceremote/control/IdentityHandshakeTest.kt": "b15b2ea80c29a7f338770dfe31acd9bf04e47403f6a2a588c549c7a30b1a43e2",
+    "app/src/androidTest/java/vea/raceremote/CarIdentitySelectionTest.kt": "0faa91bcacddeadcef048a9e9944d6f5ca6625347704dae4794b474f5aa9565e",
+    "tools/run_video_android_smoke.py": "ad2819d8721b82455d07a0b325d728685c92942b488940fa01644140950591fb"
+  },
+  "firmware_evidence_sha256": "ccf25230494ae0acd7876eb81f66454d340507987287f28100057dc00618f435",
+  "jvm_total": {
+    "tests": 47,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0
+  },
+  "jvm_native_bridge_enabled": true,
+  "jvm_identity_cases": 9,
+  "samsung_result": "samsung/result.json",
+  "samsung_fixture_adjustment": "Initial UI mismatch test replaced the address with identical text, which emitted no value change; final fixture clears and re-enters it. Production identity guard unchanged.",
+  "fleet": "fleet/summary.json",
+  "firmware": "../../../../RC_CAR_ESP32/docs/control-identity-evidence.json",
+  "scope": "Identity codec/handshake tests, Samsung UI using fixture selection callback, four default firmware builds and host/SDK checks. No new UDP scan, firmware upload, real ESP32 identity exchange, RF or physical outputs."
+}

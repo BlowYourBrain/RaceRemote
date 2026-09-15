@@ -1,0 +1,158 @@
+INSTRUMENTATION_STATUS: class=vea.raceremote.VideoControlIsolationTest
+INSTRUMENTATION_STATUS: current=1
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=7
+INSTRUMENTATION_STATUS: stream=
+vea.raceremote.VideoControlIsolationTest:
+INSTRUMENTATION_STATUS: test=unavailableVideoDoesNotStopControlAndBackgroundStopsBoth
+INSTRUMENTATION_STATUS_CODE: 1
+INSTRUMENTATION_STATUS: class=vea.raceremote.VideoControlIsolationTest
+INSTRUMENTATION_STATUS: current=1
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=7
+INSTRUMENTATION_STATUS: stream=.
+INSTRUMENTATION_STATUS: test=unavailableVideoDoesNotStopControlAndBackgroundStopsBoth
+INSTRUMENTATION_STATUS_CODE: 0
+INSTRUMENTATION_STATUS: class=vea.raceremote.VideoControlIsolationTest
+INSTRUMENTATION_STATUS: current=2
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=7
+INSTRUMENTATION_STATUS: stream=
+INSTRUMENTATION_STATUS: test=repeatedCaptureTimesOutVideoWhileControlContinuesAndReconnectStartsFresh
+INSTRUMENTATION_STATUS_CODE: 1
+INSTRUMENTATION_STATUS: class=vea.raceremote.VideoControlIsolationTest
+INSTRUMENTATION_STATUS: current=2
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=7
+INSTRUMENTATION_STATUS: stream=.
+INSTRUMENTATION_STATUS: test=repeatedCaptureTimesOutVideoWhileControlContinuesAndReconnectStartsFresh
+INSTRUMENTATION_STATUS_CODE: 0
+INSTRUMENTATION_STATUS: class=vea.raceremote.CarVideoSelectionTest
+INSTRUMENTATION_STATUS: current=3
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=7
+INSTRUMENTATION_STATUS: stream=
+vea.raceremote.CarVideoSelectionTest:
+INSTRUMENTATION_STATUS: test=changingCarClearsPreviousVideoAndRequiresExplicitRestart
+INSTRUMENTATION_STATUS_CODE: 1
+INSTRUMENTATION_STATUS: class=vea.raceremote.CarVideoSelectionTest
+INSTRUMENTATION_STATUS: current=3
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=7
+INSTRUMENTATION_STATUS: stream=.
+INSTRUMENTATION_STATUS: test=changingCarClearsPreviousVideoAndRequiresExplicitRestart
+INSTRUMENTATION_STATUS_CODE: 0
+INSTRUMENTATION_STATUS: class=vea.raceremote.DrivingModeTest
+INSTRUMENTATION_STATUS: current=4
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=7
+INSTRUMENTATION_STATUS: stream=
+vea.raceremote.DrivingModeTest:
+INSTRUMENTATION_STATUS: test=backgroundDuringDragDoesNotResumeControl
+INSTRUMENTATION_STATUS_CODE: 1
+INSTRUMENTATION_STATUS: class=vea.raceremote.DrivingModeTest
+INSTRUMENTATION_STATUS: current=4
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=7
+INSTRUMENTATION_STATUS: stream=.
+INSTRUMENTATION_STATUS: test=backgroundDuringDragDoesNotResumeControl
+INSTRUMENTATION_STATUS_CODE: 0
+INSTRUMENTATION_STATUS: class=vea.raceremote.DrivingModeTest
+INSTRUMENTATION_STATUS: current=5
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=7
+INSTRUMENTATION_STATUS: stream=
+INSTRUMENTATION_STATUS: test=twoThumbsCancelAndVideoSurviveModeChanges
+INSTRUMENTATION_STATUS_CODE: 1
+INSTRUMENTATION_STATUS: class=vea.raceremote.DrivingModeTest
+INSTRUMENTATION_STATUS: current=5
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=7
+INSTRUMENTATION_STATUS: stream=.
+INSTRUMENTATION_STATUS: test=twoThumbsCancelAndVideoSurviveModeChanges
+INSTRUMENTATION_STATUS_CODE: 0
+INSTRUMENTATION_STATUS: class=vea.raceremote.CarIdentitySelectionTest
+INSTRUMENTATION_STATUS: current=6
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=7
+INSTRUMENTATION_STATUS: stream=
+vea.raceremote.CarIdentitySelectionTest:
+INSTRUMENTATION_STATUS: test=wrongIdentityRequiresExplicitManualSelectionToUseLegacyMode
+INSTRUMENTATION_STATUS_CODE: 1
+INSTRUMENTATION_STATUS: class=vea.raceremote.CarIdentitySelectionTest
+INSTRUMENTATION_STATUS: current=6
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=7
+INSTRUMENTATION_STATUS: stack=java.lang.AssertionError: Failed to assert the following: (Text + EditableText contains 'Ручной адрес · ID не проверяется' (ignoreCase: false))
+Semantics of the node:
+Node #561 at (l=99.0, t=168.0, r=738.0, b=216.0)px, Tag: 'selected_car_identity'
+Text = '[Выбрана машинка · ID a06da69ef0c8]'
+Actions = [GetTextLayoutResult]
+Has 14 siblings
+Selector used: (TestTag = 'selected_car_identity')
+
+	at androidx.compose.ui.test.AssertionsKt.assert(Assertions.kt:270)
+	at androidx.compose.ui.test.AssertionsKt.assert$default(Assertions.kt:260)
+	at androidx.compose.ui.test.AssertionsKt.assertTextContains(Assertions.kt:214)
+	at androidx.compose.ui.test.AssertionsKt.assertTextContains$default(Assertions.kt:209)
+	at vea.raceremote.CarIdentitySelectionTest.selection(CarIdentitySelectionTest.kt:89)
+	at vea.raceremote.CarIdentitySelectionTest.wrongIdentityRequiresExplicitManualSelectionToUseLegacyMode(CarIdentitySelectionTest.kt:38)
+
+INSTRUMENTATION_STATUS: stream=
+Error in wrongIdentityRequiresExplicitManualSelectionToUseLegacyMode(vea.raceremote.CarIdentitySelectionTest):
+java.lang.AssertionError: Failed to assert the following: (Text + EditableText contains 'Ручной адрес · ID не проверяется' (ignoreCase: false))
+Semantics of the node:
+Node #561 at (l=99.0, t=168.0, r=738.0, b=216.0)px, Tag: 'selected_car_identity'
+Text = '[Выбрана машинка · ID a06da69ef0c8]'
+Actions = [GetTextLayoutResult]
+Has 14 siblings
+Selector used: (TestTag = 'selected_car_identity')
+
+	at androidx.compose.ui.test.AssertionsKt.assert(Assertions.kt:270)
+	at androidx.compose.ui.test.AssertionsKt.assert$default(Assertions.kt:260)
+	at androidx.compose.ui.test.AssertionsKt.assertTextContains(Assertions.kt:214)
+	at androidx.compose.ui.test.AssertionsKt.assertTextContains$default(Assertions.kt:209)
+	at vea.raceremote.CarIdentitySelectionTest.selection(CarIdentitySelectionTest.kt:89)
+	at vea.raceremote.CarIdentitySelectionTest.wrongIdentityRequiresExplicitManualSelectionToUseLegacyMode(CarIdentitySelectionTest.kt:38)
+
+INSTRUMENTATION_STATUS: test=wrongIdentityRequiresExplicitManualSelectionToUseLegacyMode
+INSTRUMENTATION_STATUS_CODE: -2
+INSTRUMENTATION_STATUS: class=vea.raceremote.CarIdentitySelectionTest
+INSTRUMENTATION_STATUS: current=7
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=7
+INSTRUMENTATION_STATUS: stream=
+INSTRUMENTATION_STATUS: test=selectedCarMustConfirmItsIdentity
+INSTRUMENTATION_STATUS_CODE: 1
+INSTRUMENTATION_STATUS: class=vea.raceremote.CarIdentitySelectionTest
+INSTRUMENTATION_STATUS: current=7
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=7
+INSTRUMENTATION_STATUS: stream=.
+INSTRUMENTATION_STATUS: test=selectedCarMustConfirmItsIdentity
+INSTRUMENTATION_STATUS_CODE: 0
+INSTRUMENTATION_RESULT: stream=
+
+Time: 21,457
+There was 1 failure:
+1) wrongIdentityRequiresExplicitManualSelectionToUseLegacyMode(vea.raceremote.CarIdentitySelectionTest)
+java.lang.AssertionError: Failed to assert the following: (Text + EditableText contains 'Ручной адрес · ID не проверяется' (ignoreCase: false))
+Semantics of the node:
+Node #561 at (l=99.0, t=168.0, r=738.0, b=216.0)px, Tag: 'selected_car_identity'
+Text = '[Выбрана машинка · ID a06da69ef0c8]'
+Actions = [GetTextLayoutResult]
+Has 14 siblings
+Selector used: (TestTag = 'selected_car_identity')
+
+	at androidx.compose.ui.test.AssertionsKt.assert(Assertions.kt:270)
+	at androidx.compose.ui.test.AssertionsKt.assert$default(Assertions.kt:260)
+	at androidx.compose.ui.test.AssertionsKt.assertTextContains(Assertions.kt:214)
+	at androidx.compose.ui.test.AssertionsKt.assertTextContains$default(Assertions.kt:209)
+	at vea.raceremote.CarIdentitySelectionTest.selection(CarIdentitySelectionTest.kt:89)
+	at vea.raceremote.CarIdentitySelectionTest.wrongIdentityRequiresExplicitManualSelectionToUseLegacyMode(CarIdentitySelectionTest.kt:38)
+
+FAILURES!!!
+Tests run: 7,  Failures: 1
+
+
+INSTRUMENTATION_CODE: -1

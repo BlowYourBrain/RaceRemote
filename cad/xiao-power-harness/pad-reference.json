@@ -1,0 +1,52 @@
+{
+  "date": "2026-09-15",
+  "contract": "XIAO-POWER-HARNESS-01 v0.1",
+  "pads": {
+    "BAT0": {
+      "pin": "1",
+      "net": "/03 XIAO ESP32-S3-Sense/VBAT",
+      "side": "B.Cu",
+      "vendor_xy_mm": [
+        144.0561,
+        104.5961
+      ],
+      "vendor_pad_size_mm": [
+        2.032,
+        1.016
+      ],
+      "candidate_xyz_mm": [
+        23.72683,
+        82.0,
+        26.445
+      ]
+    },
+    "GND0": {
+      "pin": "1",
+      "net": "GND",
+      "side": "B.Cu",
+      "vendor_xy_mm": [
+        144.0561,
+        102.6911
+      ],
+      "vendor_pad_size_mm": [
+        2.032,
+        1.016
+      ],
+      "candidate_xyz_mm": [
+        25.63183,
+        82.0,
+        26.445
+      ]
+    }
+  },
+  "vendor_url": "https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/new-res/202003751_XIAO%20ESP32S3_v1.4_SCH%26PCB_260226.zip",
+  "vendor_filename": "XIAO ESP32S3_V1.5.kicad_pcb",
+  "vendor_sha256": "d20724aa7198a897871cc1ce87f1a322d0b9cf77521fd2fc4ccda61bc5e4af6c",
+  "revision_warning": "URL1.4 contains PCB1.5; transformed to STEP2023; received hardware unknown",
+  "transform": "carX=STEP PCB centreX+U9originY-padY; carZ=STEP centreZ+padX-U9originX; back plane carY82",
+  "physical_identification": false,
+  "source_sha256": {
+    "docs/evidence/xiao-mount-v01.json": "2e17654f50ad3ef5111e132c7e1178d1c623863f6b8713c3ad05a5c66bf458d8",
+    "tools/extract_xiao_power_pads.py": "887f4855e99328c1e72516b60e39ec821720690a1a8590833a822d4d88b865d6"
+  }
+}

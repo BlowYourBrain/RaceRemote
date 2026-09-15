@@ -1,0 +1,24 @@
+{
+  "source_sha256": {
+    "cad/drive-power-carrier/viewer.html": "fa6248f2a11be7a0f296f3a925221f9ef2acbb59c540b25dd89e378bb9b4c3e1",
+    "tools/cad_viewer_template.html": "f70aa04fd54fb88ff2aba390bccbf6f17a9c2d79b01286e9c0f0e76fb281129c",
+    "docs/evidence/xiao-power-harness-v01.json": "6bfcfee392a2a74aec7d0d21d1b44c0414b80e23383765198d5c58a6f218c1d2",
+    "tools/build_xiao_power_view.py": "af1e79e43f2af6816990d240633a1e3308c00d1f2c422a854414a404322e2b4b",
+    "cad/xiao-power-harness/cradle.stl": "160e657b47a2c46bdac40a6617ee48bd9cf62606a3a22efd993c058447512043",
+    "cad/xiao-power-harness/BAT.stl": "67ed567603c4eec0a54aaf9f3c77580851a22c58e59e9dbb62828e084b283960",
+    "cad/xiao-power-harness/GND.stl": "ce7b948e9c02febabac5b7fbfc5cc6562dbefb8e28b20eac4a88b405e5ad1034"
+  },
+  "artifact_sha256": {
+    "viewer.html": "15c38a93da909750c75604794e639b5829fd78ef05334ae3324e5e8cbba36b53",
+    "preview.png": "39a439b32e27cdf6d9eaf207d4bea03fa53cbbbf50ea6e5bae829dd024de3762"
+  },
+  "removed_scene_ids": [
+    "control-GND",
+    "cradle",
+    "power-H9"
+  ],
+  "nominal_pose_mm": [
+    0,
+    3
+  ]
+}

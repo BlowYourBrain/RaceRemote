@@ -1,0 +1,14 @@
+{
+  "date": "2026-09-15",
+  "page": "cad/xiao-power-harness/viewer.html",
+  "title": "RaceRemote — Проводка питания XIAO",
+  "part_count": 69,
+  "unique_part_ids": 69,
+  "checkbox_count": 69,
+  "webgl_available": true,
+  "webgl_error": 0,
+  "canvas_pixels": [2754, 1554],
+  "removed_ids_absent": ["cradle", "control-GND", "power-H9"],
+  "added_ids_present": ["harness-cradle", "harness-BAT", "harness-GND"],
+  "scope": "Browser execution and scene inventory only; no physical qualification"
+}

@@ -224,3 +224,9 @@ cad/control-harness/*.csv text eol=crlf
 tools/extract_xiao_control_pads.py text eol=lf
 tools/build_control_harness.py text eol=lf
 docs/evidence/control-harness-v01.json text eol=lf
+
+cad/motor-carrier-mount/*.3mf binary
+cad/motor-carrier-mount/*.png binary
+tools/build_motor_print_kit.py text eol=lf
+tools/print-kit-requirements.txt text eol=lf
+docs/evidence/motor-print-kit-v01.json text eol=lf

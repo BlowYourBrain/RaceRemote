@@ -1,0 +1,139 @@
+{
+  "contract": "MOTOR-PRINT-KIT-01",
+  "version": "0.1",
+  "date": "2026-09-15",
+  "units": "mm",
+  "printer_reference": "Creality K1C 220x220x250; rear 5 mm reserved",
+  "parts": [
+    {
+      "name": "tray",
+      "source": "cad/motor-carrier-mount/tray_print.stl",
+      "sha256": "6ab2fc3fd3236b5dc862616b315abb1ba5a5e42bc3741074582f1d5925500748",
+      "translation_mm": [
+        70.0,
+        86.0,
+        7.62939e-07
+      ],
+      "bounds_mm": [
+        [
+          70.0,
+          86.0,
+          0.0
+        ],
+        [
+          123.25,
+          134.0,
+          8.500000762939
+        ]
+      ],
+      "size_mm": [
+        53.25,
+        48.0,
+        8.500000762939
+      ],
+      "volume_mm3": 2888.7217604872894,
+      "triangles": 2136
+    },
+    {
+      "name": "pcb_gauge",
+      "source": "cad/motor-carrier-mount/pcb_gauge_print.stl",
+      "sha256": "6ce3b99da5dbd3114acd7d1838a6fbff9d57322f55fcbf9f40d87be16d534cf6",
+      "translation_mm": [
+        133.25,
+        86.0,
+        0.0
+      ],
+      "bounds_mm": [
+        [
+          133.25,
+          86.0,
+          0.0
+        ],
+        [
+          151.25,
+          116.0,
+          1.6
+        ]
+      ],
+      "size_mm": [
+        18.0,
+        30.0,
+        1.6
+      ],
+      "volume_mm3": 864.0,
+      "triangles": 12
+    },
+    {
+      "name": "clamp",
+      "source": "cad/motor-carrier-mount/clamp_print.stl",
+      "sha256": "6561a8a35c2ccb9761dd7ef875b8541c0cf85e3e619982cb258a1c618466903c",
+      "translation_mm": [
+        133.250000190735,
+        126.000000190735,
+        5.72205e-07
+      ],
+      "bounds_mm": [
+        [
+          133.25,
+          126.0,
+          0.0
+        ],
+        [
+          139.850000190735,
+          137.600000190735,
+          1.6000005722050001
+        ]
+      ],
+      "size_mm": [
+        6.600000190734988,
+        11.600000190734988,
+        1.6000005722050001
+      ],
+      "volume_mm3": 108.06092973997723,
+      "triangles": 404
+    }
+  ],
+  "xy_gaps": [
+    {
+      "parts": [
+        "tray",
+        "pcb_gauge"
+      ],
+      "xy_bounding_box_gap_mm": 10.0
+    },
+    {
+      "parts": [
+        "tray",
+        "clamp"
+      ],
+      "xy_bounding_box_gap_mm": 10.0
+    },
+    {
+      "parts": [
+        "pcb_gauge",
+        "clamp"
+      ],
+      "xy_bounding_box_gap_mm": 10.0
+    }
+  ],
+  "checks": {
+    "source_closed_single_solids": true,
+    "bed_bounds": true,
+    "trimesh_3mf_roundtrip_bounds_topology_volume": true
+  },
+  "slicer_import_verified": false,
+  "sliced": false,
+  "printed": false,
+  "limitations": [
+    "No material/nozzle/process profile embedded",
+    "Not sequential-print clearance",
+    "No brim/support/toolpath validation",
+    "No physical fit or retention validation"
+  ],
+  "artifacts": {
+    "cad/motor-carrier-mount/print-kit.3mf": "a32dd303ce328b82e5ce4fdb76ae1f1240a7eeb192880ad729aba7b2fb16aaf6",
+    "cad/motor-carrier-mount/print-kit.png": "fb505ccac9860426e4c5b43c04591bfc7473e6bf5716f0c0be53864b172bd431"
+  },
+  "generator_sha256": "92fccf2f227c4c95805a031e46d859e352c7149720c3db2e3c0bcd70300dd9a9",
+  "trimesh_version": "5.1.0"
+}

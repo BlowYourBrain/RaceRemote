@@ -208,3 +208,10 @@ docs/evidence/motor-carrier-fit-v01.json text eol=lf
 docs/evidence/motor-carrier-v01/*.json text eol=crlf
 docs/evidence/motor-carrier-v01/summary.json text eol=lf
 docs/evidence/motor-carrier-v01/*.xml text eol=crlf
+
+cad/motor-carrier-mount.scad text eol=lf
+cad/motor-carrier-mount/*.stl binary
+cad/motor-carrier-mount/*.html text eol=lf
+cad/motor-carrier-mount/*.md text eol=lf
+tools/build_motor_carrier_mount.py text eol=lf
+docs/evidence/motor-carrier-mount-v01.json text eol=lf

@@ -22,13 +22,13 @@
     "U3": {
       "value": "MAX40200AUK+T",
       "center_mm": [
-        24.5,
+        24.6,
         10.8
       ],
       "side": "B",
       "body_mm": [
-        3.2,
-        3.2
+        3.5,
+        3.5
       ],
       "height_reserve_mm": 1.5,
       "vertical": false
@@ -107,7 +107,7 @@
       "value": "1u / 10V X7R",
       "center_mm": [
         23,
-        7.9
+        7.8
       ],
       "side": "B",
       "body_mm": [
@@ -148,7 +148,7 @@
     "H9": {
       "value": "XIAO_BAT",
       "center_mm": [
-        28,
+        28.2,
         9.5
       ],
       "side": "F",
@@ -185,14 +185,16 @@
   "proposed_min_clearance_mm": 0.15,
   "thermal_vias": 4,
   "thermal_via_drill_mm": 0.3,
-  "sot23_footprint_status": "provisional generic reserve; ADI 21-0057 / 90-0174 and PCN2571C not yet read",
+  "sot23_footprint_status": "ADI21-0057 RevK outline and mirrored manufacturer90-0174 RevB land pattern; physical/process validation pending",
+  "sot23_outline_reserve_basis": "3mm D/E max plus conservative .25mm protrusion each side; Amax1.45 plus .05 seating allowance",
+  "pin2571c_status": "shipping box change only; no fit/form/function impact per official notice",
   "pads": [
     {
       "ref": "H9",
       "pin": "1",
       "net": "XIAO_BAT",
       "xy_mm": [
-        28.0,
+        28.2,
         9.5
       ]
     },
@@ -229,7 +231,7 @@
       "net": "DRIVE_GND",
       "xy_mm": [
         22.05,
-        7.9
+        7.8
       ]
     },
     {
@@ -238,7 +240,7 @@
       "net": "LDO_4V",
       "xy_mm": [
         23.95,
-        7.9
+        7.8
       ]
     },
     {
@@ -336,7 +338,7 @@
       "pin": "5",
       "net": "XIAO_BAT",
       "xy_mm": [
-        23.2,
+        23.35,
         9.85
       ]
     },
@@ -345,7 +347,7 @@
       "pin": "4",
       "net": "unconnected-(U3-NC-Pad4)",
       "xy_mm": [
-        23.2,
+        23.35,
         11.75
       ]
     },
@@ -354,7 +356,7 @@
       "pin": "3",
       "net": "LDO_4V",
       "xy_mm": [
-        25.8,
+        25.85,
         11.75
       ]
     },
@@ -363,7 +365,7 @@
       "pin": "2",
       "net": "DRIVE_GND",
       "xy_mm": [
-        25.8,
+        25.85,
         10.8
       ]
     },
@@ -372,7 +374,7 @@
       "pin": "1",
       "net": "LDO_4V",
       "xy_mm": [
-        25.8,
+        25.85,
         9.85
       ]
     },
@@ -458,6 +460,15 @@
       ]
     },
     {
+      "ref": "H2",
+      "pin": "1",
+      "net": "CMD_BI",
+      "xy_mm": [
+        1.8,
+        6.0
+      ]
+    },
+    {
       "ref": "R4",
       "pin": "1",
       "net": "BI",
@@ -476,102 +487,21 @@
       ]
     },
     {
-      "ref": "H2",
+      "ref": "H5",
       "pin": "1",
-      "net": "CMD_BI",
-      "xy_mm": [
-        1.8,
-        6.0
-      ]
-    },
-    {
-      "ref": "C2",
-      "pin": "1",
-      "net": "VM",
-      "xy_mm": [
-        21.25,
-        6.0
-      ]
-    },
-    {
-      "ref": "C2",
-      "pin": "2",
       "net": "DRIVE_GND",
-      "xy_mm": [
-        24.75,
-        6.0
-      ]
-    },
-    {
-      "ref": "R3",
-      "pin": "1",
-      "net": "FI",
-      "xy_mm": [
-        9.78,
-        2.1
-      ]
-    },
-    {
-      "ref": "R3",
-      "pin": "2",
-      "net": "DRIVE_GND",
-      "xy_mm": [
-        11.68,
-        2.1
-      ]
-    },
-    {
-      "ref": "R2",
-      "pin": "1",
-      "net": "CMD_BI",
-      "xy_mm": [
-        4.05,
-        6.0
-      ]
-    },
-    {
-      "ref": "R2",
-      "pin": "2",
-      "net": "BI",
-      "xy_mm": [
-        5.95,
-        6.0
-      ]
-    },
-    {
-      "ref": "R1",
-      "pin": "1",
-      "net": "CMD_FI",
-      "xy_mm": [
-        4.05,
-        3.0
-      ]
-    },
-    {
-      "ref": "R1",
-      "pin": "2",
-      "net": "FI",
-      "xy_mm": [
-        5.95,
-        3.0
-      ]
-    },
-    {
-      "ref": "H4",
-      "pin": "1",
-      "net": "VM",
       "xy_mm": [
         28.0,
-        13.0
+        16.0
       ]
     },
     {
-      "ref": "H7",
+      "ref": "H3",
       "pin": "1",
-      "net": "BO",
+      "net": "DRIVE_GND",
       "xy_mm": [
         2.0,
-        15.0
+        9.0
       ]
     },
     {
@@ -647,15 +577,6 @@
       ]
     },
     {
-      "ref": "H3",
-      "pin": "1",
-      "net": "DRIVE_GND",
-      "xy_mm": [
-        2.0,
-        9.0
-      ]
-    },
-    {
       "ref": "H6",
       "pin": "1",
       "net": "FO",
@@ -665,12 +586,48 @@
       ]
     },
     {
-      "ref": "H5",
+      "ref": "H4",
       "pin": "1",
-      "net": "DRIVE_GND",
+      "net": "VM",
       "xy_mm": [
         28.0,
-        16.0
+        13.0
+      ]
+    },
+    {
+      "ref": "R2",
+      "pin": "1",
+      "net": "CMD_BI",
+      "xy_mm": [
+        4.05,
+        6.0
+      ]
+    },
+    {
+      "ref": "R2",
+      "pin": "2",
+      "net": "BI",
+      "xy_mm": [
+        5.95,
+        6.0
+      ]
+    },
+    {
+      "ref": "C2",
+      "pin": "1",
+      "net": "VM",
+      "xy_mm": [
+        21.25,
+        6.0
+      ]
+    },
+    {
+      "ref": "C2",
+      "pin": "2",
+      "net": "DRIVE_GND",
+      "xy_mm": [
+        24.75,
+        6.0
       ]
     },
     {
@@ -680,6 +637,51 @@
       "xy_mm": [
         1.8,
         3.0
+      ]
+    },
+    {
+      "ref": "R1",
+      "pin": "1",
+      "net": "CMD_FI",
+      "xy_mm": [
+        4.05,
+        3.0
+      ]
+    },
+    {
+      "ref": "R1",
+      "pin": "2",
+      "net": "FI",
+      "xy_mm": [
+        5.95,
+        3.0
+      ]
+    },
+    {
+      "ref": "R3",
+      "pin": "1",
+      "net": "FI",
+      "xy_mm": [
+        9.78,
+        2.1
+      ]
+    },
+    {
+      "ref": "R3",
+      "pin": "2",
+      "net": "DRIVE_GND",
+      "xy_mm": [
+        11.68,
+        2.1
+      ]
+    },
+    {
+      "ref": "H7",
+      "pin": "1",
+      "net": "BO",
+      "xy_mm": [
+        2.0,
+        15.0
       ]
     },
     {

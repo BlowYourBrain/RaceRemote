@@ -19,7 +19,7 @@ from layout_zcar_battery import box
 
 ROOT=Path(__file__).resolve().parents[1]
 DEST=ROOT/'cad/drive-power-carrier'
-EVIDENCE=ROOT/'docs/evidence/drive-power-carrier-v01'
+EVIDENCE=ROOT/'docs/evidence/drive-power-carrier-v02'
 
 
 def main():
@@ -91,14 +91,14 @@ def main():
     combined=trimesh.util.concatenate([*models.values(),*retained]);combined.export(DEST/'combined-reserves.stl')
     for path in [Path(__file__),ROOT/'tools/build_packaging_v05.py',ROOT/'tools/layout_zcar_battery.py']:
         record(path)
-    result={'date':'2026-09-15','contract':'DRIVE-POWER-CARRIER-01 v0.1','pose_mm':[0,3],
+    result={'date':'2026-09-15','contract':'DRIVE-POWER-CARRIER-01 v0.2','pose_mm':[0,3],
             'new_solid_count':len(models)-1,'obstacle_solid_count':len(obstacles),
             'hits_mm3':hits,'new_part_pair_hits_mm3':pair_hits,'outside_cavity_mm3':outside,
             'positive_control_shifted_U3_into_PCB_mm3':positive,'assembly_bounds_mm':combined.bounds.tolist(),
             'lowest_new_component_z_mm':min(m.bounds[0,2] for n,m in models.items() if n!='pcb'),
             'sources_sha256':sources,'pcb_fit_proven_for_actual_components':False,
             'limitations':['Nominal electronics0/camera+3 only; no new removal/adjustment sweep',
-                           'SOT23 envelope3.2x3.2x1.5mm is provisional; package/PCN check open',
+                           'SOT23 reserve3.5x3.5x1.5mm covers documented outline/protrusions; actual placement and solder remain unqualified',
                            'H8/H9 lead reserves only, not routed new power wires or strain relief',
                            'Source hypothetical body, battery and other unmeasured dimensions remain assumptions',
                            'No thermal/current/physical/print qualification']}

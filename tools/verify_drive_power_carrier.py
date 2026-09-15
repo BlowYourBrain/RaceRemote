@@ -13,7 +13,7 @@ import pcbnew as p
 
 ROOT = Path(__file__).resolve().parents[1]
 HW = ROOT / 'hardware/drive-power-carrier'
-OUT = ROOT / 'docs/evidence/drive-power-carrier-v01'
+OUT = ROOT / 'docs/evidence/drive-power-carrier-v02'
 CLI = ROOT / 'build/tooling/kicad-10.0.6/bin/kicad-cli.exe'
 
 # Deliberately separate from the generator's net assignment and rename table.
@@ -102,6 +102,17 @@ def main():
         assert item['xy_mm'] == [round(p.ToMM(v)-100,5) for v in loc]
         assert normalize(item['net']) == EXPECTED[item['ref']][item['pin']]
     fps = {f.GetReference(): f for f in board.GetFootprints()}
+    # Independently transcribed 90-0174 Rev B, rotated/mirrored for bottom placement.
+    u3 = fps['U3']
+    expected_land = {'1':(1.25,-.95),'2':(1.25,0),'3':(1.25,.95),
+                     '4':(-1.25,.95),'5':(-1.25,-.95)}
+    for a in u3.Pads():
+        delta = a.GetPosition()-u3.GetPosition()
+        assert (round(p.ToMM(delta.x),5),round(p.ToMM(delta.y),5)) == expected_land[a.GetNumber()]
+        assert (a.GetSize().x,a.GetSize().y) == (p.FromMM(1.3),p.FromMM(.55))
+        assert a.GetShape() == p.PAD_SHAPE_RECT
+    assert spec['new_component_positions']['U3']['body_mm'] == [3.5,3.5]
+    assert spec['new_component_positions']['U3']['height_reserve_mm'] >= 1.45
     for ref,item in spec['new_component_positions'].items():
         f = fps[ref]
         assert item['center_mm'] == [round(p.ToMM(v)-100,5) for v in (f.GetPosition().x,f.GetPosition().y)]
@@ -139,13 +150,15 @@ def main():
     paths += [ROOT/'hardware/motor-carrier/motor-carrier.kicad_pcb',
               ROOT/'hardware/motor-carrier/motor-carrier.kicad_sch',
               ROOT/'hardware/xiao-logic-power/xiao-logic-power.kicad_sch']
-    report = {'date':'2026-09-15','contract':'DRIVE-POWER-CARRIER-01 v0.1',
+    report = {'date':'2026-09-15','contract':'DRIVE-POWER-CARRIER-01 v0.2',
               'positions':len(actual),'pins_including_nc':sum(map(len,actual.values())),
               'working_nets':sorted({v for pins in actual.values() for v in pins.values()}-{'NC'}),
               'erc_violations':0,'drc_violations':0,'unconnected_items':0,'schematic_parity_issues':0,
               'kicad_version':drc['kicad_version'],'default_ignored_drc_checks':drc['ignored_checks'],
               'original_pad_geometries_unchanged':27,'original_track_segments_removed':2,
               'cad_pad_coordinates_and_new_component_centers_match_pcb':True,
+              'u3_land_matches_reviewed_90_0174_rev_b':True,
+              'u3_current_manufacturer_land_revision_confirmed':False,
               'oracle_mutations_detected':[f[0] for f in faults],
               'physical_tests':False,'thermal_qualification':False,'fabrication_released':False,
               'source_sha256':{q.relative_to(ROOT).as_posix():hashlib.sha256(q.read_bytes()).hexdigest() for q in paths}}

@@ -72,7 +72,7 @@ def main():
     report = {'date':'2026-09-15','new_parts':11,'viewer_pose_mm':[0,3],
               'source_sha256':{p.relative_to(ROOT).as_posix():hashlib.sha256(p.read_bytes()).hexdigest() for p in inputs},
               'artifact_sha256':{(DEST/n).relative_to(ROOT).as_posix():hashlib.sha256((DEST/n).read_bytes()).hexdigest() for n in ('viewer.html','preview.png')}}
-    (ROOT/'docs/evidence/drive-power-carrier-v01/view.json').write_text(json.dumps(report,indent=2)+'\n',encoding='utf-8',newline='\n')
+    (ROOT/'docs/evidence/drive-power-carrier-v02/view.json').write_text(json.dumps(report,indent=2)+'\n',encoding='utf-8',newline='\n')
     print('Generated interactive nominal-pose viewer and two CAD mesh views.')
 
 

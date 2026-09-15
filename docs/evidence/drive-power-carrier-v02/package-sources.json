@@ -1,0 +1,52 @@
+{
+  "date": "2026-09-15",
+  "contract": "DRIVE-POWER-CARRIER-01 v0.2",
+  "outline": {
+    "document": "21-0057 Rev K",
+    "url": "https://mds.analog.com/api/public/content/sot-23_21-0057.pdf",
+    "local_cache": "build/max40200-package/outline.pdf",
+    "sha256": "900017d4ee778a1a9e2f882fd8ea585b2915b137e83b6c68861a27e96a0fea9a",
+    "review": "Downloaded one-page PDF; visually read table and notes 3 and 9",
+    "package_code_included": "U5+1",
+    "D_max_mm": 3.0,
+    "E_max_mm": 3.0,
+    "A_max_mm": 1.45,
+    "protrusion_limit_mm": 0.25,
+    "proposed_xy_reserve_mm": [3.5, 3.5],
+    "reserve_rule": "Conservative allowance of .25mm on EACH side of D/E maxima; not nominal body dimensions"
+  },
+  "land": {
+    "document": "Maxim 90-0174 Rev B",
+    "url": "https://www.alldatasheet.es/html-pdf/481617/MAXIM/90-0174/150/1/90-0174.html",
+    "image_url": "https://www.alldatasheet.es/htmldatasheet2/481617/MAXIM/90-0174/150/1/90-0174.png",
+    "local_cache": "build/max40200-package/land-browser.png",
+    "sha256": "fef315cc4a33594fe41f3951a6d7022626ba7c0a141a3d22267a9b8f66954439",
+    "cache_encoding": "Browser canvas PNG export of the loaded source image; digest is not original server PNG bytes",
+    "review": "Visually read manufacturer drawing via browser; direct PDF and PNG HTTP downloads returned403",
+    "current_revision_confirmed": false,
+    "pad_mm": [1.3, 0.55],
+    "row_center_spacing_mm": 2.5,
+    "pitch_mm": 0.95,
+    "shape": "rectangle"
+  },
+  "pin_notice": {
+    "id": "2571C",
+    "date": "2026-04-20",
+    "url": "https://www.analog.com/media/en/pcn/pcn_2571c.pdf",
+    "review": "Both official PDF pages read through web tool; local download timed out",
+    "subject": "Reel shipping boxes for MSL1 SOT products; carbon coated boxes replace separate static shielding bags",
+    "manufacturer_declares_no_fit_form_function_quality_reliability_impact": true,
+    "appendix_part_list_zip_downloaded": false,
+    "max40200_association": "Same notice id listed on previously observed MAX40200 product card"
+  },
+  "electrical_datasheet": {
+    "url": "https://www.analog.com/media/en/technical-documentation/data-sheets/max40200.pdf",
+    "revision": "19-8728 Rev4 February2023",
+    "reviewed_package_table_page": 13,
+    "package": "SOT23-5 U5+1",
+    "outline_number": "21-0057",
+    "land_number": "90-0174"
+  },
+  "physical_fit_verified": false,
+  "fabrication_released": false
+}

@@ -67,7 +67,7 @@ def schematic():
     child(a, 'paper')[1] = '"A1"'
     title = child(a, 'title_block')
     child(title, 'title')[1] = q('TA6586 + XIAO logic power - COMBINED PCB PROPOSAL')
-    child(title, 'rev')[1] = '"0.1"'
+    child(title, 'rev')[1] = '"0.2"'
     child(a, 'lib_symbols').extend(child(c, 'lib_symbols')[1:])
 
     def rewrite(node, mapping, power=False):
@@ -134,7 +134,7 @@ def schematic():
 
 def fpname(ref):
     if ref == 'U2': return 'TPS73701_DRB_3x3_EP'
-    if ref == 'U3': return 'SOT23_5_Provisional'
+    if ref == 'U3': return 'SOT23_5_ADI_90_0174_B'
     if ref == 'R7': return 'R_1206'
     if ref.startswith('R'): return 'R_0805'
     if ref.startswith('C'): return 'C_0805'
@@ -209,17 +209,20 @@ def pcb():
         pad(u,pin,mapping[pin],20.5+dx,11+dy,.6,.31)
     pad(u,9,'DRIVE_GND',20.5,11,1.5,1.75)
     outline(u,20.5,11,3.4,3.1,.25)
-    u = new('U3','MAX40200AUK+T',24.5,10.8,body=(3.2,3.2),height=1.5)
-    for pin,dx,dy,net in [(1,1.3,-.95,'LDO_4V'),(2,1.3,0,'DRIVE_GND'),(3,1.3,.95,'LDO_4V'),(4,-1.3,.95,None),(5,-1.3,-.95,'XIAO_BAT')]:
-        pad(u,pin,net,24.5+dx,10.8+dy,1.1,.6)
-    outline(u,24.5,10.8,3.2,3.2,.25)
+    # ADI 21-0057 K: D/E max3mm plus conservative .25mm protrusion each side.
+    # Land pattern 90-0174 B: rectangular1.30x.55, row spacing2.50, pitch.95mm.
+    u = new('U3','MAX40200AUK+T',24.6,10.8,body=(3.5,3.5),height=1.5)
+    for pin,dx,dy,net in [(1,1.25,-.95,'LDO_4V'),(2,1.25,0,'DRIVE_GND'),(3,1.25,.95,'LDO_4V'),(4,-1.25,.95,None),(5,-1.25,-.95,'XIAO_BAT')]:
+        pad(u,pin,net,24.6+dx,10.8+dy,1.3,.55)
+    for a in u.Pads(): a.SetShape(p.PAD_SHAPE_RECT)
+    outline(u,24.6,10.8,3.5,3.5,.25)
     parts = [
         ('R5','23.2k / 0.1%',23,15.6,'LDO_4V','FB','B',True),
         ('R6','10k / 0.1%',25,15.6,'FB','DRIVE_GND','B',True),
         ('R7','360 / 1% / 0.25W',19.7,16,'LDO_4V','DRIVE_GND','F',False),
         ('C3','4.7u / 10V X7R',19,4.2,'WAVE_5V','DRIVE_GND','B',False),
         ('C4','4.7u / 10V X7R',19.3,15.4,'LDO_4V','DRIVE_GND','B',False),
-        ('C5','1u / 10V X7R',23,7.9,'LDO_4V','DRIVE_GND','B',False),
+        ('C5','1u / 10V X7R',23,7.8,'LDO_4V','DRIVE_GND','B',False),
         ('C6','1u / 10V X7R',27.8,6.5,'XIAO_BAT','DRIVE_GND','B',True)]
     for ref,value,x,y,n1,n2,side,vertical in parts:
         large = ref == 'R7'; w,h = (3.2,1.6) if large else (2,1.25)
@@ -231,7 +234,7 @@ def pcb():
             if vertical: pad(f,pin,net,x,y+sign*distance,ph,pw)
             else: pad(f,pin,net,x+sign*distance*(-1 if side=='B' else 1),y,pw,ph)
         outline(f,x,y,(1.45 if vertical else 4.3 if large else 3.0),(3.0 if vertical else 1.8 if large else 1.45),.25)
-    for ref,x,y,net in [('H8',28,2,'WAVE_5V'),('H9',28,9.5,'XIAO_BAT')]:
+    for ref,x,y,net in [('H8',28,2,'WAVE_5V'),('H9',28.2,9.5,'XIAO_BAT')]:
         f = new(ref,net,x,y,'F',(.6,.6),.9);pad(f,1,net,x,y,2.2,2.2,1)
         graphic(f,p.SHAPE_T_CIRCLE,(x,y),(x+1.35,y),p.F_CrtYd,.05)
 
@@ -251,9 +254,9 @@ def pcb():
     track('VM',p.F_Cu,[(21.25,6),(21.25,7),(18,7),(18,14),(26,14),(28,13)],1.2)
     track('WAVE_5V',p.B_Cu,[(28,2),(19.95,2),(19.95,4.2),(19.1,6),(19.1,10.025)],.6)
     track('WAVE_5V',p.B_Cu,[(19.1,10.025),(18.3,10.025),(18.3,11.975),(19.1,11.975)],.2)
-    track('LDO_4V',p.B_Cu,[(21.9,10.025),(21.9,9.05),(25.8,9.05),(25.8,9.85)],.4)
-    track('LDO_4V',p.B_Cu,[(23.95,7.9),(23.95,9.05)],.4)
-    track('LDO_4V',p.B_Cu,[(25.8,9.85),(26.625,9.85),(26.625,11.75),(25.8,11.75)],.2)
+    track('LDO_4V',p.B_Cu,[(21.9,10.025),(21.9,9.05),(25.85,9.05),(25.85,9.85)],.4)
+    track('LDO_4V',p.B_Cu,[(23.95,7.8),(23.95,9.05)],.4)
+    track('LDO_4V',p.B_Cu,[(25.85,9.85),(26.8,9.85),(26.8,11.75),(25.85,11.75)],.2)
     track('LDO_4V',p.B_Cu,[(21.9,10.025),(21.9,9.4)],.3);via('LDO_4V',21.9,9.4)
     track('LDO_4V',p.F_Cu,[(21.9,9.4),(21.7,12.7)],.4);via('LDO_4V',21.7,12.7)
     track('LDO_4V',p.B_Cu,[(21.7,12.7),(21.9,12.9),(21.9,14.65),(23,14.65)],.4)
@@ -262,9 +265,9 @@ def pcb():
     via('LDO_4V',17.1,16);track('LDO_4V',p.F_Cu,[(17.1,16),(18.3,16)],.4)
     track('FB',p.B_Cu,[(21.9,11.325),(22.425,11.325),(22.425,13),(24,13),(24,16.55),(23,16.55)],.15)
     track('FB',p.B_Cu,[(24,14.65),(25,14.65)],.15)
-    track('XIAO_BAT',p.B_Cu,[(23.2,9.85),(23.2,10.4)],.4);via('XIAO_BAT',23.2,10.4)
-    track('XIAO_BAT',p.F_Cu,[(23.2,10.4),(26.5,10.4),(28,9.5)],.6)
-    track('XIAO_BAT',p.B_Cu,[(28,9.5),(29.3,9.5),(29.3,5.55),(27.8,5.55)],.4)
+    track('XIAO_BAT',p.B_Cu,[(23.35,9.85),(23.35,10.4)],.4);via('XIAO_BAT',23.35,10.4)
+    track('XIAO_BAT',p.F_Cu,[(23.35,10.4),(26.5,10.4),(28.2,9.5)],.6)
+    track('XIAO_BAT',p.B_Cu,[(28.2,9.5),(29.3,9.5),(29.3,5.55),(27.8,5.55)],.4)
     for x in (20.15,20.85):
         for y in (10.55,11.45): via('DRIVE_GND',x,y)
 
@@ -289,7 +292,9 @@ def pcb():
     p.SaveBoard(str(DEST/'drive-power-carrier.kicad_pcb'),b)
     data={'board_size_mm':[30,18,1.6],'new_component_positions':positions,'removed_vm_segments':removed,
           'proposed_min_clearance_mm':.15,'thermal_vias':4,'thermal_via_drill_mm':.3,
-          'sot23_footprint_status':'provisional generic reserve; ADI 21-0057 / 90-0174 and PCN2571C not yet read',
+          'sot23_footprint_status':'ADI21-0057 RevK outline and mirrored manufacturer90-0174 RevB land pattern; physical/process validation pending',
+          'sot23_outline_reserve_basis':'3mm D/E max plus conservative .25mm protrusion each side; Amax1.45 plus .05 seating allowance',
+          'pin2571c_status':'shipping box change only; no fit/form/function impact per official notice',
           'pads':[],'physical_tests':False,'fabrication_released':False}
     for f in b.GetFootprints():
         for a in f.Pads():

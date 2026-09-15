@@ -23,4 +23,4 @@ R6,10k / 0.1%,RaceRemote_DrivePower:R_0805_R6,B,,Candidate; not purchased
 R7,360 / 1% / 0.25W,RaceRemote_DrivePower:R_1206_R7,F,,Candidate; not purchased
 U1,TA6586 DIP8,RaceRemote_Motor:TA6586_DIP8,F,TA6586,Existing inventory
 U2,TPS73701DRBR,RaceRemote_DrivePower:TPS73701_DRB_3x3_EP_U2,B,TPS73701DRBR,Candidate; not purchased
-U3,MAX40200AUK+T,RaceRemote_DrivePower:SOT23_5_Provisional_U3,B,MAX40200AUK+T,Candidate; not purchased
+U3,MAX40200AUK+T,RaceRemote_DrivePower:SOT23_5_ADI_90_0174_B_U3,B,MAX40200AUK+T,Candidate; not purchased

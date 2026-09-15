@@ -7,8 +7,10 @@
   "meter": "DT838",
   "black_lead_socket_reported": "COM",
   "red_lead_socket_reported": "V maC",
-  "dc_voltage_range_confirmed": false,
-  "meter_battery_replacement_confirmed": false,
+  "dc_voltage_range_confirmed": true,
+  "dc_voltage_range": "DCV 20",
+  "meter_battery_replacement_confirmed": true,
+  "confirmation_source": "user follow-up confirms DCV20 and battery replacement before readings",
   "pin_numbering": "user-local, identified by wire color, not manufacturer numbering",
   "pins": {"1": "red", "2": "white", "3": "black"},
   "readings": [
@@ -16,14 +18,14 @@
     {"black_probe_pin": 2, "red_probe_pin": 3, "reported_voltage_v": "-3.6"},
     {"black_probe_pin": 1, "red_probe_pin": 3, "reported_voltage_v": "-7.23"}
   ],
-  "conditional_interpretation": {
-    "condition": "DC voltage mode and functioning meter",
+  "inferred_pinout": {
+    "basis": "user-reported readings in confirmed DC voltage mode after meter battery replacement",
     "pack_positive": 1,
     "cell_midpoint": 2,
     "pack_negative": 3
   },
   "limitations": [
-    "Previous meter readings were anomalous; mode and meter recovery not yet confirmed",
+    "Meter accuracy not independently verified; current readings are user-reported",
     "Cell values reported to one decimal place; no quantified cell imbalance",
     "Does not validate other packs, capacity, internal resistance, charge rating or protection",
     "Two-pin power connector and protection ground topology not measured"

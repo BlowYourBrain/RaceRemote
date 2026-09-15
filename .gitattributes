@@ -230,3 +230,9 @@ cad/motor-carrier-mount/*.png binary
 tools/build_motor_print_kit.py text eol=lf
 tools/print-kit-requirements.txt text eol=lf
 docs/evidence/motor-print-kit-v01.json text eol=lf
+
+tools/check_current_service.py text eol=lf
+tools/build_service_viewer.py text eol=lf
+cad/current-service/*.html text eol=lf
+cad/current-service/*.md text eol=lf
+docs/evidence/current-service*.json text eol=lf

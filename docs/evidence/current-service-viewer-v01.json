@@ -1,0 +1,12 @@
+{
+  "body_pose_count": 265,
+  "display_body_feature_edges_from_checked_meshes": true,
+  "source_sha256": {
+    "cad/control-harness/viewer.html": "ca125b6974f8f9599fc037c2aa3db3cf69c030c7159489dd93c6c7900b6f07c8",
+    "docs/evidence/current-service-v01.json": "654037a45d1f83b490dc09035a878344b71c52fceaa6a44d866b3aacf124b2fb",
+    "tools/build_service_viewer.py": "68462c354abb72d0515f91f99426f85ae4a1dd38d6923c24661735d25022e727"
+  },
+  "artifact_sha256": {
+    "cad/current-service/viewer.html": "ce84129d0c30e65a6cf50ea50efe2c6fe64de327540d705b35c677e67d2b979b"
+  }
+}

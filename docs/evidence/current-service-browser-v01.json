@@ -1,0 +1,65 @@
+{
+  "date": "2026-09-15",
+  "page": "cad/current-service/viewer.html",
+  "samples": [
+    {
+      "index": 0,
+      "xyz": [
+        0,
+        0,
+        0
+      ],
+      "label": "Смещение кузова: X +0, Y 0, Z +0 мм. Проверенное положение.",
+      "glError": 0
+    },
+    {
+      "index": 8,
+      "xyz": [
+        0,
+        0,
+        2
+      ],
+      "label": "Смещение кузова: X +0, Y 0, Z +2 мм. Проверенное положение.",
+      "glError": 0
+    },
+    {
+      "index": 12,
+      "xyz": [
+        1,
+        0,
+        2
+      ],
+      "label": "Смещение кузова: X +1, Y 0, Z +2 мм. Проверенное положение.",
+      "glError": 0
+    },
+    {
+      "index": 264,
+      "xyz": [
+        1,
+        0,
+        65
+      ],
+      "label": "Смещение кузова: X +1, Y 0, Z +65 мм. Проверенное положение.",
+      "glError": 0
+    }
+  ],
+  "start": 0,
+  "end": 264,
+  "parts": 58,
+  "visibleMoving": [
+    {
+      "id": "usb_cover",
+      "visible": true,
+      "slide": null,
+      "level": 0
+    },
+    {
+      "id": "body",
+      "visible": true,
+      "slide": null,
+      "level": 0
+    }
+  ],
+  "rendered": "true",
+  "viewer_sha256": "ce84129d0c30e65a6cf50ea50efe2c6fe64de327540d705b35c677e67d2b979b"
+}

@@ -1,0 +1,103 @@
+{
+  "date": "2026-10-25",
+  "recorded_at_utc": "2026-10-25T16:47:21.909203+00:00",
+  "user_confirmed": {
+    "received": [
+      "XIAO",
+      "SG90",
+      "motor",
+      "Waveshare DC5-36-TO-DC3V3-5-M"
+    ],
+    "camera_received": false,
+    "xiao_antenna_connected": true
+  },
+  "device": {
+    "port": "COM3",
+    "chip": "ESP32-S3",
+    "revision": "0.2",
+    "mac": "b8:1f:3f:d9:08:50",
+    "flash_bytes": 8388608,
+    "embedded_psram_bytes": 8388608
+  },
+  "backup": {
+    "local_original": "build\\xiao-usb-2026-10-25\\original-COM3.bin",
+    "original_sha256": "9edcaea09790bc6583f2c07f7cd5bf59db5f4171c3531dd4c751288694d1a748",
+    "local_verified": "build\\xiao-usb-2026-10-25\\original-held-COM3.bin",
+    "stable_verified_copy": "D:\\RaceRemote-device-backups\\xiao-b81f3fd90850\\original-2026-10-25.bin",
+    "verified_sha256": "57668b828e67978ef8d436506564bfdca0d89877223088b77077858fbe9006ef",
+    "size_bytes": 8388608,
+    "verification": "esptool verify-flash 0 original-held-COM3.bin: digest matched; no reset between read and verify",
+    "first_verification": "failed after restart; only changed sector 0xa000, within original NVS partition"
+  },
+  "source": {
+    "snapshot_path": "D:\\RaceRemote-build-checks\\actuator-link-wr66dxap",
+    "snapshot_commit": "a8c25f61192f787efa5a352b331ae0a35ff93199",
+    "verified_files_sha256": {
+      "board/xiao_sense.h": "3014a2edb8969c82c9f13b5a029b07d1ba8478b6956c5ce4f9c173999da03f9c",
+      "camera/main.cpp": "e75441256c34ee29da2ddb12d41c715945aef2cda7a6bc8cd33501738fee5fef",
+      "camera/secrets.example.h": "ba66dc0885f3af8887ccd0fa7d35d2f9cb66e8dea427b8650f9d139c3283401b",
+      "camera/service.h": "ae35e4dda17c333e175138c226b4a3a0d5fad1d748298f1d97739a3e6641ce38",
+      "prototype/actuator_build_config.h": "548c9346e953ef7c165470bfe5a090eae1acf3f3c7a7d8bcd4703b9434efec26",
+      "prototype/actuator_outputs.h": "1f68e3f5fdb75d9ada9329e91e9afd84a663b0d22ce9fb82d9e94aab9e43ba94",
+      "prototype/control.h": "95ac372f6589a46419ffd6ac6457fef59972327a89e0f6e5b456be178b38d18f",
+      "prototype/discovery.h": "edaff38c829bdfe819711bc0e685fa1072bc03ef8e39a8ae5caa4015de40efc8",
+      "prototype/drive_outputs.h": "0189fb503a37ccd51cfc07021f70f101f102678c6d131e4fd9a6cd09a1445162",
+      "prototype/drive_plan.h": "cb8899f70c1c3d31ebbc128f0d041eae3f2ff4a63746eb2d15cf4c18f1f23604",
+      "prototype/main.cpp": "b41d2cc7d884886df5c542a70da56a01b81a556540306fd7aa99c7ad0908bcd0",
+      "prototype/motor_dispatch.h": "5a2afecc8bf121fb2499556efa4ab38429071f4d4fa9539cfa382e81e2f9bbb4",
+      "prototype/motor_pwm.h": "bf4fdb7e4a0ed2c546fd113caec057a7097897d7fbd982df467999e390a0cdc6",
+      "prototype/motor_pwm_idf.cpp": "279adb0dc58eef01ac1971081bfd65c6257ab2365ff85843d87c1e1ac91ff28a",
+      "prototype/motor_pwm_idf.h": "34a909d50269f52a20968326b65f4b2b4a9d9e15cd81b9d72ede4c89de100cfd",
+      "prototype/secrets.example.h": "c90e75ea529293310eba781b46570819cceb64c0f5c06eef80786a04a5845a2d",
+      "prototype/servo_pwm.h": "8af502529c603ec31ba3dc43ba92d100e268c290ef81732c0b753ee3fd8e45fa",
+      "prototype/servo_pwm_idf.cpp": "fda261b5ab1ff6ae9593900bf427085d4b2fff862d455b72c57ac83f9a4b38b9",
+      "prototype/servo_pwm_idf.h": "88123c0fe0271ecb2ebf3441cf090d83c101e7134924c017605aa65ace04c500"
+    },
+    "firmware_remote_head_observed": "d07267f3ab1e1dba49cf0b39550d60d388bd8828",
+    "identity_handshake_present": false,
+    "source_modified": false,
+    "synthetic_calibration_images_used": false
+  },
+  "build": {
+    "environment": "xiao-control-usb",
+    "platform": "espressif32@6.9.0",
+    "arduino": "2.0.17",
+    "websockets": "2.6.1",
+    "config_sha256": "01a7db070f16cd4bec027c8221b3baf818116dfd3ef6f5a322849a10f31837fd",
+    "firmware_sha256": "fcc6aa019a72c53184ef8c48b98c710442fd5afa4285e27b78a187890fd48a88",
+    "firmware_bytes": 737072,
+    "linked_static_ram_bytes": 46416,
+    "actuator_flag_present": false,
+    "camera_flag_present": false,
+    "sta_flag_present": false,
+    "actuator_hal_sources_compiled": false,
+    "local_build_log_sha256": "546d41e46e02cff7fc38e7e634d03fbdde9560c0c41c37eade0bf5d9d9b4fe04"
+  },
+  "upload": {
+    "success": true,
+    "verified_ranges": 4,
+    "local_log_sha256": "b1e8f4e88de4ff5ed1b80cbac82a71d33cb35d9869694a5b5ca4500522ce0e3b"
+  },
+  "runtime": {
+    "boot_serial_sha256": "49a2bb48dc2c50e944935f9b33f2bbe3d45b1c9bb81e29a32aad8513379b0964",
+    "ssid": "RaceRemote-5008d9",
+    "ip": "192.168.4.1",
+    "websocket_port": 1337,
+    "discovery_port": 3333,
+    "backend": "null",
+    "ready_observed": true,
+    "phone_adb_present": false
+  },
+  "not_verified": [
+    "phone association",
+    "HTTP status response",
+    "phone control and STOP",
+    "RF stability",
+    "physical actuator outputs",
+    "motor and servo power",
+    "Waveshare voltage",
+    "camera",
+    "charging",
+    "printing"
+  ]
+}

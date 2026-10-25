@@ -9,6 +9,8 @@ android {
 
     defaultConfig {
         applicationId = "vea.raceremote"
+        // The lost SSD also held the installed APK's signing key; preserve that installation during recovery tests.
+        if (providers.gradleProperty("recoveryInstall").orNull == "true") applicationId = "vea.raceremote.recovery"
         compileSdk = AppConfig.compileSdk
         minSdk = AppConfig.minSdk
         targetSdk = AppConfig.targetSdk
@@ -56,6 +58,7 @@ dependencies {
 
     testImplementation(AppDependencies.testLibraries)
     testImplementation("com.squareup.okhttp3:mockwebserver:3.14.9")
+    testImplementation("org.json:json:20230227")
     androidTestImplementation(AppDependencies.androidTestLibraries)
     androidTestImplementation("com.squareup.okhttp3:mockwebserver:3.14.9")
 }

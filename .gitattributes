@@ -1,4 +1,7 @@
 # Preserve device evidence/source hashes across Windows checkouts.
+recovery/apk-2026-09-26/** text eol=lf
+recovery/apk-2026-09-26/*.zip binary
+docs/evidence/apk-recovery-2026-10-25/* text eol=lf
 docs/esp32-wifi-reference-projects.md text eol=lf
 docs/evidence/esp32-wifi-research-2026-10-25.json text eol=lf
 docs/evidence/xiao-samsung-2026-10-25/* text eol=lf

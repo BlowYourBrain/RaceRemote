@@ -1,0 +1,222 @@
+{
+  "date": "2026-10-25",
+  "apk_inputs": [
+    {
+      "package": "vea.raceremote",
+      "local_path": "D:\\RaceRemote-device-backups\\samsung-RF8M811X8FK\\2026-09-26\\installed-app.apk",
+      "bytes": 23461075,
+      "sha256": "6e2882fb146183a73e9ae4f593361e33c58f24e4d02b59fa2dd426ccc58f0534"
+    },
+    {
+      "package": "vea.raceremote.test",
+      "local_path": "D:\\RaceRemote-device-backups\\samsung-RF8M811X8FK\\2026-09-26\\installed-tests.apk",
+      "bytes": 3928885,
+      "sha256": "ba40367a6604c69b150b7b8149b278f1e87fb8840f9c36a61529b55deae44f31"
+    }
+  ],
+  "jadx": {
+    "version": "1.5.6",
+    "archive_sha256": "545ea2be9c242511bc145755cf4bda2485ade42966e096f8b4d3da2a230e8974",
+    "source": "https://github.com/skylot/jadx/releases/tag/v1.5.6",
+    "structured_errors": {
+      "app": 16,
+      "tests": 2
+    },
+    "fallback_errors": {
+      "app": 0,
+      "tests": 0
+    },
+    "replace_consts": false,
+    "kotlin_method_variable_names": "DISABLE"
+  },
+  "archive_sha256": "0a4fb28254a1a82ae28d4ce3511720916b4c7ec2c8ea0999fd2f17894c25407f",
+  "inventory": {
+    "app": {
+      "java_files": 172,
+      "original_source_names": [
+        "Action.kt ",
+        "ActionsViewModel.kt ",
+        "ActivityResultHandler.kt ",
+        "AppModule.kt ",
+        "AppSkeleton.kt ",
+        "BluetoothPermissionRationale.kt ",
+        "BluetoothResultHandler.kt ",
+        "BluetoothUtils.kt ",
+        "BlutoothItem.kt ",
+        "Buttons.kt ",
+        "CarControlClient.kt ",
+        "CarControlConnection.kt ",
+        "CarControlScreen.kt ",
+        "CarDiscovery.kt ",
+        "CarPicker.kt ",
+        "Color.kt ",
+        "ComposeUtils.kt ",
+        "CompoundCommandCreator.kt ",
+        "CompoundCommandExtractor.kt ",
+        "ControlEndpointProbe.kt ",
+        "ControlPacket.kt ",
+        "ControlSocketFactory.kt ",
+        "DiscoveryPacket.kt ",
+        "DrivingPad.kt ",
+        "EngineMapper.kt ",
+        "FlatLoadingWithContent.kt ",
+        "Flow.kt ",
+        "HandlerList.kt ",
+        "IBluetoothConnection.kt ",
+        "ISidePanelActionProvider.kt ",
+        "IdentityPacket.kt ",
+        "IntentFilter.kt ",
+        "Joystick.kt ",
+        "Log.kt ",
+        "MainActivity.kt ",
+        "MainApplicationModule.kt ",
+        "MjpegFrame.kt ",
+        "MjpegReader.kt ",
+        "MjpegStream.kt ",
+        "MjpegVideoView.kt ",
+        "MockRemoteDeviceApi.kt ",
+        "Navigation.kt ",
+        "NavigationPanel.kt ",
+        "NetworModule.kt ",
+        "Permissions.kt ",
+        "RemoteApiProvider.kt ",
+        "RemoteControlModule.kt ",
+        "RemoteControlScreen.kt ",
+        "RemoteControlViewModel.kt ",
+        "RemoteDevice.kt ",
+        "RemoteDeviceApi.kt ",
+        "RemoteDeviceConnection.kt ",
+        "RemoteDeviceRepository.kt ",
+        "Screens.kt ",
+        "Settings.kt ",
+        "Shape.kt ",
+        "SidePanelActionProvider.kt ",
+        "Slider.kt ",
+        "SteeringWheelMapper.kt ",
+        "Text.kt ",
+        "Theme.kt ",
+        "Toast.kt ",
+        "Type.kt ",
+        "UdpControlClient.kt ",
+        "UdpControlPacket.kt ",
+        "UdpControlSession.kt ",
+        "Values.kt ",
+        "VideoPanel.kt ",
+        "WebSocketApi.kt ",
+        "WiFiUtils.kt ",
+        "WifiEnterPasswordDialog.kt ",
+        "WifiNetworkFinder.kt "
+      ]
+    },
+    "tests": {
+      "java_files": 27,
+      "original_source_names": [
+        "CarIdentitySelectionTest.kt ",
+        "CarVideoSelectionTest.kt ",
+        "ControlEndpointProbeTest.kt ",
+        "ControlStatusFixture.kt ",
+        "DriveDeviceBenchTest.kt ",
+        "DrivingModeTest.kt ",
+        "ExampleInstrumentedTest.kt ",
+        "UdpControlDeviceBenchTest.kt ",
+        "UdpControlScreenDeviceTest.kt ",
+        "UdpDiscoveryDeviceTest.kt ",
+        "VideoControlIsolationTest.kt "
+      ]
+    },
+    "fallback-app": {
+      "java_files": 13,
+      "original_source_names": [
+        "CarControlClient.kt ",
+        "CarControlConnection.kt ",
+        "CarControlScreen.kt ",
+        "CarDiscovery.kt ",
+        "ComposeUtils.kt ",
+        "ControlEndpointProbe.kt ",
+        "DiscoveryPacket.kt ",
+        "DrivingPad.kt ",
+        "UdpControlClient.kt ",
+        "UdpControlPacket.kt ",
+        "UdpControlSession.kt "
+      ]
+    },
+    "fallback-tests": {
+      "java_files": 5,
+      "original_source_names": [
+        "ControlEndpointProbeTest.kt ",
+        "DriveDeviceBenchTest.kt ",
+        "UdpControlDeviceBenchTest.kt ",
+        "UdpControlScreenDeviceTest.kt ",
+        "UdpDiscoveryDeviceTest.kt "
+      ]
+    }
+  },
+  "explicit_structured_gap_count": 5,
+  "fallback_covers_all_explicit_gaps": true,
+  "android_rebuilt": false,
+  "original_kotlin_sources_reconstructed": false,
+  "firmware_cpp_reconstructed": false,
+  "root_cause": {
+    "first_missing_http_key": "controlTransport",
+    "other_required_missing_keys": [
+      "controlPort",
+      "chipId"
+    ],
+    "old_bench_loaded_over_original_udp_before_original_inspection": true
+  },
+  "original_firmware": {
+    "backup_local_path": "D:/RaceRemote-device-backups/xiao-b81f3fd90850/original-2026-10-25.bin",
+    "backup_sha256": "57668b828e67978ef8d436506564bfdca0d89877223088b77077858fbe9006ef",
+    "partition_offset": 65536,
+    "image_local_path": "D:\\RaceRemote-device-backups\\xiao-b81f3fd90850\\original-app0-2026-10-25.bin",
+    "image_bytes": 826208,
+    "image_sha256": "6605db3054c823e6c1be2b5c62d9cd90b5471d442fd5b102a8f6e122f38b4126",
+    "checksum_and_appended_sha256_verified": true,
+    "contains_udp_v1_and_required_http_fields": true,
+    "application_source_recovered": false,
+    "not_published_may_contain_network_credentials": true,
+    "application_partition_restored": true,
+    "application_restore_offset": 65536,
+    "bootloader_partition_table_nvs_restored": false,
+    "runtime_ready": "READY protocol=udp-v1 car=RaceRemote-5008d9 ip=192.168.1.122 udp=3334 backend=null",
+    "pc_udp_smoke_passed": true,
+    "pc_udp_watchdog_passed": true,
+    "samsung_retest_performed": false
+  },
+  "pc_udp_smoke_passed": true,
+  "pc_udp_watchdog_passed": true,
+  "samsung_retest_performed": false,
+  "physical_outputs_tested": false,
+  "final_observed_status": {
+    "protocol": 1,
+    "carId": "RaceRemote-5008d9",
+    "outputsEnabled": false,
+    "acceptingControl": true,
+    "actuatorMode": "disabled",
+    "armed": false,
+    "throttle": 0,
+    "steering": 0,
+    "motorDispatch": {
+      "backend": "null",
+      "mode": "applied_to_sink"
+    },
+    "drivePlan": {
+      "mode": "off",
+      "sampledAtMs": 231437,
+      "fiPermille": 0,
+      "biPermille": 0,
+      "steeringNormalized": 0
+    },
+    "controlTransport": "udp-v1",
+    "controlPort": 3334,
+    "chipId": "5008d93f1fb8",
+    "radioProtocolBitmap": 7
+  },
+  "evidence_sha256": {
+    "boot-ready.txt": "52bc188d61098f5cfa79d93eec287d7f7789b772876ad43e577095c6579eb98f",
+    "image-info.txt": "61cc4bfdcc7d700ba0ed546ea1bb31393c35926d81fee23b4095bf165ac7943b",
+    "restore-upload.txt": "f7ae0a2b4c6c14e85c4c16e9b95d8ef6c6061724c1bf61ec95547890562d9b6e",
+    "udp-smoke.json": "1034edf2239d5582c1bfd70ce1dfd2f7f5390ab3d7ce8f2e9ddc60bcd68cb1fd",
+    "udp-watchdog.json": "3f8ae2f3deeef8beff2fc090a070664de87d1cb00a64de6f92e7fe749b357e51"
+  }
+}

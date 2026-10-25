@@ -1,0 +1,101 @@
+{
+  "host": "192.168.1.122",
+  "ready": "READY protocol=udp-v1 car=RaceRemote-5008d9 ip=192.168.1.122 udp=3334 backend=null",
+  "scope": "PC-to-original-firmware UDP smoke, not Samsung or source equivalence",
+  "events": [
+    {
+      "kind": 128,
+      "sequence": 0,
+      "throttle": 0,
+      "steering": 0
+    },
+    {
+      "kind": 129,
+      "sequence": 1,
+      "throttle": 0,
+      "steering": 0
+    },
+    {
+      "kind": 129,
+      "sequence": 2,
+      "throttle": 200,
+      "steering": 100
+    }
+  ],
+  "initial_status": {
+    "protocol": 1,
+    "carId": "RaceRemote-5008d9",
+    "outputsEnabled": false,
+    "acceptingControl": true,
+    "actuatorMode": "disabled",
+    "armed": false,
+    "throttle": 0,
+    "steering": 0,
+    "motorDispatch": {
+      "backend": "null",
+      "mode": "applied_to_sink"
+    },
+    "drivePlan": {
+      "mode": "off",
+      "sampledAtMs": 83781,
+      "fiPermille": 0,
+      "biPermille": 0,
+      "steeringNormalized": 0
+    },
+    "controlTransport": "udp-v1",
+    "controlPort": 3334,
+    "chipId": "5008d93f1fb8",
+    "radioProtocolBitmap": 7
+  },
+  "active_status": {
+    "protocol": 1,
+    "carId": "RaceRemote-5008d9",
+    "outputsEnabled": false,
+    "acceptingControl": true,
+    "actuatorMode": "disabled",
+    "armed": true,
+    "throttle": 200,
+    "steering": 100,
+    "motorDispatch": {
+      "backend": "null",
+      "mode": "applied_to_sink"
+    },
+    "drivePlan": {
+      "mode": "driving",
+      "sampledAtMs": 83947,
+      "fiPermille": 35,
+      "biPermille": 0,
+      "steeringNormalized": 100
+    },
+    "controlTransport": "udp-v1",
+    "controlPort": 3334,
+    "chipId": "5008d93f1fb8",
+    "radioProtocolBitmap": 7
+  },
+  "final_status": {
+    "protocol": 1,
+    "carId": "RaceRemote-5008d9",
+    "outputsEnabled": false,
+    "acceptingControl": true,
+    "actuatorMode": "disabled",
+    "armed": false,
+    "throttle": 0,
+    "steering": 0,
+    "motorDispatch": {
+      "backend": "null",
+      "mode": "applied_to_sink"
+    },
+    "drivePlan": {
+      "mode": "off",
+      "sampledAtMs": 84011,
+      "fiPermille": 0,
+      "biPermille": 0,
+      "steeringNormalized": 0
+    },
+    "controlTransport": "udp-v1",
+    "controlPort": 3334,
+    "chipId": "5008d93f1fb8",
+    "radioProtocolBitmap": 7
+  },
+  "passed": true
+}

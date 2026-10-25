@@ -1,0 +1,56 @@
+TX ms=515925 kind=128 seq=0 sent=1
+CONTROL active=1 armed=0 throttle=0 steering=0 seq=0 backend=null
+TX ms=515943 kind=129 seq=1 sent=1
+CONTROL active=1 armed=1 throttle=0 steering=0 seq=1 backend=null
+TX ms=516067 kind=129 seq=2 sent=1
+CONTROL active=1 armed=1 throttle=600 steering=250 seq=2 backend=null
+CONTROL active=1 armed=1 throttle=-600 steering=-250 seq=5 backend=null
+CONTROL active=1 armed=1 throttle=0 steering=0 seq=17 backend=null
+CONTROL active=1 armed=1 throttle=400 steering=0 seq=18 backend=null
+CONTROL active=0 armed=0 throttle=0 steering=0 seq=29 backend=null
+TX ms=517089 kind=128 seq=0 sent=1
+CONTROL active=1 armed=0 throttle=0 steering=0 seq=0 backend=null
+TX ms=517102 kind=129 seq=1 sent=1
+CONTROL active=1 armed=1 throttle=0 steering=0 seq=1 backend=null
+TX ms=517114 kind=129 seq=2 sent=1
+CONTROL active=1 armed=1 throttle=600 steering=0 seq=2 backend=null
+FAILSAFE timeout: logical outputs=0
+CONTROL active=0 armed=0 throttle=0 steering=0 seq=2 backend=null
+TX ms=517822 kind=128 seq=0 sent=1
+CONTROL active=1 armed=0 throttle=0 steering=0 seq=0 backend=null
+TX ms=517843 kind=129 seq=1 sent=1
+CONTROL active=1 armed=1 throttle=0 steering=0 seq=1 backend=null
+TX ms=517869 kind=129 seq=2 sent=1
+CONTROL active=0 armed=0 throttle=0 steering=0 seq=127 backend=null
+TX ms=521853 kind=128 seq=0 sent=1
+CONTROL active=1 armed=0 throttle=0 steering=0 seq=0 backend=null
+TX ms=521948 kind=129 seq=1 sent=1
+CONTROL active=1 armed=1 throttle=0 steering=0 seq=1 backend=null
+TX ms=522035 kind=129 seq=2 sent=1
+CONTROL active=0 armed=0 throttle=0 steering=0 seq=160 backend=null
+TX ms=527137 kind=128 seq=0 sent=1
+CONTROL active=1 armed=0 throttle=0 steering=0 seq=0 backend=null
+TX ms=527168 kind=129 seq=1 sent=1
+CONTROL active=1 armed=1 throttle=0 steering=0 seq=1 backend=null
+TX ms=527193 kind=129 seq=2 sent=1
+FAILSAFE timeout: logical outputs=0
+CONTROL active=0 armed=0 throttle=0 steering=0 seq=152 backend=null
+TX ms=532362 kind=128 seq=0 sent=1
+CONTROL active=1 armed=0 throttle=0 steering=0 seq=0 backend=null
+TX ms=532378 kind=129 seq=1 sent=1
+CONTROL active=1 armed=1 throttle=0 steering=0 seq=1 backend=null
+TX ms=532394 kind=129 seq=2 sent=1
+CONTROL active=0 armed=0 throttle=0 steering=0 seq=18 backend=null
+TX ms=533586 kind=128 seq=0 sent=1
+CONTROL active=1 armed=0 throttle=0 steering=0 seq=0 backend=null
+TX ms=533600 kind=129 seq=1 sent=1
+CONTROL active=1 armed=1 throttle=0 steering=0 seq=1 backend=null
+TX ms=533608 kind=129 seq=2 sent=1
+FAILSAFE timeout: logical outputs=0
+CONTROL active=0 armed=0 throttle=0 steering=0 seq=19 backend=null
+TX ms=534829 kind=128 seq=0 sent=1
+CONTROL active=1 armed=0 throttle=0 steering=0 seq=0 backend=null
+TX ms=534843 kind=129 seq=1 sent=1
+CONTROL active=1 armed=1 throttle=0 steering=0 seq=1 backend=null
+TX ms=534869 kind=129 seq=2 sent=1
+CONTROL active=0 armed=0 throttle=0 steering=0 seq=102 backend=null

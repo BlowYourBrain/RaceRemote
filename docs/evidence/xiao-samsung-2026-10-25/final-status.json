@@ -1,0 +1,21 @@
+{
+  "protocol": 1,
+  "carId": "RaceRemote-5008d9",
+  "outputsEnabled": false,
+  "acceptingControl": true,
+  "actuatorMode": "disabled",
+  "armed": false,
+  "throttle": 0,
+  "steering": 0,
+  "motorDispatch": {
+    "backend": "null",
+    "mode": "applied_to_sink"
+  },
+  "drivePlan": {
+    "mode": "off",
+    "sampledAtMs": 577876,
+    "fiPermille": 0,
+    "biPermille": 0,
+    "steeringNormalized": 0
+  }
+}

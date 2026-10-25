@@ -1,0 +1,119 @@
+Processing xiao-control-sta-usb (platform: espressif32@6.9.0; board: seeed_xiao_esp32s3; framework: arduino)
+--------------------------------------------------------------------------------
+Verbose mode can be enabled via `-v, --verbose` option
+CONFIGURATION: https://docs.platformio.org/page/boards/espressif32/seeed_xiao_esp32s3.html
+PLATFORM: Espressif 32 (6.9.0) > Seeed Studio XIAO ESP32S3
+HARDWARE: ESP32S3 240MHz, 320KB RAM, 8MB Flash
+DEBUG: Current (cmsis-dap) External (cmsis-dap, esp-bridge, esp-builtin, esp-prog, iot-bus-jtag, jlink, minimodule, olimex-arm-usb-ocd, olimex-arm-usb-ocd-h, olimex-arm-usb-tiny-h, olimex-jtag-tiny, tumpa)
+PACKAGES:
+ - framework-arduinoespressif32 @ 3.20017.241212+sha.dcc1105b
+ - tool-esptoolpy @ 1.40501.0 (4.5.1)
+ - tool-mkfatfs @ 2.0.1
+ - tool-mklittlefs @ 1.203.210628 (2.3)
+ - tool-mkspiffs @ 2.230.0 (2.30)
+ - toolchain-riscv32-esp @ 8.4.0+2021r2-patch5
+ - toolchain-xtensa-esp32s3 @ 8.4.0+2021r2-patch5
+LDF: Library Dependency Finder -> https://bit.ly/configure-pio-ldf
+LDF Modes: Finder ~ chain, Compatibility ~ soft
+Found 34 compatible libraries
+Scanning dependencies...
+Dependency Graph
+|-- WebSockets @ 2.6.1
+|-- WebServer @ 2.0.0
+|-- WiFi @ 2.0.0
+Building in release mode
+Building .pio\build\xiao-control-sta-usb\bootloader.bin
+Generating partitions .pio\build\xiao-control-sta-usb\partitions.bin
+esptool.py v4.5.1
+Creating esp32s3 image...
+Merged 1 ELF section
+Successfully created esp32s3 image.
+Retrieving maximum program size .pio\build\xiao-control-sta-usb\firmware.elf
+Checking size .pio\build\xiao-control-sta-usb\firmware.elf
+Advanced Memory Usage is available via "PlatformIO Home > Project Inspect"
+RAM:   [=         ]  14.2% (used 46416 bytes from 327680 bytes)
+Flash: [==        ]  22.0% (used 736985 bytes from 3342336 bytes)
+Building .pio\build\xiao-control-sta-usb\firmware.bin with action:
+  "$PYTHONEXE" "$OBJCOPY" --chip esp32s3 elf2image --flash_mode ${__get_board_flash_mode(__env__)} --flash_freq ${__get_board_f_image(__env__)} --flash_size 8MB --elf-sha256-offset 0xb0 -o $TARGET $SOURCES
+Building .pio\build\xiao-control-sta-usb\firmware.bin
+esptool.py v4.5.1
+Creating esp32s3 image...
+Merged 2 ELF sections
+Successfully created esp32s3 image.
+Configuring upload protocol...
+AVAILABLE: cmsis-dap, esp-bridge, esp-builtin, esp-prog, espota, esptool, iot-bus-jtag, jlink, minimodule, olimex-arm-usb-ocd, olimex-arm-usb-ocd-h, olimex-arm-usb-tiny-h, olimex-jtag-tiny, tumpa
+CURRENT: upload_protocol = esptool
+Looking for upload port...
+Using manually specified: COM3
+Uploading .pio\build\xiao-control-sta-usb\firmware.bin
+esptool.py v4.5.1
+Serial port COM3
+Connecting...
+Chip is ESP32-S3 (revision v0.2)
+Features: WiFi, BLE
+Crystal is 40MHz
+MAC: b8:1f:3f:d9:08:50
+Uploading stub...
+Running stub...
+Stub running...
+Changing baud rate to 460800
+Changed.
+Configuring flash size...
+Flash will be erased from 0x00000000 to 0x00003fff...
+Flash will be erased from 0x00008000 to 0x00008fff...
+Flash will be erased from 0x0000e000 to 0x0000ffff...
+Flash will be erased from 0x00010000 to 0x000c4fff...
+Compressed 15104 bytes to 10430...
+Writing at 0x00000000... (100 %)
+Wrote 15104 bytes (10430 compressed) at 0x00000000 in 0.3 seconds (effective 454.8 kbit/s)...
+Hash of data verified.
+Compressed 3072 bytes to 146...
+Writing at 0x00008000... (100 %)
+Wrote 3072 bytes (146 compressed) at 0x00008000 in 0.0 seconds (effective 495.1 kbit/s)...
+Hash of data verified.
+Compressed 8192 bytes to 47...
+Writing at 0x0000e000... (100 %)
+Wrote 8192 bytes (47 compressed) at 0x0000e000 in 0.1 seconds (effective 651.2 kbit/s)...
+Hash of data verified.
+Compressed 737344 bytes to 480732...
+Writing at 0x00010000... (3 %)
+Writing at 0x0001bfbe... (6 %)
+Writing at 0x00026202... (10 %)
+Writing at 0x000325d1... (13 %)
+Writing at 0x00037c78... (16 %)
+Writing at 0x0003dcca... (20 %)
+Writing at 0x00043217... (23 %)
+Writing at 0x00048842... (26 %)
+Writing at 0x0004d8a1... (30 %)
+Writing at 0x000526a2... (33 %)
+Writing at 0x00057630... (36 %)
+Writing at 0x0005c4d4... (40 %)
+Writing at 0x000612cc... (43 %)
+Writing at 0x000667f3... (46 %)
+Writing at 0x0006b843... (50 %)
+Writing at 0x0007125f... (53 %)
+Writing at 0x00076740... (56 %)
+Writing at 0x0007b51b... (60 %)
+Writing at 0x0008064e... (63 %)
+Writing at 0x0008571b... (66 %)
+Writing at 0x0008aa4f... (70 %)
+Writing at 0x0008ffc5... (73 %)
+Writing at 0x00095d4f... (76 %)
+Writing at 0x0009b173... (80 %)
+Writing at 0x000a08ed... (83 %)
+Writing at 0x000a9d0a... (86 %)
+Writing at 0x000b0e46... (90 %)
+Writing at 0x000b6945... (93 %)
+Writing at 0x000bc468... (96 %)
+Writing at 0x000c1ed4... (100 %)
+Wrote 737344 bytes (480732 compressed) at 0x00010000 in 5.7 seconds (effective 1031.4 kbit/s)...
+Hash of data verified.
+
+Leaving...
+Hard resetting via RTS pin...
+========================= [SUCCESS] Took 12.18 seconds =========================
+
+Environment           Status    Duration
+--------------------  --------  ------------
+xiao-control-sta-usb  SUCCESS   00:00:12.182
+========================= 1 succeeded in 00:00:12.182 =========================

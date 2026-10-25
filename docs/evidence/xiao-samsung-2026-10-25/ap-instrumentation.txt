@@ -1,0 +1,108 @@
+INSTRUMENTATION_STATUS: class=vea.raceremote.DriveDeviceBenchTest
+INSTRUMENTATION_STATUS: current=1
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=4
+INSTRUMENTATION_STATUS: stream=
+vea.raceremote.DriveDeviceBenchTest:
+INSTRUMENTATION_STATUS: test=nativeClientDrivePlan
+INSTRUMENTATION_STATUS_CODE: 1
+INSTRUMENTATION_STATUS: class=vea.raceremote.DriveDeviceBenchTest
+INSTRUMENTATION_STATUS: current=1
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=4
+INSTRUMENTATION_STATUS: stream=.
+INSTRUMENTATION_STATUS: test=nativeClientDrivePlan
+INSTRUMENTATION_STATUS_CODE: 0
+INSTRUMENTATION_STATUS: class=vea.raceremote.DriveDeviceBenchTest
+INSTRUMENTATION_STATUS: current=2
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=4
+INSTRUMENTATION_STATUS: stream=
+INSTRUMENTATION_STATUS: test=silentSocketTimesOut
+INSTRUMENTATION_STATUS_CODE: 1
+INSTRUMENTATION_STATUS: class=vea.raceremote.DriveDeviceBenchTest
+INSTRUMENTATION_STATUS: current=2
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=4
+INSTRUMENTATION_STATUS: stream=.
+INSTRUMENTATION_STATUS: test=silentSocketTimesOut
+INSTRUMENTATION_STATUS_CODE: 0
+INSTRUMENTATION_STATUS: class=vea.raceremote.DriveDeviceBenchTest
+INSTRUMENTATION_STATUS: current=3
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=4
+INSTRUMENTATION_STATUS: stream=
+INSTRUMENTATION_STATUS: test=neutralLinkComparison
+INSTRUMENTATION_STATUS_CODE: 1
+INSTRUMENTATION_STATUS: class=vea.raceremote.DriveDeviceBenchTest
+INSTRUMENTATION_STATUS: current=3
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=4
+INSTRUMENTATION_STATUS: stack=java.lang.AssertionError: Some fixed-duration neutral sessions failed; inspect all six link_result records
+	at org.junit.Assert.fail(Assert.java:89)
+	at org.junit.Assert.assertTrue(Assert.java:42)
+	at vea.raceremote.DriveDeviceBenchTest.runBench(DriveDeviceBenchTest.kt:214)
+	at vea.raceremote.DriveDeviceBenchTest.neutralLinkComparison(DriveDeviceBenchTest.kt:43)
+
+INSTRUMENTATION_STATUS: stream=
+Error in neutralLinkComparison(vea.raceremote.DriveDeviceBenchTest):
+java.lang.AssertionError: Some fixed-duration neutral sessions failed; inspect all six link_result records
+	at org.junit.Assert.fail(Assert.java:89)
+	at org.junit.Assert.assertTrue(Assert.java:42)
+	at vea.raceremote.DriveDeviceBenchTest.runBench(DriveDeviceBenchTest.kt:214)
+	at vea.raceremote.DriveDeviceBenchTest.neutralLinkComparison(DriveDeviceBenchTest.kt:43)
+
+INSTRUMENTATION_STATUS: test=neutralLinkComparison
+INSTRUMENTATION_STATUS_CODE: -2
+INSTRUMENTATION_STATUS: class=vea.raceremote.DriveDeviceBenchTest
+INSTRUMENTATION_STATUS: current=4
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=4
+INSTRUMENTATION_STATUS: stream=
+INSTRUMENTATION_STATUS: test=udpDiscoveryLatency
+INSTRUMENTATION_STATUS_CODE: 1
+INSTRUMENTATION_STATUS: class=vea.raceremote.DriveDeviceBenchTest
+INSTRUMENTATION_STATUS: current=4
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=4
+INSTRUMENTATION_STATUS: stack=java.lang.AssertionError: UDP replies missing or older than200ms; inspect samples expected:<0> but was:<4>
+	at org.junit.Assert.fail(Assert.java:89)
+	at org.junit.Assert.failNotEquals(Assert.java:835)
+	at org.junit.Assert.assertEquals(Assert.java:120)
+	at vea.raceremote.DriveDeviceBenchTest.runBench(DriveDeviceBenchTest.kt:161)
+	at vea.raceremote.DriveDeviceBenchTest.udpDiscoveryLatency(DriveDeviceBenchTest.kt:44)
+
+INSTRUMENTATION_STATUS: stream=
+Error in udpDiscoveryLatency(vea.raceremote.DriveDeviceBenchTest):
+java.lang.AssertionError: UDP replies missing or older than200ms; inspect samples expected:<0> but was:<4>
+	at org.junit.Assert.fail(Assert.java:89)
+	at org.junit.Assert.failNotEquals(Assert.java:835)
+	at org.junit.Assert.assertEquals(Assert.java:120)
+	at vea.raceremote.DriveDeviceBenchTest.runBench(DriveDeviceBenchTest.kt:161)
+	at vea.raceremote.DriveDeviceBenchTest.udpDiscoveryLatency(DriveDeviceBenchTest.kt:44)
+
+INSTRUMENTATION_STATUS: test=udpDiscoveryLatency
+INSTRUMENTATION_STATUS_CODE: -2
+INSTRUMENTATION_RESULT: stream=
+
+Time: 51,471
+There were 2 failures:
+1) neutralLinkComparison(vea.raceremote.DriveDeviceBenchTest)
+java.lang.AssertionError: Some fixed-duration neutral sessions failed; inspect all six link_result records
+	at org.junit.Assert.fail(Assert.java:89)
+	at org.junit.Assert.assertTrue(Assert.java:42)
+	at vea.raceremote.DriveDeviceBenchTest.runBench(DriveDeviceBenchTest.kt:214)
+	at vea.raceremote.DriveDeviceBenchTest.neutralLinkComparison(DriveDeviceBenchTest.kt:43)
+2) udpDiscoveryLatency(vea.raceremote.DriveDeviceBenchTest)
+java.lang.AssertionError: UDP replies missing or older than200ms; inspect samples expected:<0> but was:<4>
+	at org.junit.Assert.fail(Assert.java:89)
+	at org.junit.Assert.failNotEquals(Assert.java:835)
+	at org.junit.Assert.assertEquals(Assert.java:120)
+	at vea.raceremote.DriveDeviceBenchTest.runBench(DriveDeviceBenchTest.kt:161)
+	at vea.raceremote.DriveDeviceBenchTest.udpDiscoveryLatency(DriveDeviceBenchTest.kt:44)
+
+FAILURES!!!
+Tests run: 4,  Failures: 2
+
+
+INSTRUMENTATION_CODE: -1

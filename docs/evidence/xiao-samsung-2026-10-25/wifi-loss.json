@@ -1,0 +1,55 @@
+{
+  "scope": "Deliberate WiFi disable during neutral armed session; test runner interrupted after observing failsafe; host receive times only",
+  "passed": true,
+  "events": [
+    {
+      "elapsedMs": 937,
+      "kind": "serial",
+      "line": "TX ms=454160 kind=128 seq=0 sent=1"
+    },
+    {
+      "elapsedMs": 937,
+      "kind": "serial",
+      "line": "CONTROL active=1 armed=0 throttle=0 steering=0 seq=0 backend=null"
+    },
+    {
+      "elapsedMs": 953,
+      "kind": "serial",
+      "line": "TX ms=454174 kind=129 seq=1 sent=1"
+    },
+    {
+      "elapsedMs": 953,
+      "kind": "serial",
+      "line": "CONTROL active=1 armed=1 throttle=0 steering=0 seq=1 backend=null"
+    },
+    {
+      "elapsedMs": 953,
+      "kind": "wifi_disable_requested"
+    },
+    {
+      "elapsedMs": 1047,
+      "kind": "wifi_disable_returned",
+      "exitCode": 0
+    },
+    {
+      "elapsedMs": 1047,
+      "kind": "serial",
+      "line": "TX ms=454201 kind=129 seq=2 sent=1"
+    },
+    {
+      "elapsedMs": 1359,
+      "kind": "serial",
+      "line": "FAILSAFE timeout: logical outputs=0"
+    },
+    {
+      "elapsedMs": 1359,
+      "kind": "serial",
+      "line": "CONTROL active=0 armed=0 throttle=0 steering=0 seq=9 backend=null"
+    },
+    {
+      "elapsedMs": 1359,
+      "kind": "inactive_observed",
+      "observedSinceDisableRequestMs": 406
+    }
+  ]
+}

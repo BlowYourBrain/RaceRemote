@@ -1,0 +1,256 @@
+{
+  "complete": true,
+  "scenario": "watchdog",
+  "host": "192.168.155.71",
+  "carId": "RaceRemote-5008d9",
+  "scope": "Native Android control client and separate raw timeout probe; shadow firmware outputs only",
+  "events": [
+    {
+      "elapsedMs": 110,
+      "kind": "status",
+      "data": {
+        "phase": "preflight",
+        "requestMs": 105,
+        "value": {
+          "protocol": 1,
+          "carId": "RaceRemote-5008d9",
+          "outputsEnabled": false,
+          "acceptingControl": true,
+          "actuatorMode": "disabled",
+          "armed": false,
+          "throttle": 0,
+          "steering": 0,
+          "motorDispatch": {
+            "backend": "null",
+            "mode": "applied_to_sink"
+          },
+          "drivePlan": {
+            "mode": "off",
+            "sampledAtMs": 31150,
+            "fiPermille": 0,
+            "biPermille": 0,
+            "steeringNormalized": 0
+          }
+        }
+      }
+    },
+    {
+      "elapsedMs": 224,
+      "kind": "action",
+      "data": "raw DRIVE acknowledged; stop sending while socket stays open"
+    },
+    {
+      "elapsedMs": 251,
+      "kind": "status",
+      "data": {
+        "phase": "before_watchdog",
+        "requestMs": 27,
+        "value": {
+          "protocol": 1,
+          "carId": "RaceRemote-5008d9",
+          "outputsEnabled": false,
+          "acceptingControl": true,
+          "actuatorMode": "disabled",
+          "armed": true,
+          "throttle": 600,
+          "steering": 0,
+          "motorDispatch": {
+            "backend": "null",
+            "mode": "applied_to_sink"
+          },
+          "drivePlan": {
+            "mode": "driving",
+            "sampledAtMs": 31380,
+            "fiPermille": 25,
+            "biPermille": 0,
+            "steeringNormalized": 0
+          }
+        }
+      }
+    },
+    {
+      "elapsedMs": 272,
+      "kind": "status",
+      "data": {
+        "phase": "watchdog_zero",
+        "requestMs": 20,
+        "value": {
+          "protocol": 1,
+          "carId": "RaceRemote-5008d9",
+          "outputsEnabled": false,
+          "acceptingControl": true,
+          "actuatorMode": "disabled",
+          "armed": true,
+          "throttle": 600,
+          "steering": 0,
+          "motorDispatch": {
+            "backend": "null",
+            "mode": "applied_to_sink"
+          },
+          "drivePlan": {
+            "mode": "driving",
+            "sampledAtMs": 31400,
+            "fiPermille": 45,
+            "biPermille": 0,
+            "steeringNormalized": 0
+          }
+        }
+      }
+    },
+    {
+      "elapsedMs": 335,
+      "kind": "status",
+      "data": {
+        "phase": "watchdog_zero",
+        "requestMs": 22,
+        "value": {
+          "protocol": 1,
+          "carId": "RaceRemote-5008d9",
+          "outputsEnabled": false,
+          "acceptingControl": true,
+          "actuatorMode": "disabled",
+          "armed": true,
+          "throttle": 600,
+          "steering": 0,
+          "motorDispatch": {
+            "backend": "null",
+            "mode": "applied_to_sink"
+          },
+          "drivePlan": {
+            "mode": "driving",
+            "sampledAtMs": 31465,
+            "fiPermille": 110,
+            "biPermille": 0,
+            "steeringNormalized": 0
+          }
+        }
+      }
+    },
+    {
+      "elapsedMs": 404,
+      "kind": "status",
+      "data": {
+        "phase": "watchdog_zero",
+        "requestMs": 28,
+        "value": {
+          "protocol": 1,
+          "carId": "RaceRemote-5008d9",
+          "outputsEnabled": false,
+          "acceptingControl": true,
+          "actuatorMode": "disabled",
+          "armed": true,
+          "throttle": 600,
+          "steering": 0,
+          "motorDispatch": {
+            "backend": "null",
+            "mode": "applied_to_sink"
+          },
+          "drivePlan": {
+            "mode": "driving",
+            "sampledAtMs": 31534,
+            "fiPermille": 150,
+            "biPermille": 0,
+            "steeringNormalized": 0
+          }
+        }
+      }
+    },
+    {
+      "elapsedMs": 469,
+      "kind": "status",
+      "data": {
+        "phase": "watchdog_zero",
+        "requestMs": 24,
+        "value": {
+          "protocol": 1,
+          "carId": "RaceRemote-5008d9",
+          "outputsEnabled": false,
+          "acceptingControl": true,
+          "actuatorMode": "disabled",
+          "armed": true,
+          "throttle": 600,
+          "steering": 0,
+          "motorDispatch": {
+            "backend": "null",
+            "mode": "applied_to_sink"
+          },
+          "drivePlan": {
+            "mode": "driving",
+            "sampledAtMs": 31600,
+            "fiPermille": 150,
+            "biPermille": 0,
+            "steeringNormalized": 0
+          }
+        }
+      }
+    },
+    {
+      "elapsedMs": 475,
+      "kind": "raw_closing",
+      "data": 1000
+    },
+    {
+      "elapsedMs": 537,
+      "kind": "status",
+      "data": {
+        "phase": "watchdog_zero",
+        "requestMs": 25,
+        "value": {
+          "protocol": 1,
+          "carId": "RaceRemote-5008d9",
+          "outputsEnabled": false,
+          "acceptingControl": true,
+          "actuatorMode": "disabled",
+          "armed": false,
+          "throttle": 0,
+          "steering": 0,
+          "motorDispatch": {
+            "backend": "null",
+            "mode": "applied_to_sink"
+          },
+          "drivePlan": {
+            "mode": "off",
+            "sampledAtMs": 31665,
+            "fiPermille": 0,
+            "biPermille": 0,
+            "steeringNormalized": 0
+          }
+        }
+      }
+    },
+    {
+      "elapsedMs": 538,
+      "kind": "client",
+      "data": "Disconnect: Остановлено"
+    },
+    {
+      "elapsedMs": 561,
+      "kind": "status",
+      "data": {
+        "phase": "cleanup",
+        "requestMs": 22,
+        "value": {
+          "protocol": 1,
+          "carId": "RaceRemote-5008d9",
+          "outputsEnabled": false,
+          "acceptingControl": true,
+          "actuatorMode": "disabled",
+          "armed": false,
+          "throttle": 0,
+          "steering": 0,
+          "motorDispatch": {
+            "backend": "null",
+            "mode": "applied_to_sink"
+          },
+          "drivePlan": {
+            "mode": "off",
+            "sampledAtMs": 31689,
+            "fiPermille": 0,
+            "biPermille": 0,
+            "steeringNormalized": 0
+          }
+        }
+      }
+    }
+  ]
+}

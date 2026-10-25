@@ -1,0 +1,991 @@
+{
+  "complete": true,
+  "scenario": "native",
+  "host": "192.168.155.71",
+  "carId": "RaceRemote-5008d9",
+  "scope": "Native Android control client and separate raw timeout probe; shadow firmware outputs only",
+  "events": [
+    {
+      "elapsedMs": 93,
+      "kind": "status",
+      "data": {
+        "phase": "preflight",
+        "requestMs": 59,
+        "value": {
+          "protocol": 1,
+          "carId": "RaceRemote-5008d9",
+          "outputsEnabled": false,
+          "acceptingControl": true,
+          "actuatorMode": "disabled",
+          "armed": false,
+          "throttle": 0,
+          "steering": 0,
+          "motorDispatch": {
+            "backend": "null",
+            "mode": "applied_to_sink"
+          },
+          "drivePlan": {
+            "mode": "off",
+            "sampledAtMs": 29845,
+            "fiPermille": 0,
+            "biPermille": 0,
+            "steeringNormalized": 0
+          }
+        }
+      }
+    },
+    {
+      "elapsedMs": 93,
+      "kind": "action",
+      "data": "native client connect"
+    },
+    {
+      "elapsedMs": 93,
+      "kind": "client",
+      "data": "Disconnect: Остановлено"
+    },
+    {
+      "elapsedMs": 128,
+      "kind": "client",
+      "data": "WebSocket opened"
+    },
+    {
+      "elapsedMs": 173,
+      "kind": "client",
+      "data": "Received bytes=16 kind=128 sequence=0 rttMs=80"
+    },
+    {
+      "elapsedMs": 173,
+      "kind": "client",
+      "data": "Sending neutral ARM"
+    },
+    {
+      "elapsedMs": 173,
+      "kind": "client",
+      "data": "Send kind=1 sequence=1"
+    },
+    {
+      "elapsedMs": 276,
+      "kind": "client",
+      "data": "Received bytes=16 kind=129 sequence=1 rttMs=103"
+    },
+    {
+      "elapsedMs": 287,
+      "kind": "action",
+      "data": "native forward throttle=600 steering=250"
+    },
+    {
+      "elapsedMs": 293,
+      "kind": "client",
+      "data": "Send kind=2 sequence=2"
+    },
+    {
+      "elapsedMs": 304,
+      "kind": "client",
+      "data": "Received bytes=16 kind=129 sequence=2 rttMs=11"
+    },
+    {
+      "elapsedMs": 312,
+      "kind": "status",
+      "data": {
+        "phase": "forward",
+        "requestMs": 24,
+        "value": {
+          "protocol": 1,
+          "carId": "RaceRemote-5008d9",
+          "outputsEnabled": false,
+          "acceptingControl": true,
+          "actuatorMode": "disabled",
+          "armed": true,
+          "throttle": 600,
+          "steering": 250,
+          "motorDispatch": {
+            "backend": "null",
+            "mode": "applied_to_sink"
+          },
+          "drivePlan": {
+            "mode": "driving",
+            "sampledAtMs": 30059,
+            "fiPermille": 4,
+            "biPermille": 0,
+            "steeringNormalized": 250
+          }
+        }
+      }
+    },
+    {
+      "elapsedMs": 313,
+      "kind": "client",
+      "data": "Send kind=2 sequence=3"
+    },
+    {
+      "elapsedMs": 319,
+      "kind": "client",
+      "data": "Received bytes=16 kind=129 sequence=3 rttMs=6"
+    },
+    {
+      "elapsedMs": 333,
+      "kind": "client",
+      "data": "Send kind=2 sequence=4"
+    },
+    {
+      "elapsedMs": 343,
+      "kind": "client",
+      "data": "Received bytes=16 kind=129 sequence=4 rttMs=10"
+    },
+    {
+      "elapsedMs": 355,
+      "kind": "client",
+      "data": "Send kind=2 sequence=5"
+    },
+    {
+      "elapsedMs": 369,
+      "kind": "client",
+      "data": "Received bytes=16 kind=129 sequence=5 rttMs=13"
+    },
+    {
+      "elapsedMs": 373,
+      "kind": "client",
+      "data": "Send kind=2 sequence=6"
+    },
+    {
+      "elapsedMs": 376,
+      "kind": "status",
+      "data": {
+        "phase": "forward",
+        "requestMs": 23,
+        "value": {
+          "protocol": 1,
+          "carId": "RaceRemote-5008d9",
+          "outputsEnabled": false,
+          "acceptingControl": true,
+          "actuatorMode": "disabled",
+          "armed": true,
+          "throttle": 600,
+          "steering": 250,
+          "motorDispatch": {
+            "backend": "null",
+            "mode": "applied_to_sink"
+          },
+          "drivePlan": {
+            "mode": "driving",
+            "sampledAtMs": 30125,
+            "fiPermille": 70,
+            "biPermille": 0,
+            "steeringNormalized": 250
+          }
+        }
+      }
+    },
+    {
+      "elapsedMs": 379,
+      "kind": "client",
+      "data": "Received bytes=16 kind=129 sequence=6 rttMs=6"
+    },
+    {
+      "elapsedMs": 393,
+      "kind": "client",
+      "data": "Send kind=2 sequence=7"
+    },
+    {
+      "elapsedMs": 402,
+      "kind": "client",
+      "data": "Received bytes=16 kind=129 sequence=7 rttMs=9"
+    },
+    {
+      "elapsedMs": 414,
+      "kind": "client",
+      "data": "Send kind=2 sequence=8"
+    },
+    {
+      "elapsedMs": 425,
+      "kind": "client",
+      "data": "Received bytes=16 kind=129 sequence=8 rttMs=11"
+    },
+    {
+      "elapsedMs": 432,
+      "kind": "client",
+      "data": "Send kind=2 sequence=9"
+    },
+    {
+      "elapsedMs": 445,
+      "kind": "client",
+      "data": "Received bytes=16 kind=129 sequence=9 rttMs=12"
+    },
+    {
+      "elapsedMs": 447,
+      "kind": "status",
+      "data": {
+        "phase": "forward",
+        "requestMs": 30,
+        "value": {
+          "protocol": 1,
+          "carId": "RaceRemote-5008d9",
+          "outputsEnabled": false,
+          "acceptingControl": true,
+          "actuatorMode": "disabled",
+          "armed": true,
+          "throttle": 600,
+          "steering": 250,
+          "motorDispatch": {
+            "backend": "null",
+            "mode": "applied_to_sink"
+          },
+          "drivePlan": {
+            "mode": "driving",
+            "sampledAtMs": 30190,
+            "fiPermille": 135,
+            "biPermille": 0,
+            "steeringNormalized": 250
+          }
+        }
+      }
+    },
+    {
+      "elapsedMs": 452,
+      "kind": "client",
+      "data": "Send kind=2 sequence=10"
+    },
+    {
+      "elapsedMs": 463,
+      "kind": "client",
+      "data": "Received bytes=16 kind=129 sequence=10 rttMs=11"
+    },
+    {
+      "elapsedMs": 474,
+      "kind": "client",
+      "data": "Send kind=2 sequence=11"
+    },
+    {
+      "elapsedMs": 483,
+      "kind": "client",
+      "data": "Received bytes=16 kind=129 sequence=11 rttMs=9"
+    },
+    {
+      "elapsedMs": 493,
+      "kind": "client",
+      "data": "Send kind=2 sequence=12"
+    },
+    {
+      "elapsedMs": 505,
+      "kind": "client",
+      "data": "Received bytes=16 kind=129 sequence=12 rttMs=12"
+    },
+    {
+      "elapsedMs": 513,
+      "kind": "client",
+      "data": "Send kind=2 sequence=13"
+    },
+    {
+      "elapsedMs": 515,
+      "kind": "status",
+      "data": {
+        "phase": "forward",
+        "requestMs": 28,
+        "value": {
+          "protocol": 1,
+          "carId": "RaceRemote-5008d9",
+          "outputsEnabled": false,
+          "acceptingControl": true,
+          "actuatorMode": "disabled",
+          "armed": true,
+          "throttle": 600,
+          "steering": 250,
+          "motorDispatch": {
+            "backend": "null",
+            "mode": "applied_to_sink"
+          },
+          "drivePlan": {
+            "mode": "driving",
+            "sampledAtMs": 30260,
+            "fiPermille": 150,
+            "biPermille": 0,
+            "steeringNormalized": 250
+          }
+        }
+      }
+    },
+    {
+      "elapsedMs": 515,
+      "kind": "action",
+      "data": "native reverse throttle=-600 steering=-250"
+    },
+    {
+      "elapsedMs": 522,
+      "kind": "client",
+      "data": "Received bytes=16 kind=129 sequence=13 rttMs=9"
+    },
+    {
+      "elapsedMs": 533,
+      "kind": "client",
+      "data": "Send kind=2 sequence=14"
+    },
+    {
+      "elapsedMs": 537,
+      "kind": "status",
+      "data": {
+        "phase": "reverse_pause",
+        "requestMs": 22,
+        "value": {
+          "protocol": 1,
+          "carId": "RaceRemote-5008d9",
+          "outputsEnabled": false,
+          "acceptingControl": true,
+          "actuatorMode": "disabled",
+          "armed": true,
+          "throttle": 600,
+          "steering": 250,
+          "motorDispatch": {
+            "backend": "null",
+            "mode": "applied_to_sink"
+          },
+          "drivePlan": {
+            "mode": "driving",
+            "sampledAtMs": 30285,
+            "fiPermille": 150,
+            "biPermille": 0,
+            "steeringNormalized": 250
+          }
+        }
+      }
+    },
+    {
+      "elapsedMs": 540,
+      "kind": "client",
+      "data": "Received bytes=16 kind=129 sequence=14 rttMs=7"
+    },
+    {
+      "elapsedMs": 553,
+      "kind": "client",
+      "data": "Send kind=2 sequence=15"
+    },
+    {
+      "elapsedMs": 566,
+      "kind": "client",
+      "data": "Received bytes=16 kind=129 sequence=15 rttMs=13"
+    },
+    {
+      "elapsedMs": 573,
+      "kind": "client",
+      "data": "Send kind=2 sequence=16"
+    },
+    {
+      "elapsedMs": 582,
+      "kind": "client",
+      "data": "Received bytes=16 kind=129 sequence=16 rttMs=9"
+    },
+    {
+      "elapsedMs": 593,
+      "kind": "client",
+      "data": "Send kind=2 sequence=17"
+    },
+    {
+      "elapsedMs": 602,
+      "kind": "client",
+      "data": "Received bytes=16 kind=129 sequence=17 rttMs=9"
+    },
+    {
+      "elapsedMs": 607,
+      "kind": "status",
+      "data": {
+        "phase": "reverse_pause",
+        "requestMs": 29,
+        "value": {
+          "protocol": 1,
+          "carId": "RaceRemote-5008d9",
+          "outputsEnabled": false,
+          "acceptingControl": true,
+          "actuatorMode": "disabled",
+          "armed": true,
+          "throttle": -600,
+          "steering": -250,
+          "motorDispatch": {
+            "backend": "null",
+            "mode": "applied_to_sink"
+          },
+          "drivePlan": {
+            "mode": "reverse_wait",
+            "sampledAtMs": 30354,
+            "fiPermille": 0,
+            "biPermille": 0,
+            "steeringNormalized": -250
+          }
+        }
+      }
+    },
+    {
+      "elapsedMs": 613,
+      "kind": "client",
+      "data": "Send kind=2 sequence=18"
+    },
+    {
+      "elapsedMs": 620,
+      "kind": "client",
+      "data": "Received bytes=16 kind=129 sequence=18 rttMs=7"
+    },
+    {
+      "elapsedMs": 629,
+      "kind": "status",
+      "data": {
+        "phase": "reverse",
+        "requestMs": 21,
+        "value": {
+          "protocol": 1,
+          "carId": "RaceRemote-5008d9",
+          "outputsEnabled": false,
+          "acceptingControl": true,
+          "actuatorMode": "disabled",
+          "armed": true,
+          "throttle": -600,
+          "steering": -250,
+          "motorDispatch": {
+            "backend": "null",
+            "mode": "applied_to_sink"
+          },
+          "drivePlan": {
+            "mode": "reverse_wait",
+            "sampledAtMs": 30375,
+            "fiPermille": 0,
+            "biPermille": 0,
+            "steeringNormalized": -250
+          }
+        }
+      }
+    },
+    {
+      "elapsedMs": 633,
+      "kind": "client",
+      "data": "Send kind=2 sequence=19"
+    },
+    {
+      "elapsedMs": 644,
+      "kind": "client",
+      "data": "Received bytes=16 kind=129 sequence=19 rttMs=11"
+    },
+    {
+      "elapsedMs": 653,
+      "kind": "client",
+      "data": "Send kind=2 sequence=20"
+    },
+    {
+      "elapsedMs": 664,
+      "kind": "client",
+      "data": "Received bytes=16 kind=129 sequence=20 rttMs=11"
+    },
+    {
+      "elapsedMs": 672,
+      "kind": "client",
+      "data": "Send kind=2 sequence=21"
+    },
+    {
+      "elapsedMs": 683,
+      "kind": "client",
+      "data": "Received bytes=16 kind=129 sequence=21 rttMs=11"
+    },
+    {
+      "elapsedMs": 693,
+      "kind": "status",
+      "data": {
+        "phase": "reverse",
+        "requestMs": 22,
+        "value": {
+          "protocol": 1,
+          "carId": "RaceRemote-5008d9",
+          "outputsEnabled": false,
+          "acceptingControl": true,
+          "actuatorMode": "disabled",
+          "armed": true,
+          "throttle": -600,
+          "steering": -250,
+          "motorDispatch": {
+            "backend": "null",
+            "mode": "applied_to_sink"
+          },
+          "drivePlan": {
+            "mode": "reverse_wait",
+            "sampledAtMs": 30440,
+            "fiPermille": 0,
+            "biPermille": 0,
+            "steeringNormalized": -250
+          }
+        }
+      }
+    },
+    {
+      "elapsedMs": 693,
+      "kind": "client",
+      "data": "Send kind=2 sequence=22"
+    },
+    {
+      "elapsedMs": 703,
+      "kind": "client",
+      "data": "Received bytes=16 kind=129 sequence=22 rttMs=9"
+    },
+    {
+      "elapsedMs": 713,
+      "kind": "client",
+      "data": "Send kind=2 sequence=23"
+    },
+    {
+      "elapsedMs": 723,
+      "kind": "client",
+      "data": "Received bytes=16 kind=129 sequence=23 rttMs=10"
+    },
+    {
+      "elapsedMs": 733,
+      "kind": "client",
+      "data": "Send kind=2 sequence=24"
+    },
+    {
+      "elapsedMs": 742,
+      "kind": "client",
+      "data": "Received bytes=16 kind=129 sequence=24 rttMs=9"
+    },
+    {
+      "elapsedMs": 753,
+      "kind": "client",
+      "data": "Send kind=2 sequence=25"
+    },
+    {
+      "elapsedMs": 760,
+      "kind": "status",
+      "data": {
+        "phase": "reverse",
+        "requestMs": 26,
+        "value": {
+          "protocol": 1,
+          "carId": "RaceRemote-5008d9",
+          "outputsEnabled": false,
+          "acceptingControl": true,
+          "actuatorMode": "disabled",
+          "armed": true,
+          "throttle": -600,
+          "steering": -250,
+          "motorDispatch": {
+            "backend": "null",
+            "mode": "applied_to_sink"
+          },
+          "drivePlan": {
+            "mode": "driving",
+            "sampledAtMs": 30505,
+            "fiPermille": 0,
+            "biPermille": 10,
+            "steeringNormalized": -250
+          }
+        }
+      }
+    },
+    {
+      "elapsedMs": 773,
+      "kind": "client",
+      "data": "Received bytes=16 kind=129 sequence=25 rttMs=20"
+    },
+    {
+      "elapsedMs": 774,
+      "kind": "client",
+      "data": "Send kind=2 sequence=26"
+    },
+    {
+      "elapsedMs": 784,
+      "kind": "client",
+      "data": "Received bytes=16 kind=129 sequence=26 rttMs=10"
+    },
+    {
+      "elapsedMs": 793,
+      "kind": "client",
+      "data": "Send kind=2 sequence=27"
+    },
+    {
+      "elapsedMs": 923,
+      "kind": "client",
+      "data": "Received bytes=16 kind=129 sequence=27 rttMs=130"
+    },
+    {
+      "elapsedMs": 933,
+      "kind": "client",
+      "data": "Send kind=2 sequence=28"
+    },
+    {
+      "elapsedMs": 992,
+      "kind": "status",
+      "data": {
+        "phase": "reverse",
+        "requestMs": 191,
+        "value": {
+          "protocol": 1,
+          "carId": "RaceRemote-5008d9",
+          "outputsEnabled": false,
+          "acceptingControl": true,
+          "actuatorMode": "disabled",
+          "armed": true,
+          "throttle": -600,
+          "steering": -250,
+          "motorDispatch": {
+            "backend": "null",
+            "mode": "applied_to_sink"
+          },
+          "drivePlan": {
+            "mode": "driving",
+            "sampledAtMs": 30685,
+            "fiPermille": 0,
+            "biPermille": 150,
+            "steeringNormalized": -250
+          }
+        }
+      }
+    },
+    {
+      "elapsedMs": 992,
+      "kind": "client",
+      "data": "Received bytes=16 kind=129 sequence=28 rttMs=59"
+    },
+    {
+      "elapsedMs": 992,
+      "kind": "action",
+      "data": "native neutral"
+    },
+    {
+      "elapsedMs": 993,
+      "kind": "client",
+      "data": "Send kind=2 sequence=29"
+    },
+    {
+      "elapsedMs": 1078,
+      "kind": "client",
+      "data": "Received bytes=16 kind=129 sequence=29 rttMs=85"
+    },
+    {
+      "elapsedMs": 1090,
+      "kind": "status",
+      "data": {
+        "phase": "neutral",
+        "requestMs": 98,
+        "value": {
+          "protocol": 1,
+          "carId": "RaceRemote-5008d9",
+          "outputsEnabled": false,
+          "acceptingControl": true,
+          "actuatorMode": "disabled",
+          "armed": true,
+          "throttle": 0,
+          "steering": 0,
+          "motorDispatch": {
+            "backend": "null",
+            "mode": "applied_to_sink"
+          },
+          "drivePlan": {
+            "mode": "neutral",
+            "sampledAtMs": 30840,
+            "fiPermille": 0,
+            "biPermille": 0,
+            "steeringNormalized": 0
+          }
+        }
+      }
+    },
+    {
+      "elapsedMs": 1093,
+      "kind": "client",
+      "data": "Send kind=2 sequence=30"
+    },
+    {
+      "elapsedMs": 1101,
+      "kind": "client",
+      "data": "Received bytes=16 kind=129 sequence=30 rttMs=8"
+    },
+    {
+      "elapsedMs": 1112,
+      "kind": "status",
+      "data": {
+        "phase": "before_stop",
+        "requestMs": 21,
+        "value": {
+          "protocol": 1,
+          "carId": "RaceRemote-5008d9",
+          "outputsEnabled": false,
+          "acceptingControl": true,
+          "actuatorMode": "disabled",
+          "armed": true,
+          "throttle": 400,
+          "steering": 0,
+          "motorDispatch": {
+            "backend": "null",
+            "mode": "applied_to_sink"
+          },
+          "drivePlan": {
+            "mode": "reverse_wait",
+            "sampledAtMs": 30860,
+            "fiPermille": 0,
+            "biPermille": 0,
+            "steeringNormalized": 0
+          }
+        }
+      }
+    },
+    {
+      "elapsedMs": 1113,
+      "kind": "client",
+      "data": "Send kind=2 sequence=31"
+    },
+    {
+      "elapsedMs": 1123,
+      "kind": "client",
+      "data": "Received bytes=16 kind=129 sequence=31 rttMs=10"
+    },
+    {
+      "elapsedMs": 1133,
+      "kind": "client",
+      "data": "Send kind=2 sequence=32"
+    },
+    {
+      "elapsedMs": 1141,
+      "kind": "client",
+      "data": "Received bytes=16 kind=129 sequence=32 rttMs=8"
+    },
+    {
+      "elapsedMs": 1153,
+      "kind": "client",
+      "data": "Send kind=2 sequence=33"
+    },
+    {
+      "elapsedMs": 1163,
+      "kind": "client",
+      "data": "Received bytes=16 kind=129 sequence=33 rttMs=9"
+    },
+    {
+      "elapsedMs": 1173,
+      "kind": "client",
+      "data": "Send kind=2 sequence=34"
+    },
+    {
+      "elapsedMs": 1176,
+      "kind": "status",
+      "data": {
+        "phase": "before_stop",
+        "requestMs": 23,
+        "value": {
+          "protocol": 1,
+          "carId": "RaceRemote-5008d9",
+          "outputsEnabled": false,
+          "acceptingControl": true,
+          "actuatorMode": "disabled",
+          "armed": true,
+          "throttle": 400,
+          "steering": 0,
+          "motorDispatch": {
+            "backend": "null",
+            "mode": "applied_to_sink"
+          },
+          "drivePlan": {
+            "mode": "reverse_wait",
+            "sampledAtMs": 30925,
+            "fiPermille": 0,
+            "biPermille": 0,
+            "steeringNormalized": 0
+          }
+        }
+      }
+    },
+    {
+      "elapsedMs": 1181,
+      "kind": "client",
+      "data": "Received bytes=16 kind=129 sequence=34 rttMs=8"
+    },
+    {
+      "elapsedMs": 1193,
+      "kind": "client",
+      "data": "Send kind=2 sequence=35"
+    },
+    {
+      "elapsedMs": 1203,
+      "kind": "client",
+      "data": "Received bytes=16 kind=129 sequence=35 rttMs=10"
+    },
+    {
+      "elapsedMs": 1213,
+      "kind": "client",
+      "data": "Send kind=2 sequence=36"
+    },
+    {
+      "elapsedMs": 1221,
+      "kind": "client",
+      "data": "Received bytes=16 kind=129 sequence=36 rttMs=8"
+    },
+    {
+      "elapsedMs": 1232,
+      "kind": "client",
+      "data": "Send kind=2 sequence=37"
+    },
+    {
+      "elapsedMs": 1242,
+      "kind": "status",
+      "data": {
+        "phase": "before_stop",
+        "requestMs": 24,
+        "value": {
+          "protocol": 1,
+          "carId": "RaceRemote-5008d9",
+          "outputsEnabled": false,
+          "acceptingControl": true,
+          "actuatorMode": "disabled",
+          "armed": true,
+          "throttle": 400,
+          "steering": 0,
+          "motorDispatch": {
+            "backend": "null",
+            "mode": "applied_to_sink"
+          },
+          "drivePlan": {
+            "mode": "reverse_wait",
+            "sampledAtMs": 30990,
+            "fiPermille": 0,
+            "biPermille": 0,
+            "steeringNormalized": 0
+          }
+        }
+      }
+    },
+    {
+      "elapsedMs": 1243,
+      "kind": "client",
+      "data": "Received bytes=16 kind=129 sequence=37 rttMs=10"
+    },
+    {
+      "elapsedMs": 1252,
+      "kind": "client",
+      "data": "Send kind=2 sequence=38"
+    },
+    {
+      "elapsedMs": 1261,
+      "kind": "client",
+      "data": "Received bytes=16 kind=129 sequence=38 rttMs=8"
+    },
+    {
+      "elapsedMs": 1273,
+      "kind": "client",
+      "data": "Send kind=2 sequence=39"
+    },
+    {
+      "elapsedMs": 1289,
+      "kind": "client",
+      "data": "Received bytes=16 kind=129 sequence=39 rttMs=16"
+    },
+    {
+      "elapsedMs": 1293,
+      "kind": "client",
+      "data": "Send kind=2 sequence=40"
+    },
+    {
+      "elapsedMs": 1306,
+      "kind": "status",
+      "data": {
+        "phase": "before_stop",
+        "requestMs": 24,
+        "value": {
+          "protocol": 1,
+          "carId": "RaceRemote-5008d9",
+          "outputsEnabled": false,
+          "acceptingControl": true,
+          "actuatorMode": "disabled",
+          "armed": true,
+          "throttle": 400,
+          "steering": 0,
+          "motorDispatch": {
+            "backend": "null",
+            "mode": "applied_to_sink"
+          },
+          "drivePlan": {
+            "mode": "driving",
+            "sampledAtMs": 31055,
+            "fiPermille": 25,
+            "biPermille": 0,
+            "steeringNormalized": 0
+          }
+        }
+      }
+    },
+    {
+      "elapsedMs": 1306,
+      "kind": "client",
+      "data": "Disconnect context sequence=40 pending=40 elapsedSinceSendMs=13 queueBytes=0"
+    },
+    {
+      "elapsedMs": 1306,
+      "kind": "client",
+      "data": "Disconnect: Остановлено"
+    },
+    {
+      "elapsedMs": 1307,
+      "kind": "action",
+      "data": "native STOP\/disconnect"
+    },
+    {
+      "elapsedMs": 1309,
+      "kind": "client",
+      "data": "WebSocket failure: SocketException: Socket closed"
+    },
+    {
+      "elapsedMs": 1324,
+      "kind": "status",
+      "data": {
+        "phase": "stopped",
+        "requestMs": 17,
+        "value": {
+          "protocol": 1,
+          "carId": "RaceRemote-5008d9",
+          "outputsEnabled": false,
+          "acceptingControl": true,
+          "actuatorMode": "disabled",
+          "armed": false,
+          "throttle": 0,
+          "steering": 0,
+          "motorDispatch": {
+            "backend": "null",
+            "mode": "applied_to_sink"
+          },
+          "drivePlan": {
+            "mode": "off",
+            "sampledAtMs": 31075,
+            "fiPermille": 0,
+            "biPermille": 0,
+            "steeringNormalized": 0
+          }
+        }
+      }
+    },
+    {
+      "elapsedMs": 1324,
+      "kind": "client",
+      "data": "Disconnect: Остановлено"
+    },
+    {
+      "elapsedMs": 1343,
+      "kind": "status",
+      "data": {
+        "phase": "cleanup",
+        "requestMs": 18,
+        "value": {
+          "protocol": 1,
+          "carId": "RaceRemote-5008d9",
+          "outputsEnabled": false,
+          "acceptingControl": true,
+          "actuatorMode": "disabled",
+          "armed": false,
+          "throttle": 0,
+          "steering": 0,
+          "motorDispatch": {
+            "backend": "null",
+            "mode": "applied_to_sink"
+          },
+          "drivePlan": {
+            "mode": "off",
+            "sampledAtMs": 31095,
+            "fiPermille": 0,
+            "biPermille": 0,
+            "steeringNormalized": 0
+          }
+        }
+      }
+    }
+  ]
+}

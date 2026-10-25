@@ -1,0 +1,264 @@
+{
+  "date": "2026-10-25",
+  "recorded_at_utc": "2026-10-25T17:17:31.032241+00:00",
+  "overall_passed": false,
+  "phone": {
+    "serial": "RF8M811X8FK",
+    "model": "SM-G973F",
+    "api": 31,
+    "app_last_update_time_phone": "2026-09-26 10:10:30",
+    "installed_apks_sha256": {
+      "vea.raceremote": "6e2882fb146183a73e9ae4f593361e33c58f24e4d02b59fa2dd426ccc58f0534",
+      "vea.raceremote.test": "ba40367a6604c69b150b7b8149b278f1e87fb8840f9c36a61529b55deae44f31"
+    },
+    "apps_unchanged_at_last_device_hash_check": true,
+    "installed_test_method_count": 4,
+    "checkout_test_method_count": 3,
+    "installed_apks_rebuilt_from_checkout": false,
+    "adb_present_at_finalization": false
+  },
+  "firmware": {
+    "source_snapshot_commit": "a8c25f61192f787efa5a352b331ae0a35ff93199",
+    "actuators_enabled": false,
+    "camera_enabled": false,
+    "source_modified": false,
+    "ap_image_sha256": "fcc6aa019a72c53184ef8c48b98c710442fd5afa4285e27b78a187890fd48a88",
+    "sta_image_sha256": "c903920b78802228a79801e57459a9a32be579efefe2f4a3083452fe0f8dbc9b",
+    "ap_restored_matches_initial_usb_image": true
+  },
+  "network_comparison": {
+    "ap": {
+      "host": "192.168.4.1",
+      "initial_rssi_dbm": -16,
+      "native_passed": true,
+      "silent_watchdog_passed": true,
+      "link_passed": false,
+      "trials": [
+        {
+          "trial": 1,
+          "httpPolling": false,
+          "armed": true,
+          "targetMs": 5000,
+          "observedActiveMs": 3598,
+          "survived": false,
+          "pollCount": 0,
+          "pollErrors": 0,
+          "endState": "CarConnectionState(message=Нет свежего ответа — остановлено, connected=false, connecting=false, throttle=0, steering=0)"
+        },
+        {
+          "trial": 2,
+          "httpPolling": true,
+          "armed": true,
+          "targetMs": 5000,
+          "observedActiveMs": 4621,
+          "survived": false,
+          "pollCount": 49,
+          "pollErrors": 0,
+          "endState": "CarConnectionState(message=Нет свежего ответа — остановлено, connected=false, connecting=false, throttle=0, steering=0)"
+        },
+        {
+          "trial": 3,
+          "httpPolling": true,
+          "armed": true,
+          "targetMs": 5000,
+          "observedActiveMs": 4816,
+          "survived": false,
+          "pollCount": 48,
+          "pollErrors": 0,
+          "endState": "CarConnectionState(message=Нет свежего ответа — остановлено, connected=false, connecting=false, throttle=0, steering=0)"
+        },
+        {
+          "trial": 4,
+          "httpPolling": false,
+          "armed": true,
+          "targetMs": 5000,
+          "observedActiveMs": 665,
+          "survived": false,
+          "pollCount": 0,
+          "pollErrors": 0,
+          "endState": "CarConnectionState(message=Нет свежего ответа — остановлено, connected=false, connecting=false, throttle=0, steering=0)"
+        },
+        {
+          "trial": 5,
+          "httpPolling": false,
+          "armed": true,
+          "targetMs": 5000,
+          "observedActiveMs": 619,
+          "survived": false,
+          "pollCount": 0,
+          "pollErrors": 0,
+          "endState": "CarConnectionState(message=Нет свежего ответа — остановлено, connected=false, connecting=false, throttle=0, steering=0)"
+        },
+        {
+          "trial": 6,
+          "httpPolling": true,
+          "armed": true,
+          "targetMs": 5000,
+          "observedActiveMs": 3268,
+          "survived": false,
+          "pollCount": 34,
+          "pollErrors": 1,
+          "endState": "CarConnectionState(message=Нет свежего ответа — остановлено, connected=false, connecting=false, throttle=0, steering=0)"
+        }
+      ],
+      "survived": 0
+    },
+    "sta": {
+      "host": "192.168.155.71",
+      "initial_rssi_dbm": -25,
+      "native_passed": true,
+      "silent_watchdog_passed": true,
+      "link_passed": false,
+      "trials": [
+        {
+          "trial": 1,
+          "httpPolling": false,
+          "armed": true,
+          "targetMs": 5000,
+          "observedActiveMs": 1495,
+          "survived": false,
+          "pollCount": 0,
+          "pollErrors": 0,
+          "endState": "CarConnectionState(message=Нет свежего ответа — остановлено, connected=false, connecting=false, throttle=0, steering=0)"
+        },
+        {
+          "trial": 2,
+          "httpPolling": true,
+          "armed": true,
+          "targetMs": 5000,
+          "observedActiveMs": 3366,
+          "survived": false,
+          "pollCount": 36,
+          "pollErrors": 0,
+          "endState": "CarConnectionState(message=Нет свежего ответа — остановлено, connected=false, connecting=false, throttle=0, steering=0)"
+        },
+        {
+          "trial": 3,
+          "httpPolling": true,
+          "armed": true,
+          "targetMs": 5000,
+          "observedActiveMs": 4612,
+          "survived": false,
+          "pollCount": 49,
+          "pollErrors": 0,
+          "endState": "CarConnectionState(message=Нет свежего ответа — остановлено, connected=false, connecting=false, throttle=0, steering=0)"
+        },
+        {
+          "trial": 4,
+          "httpPolling": false,
+          "armed": true,
+          "targetMs": 5000,
+          "observedActiveMs": 3307,
+          "survived": false,
+          "pollCount": 0,
+          "pollErrors": 0,
+          "endState": "CarConnectionState(message=Нет свежего ответа — остановлено, connected=false, connecting=false, throttle=0, steering=0)"
+        },
+        {
+          "trial": 5,
+          "httpPolling": false,
+          "armed": true,
+          "targetMs": 5000,
+          "observedActiveMs": 4583,
+          "survived": false,
+          "pollCount": 0,
+          "pollErrors": 0,
+          "endState": "CarConnectionState(message=Нет свежего ответа — остановлено, connected=false, connecting=false, throttle=0, steering=0)"
+        },
+        {
+          "trial": 6,
+          "httpPolling": true,
+          "armed": true,
+          "targetMs": 5000,
+          "observedActiveMs": 5096,
+          "survived": true,
+          "pollCount": 53,
+          "pollErrors": 0,
+          "endState": "CarConnectionState(message=Управление подключено, connected=true, connecting=false, throttle=0, steering=0)"
+        }
+      ],
+      "survived": 1
+    }
+  },
+  "ap_udp_discovery_only": {
+    "samples": 1000,
+    "missedDeadline": 4
+  },
+  "phone_ui": {
+    "confirmed_car_wifi": true,
+    "http_200_observed": true,
+    "connected": false,
+    "error": "Connection failed: JSONException",
+    "exact_json_field_unknown": true,
+    "scope": "Installed newer app precheck failed against old firmware; exact failing field not recovered"
+  },
+  "wifi_loss": {
+    "passed": true,
+    "fault": "WiFi disabled during armed neutral session",
+    "firmware_timeout_observed": true,
+    "inactive_observed": true,
+    "host_observed_since_disable_request_ms": 406,
+    "physical_stop_timing_proven": false,
+    "instrumentation_intentionally_interrupted": true
+  },
+  "last_observed_final_state": {
+    "firmware": "xiao-control-usb AP",
+    "phone_wifi": "RaceRemote-5008d9",
+    "samsung_hotspot_enabled": false,
+    "app_force_stopped": true,
+    "last_watchdog_test_passed": true,
+    "status_source": "HTTP cleanup in final-watchdog.json",
+    "status": {
+      "protocol": 1,
+      "carId": "RaceRemote-5008d9",
+      "outputsEnabled": false,
+      "acceptingControl": true,
+      "actuatorMode": "disabled",
+      "armed": false,
+      "throttle": 0,
+      "steering": 0,
+      "motorDispatch": {
+        "backend": "null",
+        "mode": "applied_to_sink"
+      },
+      "drivePlan": {
+        "mode": "off",
+        "sampledAtMs": 577876,
+        "fiPermille": 0,
+        "biPermille": 0,
+        "steeringNormalized": 0
+      }
+    }
+  },
+  "limits": [
+    "ACK 200ms and firmware watchdog 250ms unchanged",
+    "No sustained link qualification",
+    "Installed APK source does not match available test source",
+    "No physical motor/servo/power/camera/charging/printing qualification",
+    "No further phone measurements after ADB became unavailable"
+  ],
+  "evidence_sha256": {
+    "ap-discovery-latency.json": "f810d406bde5abdea1fde70b66067e6f049ded8f9aea8c19585654d51e83b01c",
+    "ap-instrumentation.txt": "aa048bdc2e0dca59affe2983faec9fcb93fde9891421b97799f4136bb7c2589d",
+    "ap-link.json": "446eef66b348d5973ecd2eccce8b065eacaaef9f9e9bcea4bc1678bc244be0c8",
+    "ap-native.json": "750382abb3f1056d9388df76c0ac148e9088b551a2cccf50490f927d3aee8308",
+    "ap-restore-upload.txt": "5bbd04455e5088ee8ee80b80a90ea32daa28c48c5d6bcdfd938d10501bd32259",
+    "ap-serial.txt": "15642c85e354a7ca7ceaaeee324612f5494a9c8036d171563fb84a37345cf80f",
+    "ap-watchdog.json": "75a3252117878803c3980b3682e7062786133198909fe4187bc3e8ff230bc08c",
+    "final-status.json": "9ba551b69c2a7a329eb5a9a8c7752ae44372c9ef2b66d7f51309d5110e9d4c02",
+    "final-watchdog.json": "bd003ed493f75d13299cd5ff3a8412f94921d2ceb04506e3d615e0c9de28feec",
+    "installed-apks.json": "ae9a03ae509f710b09b5a8de99ef1ff57e505545b2ab63b132a50805a61961f2",
+    "platformio.ini": "58aea9d3b8815874d1201cb181888e58dfbd572a749a2b8a159b094c5d02daa4",
+    "sta-instrumentation.txt": "26a39967bcd6ff35cf26db6f929f3570d89b87ff9119a6c6adddeaf7a7cb4bcf",
+    "sta-link.json": "705398b8961d7182ef73b880d1fdfaa0ce49da595d7ac4e6dd61165a8ca93ece",
+    "sta-native.json": "e64177af2b8db567726021af7643a0a9518440f47f3c3d109aa17a8256289477",
+    "sta-serial.txt": "f8b3b7a06137538024affc966033f043721bb9bf714f64540641b22ec076d4d5",
+    "sta-upload.txt": "70ccf4a394c0a1cf44f68f0ccc9b2659d4ad94c9e0f502755e83c2e34bc5193c",
+    "sta-watchdog.json": "212ad9d54f3402fa151a7ec49e85afb7afdeae241b1029dd05d1fd449f300b4d",
+    "ui-control-logcat.txt": "fcd19c56e5ee783d46513b0155c31da4372dbdcfcca44f5482620b9ded03f88a",
+    "ui-failed-connect.xml": "e42bd45d9c2fac96108a323008bf7c2e563716216aeca35654b2d56ceb8db660",
+    "wifi-loss-interrupted-instrumentation.txt": "69d87bf5e86f13cd2a56f0454213b32af6bb1f3406ce72c15870f79133002e4a",
+    "wifi-loss-preflight-failed.json": "14f3b09fa89016092f23751c097d776fa591c5a8c2ec489a3c0bd1e1b74312f7",
+    "wifi-loss.json": "da108bb59621e615f3ef93072aaa4c703dac536ce76cae56cc91420ea2467ae3"
+  }
+}

@@ -1,0 +1,5 @@
+{
+  "scope": "Deliberate WiFi disable during neutral armed session; test runner interrupted after observing failsafe; host receive times only",
+  "passed": false,
+  "events": []
+}

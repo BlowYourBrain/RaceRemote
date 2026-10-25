@@ -1,4 +1,5 @@
 # Preserve device evidence/source hashes across Windows checkouts.
+docs/evidence/xiao-samsung-2026-10-25/* text eol=lf
 docs/power-ground-domains.md text eol=lf
 docs/evidence/power-ground-v01.json text eol=lf
 tools/check_power_ground_domains.py text eol=lf

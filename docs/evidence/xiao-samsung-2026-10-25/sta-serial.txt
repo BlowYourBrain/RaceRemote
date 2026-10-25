@@ -1,0 +1,70 @@
+ESP-ROM:esp32s3-20210327
+Build:Mar 27 2021
+rst:0x15 (USB_UART_CHIP_RESET),boot:0xb (SPI_FAST_FLASH_BOOT)
+Saved PC:0x4207d92e
+SPIWP:0xee
+mode:DIO, clock div:1
+load:0x3fce3808,len:0x4bc
+load:0x403c9700,len:0xbd8
+load:0x403cc700,len:0x2a0c
+entry 0x403c98d0
+WIFI connecting mode=station backend=null
+DISCOVERY udp=3333 listening=1
+READY protocol=1 car=RaceRemote-5008d9 ip=192.168.155.71 ws=1337 backend=null
+WIFI connected=1 ip=192.168.155.71 rssi=-25
+TX ms=29883 kind=128 seq=0 sent=1
+CONTROL active=1 armed=0 throttle=0 steering=0 seq=0 backend=null
+TX ms=30031 kind=129 seq=1 sent=1
+CONTROL active=1 armed=1 throttle=0 steering=0 seq=1 backend=null
+TX ms=30059 kind=129 seq=2 sent=1
+CONTROL active=1 armed=1 throttle=600 steering=250 seq=2 backend=null
+CONTROL active=1 armed=1 throttle=-600 steering=-250 seq=14 backend=null
+CONTROL active=1 armed=1 throttle=0 steering=0 seq=29 backend=null
+CONTROL active=1 armed=1 throttle=400 steering=0 seq=30 backend=null
+CONTROL active=0 armed=0 throttle=0 steering=0 seq=40 backend=null
+TX ms=31331 kind=128 seq=0 sent=1
+CONTROL active=1 armed=0 throttle=0 steering=0 seq=0 backend=null
+TX ms=31349 kind=129 seq=1 sent=1
+CONTROL active=1 armed=1 throttle=0 steering=0 seq=1 backend=null
+TX ms=31361 kind=129 seq=2 sent=1
+CONTROL active=1 armed=1 throttle=600 steering=0 seq=2 backend=null
+FAILSAFE timeout: logical outputs=0
+CONTROL active=0 armed=0 throttle=0 steering=0 seq=2 backend=null
+TX ms=31777 kind=128 seq=0 sent=1
+CONTROL active=1 armed=0 throttle=0 steering=0 seq=0 backend=null
+TX ms=31788 kind=129 seq=1 sent=1
+CONTROL active=1 armed=1 throttle=0 steering=0 seq=1 backend=null
+TX ms=31814 kind=129 seq=2 sent=1
+CONTROL active=0 armed=0 throttle=0 steering=0 seq=46 backend=null
+TX ms=33779 kind=128 seq=0 sent=1
+CONTROL active=1 armed=0 throttle=0 steering=0 seq=0 backend=null
+TX ms=33851 kind=129 seq=1 sent=1
+CONTROL active=1 armed=1 throttle=0 steering=0 seq=1 backend=null
+TX ms=33872 kind=129 seq=2 sent=1
+FAILSAFE timeout: logical outputs=0
+CONTROL active=0 armed=0 throttle=0 steering=0 seq=115 backend=null
+TX ms=37723 kind=128 seq=0 sent=1
+CONTROL active=1 armed=0 throttle=0 steering=0 seq=0 backend=null
+TX ms=37732 kind=129 seq=1 sent=1
+CONTROL active=1 armed=1 throttle=0 steering=0 seq=1 backend=null
+TX ms=37752 kind=129 seq=2 sent=1
+CONTROL active=0 armed=0 throttle=0 steering=0 seq=157 backend=null
+TX ms=42827 kind=128 seq=0 sent=1
+CONTROL active=1 armed=0 throttle=0 steering=0 seq=0 backend=null
+TX ms=42841 kind=129 seq=1 sent=1
+CONTROL active=1 armed=1 throttle=0 steering=0 seq=1 backend=null
+TX ms=42851 kind=129 seq=2 sent=1
+CONTROL active=0 armed=0 throttle=0 steering=0 seq=116 backend=null
+TX ms=46666 kind=128 seq=0 sent=1
+CONTROL active=1 armed=0 throttle=0 steering=0 seq=0 backend=null
+TX ms=46682 kind=129 seq=1 sent=1
+CONTROL active=1 armed=1 throttle=0 steering=0 seq=1 backend=null
+TX ms=46692 kind=129 seq=2 sent=1
+FAILSAFE timeout: logical outputs=0
+CONTROL active=0 armed=0 throttle=0 steering=0 seq=161 backend=null
+TX ms=51764 kind=128 seq=0 sent=1
+CONTROL active=1 armed=0 throttle=0 steering=0 seq=0 backend=null
+TX ms=51784 kind=129 seq=1 sent=1
+CONTROL active=1 armed=1 throttle=0 steering=0 seq=1 backend=null
+TX ms=51812 kind=129 seq=2 sent=1
+CONTROL active=0 armed=0 throttle=0 steering=0 seq=177 backend=null

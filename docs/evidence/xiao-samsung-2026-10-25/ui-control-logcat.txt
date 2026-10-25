@@ -1,0 +1,2 @@
+--------- beginning of main
+10-25 20:07:19.105 26412 26452 D RaceRemoteControl: Connection failed: JSONException

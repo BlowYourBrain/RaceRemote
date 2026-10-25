@@ -1,0 +1,223 @@
+{
+  "date": "2026-10-25",
+  "recorded_at_utc": "2026-10-25T17:43:47.320965+00:00",
+  "scope": "Read-only source research and artifact backup; no firmware implementation or device changes",
+  "user_report": {
+    "ssd_with_newer_source_broken": true,
+    "newer_source_currently_unavailable": true,
+    "unpushed_changes_explanation": "user hypothesis; SSD not examined"
+  },
+  "git_audit": {
+    "RaceRemote_remote_heads": {
+      "master": "bc72d52a63b47423b78b2f62ad7ca635cc5a91c7",
+      "feature/game_controller": "d537513d7b5d37ec5301c13491f75f9171bb722d"
+    },
+    "firmware_remote_heads": {
+      "main": "d07267f3ab1e1dba49cf0b39550d60d388bd8828"
+    },
+    "firmware_remote_tags": [],
+    "unreachable_commits": 0,
+    "unreachable_blobs": [
+      {
+        "object": "eb9d03f84190d5d7a857c6008ddf954b04e478c6",
+        "bytes": 10745,
+        "classification": "generated PlatformIO upload log"
+      },
+      {
+        "object": "1461c2ce8446459768e1b29af1c740f317196a03",
+        "bytes": 5069,
+        "classification": "generated PlatformIO upload log"
+      },
+      {
+        "object": "7d7b0936d9c17af5679197271843f464a82f7dcf",
+        "bytes": 10516,
+        "classification": "generated Samsung bench summary"
+      }
+    ]
+  },
+  "phone_apk_backup": {
+    "directory": "D:\\RaceRemote-device-backups\\samsung-RF8M811X8FK\\2026-09-26",
+    "sha256_by_package": {
+      "vea.raceremote": "6e2882fb146183a73e9ae4f593361e33c58f24e4d02b59fa2dd426ccc58f0534",
+      "vea.raceremote.test": "ba40367a6604c69b150b7b8149b278f1e87fb8840f9c36a61529b55deae44f31"
+    },
+    "verified": true,
+    "apk_reverse_engineering_completed": false
+  },
+  "projects": [
+    {
+      "name": "esp-drone",
+      "repository": "https://github.com/espressif/esp-drone",
+      "commit": "db0f6562e4f67cccee3acac4dff39c9aaea4e5fa",
+      "commit_date": "2026-06-04",
+      "license_note": "GPL-3.0",
+      "files_read": [
+        {
+          "path": "README.md",
+          "git_blob": "b1822dae5087804f8ae8f8cfaf2a4125d4cd690a",
+          "sha256_git_blob_bytes": "ee4c9d072b67b82cd7d88967c5f34b85d98fbd5c2ffc103147726f504cff5df5",
+          "url": "https://github.com/espressif/esp-drone/blob/db0f6562e4f67cccee3acac4dff39c9aaea4e5fa/README.md"
+        },
+        {
+          "path": "LICENSE",
+          "git_blob": "f288702d2fa16d3cdf0035b15a9fcbc552cd88e7",
+          "sha256_git_blob_bytes": "3972dc9744f6499f0f9b2dbf76696f2ae7ad8af9b23dde66d6af86c9dfb36986",
+          "url": "https://github.com/espressif/esp-drone/blob/db0f6562e4f67cccee3acac4dff39c9aaea4e5fa/LICENSE"
+        },
+        {
+          "path": "components/drivers/general/wifi/wifi_esp32.c",
+          "git_blob": "fe90988fad820ba4bbe3ae7bc9b6aa1e67fe5b36",
+          "sha256_git_blob_bytes": "6fb9e157dee2f5a7dfa06ba925c13fdf54bb9dfae7f0901e988c498ca998fdfe",
+          "url": "https://github.com/espressif/esp-drone/blob/db0f6562e4f67cccee3acac4dff39c9aaea4e5fa/components/drivers/general/wifi/wifi_esp32.c"
+        },
+        {
+          "path": "components/core/crazyflie/modules/src/commander.c",
+          "git_blob": "7b008b3d6cc492f87179e10857aa28712b8a1edb",
+          "sha256_git_blob_bytes": "ff4b0c0c00fccb72983ed211b6a73fa4d0ea8b002654260caf097d0cff40b39e",
+          "url": "https://github.com/espressif/esp-drone/blob/db0f6562e4f67cccee3acac4dff39c9aaea4e5fa/components/core/crazyflie/modules/src/commander.c"
+        },
+        {
+          "path": "components/core/crazyflie/modules/interface/commander.h",
+          "git_blob": "a6a4de61e7a62eb00d78f01048d690b773c4188b",
+          "sha256_git_blob_bytes": "f8a7049ff9b46f1685a81a1b18be93a74ea27a63a89c0b106df2e00d261103de",
+          "url": "https://github.com/espressif/esp-drone/blob/db0f6562e4f67cccee3acac4dff39c9aaea4e5fa/components/core/crazyflie/modules/interface/commander.h"
+        }
+      ],
+      "built": false,
+      "flashed": false
+    },
+    {
+      "name": "dronebridge",
+      "repository": "https://github.com/DroneBridge/ESP32",
+      "commit": "ed1b9ef8959dbbe9b8f7ed261e928604206cf3e0",
+      "commit_date": "2026-09-12",
+      "license_note": "Apache-2.0 at root; individual notices also apply",
+      "files_read": [
+        {
+          "path": "README.md",
+          "git_blob": "f85adf2a7d484995df7488d940cf3615a71a35e4",
+          "sha256_git_blob_bytes": "f6ae93b9b697e7895d625f8d92069ad63fed388a11de4bf5f10b5c89cc2e9de3",
+          "url": "https://github.com/DroneBridge/ESP32/blob/ed1b9ef8959dbbe9b8f7ed261e928604206cf3e0/README.md"
+        },
+        {
+          "path": "LICENSE",
+          "git_blob": "261eeb9e9f8b2b4b0d119366dda99c6fd7d35c64",
+          "sha256_git_blob_bytes": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4",
+          "url": "https://github.com/DroneBridge/ESP32/blob/ed1b9ef8959dbbe9b8f7ed261e928604206cf3e0/LICENSE"
+        },
+        {
+          "path": "main/main.c",
+          "git_blob": "1857c9bd3bf894a7a26c7c23e7509abafe90cde6",
+          "sha256_git_blob_bytes": "e252f0ff45e27c885eb03cbda8e5ba18aaefc45a3e00baf9482f99b6a53aca45",
+          "url": "https://github.com/DroneBridge/ESP32/blob/ed1b9ef8959dbbe9b8f7ed261e928604206cf3e0/main/main.c"
+        },
+        {
+          "path": "main/db_esp32_control.c",
+          "git_blob": "099774fc5e164ef4421f06ecdfc03cc058ddfb4c",
+          "sha256_git_blob_bytes": "b8205e6eb29d787e6fb4e1e96cb99958d5e7541b64c004024f31429d4226d86d",
+          "url": "https://github.com/DroneBridge/ESP32/blob/ed1b9ef8959dbbe9b8f7ed261e928604206cf3e0/main/db_esp32_control.c"
+        },
+        {
+          "path": "main/tcp_server.c",
+          "git_blob": "32c5d3610f17da71f0d94b5320e1a7fdb1bf09e9",
+          "sha256_git_blob_bytes": "dcff92fdb01fa7380e0f62dda2d96480f3f95599b8ed5df0f8b53fbb23a1ee15",
+          "url": "https://github.com/DroneBridge/ESP32/blob/ed1b9ef8959dbbe9b8f7ed261e928604206cf3e0/main/tcp_server.c"
+        },
+        {
+          "path": "main/Kconfig.projbuild",
+          "git_blob": "0154e5937106da9b119b7aecb82d7a4c04d0720d",
+          "sha256_git_blob_bytes": "0ee80795bbcdb5cce496899cdf04fef266f1abee2ee06b6f63089e05d9769ae9",
+          "url": "https://github.com/DroneBridge/ESP32/blob/ed1b9ef8959dbbe9b8f7ed261e928604206cf3e0/main/Kconfig.projbuild"
+        }
+      ],
+      "built": false,
+      "flashed": false
+    },
+    {
+      "name": "websocket-car",
+      "repository": "https://github.com/vitorccs/esp32cam-rc-car",
+      "commit": "4f58b49f2f1a5e75da21cff0c8741973cd03c3e0",
+      "commit_date": "2026-03-24",
+      "license_note": "GPL-3.0",
+      "files_read": [
+        {
+          "path": "README.md",
+          "git_blob": "4af2d42d3e4dd928cc5fde9a064388f9d1b0db61",
+          "sha256_git_blob_bytes": "ed6de2995a3c4d0f06222b57d776641bb409414efa0fd009227709a6630bf641",
+          "url": "https://github.com/vitorccs/esp32cam-rc-car/blob/4f58b49f2f1a5e75da21cff0c8741973cd03c3e0/README.md"
+        },
+        {
+          "path": "LICENSE",
+          "git_blob": "f288702d2fa16d3cdf0035b15a9fcbc552cd88e7",
+          "sha256_git_blob_bytes": "3972dc9744f6499f0f9b2dbf76696f2ae7ad8af9b23dde66d6af86c9dfb36986",
+          "url": "https://github.com/vitorccs/esp32cam-rc-car/blob/4f58b49f2f1a5e75da21cff0c8741973cd03c3e0/LICENSE"
+        },
+        {
+          "path": "src/main.cpp",
+          "git_blob": "d0ec38b1273addb6567652f8decffbfa6a05edca",
+          "sha256_git_blob_bytes": "d966e2b062961b0ef5af26ba68b38f72f5788268186e0ee0c21c7617f9255d75",
+          "url": "https://github.com/vitorccs/esp32cam-rc-car/blob/4f58b49f2f1a5e75da21cff0c8741973cd03c3e0/src/main.cpp"
+        },
+        {
+          "path": "lib/SocketServer/SocketServer.cpp",
+          "git_blob": "d6aa95af5817d49ec036f6048dadf01e09ec3683",
+          "sha256_git_blob_bytes": "f162ec5022bf8c8e89528d59074b5cb6e808021fbb4ba8622ef56bfbd993bb3d",
+          "url": "https://github.com/vitorccs/esp32cam-rc-car/blob/4f58b49f2f1a5e75da21cff0c8741973cd03c3e0/lib/SocketServer/SocketServer.cpp"
+        },
+        {
+          "path": "lib/WebJoystickHandler/WebJoystickHandler.cpp",
+          "git_blob": "775164913a956d9f150441f24f7a2600c6a7a93b",
+          "sha256_git_blob_bytes": "113e51b4d2ee4602061404b46b317f7b5c2ba9155b602ffa4299db281293b5e1",
+          "url": "https://github.com/vitorccs/esp32cam-rc-car/blob/4f58b49f2f1a5e75da21cff0c8741973cd03c3e0/lib/WebJoystickHandler/WebJoystickHandler.cpp"
+        },
+        {
+          "path": "lib/WifiHandler/src/WifiHandler.cpp",
+          "git_blob": "b7493b45b92d2013cac05921e48bae4eb9355dcb",
+          "sha256_git_blob_bytes": "58d4c5a4085f8515b23073ed0a1028123761dfb018d96fa70587e4eefb1fe241",
+          "url": "https://github.com/vitorccs/esp32cam-rc-car/blob/4f58b49f2f1a5e75da21cff0c8741973cd03c3e0/lib/WifiHandler/src/WifiHandler.cpp"
+        }
+      ],
+      "built": false,
+      "flashed": false
+    },
+    {
+      "name": "v7rc",
+      "repository": "https://github.com/be1ieve/esp32cam_v7rc_car",
+      "commit": "79eef6911805581dca52467fe8a1d36bfadb3a23",
+      "commit_date": "2024-10-30",
+      "license_note": "No root LICENSE file found; no reuse grant inferred",
+      "files_read": [
+        {
+          "path": "README.md",
+          "git_blob": "f0192fb777015f21ca43fbb7cad8c6555d55115c",
+          "sha256_git_blob_bytes": "b466c681088cd09b3dc9bec420c708f1ad94e0ead82aaec5b6c0b2277efbe8f7",
+          "url": "https://github.com/be1ieve/esp32cam_v7rc_car/blob/79eef6911805581dca52467fe8a1d36bfadb3a23/README.md"
+        },
+        {
+          "path": "src/esp32cam-v7rc-car.ino",
+          "git_blob": "c1baaf48255beda8282c4db04a4fbfe05a5602e4",
+          "sha256_git_blob_bytes": "e3a5047db9247c13303cf45fd8ded8902f665c02ba4bdfdb6fb91c14c28603e8",
+          "url": "https://github.com/be1ieve/esp32cam_v7rc_car/blob/79eef6911805581dca52467fe8a1d36bfadb3a23/src/esp32cam-v7rc-car.ino"
+        }
+      ],
+      "built": false,
+      "flashed": false
+    }
+  ],
+  "official_docs": [
+    "https://docs.espressif.com/projects/esp-idf/en/v4.4.7/esp32s3/api-guides/wifi.html",
+    "https://wiki.seeedstudio.com/xiao_esp32s3_getting_started/",
+    "https://developer.android.com/reference/android/net/wifi/WifiManager#WIFI_MODE_FULL_LOW_LATENCY"
+  ],
+  "existing_source_settings": {
+    "firmware_sleep_false_calls": 2,
+    "android_tcp_nodelay": true,
+    "websockets_server_tcp_nodelay": true,
+    "runtime_wifi_power_save_readback_performed": false,
+    "android_low_latency_lock_in_bench_source": true,
+    "runtime_android_low_latency_applied_verified": false
+  },
+  "recommendation_status": "Proposal only: recover existing protocol from APK; compare matched TCP/UDP on null outputs with session/sequence/ARM/STOP/watchdog preserved; no claimed fix",
+  "new_hardware_validation_performed": false,
+  "additional_hypothesis": "Android low-latency lock requires foreground/screen/AP association; bench acquisition alone is not proof it applied; not established as cause"
+}

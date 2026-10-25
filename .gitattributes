@@ -1,4 +1,6 @@
 # Preserve device evidence/source hashes across Windows checkouts.
+docs/esp32-wifi-reference-projects.md text eol=lf
+docs/evidence/esp32-wifi-research-2026-10-25.json text eol=lf
 docs/evidence/xiao-samsung-2026-10-25/* text eol=lf
 docs/power-ground-domains.md text eol=lf
 docs/evidence/power-ground-v01.json text eol=lf

@@ -30,10 +30,10 @@ Files: create `app/src/main/java/vea/raceremote/control/UdpControlPacket.kt`, `U
 
 Interfaces: `UdpControlPacket(kind, attempt, token, sequence, throttle, steering, chipId, basis=0)` encode/decode; session `next(now)`, `receive(packet, now)`, `input`, `stop`, `snapshot`; socket client `input`, `snapshot`, `close` and bind callback.
 
-- [ ] Write tests for wire bytes, malformed boundaries, handshake, replay/mismatch, original-send-time freshness and STOP.
-- [ ] Run tests and observe missing implementation failure.
-- [ ] Translate recovered classes, preserving deadlines, pending ring and socket cleanup.
-- [ ] Run focused tests and real XIAO null-backend socket smoke; commit.
+- [x] Write tests for wire bytes, malformed boundaries, handshake, replay/mismatch, original-send-time freshness and STOP.
+- [x] Run tests and observe missing implementation failure.
+- [x] Translate recovered classes, preserving deadlines, pending ring and socket cleanup.
+- [x] Run focused tests and real XIAO null-backend socket smoke; commit075dfac.
 
 ### Task 2: Status probe and transport connection
 
@@ -41,9 +41,9 @@ Files: create `ControlEndpointProbe.kt`, `CarControlConnection.kt`; test `Contro
 
 Interfaces: `ControlEndpoint(transport, port, chipId)`; `ControlEndpointProbe.load(host,http,port=80)`; connection exposes existing `CarConnectionState` flow and `connect`, `setInput`, `disconnect`, `close`.
 
-- [ ] Write failing fixture tests for status validation, expected identity/transport/port and canceled probe.
-- [ ] Implement recovered probe and connection adapter using existing WS client and task 1 UDP client.
-- [ ] Verify focused tests, including rejection before ARM and no late connection after STOP; commit.
+- [x] Write failing fixture tests for status validation, expected identity/transport/port and canceled probe.
+- [x] Implement recovered probe and connection adapter using existing WS client and task 1 UDP client.
+- [x] Verify focused tests, including rejection before ARM and no late connection after STOP; commitb117131.
 
 ### Task 3: Discovery, screen and build/device verification
 
@@ -51,8 +51,8 @@ Files: modify `DiscoveryPacket.kt`, `CarDiscovery.kt`, `CarControlScreen.kt`, af
 
 Interfaces: append transport/version defaults to `DiscoveredCar`; discovery query supports versions 1/2; screen calls task 2 adapter with selected identity/transport/port and WiFi socket binding.
 
-- [ ] Add failing discovery v2 parsing/preference tests; update affected fixtures to advertise status.
-- [ ] Restore discovery and screen integration, retaining input reset, lifecycle STOP and video target key.
-- [ ] Run JVM suite, build app/test APKs, inspect signatures before any replacement installation.
+- [x] Add failing discovery v2 parsing/preference tests; update affected fixtures to advertise status.
+- [x] Restore discovery and screen integration, retaining input reset, lifecycle STOP and video target key.
+- [x] Run JVM suite, build app/test APKs, inspect signatures before any replacement installation.
 - [ ] Verify actual XIAO control and watchdog; run Samsung tests if connected, explicitly record any remaining limitation.
 - [ ] Review whole change, fix material findings, commit and push branch `update`.

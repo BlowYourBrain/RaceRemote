@@ -1,0 +1,42 @@
+{
+  "scenario": "wifi-mode",
+  "trials": [
+    {
+      "trial": 0,
+      "passed": false,
+      "wifiMode": 4,
+      "snapshot": "Snapshot(phase=CLOSED, reason=ACK freshness timeout, acknowledgements=1, lastAck=1, throttle=0, steering=0, maxRttMs=83, acknowledgedThrottle=0, acknowledgedSteering=0)"
+    },
+    {
+      "trial": 1,
+      "passed": false,
+      "wifiMode": 3,
+      "snapshot": "Snapshot(phase=CLOSED, reason=ACK freshness timeout, acknowledgements=11, lastAck=11, throttle=0, steering=0, maxRttMs=38, acknowledgedThrottle=0, acknowledgedSteering=0)"
+    },
+    {
+      "trial": 2,
+      "passed": false,
+      "wifiMode": 3,
+      "snapshot": "Snapshot(phase=CLOSED, reason=ACK freshness timeout, acknowledgements=62, lastAck=63, throttle=0, steering=0, maxRttMs=147, acknowledgedThrottle=0, acknowledgedSteering=0)"
+    },
+    {
+      "trial": 3,
+      "passed": false,
+      "wifiMode": 4,
+      "snapshot": "Snapshot(phase=CLOSED, reason=ACK freshness timeout, acknowledgements=14, lastAck=14, throttle=0, steering=0, maxRttMs=50, acknowledgedThrottle=0, acknowledgedSteering=0)"
+    },
+    {
+      "trial": 4,
+      "passed": false,
+      "wifiMode": 4,
+      "snapshot": "Snapshot(phase=CLOSED, reason=ACK freshness timeout, acknowledgements=37, lastAck=37, throttle=0, steering=0, maxRttMs=148, acknowledgedThrottle=0, acknowledgedSteering=0)"
+    },
+    {
+      "trial": 5,
+      "passed": false,
+      "wifiMode": 3,
+      "snapshot": "Snapshot(phase=CLOSED, reason=ACK freshness timeout, acknowledgements=33, lastAck=33, throttle=0, steering=0, maxRttMs=130, acknowledgedThrottle=0, acknowledgedSteering=0)"
+    }
+  ],
+  "scope": "Original installed September APK; 2.4GHz, six 5s trials planned, all failed before duration"
+}

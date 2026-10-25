@@ -1,0 +1,68 @@
+INSTRUMENTATION_STATUS: class=vea.raceremote.UdpControlDeviceBenchTest
+INSTRUMENTATION_STATUS: current=1
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=1
+INSTRUMENTATION_STATUS: stream=
+vea.raceremote.UdpControlDeviceBenchTest:
+INSTRUMENTATION_STATUS: test=driveReverseStopAndSilentWatchdogOnNullBackend
+INSTRUMENTATION_STATUS_CODE: 1
+INSTRUMENTATION_STATUS: class=vea.raceremote.UdpControlDeviceBenchTest
+INSTRUMENTATION_STATUS: current=1
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=1
+INSTRUMENTATION_STATUS: stack=java.lang.AssertionError: Failed to assert the following: (Text + EditableText contains 'Управление подключено' (ignoreCase: false))
+Semantics of the node:
+Node #73 at (l=99.0, t=24.0, r=1051.0, b=72.0)px, Tag: 'driving_connection_status'
+Text = '[Нет свежего ответа — остановлено]'
+Actions = [GetTextLayoutResult]
+Has 9 siblings
+Selector used: (TestTag = 'driving_connection_status')
+
+	at androidx.compose.ui.test.AssertionsKt.assert(Assertions.kt:270)
+	at androidx.compose.ui.test.AssertionsKt.assert$default(Assertions.kt:260)
+	at androidx.compose.ui.test.AssertionsKt.assertTextContains(Assertions.kt:214)
+	at androidx.compose.ui.test.AssertionsKt.assertTextContains$default(Assertions.kt:209)
+	at vea.raceremote.UdpControlDeviceBenchTest.driveReverseStopAndSilentWatchdogOnNullBackend(UdpControlDeviceBenchTest.kt:61)
+
+INSTRUMENTATION_STATUS: stream=
+Error in driveReverseStopAndSilentWatchdogOnNullBackend(vea.raceremote.UdpControlDeviceBenchTest):
+java.lang.AssertionError: Failed to assert the following: (Text + EditableText contains 'Управление подключено' (ignoreCase: false))
+Semantics of the node:
+Node #73 at (l=99.0, t=24.0, r=1051.0, b=72.0)px, Tag: 'driving_connection_status'
+Text = '[Нет свежего ответа — остановлено]'
+Actions = [GetTextLayoutResult]
+Has 9 siblings
+Selector used: (TestTag = 'driving_connection_status')
+
+	at androidx.compose.ui.test.AssertionsKt.assert(Assertions.kt:270)
+	at androidx.compose.ui.test.AssertionsKt.assert$default(Assertions.kt:260)
+	at androidx.compose.ui.test.AssertionsKt.assertTextContains(Assertions.kt:214)
+	at androidx.compose.ui.test.AssertionsKt.assertTextContains$default(Assertions.kt:209)
+	at vea.raceremote.UdpControlDeviceBenchTest.driveReverseStopAndSilentWatchdogOnNullBackend(UdpControlDeviceBenchTest.kt:61)
+
+INSTRUMENTATION_STATUS: test=driveReverseStopAndSilentWatchdogOnNullBackend
+INSTRUMENTATION_STATUS_CODE: -2
+INSTRUMENTATION_RESULT: stream=
+
+Time: 73,068
+There was 1 failure:
+1) driveReverseStopAndSilentWatchdogOnNullBackend(vea.raceremote.UdpControlDeviceBenchTest)
+java.lang.AssertionError: Failed to assert the following: (Text + EditableText contains 'Управление подключено' (ignoreCase: false))
+Semantics of the node:
+Node #73 at (l=99.0, t=24.0, r=1051.0, b=72.0)px, Tag: 'driving_connection_status'
+Text = '[Нет свежего ответа — остановлено]'
+Actions = [GetTextLayoutResult]
+Has 9 siblings
+Selector used: (TestTag = 'driving_connection_status')
+
+	at androidx.compose.ui.test.AssertionsKt.assert(Assertions.kt:270)
+	at androidx.compose.ui.test.AssertionsKt.assert$default(Assertions.kt:260)
+	at androidx.compose.ui.test.AssertionsKt.assertTextContains(Assertions.kt:214)
+	at androidx.compose.ui.test.AssertionsKt.assertTextContains$default(Assertions.kt:209)
+	at vea.raceremote.UdpControlDeviceBenchTest.driveReverseStopAndSilentWatchdogOnNullBackend(UdpControlDeviceBenchTest.kt:61)
+
+FAILURES!!!
+Tests run: 1,  Failures: 1
+
+
+INSTRUMENTATION_CODE: -1

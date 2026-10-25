@@ -1,0 +1,214 @@
+{
+  "date": "2026-10-26",
+  "serial": "RF8M811X8FK",
+  "model": "SM-G973F",
+  "api": 31,
+  "scope": "Reconstructed app on real Samsung and original XIAO firmware, outputs disabled; no motor/servo/camera/power qualification",
+  "final_phone": {
+    "safe_wifi": 1,
+    "frequency_mhz": 5260,
+    "profile": "networkId=0 pinned=true frequency=5260",
+    "router_configuration_changed": false
+  },
+  "physical_runs": [
+    {
+      "name": "5ghz-safe-off-30s",
+      "passed": true,
+      "requested_hold_seconds": 30,
+      "safe_wifi": 0,
+      "test_elapsed_seconds": 33.738,
+      "transcript_sha256": "c5b1ab9cb505ea90e599e90f237f34e46fe3bdd29f76f8756d9772e8d71c1216"
+    },
+    {
+      "name": "5ghz-safe-off-long",
+      "passed": false,
+      "requested_hold_seconds": 120,
+      "safe_wifi": 0,
+      "test_elapsed_seconds": 73.068,
+      "transcript_sha256": "4e9248842ea8b4c7ac53643da90d29e94038f7cf4b1290985aa0e260b7e06889"
+    },
+    {
+      "name": "safe-on-5ghz-120s",
+      "passed": true,
+      "requested_hold_seconds": 120,
+      "safe_wifi": 1,
+      "test_elapsed_seconds": 123.915,
+      "transcript_sha256": "7f94ed4ffaae6baa6a11060964023d21dccab1f9a4b3cc894be7d83852953a8a"
+    },
+    {
+      "name": "safe-on-reassociation-120s",
+      "passed": true,
+      "requested_hold_seconds": 120,
+      "safe_wifi": 1,
+      "test_elapsed_seconds": 123.523,
+      "transcript_sha256": "e6e86aba6eb7025b441d666868b1a5de754111a0456cbac3fcfb18ef741c6b34"
+    },
+    {
+      "name": "qualified-final-30s",
+      "passed": true,
+      "requested_hold_seconds": 30,
+      "safe_wifi": 1,
+      "test_elapsed_seconds": 33.762,
+      "transcript_sha256": "dcf35d72ac56f10c93d55d9d6670471df2f62e87eeb4d0caccb3a62e69bef65e"
+    }
+  ],
+  "reassociation_note": "Second safe-on120s run requested a 2.4GHz BSSID, initially connected2442, but observed5260 during/after run. Not proof of120s at2.4GHz. Final profile explicitly repinned5GHz.",
+  "installed_apk_sha256": {
+    "vea.raceremote": "6e2882fb146183a73e9ae4f593361e33c58f24e4d02b59fa2dd426ccc58f0534",
+    "vea.raceremote.recovery": "8d5fb9ed6420ad2632589f80c8a24d8220e754d6bcd2da2f62dc8dc70a63be28",
+    "vea.raceremote.recovery.test": "d022170dcdb3aa6db740f648ea18e6e6ceea735aef84a50521aac453738a0144"
+  },
+  "artifact_sha256": {
+    "app/build/outputs/apk/debug/app-debug.apk": "8d5fb9ed6420ad2632589f80c8a24d8220e754d6bcd2da2f62dc8dc70a63be28",
+    "app/build/outputs/apk/androidTest/debug/app-debug-androidTest.apk": "d022170dcdb3aa6db740f648ea18e6e6ceea735aef84a50521aac453738a0144"
+  },
+  "ui_test_apk_differs_from_final": true,
+  "ui_test_apk_note": "Only hardware bench host assertion was tightened afterwards; UI test classes and main app unchanged. Final hardware30s run used current test APK.",
+  "source_sha256": {
+    "app/build.gradle.kts": "ba430a3b84fc39f5c109fe1275a9330cc1bcaa929a77489a2a8acd6dbde8d4c2",
+    "app/src/androidTest/java/vea/raceremote/CarIdentitySelectionTest.kt": "d5a08934e983bc17977469284633b8a31f2dae2c3ab11a4a9fe1134f3da13993",
+    "app/src/androidTest/java/vea/raceremote/CarVideoSelectionTest.kt": "cc3d1dac6ee4dbc78529c7cac8e86ee79e27d1809a6afabe84d9e3078ced3a2d",
+    "app/src/androidTest/java/vea/raceremote/ControlStatusFixture.kt": "c3aea14ae633a4943fe919d91c6a15ec998f32871b81684cc57983a9588621e0",
+    "app/src/androidTest/java/vea/raceremote/DriveDeviceBenchTest.kt": "3306b13a7bf37012df34db9a1f5731f16c1be1e3ae38efe5a43479760a719d9f",
+    "app/src/androidTest/java/vea/raceremote/DrivingModeTest.kt": "5cae2f78c30d32732ad1605df826b3676ce05e82362dfd836684a9b3efba1139",
+    "app/src/androidTest/java/vea/raceremote/ExampleInstrumentedTest.kt": "cabdb5da633f55b43a07f9b4ad162139a23ebc90a2d6e3b680710cb2b16e1010",
+    "app/src/androidTest/java/vea/raceremote/UdpControlDeviceBenchTest.kt": "21d7eb9a11665f65cf6d7247ec6e0270a3ed5da6de135874c404331c06bb687b",
+    "app/src/androidTest/java/vea/raceremote/UdpControlScreenDeviceTest.kt": "6f73b05412c0359d66c868bc31268e7c6d22dfc1429f219031a41a1dec250d4b",
+    "app/src/androidTest/java/vea/raceremote/VideoControlIsolationTest.kt": "89583dc62bb9ad4c1c577f342a4589893a7490c51f58610247bfc9b99bee2ad1",
+    "app/src/main/AndroidManifest.xml": "ed642de8504e320e68d5531775843115de328b7ad11cc29e44c2aef2e86563a9",
+    "app/src/main/java/vea/raceremote/control/CarControlClient.kt": "020bb07548e6f3b18e1af2e6714d2c090741e2bf93218a9543784704cf0bad2b",
+    "app/src/main/java/vea/raceremote/control/CarControlConnection.kt": "67c2d207ccee84593a32a008e371655488a45073944b99247e5adf7efc5c517c",
+    "app/src/main/java/vea/raceremote/control/CarControlScreen.kt": "4db7e3673ccf12474a7579c03bcba532698e9e236ce865e77ce76cc568d1bce3",
+    "app/src/main/java/vea/raceremote/control/CarDiscovery.kt": "139fd1818af7bc5f08d3acd667227a01c825fd1e32ee89bbf6c925deb85c2d6a",
+    "app/src/main/java/vea/raceremote/control/CarPicker.kt": "34db12c188346efd32f766b9dd48095832c2184ddedc1f046ed7118abe183b47",
+    "app/src/main/java/vea/raceremote/control/ControlEndpointProbe.kt": "fb7be397f4408f0330db9602fad541c64b7704a057b704d841b09710b179973b",
+    "app/src/main/java/vea/raceremote/control/ControlPacket.kt": "f3e8020901fff2dba885f381974c7d7be69ac3133c8ba88001eef39b36622fb7",
+    "app/src/main/java/vea/raceremote/control/ControlSocketFactory.kt": "97e2a819de9ced733b3815ed005c5735463b8f349c825e104b0ce8d4a6678c16",
+    "app/src/main/java/vea/raceremote/control/DiscoveryPacket.kt": "6e6d4aa28f3ec4db776363c607a8a5e665d2fec9d560924b37135e2040c5db17",
+    "app/src/main/java/vea/raceremote/control/DrivingPad.kt": "a8c74d7002f5c153394f91495bc639ae954ac3628c9b07b1d19cd60f101985c5",
+    "app/src/main/java/vea/raceremote/control/IdentityPacket.kt": "251798c429c326b5d0faa70f96fd743fa7dfd13869e059ed47e225687c4f8c25",
+    "app/src/main/java/vea/raceremote/control/UdpControlClient.kt": "93f039cdcbd703a4446835dbce85b1944e7aa629dcf9ca249c43e3431494d2d3",
+    "app/src/main/java/vea/raceremote/control/UdpControlPacket.kt": "441c1b5296fd2d5c3dbd9930e4ecf77c00641c8a8483e8e1f3c66c20939e9074",
+    "app/src/main/java/vea/raceremote/control/UdpControlSession.kt": "ba68ee73b340edc1d1149de014bcf36ccf3b8927ef3aba36a3f2483b2b172788",
+    "tools/android/PinWifi.java": "35f5a3b0d8bd66e7a55c0a84f95079b699ebb57aa00765bc9dea60e693cdabe3",
+    "tools/run_video_android_smoke.py": "f89e4a80862fabdd795d269008fc54cef6c0aa7684ce3d3795f217aa30365a46"
+  },
+  "jvm": {
+    "tests": 59,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 1,
+    "suites": [
+      {
+        "name": "vea.raceremote.control.CarControlConnectionTest",
+        "tests": 3,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0,
+        "sha256": "0b4b59d8a0aa6a2e4fd8d592c6c433b2aa23db4f968a81ce626652d12a8e9588"
+      },
+      {
+        "name": "vea.raceremote.control.CarControlTest",
+        "tests": 7,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0,
+        "sha256": "1f924d18fa8fa78eb3bdfcc38e730b1e28155954168d5c160d6fddc48025c7fe"
+      },
+      {
+        "name": "vea.raceremote.control.CarDiscoveryTest",
+        "tests": 5,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0,
+        "sha256": "66bec739b62e3ee5ba3f0ad222fb44dfa8a6d03120ee88ce4621d8a5e78f8291"
+      },
+      {
+        "name": "vea.raceremote.control.ControlEndpointProbeTest",
+        "tests": 2,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0,
+        "sha256": "1def1f91b360035eb534afaa5f16ead10305bfba6e60b9e6e2f820d4498f90ae"
+      },
+      {
+        "name": "vea.raceremote.control.FirmwareFleetTest",
+        "tests": 1,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 1,
+        "sha256": "1b86c290b51c0561076a01573f2c8c69dabbecfbc23a812da88017368deb7a55"
+      },
+      {
+        "name": "vea.raceremote.control.IdentityHandshakeTest",
+        "tests": 9,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0,
+        "sha256": "fd43b5a60015c47cf4583a153a8c3008624c0ebabc56c0a07c70bfb0302c7929"
+      },
+      {
+        "name": "vea.raceremote.control.UdpControlTest",
+        "tests": 5,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0,
+        "sha256": "6ebd1cb76d8cb3548cf6f7d842daa8c3997ae5f0eca2d12a6476bc93fa8a36c9"
+      },
+      {
+        "name": "vea.raceremote.features.remote_control.CompoundCommandCreatorTest",
+        "tests": 5,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0,
+        "sha256": "c46ec6738710b6f9207cada9c4725fb8b9252078a8155340b9095f9bb948c9b2"
+      },
+      {
+        "name": "vea.raceremote.features.remote_control.presentation.EngineMapperTest",
+        "tests": 6,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0,
+        "sha256": "58d2ecb79d6d72735ee06499f0e480980fb38884d9b0ad0fedb14af58f6ae869"
+      },
+      {
+        "name": "vea.raceremote.features.remote_control.presentation.SteeringWheelMapperTest",
+        "tests": 5,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0,
+        "sha256": "59c4df92a4abc6fd78650501a70d94066ef7e26fb3fe920a53faddab0a905769"
+      },
+      {
+        "name": "vea.raceremote.video.FrameFreshnessTest",
+        "tests": 6,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0,
+        "sha256": "68cc2765d0d645ded330719dfc97090a588a08db7b9e46758f7d11fdb859475c"
+      },
+      {
+        "name": "vea.raceremote.video.MjpegTest",
+        "tests": 5,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0,
+        "sha256": "a2235acbabfd04f931cb248454cfcdc8cdf826cb848c06beb4bf876c5dcd8b20"
+      }
+    ]
+  },
+  "signing_key_backup": {
+    "repository": "BlowYourBrain/homelab",
+    "branch": "master",
+    "commit": "3b2f0a3",
+    "ciphertext": "secrets/vault.age",
+    "verified_real_files": 16,
+    "restore_writes": 0
+  },
+  "limitations": [
+    "No general claim that2.4GHz or other devices/networks are fixed",
+    "Safe mode driver mechanism was not measured",
+    "Original signing private key is not recoverable from APK",
+    "Firmware C++ source remains missing; original binary restored earlier"
+  ]
+}

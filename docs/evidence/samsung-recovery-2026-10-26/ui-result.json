@@ -1,0 +1,27 @@
+{
+  "serial": "RF8M811X8FK",
+  "api": 31,
+  "package_id": "vea.raceremote.recovery",
+  "display": {
+    "size": "Physical size: 1440x3040\nOverride size: 720x1520",
+    "density": "Physical density: 420\nOverride density: 320",
+    "emulator": false
+  },
+  "classes": [
+    "vea.raceremote.VideoControlIsolationTest",
+    "vea.raceremote.DrivingModeTest",
+    "vea.raceremote.CarVideoSelectionTest",
+    "vea.raceremote.CarIdentitySelectionTest",
+    "vea.raceremote.UdpControlScreenDeviceTest"
+  ],
+  "expected_tests": 8,
+  "passed": true,
+  "adb_exit_code": 0,
+  "apk_sha256": {
+    "app/build/outputs/apk/debug/app-debug.apk": "8d5fb9ed6420ad2632589f80c8a24d8220e754d6bcd2da2f62dc8dc70a63be28",
+    "app/build/outputs/apk/androidTest/debug/app-debug-androidTest.apk": "ed0c4db10755919cf773a61286614ec43032a004a948943c1b7bdd091b38df80"
+  },
+  "transcript_sha256": "9f2b7d67a0d8254622e9b9ed488e91f8371175e3999aae9d29b91c189bcff32f",
+  "runner_sha256": "f89e4a80862fabdd795d269008fc54cef6c0aa7684ce3d3795f217aa30365a46",
+  "scope": "Android UI and software loopback; no physical camera, RF, motor or optical latency"
+}

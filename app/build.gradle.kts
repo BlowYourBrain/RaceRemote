@@ -10,7 +10,9 @@ android {
     defaultConfig {
         applicationId = "vea.raceremote"
         // The lost SSD also held the installed APK's signing key; preserve that installation during recovery tests.
-        if (providers.gradleProperty("recoveryInstall").orNull == "true") applicationId = "vea.raceremote.recovery"
+        val recoveryInstall = providers.gradleProperty("recoveryInstall").orNull == "true"
+        if (recoveryInstall) applicationId = "vea.raceremote.recovery"
+        manifestPlaceholders["appLabel"] = if (recoveryInstall) "RaceRemote восстановлено" else "@string/app_name"
         compileSdk = AppConfig.compileSdk
         minSdk = AppConfig.minSdk
         targetSdk = AppConfig.targetSdk

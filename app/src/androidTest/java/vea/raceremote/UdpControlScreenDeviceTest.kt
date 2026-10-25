@@ -82,7 +82,8 @@ class UdpControlScreenDeviceTest {
             compose.onNodeWithTag("driving_mode").performClick()
             compose.onNodeWithTag("drive_throttle").performTouchInput { down(center); moveTo(center + Offset(0f, -height * .3f)) }
             compose.waitUntil(3000) { (latest.get()?.throttle ?: 0) > 200 }
-            compose.onNodeWithTag("stop_car").performClick()
+            val stop = compose.onNodeWithTag("stop_car").fetchSemanticsNode().boundsInRoot.center
+            compose.onRoot().performTouchInput { down(1, stop); up(1) }
             compose.waitUntil(3000) { stopped.get() }
             compose.onNodeWithTag("drive_throttle").assertIsNotEnabled()
             compose.onNodeWithTag("drive_throttle").performTouchInput { cancel() }

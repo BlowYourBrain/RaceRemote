@@ -54,5 +54,5 @@ Interfaces: append transport/version defaults to `DiscoveredCar`; discovery quer
 - [x] Add failing discovery v2 parsing/preference tests; update affected fixtures to advertise status.
 - [x] Restore discovery and screen integration, retaining input reset, lifecycle STOP and video target key.
 - [x] Run JVM suite, build app/test APKs, inspect signatures before any replacement installation.
-- [ ] Verify actual XIAO control and watchdog; run Samsung tests if connected, explicitly record any remaining limitation.
-- [ ] Review whole change, fix material findings, commit and push branch `update`.
+- [x] Verify actual XIAO control and watchdog; Samsung8UI and two120s plus final30s physical screen runs pass with safe_wifi1/observed5GHz. Outputs stay disabled;2.4GHz and physical actuators unqualified.
+- [x] Review whole change and fix material findings: exact bench host guard, correct BSSID clear/readback, package-safe runner. Publish the qualified source and evidence in branch `update`.

@@ -1,6 +1,10 @@
 package vea.raceremote
 
 import androidx.test.platform.app.InstrumentationRegistry
+import androidx.compose.ui.geometry.Offset
+import androidx.compose.ui.test.*
+import androidx.compose.ui.test.junit4.createAndroidComposeRule
+import androidx.lifecycle.Lifecycle
 import java.net.DatagramPacket
 import java.net.DatagramSocket
 import java.net.InetAddress
@@ -10,12 +14,18 @@ import org.json.JSONObject
 import org.junit.Assert.*
 import org.junit.Assume.assumeTrue
 import org.junit.Test
+import org.junit.Rule
+import vea.raceremote.app.MainActivity
 import vea.raceremote.control.*
 
 /** Explicit host argument required; refuses every firmware with physical outputs enabled. */
 class UdpControlDeviceBenchTest {
+    @get:Rule val compose = createAndroidComposeRule<MainActivity>()
+
     @Test fun driveReverseStopAndSilentWatchdogOnNullBackend() {
         val args = InstrumentationRegistry.getArguments()
+        val holdMs = args.getString("udpBenchHoldMs")?.toLongOrNull() ?: 15_000L
+        require(holdMs in 1000..60_000)
         val host = args.getString("udpBenchHost")
         assumeTrue("Supply udpBenchHost for the physical null-backend bench", host != null)
         val http = OkHttpClient()
@@ -32,21 +42,35 @@ class UdpControlDeviceBenchTest {
         assertEquals(3334, endpoint.port)
         assertFalse(initial.getBoolean("armed"))
         try {
-            UdpControlClient(host, endpoint.chipId, {}).use { client ->
-                await(4000) { client.snapshot().phase == UdpControlSession.Phase.ACTIVE }
-                val started = System.nanoTime()
-                val duration = 30_000_000_000L
-                while (System.nanoTime() - started < duration) {
-                    client.input(if (System.nanoTime() - started < duration / 2) 200 else -200, 100)
-                    Thread.sleep(20)
-                    assertEquals(client.snapshot().reason, UdpControlSession.Phase.ACTIVE, client.snapshot().phase)
+            compose.onNodeWithTag("find_cars").performClick()
+            val selected = compose.onNodeWithTag("discovered_${endpoint.chipId}")
+            compose.waitUntil(5000) { runCatching { selected.assertExists() }.isSuccess }
+            selected.assertTextContains(" · $host\n", substring = true)
+            selected.performClick()
+            assertFalse(status().getBoolean("armed"))
+            compose.onNodeWithTag("selected_car_identity").assertTextContains(endpoint.chipId.toString(16).padStart(12, '0'), substring = true)
+            compose.onNodeWithTag("connect_car").performClick()
+            compose.waitUntil(5000) { runCatching { compose.onNodeWithTag("connection_status").assertTextContains("Управление подключено") }.isSuccess }
+            compose.onNodeWithTag("driving_mode").performClick()
+            val gas = compose.onNodeWithTag("drive_throttle").fetchSemanticsNode().boundsInRoot
+            compose.onRoot().performTouchInput { down(0, gas.center) }
+            for (forward in listOf(true, false)) {
+                compose.onRoot().performTouchInput { moveTo(0, gas.center + Offset(0f, gas.height * if (forward) -.3f else .3f)) }
+                val deadline = System.nanoTime() + holdMs * 1_000_000L
+                while (System.nanoTime() < deadline) {
+                    Thread.sleep(500)
+                    compose.onNodeWithTag("driving_connection_status").assertTextContains("Управление подключено")
                 }
                 val value = status()
                 assertTrue(value.getBoolean("armed"))
-                assertEquals(-200, value.getInt("throttle"))
-                assertEquals(100, value.getInt("steering"))
-                android.util.Log.i("UdpRecoveryBench", "stable30s ${client.snapshot()}")
+                assertTrue(if (forward) value.getInt("throttle") > 200 else value.getInt("throttle") < -200)
+                assertEquals(0, value.getInt("steering"))
+                android.util.Log.i("UdpRecoveryBench", "screenHoldMs=$holdMs forward=$forward throttle=${value.getInt("throttle")}")
             }
+            val stop = compose.onNodeWithTag("stop_car").fetchSemanticsNode().boundsInRoot.center
+            compose.onRoot().performTouchInput { down(1, stop); up(1) }
+            compose.onNodeWithTag("drive_throttle").assertIsNotEnabled()
+            compose.onRoot().performTouchInput { cancel() }
             await(1000) { !status().getBoolean("armed") }
             assertNeutral(status())
 
@@ -75,6 +99,8 @@ class UdpControlDeviceBenchTest {
             assertNeutral(status())
             android.util.Log.i("UdpRecoveryBench", "explicit STOP and silent watchdog neutral verified")
         } finally {
+            runCatching { compose.onRoot().performTouchInput { cancel() } }
+            compose.activityRule.scenario.moveToState(Lifecycle.State.STARTED)
             // No physical outputs are enabled; even a failed test must leave the firmware expired.
             Thread.sleep(300)
             assertNeutral(status())

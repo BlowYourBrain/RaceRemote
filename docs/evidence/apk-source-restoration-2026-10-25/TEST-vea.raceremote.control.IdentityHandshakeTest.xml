@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="vea.raceremote.control.IdentityHandshakeTest" tests="9" skipped="0" failures="0" errors="0" timestamp="2026-10-25T20:08:37" hostname="PC_EVGENY" time="0.93">
+  <properties/>
+  <testcase name="legacyHelloCannotSilentlyBypassRequiredIdentity" classname="vea.raceremote.control.IdentityHandshakeTest" time="0.126"/>
+  <testcase name="duplicateIdentityCannotArm" classname="vea.raceremote.control.IdentityHandshakeTest" time="0.126"/>
+  <testcase name="identityDoesNotExtendHelloDeadline" classname="vea.raceremote.control.IdentityHandshakeTest" time="0.126"/>
+  <testcase name="anotherBoardAtSameAddressCannotArm" classname="vea.raceremote.control.IdentityHandshakeTest" time="0.118"/>
+  <testcase name="identityAloneCannotArm" classname="vea.raceremote.control.IdentityHandshakeTest" time="0.175"/>
+  <testcase name="matchingIdentityAndHelloCanArm" classname="vea.raceremote.control.IdentityHandshakeTest" time="0.015"/>
+  <testcase name="lateIdentityCannotArm" classname="vea.raceremote.control.IdentityHandshakeTest" time="0.118"/>
+  <testcase name="identityMatchesCppGoldenAndRejectsMalformedFields" classname="vea.raceremote.control.IdentityHandshakeTest" time="0.001"/>
+  <testcase name="helloFromAnotherSessionCannotArm" classname="vea.raceremote.control.IdentityHandshakeTest" time="0.119"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[окт. 25, 2026 11:08:37 PM okhttp3.mockwebserver.MockWebServer$3 execute
+INFO: MockWebServer[55425] starting to accept connections
+окт. 25, 2026 11:08:37 PM okhttp3.mockwebserver.MockWebServer$4 processOneRequest
+INFO: MockWebServer[55425] received request: GET /control/identity HTTP/1.1 and responded: HTTP/1.1 101 Switching Protocols
+окт. 25, 2026 11:08:37 PM okhttp3.mockwebserver.MockWebServer$3 acceptConnections
+INFO: MockWebServer[55425] done accepting connections: Socket closed
+окт. 25, 2026 11:08:37 PM okhttp3.mockwebserver.MockWebServer$3 execute
+INFO: MockWebServer[55427] starting to accept connections
+окт. 25, 2026 11:08:37 PM okhttp3.mockwebserver.MockWebServer$4 processOneRequest
+INFO: MockWebServer[55427] received request: GET /control/identity HTTP/1.1 and responded: HTTP/1.1 101 Switching Protocols
+окт. 25, 2026 11:08:37 PM okhttp3.mockwebserver.MockWebServer$3 acceptConnections
+INFO: MockWebServer[55427] done accepting connections: Socket closed
+окт. 25, 2026 11:08:37 PM okhttp3.mockwebserver.MockWebServer$3 execute
+INFO: MockWebServer[55429] starting to accept connections
+окт. 25, 2026 11:08:37 PM okhttp3.mockwebserver.MockWebServer$4 processOneRequest
+INFO: MockWebServer[55429] received request: GET /control/identity HTTP/1.1 and responded: HTTP/1.1 101 Switching Protocols
+окт. 25, 2026 11:08:38 PM okhttp3.mockwebserver.MockWebServer$3 acceptConnections
+INFO: MockWebServer[55429] done accepting connections: Socket closed
+окт. 25, 2026 11:08:38 PM okhttp3.mockwebserver.MockWebServer$3 execute
+INFO: MockWebServer[55431] starting to accept connections
+окт. 25, 2026 11:08:38 PM okhttp3.mockwebserver.MockWebServer$4 processOneRequest
+INFO: MockWebServer[55431] received request: GET /control/identity HTTP/1.1 and responded: HTTP/1.1 101 Switching Protocols
+окт. 25, 2026 11:08:38 PM okhttp3.mockwebserver.MockWebServer$3 acceptConnections
+INFO: MockWebServer[55431] done accepting connections: Socket closed
+окт. 25, 2026 11:08:38 PM okhttp3.mockwebserver.MockWebServer$3 execute
+INFO: MockWebServer[55433] starting to accept connections
+окт. 25, 2026 11:08:38 PM okhttp3.mockwebserver.MockWebServer$4 processOneRequest
+INFO: MockWebServer[55433] received request: GET /control/identity HTTP/1.1 and responded: HTTP/1.1 101 Switching Protocols
+окт. 25, 2026 11:08:38 PM okhttp3.mockwebserver.MockWebServer$3 acceptConnections
+INFO: MockWebServer[55433] done accepting connections: Socket closed
+окт. 25, 2026 11:08:38 PM okhttp3.mockwebserver.MockWebServer$3 execute
+INFO: MockWebServer[55435] starting to accept connections
+окт. 25, 2026 11:08:38 PM okhttp3.mockwebserver.MockWebServer$4 processOneRequest
+INFO: MockWebServer[55435] received request: GET /control/identity HTTP/1.1 and responded: HTTP/1.1 101 Switching Protocols
+окт. 25, 2026 11:08:38 PM okhttp3.mockwebserver.MockWebServer$3 acceptConnections
+INFO: MockWebServer[55435] done accepting connections: Socket closed
+окт. 25, 2026 11:08:38 PM okhttp3.mockwebserver.MockWebServer$3 execute
+INFO: MockWebServer[55437] starting to accept connections
+окт. 25, 2026 11:08:38 PM okhttp3.mockwebserver.MockWebServer$4 processOneRequest
+INFO: MockWebServer[55437] received request: GET /control/identity HTTP/1.1 and responded: HTTP/1.1 101 Switching Protocols
+окт. 25, 2026 11:08:38 PM okhttp3.mockwebserver.MockWebServer$3 acceptConnections
+INFO: MockWebServer[55437] done accepting connections: Socket closed
+окт. 25, 2026 11:08:38 PM okhttp3.mockwebserver.MockWebServer$3 execute
+INFO: MockWebServer[55439] starting to accept connections
+окт. 25, 2026 11:08:38 PM okhttp3.mockwebserver.MockWebServer$4 processOneRequest
+INFO: MockWebServer[55439] received request: GET /control/identity HTTP/1.1 and responded: HTTP/1.1 101 Switching Protocols
+окт. 25, 2026 11:08:38 PM okhttp3.mockwebserver.MockWebServer$3 acceptConnections
+INFO: MockWebServer[55439] done accepting connections: Socket closed
+]]></system-err>
+</testsuite>

@@ -11,6 +11,40 @@ class CarDiscoveryTest {
     private val golden = "525244010200390578563412c8f09ea66da0000001010000"
         .chunked(2).map { it.toInt(16).toByte() }.toByteArray()
 
+    @Test fun versionTwoAdvertisesUdpAndRejectsUnknownTransportOrWrongPort() {
+        val udp = golden.copyOf().also { it[3] = 2; it[6] = 6; it[7] = 13; it[22] = 2 }
+        val car = DiscoveryPacket.reply(udp, 0x12345678, "192.168.1.4")!!
+        assertEquals("udp-v1", car.transport)
+        assertEquals(2, car.discoveryVersion)
+        assertEquals(3334, car.port)
+        assertEquals(2.toByte(), DiscoveryPacket.query(7, 2)[3])
+        assertNull(DiscoveryPacket.reply(udp.copyOf().also { it[22] = 3 }, 0x12345678, car.host))
+        assertNull(DiscoveryPacket.reply(udp.copyOf().also { it[6] = 7 }, 0x12345678, car.host))
+        assertEquals("websocket-v1", DiscoveryPacket.reply(udp.copyOf().also { it[22] = 1 }, 0x12345678, car.host)!!.transport)
+    }
+
+    @Test fun newerDiscoveryResponseWinsEvenWhenLegacyArrivesLast() {
+        DatagramSocket(DiscoveryPacket.PORT, InetAddress.getLoopbackAddress()).use { server ->
+            server.soTimeout = 4000
+            val worker = Executors.newSingleThreadExecutor()
+            val responder = worker.submit {
+                val query = DatagramPacket(ByteArray(12), 12)
+                server.receive(query)
+                val legacy = golden.copyOf().also { query.data.copyInto(it, 8, 8, 12) }
+                val udp = legacy.copyOf().also { it[3] = 2; it[6] = 6; it[7] = 13; it[22] = 2 }
+                for (bytes in listOf(legacy, udp, legacy)) server.send(DatagramPacket(bytes, bytes.size, query.address, query.port))
+            }
+            val discovery = CarDiscovery()
+            try {
+                discovery.search(listOf(InetAddress.getLoopbackAddress()))
+                await { !discovery.state.value.searching }
+                responder.get()
+                assertEquals(1, discovery.state.value.cars.size)
+                assertEquals("udp-v1", discovery.state.value.cars.single().transport)
+            } finally { discovery.close(); worker.shutdownNow() }
+        }
+    }
+
     @Test fun sharedFirmwareVectorAndInvalidPackets() {
         assertEquals("525244010100000078563412", DiscoveryPacket.query(0x12345678).joinToString("") { "%02x".format(it) })
         val car = DiscoveryPacket.reply(golden, 0x12345678, "192.168.1.4")!!

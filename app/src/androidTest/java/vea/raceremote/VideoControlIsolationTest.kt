@@ -31,8 +31,10 @@ class VideoControlIsolationTest {
         val control = MockWebServer()
         val video = MockWebServer()
         val drives = AtomicInteger()
+        control.enqueueControlStatus()
         control.enqueue(MockResponse().withWebSocketUpgrade(object : WebSocketListener() {
             override fun onOpen(webSocket: WebSocket, response: Response) {
+                webSocket.sendFixtureIdentity(43)
                 webSocket.send(ByteString.of(*ControlPacket(ControlPacket.HELLO, 43, 0).encode()))
             }
             override fun onMessage(webSocket: WebSocket, bytes: ByteString) {
@@ -63,6 +65,7 @@ class VideoControlIsolationTest {
         video.enqueue(response(repeated = false))
         control.start(1337); video.start()
         try {
+            compose.runOnUiThread { compose.activity.showControlFixture() }
             compose.onNodeWithTag("car_address").performTextReplacement("127.0.0.1")
             compose.onNodeWithTag("show_video").performClick()
             compose.onNodeWithTag("video_address").performTextReplacement(video.url("/stream").toString())
@@ -102,7 +105,7 @@ class VideoControlIsolationTest {
             compose.waitUntil(3000) { isBlue(centerPixel()) }
             compose.onNodeWithTag("connection_status").assertTextContains("Управление подключено")
             org.junit.Assert.assertEquals(2, video.requestCount)
-            org.junit.Assert.assertEquals(1, control.requestCount)
+            org.junit.Assert.assertEquals(2, control.requestCount)
         } finally {
             try { compose.activityRule.scenario.moveToState(Lifecycle.State.STARTED) }
             finally { try { control.shutdown() } finally { video.shutdown() } }
@@ -113,8 +116,10 @@ class VideoControlIsolationTest {
         val control = MockWebServer()
         val video = MockWebServer()
         val drives = AtomicInteger()
+        control.enqueueControlStatus()
         control.enqueue(MockResponse().withWebSocketUpgrade(object : WebSocketListener() {
             override fun onOpen(webSocket: WebSocket, response: Response) {
+                webSocket.sendFixtureIdentity(42)
                 webSocket.send(ByteString.of(*ControlPacket(ControlPacket.HELLO, 42, 0).encode()))
             }
             override fun onMessage(webSocket: WebSocket, bytes: ByteString) {
@@ -126,6 +131,7 @@ class VideoControlIsolationTest {
         video.enqueue(MockResponse().setResponseCode(503))
         control.start(1337); video.start()
         try {
+            compose.runOnUiThread { compose.activity.showControlFixture() }
             compose.onNodeWithTag("car_address").performTextReplacement("127.0.0.1")
             compose.onNodeWithTag("connect_car").performClick()
             compose.waitUntil(5000) { drives.get() > 3 }

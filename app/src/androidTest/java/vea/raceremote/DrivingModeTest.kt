@@ -38,8 +38,10 @@ class DrivingModeTest {
         val video = MockWebServer()
         val latest = AtomicReference<ControlPacket>()
         val drives = AtomicInteger()
+        control.enqueueControlStatus()
         control.enqueue(MockResponse().withWebSocketUpgrade(object : WebSocketListener() {
             override fun onOpen(webSocket: WebSocket, response: Response) {
+                webSocket.sendFixtureIdentity(42)
                 webSocket.send(ByteString.of(*ControlPacket(ControlPacket.HELLO, 42, 0).encode()))
             }
             override fun onMessage(webSocket: WebSocket, bytes: ByteString) {
@@ -62,6 +64,7 @@ class DrivingModeTest {
             .setBody(body).throttleBody(part.size.toLong(), 33, java.util.concurrent.TimeUnit.MILLISECONDS))
         control.start(1337); video.start()
         try {
+            compose.runOnUiThread { compose.activity.showControlFixture() }
             compose.onNodeWithTag("car_address").performTextReplacement("127.0.0.1")
             compose.onNodeWithTag("connect_car").performClick()
             compose.waitUntil(5000) { drives.get() > 3 }
@@ -138,8 +141,10 @@ class DrivingModeTest {
         val control = MockWebServer()
         val latest = AtomicReference<ControlPacket>()
         val drives = AtomicInteger()
+        control.enqueueControlStatus()
         control.enqueue(MockResponse().withWebSocketUpgrade(object : WebSocketListener() {
             override fun onOpen(webSocket: WebSocket, response: Response) {
+                webSocket.sendFixtureIdentity(43)
                 webSocket.send(ByteString.of(*ControlPacket(ControlPacket.HELLO, 43, 0).encode()))
             }
             override fun onMessage(webSocket: WebSocket, bytes: ByteString) {
@@ -150,6 +155,7 @@ class DrivingModeTest {
         }))
         control.start(1337)
         try {
+            compose.runOnUiThread { compose.activity.showControlFixture() }
             compose.onNodeWithTag("car_address").performTextReplacement("127.0.0.1")
             compose.onNodeWithTag("connect_car").performClick()
             compose.waitUntil(5000) { drives.get() > 3 }
@@ -166,7 +172,7 @@ class DrivingModeTest {
             compose.onNodeWithTag("drive_throttle").performTouchInput { cancel() }
             compose.onNodeWithTag("driving_mode").performClick()
             compose.onNodeWithTag("connect_car").assertIsEnabled()
-            assertEquals("Background/resume must not reconnect", 1, control.requestCount)
+            assertEquals("Background/resume must not reconnect", 2, control.requestCount)
         } finally {
             compose.onNodeWithTag("stop_car").performClick()
             control.shutdown()

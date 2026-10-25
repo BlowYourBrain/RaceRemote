@@ -1,0 +1,38 @@
+{
+  "scope": "PC CarControlConnection with real HTTP probe and UDP, 30s; no phone radio or physical actuation",
+  "directions": [
+    {
+      "throttle": 200,
+      "steering": 100
+    },
+    {
+      "throttle": -200,
+      "steering": 100
+    }
+  ],
+  "final_status": {
+    "throttle": 0,
+    "controlTransport": "udp-v1",
+    "steering": 0,
+    "carId": "RaceRemote-5008d9",
+    "protocol": 1,
+    "drivePlan": {
+      "mode": "off",
+      "sampledAtMs": 3370826,
+      "steeringNormalized": 0,
+      "fiPermille": 0,
+      "biPermille": 0
+    },
+    "outputsEnabled": false,
+    "actuatorMode": "disabled",
+    "radioProtocolBitmap": 7,
+    "armed": false,
+    "motorDispatch": {
+      "mode": "applied_to_sink",
+      "backend": "null"
+    },
+    "acceptingControl": true,
+    "chipId": "5008d93f1fb8",
+    "controlPort": 3334
+  }
+}

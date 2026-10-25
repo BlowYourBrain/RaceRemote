@@ -40,14 +40,15 @@ class CarDiscovery {
                     udp.broadcast = true; udp.soTimeout = 100
                     var nonce: Long
                     do { nonce = SecureRandom().nextInt().toLong() and 0xffffffffL } while (nonce == 0L)
-                    val query = DiscoveryPacket.query(nonce)
+                    val queries = listOf(DiscoveryPacket.query(nonce, 1), DiscoveryPacket.query(nonce, 2))
                     val started = System.nanoTime()
                     var lastSend = -500L
                     while (System.nanoTime() - started < 3_000_000_000L) {
                         synchronized(this) { if (generation != current) return@execute }
                         val elapsed = (System.nanoTime() - started) / 1_000_000
                         if (elapsed - lastSend >= 500) {
-                            for (target in targets) runCatching { udp.send(DatagramPacket(query, query.size, target, DiscoveryPacket.PORT)) }
+                            for (target in targets) for (query in queries)
+                                runCatching { udp.send(DatagramPacket(query, query.size, target, DiscoveryPacket.PORT)) }
                             lastSend = elapsed
                         }
                         val packet = DatagramPacket(ByteArray(25), 25)
@@ -55,7 +56,8 @@ class CarDiscovery {
                         if (packet.port != DiscoveryPacket.PORT || !localAddress(packet.address)) continue
                         val car = DiscoveryPacket.reply(packet.data.copyOf(packet.length), nonce, packet.address.hostAddress ?: continue) ?: continue
                         // Keep distinct addresses visible even if IDs are duplicated/spoofed.
-                        found["${car.chipId}/${car.host}"] = car
+                        val key = "${car.chipId}/${car.host}"
+                        if ((found[key]?.discoveryVersion ?: 0) <= car.discoveryVersion) found[key] = car
                         if (found.size > 32) found.remove(found.keys.first())
                         synchronized(this) {
                             if (generation == current) mutableState.value = DiscoveryState(true, found.values.toList(), "Ищу машинки…")

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="vea.raceremote.control.UdpControlTest" tests="5" skipped="0" failures="0" errors="0" timestamp="2026-10-25T20:08:38" hostname="PC_EVGENY" time="0.007">
+  <properties/>
+  <testcase name="wireRoundTripAndMalformedInputs" classname="vea.raceremote.control.UdpControlTest" time="0.003"/>
+  <testcase name="freshnessUsesSendTimeAndExpiresBeforeReceiving" classname="vea.raceremote.control.UdpControlTest" time="0.004"/>
+  <testcase name="handshakeDeadlinesAndArmRetriesNeverRenewDeadline" classname="vea.raceremote.control.UdpControlTest" time="0.0"/>
+  <testcase name="ackMustMatchPendingSessionAndAxes" classname="vea.raceremote.control.UdpControlTest" time="0.0"/>
+  <testcase name="stopClearsInputsAndEmitsOnce" classname="vea.raceremote.control.UdpControlTest" time="0.0"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

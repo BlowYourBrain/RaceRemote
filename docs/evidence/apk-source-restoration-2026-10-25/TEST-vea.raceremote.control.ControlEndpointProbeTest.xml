@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="vea.raceremote.control.ControlEndpointProbeTest" tests="2" skipped="0" failures="0" errors="0" timestamp="2026-10-25T20:08:37" hostname="PC_EVGENY" time="0.032">
+  <properties/>
+  <testcase name="readsAdvertisedTransportAndIdentity" classname="vea.raceremote.control.ControlEndpointProbeTest" time="0.014"/>
+  <testcase name="malformedOversizedDisabledAndRedirectedStatusFail" classname="vea.raceremote.control.ControlEndpointProbeTest" time="0.018"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[окт. 25, 2026 11:08:37 PM okhttp3.mockwebserver.MockWebServer$3 execute
+INFO: MockWebServer[55416] starting to accept connections
+окт. 25, 2026 11:08:37 PM okhttp3.mockwebserver.MockWebServer$4 processOneRequest
+INFO: MockWebServer[55416] received request: GET /status HTTP/1.1 and responded: HTTP/1.1 200 OK
+окт. 25, 2026 11:08:37 PM okhttp3.mockwebserver.MockWebServer$3 acceptConnections
+INFO: MockWebServer[55416] done accepting connections: Socket closed
+окт. 25, 2026 11:08:37 PM okhttp3.mockwebserver.MockWebServer$3 execute
+INFO: MockWebServer[55418] starting to accept connections
+окт. 25, 2026 11:08:37 PM okhttp3.mockwebserver.MockWebServer$4 processOneRequest
+INFO: MockWebServer[55418] received request: GET /status HTTP/1.1 and responded: HTTP/1.1 200 OK
+окт. 25, 2026 11:08:37 PM okhttp3.mockwebserver.MockWebServer$4 processOneRequest
+INFO: MockWebServer[55418] received request: GET /status HTTP/1.1 and responded: HTTP/1.1 200 OK
+окт. 25, 2026 11:08:37 PM okhttp3.mockwebserver.MockWebServer$4 processOneRequest
+INFO: MockWebServer[55418] received request: GET /status HTTP/1.1 and responded: HTTP/1.1 200 OK
+окт. 25, 2026 11:08:37 PM okhttp3.mockwebserver.MockWebServer$4 processOneRequest
+INFO: MockWebServer[55418] received request: GET /status HTTP/1.1 and responded: HTTP/1.1 200 OK
+окт. 25, 2026 11:08:37 PM okhttp3.mockwebserver.MockWebServer$4 processOneRequest
+INFO: MockWebServer[55418] received request: GET /status HTTP/1.1 and responded: HTTP/1.1 200 OK
+окт. 25, 2026 11:08:37 PM okhttp3.mockwebserver.MockWebServer$4 processOneRequest
+INFO: MockWebServer[55418] received request: GET /status HTTP/1.1 and responded: HTTP/1.1 302 Redirection
+окт. 25, 2026 11:08:37 PM okhttp3.mockwebserver.MockWebServer$3 acceptConnections
+INFO: MockWebServer[55418] done accepting connections: Socket closed
+]]></system-err>
+</testsuite>

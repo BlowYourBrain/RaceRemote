@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="vea.raceremote.video.MjpegTest" tests="5" skipped="0" failures="0" errors="0" timestamp="2026-10-25T20:08:38" hostname="PC_EVGENY" time="0.045">
+  <properties/>
+  <testcase name="networkStreamDropsRepeatedCaptureEvenWhenSequenceAndJpegChange" classname="vea.raceremote.video.MjpegTest" time="0.008"/>
+  <testcase name="fragmentedReadsAndQuotedBoundaryPreserveEveryFrame" classname="vea.raceremote.video.MjpegTest" time="0.001"/>
+  <testcase name="htmlMissingBoundaryAndWrongDelimiterAreRejected" classname="vea.raceremote.video.MjpegTest" time="0.001"/>
+  <testcase name="videoEndingPreservesControlAndNewDriveAcknowledgements" classname="vea.raceremote.video.MjpegTest" time="0.033"/>
+  <testcase name="incompleteAndUnboundedFramesAreRejected" classname="vea.raceremote.video.MjpegTest" time="0.002"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[окт. 25, 2026 11:08:38 PM okhttp3.mockwebserver.MockWebServer$3 execute
+INFO: MockWebServer[55441] starting to accept connections
+окт. 25, 2026 11:08:38 PM okhttp3.mockwebserver.MockWebServer$4 processOneRequest
+INFO: MockWebServer[55441] received request: GET /stream HTTP/1.1 and responded: HTTP/1.1 200 OK
+окт. 25, 2026 11:08:38 PM okhttp3.mockwebserver.MockWebServer$3 acceptConnections
+INFO: MockWebServer[55441] done accepting connections: Socket closed
+окт. 25, 2026 11:08:38 PM okhttp3.mockwebserver.MockWebServer$3 execute
+INFO: MockWebServer[55443] starting to accept connections
+окт. 25, 2026 11:08:38 PM okhttp3.mockwebserver.MockWebServer$3 execute
+INFO: MockWebServer[55444] starting to accept connections
+окт. 25, 2026 11:08:38 PM okhttp3.mockwebserver.MockWebServer$4 processOneRequest
+INFO: MockWebServer[55444] received request: GET /stream HTTP/1.1 and responded: HTTP/1.1 200 OK
+окт. 25, 2026 11:08:38 PM okhttp3.mockwebserver.MockWebServer$4 processOneRequest
+INFO: MockWebServer[55443] received request: GET /control HTTP/1.1 and responded: HTTP/1.1 101 Switching Protocols
+окт. 25, 2026 11:08:38 PM okhttp3.mockwebserver.MockWebServer$3 acceptConnections
+INFO: MockWebServer[55443] done accepting connections: Socket closed
+окт. 25, 2026 11:08:38 PM okhttp3.mockwebserver.MockWebServer$3 acceptConnections
+INFO: MockWebServer[55444] done accepting connections: Socket closed
+]]></system-err>
+</testsuite>

@@ -1,4 +1,4 @@
-"""Run the seven loopback video/control/identity UI tests on an explicitly selected Android.
+"""Run the eight loopback video/control/identity UI tests on an explicitly selected Android.
 
 Build app-debug.apk and app-debug-androidTest.apk first. This installs debug APKs;
 it never selects a device implicitly, unlocks a phone, or contacts a physical car.
@@ -12,8 +12,16 @@ import re
 import subprocess
 
 ROOT = Path(__file__).resolve().parents[1]
-CLASSES = "vea.raceremote.VideoControlIsolationTest,vea.raceremote.DrivingModeTest,vea.raceremote.CarVideoSelectionTest,vea.raceremote.CarIdentitySelectionTest"
-EXPECTED_TESTS = 7
+CLASSES = "vea.raceremote.VideoControlIsolationTest,vea.raceremote.DrivingModeTest,vea.raceremote.CarVideoSelectionTest,vea.raceremote.CarIdentitySelectionTest,vea.raceremote.UdpControlScreenDeviceTest"
+EXPECTED_TESTS = 8
+
+
+def apk_package(apk_paths):
+    identities = [json.loads((path.parent / "output-metadata.json").read_text(encoding="utf-8"))["applicationId"]
+                  for path in apk_paths]
+    if identities[0] not in ("vea.raceremote", "vea.raceremote.recovery") or identities[1] != identities[0] + ".test":
+        raise RuntimeError(f"App/test build identities do not match: {identities}")
+    return identities[0]
 
 
 def main():
@@ -45,6 +53,7 @@ def main():
                "emulator": adb("shell", "getprop", "ro.kernel.qemu").strip() == "1"}
     apk_paths = [ROOT / "app/build/outputs/apk/debug/app-debug.apk",
                  ROOT / "app/build/outputs/apk/androidTest/debug/app-debug-androidTest.apk"]
+    package_id = apk_package(apk_paths)
     hashes = {p.relative_to(ROOT).as_posix(): hashlib.sha256(p.read_bytes()).hexdigest() for p in apk_paths}
     args.output.mkdir(parents=True, exist_ok=True)
     for apk in apk_paths:
@@ -53,14 +62,14 @@ def main():
             raise RuntimeError(f"Install failed for {apk.name}: {installed}")
     print(f"Running {EXPECTED_TESTS} loopback tests on {args.serial}, API{sdk}", flush=True)
     process = subprocess.run([str(args.adb), "-s", args.serial, "shell", "am", "instrument", "-w", "-r",
-                              "-e", "class", CLASSES, "vea.raceremote.test/androidx.test.runner.AndroidJUnitRunner"],
+                              "-e", "class", CLASSES, f"{package_id}.test/androidx.test.runner.AndroidJUnitRunner"],
                              capture_output=True, text=True, encoding="utf-8", errors="replace", timeout=300)
     transcript = process.stdout + process.stderr
     log_path = args.output / "instrumentation.txt"
     log_path.write_text(transcript, encoding="utf-8", newline="\n")
     passed = process.returncode == 0 and bool(re.search(rf"\bOK \({EXPECTED_TESTS} tests\)", transcript)) and not re.search(
         r"INSTRUMENTATION_STATUS_CODE: -[1-9]|FAILURES!!!|INSTRUMENTATION_FAILED", transcript)
-    report = {"serial": args.serial, "api": sdk, "display": display, "classes": CLASSES.split(","), "expected_tests": EXPECTED_TESTS,
+    report = {"serial": args.serial, "api": sdk, "package_id": package_id, "display": display, "classes": CLASSES.split(","), "expected_tests": EXPECTED_TESTS,
               "passed": passed, "adb_exit_code": process.returncode, "apk_sha256": hashes,
               "transcript_sha256": hashlib.sha256(log_path.read_bytes()).hexdigest(),
               "runner_sha256": hashlib.sha256(Path(__file__).read_bytes()).hexdigest(),

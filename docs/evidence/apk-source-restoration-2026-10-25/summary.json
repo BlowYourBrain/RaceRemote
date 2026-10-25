@@ -1,0 +1,158 @@
+{
+  "date": "2026-10-25",
+  "scope": "Reconstructed Kotlin app, not exact recovered source text or firmware C++ source",
+  "toolchain": {
+    "jdk": "17.0.20.1",
+    "gradle": "7.5",
+    "kotlin": "1.8.10",
+    "agp": "7.4.0"
+  },
+  "jvm": {
+    "tests": 59,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 1,
+    "reports": [
+      {
+        "suite": "vea.raceremote.control.CarControlConnectionTest",
+        "tests": 3,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0,
+        "sha256": "0b4b59d8a0aa6a2e4fd8d592c6c433b2aa23db4f968a81ce626652d12a8e9588"
+      },
+      {
+        "suite": "vea.raceremote.control.CarControlTest",
+        "tests": 7,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0,
+        "sha256": "1f924d18fa8fa78eb3bdfcc38e730b1e28155954168d5c160d6fddc48025c7fe"
+      },
+      {
+        "suite": "vea.raceremote.control.CarDiscoveryTest",
+        "tests": 5,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0,
+        "sha256": "66bec739b62e3ee5ba3f0ad222fb44dfa8a6d03120ee88ce4621d8a5e78f8291"
+      },
+      {
+        "suite": "vea.raceremote.control.ControlEndpointProbeTest",
+        "tests": 2,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0,
+        "sha256": "1def1f91b360035eb534afaa5f16ead10305bfba6e60b9e6e2f820d4498f90ae"
+      },
+      {
+        "suite": "vea.raceremote.control.FirmwareFleetTest",
+        "tests": 1,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 1,
+        "sha256": "1b86c290b51c0561076a01573f2c8c69dabbecfbc23a812da88017368deb7a55"
+      },
+      {
+        "suite": "vea.raceremote.control.IdentityHandshakeTest",
+        "tests": 9,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0,
+        "sha256": "fd43b5a60015c47cf4583a153a8c3008624c0ebabc56c0a07c70bfb0302c7929"
+      },
+      {
+        "suite": "vea.raceremote.control.UdpControlTest",
+        "tests": 5,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0,
+        "sha256": "6ebd1cb76d8cb3548cf6f7d842daa8c3997ae5f0eca2d12a6476bc93fa8a36c9"
+      },
+      {
+        "suite": "vea.raceremote.features.remote_control.CompoundCommandCreatorTest",
+        "tests": 5,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0,
+        "sha256": "c46ec6738710b6f9207cada9c4725fb8b9252078a8155340b9095f9bb948c9b2"
+      },
+      {
+        "suite": "vea.raceremote.features.remote_control.presentation.EngineMapperTest",
+        "tests": 6,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0,
+        "sha256": "58d2ecb79d6d72735ee06499f0e480980fb38884d9b0ad0fedb14af58f6ae869"
+      },
+      {
+        "suite": "vea.raceremote.features.remote_control.presentation.SteeringWheelMapperTest",
+        "tests": 5,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0,
+        "sha256": "59c4df92a4abc6fd78650501a70d94066ef7e26fb3fe920a53faddab0a905769"
+      },
+      {
+        "suite": "vea.raceremote.video.FrameFreshnessTest",
+        "tests": 6,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0,
+        "sha256": "68cc2765d0d645ded330719dfc97090a588a08db7b9e46758f7d11fdb859475c"
+      },
+      {
+        "suite": "vea.raceremote.video.MjpegTest",
+        "tests": 5,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0,
+        "sha256": "a2235acbabfd04f931cb248454cfcdc8cdf826cb848c06beb4bf876c5dcd8b20"
+      }
+    ]
+  },
+  "apk_sha256": {
+    "app/build/outputs/apk/debug/app-debug.apk": "e7922a445c3810119019054fa5cc1599d5f0361c8a28741e4e60da94fae77b4a",
+    "app/build/outputs/apk/androidTest/debug/app-debug-androidTest.apk": "cd50beaf87e612ac1557ea65d63afbe791e21532af07e12ee89436303c73681d"
+  },
+  "source_sha256": {
+    "app/build.gradle.kts": "323283e3b41eca228fe6e738aee0692b004f071cda40ac7ef045c0948942de99",
+    "app/src/androidTest/java/vea/raceremote/CarIdentitySelectionTest.kt": "d5a08934e983bc17977469284633b8a31f2dae2c3ab11a4a9fe1134f3da13993",
+    "app/src/androidTest/java/vea/raceremote/CarVideoSelectionTest.kt": "cc3d1dac6ee4dbc78529c7cac8e86ee79e27d1809a6afabe84d9e3078ced3a2d",
+    "app/src/androidTest/java/vea/raceremote/ControlStatusFixture.kt": "c3aea14ae633a4943fe919d91c6a15ec998f32871b81684cc57983a9588621e0",
+    "app/src/androidTest/java/vea/raceremote/DriveDeviceBenchTest.kt": "3306b13a7bf37012df34db9a1f5731f16c1be1e3ae38efe5a43479760a719d9f",
+    "app/src/androidTest/java/vea/raceremote/DrivingModeTest.kt": "5cae2f78c30d32732ad1605df826b3676ce05e82362dfd836684a9b3efba1139",
+    "app/src/androidTest/java/vea/raceremote/ExampleInstrumentedTest.kt": "cabdb5da633f55b43a07f9b4ad162139a23ebc90a2d6e3b680710cb2b16e1010",
+    "app/src/androidTest/java/vea/raceremote/UdpControlDeviceBenchTest.kt": "7f2d31a393aced57fb67dbacc959a73a9402e536462e7d2b070359946bde966c",
+    "app/src/androidTest/java/vea/raceremote/UdpControlScreenDeviceTest.kt": "b0529d04aea4c8874e02d2717b9ced393e1189ef271d250e10fa6fab1e0a5ef7",
+    "app/src/androidTest/java/vea/raceremote/VideoControlIsolationTest.kt": "89583dc62bb9ad4c1c577f342a4589893a7490c51f58610247bfc9b99bee2ad1",
+    "app/src/main/java/vea/raceremote/control/CarControlClient.kt": "020bb07548e6f3b18e1af2e6714d2c090741e2bf93218a9543784704cf0bad2b",
+    "app/src/main/java/vea/raceremote/control/CarControlConnection.kt": "67c2d207ccee84593a32a008e371655488a45073944b99247e5adf7efc5c517c",
+    "app/src/main/java/vea/raceremote/control/CarControlScreen.kt": "4db7e3673ccf12474a7579c03bcba532698e9e236ce865e77ce76cc568d1bce3",
+    "app/src/main/java/vea/raceremote/control/CarDiscovery.kt": "139fd1818af7bc5f08d3acd667227a01c825fd1e32ee89bbf6c925deb85c2d6a",
+    "app/src/main/java/vea/raceremote/control/CarPicker.kt": "34db12c188346efd32f766b9dd48095832c2184ddedc1f046ed7118abe183b47",
+    "app/src/main/java/vea/raceremote/control/ControlEndpointProbe.kt": "fb7be397f4408f0330db9602fad541c64b7704a057b704d841b09710b179973b",
+    "app/src/main/java/vea/raceremote/control/ControlPacket.kt": "f3e8020901fff2dba885f381974c7d7be69ac3133c8ba88001eef39b36622fb7",
+    "app/src/main/java/vea/raceremote/control/ControlSocketFactory.kt": "97e2a819de9ced733b3815ed005c5735463b8f349c825e104b0ce8d4a6678c16",
+    "app/src/main/java/vea/raceremote/control/DiscoveryPacket.kt": "6e6d4aa28f3ec4db776363c607a8a5e665d2fec9d560924b37135e2040c5db17",
+    "app/src/main/java/vea/raceremote/control/DrivingPad.kt": "a8c74d7002f5c153394f91495bc639ae954ac3628c9b07b1d19cd60f101985c5",
+    "app/src/main/java/vea/raceremote/control/IdentityPacket.kt": "251798c429c326b5d0faa70f96fd743fa7dfd13869e059ed47e225687c4f8c25",
+    "app/src/main/java/vea/raceremote/control/UdpControlClient.kt": "93f039cdcbd703a4446835dbce85b1944e7aa629dcf9ca249c43e3431494d2d3",
+    "app/src/main/java/vea/raceremote/control/UdpControlPacket.kt": "441c1b5296fd2d5c3dbd9930e4ecf77c00641c8a8483e8e1f3c66c20939e9074",
+    "app/src/main/java/vea/raceremote/control/UdpControlSession.kt": "ba68ee73b340edc1d1149de014bcf36ccf3b8927ef3aba36a3f2483b2b172788",
+    "app/src/test/java/vea/raceremote/control/CarControlConnectionTest.kt": "5fc78485c1c5562a8d805fb0fb55595a8a5a4712c7c531b062764f098353a84f",
+    "app/src/test/java/vea/raceremote/control/CarControlTest.kt": "7b8dc0499b45b98b1c08dee0ebcdb25f3ec00138d60eacf81b742f8644de4934",
+    "app/src/test/java/vea/raceremote/control/CarDiscoveryTest.kt": "b9a71bed6fdfe21b39469954f0d7c19da8502bcc8c7e9767cfcac699aed29d44",
+    "app/src/test/java/vea/raceremote/control/ControlEndpointProbeTest.kt": "0315087b0f6d578872db6e5975a31c8588fba9b1b92bceec3213c789ed229266",
+    "app/src/test/java/vea/raceremote/control/FirmwareFleetTest.kt": "3906c823427b7ffb2b4f652ff5e5c3743fabab252551ae5118d50926c44b3ba8",
+    "app/src/test/java/vea/raceremote/control/IdentityHandshakeTest.kt": "be3027bb849298492c6adb535895a84f03f20105705b67cc8701e7e1e311516f",
+    "app/src/test/java/vea/raceremote/control/UdpControlTest.kt": "f8f0f22d7a1328afb74424dae816cf6a393c80494aa73950cf27b6aeb7e45cba",
+    "tools/run_video_android_smoke.py": "f89e4a80862fabdd795d269008fc54cef6c0aa7684ce3d3795f217aa30365a46",
+    "tools/test_android_smoke_package.py": "5aeaea4e21f97fa10f9ebd623836abf0dcc73aaf62713404a1be671b42814c07"
+  },
+  "application_id": "vea.raceremote.recovery",
+  "original_certificate_sha256": "7b746356e115bc7a36ce83991ed73d4bfc069badbb0ea4e333092ecc5d03f76a",
+  "rebuild_certificate_sha256": "1ba0e7e4716889668a9739ec93912bd955556910be496b08e095bec01db094a6",
+  "android_verification": "pending Samsung reconnection; emulator unavailable (no acceleration; software fallback failed allocation)",
+  "physical_outputs_enabled": false
+}

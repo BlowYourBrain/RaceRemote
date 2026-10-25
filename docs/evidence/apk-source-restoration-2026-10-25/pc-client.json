@@ -1,0 +1,54 @@
+{
+  "scope": "PC Kotlin UDP client, 10s, same source compiled by standalone Kotlin2.4; final project separately built with1.8.10",
+  "snapshot": "Snapshot(phase=ACTIVE, reason=Connected, acknowledgements=453, lastAck=453, throttle=-200, steering=100, maxRttMs=97, acknowledgedThrottle=-200, acknowledgedSteering=100)\r",
+  "active_status": {
+    "protocol": 1,
+    "carId": "RaceRemote-5008d9",
+    "outputsEnabled": false,
+    "acceptingControl": true,
+    "actuatorMode": "disabled",
+    "armed": true,
+    "throttle": -200,
+    "steering": 100,
+    "motorDispatch": {
+      "backend": "null",
+      "mode": "applied_to_sink"
+    },
+    "drivePlan": {
+      "mode": "driving",
+      "sampledAtMs": 2552627,
+      "fiPermille": 0,
+      "biPermille": 50,
+      "steeringNormalized": 100
+    },
+    "controlTransport": "udp-v1",
+    "controlPort": 3334,
+    "chipId": "5008d93f1fb8",
+    "radioProtocolBitmap": 7
+  },
+  "stop_status": {
+    "protocol": 1,
+    "carId": "RaceRemote-5008d9",
+    "outputsEnabled": false,
+    "acceptingControl": true,
+    "actuatorMode": "disabled",
+    "armed": false,
+    "throttle": 0,
+    "steering": 0,
+    "motorDispatch": {
+      "backend": "null",
+      "mode": "applied_to_sink"
+    },
+    "drivePlan": {
+      "mode": "off",
+      "sampledAtMs": 2552712,
+      "fiPermille": 0,
+      "biPermille": 0,
+      "steeringNormalized": 0
+    },
+    "controlTransport": "udp-v1",
+    "controlPort": 3334,
+    "chipId": "5008d93f1fb8",
+    "radioProtocolBitmap": 7
+  }
+}

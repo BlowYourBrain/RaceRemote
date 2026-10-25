@@ -36,8 +36,10 @@ class CarVideoSelectionTest {
         val drives = AtomicInteger()
         firstVideo.enqueue(stream(Color.BLUE))
         nextVideo.enqueue(stream(Color.RED))
+        control.enqueueControlStatus()
         control.enqueue(MockResponse().withWebSocketUpgrade(object : WebSocketListener() {
             override fun onOpen(webSocket: WebSocket, response: Response) {
+                webSocket.sendFixtureIdentity(61)
                 webSocket.send(ByteString.of(*ControlPacket(ControlPacket.HELLO, 61, 0).encode()))
             }
             override fun onMessage(webSocket: WebSocket, bytes: ByteString) {
@@ -49,6 +51,7 @@ class CarVideoSelectionTest {
         }))
         firstVideo.start(); nextVideo.start(); control.start(1337)
         try {
+            compose.runOnUiThread { compose.activity.showControlFixture() }
             compose.onNodeWithTag("car_address").performTextReplacement("192.168.4.1")
             compose.onNodeWithTag("show_video").performClick()
             compose.onNodeWithTag("video_address").performTextReplacement(firstVideo.url("/stream").toString())

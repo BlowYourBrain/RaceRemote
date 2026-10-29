@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="vea.raceremote.control.FirmwareUdpDeviceTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2026-10-29T16:55:45" hostname="PC_EVGENY" time="61.272">
+  <properties/>
+  <testcase name="wifiDiscoveryOwnershipDriveCloseAndSilentWatchdog" classname="vea.raceremote.control.FirmwareUdpDeviceTest" time="61.272"/>
+  <system-out><![CDATA[DEVICE holdMs=30000 throttle=300 Snapshot(phase=ACTIVE, reason=Connected, acknowledgements=992, lastAck=992, throttle=300, steering=100, maxRttMs=37, acknowledgedThrottle=300, acknowledgedSteering=100)
+DEVICE holdMs=30000 throttle=-300 Snapshot(phase=ACTIVE, reason=Connected, acknowledgements=1971, lastAck=1971, throttle=-300, steering=100, maxRttMs=37, acknowledgedThrottle=-300, acknowledgedSteering=100)
+DEVICE full-chip/status/discovery owner/client-close-neutral/silent-watchdog passed; outputs disabled
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

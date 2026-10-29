@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="vea.raceremote.control.FirmwareUdpInteropTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2026-10-29T16:56:46" hostname="PC_EVGENY" time="0.862">
+  <properties/>
+  <testcase name="nativeCoreKeepsOwnerStopsOnLossAndRequiresFreshNeutralSession" classname="vea.raceremote.control.FirmwareUdpInteropTest" time="0.862"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

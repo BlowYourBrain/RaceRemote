@@ -1,0 +1,88 @@
+{
+  "date": "2026-10-29",
+  "firmware_branch": "restore-udp",
+  "firmware_commit": "40ad86fac28bff829acc703a891483aa22175eea",
+  "runtime_commit": "ea3d0a9",
+  "uploaded_image_sha256": "572ec39a67fe60a5d8742fc49a0ca5d8ac0e27507b9bd8db46bb3c0d4d6c5f9e",
+  "final_jvm_counts": {
+    "tests": 61,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 1
+  },
+  "jvm_passed": 60,
+  "skipped_reason": "FirmwareFleetTest requires separate RC_CONTROL_BRIDGE; UDP interop and physical device tests executed",
+  "device_runs": {
+    "device-first-pass.xml": {
+      "tests": "1",
+      "failures": "0",
+      "errors": "0",
+      "skipped": "0",
+      "timestamp": "2026-10-29T16:46:56",
+      "time": "61.958",
+      "system_out": "DEVICE holdMs=30000 throttle=300 Snapshot(phase=ACTIVE, reason=Connected, acknowledgements=999, lastAck=1000, throttle=300, steering=100, maxRttMs=47, acknowledgedThrottle=300, acknowledgedSteering=100)\nDEVICE holdMs=30000 throttle=-300 Snapshot(phase=ACTIVE, reason=Connected, acknowledgements=1990, lastAck=1991, throttle=-300, steering=100, maxRttMs=47, acknowledgedThrottle=-300, acknowledgedSteering=100)\nDEVICE full-chip/status/discovery owner/STOP/silent-watchdog passed; outputs disabled\n"
+    },
+    "device-failed-repeat.xml": {
+      "tests": "1",
+      "failures": "1",
+      "errors": "0",
+      "skipped": "0",
+      "timestamp": "2026-10-29T16:49:36",
+      "time": "11.793",
+      "system_out": ""
+    },
+    "device-diagnostic-pass.xml": {
+      "tests": "1",
+      "failures": "0",
+      "errors": "0",
+      "skipped": "0",
+      "timestamp": "2026-10-29T16:52:59",
+      "time": "61.504",
+      "system_out": "DEVICE holdMs=30000 throttle=300 Snapshot(phase=ACTIVE, reason=Connected, acknowledgements=992, lastAck=992, throttle=300, steering=100, maxRttMs=25, acknowledgedThrottle=300, acknowledgedSteering=100)\nDEVICE holdMs=30000 throttle=-300 Snapshot(phase=ACTIVE, reason=Connected, acknowledgements=1971, lastAck=1971, throttle=-300, steering=100, maxRttMs=25, acknowledgedThrottle=-300, acknowledgedSteering=100)\nDEVICE full-chip/status/discovery owner/client-close-neutral/silent-watchdog passed; outputs disabled\n"
+    },
+    "device-final.xml": {
+      "tests": "1",
+      "failures": "0",
+      "errors": "0",
+      "skipped": "0",
+      "timestamp": "2026-10-29T16:55:45",
+      "time": "61.272",
+      "system_out": "DEVICE holdMs=30000 throttle=300 Snapshot(phase=ACTIVE, reason=Connected, acknowledgements=992, lastAck=992, throttle=300, steering=100, maxRttMs=37, acknowledgedThrottle=300, acknowledgedSteering=100)\nDEVICE holdMs=30000 throttle=-300 Snapshot(phase=ACTIVE, reason=Connected, acknowledgements=1971, lastAck=1971, throttle=-300, steering=100, maxRttMs=37, acknowledgedThrottle=-300, acknowledgedSteering=100)\nDEVICE full-chip/status/discovery owner/client-close-neutral/silent-watchdog passed; outputs disabled\n"
+    },
+    "interop-final.xml": {
+      "tests": "1",
+      "failures": "0",
+      "errors": "0",
+      "skipped": "0",
+      "timestamp": "2026-10-29T16:56:46",
+      "time": "0.862",
+      "system_out": ""
+    }
+  },
+  "reliability_qualified": false,
+  "unresolved": "One repeat failed11.793s ACK freshness; dedicated60s passes47/25ms and finalfullsuite60s37ms do not establish its cause or remove failed evidence. Samsung must reconnect for new image UI/WiFi qualification.200/250ms deadlines unchanged.",
+  "source_sha256": {
+    "app/src/main/java/vea/raceremote/control/UdpControlClient.kt": "93f039cdcbd703a4446835dbce85b1944e7aa629dcf9ca249c43e3431494d2d3",
+    "app/src/main/java/vea/raceremote/control/UdpControlSession.kt": "ba68ee73b340edc1d1149de014bcf36ccf3b8927ef3aba36a3f2483b2b172788",
+    "app/src/test/java/vea/raceremote/control/FirmwareUdpInteropTest.kt": "1c2a36492b2bc2927c26b5fa83679c6010d41fc7909775235ad13b3a35191d8f",
+    "app/src/test/java/vea/raceremote/control/FirmwareUdpDeviceTest.kt": "c66c7099d81c7e2ff4f133b33ab62bf63274c9e26cf5df62e7c68d02a21d8a93",
+    "tools/run_firmware_udp.py": "e5cedd88fadc8ac6c3e0c25821089db05d49d6a39158c5728a8d978eea822c10"
+  },
+  "final_junit_sha256": {
+    "TEST-vea.raceremote.control.CarControlConnectionTest.xml": "0940e1cdf41818a92ee007d230f5b1e0d6a5413ea6a95989cebf6de2721ad93f",
+    "TEST-vea.raceremote.control.CarControlTest.xml": "94ea7677ebf6a5292e4eafe17c949ad33bfff5a6792d1ae3c86a2ce3d8f973e8",
+    "TEST-vea.raceremote.control.CarDiscoveryTest.xml": "02903d36998998f83e960de059e95a5d8232231dc70975f3bb0854e22f133c44",
+    "TEST-vea.raceremote.control.ControlEndpointProbeTest.xml": "8f61cedb2bb965072aae23bfaeb8aaf431d937ccbd81f0317a15ed91f30e4143",
+    "TEST-vea.raceremote.control.FirmwareFleetTest.xml": "6fe3914a42db19479156935943f1cc1ff1ce0e1a77bc80203748ecb0964fe4c8",
+    "TEST-vea.raceremote.control.FirmwareUdpDeviceTest.xml": "dd325bae6c6582d00c0bbc3d31d7ac95dab0b117211751417f73241d975100e9",
+    "TEST-vea.raceremote.control.FirmwareUdpInteropTest.xml": "9a762961e49615256111e11ad40526ef611f9468703b6ea53426e18a3f197ee5",
+    "TEST-vea.raceremote.control.IdentityHandshakeTest.xml": "35069f10525ce5f0b1c4d9490de9dd43606896a0b739cfac96cd11d34ae06c66",
+    "TEST-vea.raceremote.control.UdpControlTest.xml": "36ba30ee1e9ea13a17b2f4d2d63f24c66355989f5247ca662b8aeed145959829",
+    "TEST-vea.raceremote.features.remote_control.CompoundCommandCreatorTest.xml": "8dfee8757d52a470d0205abdb792e34ba183bf4687c047386ef3d795c6d2c202",
+    "TEST-vea.raceremote.features.remote_control.presentation.EngineMapperTest.xml": "70e85844c643d577ac5b1982c0aed2be634eee8a9f06626ed54b0cc78bef85ac",
+    "TEST-vea.raceremote.features.remote_control.presentation.SteeringWheelMapperTest.xml": "f8819c65e69ac969f0bba5c9bcf4f03638e78682a5ed656addc93421f08ab0ab",
+    "TEST-vea.raceremote.video.FrameFreshnessTest.xml": "820fbe7c5311ef625632537b44ffe8e795743aaf3b7dde606e2a013acfc26899",
+    "TEST-vea.raceremote.video.MjpegTest.xml": "254af87ba4b622b37a97c514bfeab81d6e3e4b5c98330b3c07054a0ddde4c226"
+  },
+  "scope": "Actual Kotlin/C++ UDP host interop and workstation/physical-XIAO null WiFi. Device status proves neutral after close, not STOP receipt. No Samsung/new image UI, physical GPIO/power/camera/range/timing/calibration proof. First pass log STOP wording subsequently corrected."
+}

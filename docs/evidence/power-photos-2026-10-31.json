@@ -1,0 +1,39 @@
+{
+  "date": "2026-10-31",
+  "photos": {
+    "servo": {
+      "local_path": "C:\\Users\\fetel\\Downloads\\PXL_20261031_175636660.jpg",
+      "sha256": "4f87057f9356da46d4f5506776f25075eb8043c42e02245f27b0430f8c07939b"
+    },
+    "buck_back": {
+      "local_path": "C:\\Users\\fetel\\Downloads\\PXL_20261031_175547970.jpg",
+      "sha256": "782dc1acd1c89e8bcf8bc582ea5f1be109cc05a8cc7d44d6d748ac20945967fe"
+    },
+    "buck_front": {
+      "local_path": "C:\\Users\\fetel\\Downloads\\PXL_20261031_175554460.jpg",
+      "sha256": "ec1222937537a7de9ea1e6b322717b1e173e7890f62e05fe7baf32934cef6f9f"
+    }
+  },
+  "orientation": "Buck front component side: green screw terminal left, yellow header right, as175554460.jpg",
+  "observed_groups": {
+    "input_top_two": "VIN+",
+    "input_bottom_two": "GND/VIN-",
+    "output_top_three": "VOUT+",
+    "output_bottom_three": "GND"
+  },
+  "selector_observation": "0ohm resistor appears populated right/5V; inferred mode, not measured output",
+  "servo_observation": "Tower Pro/MicroServo9g/SG90 label, brown/red/yellow-orange cable. Standard candidateGND/power/signal, no authenticity/type/rating/calibration proof",
+  "official_source": "https://www.waveshare.com/wiki/DC5-36-TO-DC3V3-5",
+  "official_check": "Direct opens403; search returned primary page specs and selectorFAQ; 5VmodeVin6..36,3.3VmodeVin5..36",
+  "pending": "Prepared power source asked: known LW2S or separate9/12V orUSB5only; isolatedbuckvoltagecheck next. No servo/XIAO powerconnection yet",
+  "not_performed": [
+    "powerup",
+    "input/output voltage",
+    "continuity",
+    "current/thermal/load",
+    "servo pulse calibration",
+    "physical wiring"
+  ],
+  "raw_images_committed": false,
+  "connector_constraint": "Yellow6pinbuckheader is3VOUT plus3GND, notRCservoGND/power/PWM. Do not plug3pinservohousing directly; futurepowerandgroundseparateleads, signalfromXIAO after powerverification/calibration."
+}

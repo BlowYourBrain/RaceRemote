@@ -1,0 +1,91 @@
+{
+  "date": "2026-10-31",
+  "phone": {
+    "serial": "RF8M811X8FK",
+    "model": "SM-G973F",
+    "api": 31,
+    "frequency_mhz": 5260,
+    "safe_wifi": 1,
+    "wifi_config_changed": false,
+    "apk_reinstalled": false
+  },
+  "loopback": {
+    "passed": true,
+    "adb_exit_code": 0,
+    "elapsed_s": 24.328,
+    "tests": 8,
+    "stdout_decode": "utf-8",
+    "apk_reinstalled": false,
+    "scope": "Existing APK software loopback UI tests only; no physical RF"
+  },
+  "initial_run": {
+    "passed": false,
+    "adb_exit_code": 0,
+    "elapsed_s": 9.422,
+    "hold_ms_per_direction": 60000,
+    "final_neutral": true,
+    "new_firmware_source": "reconstructed-udp-v1"
+  },
+  "initial_image_sha256": "572ec39a67fe60a5d8742fc49a0ca5d8ac0e27507b9bd8db46bb3c0d4d6c5f9e",
+  "diagnostic_image_sha256": "f2e79844244fd3b32a791f606c3207ff408d4167e3e003799e18d5cdcf51d381",
+  "diagnostic_runtime_commit": "ef5f67b5b02115197d8a6e2f8dec7e8fb7b2d3f5",
+  "physical_runs": [
+    {
+      "passed": true,
+      "adb_exit_code": 0,
+      "elapsed_s": 128.922,
+      "hold_ms_per_direction": 60000,
+      "final_neutral": true,
+      "stdout_decode": "utf-8",
+      "name": "bench-v02",
+      "accepted_replies": 5372,
+      "max_accepted_reply_rtt_ms": 88,
+      "max_drive_send_gap_ms": 33,
+      "drive_duration_s": 121.091,
+      "stop_sequence": 5371,
+      "stop_accepted_in_board_trace": true,
+      "trace_rows": 64,
+      "trace_max_handle_us": 32,
+      "trace_max_send_queue_us": 882,
+      "full_local_log_sha256": "ca7be6c33509f3e15ab417f13574cf04e62c3b22679662243c0f1286e749be4e"
+    },
+    {
+      "passed": true,
+      "adb_exit_code": 0,
+      "elapsed_s": 129.407,
+      "hold_ms_per_direction": 60000,
+      "final_neutral": true,
+      "stdout_decode": "utf-8",
+      "name": "bench-v03",
+      "accepted_replies": 5401,
+      "max_accepted_reply_rtt_ms": 74,
+      "max_drive_send_gap_ms": 46,
+      "drive_duration_s": 121.287,
+      "stop_sequence": 5401,
+      "stop_accepted_in_board_trace": true,
+      "trace_rows": 64,
+      "trace_max_handle_us": 32,
+      "trace_max_send_queue_us": 881,
+      "full_local_log_sha256": "1883adbde977ea41d0a2e82b6b2797ba4967f33a6fd2df1f4744d79e1e62ce56"
+    }
+  ],
+  "accepted_scope": "Two120s normal-screen runs after board reset/diagnostic image, discovery/fullID/forward/reverse/second-finger STOP matched to board acceptance and silent-watchdog neutral; outputs null",
+  "unresolved": "Initial ACK timeout cause not established; added trace and reset do not prove a cause fixed. Earlier PC failed repeat also remains evidence.200/250ms unchanged. atUs is postread,sendUs socketqueue only. Trace fetched after tests. No radio/optical/physical stop timing, 2.4GHz phone, range, camera, power or GPIO qualification.",
+  "source_sha256": {
+    "app/src/main/java/vea/raceremote/control/CarControlScreen.kt": "4db7e3673ccf12474a7579c03bcba532698e9e236ce865e77ce76cc568d1bce3",
+    "app/src/main/java/vea/raceremote/control/UdpControlClient.kt": "93f039cdcbd703a4446835dbce85b1944e7aa629dcf9ca249c43e3431494d2d3",
+    "app/src/main/java/vea/raceremote/control/UdpControlSession.kt": "ba68ee73b340edc1d1149de014bcf36ccf3b8927ef3aba36a3f2483b2b172788",
+    "app/src/androidTest/java/vea/raceremote/UdpControlDeviceBenchTest.kt": "21d7eb9a11665f65cf6d7247ec6e0270a3ed5da6de135874c404331c06bb687b"
+  },
+  "final_phone_state": "Recovered app open, correct selected fullID/host, disconnected, axeszero; final board null/unarmed/zero",
+  "final_apk_sha256": {
+    "vea.raceremote": "6e2882fb146183a73e9ae4f593361e33c58f24e4d02b59fa2dd426ccc58f0534",
+    "vea.raceremote.recovery": "8d5fb9ed6420ad2632589f80c8a24d8220e754d6bcd2da2f62dc8dc70a63be28",
+    "vea.raceremote.recovery.test": "d022170dcdb3aa6db740f648ea18e6e6ceea735aef84a50521aac453738a0144"
+  },
+  "final_frequency_mhz": 5260,
+  "final_safe_wifi": 1,
+  "initial_instrumentation_russian_decode_loss": false,
+  "initial_failure_reason_source": "ASCII phone UDP closed: ACK freshness timeout in scoped logcat; first stack Russian labels have decoding loss",
+  "firmware_publication_commit": "1a838f52d084d3757a1a69606451c6a0c5c00833"
+}

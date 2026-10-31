@@ -1,0 +1,8 @@
+{
+  "passed": false,
+  "adb_exit_code": 0,
+  "elapsed_s": 9.422,
+  "hold_ms_per_direction": 60000,
+  "final_neutral": true,
+  "new_firmware_source": "reconstructed-udp-v1"
+}

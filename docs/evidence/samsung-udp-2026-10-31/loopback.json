@@ -1,0 +1,9 @@
+{
+  "passed": true,
+  "adb_exit_code": 0,
+  "elapsed_s": 24.328,
+  "tests": 8,
+  "stdout_decode": "utf-8",
+  "apk_reinstalled": false,
+  "scope": "Existing APK software loopback UI tests only; no physical RF"
+}

@@ -1,0 +1,8 @@
+{
+  "passed": true,
+  "adb_exit_code": 0,
+  "elapsed_s": 129.407,
+  "hold_ms_per_direction": 60000,
+  "final_neutral": true,
+  "stdout_decode": "utf-8"
+}

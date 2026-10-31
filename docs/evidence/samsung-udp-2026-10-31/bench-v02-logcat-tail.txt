@@ -1,0 +1,120 @@
+10-31 20:25:10.511 17210 17278 D RaceRemoteControl: sent kind=2 seq=5314 basis=5313
+10-31 20:25:10.517 17210 17278 D RaceRemoteControl: received seq=5314 accepted=true
+10-31 20:25:10.535 17210 17278 D RaceRemoteControl: sent kind=2 seq=5315 basis=5314
+10-31 20:25:10.545 17210 17278 D RaceRemoteControl: received seq=5315 accepted=true
+10-31 20:25:10.558 17210 17278 D RaceRemoteControl: sent kind=2 seq=5316 basis=5315
+10-31 20:25:10.566 17210 17278 D RaceRemoteControl: received seq=5316 accepted=true
+10-31 20:25:10.578 17210 17278 D RaceRemoteControl: sent kind=2 seq=5317 basis=5316
+10-31 20:25:10.590 17210 17278 D RaceRemoteControl: received seq=5317 accepted=true
+10-31 20:25:10.602 17210 17278 D RaceRemoteControl: sent kind=2 seq=5318 basis=5317
+10-31 20:25:10.626 17210 17278 D RaceRemoteControl: sent kind=2 seq=5319 basis=5317
+10-31 20:25:10.628 17210 17278 D RaceRemoteControl: received seq=5318 accepted=true
+10-31 20:25:10.632 17210 17278 D RaceRemoteControl: received seq=5319 accepted=true
+10-31 20:25:10.649 17210 17278 D RaceRemoteControl: sent kind=2 seq=5320 basis=5319
+10-31 20:25:10.657 17210 17278 D RaceRemoteControl: received seq=5320 accepted=true
+10-31 20:25:10.669 17210 17278 D RaceRemoteControl: sent kind=2 seq=5321 basis=5320
+10-31 20:25:10.677 17210 17278 D RaceRemoteControl: received seq=5321 accepted=true
+10-31 20:25:10.690 17210 17278 D RaceRemoteControl: sent kind=2 seq=5322 basis=5321
+10-31 20:25:10.696 17210 17278 D RaceRemoteControl: received seq=5322 accepted=true
+10-31 20:25:10.714 17210 17278 D RaceRemoteControl: sent kind=2 seq=5323 basis=5322
+10-31 20:25:10.721 17210 17278 D RaceRemoteControl: received seq=5323 accepted=true
+10-31 20:25:10.738 17210 17278 D RaceRemoteControl: sent kind=2 seq=5324 basis=5323
+10-31 20:25:10.745 17210 17278 D RaceRemoteControl: received seq=5324 accepted=true
+10-31 20:25:10.762 17210 17278 D RaceRemoteControl: sent kind=2 seq=5325 basis=5324
+10-31 20:25:10.768 17210 17278 D RaceRemoteControl: received seq=5325 accepted=true
+10-31 20:25:10.785 17210 17278 D RaceRemoteControl: sent kind=2 seq=5326 basis=5325
+10-31 20:25:10.793 17210 17278 D RaceRemoteControl: received seq=5326 accepted=true
+10-31 20:25:10.806 17210 17278 D RaceRemoteControl: sent kind=2 seq=5327 basis=5326
+10-31 20:25:10.818 17210 17278 D RaceRemoteControl: received seq=5327 accepted=true
+10-31 20:25:10.830 17210 17278 D RaceRemoteControl: sent kind=2 seq=5328 basis=5327
+10-31 20:25:10.837 17210 17278 D RaceRemoteControl: received seq=5328 accepted=true
+10-31 20:25:10.855 17210 17278 D RaceRemoteControl: sent kind=2 seq=5329 basis=5328
+10-31 20:25:10.862 17210 17278 D RaceRemoteControl: received seq=5329 accepted=true
+10-31 20:25:10.880 17210 17278 D RaceRemoteControl: sent kind=2 seq=5330 basis=5329
+10-31 20:25:10.889 17210 17278 D RaceRemoteControl: received seq=5330 accepted=true
+10-31 20:25:10.901 17210 17278 D RaceRemoteControl: sent kind=2 seq=5331 basis=5330
+10-31 20:25:10.908 17210 17278 D RaceRemoteControl: received seq=5331 accepted=true
+10-31 20:25:10.925 17210 17278 D RaceRemoteControl: sent kind=2 seq=5332 basis=5331
+10-31 20:25:10.933 17210 17278 D RaceRemoteControl: received seq=5332 accepted=true
+10-31 20:25:10.951 17210 17278 D RaceRemoteControl: sent kind=2 seq=5333 basis=5332
+10-31 20:25:10.959 17210 17278 D RaceRemoteControl: received seq=5333 accepted=true
+10-31 20:25:10.970 17210 17278 D RaceRemoteControl: sent kind=2 seq=5334 basis=5333
+10-31 20:25:10.977 17210 17278 D RaceRemoteControl: received seq=5334 accepted=true
+10-31 20:25:10.994 17210 17278 D RaceRemoteControl: sent kind=2 seq=5335 basis=5334
+10-31 20:25:11.002 17210 17278 D RaceRemoteControl: received seq=5335 accepted=true
+10-31 20:25:11.014 17210 17278 D RaceRemoteControl: sent kind=2 seq=5336 basis=5335
+10-31 20:25:11.028 17210 17278 D RaceRemoteControl: received seq=5336 accepted=true
+10-31 20:25:11.040 17210 17278 D RaceRemoteControl: sent kind=2 seq=5337 basis=5336
+10-31 20:25:11.048 17210 17278 D RaceRemoteControl: received seq=5337 accepted=true
+10-31 20:25:11.060 17210 17278 D RaceRemoteControl: sent kind=2 seq=5338 basis=5337
+10-31 20:25:11.067 17210 17278 D RaceRemoteControl: received seq=5338 accepted=true
+10-31 20:25:11.084 17210 17278 D RaceRemoteControl: sent kind=2 seq=5339 basis=5338
+10-31 20:25:11.090 17210 17278 D RaceRemoteControl: received seq=5339 accepted=true
+10-31 20:25:11.108 17210 17278 D RaceRemoteControl: sent kind=2 seq=5340 basis=5339
+10-31 20:25:11.116 17210 17278 D RaceRemoteControl: received seq=5340 accepted=true
+10-31 20:25:11.127 17210 17278 D RaceRemoteControl: sent kind=2 seq=5341 basis=5340
+10-31 20:25:11.133 17210 17278 D RaceRemoteControl: received seq=5341 accepted=true
+10-31 20:25:11.151 17210 17278 D RaceRemoteControl: sent kind=2 seq=5342 basis=5341
+10-31 20:25:11.156 17210 17278 D RaceRemoteControl: received seq=5342 accepted=true
+10-31 20:25:11.173 17210 17278 D RaceRemoteControl: sent kind=2 seq=5343 basis=5342
+10-31 20:25:11.183 17210 17278 D RaceRemoteControl: received seq=5343 accepted=true
+10-31 20:25:11.195 17210 17278 D RaceRemoteControl: sent kind=2 seq=5344 basis=5343
+10-31 20:25:11.202 17210 17278 D RaceRemoteControl: received seq=5344 accepted=true
+10-31 20:25:11.219 17210 17278 D RaceRemoteControl: sent kind=2 seq=5345 basis=5344
+10-31 20:25:11.238 17210 17278 D RaceRemoteControl: received seq=5345 accepted=true
+10-31 20:25:11.238 17210 17278 D RaceRemoteControl: sent kind=2 seq=5346 basis=5345
+10-31 20:25:11.247 17210 17278 D RaceRemoteControl: received seq=5346 accepted=true
+10-31 20:25:11.259 17210 17278 D RaceRemoteControl: sent kind=2 seq=5347 basis=5346
+10-31 20:25:11.266 17210 17278 D RaceRemoteControl: received seq=5347 accepted=true
+10-31 20:25:11.285 17210 17278 D RaceRemoteControl: sent kind=2 seq=5348 basis=5347
+10-31 20:25:11.295 17210 17278 D RaceRemoteControl: received seq=5348 accepted=true
+10-31 20:25:11.307 17210 17278 D RaceRemoteControl: sent kind=2 seq=5349 basis=5348
+10-31 20:25:11.314 17210 17278 D RaceRemoteControl: received seq=5349 accepted=true
+10-31 20:25:11.332 17210 17278 D RaceRemoteControl: sent kind=2 seq=5350 basis=5349
+10-31 20:25:11.337 17210 17278 D RaceRemoteControl: received seq=5350 accepted=true
+10-31 20:25:11.355 17210 17278 D RaceRemoteControl: sent kind=2 seq=5351 basis=5350
+10-31 20:25:11.363 17210 17278 D RaceRemoteControl: received seq=5351 accepted=true
+10-31 20:25:11.380 17210 17278 D RaceRemoteControl: sent kind=2 seq=5352 basis=5351
+10-31 20:25:11.386 17210 17278 D RaceRemoteControl: received seq=5352 accepted=true
+10-31 20:25:11.404 17210 17278 D RaceRemoteControl: sent kind=2 seq=5353 basis=5352
+10-31 20:25:11.410 17210 17278 D RaceRemoteControl: received seq=5353 accepted=true
+10-31 20:25:11.428 17210 17278 D RaceRemoteControl: sent kind=2 seq=5354 basis=5353
+10-31 20:25:11.433 17210 17278 D RaceRemoteControl: received seq=5354 accepted=true
+10-31 20:25:11.450 17210 17278 D RaceRemoteControl: sent kind=2 seq=5355 basis=5354
+10-31 20:25:11.456 17210 17278 D RaceRemoteControl: received seq=5355 accepted=true
+10-31 20:25:11.474 17210 17278 D RaceRemoteControl: sent kind=2 seq=5356 basis=5355
+10-31 20:25:11.483 17210 17278 D RaceRemoteControl: received seq=5356 accepted=true
+10-31 20:25:11.495 17210 17278 D RaceRemoteControl: sent kind=2 seq=5357 basis=5356
+10-31 20:25:11.502 17210 17278 D RaceRemoteControl: received seq=5357 accepted=true
+10-31 20:25:11.520 17210 17278 D RaceRemoteControl: sent kind=2 seq=5358 basis=5357
+10-31 20:25:11.537 17210 17278 D RaceRemoteControl: received seq=5358 accepted=true
+10-31 20:25:11.543 17210 17278 D RaceRemoteControl: sent kind=2 seq=5359 basis=5358
+10-31 20:25:11.553 17210 17278 D RaceRemoteControl: received seq=5359 accepted=true
+10-31 20:25:11.565 17210 17278 D RaceRemoteControl: sent kind=2 seq=5360 basis=5359
+10-31 20:25:11.574 17210 17278 D RaceRemoteControl: received seq=5360 accepted=true
+10-31 20:25:11.586 17210 17278 D RaceRemoteControl: sent kind=2 seq=5361 basis=5360
+10-31 20:25:11.594 17210 17278 D RaceRemoteControl: received seq=5361 accepted=true
+10-31 20:25:11.606 17210 17278 D RaceRemoteControl: sent kind=2 seq=5362 basis=5361
+10-31 20:25:11.614 17210 17278 D RaceRemoteControl: received seq=5362 accepted=true
+10-31 20:25:11.626 17210 17278 D RaceRemoteControl: sent kind=2 seq=5363 basis=5362
+10-31 20:25:11.643 17210 17278 D RaceRemoteControl: received seq=5363 accepted=true
+10-31 20:25:11.649 17210 17278 D RaceRemoteControl: sent kind=2 seq=5364 basis=5363
+10-31 20:25:11.659 17210 17278 D RaceRemoteControl: received seq=5364 accepted=true
+10-31 20:25:11.671 17210 17278 D RaceRemoteControl: sent kind=2 seq=5365 basis=5364
+10-31 20:25:11.678 17210 17278 D RaceRemoteControl: received seq=5365 accepted=true
+10-31 20:25:11.696 17210 17278 D RaceRemoteControl: sent kind=2 seq=5366 basis=5365
+10-31 20:25:11.703 17210 17278 D RaceRemoteControl: received seq=5366 accepted=true
+10-31 20:25:11.721 17210 17278 D RaceRemoteControl: sent kind=2 seq=5367 basis=5366
+10-31 20:25:11.734 17210 17278 D RaceRemoteControl: received seq=5367 accepted=true
+10-31 20:25:11.746 17210 17278 D RaceRemoteControl: sent kind=2 seq=5368 basis=5367
+10-31 20:25:11.753 17210 17278 D RaceRemoteControl: received seq=5368 accepted=true
+10-31 20:25:11.770 17210 17278 D RaceRemoteControl: sent kind=2 seq=5369 basis=5368
+10-31 20:25:11.776 17210 17278 D RaceRemoteControl: received seq=5369 accepted=true
+10-31 20:25:11.787 17210 17229 I UdpRecoveryBench: screenHoldMs=60000 forward=false throttle=-734
+10-31 20:25:11.793 17210 17278 D RaceRemoteControl: sent kind=2 seq=5370 basis=5369
+10-31 20:25:11.803 17210 17278 D RaceRemoteControl: received seq=5370 accepted=true
+10-31 20:25:11.815 17210 17278 D RaceRemoteControl: sent kind=2 seq=5371 basis=5370
+10-31 20:25:11.823 17210 17278 D RaceRemoteControl: received seq=5371 accepted=true
+10-31 20:25:11.835 17210 17278 D RaceRemoteControl: sent kind=3 seq=5371 basis=0
+10-31 20:25:11.835 17210 17278 D RaceRemoteControl: UDP closed: Stopped
+10-31 20:25:12.487 17210 17229 I UdpRecoveryBench: explicit STOP and silent watchdog neutral verified
